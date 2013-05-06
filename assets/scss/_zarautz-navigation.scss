@@ -1,0 +1,95 @@
+$menu-width: $drawer-width;
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+[role="menu"] {
+    position: fixed;
+    z-index: 0;
+    height: 100%;
+    width: $menu-width;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    
+    > * {
+        @include transform(translateZ(0px));
+    }
+}
+
+[role="main"] {
+    position: fixed;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    @include transform(translate(0px, 0px));
+    @include transition-property(all);
+    @include transition-duration(0.15s);
+    @include transition-timing-function(ease-out);
+    -webkit-transform: translateZ(0);
+}
+
+body.active-menu {
+    [role="main"] {
+        @include transform(translate($menu-width, 0px));
+    }
+}
+
+[class^="flex-"] {
+    height: 100%;
+    @include transition-property(all);
+    @include transition-duration(0.15s);
+    @include transition-timing-function(linear);
+    -webkit-transform: translateZ(0);
+    
+    > div {
+        float: left;
+        height: 100%;
+        
+        header {
+            height: $action-bar-height;
+        }
+        
+        div.scroll {
+            height: 100%;
+            padding-bottom: $action-bar-height; // Hack to compensate height
+            overflow-x: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        
+            > * {
+                @include transform(translateZ(0px));
+            }
+        }
+    }
+}
+
+//
+// Flex pages predefinition
+//
+
+$flex-pages: 3;
+
+@for $i from 1 through $flex-pages {
+  .flex-#{($i)} {
+      width: 100% * $i;
+    
+      > div {
+          width: 100% / $i;
+      }
+      
+      &.on-1 {
+          @include transform(translate(0px, 0px));
+      }
+      
+      @for $page from 2 through $flex-pages {
+          &.on-#{($page)} {
+              @include transform(translate(-((100% / $i) * ($page - 1)), 0px));
+          }
+      }
+  }
+}

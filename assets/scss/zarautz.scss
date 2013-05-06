@@ -1,0 +1,264 @@
+$legacy-support-for-ie:       false;
+$experimental-support-for-opera: false;
+
+@import "compass";
+@import "normalize";
+@import "foundation/foundation-global";
+
+$touchable-size:              48px;
+
+$column-gutter:               $touchable-size / 1.5;
+$base-padding:                $column-gutter / 2;
+$half-padding:                $column-gutter / 4;
+
+$app-border-radius:           0; // Default in iOS 6: 3px
+$app-background:              #fcfcfc;
+
+$action-bar-height:           $touchable-size;
+$action-bar-background-color: #eaeaea;
+$action-bar-border-size:      0;
+$action-bar-border-color:     darken($action-bar-background-color, 15%);
+$action-bar-text-color:       #666;
+$action-bar-text-size:        18px;
+$action-bar-icon-size:        21px;
+
+$drawer-width:                80%;
+$drawer-background:           #22252c;
+$drawer-border-right-color:   #121315;
+$drawer-text-color:           #eff0f2;
+
+$em-base:                     16px;
+$small-font-size:             14px;
+$smallest-font-size:          12px;
+$body-font-family:            "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-color:             #444;
+$body-line-height:            1.3;
+
+//
+// Other rules
+//
+
+@import "zarautz-foundation";
+@import "zarautz-navigation";
+@import "zarautz-icons";
+@import "phonegap";
+
+//
+// Typo
+//
+
+p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+//
+// Layout
+//
+
+body {
+    background: $drawer-background;
+    line-height: $body-line-height;
+}
+
+//
+// Border radius
+//
+
+@if $app-border-radius != 0 {
+    [role="application"] {
+        @include border-radius($app-border-radius);
+        
+        [role="main"] {
+            @include border-radius($app-border-radius);
+            
+            header {
+                @include border-top-radius($app-border-radius);
+                
+                i {
+                    @include border-top-radius($app-border-radius);
+                }
+            }
+            
+            div.scroll {
+                @include border-bottom-radius($app-border-radius);
+            }
+        }
+    }
+}
+
+[role="menu"] {
+    background: $drawer-background;
+    color: $drawer-text-color;
+    border-right: 1px solid $drawer-border-right-color;
+}
+
+body.active-menu {
+    [role="main"] {
+        border-left: 1px solid #68696b;
+    }
+}
+
+//
+// Action bar
+//
+
+.action-bar {
+    height: $action-bar-height;
+    line-height: $action-bar-height;
+    background-color: $action-bar-background-color;
+    position: relative;
+    
+    @if $action-bar-border-size != 0 {
+        border-bottom: $action-bar-border-size solid $action-bar-border-color;
+    }
+    
+    .title {
+        font-size: $action-bar-text-size;
+        line-height: inherit;
+        margin: 0;
+        padding: 0 3em;
+        text-align: center;
+        color: $action-bar-text-color;
+        white-space: nowrap;
+    }
+    
+    i {
+        position: absolute;
+        background-color: $action-bar-background-color;
+        padding: 0 $base-padding;
+        font-size: $action-bar-icon-size;
+        color: $action-bar-text-color;
+        z-index: 30;
+        
+        &.left {
+            float: none;
+            left: 0;
+        }
+        &.right {
+            float: none;
+            right: 0;
+        }
+    }
+}
+
+//
+// Drawer
+//
+
+.drawer {
+    li {
+        height: $touchable-size;
+        padding: 0 $base-padding;
+        white-space: nowrap;
+        position: relative;
+        
+        a {
+            display: block;
+            height: $touchable-size;
+            line-height: $touchable-size;
+            border-width: 0 0 1px;
+            border-color: #1a1d24;
+            border-style: solid;
+            color: $drawer-text-color;
+            
+            [class^="icon-"] {
+                margin-right: $base-padding;
+            }
+        }
+        
+        &.settings a {
+            text-transform: uppercase;
+            font-size: $smallest-font-size;
+            color: lighten($drawer-background, 15%);
+            
+            [class^="icon-"] {
+                font-size: $em-base;
+            }
+        }
+    }
+}
+
+//
+// Contents
+//
+
+div.scroll {
+    background: $app-background;
+    padding: $base-padding;
+}
+
+.table-view {
+    .tr {
+        padding-bottom: 5px;
+        font-weight: bold;
+        font-size: $small-font-size;
+        background-color: white;
+        color: darken($body-font-color, 10%);
+        padding: 0 $base-padding;
+        border: 1px solid $action-bar-background-color;
+        line-height: 44px;
+        height: 44px;
+        
+        span {
+            float: right;
+            font-weight: normal;
+            color: #2999b7;
+            
+            &.non-editable {
+                color: lighten($body-font-color, 20%);
+            }
+        }
+    }
+    
+    .section, p {
+        padding-left: $base-padding + 1;
+    }
+}
+
+//
+// Helpers
+//
+
+.placeholder { // TODO: delete
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 3em;
+    color: #ccc;
+    text-align: center;
+    padding: 100px 40px;
+}
+
+.small {
+    font-size: $small-font-size;
+}
+
+.smallest {
+    font-size: $smallest-font-size;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+//
+// Colors
+//
+
+.color-text { color: $body-font-color; }
+.color-blue { color: #337abd; }
+.color-light-blue { color: #2999b7; }
+.color-yellow { color: #f9c600; }
+.color-orange { color: #fba400; }
+.color-red { color: #cd1c19; }
+.color-green { color: #73ba5a; }
+.color-dark { color: #555; }
+.color-twitter { color: #00aced; }

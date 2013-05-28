@@ -1,3 +1,6 @@
 # Tools
 .c9revisions
 .DS_Store
+
+# SASS
+app/assets/.sass-cache/

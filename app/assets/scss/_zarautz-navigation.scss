@@ -1,0 +1,122 @@
+$menu-width:              $drawer-width;
+$menu-animation-duration: 0.15s;
+$push-animation-duration: 0.2s; // Default in iOS 6: "0.25s" (?)
+
+//
+// Mixins
+//
+
+@mixin scroll() {
+    overflow-x: hidden;
+    overflow-y: auto;
+    @include transform(translateZ(0px));
+    -webkit-overflow-scrolling: touch;
+}
+
+@mixin transform-transition($duration, $timingFunction) {
+    @include transition-property(transform);
+    @include transition-duration($duration);
+    @include transition-timing-function($timingFunction);
+}
+
+//
+// Navigation rules
+//
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+nav {
+    position: fixed;
+    z-index: 0;
+    height: 100%;
+    width: $menu-width;
+    @include scroll();
+}
+
+main {
+    position: fixed;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    @include transform-transition($menu-animation-duration, ease-out);
+}
+
+aside {
+    position: fixed;
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    @include transform-transition($push-animation-duration, linear);
+    @include transform(translateY(130%));
+}
+
+body.active-menu {
+    main {
+        @include transform(translateX($menu-width));
+    }
+}
+
+body.active-modal {
+    aside {
+        @include transform(translateY(0px));
+    }
+}
+
+section {
+    height: 100%;
+    @include transform-transition($push-animation-duration, linear);
+    
+    > div {
+        float: left;
+        height: 100%;
+        position: relative;
+    }
+}
+
+header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: $action-bar-height;
+    width: 100%;
+    overflow: hidden;
+    @include transform(translateZ(0px));
+}
+
+div.scroll {
+    position: absolute;
+    top: $action-bar-height;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    @include scroll();
+}
+
+//
+// Flex pages predefinition
+//
+
+$flex-pages: 5;
+
+section {
+    width: 100% * $flex-pages;
+    
+    > div {
+        width: 100% / $flex-pages;
+    }
+    
+    &.on-1 {
+        @include transform(translateX(0px));
+    }
+    
+    @for $page from 2 through $flex-pages {
+        &.on-#{($page)} {
+            @include transform(translateX(-((100% / $flex-pages) * ($page - 1))));
+        }
+    }
+}

@@ -2,7 +2,7 @@
 
 //var App = angular.module('zarautz', ['ngMobile']);
 var App = angular.module('zarautz', []);
- 
+
 App.provider('menu', function() {
     this.$get = function() {
         return {

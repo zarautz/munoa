@@ -1,5 +1,10 @@
-node_modules
-dist
+# Tools
+.c9revisions
+.DS_Store
+
+# Yeoman
 .tmp
 .sass-cache
 app/components
+node_modules
+dist

@@ -253,14 +253,16 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
+        // Test Code
         'jshint',
         'test',
+        // Prepare assets
         'compass:dist',
         'useminPrepare',
+        'concat',
         'imagemin',
         'cssmin',
         'htmlmin',
-        'concat',
         'copy',
         'cdnify',
         'ngmin',

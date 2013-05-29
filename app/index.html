@@ -11,7 +11,7 @@
         <title>Zarautz</title>
     </head>
     <body ng-class="{ 'active-menu': navCtrl.menu.isActive }" ng-controller="NavigationController as navCtrl">
-        
+
         <main ng-view></main>
         <nav>
             <ul class="drawer">
@@ -24,11 +24,11 @@
             <ul class="drawer" style="margin-top:40px">
                 <li>
                     <a href ng-click="navCtrl.reorderMenuItems()"><i class="icon-cog color-red"></i>Shuffle test!</a>
-                </li>    
+                </li>
             </ul>
         </nav>
         <aside></aside>
-        
+
         <script type="text/ng-template" id="index">
             <section class="on-{{ navCtrl.activeView }}">
                 <div>
@@ -42,7 +42,7 @@
                 </div>
             </section>
         </script>
-        
+
         <script type="text/ng-template" id="events">
             <section class="on-{{ navCtrl.activeView }}" ng-controller="EventController as eventCtrl">
                 <div>
@@ -63,7 +63,7 @@
                 <div ng-include="view2"></div>
             </section>
         </script>
-        
+
         <script type="text/ng-template" id="event">
             <header>
                 <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
@@ -74,7 +74,7 @@
                 <div ng-include="'lorem'"></div>
             </div>
         </script>
-        
+
         <script type="text/ng-template" id="places">
             <section class="on-{{ navCtrl.activeView }}">
                 <div>
@@ -88,7 +88,7 @@
                 </div>
             </section>
         </script>
-        
+
         <script type="text/ng-template" id="weather">
             <section class="on-{{ navCtrl.activeView }}">
                 <div>
@@ -102,7 +102,7 @@
                 </div>
             </section>
         </script>
-        
+
         <script type="text/ng-template" id="sea">
             <section class="on-{{ navCtrl.activeView }}">
                 <div>
@@ -116,7 +116,7 @@
                 </div>
             </section>
         </script>
-        
+
         <script type="text/ng-template" id="health">
             <section class="on-{{ navCtrl.activeView }}">
                 <div>
@@ -130,7 +130,7 @@
                 </div>
             </section>
         </script>
-        
+
         <script type="text/ng-template" id="settings">
             <section class="on-{{ navCtrl.activeView }}">
                 <div>
@@ -146,7 +146,7 @@
                 <div ng-include="view2"></div>
             </section>
         </script>
-        
+
         <script type="text/ng-template" id="about">
             <header>
                 <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
@@ -156,21 +156,21 @@
                 <div ng-include="'lorem'"></div>
             </div>
         </script>
-        
+
         <script type="text/ng-template" id="lorem">
             <p>Lorem dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, Ipsum.<br /><br /></p>
             <p>Lorem dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, Ipsum.<br /><br /></p>
             <p>Lorem dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, Ipsum.<br /><br /></p>
             <p>Lorem dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, Ipsum.<br /><br /></p>
         </script>
-        
+
         <script src="components/angular-unstable/angular.min.js"></script>
-        
+
         <!-- build:js scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/router.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <!-- endbuild -->
-        
+
     </body>
 </html>

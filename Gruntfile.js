@@ -93,8 +93,16 @@ module.exports = function (grunt) {
         },
         karma: {
             unit: {
-                configFile: 'karma.conf.js',
-                singleRun: true
+                options: {
+                    configFile: 'karma.conf.js',
+                    singleRun: true
+                }
+            },
+            cloudunit: {
+                options: {
+                    configFile: 'karma-c9.conf.js',
+                    singleRun: true
+                }
             }
         },
         compass: {
@@ -248,7 +256,12 @@ module.exports = function (grunt) {
     grunt.registerTask('test', [
         'clean:server',
         'connect:test',
-        'karma'
+        'karma:unit'
+    ]);
+
+    grunt.registerTask('c9test', [
+        'clean:server',
+        'karma:cloudunit'
     ]);
 
     grunt.registerTask('build', [
@@ -257,6 +270,19 @@ module.exports = function (grunt) {
         'jshint',
         'test',
         // Prepare assets
+        'assets'
+    ]);
+
+    grunt.registerTask('c9build', [
+        'clean:dist',
+        // Test Code
+        'jshint',
+        'c9test',
+        // Prepare assets
+        'assets'
+    ]);
+
+    grunt.registerTask('assets', [
         'compass:dist',
         'useminPrepare',
         'concat',

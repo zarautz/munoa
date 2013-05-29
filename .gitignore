@@ -1,6 +1,5 @@
-# Tools
-.c9revisions
-.DS_Store
-
-# SASS
-app/assets/.sass-cache/
+node_modules
+dist
+.tmp
+.sass-cache
+app/components

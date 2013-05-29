@@ -1,0 +1,235 @@
+$legacy-support-for-ie:       false;
+$experimental-support-for-opera: false;
+$experimental-support-for-mozilla: false;
+$experimental-support-for-microsoft: false;
+
+@import "compass";
+
+$touchable-size:              46px; // Default in iOS: "44px"; Android: "48px"
+
+$total-columns:               5;
+$block-grid-elements:         6;
+$column-gutter:               $touchable-size / 1.5;
+$base-padding:                $column-gutter / 2;
+$half-padding:                $column-gutter / 4;
+
+$app-border-radius:           0; // Default in iOS 6: "3px";
+$app-background:              #fcfcfc;
+
+$action-bar-height:           $touchable-size;
+$action-bar-background-color: #eaeaea;
+$action-bar-border-size:      0;
+$action-bar-border-color:     darken($action-bar-background-color, 15%);
+$action-bar-text-color:       #666;
+$action-bar-text-size:        20px;
+$action-bar-icon-size:        20px;
+
+$drawer-width:                80%;
+$drawer-background:           #22252c;
+$drawer-border-right-color:   #121315;
+$drawer-text-color:           #eff0f2;
+$drawer-menu-border-color:    darken($drawer-background, 3%);
+$drawer-menu-selected:        darken($drawer-background, 5%);
+
+$em-base:                     16px;
+$small-font-size:             14px;
+$smallest-font-size:          12px;
+$body-font-family:            "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-color:             #444;
+$body-line-height:            1.4;
+
+//
+// Other rules
+//
+
+@import "zarautz-foundation";
+@import "zarautz-navigation";
+@import "zarautz-icons";
+@import "phonegap";
+
+//
+// Mixins
+//
+
+@mixin ellipsis() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+//
+// Typo
+//
+
+p, ul {
+    margin: 0;
+    padding: 0;
+    line-height: $body-line-height;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+//
+// Layout
+//
+
+body {
+    background: $drawer-background;
+    line-height: $body-line-height;
+}
+
+main {
+    background: $app-background;
+}
+
+div.scroll {
+    padding: $base-padding;
+}
+
+//
+// Border radius
+//
+
+@if $app-border-radius != 0 {
+    body,
+    main,
+    section > div {
+        @include border-radius($app-border-radius);
+        overflow: hidden;
+    }
+}
+
+//
+// Nice borders when menu is open
+//
+
+body.active-menu {
+    main {
+        border-left: 1px solid $drawer-border-right-color;
+        
+        section > div:first-child {
+            border-left: 1px solid #68696b;
+        }
+    }
+}
+
+//
+// Action bar
+//
+
+header {
+    height: $action-bar-height;
+    line-height: $action-bar-height;
+    background-color: $action-bar-background-color;
+    
+    @if $action-bar-border-size != 0 {
+        border-bottom: $action-bar-border-size solid $action-bar-border-color;
+    }
+    
+    .title {
+        font-size: $action-bar-text-size;
+        line-height: inherit;
+        margin: 0 3em 0 0;
+        text-align: center;
+        color: $action-bar-text-color;
+        @include ellipsis();
+    }
+    
+    i {
+        background-color: $action-bar-background-color;
+        padding: 0 $base-padding;
+        font-size: $action-bar-icon-size;
+        color: $action-bar-text-color;
+    }
+}
+
+//
+// Drawer
+//
+
+ul.drawer {
+    background: $drawer-background;
+    color: $drawer-text-color;
+    
+    li {
+        height: $touchable-size;
+        padding: 0 $base-padding;
+        
+        a {
+            display: block;
+            height: $touchable-size;
+            line-height: $touchable-size;
+            border-bottom: 1px solid $drawer-menu-border-color;
+            color: $drawer-text-color;
+            @include ellipsis();
+            
+            [class^="icon-"] {
+                margin-right: $base-padding;
+                font-size: $em-base;
+            }
+            
+            &.active {
+                background: $drawer-menu-selected;
+                margin: 0 (-($base-padding));
+                padding: 0 $base-padding;
+                margin-top: -1px;
+                border-top: 1px solid $drawer-menu-border-color;
+            }
+        }
+        
+        &.settings a {
+            text-transform: uppercase;
+            font-size: $smallest-font-size;
+            color: lighten($drawer-background, 15%);
+        }
+    }
+}
+
+//
+// Helpers
+//
+
+.placeholder { // TODO: delete
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 3em;
+    color: #ccc;
+    text-align: center;
+    padding: 50px 0;
+}
+
+aside { // TODO: delete
+    background: yellow;
+}
+
+.small {
+    font-size: $small-font-size;
+}
+
+.smallest {
+    font-size: $smallest-font-size;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+//
+// Colors
+//
+
+.color-text { color: $body-font-color; }
+.color-blue { color: #337abd; }
+.color-light-blue { color: #2999b7; }
+.color-yellow { color: #f9c600; }
+.color-orange { color: #fba400; }
+.color-red { color: #cd1c19; }
+.color-green { color: #73ba5a; }
+.color-dark { color: #555; }
+.color-twitter { color: #00aced; }

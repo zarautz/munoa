@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'fontello';
+    src: font-files("fontello.eot");
+    src: font-files("fontello.eot", "fontello.woff", "fontello.ttf", "fontello.svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+    
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+    
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+}
+
+.icon-windy-rain-inv:before { content: '\f010'; } /* '' */
+.icon-snow-inv:before { content: '\f011'; } /* '' */
+.icon-snow-heavy-inv:before { content: '\f012'; } /* '' */
+.icon-hail-inv:before { content: '\f013'; } /* '' */
+.icon-clouds-inv:before { content: '\f014'; } /* '' */
+.icon-clouds-flash-inv:before { content: '\f015'; } /* '' */
+.icon-temperature:before { content: '\f016'; } /* '' */
+.icon-compass:before { content: '\f017'; } /* '' */
+.icon-na:before { content: '\f018'; } /* '' */
+.icon-celcius:before { content: '\f019'; } /* '' */
+.icon-fahrenheit:before { content: '\f020'; } /* '' */
+.icon-clouds-flash-alt:before { content: '\f021'; } /* '' */
+.icon-sun-inv:before { content: '\f022'; } /* '' */
+.icon-moon-inv:before { content: '\f023'; } /* '' */
+.icon-cloud-sun-inv:before { content: '\f024'; } /* '' */
+.icon-cloud-moon-inv:before { content: '\f025'; } /* '' */
+.icon-cloud-inv:before { content: '\f026'; } /* '' */
+.icon-cloud-flash-inv:before { content: '\f027'; } /* '' */
+.icon-drizzle-inv:before { content: '\f028'; } /* '' */
+.icon-rain-inv:before { content: '\f029'; } /* '' */
+.icon-windy-inv:before { content: '\f030'; } /* '' */
+.icon-sunrise:before { content: '\f031'; } /* '' */
+.icon-sun:before { content: '\f032'; } /* '' */
+.icon-moon:before { content: '\f033'; } /* '' */
+.icon-eclipse:before { content: '\f034'; } /* '' */
+.icon-mist:before { content: '\f035'; } /* '' */
+.icon-wind:before { content: '\f036'; } /* '' */
+.icon-snowflake:before { content: '\f037'; } /* '' */
+.icon-cloud-sun:before { content: '\f038'; } /* '' */
+.icon-cloud-moon:before { content: '\f039'; } /* '' */
+.icon-fog-sun:before { content: '\f040'; } /* '' */
+.icon-fog-moon:before { content: '\f041'; } /* '' */
+.icon-fog-cloud:before { content: '\f042'; } /* '' */
+.icon-fog:before { content: '\f043'; } /* '' */
+.icon-cloud:before { content: '\f044'; } /* '' */
+.icon-cloud-flash:before { content: '\f045'; } /* '' */
+.icon-cloud-flash-alt:before { content: '\f046'; } /* '' */
+.icon-drizzle:before { content: '\f047'; } /* '' */
+.icon-rain:before { content: '\f048'; } /* '' */
+.icon-windy:before { content: '\f049'; } /* '' */
+.icon-windy-rain:before { content: '\f050'; } /* '' */
+.icon-snow:before { content: '\f051'; } /* '' */
+.icon-snow-alt:before { content: '\f052'; } /* '' */
+.icon-snow-heavy:before { content: '\f053'; } /* '' */
+.icon-hail:before { content: '\f054'; } /* '' */
+.icon-clouds:before { content: '\f055'; } /* '' */
+.icon-clouds-flash:before { content: '\f056'; } /* '' */
+.icon-info:before { content: '\f003'; } /* '' */
+.icon-left:before { content: '\f064'; } /* '' */
+.icon-right:before { content: '\f065'; } /* '' */
+.icon-home:before { content: '\f057'; } /* '' */
+.icon-sun-alt:before { content: '\f009'; } /* '' */
+.icon-layout:before { content: '\f002'; } /* '' */
+.icon-flag:before { content: '\f004'; } /* '' */
+.icon-cog-alt:before { content: '\f061'; } /* '' */
+.icon-cog:before { content: '\f060'; } /* '' */
+.icon-share:before { content: '\f063'; } /* '' */
+.icon-swim:before { content: '\f058'; } /* '' */
+.icon-menu:before { content: '\f006'; } /* '' */
+.icon-medical-alt:before { content: '\f007'; } /* '' */
+.icon-medical:before { content: '\f008'; } /* '' */
+.icon-twitter:before { content: '\f059'; } /* '' */
+.icon-pictures:before { content: '\f001'; } /* '' */
+.icon-calendar:before { content: '\f005'; } /* '' */
+.icon-search:before { content: '\f062'; } /* '' */

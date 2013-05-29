@@ -1,0 +1,17 @@
+{
+  "name": "zarautz",
+  "version": "0.1.0",
+  "dependencies": {
+    "angular-unstable": "~1.1.5",
+    "foundation": "~4.1.6"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.0.5",
+    "angular-scenario": "~1.0.5"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}

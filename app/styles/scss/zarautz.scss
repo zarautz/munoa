@@ -7,8 +7,8 @@ $experimental-support-for-microsoft: false;
 
 $touchable-size:              46px; // Default in iOS: "44px"; Android: "48px"
 
-$total-columns:               5;
-$block-grid-elements:         6;
+$total-columns:               3;
+$block-grid-elements:         5;
 $column-gutter:               $touchable-size / 1.5;
 $base-padding:                $column-gutter / 2;
 $half-padding:                $column-gutter / 4;
@@ -35,8 +35,11 @@ $em-base:                     16px;
 $small-font-size:             14px;
 $smallest-font-size:          12px;
 $body-font-family:            "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$body-font-color:             #444;
+$body-font-color:             #333;
 $body-line-height:            1.4;
+
+$tableview-detail-font-color: #337abd;
+$tableview-border-color:      #eaeaea;
 
 //
 // Other rules
@@ -181,12 +184,52 @@ ul.drawer {
                 margin-top: -1px;
                 border-top: 1px solid $drawer-menu-border-color;
             }
+
+            &.settings {
+                text-transform: uppercase;
+                font-size: $smallest-font-size;
+                color: lighten($drawer-background, 15%);
+            }
         }
-        
-        &.settings a {
-            text-transform: uppercase;
-            font-size: $smallest-font-size;
-            color: lighten($drawer-background, 15%);
+    }
+}
+
+//
+// TableView
+//
+
+.table-view {
+    ul {
+        background: white;
+        border: 1px solid $tableview-border-color;
+        padding: 0 ($touchable-size / 4);
+
+        a {
+            display: block;
+            color: $body-font-color;
+            border-bottom: 1px solid $tableview-border-color;
+            height: $touchable-size;
+            line-height: $touchable-size;
+            @include ellipsis();
+
+            i {
+                float: right;
+                color: lighten($body-font-color, 50%);
+
+                &.selected {
+                    color: $tableview-detail-font-color;
+                }
+            }
+
+            .detail {
+                float: right;
+                color: $tableview-detail-font-color;
+                margin-right: $half-padding;
+            }
+        }
+
+        li:last-child a {
+            border: 0;
         }
     }
 }

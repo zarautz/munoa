@@ -1,0 +1,31 @@
+<section class="on-{{ navCtrl.activeView }}" ng-controller="EventController as eventCtrl">
+    <div>
+        <header>
+            <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
+            <!--<i class="right icon-search"></i>-->
+            <h1 class="title">Agendas</h1>
+        </header>
+        <div class="scroll">
+            <h1 class="placeholder">Events</h1>
+            <ul>
+                <li ng-repeat="event in eventCtrl.events">
+                    <a href ng-click="navCtrl.pushView('events.event', { 'event': event })">
+                        {{ event.title }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div ng-include="view2"></div>
+</section>
+
+<script type="text/ng-template" id="events.event">
+    <header>
+        <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
+        <!--<i class="right icon-share"></i>-->
+        <h1 class="title">{{ pushData.event.title }}</h1>
+    </header>
+    <div class="scroll">
+        Lorem.
+    </div>
+</script>

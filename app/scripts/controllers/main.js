@@ -58,3 +58,34 @@ App.controller('EventController', ['$http', function($http) {
         }
     );
 }]);
+
+//
+// SettingController
+//
+
+App.controller('SettingController', [function() {
+    this.settings = {
+        locale: {
+            title: 'Language',
+            selectedKey: 'eu',
+            options: {
+                eu: 'Euskara',
+                es: 'Castellano',
+                en: 'English',
+                fr: 'Française'
+            }
+        },
+        profile: {
+            title: 'Profile',
+            selectedKey: 'tourist',
+            options: {
+                tourist: 'Tourist',
+                zarautz: 'Zarauztarra'
+            }
+        }
+    };
+
+    this.updateSetting = function(setting, key) {
+        setting.selectedKey = key;
+    };
+}]);

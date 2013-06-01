@@ -1,0 +1,58 @@
+<section class="on-{{ navCtrl.activeView }}" ng-controller="SettingController as setCtrl">
+    <div>
+        <header>
+            <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
+            <h1 class="title">Aukerak</h1>
+        </header>
+        <div class="scroll table-view">
+            <h4>Section1</h4>
+            <ul>
+                <li>
+                    <a href ng-click="navCtrl.pushView('settings.about')">
+                        <i class="icon-right-open"></i>
+                        About
+                        <span class="detail"></span>
+                    </a>
+                </li>
+            </ul>
+            <h4><br/>Section2</h4>
+            <ul>
+                <li ng-repeat="setting in setCtrl.settings">
+                    <a href ng-click="navCtrl.pushView('settings.selector', { setting: setting })">
+                        <i class="icon-right-open"></i>
+                        {{ setting.title }}
+                        <span class="detail">{{ setting.options[setting.selectedKey] }}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div ng-include="view2"></div>
+</section>
+
+<script type="text/ng-template" id="settings.selector">
+    <header>
+        <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
+        <h1 class="title">{{ pushData.setting.title }}</h1>
+    </header>
+    <div class="scroll table-view">
+        <ul>
+            <li ng-repeat="(key, value) in pushData.setting.options">
+                <a href ng-click="setCtrl.updateSetting(pushData.setting, key)">
+                    <i class="icon-ok selected" ng-show="key == pushData.setting.selectedKey"></i>
+                    {{ value }}
+                </a>
+            </li>
+        </ul>
+    </div>
+</script>
+
+<script type="text/ng-template" id="settings.about">
+    <header>
+        <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
+        <h1 class="title">About</h1>
+    </header>
+    <div class="scroll">
+        Lorem.
+    </div>
+</script>

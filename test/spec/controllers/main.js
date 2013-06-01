@@ -4,6 +4,7 @@ describe('Controller: NavigationController', function () {
 
     // load the controller's module
     beforeEach(module('zarautz'));
+    beforeEach(module('ngMobile'));
 
     var navCtrl, scope;
 

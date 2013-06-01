@@ -15,8 +15,8 @@
         <main ng-view></main>
         <nav>
             <ul class="drawer">
-                <li ng-repeat="item in navCtrl.menu.items" class="{{ item.id }}">
-                    <a href ng-click="navCtrl.openSection(item.path)" ng-class="navCtrl.getClassForPath(item.path, 'active')">
+                <li ng-repeat="item in navCtrl.menu.items">
+                    <a href ng-click="navCtrl.openSection(item.path)" ng-class="navCtrl.getClassForPath(item.path, 'active')" class="{{ item.id }}">
                         <i class="{{ item.icon }}"></i>{{ item.label }}
                     </a>
                 </li>
@@ -29,142 +29,8 @@
         </nav>
         <aside></aside>
 
-        <script type="text/ng-template" id="index">
-            <section class="on-{{ navCtrl.activeView }}">
-                <div>
-                    <header>
-                        <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
-                        <h1 class="title">Zu Zarautz</h1>
-                    </header>
-                    <div class="scroll">
-                        <h1 class="placeholder">Home</h1>
-                    </div>
-                </div>
-            </section>
-        </script>
-
-        <script type="text/ng-template" id="events">
-            <section class="on-{{ navCtrl.activeView }}" ng-controller="EventController as eventCtrl">
-                <div>
-                    <header>
-                        <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
-                        <!--<i class="right icon-search"></i>-->
-                        <h1 class="title">Agenda</h1>
-                    </header>
-                    <div class="scroll">
-                        <h1 class="placeholder">Events</h1>
-                        <ul>
-                            <li ng-repeat="event in eventCtrl.events">
-                                <a href ng-click="navCtrl.pushView('event', { 'event': event })">{{ event.title }}</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div ng-include="view2"></div>
-            </section>
-        </script>
-
-        <script type="text/ng-template" id="event">
-            <header>
-                <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
-                <!--<i class="right icon-share"></i>-->
-                <h1 class="title">{{ pushData.event.title }}</h1>
-            </header>
-            <div class="scroll">
-                <div ng-include="'lorem'"></div>
-            </div>
-        </script>
-
-        <script type="text/ng-template" id="places">
-            <section class="on-{{ navCtrl.activeView }}">
-                <div>
-                    <header class="action-bar">
-                        <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
-                        <h1 class="title">Zer ikusi</h1>
-                    </header>
-                    <div class="scroll">
-                        <h1 class="placeholder">POIs</h1>
-                    </div>
-                </div>
-            </section>
-        </script>
-
-        <script type="text/ng-template" id="weather">
-            <section class="on-{{ navCtrl.activeView }}">
-                <div>
-                    <header>
-                        <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
-                        <h1 class="title">Eguraldia</h1>
-                    </header>
-                    <div class="scroll">
-                        <h1 class="placeholder">Weather</h1>
-                    </div>
-                </div>
-            </section>
-        </script>
-
-        <script type="text/ng-template" id="sea">
-            <section class="on-{{ navCtrl.activeView }}">
-                <div>
-                    <header>
-                        <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
-                        <h1 class="title">Itsasoaren egoera</h1>
-                    </header>
-                    <div class="scroll">
-                        <h1 class="placeholder">Sea info</h1>
-                    </div>
-                </div>
-            </section>
-        </script>
-
-        <script type="text/ng-template" id="health">
-            <section class="on-{{ navCtrl.activeView }}">
-                <div>
-                    <header>
-                        <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
-                        <h1 class="title">Osasun zerbitzuak</h1>
-                    </header>
-                    <div class="scroll">
-                        <h1 class="placeholder">Health info</h1>
-                    </div>
-                </div>
-            </section>
-        </script>
-
-        <script type="text/ng-template" id="settings">
-            <section class="on-{{ navCtrl.activeView }}">
-                <div>
-                    <header>
-                        <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
-                        <h1 class="title">Aukerak</h1>
-                    </header>
-                    <div class="scroll">
-                        <h1 class="placeholder">Profile</h1>
-                        <a href ng-click="navCtrl.pushView('about')">About</a><br/><br/>
-                    </div>
-                </div>
-                <div ng-include="view2"></div>
-            </section>
-        </script>
-
-        <script type="text/ng-template" id="about">
-            <header>
-                <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
-                <h1 class="title">About</h1>
-            </header>
-            <div class="scroll">
-                <div ng-include="'lorem'"></div>
-            </div>
-        </script>
-
-        <script type="text/ng-template" id="lorem">
-            <p>Lorem dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, Ipsum.<br /><br /></p>
-            <p>Lorem dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, Ipsum.<br /><br /></p>
-            <p>Lorem dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, Ipsum.<br /><br /></p>
-            <p>Lorem dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, Ipsum.<br /><br /></p>
-        </script>
-
-        <script src="components/angular-unstable/angular.min.js"></script>
+        <script src="components/unstable-angular-complete/angular.min.js"></script>
+        <script src="components/unstable-angular-complete/angular-mobile.min.js"></script>
 
         <!-- build:js scripts/scripts.js -->
         <script src="scripts/app.js"></script>

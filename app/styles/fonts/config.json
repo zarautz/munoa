@@ -346,9 +346,21 @@
       "src": "meteocons"
     },
     {
+      "uid": "ce50292e85eb5d6ee3be61b32bf2bdf3",
+      "css": "ok",
+      "code": 61542,
+      "src": "mfglabs"
+    },
+    {
       "uid": "018571e697f22ca41803de480e10ed10",
       "css": "home",
       "code": 61527,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "37910a1398001a5ccb541cb2a253a2c7",
+      "css": "right-open",
+      "code": 61543,
       "src": "mfglabs"
     },
     {

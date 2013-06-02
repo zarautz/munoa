@@ -10,12 +10,12 @@
         <meta name="format-detection" content="telephone=no" />
         <title>Zarautz</title>
     </head>
-    <body ng-class="{ 'active-menu': navCtrl.menu.isActive }" ng-controller="NavigationController as navCtrl">
+    <body ng-class="{ 'active-menu': navCtrl.menu.isActive() }" ng-controller="NavigationController as navCtrl">
 
         <main ng-view></main>
         <nav>
             <ul class="drawer">
-                <li ng-repeat="item in navCtrl.menu.items">
+                <li ng-repeat="item in navCtrl.menu.getItems()">
                     <a href ng-click="navCtrl.openSection(item.path)" ng-class="navCtrl.getClassForPath(item.path, 'active')" class="{{ item.id }}">
                         <i class="{{ item.icon }}"></i>{{ item.label }}
                     </a>
@@ -23,7 +23,7 @@
             </ul>
             <ul class="drawer" style="margin-top:40px">
                 <li>
-                    <a href ng-click="navCtrl.reorderMenuItems()"><i class="icon-cog color-red"></i>Shuffle test!</a>
+                    <a href ng-click="navCtrl.menu.reorderItems()"><i class="icon-cog color-red"></i>Shuffle test!</a>
                 </li>
             </ul>
         </nav>

@@ -6,20 +6,16 @@
 //
 
 App.controller('NavigationController', ['$scope', '$location', 'menu', function ($scope, $location, menu) {
-    this.menu  = menu;
+    this.menu = menu;
     this.activeView = 1;
 
-    this.reorderMenuItems = function() { // TEST
-        this.menu.items.reverse();
-    };
-
     this.toggleMenu = function() {
-        this.menu.isActive = ! this.menu.isActive;
+        this.menu.toggleIsActive();
     };
 
     this.openSection = function(path) {
         $location.path(path);
-        this.menu.isActive = false;
+        this.menu.setIsActive(false);
     };
 
     this.getClassForPath = function(path, cssClass) {
@@ -27,7 +23,7 @@ App.controller('NavigationController', ['$scope', '$location', 'menu', function 
     };
 
     this.pushView = function(template, data) {
-        if (this.menu.isActive) {
+        if (this.menu.isActive()) {
             this.toggleMenu();
             return false;
         }
@@ -63,9 +59,10 @@ App.controller('EventController', ['$http', function($http) {
 // SettingController
 //
 
-App.controller('SettingController', [function() {
+App.controller('SettingController', ['menu', function(menu) {
     this.settings = {
         locale: {
+            id: 'locale',
             title: 'Language',
             selectedKey: 'eu',
             options: {
@@ -76,6 +73,7 @@ App.controller('SettingController', [function() {
             }
         },
         profile: {
+            id: 'profile',
             title: 'Profile',
             selectedKey: 'tourist',
             options: {
@@ -86,6 +84,10 @@ App.controller('SettingController', [function() {
     };
 
     this.updateSetting = function(setting, key) {
+        if (setting.id == 'profile') {
+            menu.reorderItems(key);
+        }
+
         setting.selectedKey = key;
     };
 }]);

@@ -2,7 +2,7 @@
 /*global App */
 
 App.config(['$routeProvider', 'menuProvider', function($routeProvider, menuProvider) {
-    angular.forEach(menuProvider.$get().items, function(item){
+    angular.forEach(menuProvider.$get().getItems(), function(item){
         $routeProvider.when(item.path, { templateUrl: item.templateUrl });
     });
 

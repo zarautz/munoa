@@ -19,3 +19,33 @@ Z.app.provider('menu', function () {
         this._profile = profile;
     }
 });
+
+Z.app.provider('babel', function () {
+    this._catalogue = {};
+    this._locale    = '';
+
+    this.$get = function () {
+        var babel = new Z.Babel();
+
+        babel.setCatalogue(this._catalogue);
+        babel.setLocale(this._locale);
+
+        return babel;
+    }
+
+    this.setCatalogue = function (catalogue) {
+        this._catalogue = catalogue;
+    }
+
+    this.setLocale = function (locale) {
+        this._locale = locale;
+    }
+});
+
+Z.app.provider('settings', function () {
+    this.$get = function () {
+        var settings = new Z.Settings();
+
+        return settings;
+    }
+});

@@ -1,4 +1,10 @@
-Z.app.config(['$routeProvider', 'menuProvider', function ($routeProvider, menuProvider) {
+Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', 'settingsProvider', function ($routeProvider, babelProvider, menuProvider, settingsProvider) {
+    // Set BabelProvider init vars
+    // This is no the Babel instance, it's the factory class
+    babelProvider.setCatalogue(Z.catalogue);
+    babelProvider.setLocale('eu'); // HAU ALDATU MOBILEKO DEFEKTUZKORA EDO LOCAL STORAGETIK HARTU
+
+
     var menuItems = [
         { 
             id: 'index',
@@ -58,10 +64,14 @@ Z.app.config(['$routeProvider', 'menuProvider', function ($routeProvider, menuPr
         }
     ];
 
-    // Set MenuProvider initialization vars
-    // This is not the menu instance, it's the factory class
+    // Set MenuProvider init vars
+    // This is not the Menu instance, it's the factory class
     menuProvider.setMenuItems(menuItems);
     menuProvider.setProfile('zarautz');
+
+    // Set SettingsProvider init vars
+    // This is no the Settings instance, it's the factory class
+    // settingsProvider.doSomething();
 
     // Routes
     angular.forEach(menuItems, function (item) {

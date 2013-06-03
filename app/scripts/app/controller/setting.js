@@ -1,4 +1,4 @@
-Z.app.controller('SettingController', ['menu', function(menu) {
+Z.app.controller('SettingController', ['menu', 'babel', function(menu, babel) {
     this.settings = {
         locale: {
             id: 'locale',
@@ -25,6 +25,10 @@ Z.app.controller('SettingController', ['menu', function(menu) {
     this.updateSetting = function(setting, key) {
         if (setting.id == 'profile') {
             menu.setProfile(key);
+        }
+
+        if (setting.id == 'locale') {
+            babel.setLocale(key);
         }
 
         setting.selectedKey = key;

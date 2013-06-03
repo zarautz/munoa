@@ -1,3 +1,5 @@
+'use strict';
+
 Z.app.controller('SettingController', ['menu', 'babel', function(menu, babel) {
     this.settings = {
         locale: {

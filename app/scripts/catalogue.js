@@ -1,3 +1,5 @@
+'use strict';
+
 Z.catalogue = {
     'health': {
         'eu': 'Osasun zerbitzuak',

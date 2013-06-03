@@ -1,12 +1,13 @@
+'use strict';
+
 Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', 'settingsProvider', function ($routeProvider, babelProvider, menuProvider, settingsProvider) {
     // Set BabelProvider init vars
     // This is no the Babel instance, it's the factory class
     babelProvider.setCatalogue(Z.catalogue);
     babelProvider.setLocale('eu'); // HAU ALDATU MOBILEKO DEFEKTUZKORA EDO LOCAL STORAGETIK HARTU
 
-
     var menuItems = [
-        { 
+        {
             id: 'index',
             path: '/',
             templateUrl: 'views/index.html',
@@ -14,7 +15,7 @@ Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', 'settingsProvid
             icon: 'icon-home color-blue',
             sort: {'zarautz': 1, 'tourist': 6}
         },
-        { 
+        {
             id: 'settings',
             path: '/settings',
             templateUrl: 'views/settings.html',

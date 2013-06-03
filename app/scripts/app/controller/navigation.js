@@ -1,3 +1,5 @@
+'use strict';
+
 Z.app.controller('NavigationController', ['$scope', '$location', 'menu', function ($scope, $location, menu) {
     this.menu = menu;
     this.activeView = 1;
@@ -18,6 +20,7 @@ Z.app.controller('NavigationController', ['$scope', '$location', 'menu', functio
     this.pushView = function(template, data) {
         if (this.menu.isActive()) {
             this.toggleMenu();
+
             return false;
         }
 
@@ -37,5 +40,5 @@ Z.app.controller('NavigationController', ['$scope', '$location', 'menu', functio
         } else {
             this.menu.setProfile('zarautz');
         }
-    }
+    };
 }]);

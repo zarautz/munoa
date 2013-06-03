@@ -1,3 +1,5 @@
+'use strict';
+
 Z.Babel = function Babel() {
     this._locale    = 'eu';
     this._catalogue = {};
@@ -6,13 +8,13 @@ Z.Babel = function Babel() {
         this._catalogue = catalogue;
 
         return this;
-    }
+    };
 
     this.setLocale = function (locale) {
         this._locale = locale;
 
         return this;
-    }
+    };
 
     this.translate = function (key) {
         if (key in this._catalogue && this._locale in this._catalogue[key]) {
@@ -20,5 +22,5 @@ Z.Babel = function Babel() {
         } else {
             return key;
         }
-    }
-}
+    };
+};

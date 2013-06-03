@@ -1,3 +1,5 @@
+'use strict';
+
 Z.app.controller('EventController', ['$http', function($http) {
     var that = this;
 

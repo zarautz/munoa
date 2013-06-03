@@ -1,0 +1,3 @@
+Z.Settings = function Settings() {
+    
+}

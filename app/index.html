@@ -23,7 +23,7 @@
             </ul>
             <ul class="drawer" style="margin-top:40px">
                 <li>
-                    <a href ng-click="navCtrl.menu.reorderItems()"><i class="icon-cog color-red"></i>Shuffle test!</a>
+                    <a href ng-click="navCtrl.toggleProfile()"><i class="icon-cog color-red"></i>Now {{ navCtrl.menu.getProfile() }}</a>
                 </li>
             </ul>
         </nav>
@@ -33,9 +33,14 @@
         <script src="components/unstable-angular-complete/angular-mobile.min.js"></script>
 
         <!-- build:js scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/router.js"></script>
-        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/init.js"></script>
+        <script src="scripts/menu.js"></script>
+        <script src="scripts/settings.js"></script>
+        <script src="scripts/app/providers.js"></script>
+        <script src="scripts/app/config.js"></script>
+        <script src="scripts/app/controller/event.js"></script>
+        <script src="scripts/app/controller/navigation.js"></script>
+        <script src="scripts/app/controller/setting.js"></script>
         <!-- endbuild -->
 
     </body>

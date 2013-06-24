@@ -75,6 +75,7 @@ module.exports = function (grunt) {
                 files: [{
                     dot: true,
                     src: [
+                        'build.zip',
                         '.tmp',
                         '<%= yeoman.dist %>/*',
                         '!<%= yeoman.dist %>/.git*'
@@ -233,12 +234,25 @@ module.exports = function (grunt) {
                     dest: '<%= yeoman.dist %>',
                     src: [
                         '*.{ico,txt}',
+                        'config.xml',
                         '.htaccess',
                         'components/**/*',
                         'images/{,*/}*.{gif,webp}',
                         'styles/fonts/*'
                     ]
                 }]
+            }
+        },
+        compress: {
+            dist: {
+                options: {
+                    archive: 'build.zip',
+                    mode: 'zip'
+                },
+                files: [
+                    // http://gruntjs.com/configuring-tasks#building-the-files-object-dynamically
+                    {expand: true, cwd: '<%= yeoman.dist %>', src: '**', isFile: true}
+                ]
             }
         }
     });
@@ -271,7 +285,8 @@ module.exports = function (grunt) {
         'jshint',
         'test',
         // Prepare assets
-        'assets'
+        'assets',
+        'compress'
     ]);
 
     grunt.registerTask('c9build', [

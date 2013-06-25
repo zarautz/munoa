@@ -16,6 +16,7 @@
     "grunt-contrib-imagemin": "~0.1.2",
     "grunt-contrib-livereload": "~0.1.2",
     "grunt-contrib-compress": "~0.5.2",
+    "grunt-phonegap-build": "git+ssh://git@github.com:centralway/grunt-phonegap-build.git#0.0.8",
     "grunt-bower-requirejs": "~0.4.1",
     "grunt-usemin": "~0.1.10",
     "grunt-regarde": "~0.1.1",

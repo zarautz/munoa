@@ -13,6 +13,7 @@ module.exports = function (grunt) {
     var yeomanConfig = {
         app: 'app',
         dist: 'dist',
+        build: 'build',
         pkg: grunt.file.readJSON('package.json')
     };
 
@@ -75,8 +76,8 @@ module.exports = function (grunt) {
                 files: [{
                     dot: true,
                     src: [
-                        'build.zip',
                         '.tmp',
+                        '<%= yeoman.build %>/<%= yeoman.build %>.zip',
                         '<%= yeoman.dist %>/*',
                         '!<%= yeoman.dist %>/.git*'
                     ]
@@ -236,7 +237,7 @@ module.exports = function (grunt) {
                         '*.{ico,txt}',
                         'config.xml',
                         '.htaccess',
-                        'components/**/*',
+                        '!components/**/*',
                         'images/{,*/}*.{gif,webp}',
                         'styles/fonts/*'
                     ]
@@ -246,7 +247,7 @@ module.exports = function (grunt) {
         compress: {
             dist: {
                 options: {
-                    archive: 'build.zip',
+                    archive: '<%= yeoman.build %>/<%= yeoman.build %>.zip',
                     mode: 'zip'
                 },
                 files: [
@@ -260,11 +261,24 @@ module.exports = function (grunt) {
                 ]
             }
         },
+        'phonegap-build': {
+            dist: {
+                options: {
+                    archive: "<%= yeoman.build %>/<%= yeoman.build %>.zip",
+                    appId: "448397",
+                    timeout: 300000, // 5 minutes
+                    user: {
+                        email: "illarra.bros@gmail.com"
+                    }
+                }
+            },
+        }
+        /*
         exec: {
             phonegap: {
                 cmd: "curl -u illarra.bros@gmail.com -X PUT -F file=@./build.zip https://build.phonegap.com/api/v1/apps/448397"
             }
-        },
+        },*/
     });
 
     grunt.renameTask('regarde', 'watch');
@@ -325,7 +339,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('upload', [
         'build',
-        'exec:phonegap'
+        'phonegap-build'
     ]);
 
     grunt.registerTask('default', ['build']);

@@ -268,10 +268,27 @@ module.exports = function (grunt) {
                     appId: "448397",
                     timeout: 300000, // 5 minutes
                     user: {
-                        email: "illarra.bros@gmail.com"
+                        email: "team@illarra.com"
                     }
                 }
             },
+            download: {
+                options: {
+                    appId: "448397",
+                    timeout: 300000, // 5 minutes
+                    user: {
+                        email: "team@illarra.com"
+                    },
+                    download: {
+                        //winphone: '<%= yeoman.build %>/winphone.xap',
+                        //symbian: '<%= yeoman.build %>/symbian.wgz',
+                        //blackberry: '<%= yeoman.build %>/blackberry.cod',
+                        //webos: '<%= yeoman.build %>/webos.ipk',
+                        ios: '<%= yeoman.build %>/ios.ipa',
+                        android: '<%= yeoman.build %>/android.apk'
+                    }
+                }
+            }
         }
         /*
         exec: {
@@ -340,6 +357,10 @@ module.exports = function (grunt) {
     grunt.registerTask('upload', [
         'build',
         'phonegap-build'
+    ]);
+
+    grunt.registerTask('download', [
+        'phonegap-build:download'
     ]);
 
     grunt.registerTask('default', ['build']);

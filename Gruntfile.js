@@ -264,20 +264,20 @@ module.exports = function (grunt) {
         'phonegap-build': {
             upload: {
                 options: {
-                    archive: "<%= yeoman.build %>/<%= yeoman.build %>.zip",
-                    appId: "448397",
+                    archive: '<%= yeoman.build %>/<%= yeoman.build %>.zip',
+                    appId: '448397',
                     timeout: 300000, // 5 minutes
                     user: {
-                        email: "team@illarra.com"
+                        email: 'team@illarra.com'
                     }
                 }
             },
             download: {
                 options: {
-                    appId: "448397",
+                    appId: '448397',
                     timeout: 300000, // 5 minutes
                     user: {
-                        email: "team@illarra.com"
+                        email: 'team@illarra.com'
                     },
                     download: {
                         //winphone: '<%= yeoman.build %>/winphone.xap',
@@ -293,7 +293,7 @@ module.exports = function (grunt) {
         /*
         exec: {
             phonegap: {
-                cmd: "curl -u illarra.bros@gmail.com -X PUT -F file=@./build.zip https://build.phonegap.com/api/v1/apps/448397"
+                cmd: 'curl -u illarra.bros@gmail.com -X PUT -F file=@./build.zip https://build.phonegap.com/api/v1/apps/448397'
             }
         },*/
     });

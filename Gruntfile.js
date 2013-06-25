@@ -262,7 +262,7 @@ module.exports = function (grunt) {
             }
         },
         'phonegap-build': {
-            dist: {
+            upload: {
                 options: {
                     archive: "<%= yeoman.build %>/<%= yeoman.build %>.zip",
                     appId: "448397",
@@ -356,7 +356,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('upload', [
         'build',
-        'phonegap-build'
+        'phonegap-build:upload'
     ]);
 
     grunt.registerTask('download', [

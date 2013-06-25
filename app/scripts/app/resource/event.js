@@ -1,8 +1,8 @@
 'use strict';
 
-Z.app.factory('Event', ['$resource', function($resource) {
+Z.app.factory('Event', ['host', '$resource', function(host, $resource) {
     return $resource(
-        'http://zarautz.apiary.io/event/:eventId',
+        host + '/events/:eventId',
         { eventId: '@id' },
         {}
     );

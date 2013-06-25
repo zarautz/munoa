@@ -42,7 +42,7 @@ module.exports = function (grunt) {
             options: {
                 port: 9000,
                 // Change this to '0.0.0.0' to access the server from outside.
-                hostname: 'localhost'
+                hostname: 'munoa.zarautz.org'
             },
             livereload: {
                 options: {
@@ -68,7 +68,7 @@ module.exports = function (grunt) {
         },
         open: {
             server: {
-                url: 'http://localhost:<%= connect.options.port %>'
+                url: 'http://munoa.zarautz.org:<%= connect.options.port %>'
             }
         },
         clean: {

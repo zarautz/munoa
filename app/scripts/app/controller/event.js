@@ -1,7 +1,5 @@
 'use strict';
 
-Z.app.controller('EventController', ['$http', 'Event', function($http, Event) {
-    var that = this;
-
+Z.app.controller('EventController', ['Event', function(Event) {
     this.events = Event.query();
 }]);

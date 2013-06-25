@@ -251,10 +251,20 @@ module.exports = function (grunt) {
                 },
                 files: [
                     // http://gruntjs.com/configuring-tasks#building-the-files-object-dynamically
-                    {expand: true, cwd: '<%= yeoman.dist %>', src: '**', isFile: true}
+                    {
+                        expand: true,
+                        cwd: '<%= yeoman.dist %>',
+                        src: '**',
+                        isFile: true
+                    }
                 ]
             }
-        }
+        },
+        exec: {
+            phonegap: {
+                cmd: "curl -u illarra.bros@gmail.com -X PUT -F file=@./build.zip https://build.phonegap.com/api/v1/apps/448397"
+            }
+        },
     });
 
     grunt.renameTask('regarde', 'watch');
@@ -311,6 +321,11 @@ module.exports = function (grunt) {
         'uglify',
         'rev',
         'usemin'
+    ]);
+
+    grunt.registerTask('upload', [
+        'build',
+        'exec:phonegap'
     ]);
 
     grunt.registerTask('default', ['build']);

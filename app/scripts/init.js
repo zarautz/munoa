@@ -3,7 +3,7 @@
 var Z = {};
 
 // Create the Angular app
-Z.app = angular.module('zarautz', ['ngMobile']);
+Z.app = angular.module('zarautz', ['ngResource', 'ngMobile']);
 
 Z.app.value('host', false ? 'http://zarautz.illarra.com' : 'http://local.data.zarautz.org');
 

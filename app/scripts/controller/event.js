@@ -1,5 +1,5 @@
 'use strict';
 
-Z.app.controller('EventController', ['Event', function(Event) {
-    this.events = Event.findAll();
+Z.app.controller('EventController', ['event', function(event) {
+    this.events = event.findAll();
 }]);

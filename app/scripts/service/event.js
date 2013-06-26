@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.factory('Event', ['$resource', 'apiHost', '$cacheFactory', function($resource, apiHost, $cacheFactory) {
+Z.app.factory('event', ['$resource', 'apiHost', '$cacheFactory', function($resource, apiHost, $cacheFactory) {
     var cache    = $cacheFactory('event');
     var resource = $resource(
         apiHost + '/events/:id',

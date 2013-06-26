@@ -53,6 +53,9 @@ Z.Menu = function Menu() {
     };
 };
 
+/**
+ * Factory
+ */
 Z.app.provider('menu', function () {
     this._items   = [];
     this._profile = 'zarautz';

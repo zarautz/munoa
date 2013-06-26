@@ -162,7 +162,7 @@ module.exports = function (grunt) {
         cssmin: {
             dist: {
                 files: {
-                    '<%= yeoman.dist %>/styles/zarautz.css': [
+                    '<%= yeoman.dist %>/styles/styles.css': [
                         '.tmp/styles/{,*/}*.css',
                         '<%= yeoman.app %>/styles/{,*/}*.css'
                     ]

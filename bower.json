@@ -2,6 +2,7 @@
     "name": "zarautz",
     "version": "0.1.0",
     "dependencies": {
+        "store.js": "1.3.x",
         "unstable-angular-complete": "~1.1.5",
         "foundation": "~4.1.6"
     },

@@ -17,4 +17,12 @@ https://build.phonegap.com/docs/config-xml
     <name>Zarautz</name>
     <description>Zarautz app description</description>
     <author href="http://illarra.com" email="team@illarra.com">illarra</author>
+
+    <!--
+    Allow access to zarautz.org
+    -->
+    <access origin="http://pagoeta.zarautz.org" />
+    <!-- 
+    <access origin="http://zarautz.org" subdomains="true" browserOnly="true" />
+    -->
 </widget>

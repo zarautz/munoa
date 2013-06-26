@@ -78,14 +78,14 @@ Z.app.provider('menu', function () {
             item = items[item];
 
             if (!('path' in item)) {
-                item['path'] = '/'+ item.id;
+                item.path = '/'+ item.id;
             }
 
             if (!('templateUrl' in item)) {
-                item['templateUrl'] = 'views/'+ item.id +'.html';
+                item.templateUrl = 'views/'+ item.id +'.html';
             }
 
-            item['sort'] = {};
+            item.sort = {};
 
             this._map[item.id] = item;
         }
@@ -104,5 +104,5 @@ Z.app.provider('menu', function () {
             item = this._map[sort[i]];
             item.sort[profile] = i;
         }
-    }
+    };
 });

@@ -18,5 +18,5 @@ Z.app.factory('Event', ['$resource', 'apiHost', '$cacheFactory', function($resou
 
             return events;
         }
-    }
+    };
 }]);

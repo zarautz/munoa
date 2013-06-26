@@ -9,3 +9,4 @@ app/components
 node_modules
 dist
 build.zip
+build

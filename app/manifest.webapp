@@ -1,0 +1,13 @@
+{
+    "name": "Zarautz",
+    "description": "Zarautz app description",
+    "launch_path": "/index.html",
+    "icons": {
+        "128": "/img/icon-128.png"
+    },
+    "developer": {
+        "name": "illarra",
+        "url": "http://illarra.com"
+    },
+    "default_locale": "eu"
+}

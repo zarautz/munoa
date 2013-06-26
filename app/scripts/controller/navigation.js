@@ -35,7 +35,7 @@ Z.app.controller('NavigationController', ['$scope', '$location', 'menu', functio
     };
 
     this.toggleProfile = function () {
-        if (this.menu.getProfile() == 'zarautz') {
+        if (this.menu.getProfile() === 'zarautz') {
             this.menu.setProfile('tourist');
         } else {
             this.menu.setProfile('zarautz');

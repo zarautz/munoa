@@ -1,6 +1,6 @@
 'use strict';
 
-//Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', 'settingsProvider', function ($routeProvider, babelProvider, menuProvider, settingsProvider) {
+//Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', 'settingProvider', function ($routeProvider, babelProvider, menuProvider, settingProvider) {
 Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', function ($routeProvider, babelProvider, menuProvider) {
     // Set BabelProvider init vars
     // This is no the Babel instance, it's the factory class

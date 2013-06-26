@@ -11,38 +11,31 @@ Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', function ($rout
         {
             id: 'index',
             path: '/',
-            icon: 'icon-home color-blue',
-            sort: {'zarautz': 1, 'tourist': 6}
+            icon: 'icon-home color-blue'
         },
         {
             id: 'settings',
-            icon: 'icon-cog',
-            sort: {'zarautz': 0, 'tourist': 0}
+            icon: 'icon-cog'
         },
         {
             id: 'events',
-            icon: 'icon-calendar color-orange',
-            sort: {'zarautz': 2, 'tourist': 2}
+            icon: 'icon-calendar color-orange'
         },
         {
             id: 'places',
-            icon: 'icon-pictures color-red',
-            sort: {'zarautz': 3, 'tourist': 1}
+            icon: 'icon-pictures color-red'
         },
         {
             id: 'weather',
-            icon: 'icon-sun-alt color-yellow',
-            sort: {'zarautz': 4, 'tourist': 3}
+            icon: 'icon-sun-alt color-yellow'
         },
         {
             id: 'sea',
-            icon: 'icon-swim color-light-blue',
-            sort: {'zarautz': 5, 'tourist': 4}
+            icon: 'icon-swim color-light-blue'
         },
         {
             id: 'health',
-            icon: 'icon-medical color-green',
-            sort: {'zarautz': 6, 'tourist': 5}
+            icon: 'icon-medical color-green'
         }
     ];
 
@@ -51,12 +44,17 @@ Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', function ($rout
     menuProvider.setMenuItems(menuItems);
     menuProvider.setProfile('zarautz');
 
+    // Set the menu items order for each profile
+    menuProvider.sortMenuItems('zarautz', ['settings', 'index', 'events', 'weather', 'sea', 'health', 'places']);
+    menuProvider.sortMenuItems('tourist', ['settings', 'places', 'events', 'weather', 'sea', 'health', 'index']);
+
     // Set SettingsProvider init vars
     // This is no the Settings instance, it's the factory class
     // settingsProvider.doSomething();
 
     // Routes
-    angular.forEach(menuItems, function (item) {
+    // We get the menu items from the provider as this have been processed
+    angular.forEach(menuProvider.getMenuItems(), function (item) {
         $routeProvider.when(item.path, {templateUrl: item.templateUrl});
     });
 

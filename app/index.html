@@ -17,7 +17,7 @@
             <ul class="drawer">
                 <li ng-repeat="item in navCtrl.menu.getItems()">
                     <a href ng-click="navCtrl.openSection(item.path)" ng-class="navCtrl.getClassForPath(item.path, 'active')" class="{{ item.id }}">
-                        <i class="{{ item.icon }}"></i>{{ item.label }}
+                        <i class="{{ item.icon }}"></i>{{ item.id|translate }}
                     </a>
                 </li>
             </ul>

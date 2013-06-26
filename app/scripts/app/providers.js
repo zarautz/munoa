@@ -14,6 +14,20 @@ Z.app.provider('menu', function () {
     };
 
     this.setMenuItems = function (items) {
+        var item;
+
+        for (item in items) {
+            item = items[item];
+
+            if (!('path' in item)) {
+                item['path'] = '/'+ item.id;
+            }
+
+            if (!('templateUrl' in item)) {
+                item['templateUrl'] = 'views/'+ item.id +'.html';
+            }
+        }
+
         this._items = items;
     };
 

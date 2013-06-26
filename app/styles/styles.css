@@ -1240,7 +1240,7 @@ nav {
   position: fixed;
   z-index: 0;
   height: 100%;
-  width: 80%;
+  width: 260px;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-transform: translateZ(0px);
@@ -1280,17 +1280,24 @@ aside {
 
 /* line 59, scss/_app-navigation.scss */
 body.active-menu main {
-  -webkit-transform: translateX(80%);
-  transform: translateX(80%);
+  -webkit-transform: translateX(260px);
+  transform: translateX(260px);
+}
+@media only screen and (max-width: 315px) {
+  /* line 59, scss/_app-navigation.scss */
+  body.active-menu main {
+    -webkit-transform: translateX(80%);
+    transform: translateX(80%);
+  }
 }
 
-/* line 65, scss/_app-navigation.scss */
+/* line 69, scss/_app-navigation.scss */
 body.active-modal aside {
   -webkit-transform: translateY(0px);
   transform: translateY(0px);
 }
 
-/* line 70, scss/_app-navigation.scss */
+/* line 74, scss/_app-navigation.scss */
 section {
   height: 100%;
   -webkit-transition-property: -webkit-transform;
@@ -1300,14 +1307,14 @@ section {
   -webkit-transition-timing-function: linear;
   transition-timing-function: linear;
 }
-/* line 74, scss/_app-navigation.scss */
+/* line 78, scss/_app-navigation.scss */
 section > div {
   float: left;
   height: 100%;
   position: relative;
 }
 
-/* line 81, scss/_app-navigation.scss */
+/* line 85, scss/_app-navigation.scss */
 header {
   position: absolute;
   top: 0px;
@@ -1319,7 +1326,7 @@ header {
   transform: translateZ(0px);
 }
 
-/* line 91, scss/_app-navigation.scss */
+/* line 95, scss/_app-navigation.scss */
 div.scroll {
   position: absolute;
   top: 46px;
@@ -1333,35 +1340,35 @@ div.scroll {
   -webkit-overflow-scrolling: touch;
 }
 
-/* line 106, scss/_app-navigation.scss */
+/* line 110, scss/_app-navigation.scss */
 section {
   width: 500%;
 }
-/* line 109, scss/_app-navigation.scss */
+/* line 113, scss/_app-navigation.scss */
 section > div {
   width: 20%;
 }
-/* line 113, scss/_app-navigation.scss */
+/* line 117, scss/_app-navigation.scss */
 section.on-1 {
   -webkit-transform: translateX(0px);
   transform: translateX(0px);
 }
-/* line 118, scss/_app-navigation.scss */
+/* line 122, scss/_app-navigation.scss */
 section.on-2 {
   -webkit-transform: translateX(-20%);
   transform: translateX(-20%);
 }
-/* line 118, scss/_app-navigation.scss */
+/* line 122, scss/_app-navigation.scss */
 section.on-3 {
   -webkit-transform: translateX(-40%);
   transform: translateX(-40%);
 }
-/* line 118, scss/_app-navigation.scss */
+/* line 122, scss/_app-navigation.scss */
 section.on-4 {
   -webkit-transform: translateX(-60%);
   transform: translateX(-60%);
 }
-/* line 118, scss/_app-navigation.scss */
+/* line 122, scss/_app-navigation.scss */
 section.on-5 {
   -webkit-transform: translateX(-80%);
   transform: translateX(-80%);

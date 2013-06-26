@@ -58,6 +58,10 @@ aside {
 body.active-menu {
     main {
         @include transform(translateX($menu-width));
+
+        @media only screen and (max-width: 315px) {
+            @include transform(translateX(80%));
+        }
     }
 }
 

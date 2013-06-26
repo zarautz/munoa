@@ -7,7 +7,7 @@ https://build.phonegap.com/docs/config-xml
     -->
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.illarra.plaza"
+        id          = "com.illarra.zarautz.munoa"
         versionCode = "1" 
         version     = "0.0.1">
 

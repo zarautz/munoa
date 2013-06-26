@@ -2,11 +2,16 @@
 
 //Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', 'settingProvider', function ($routeProvider, babelProvider, menuProvider, settingProvider) {
 Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', function ($routeProvider, babelProvider, menuProvider) {
-    // Set BabelProvider init vars
+    // -----
+    // BABEL
+    // -----
     // This is no the Babel instance, it's the factory class
     babelProvider.setCatalogue(Z.catalogue);
     babelProvider.setLocale('eu'); // TODO: HAU ALDATU MOBILEKO DEFEKTUZKORA EDO LOCAL STORAGETIK HARTU
 
+    // ----
+    // MENU
+    // ----
     var menuItems = [
         {
             id: 'index',
@@ -39,7 +44,6 @@ Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', function ($rout
         }
     ];
 
-    // Set MenuProvider init vars
     // This is not the Menu instance, it's the factory class
     menuProvider.setMenuItems(menuItems);
     menuProvider.setProfile('zarautz');
@@ -48,11 +52,15 @@ Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', function ($rout
     menuProvider.sortMenuItems('zarautz', ['settings', 'index', 'events', 'weather', 'sea', 'health', 'places']);
     menuProvider.sortMenuItems('tourist', ['settings', 'places', 'events', 'weather', 'sea', 'health', 'index']);
 
-    // Set SettingsProvider init vars
+    // --------
+    // SETTINGS
+    // --------
     // This is no the Settings instance, it's the factory class
     // settingsProvider.doSomething();
 
-    // Routes
+    // ------
+    // ROUTES
+    // ------
     // We get the menu items from the provider as this have been processed
     angular.forEach(menuProvider.getMenuItems(), function (item) {
         $routeProvider.when(item.path, {templateUrl: item.templateUrl});

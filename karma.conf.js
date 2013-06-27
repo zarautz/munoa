@@ -5,15 +5,18 @@ basePath = '';
 
 // list of files / patterns to load in the browser
 files = [
-  JASMINE,
-  JASMINE_ADAPTER,
-  'app/components/unstable-angular-complete/angular.js',
-  'app/components/unstable-angular-complete/angular-mobile.js',
-  'app/components/unstable-angular-complete/angular-mocks.js',
-  'app/scripts/*.js',
-  'app/scripts/**/*.js',
-  'test/mock/**/*.js',
-  'test/spec/**/*.js'
+    JASMINE,
+    JASMINE_ADAPTER,
+    'app/components/unstable-angular-complete/angular.js',
+    'app/components/unstable-angular-complete/angular-mobile.js',
+    'app/components/unstable-angular-complete/angular-resource.js',
+    'app/components/unstable-angular-complete/angular-mocks.js',
+    'app/scripts/init.js',
+    'app/scripts/catalogue.js',
+    'app/scripts/controller/*.js',
+    'app/scripts/service/*.js',
+    'app/scripts/config.js',
+    'test/unit/**/*.js'
 ];
 
 // list of files to exclude
@@ -47,7 +50,7 @@ autoWatch = false;
 // - Safari (only Mac)
 // - PhantomJS
 // - IE (only Windows)
-browsers = ['Chrome', 'Firefox'];
+browsers = ['Chrome'];
 
 // If browser does not capture in given timeout [ms], kill it
 captureTimeout = 5000;

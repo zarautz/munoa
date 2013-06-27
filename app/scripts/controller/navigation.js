@@ -4,8 +4,8 @@ Z.app.controller('NavigationController', ['$scope', '$location', 'menu', functio
     this.menu = menu;
     this.activeView = 1;
 
-    this.toggleMenu = function() {
-        this.menu.toggleIsActive();
+    this.getClassForPath = function(path, cssClass) {
+        return $location.path() === path ? cssClass : '';
     };
 
     this.openSection = function(path) {
@@ -13,8 +13,8 @@ Z.app.controller('NavigationController', ['$scope', '$location', 'menu', functio
         this.menu.setIsActive(false);
     };
 
-    this.getClassForPath = function(path, cssClass) {
-        return $location.path() === path ? cssClass : '';
+    this.popView = function() {
+        this.activeView--;
     };
 
     this.pushView = function(template, data) {
@@ -24,21 +24,12 @@ Z.app.controller('NavigationController', ['$scope', '$location', 'menu', functio
             return false;
         }
 
-        $scope['view' + (this.activeView + 1)] = template;
-        $scope.pushData = data;
-
         this.activeView++;
+        $scope['view' + this.activeView] = template;
+        $scope.pushData = data;
     };
 
-    this.popView = function() {
-        this.activeView--;
-    };
-
-    this.toggleProfile = function () {
-        if (this.menu.getProfile() === 'zarautz') {
-            this.menu.setProfile('tourist');
-        } else {
-            this.menu.setProfile('zarautz');
-        }
+    this.toggleMenu = function() {
+        this.menu.toggleIsActive();
     };
 }]);

@@ -4,6 +4,8 @@
         <!-- build:css styles/styles.css -->
         <link rel="stylesheet" href="styles/styles.css">
         <!-- endbuild -->
+        <!-- modernizr -->
+        <script src="styles/modernizr.custom.js"></script>
         <meta charset="utf-8" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -21,13 +23,8 @@
                     </a>
                 </li>
             </ul>
-            <ul class="drawer" style="margin-top:40px">
-                <li>
-                    <a href ng-click="navCtrl.toggleProfile()"><i class="icon-cog color-red"></i>Now {{ navCtrl.menu.getProfile() }}</a>
-                </li>
-            </ul>
         </nav>
-        <aside></aside>
+        <!--<aside></aside>-->
 
         <!-- phonegap bridge -->
         <script src="phonegap.js"></script>

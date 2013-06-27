@@ -1227,7 +1227,7 @@ button.large, .button.large {
     display: inline-block;
   }
 }
-/* line 26, scss/_app-navigation.scss */
+/* line 51, scss/_app-navigation.scss */
 html, body {
   height: 100%;
   padding: 0;
@@ -1235,25 +1235,32 @@ html, body {
   overflow: hidden;
 }
 
-/* line 33, scss/_app-navigation.scss */
+/* line 58, scss/_app-navigation.scss */
 nav {
   position: fixed;
+  top: 0;
   z-index: 0;
   height: 100%;
   width: 260px;
   overflow-x: hidden;
   overflow-y: auto;
-  -webkit-transform: translateZ(0px);
-  transform: translateZ(0px);
   -webkit-overflow-scrolling: touch;
 }
+/* line 14, scss/_app-navigation.scss */
+.csstransforms3d nav {
+  -webkit-transform: translateZ(0px);
+  transform: translateZ(0px);
+}
 
-/* line 41, scss/_app-navigation.scss */
+/* line 67, scss/_app-navigation.scss */
 main {
   position: fixed;
   z-index: 10;
   height: 100%;
   width: 100%;
+}
+/* line 20, scss/_app-navigation.scss */
+.csstransitions main {
   -webkit-transition-property: -webkit-transform;
   transition-property: transform;
   -webkit-transition-duration: 0.15s;
@@ -1262,44 +1269,66 @@ main {
   transition-timing-function: ease-out;
 }
 
-/* line 49, scss/_app-navigation.scss */
+/* line 75, scss/_app-navigation.scss */
 aside {
   position: fixed;
   z-index: 20;
   height: 100%;
   width: 100%;
+}
+/* line 20, scss/_app-navigation.scss */
+.csstransitions aside {
   -webkit-transition-property: -webkit-transform;
   transition-property: transform;
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
   -webkit-transition-timing-function: linear;
   transition-timing-function: linear;
+}
+/* line 35, scss/_app-navigation.scss */
+.csstransforms aside {
+  left: auto;
   -webkit-transform: translateY(130%);
   transform: translateY(130%);
 }
 
-/* line 59, scss/_app-navigation.scss */
+/* line 85, scss/_app-navigation.scss */
 body.active-menu main {
+  left: 260px;
+}
+/* line 28, scss/_app-navigation.scss */
+.csstransforms body.active-menu main {
+  left: auto;
   -webkit-transform: translateX(260px);
   transform: translateX(260px);
 }
 @media only screen and (max-width: 315px) {
-  /* line 59, scss/_app-navigation.scss */
+  /* line 85, scss/_app-navigation.scss */
   body.active-menu main {
+    left: 80%;
+  }
+  /* line 28, scss/_app-navigation.scss */
+  .csstransforms body.active-menu main {
+    left: auto;
     -webkit-transform: translateX(80%);
     transform: translateX(80%);
   }
 }
 
-/* line 69, scss/_app-navigation.scss */
-body.active-modal aside {
+/* line 35, scss/_app-navigation.scss */
+.csstransforms body.active-modal aside {
+  left: auto;
   -webkit-transform: translateY(0px);
   transform: translateY(0px);
 }
 
-/* line 74, scss/_app-navigation.scss */
+/* line 102, scss/_app-navigation.scss */
 section {
+  position: absolute;
   height: 100%;
+}
+/* line 20, scss/_app-navigation.scss */
+.csstransitions section {
   -webkit-transition-property: -webkit-transform;
   transition-property: transform;
   -webkit-transition-duration: 0.2s;
@@ -1307,14 +1336,14 @@ section {
   -webkit-transition-timing-function: linear;
   transition-timing-function: linear;
 }
-/* line 78, scss/_app-navigation.scss */
+/* line 107, scss/_app-navigation.scss */
 section > div {
   float: left;
   height: 100%;
   position: relative;
 }
 
-/* line 85, scss/_app-navigation.scss */
+/* line 114, scss/_app-navigation.scss */
 header {
   position: absolute;
   top: 0px;
@@ -1322,11 +1351,14 @@ header {
   height: 46px;
   width: 100%;
   overflow: hidden;
+}
+/* line 42, scss/_app-navigation.scss */
+.csstransforms3d header {
   -webkit-transform: translateZ(0px);
   transform: translateZ(0px);
 }
 
-/* line 95, scss/_app-navigation.scss */
+/* line 124, scss/_app-navigation.scss */
 div.scroll {
   position: absolute;
   top: 46px;
@@ -1335,41 +1367,69 @@ div.scroll {
   width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  -webkit-transform: translateZ(0px);
-  transform: translateZ(0px);
   -webkit-overflow-scrolling: touch;
 }
+/* line 14, scss/_app-navigation.scss */
+.csstransforms3d div.scroll {
+  -webkit-transform: translateZ(0px);
+  transform: translateZ(0px);
+}
 
-/* line 110, scss/_app-navigation.scss */
+/* line 139, scss/_app-navigation.scss */
 section {
   width: 500%;
 }
-/* line 113, scss/_app-navigation.scss */
+/* line 142, scss/_app-navigation.scss */
 section > div {
   width: 20%;
 }
-/* line 117, scss/_app-navigation.scss */
+/* line 146, scss/_app-navigation.scss */
 section.on-1 {
+  left: 0;
+}
+/* line 28, scss/_app-navigation.scss */
+.csstransforms section.on-1 {
+  left: auto;
   -webkit-transform: translateX(0px);
   transform: translateX(0px);
 }
-/* line 122, scss/_app-navigation.scss */
+/* line 152, scss/_app-navigation.scss */
 section.on-2 {
+  left: -100%;
+}
+/* line 28, scss/_app-navigation.scss */
+.csstransforms section.on-2 {
+  left: auto;
   -webkit-transform: translateX(-20%);
   transform: translateX(-20%);
 }
-/* line 122, scss/_app-navigation.scss */
+/* line 152, scss/_app-navigation.scss */
 section.on-3 {
+  left: -200%;
+}
+/* line 28, scss/_app-navigation.scss */
+.csstransforms section.on-3 {
+  left: auto;
   -webkit-transform: translateX(-40%);
   transform: translateX(-40%);
 }
-/* line 122, scss/_app-navigation.scss */
+/* line 152, scss/_app-navigation.scss */
 section.on-4 {
+  left: -300%;
+}
+/* line 28, scss/_app-navigation.scss */
+.csstransforms section.on-4 {
+  left: auto;
   -webkit-transform: translateX(-60%);
   transform: translateX(-60%);
 }
-/* line 122, scss/_app-navigation.scss */
+/* line 152, scss/_app-navigation.scss */
 section.on-5 {
+  left: -400%;
+}
+/* line 28, scss/_app-navigation.scss */
+.csstransforms section.on-5 {
+  left: auto;
   -webkit-transform: translateX(-80%);
   transform: translateX(-80%);
 }
@@ -1805,6 +1865,51 @@ section.on-5 {
 }
 
 /* '' */
+/* line 3, scss/_app-colors.scss */
+.color-text {
+  color: #333333;
+}
+
+/* line 4, scss/_app-colors.scss */
+.color-blue {
+  color: #337abd;
+}
+
+/* line 5, scss/_app-colors.scss */
+.color-light-blue {
+  color: #2999b7;
+}
+
+/* line 6, scss/_app-colors.scss */
+.color-yellow {
+  color: #f9c600;
+}
+
+/* line 7, scss/_app-colors.scss */
+.color-orange {
+  color: #fba400;
+}
+
+/* line 8, scss/_app-colors.scss */
+.color-red {
+  color: #cd1c19;
+}
+
+/* line 9, scss/_app-colors.scss */
+.color-green {
+  color: #73ba5a;
+}
+
+/* line 10, scss/_app-colors.scss */
+.color-dark {
+  color: #555;
+}
+
+/* line 11, scss/_app-colors.scss */
+.color-twitter {
+  color: #00aced;
+}
+
 /* line 1, scss/_phonegap.scss */
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -1855,55 +1960,61 @@ body {
   }
 }
 
-/* line 67, scss/styles.scss */
+/* line 69, scss/styles.scss */
 p, ul {
   margin: 0;
   padding: 0;
   line-height: 1.4;
 }
 
-/* line 73, scss/styles.scss */
+/* line 75, scss/styles.scss */
 li {
   list-style: none;
 }
 
-/* line 77, scss/styles.scss */
+/* line 79, scss/styles.scss */
 a {
   text-decoration: none;
 }
 
-/* line 85, scss/styles.scss */
+/* line 87, scss/styles.scss */
 body {
   background: #22252c;
   line-height: 1.4;
 }
 
-/* line 90, scss/styles.scss */
+/* line 92, scss/styles.scss */
 main {
-  background: #fcfcfc;
+  background: #fdfdfd;
 }
 
-/* line 94, scss/styles.scss */
+/* line 96, scss/styles.scss */
 div.scroll {
   padding: 15.33333px;
 }
+@media only screen and (min-width: 600px) {
+  /* line 96, scss/styles.scss */
+  div.scroll {
+    padding: 30.66667px;
+  }
+}
 
-/* line 116, scss/styles.scss */
+/* line 122, scss/styles.scss */
 body.active-menu main {
   border-left: 1px solid #121315;
 }
-/* line 119, scss/styles.scss */
+/* line 125, scss/styles.scss */
 body.active-menu main section > div:first-child {
   border-left: 1px solid #68696b;
 }
 
-/* line 129, scss/styles.scss */
+/* line 135, scss/styles.scss */
 header {
   height: 46px;
   line-height: 46px;
   background-color: #eaeaea;
 }
-/* line 138, scss/styles.scss */
+/* line 144, scss/styles.scss */
 header .title {
   font-size: 20px;
   line-height: inherit;
@@ -1914,7 +2025,7 @@ header .title {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 147, scss/styles.scss */
+/* line 153, scss/styles.scss */
 header i {
   background-color: #eaeaea;
   padding: 0 15.33333px;
@@ -1922,17 +2033,17 @@ header i {
   color: #666666;
 }
 
-/* line 159, scss/styles.scss */
+/* line 165, scss/styles.scss */
 ul.drawer {
   background: #22252c;
   color: #eff0f2;
 }
-/* line 163, scss/styles.scss */
+/* line 169, scss/styles.scss */
 ul.drawer li {
   height: 46px;
   padding: 0 15.33333px;
 }
-/* line 167, scss/styles.scss */
+/* line 173, scss/styles.scss */
 ul.drawer li a {
   display: block;
   height: 46px;
@@ -1943,12 +2054,12 @@ ul.drawer li a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 175, scss/styles.scss */
+/* line 181, scss/styles.scss */
 ul.drawer li a [class^="icon-"] {
   margin-right: 15.33333px;
   font-size: 16px;
 }
-/* line 180, scss/styles.scss */
+/* line 186, scss/styles.scss */
 ul.drawer li a.active {
   background: #17191e;
   margin: 0 -15.33333px;
@@ -1956,20 +2067,21 @@ ul.drawer li a.active {
   margin-top: -1px;
   border-top: 1px solid #1b1e23;
 }
-/* line 188, scss/styles.scss */
+/* line 194, scss/styles.scss */
 ul.drawer li a.settings {
   text-transform: uppercase;
   font-size: 12px;
   color: #434957;
 }
 
-/* line 202, scss/styles.scss */
+/* line 208, scss/styles.scss */
 .table-view ul {
-  background: white;
-  border: 1px solid #eaeaea;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #eaeaea;
   padding: 0 11.5px;
 }
-/* line 207, scss/styles.scss */
+/* line 214, scss/styles.scss */
 .table-view ul a {
   display: block;
   color: #333333;
@@ -1980,27 +2092,47 @@ ul.drawer li a.settings {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 215, scss/styles.scss */
+/* line 222, scss/styles.scss */
 .table-view ul a i {
   float: right;
   color: #b3b3b3;
 }
-/* line 219, scss/styles.scss */
+/* line 226, scss/styles.scss */
 .table-view ul a i.selected {
   color: #337abd;
 }
-/* line 224, scss/styles.scss */
+/* line 231, scss/styles.scss */
 .table-view ul a .detail {
   float: right;
   color: #337abd;
   margin-right: 7.66667px;
 }
-/* line 231, scss/styles.scss */
+/* line 238, scss/styles.scss */
 .table-view ul li:last-child a {
   border: 0;
 }
 
-/* line 241, scss/styles.scss */
+/* line 248, scss/styles.scss */
+.small {
+  font-size: 14px;
+}
+
+/* line 252, scss/styles.scss */
+.smallest {
+  font-size: 12px;
+}
+
+/* line 256, scss/styles.scss */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* line 260, scss/styles.scss */
+.lowercase {
+  text-transform: lowercase;
+}
+
+/* line 1, scss/_dev.scss */
 .placeholder {
   text-transform: uppercase;
   font-weight: 300;
@@ -2008,69 +2140,4 @@ ul.drawer li a.settings {
   color: #ccc;
   text-align: center;
   padding: 50px 0;
-}
-
-/* line 250, scss/styles.scss */
-aside {
-  background: yellow;
-}
-
-/* line 254, scss/styles.scss */
-.small {
-  font-size: 14px;
-}
-
-/* line 258, scss/styles.scss */
-.smallest {
-  font-size: 12px;
-}
-
-/* line 262, scss/styles.scss */
-.uppercase {
-  text-transform: uppercase;
-}
-
-/* line 270, scss/styles.scss */
-.color-text {
-  color: #333333;
-}
-
-/* line 271, scss/styles.scss */
-.color-blue {
-  color: #337abd;
-}
-
-/* line 272, scss/styles.scss */
-.color-light-blue {
-  color: #2999b7;
-}
-
-/* line 273, scss/styles.scss */
-.color-yellow {
-  color: #f9c600;
-}
-
-/* line 274, scss/styles.scss */
-.color-orange {
-  color: #fba400;
-}
-
-/* line 275, scss/styles.scss */
-.color-red {
-  color: #cd1c19;
-}
-
-/* line 276, scss/styles.scss */
-.color-green {
-  color: #73ba5a;
-}
-
-/* line 277, scss/styles.scss */
-.color-dark {
-  color: #555;
-}
-
-/* line 278, scss/styles.scss */
-.color-twitter {
-  color: #00aced;
 }

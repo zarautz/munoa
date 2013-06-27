@@ -6,6 +6,7 @@ $experimental-support-for-microsoft: false;
 @import "compass";
 
 $touchable-size:              46px; // Default in iOS: "44px"; Android: "48px"
+$tablet-breakpoint:           600px; // Nexus 7
 
 $total-columns:               3;
 $block-grid-elements:         5;
@@ -14,7 +15,7 @@ $base-padding:                $column-gutter / 2;
 $half-padding:                $column-gutter / 4;
 
 $app-border-radius:           0; // Default in iOS 6: "3px";
-$app-background:              #fcfcfc;
+$app-background:              #fdfdfd;
 
 $action-bar-height:           $touchable-size;
 $action-bar-background-color: #eaeaea;
@@ -48,6 +49,7 @@ $tableview-border-color:      #eaeaea;
 @import "app-foundation";
 @import "app-navigation";
 @import "app-icons";
+@import "app-colors";
 @import "phonegap";
 
 //
@@ -93,6 +95,10 @@ main {
 
 div.scroll {
     padding: $base-padding;
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        padding: ($base-padding * 2);
+    }
 }
 
 //
@@ -200,8 +206,9 @@ ul.drawer {
 
 .table-view {
     ul {
-        background: white;
-        border: 1px solid $tableview-border-color;
+        border-width: 1px 0;
+        border-style: solid;
+        border-color: $tableview-border-color;
         padding: 0 ($touchable-size / 4);
 
         a {
@@ -238,19 +245,6 @@ ul.drawer {
 // Helpers
 //
 
-.placeholder { // TODO: delete
-    text-transform: uppercase;
-    font-weight: 300;
-    font-size: 3em;
-    color: #ccc;
-    text-align: center;
-    padding: 50px 0;
-}
-
-aside { // TODO: delete
-    background: yellow;
-}
-
 .small {
     font-size: $small-font-size;
 }
@@ -263,16 +257,8 @@ aside { // TODO: delete
     text-transform: uppercase;
 }
 
-//
-// Colors
-//
+.lowercase {
+    text-transform: lowercase;
+}
 
-.color-text { color: $body-font-color; }
-.color-blue { color: #337abd; }
-.color-light-blue { color: #2999b7; }
-.color-yellow { color: #f9c600; }
-.color-orange { color: #fba400; }
-.color-red { color: #cd1c19; }
-.color-green { color: #73ba5a; }
-.color-dark { color: #555; }
-.color-twitter { color: #00aced; }
+@import "dev"; // TODO: delete

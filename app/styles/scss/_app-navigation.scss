@@ -9,14 +9,39 @@ $push-animation-duration: 0.2s; // Default in iOS 6: "0.25s" (?)
 @mixin scroll() {
     overflow-x: hidden;
     overflow-y: auto;
-    @include transform(translateZ(0px));
     -webkit-overflow-scrolling: touch;
+
+    .csstransforms3d & {
+        @include transform(translateZ(0px));
+    }
 }
 
 @mixin transform-transition($duration, $timingFunction) {
-    @include transition-property(transform);
-    @include transition-duration($duration);
-    @include transition-timing-function($timingFunction);
+    .csstransitions & {
+        @include transition-property(transform);
+        @include transition-duration($duration);
+        @include transition-timing-function($timingFunction);
+    }
+}
+
+@mixin transform-translateX($position) {
+    .csstransforms & {
+        left: auto;
+        @include transform(translateX($position));
+    }
+}
+
+@mixin transform-translateY($position) {
+    .csstransforms & {
+        left: auto;
+        @include transform(translateY($position));
+    }
+}
+
+@mixin transform-translateZ($position) {
+    .csstransforms3d & {
+        @include transform(translateZ($position));
+    }
 }
 
 //
@@ -32,6 +57,7 @@ html, body {
 
 nav {
     position: fixed;
+    top: 0;
     z-index: 0;
     height: 100%;
     width: $menu-width;
@@ -52,26 +78,29 @@ aside {
     height: 100%;
     width: 100%;
     @include transform-transition($push-animation-duration, linear);
-    @include transform(translateY(130%));
+    @include transform-translateY(130%);
 }
 
 body.active-menu {
     main {
-        @include transform(translateX($menu-width));
+        left: $menu-width;
+        @include transform-translateX($menu-width);
 
         @media only screen and (max-width: 315px) {
-            @include transform(translateX(80%));
+            left: 80%;
+            @include transform-translateX(80%);
         }
     }
 }
 
 body.active-modal {
     aside {
-        @include transform(translateY(0px));
+        @include transform-translateY(0px);
     }
 }
 
 section {
+    position: absolute;
     height: 100%;
     @include transform-transition($push-animation-duration, linear);
     
@@ -89,7 +118,7 @@ header {
     height: $action-bar-height;
     width: 100%;
     overflow: hidden;
-    @include transform(translateZ(0px));
+    @include transform-translateZ(0px);
 }
 
 div.scroll {
@@ -115,12 +144,14 @@ section {
     }
     
     &.on-1 {
-        @include transform(translateX(0px));
+        left: 0;
+        @include transform-translateX(0px);
     }
     
     @for $page from 2 through $flex-pages {
         &.on-#{($page)} {
-            @include transform(translateX(-((100% / $flex-pages) * ($page - 1))));
+            left: -(100% * ($page - 1));
+            @include transform-translateX(-((100% / $flex-pages) * ($page - 1)));
         }
     }
 }

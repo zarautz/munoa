@@ -4,6 +4,24 @@
   "css_use_suffix": false,
   "glyphs": [
     {
+      "uid": "559647a6f430b3aeadbecd67194451dd",
+      "css": "menu",
+      "code": 61446,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "5590d2f643b64d2d0757ae660f9c24cb",
+      "css": "medical-alt",
+      "code": 61447,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "46120eb259799eab0dac0691137e5706",
+      "css": "medical",
+      "code": 61448,
+      "src": "fontawesome"
+    },
+    {
       "uid": "3def559c3c39b8500882e02892b7daa8",
       "css": "pictures",
       "code": 61441,
@@ -38,24 +56,6 @@
       "css": "calendar",
       "code": 61445,
       "src": "entypo"
-    },
-    {
-      "uid": "559647a6f430b3aeadbecd67194451dd",
-      "css": "menu",
-      "code": 61446,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "5590d2f643b64d2d0757ae660f9c24cb",
-      "css": "medical-alt",
-      "code": 61447,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "46120eb259799eab0dac0691137e5706",
-      "css": "medical",
-      "code": 61448,
-      "src": "fontawesome"
     },
     {
       "uid": "48050e07077b01021f7fbdbbec8f7de7",
@@ -355,6 +355,12 @@
       "uid": "018571e697f22ca41803de480e10ed10",
       "css": "home",
       "code": 61527,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "b714be5a812a474811604f700dfc87ce",
+      "css": "left-open",
+      "code": 61544,
       "src": "mfglabs"
     },
     {

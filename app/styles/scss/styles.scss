@@ -143,6 +143,7 @@ header {
     
     .title {
         font-size: $action-bar-text-size;
+        font-weight: normal;
         line-height: inherit;
         margin: 0 3em 0 0;
         text-align: center;
@@ -209,7 +210,7 @@ ul.drawer {
         border-width: 1px 0;
         border-style: solid;
         border-color: $tableview-border-color;
-        padding: 0 ($touchable-size / 4);
+        margin-right: -($base-padding);
 
         a {
             display: block;
@@ -217,6 +218,7 @@ ul.drawer {
             border-bottom: 1px solid $tableview-border-color;
             height: $touchable-size;
             line-height: $touchable-size;
+            padding-right: $base-padding;
             @include ellipsis();
 
             i {

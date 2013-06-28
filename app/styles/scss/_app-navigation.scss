@@ -6,42 +6,31 @@ $push-animation-duration: 0.2s; // Default in iOS 6: "0.25s" (?)
 // Mixins
 //
 
-@mixin scroll() {
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-
-    .csstransforms3d & {
-        @include transform(translateZ(0px));
-    }
-}
-
 @mixin transform-transition($duration, $timingFunction) {
-    .csstransitions & {
-        @include transition-property(transform);
-        @include transition-duration($duration);
-        @include transition-timing-function($timingFunction);
-    }
+    @include transition-property(transform);
+    @include transition-duration($duration);
+    @include transition-timing-function($timingFunction);
 }
 
 @mixin transform-translateX($position) {
-    .csstransforms & {
-        left: auto;
-        @include transform(translateX($position));
-    }
+    @include transform(translateX($position));
 }
 
 @mixin transform-translateY($position) {
-    .csstransforms & {
-        left: auto;
-        @include transform(translateY($position));
-    }
+    @include transform(translateY($position));
 }
 
 @mixin transform-translateZ($position) {
     .csstransforms3d & {
         @include transform(translateZ($position));
     }
+}
+
+@mixin scroll() {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    @include transform-translateZ(0px);
 }
 
 //
@@ -83,11 +72,9 @@ aside {
 
 body.active-menu {
     main {
-        left: $menu-width;
         @include transform-translateX($menu-width);
 
         @media only screen and (max-width: 315px) {
-            left: 80%;
             @include transform-translateX(80%);
         }
     }
@@ -144,13 +131,11 @@ section {
     }
     
     &.on-1 {
-        left: 0;
         @include transform-translateX(0px);
     }
     
     @for $page from 2 through $flex-pages {
         &.on-#{($page)} {
-            left: -(100% * ($page - 1));
             @include transform-translateX(-((100% / $flex-pages) * ($page - 1)));
         }
     }

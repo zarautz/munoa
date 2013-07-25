@@ -10,6 +10,7 @@ $push-animation-duration: 0.2s; // Default in iOS 6: "0.25s" (?)
     @include transition-property(transform);
     @include transition-duration($duration);
     @include transition-timing-function($timingFunction);
+    @include backface-visibility(hidden);
 }
 
 @mixin transform-translateX($position) {

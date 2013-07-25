@@ -86,7 +86,6 @@ body.active-modal {
 }
 
 section {
-    position: absolute;
     height: 100%;
     @include transform-transition($push-animation-duration, linear);
     
@@ -130,7 +129,7 @@ section {
     }
     
     &.on-1 {
-        @include transform-translateX(0px);
+        @include transform-translateX(0%);
     }
     
     @for $page from 2 through $flex-pages {

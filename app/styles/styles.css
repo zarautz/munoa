@@ -1302,7 +1302,6 @@ body.active-modal aside {
 
 /* line 88, scss/_app-navigation.scss */
 section {
-  position: absolute;
   height: 100%;
   -webkit-transition-property: -webkit-transform;
   transition-property: transform;
@@ -1311,14 +1310,14 @@ section {
   -webkit-transition-timing-function: linear;
   transition-timing-function: linear;
 }
-/* line 93, scss/_app-navigation.scss */
+/* line 92, scss/_app-navigation.scss */
 section > div {
   float: left;
   height: 100%;
   position: relative;
 }
 
-/* line 100, scss/_app-navigation.scss */
+/* line 99, scss/_app-navigation.scss */
 header {
   position: absolute;
   top: 0px;
@@ -1333,7 +1332,7 @@ header {
   transform: translateZ(0px);
 }
 
-/* line 110, scss/_app-navigation.scss */
+/* line 109, scss/_app-navigation.scss */
 div.scroll {
   position: absolute;
   top: 46px;
@@ -1350,35 +1349,35 @@ div.scroll {
   transform: translateZ(0px);
 }
 
-/* line 125, scss/_app-navigation.scss */
+/* line 124, scss/_app-navigation.scss */
 section {
   width: 500%;
 }
-/* line 128, scss/_app-navigation.scss */
+/* line 127, scss/_app-navigation.scss */
 section > div {
   width: 20%;
 }
-/* line 132, scss/_app-navigation.scss */
+/* line 131, scss/_app-navigation.scss */
 section.on-1 {
-  -webkit-transform: translateX(0px);
-  transform: translateX(0px);
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
 }
-/* line 137, scss/_app-navigation.scss */
+/* line 136, scss/_app-navigation.scss */
 section.on-2 {
   -webkit-transform: translateX(-20%);
   transform: translateX(-20%);
 }
-/* line 137, scss/_app-navigation.scss */
+/* line 136, scss/_app-navigation.scss */
 section.on-3 {
   -webkit-transform: translateX(-40%);
   transform: translateX(-40%);
 }
-/* line 137, scss/_app-navigation.scss */
+/* line 136, scss/_app-navigation.scss */
 section.on-4 {
   -webkit-transform: translateX(-60%);
   transform: translateX(-60%);
 }
-/* line 137, scss/_app-navigation.scss */
+/* line 136, scss/_app-navigation.scss */
 section.on-5 {
   -webkit-transform: translateX(-80%);
   transform: translateX(-80%);

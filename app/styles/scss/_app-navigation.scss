@@ -45,8 +45,7 @@ html, body {
 }
 
 nav {
-    position: fixed;
-    top: 0;
+    position: absolute;
     z-index: 0;
     height: 100%;
     width: $menu-width;
@@ -54,7 +53,7 @@ nav {
 }
 
 main {
-    position: fixed;
+    position: absolute;
     z-index: 10;
     height: 100%;
     width: 100%;
@@ -62,7 +61,7 @@ main {
 }
 
 aside {
-    position: fixed;
+    position: absolute;
     z-index: 20;
     height: 100%;
     width: 100%;

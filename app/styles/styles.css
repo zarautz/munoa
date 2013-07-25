@@ -1237,8 +1237,7 @@ html, body {
 
 /* line 47, scss/_app-navigation.scss */
 nav {
-  position: fixed;
-  top: 0;
+  position: absolute;
   z-index: 0;
   height: 100%;
   width: 260px;
@@ -1252,9 +1251,9 @@ nav {
   transform: translateZ(0px);
 }
 
-/* line 56, scss/_app-navigation.scss */
+/* line 55, scss/_app-navigation.scss */
 main {
-  position: fixed;
+  position: absolute;
   z-index: 10;
   height: 100%;
   width: 100%;
@@ -1266,9 +1265,9 @@ main {
   transition-timing-function: ease-out;
 }
 
-/* line 64, scss/_app-navigation.scss */
+/* line 63, scss/_app-navigation.scss */
 aside {
-  position: fixed;
+  position: absolute;
   z-index: 20;
   height: 100%;
   width: 100%;
@@ -1282,26 +1281,26 @@ aside {
   transform: translateY(130%);
 }
 
-/* line 74, scss/_app-navigation.scss */
+/* line 73, scss/_app-navigation.scss */
 body.active-menu main {
   -webkit-transform: translateX(260px);
   transform: translateX(260px);
 }
 @media only screen and (max-width: 315px) {
-  /* line 74, scss/_app-navigation.scss */
+  /* line 73, scss/_app-navigation.scss */
   body.active-menu main {
     -webkit-transform: translateX(80%);
     transform: translateX(80%);
   }
 }
 
-/* line 84, scss/_app-navigation.scss */
+/* line 83, scss/_app-navigation.scss */
 body.active-modal aside {
   -webkit-transform: translateY(0px);
   transform: translateY(0px);
 }
 
-/* line 89, scss/_app-navigation.scss */
+/* line 88, scss/_app-navigation.scss */
 section {
   position: absolute;
   height: 100%;
@@ -1312,14 +1311,14 @@ section {
   -webkit-transition-timing-function: linear;
   transition-timing-function: linear;
 }
-/* line 94, scss/_app-navigation.scss */
+/* line 93, scss/_app-navigation.scss */
 section > div {
   float: left;
   height: 100%;
   position: relative;
 }
 
-/* line 101, scss/_app-navigation.scss */
+/* line 100, scss/_app-navigation.scss */
 header {
   position: absolute;
   top: 0px;
@@ -1334,7 +1333,7 @@ header {
   transform: translateZ(0px);
 }
 
-/* line 111, scss/_app-navigation.scss */
+/* line 110, scss/_app-navigation.scss */
 div.scroll {
   position: absolute;
   top: 46px;
@@ -1351,35 +1350,35 @@ div.scroll {
   transform: translateZ(0px);
 }
 
-/* line 126, scss/_app-navigation.scss */
+/* line 125, scss/_app-navigation.scss */
 section {
   width: 500%;
 }
-/* line 129, scss/_app-navigation.scss */
+/* line 128, scss/_app-navigation.scss */
 section > div {
   width: 20%;
 }
-/* line 133, scss/_app-navigation.scss */
+/* line 132, scss/_app-navigation.scss */
 section.on-1 {
   -webkit-transform: translateX(0px);
   transform: translateX(0px);
 }
-/* line 138, scss/_app-navigation.scss */
+/* line 137, scss/_app-navigation.scss */
 section.on-2 {
   -webkit-transform: translateX(-20%);
   transform: translateX(-20%);
 }
-/* line 138, scss/_app-navigation.scss */
+/* line 137, scss/_app-navigation.scss */
 section.on-3 {
   -webkit-transform: translateX(-40%);
   transform: translateX(-40%);
 }
-/* line 138, scss/_app-navigation.scss */
+/* line 137, scss/_app-navigation.scss */
 section.on-4 {
   -webkit-transform: translateX(-60%);
   transform: translateX(-60%);
 }
-/* line 138, scss/_app-navigation.scss */
+/* line 137, scss/_app-navigation.scss */
 section.on-5 {
   -webkit-transform: translateX(-80%);
   transform: translateX(-80%);

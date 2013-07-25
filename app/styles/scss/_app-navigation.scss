@@ -1,5 +1,5 @@
 $menu-width:              $drawer-width;
-$menu-animation-duration: 0.15s;
+$menu-animation-duration: 0.2s;
 $push-animation-duration: 0.2s; // Default in iOS 6: "0.25s" (?)
 
 //
@@ -33,10 +33,15 @@ $push-animation-duration: 0.2s; // Default in iOS 6: "0.25s" (?)
 
 .overthrow-enabled {
     .overthrow {
-        @include transform-translateZ(0px);
         overflow-x: hidden;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+    }
+
+    &.csstransforms3d {
+        .overthrow {
+            @include transform(translateZ(0px));
+        }
     }
 }
 

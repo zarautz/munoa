@@ -3,13 +3,13 @@
         <header>
             <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
             <!--<i class="right icon-search"></i>-->
-            <h1 class="title">{{ 'events'|translate }}</h1>
+            <h1 class="title">{{ 'event'|translate }}</h1>
         </header>
-        <div class="scroll">
-            <h1 class="placeholder">{{ 'events'|translate }}</h1>
+        <div class="overthrow">
+            <h1 class="placeholder">{{ 'event'|translate }}</h1>
             <ul>
                 <li ng-repeat="event in eventCtrl.events">
-                    <a href ng-click="navCtrl.pushView('events.event', { 'event': event })">
+                    <a href ng-click="navCtrl.pushView('event.show', { 'event': event })">
                         {{ event.title }}
                     </a>
                 </li>
@@ -19,13 +19,13 @@
     <div ng-include="view2"></div>
 </section>
 
-<script type="text/ng-template" id="events.event">
+<script type="text/ng-template" id="event.show">
     <header>
         <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
         <!--<i class="right icon-share"></i>-->
         <h1 class="title">{{ pushData.event.title }}</h1>
     </header>
-    <div class="scroll">
+    <div class="overthrow">
         Lorem.
     </div>
 </script>

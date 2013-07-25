@@ -4,7 +4,8 @@
     "dependencies": {
         "store.js": "1.3.x",
         "unstable-angular-complete": "~1.1.5",
-        "foundation": "~4.1.6"
+        "foundation": "~4.1.6",
+        "overthrow": "git://github.com/filamentgroup/Overthrow.git"
     },
     "ignore": [
         "**/.*",

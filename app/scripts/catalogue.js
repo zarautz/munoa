@@ -1,7 +1,7 @@
 'use strict';
 
 Z.catalogue = {
-    'events': {
+    'event': {
         'en': 'Events',
         'es': 'Agenda',
         'eu': 'Ekitaldiak',
@@ -31,13 +31,13 @@ Z.catalogue = {
         'es': '',
         'fr': ''
     },
-    'settings': {
+    'setting': {
         'en': 'Settings',
         'eu': 'Aukerak',
         'es': '',
         'fr': ''
     },
-    'weather': {
+    'forecast': {
         'en': 'Weather',
         'eu': 'Eguraldia',
         'es': 'El tiempo',

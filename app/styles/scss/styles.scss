@@ -93,11 +93,13 @@ main {
     background: $app-background;
 }
 
-div.scroll {
-    padding: $base-padding;
+section {
+    div.overthrow {
+        padding: $base-padding;
 
-    @media only screen and (min-width: $tablet-breakpoint) {
-        padding: ($base-padding * 2);
+        @media only screen and (min-width: $tablet-breakpoint) {
+            padding: ($base-padding * 2);
+        }
     }
 }
 

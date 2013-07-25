@@ -1,0 +1,16 @@
+<section class="on-{{ navCtrl.activeView }}" ng-controller="ForecastController as foreCtrl">
+    <div>
+        <header>
+            <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
+            <h1 class="title">{{ 'forecast'|translate }}</h1>
+        </header>
+        <div class="overthrow">
+            <h1 class="placeholder">Weather</h1>
+            <ul>
+                <li ng-repeat="forecast in foreCtrl.forecasts">
+                    {{ forecast.temperature }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

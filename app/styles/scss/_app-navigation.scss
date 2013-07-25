@@ -27,11 +27,17 @@ $push-animation-duration: 0.2s; // Default in iOS 6: "0.25s" (?)
     }
 }
 
-@mixin scroll() {
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    @include transform-translateZ(0px);
+//
+// Scroll and overthrow support
+//
+
+.overthrow-enabled {
+    .overthrow {
+        @include transform-translateZ(0px);
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 }
 
 //
@@ -42,7 +48,10 @@ html, body {
     height: 100%;
     padding: 0;
     margin: 0;
-    overflow: hidden;
+
+    &.overthrow-enabled {
+        overflow: hidden;
+    }
 }
 
 nav {
@@ -50,7 +59,6 @@ nav {
     z-index: 0;
     height: 100%;
     width: $menu-width;
-    @include scroll();
 }
 
 main {
@@ -87,6 +95,7 @@ body.active-modal {
 }
 
 section {
+    position: absolute;
     height: 100%;
     @include transform-transition($push-animation-duration, linear);
     
@@ -95,25 +104,24 @@ section {
         height: 100%;
         position: relative;
     }
-}
 
-header {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: $action-bar-height;
-    width: 100%;
-    overflow: hidden;
-    @include transform-translateZ(0px);
-}
+    header {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: $action-bar-height;
+        width: 100%;
+        overflow: hidden;
+        @include transform-translateZ(0px);
+    }
 
-div.scroll {
-    position: absolute;
-    top: $action-bar-height;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    @include scroll();
+    div.overthrow {
+        position: absolute;
+        top: $action-bar-height;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+    }
 }
 
 //

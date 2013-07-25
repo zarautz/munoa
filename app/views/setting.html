@@ -4,7 +4,7 @@
             <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
             <h1 class="title">{{ 'settings'|translate }}</h1>
         </header>
-        <div class="scroll table-view">
+        <div class="overthrow table-view">
             <h4>Section1</h4>
             <ul>
                 <li>
@@ -35,7 +35,7 @@
         <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
         <h1 class="title">{{ pushData.setting.title }}</h1>
     </header>
-    <div class="scroll table-view">
+    <div class="overthrow table-view">
         <ul>
             <li ng-repeat="(key, value) in pushData.setting.options">
                 <a href ng-click="setCtrl.updateSetting(pushData.setting, key)">
@@ -52,7 +52,7 @@
         <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
         <h1 class="title">About</h1>
     </header>
-    <div class="scroll">
+    <div class="overthrow">
         Lorem.
     </div>
 </script>

@@ -1,27 +1,27 @@
-<section class="on-{{ navCtrl.activeView }}" ng-controller="SettingController as setCtrl">
+<section class="on-{{ navCtrl.activeView }}" ng-controller="SettingsController as setCtrl">
     <div>
         <header>
             <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
             <h1 class="title">{{ 'settings'|translate }}</h1>
         </header>
         <div class="overthrow table-view">
-            <h4>Section1</h4>
+            <h4>{{ 'settings.general'|translate }}</h4>
+            <ul>
+                <li ng-repeat="setting in setCtrl.settings">
+                    <a href ng-click="navCtrl.pushView('settings.selector', { setting: setting })">
+                        <i class="icon-right-open"></i>
+                        {{ setting.title|translate }}
+                        <span class="detail">{{ setting.options[setting.selectedKey] }}</span>
+                    </a>
+                </li>
+            </ul>
+            <h4><br/>Section2</h4>
             <ul>
                 <li>
                     <a href ng-click="navCtrl.pushView('settings.about')">
                         <i class="icon-right-open"></i>
                         About
                         <span class="detail"></span>
-                    </a>
-                </li>
-            </ul>
-            <h4><br/>Section2</h4>
-            <ul>
-                <li ng-repeat="setting in setCtrl.settings">
-                    <a href ng-click="navCtrl.pushView('settings.selector', { setting: setting })">
-                        <i class="icon-right-open"></i>
-                        {{ setting.title }}
-                        <span class="detail">{{ setting.options[setting.selectedKey] }}</span>
                     </a>
                 </li>
             </ul>
@@ -33,7 +33,7 @@
 <script type="text/ng-template" id="settings.selector">
     <header>
         <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
-        <h1 class="title">{{ pushData.setting.title }}</h1>
+        <h1 class="title">{{ pushData.setting.title|translate }}</h1>
     </header>
     <div class="overthrow table-view">
         <ul>

@@ -1,10 +1,16 @@
 'use strict';
 
 Z.catalogue = {
-    'event': {
+    'events': {
         'en': 'Events',
         'es': 'Agenda',
         'eu': 'Ekitaldiak',
+        'fr': ''
+    },
+    'forecast': {
+        'en': 'Weather',
+        'eu': 'Eguraldia',
+        'es': 'El tiempo',
         'fr': ''
     },
     'health': {
@@ -19,10 +25,22 @@ Z.catalogue = {
         'es': '',
         'fr': ''
     },
+    'language': {
+        'en': 'Language',
+        'eu': 'Hizkuntza',
+        'es': 'Idioma',
+        'fr': ''
+    },
     'places': {
         'en': 'Sightseeing',
         'eu': 'Zer ikusi',
         'es': '',
+        'fr': ''
+    },
+    'profile': {
+        'en': 'Profile',
+        'eu': 'Perfila',
+        'es': 'Perfil',
         'fr': ''
     },
     'sea': {
@@ -31,16 +49,16 @@ Z.catalogue = {
         'es': '',
         'fr': ''
     },
-    'setting': {
+    'settings': {
         'en': 'Settings',
         'eu': 'Aukerak',
         'es': '',
         'fr': ''
     },
-    'forecast': {
-        'en': 'Weather',
-        'eu': 'Eguraldia',
-        'es': 'El tiempo',
+    'settings.general': {
+        'en': 'General',
+        'eu': 'Orokorrak',
+        'es': 'Generales',
         'fr': ''
     },
 };

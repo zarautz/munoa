@@ -19,11 +19,11 @@ Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', function ($rout
             icon: 'icon-home color-blue'
         },
         {
-            id: 'setting',
+            id: 'settings',
             icon: 'icon-cog'
         },
         {
-            id: 'event',
+            id: 'events',
             icon: 'icon-calendar color-orange'
         },
         {
@@ -49,8 +49,8 @@ Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', function ($rout
     menuProvider.setProfile('zarautz');
 
     // Set the menu items order for each profile
-    menuProvider.sortMenuItems('zarautz', ['setting', 'index', 'event', 'forecast', 'sea', 'health', 'places']);
-    menuProvider.sortMenuItems('tourist', ['setting', 'places', 'event', 'forecast', 'sea', 'health', 'index']);
+    menuProvider.sortMenuItems('zarautz', ['settings', 'index', 'events', 'forecast', 'sea', 'health', 'places']);
+    menuProvider.sortMenuItems('tourist', ['settings', 'places', 'events', 'forecast', 'sea', 'health', 'index']);
 
     // --------
     // SETTINGS

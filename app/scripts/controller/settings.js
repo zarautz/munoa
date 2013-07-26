@@ -1,10 +1,10 @@
 'use strict';
 
-Z.app.controller('SettingController', ['menu', 'babel', function(menu, babel) {
+Z.app.controller('SettingsController', ['menu', 'babel', function(menu, babel) {
     this.settings = {
         locale: {
             id: 'locale',
-            title: 'Language',
+            title: 'language',
             selectedKey: 'eu',
             options: {
                 eu: 'Euskara',
@@ -15,7 +15,7 @@ Z.app.controller('SettingController', ['menu', 'babel', function(menu, babel) {
         },
         profile: {
             id: 'profile',
-            title: 'Profile',
+            title: 'profile',
             selectedKey: 'tourist',
             options: {
                 tourist: 'Tourist',

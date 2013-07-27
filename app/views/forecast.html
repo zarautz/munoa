@@ -1,14 +1,15 @@
-<section class="on-{{ navCtrl.activeView }}" ng-controller="ForecastController as foreCtrl">
+<section class="on-{{ navCtrl.activeView }}" ng-controller="ForecastController as forecastCtr">
     <div>
         <header>
             <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
             <h1 class="title">{{ 'forecast'|translate }}</h1>
         </header>
         <div class="overthrow">
-            <h1 class="placeholder">Weather</h1>
-            <ul>
-                <li ng-repeat="forecast in foreCtrl.forecasts">
-                    {{ forecast.temperature }}
+            <ul ng-repeat="forecast in forecastCtr.forecast">
+                <li ng-repeat="day in forecast.weather">
+                    {{ day.date }}<br />
+                    Max: {{ day.temp_max }} – Min: {{ day.temp_min }}<br />
+                    <br />
                 </li>
             </ul>
         </div>

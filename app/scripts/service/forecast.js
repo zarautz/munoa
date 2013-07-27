@@ -2,7 +2,7 @@
 
 Z.app.factory('forecast', ['$resource', 'apiHost', 'cache', function($resource, apiHost, cache) {
     var store = $resource(
-        apiHost + '/forecasts/:id',
+        apiHost + '/forecast/:id',
         { id: '@id' }
     );
 

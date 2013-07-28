@@ -5,13 +5,18 @@
             <h1 class="title">{{ 'forecast'|translate }}</h1>
         </header>
         <div class="overthrow">
-            <ul>
-                <li ng-repeat="day in forecastCtr.forecast.data.weather">
-                    {{ day.date }}<br />
-                    Max: {{ day.temp_max }} – Min: {{ day.temp_min }}<br />
-                    <br />
-                </li>
-            </ul>
+            <div ng-repeat="day in forecastCtr.forecast.data.weather">
+                {{ day.date }}<br />
+                Max: {{ day.temp_max }} – Min: {{ day.temp_min }}<br />
+                UV max.: {{ day.uv_max }}<br />
+                <div ng-repeat="period in day.forecast">
+                    <strong>{{ period.period }}</strong><br/>
+                    {{ period.sky_condition}}<br/>
+                    {{ period.precipitation_prob}}%<br/>
+                    {{ period.wind_direction}}, {{ period.wind_speed}} km/h<br/>
+                </div>
+                <hr />
+            </div>
         </div>
     </div>
 </section>

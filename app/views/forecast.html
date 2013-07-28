@@ -5,15 +5,24 @@
             <h1 class="title">{{ 'forecast'|translate }}</h1>
         </header>
         <div class="overthrow">
+            <h2>Astronomy</h2>
+                Sunrise: {{ forecastCtr.forecast.data.astronomy.sunrise }}<br/>
+                Sunset: {{ forecastCtr.forecast.data.astronomy.sunset }}<br/>
+            <h2>Tides</h2>
+                Low: <span ng-repeat="hour in forecastCtr.forecast.data.tide.low" style="margin-right:1em;">{{ hour }}</span><br/>
+                High: <span ng-repeat="hour in forecastCtr.forecast.data.tide.high" style="margin-right:1em;">{{ hour }}</span><br/>
+            <h2>Weather</h2>
             <div ng-repeat="day in forecastCtr.forecast.data.weather">
                 {{ day.date }}<br />
-                Max: {{ day.temp_max }} – Min: {{ day.temp_min }}<br />
-                UV max.: {{ day.uv_max }}<br />
+                Max: {{ day.tempMax }} – Min: {{ day.tempMin }}<br />
+                UV max.: {{ day.uvMax }}<br />
                 <div ng-repeat="period in day.forecast">
                     <strong>{{ period.period }}</strong><br/>
-                    {{ period.sky_condition}}<br/>
-                    {{ period.precipitation_prob}}%<br/>
-                    {{ period.wind_direction}}, {{ period.wind_speed}} km/h<br/>
+                    <div style="margin-left:1em">
+                        {{ period.skyCondition}}<br/>
+                        {{ period.precipitationProb}}%<br/>
+                        {{ period.windDirection}}, {{ period.windSpeed}} km/h<br/>
+                    </div>
                 </div>
                 <hr />
             </div>

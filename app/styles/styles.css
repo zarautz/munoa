@@ -1824,47 +1824,52 @@ section.on-5 {
 }
 
 /* '' */
-/* line 4, scss/_app-colors.scss */
+/* line 5, scss/_app-colors.scss */
 .color-text {
   color: #333333;
 }
 
-/* line 5, scss/_app-colors.scss */
+/* line 6, scss/_app-colors.scss */
+.color-light-text {
+  color: #666666;
+}
+
+/* line 7, scss/_app-colors.scss */
 .color-blue {
   color: #337abd;
 }
 
-/* line 6, scss/_app-colors.scss */
+/* line 8, scss/_app-colors.scss */
 .color-light-blue {
   color: #2999b7;
 }
 
-/* line 7, scss/_app-colors.scss */
+/* line 9, scss/_app-colors.scss */
 .color-yellow {
   color: #f9c600;
 }
 
-/* line 8, scss/_app-colors.scss */
+/* line 10, scss/_app-colors.scss */
 .color-orange {
   color: #fba400;
 }
 
-/* line 9, scss/_app-colors.scss */
+/* line 11, scss/_app-colors.scss */
 .color-red {
   color: #cd1c19;
 }
 
-/* line 10, scss/_app-colors.scss */
+/* line 12, scss/_app-colors.scss */
 .color-green {
   color: #73ba5a;
 }
 
-/* line 11, scss/_app-colors.scss */
+/* line 13, scss/_app-colors.scss */
 .color-dark {
   color: #555;
 }
 
-/* line 12, scss/_app-colors.scss */
+/* line 14, scss/_app-colors.scss */
 .color-twitter {
   color: #00aced;
 }
@@ -2073,22 +2078,63 @@ ul.drawer li a.settings {
   border: 0;
 }
 
-/* line 252, scss/styles.scss */
+/* line 253, scss/styles.scss */
+.content h1, .content h2, .content h3, .content h4, .content h5 {
+  font-size: 1em;
+  font-weight: normal;
+  font-style: italic;
+}
+/* line 258, scss/styles.scss */
+.content h1 strong, .content h2 strong, .content h3 strong, .content h4 strong, .content h5 strong {
+  font-weight: normal;
+}
+/* line 263, scss/styles.scss */
+.content p {
+  margin: 1em 0;
+}
+/* line 267, scss/styles.scss */
+.content ol, .content ul {
+  padding-left: 2em;
+}
+/* line 272, scss/styles.scss */
+.content ul li {
+  list-style: disc outside none;
+}
+/* line 278, scss/styles.scss */
+.content ol li {
+  list-style: decimal outside none;
+}
+
+/* line 285, scss/styles.scss */
+.post .title {
+  margin: .25em 0 .75em;
+  font-weight: 300;
+  font-size: 1.8em;
+  line-height: 1.2;
+  color: #337abd;
+}
+/* line 294, scss/styles.scss */
+.post .content div > p {
+  font-size: .9em;
+  color: #666666;
+}
+
+/* line 305, scss/styles.scss */
 .small {
   font-size: 14px;
 }
 
-/* line 256, scss/styles.scss */
+/* line 309, scss/styles.scss */
 .smallest {
   font-size: 12px;
 }
 
-/* line 260, scss/styles.scss */
+/* line 313, scss/styles.scss */
 .uppercase {
   text-transform: uppercase;
 }
 
-/* line 264, scss/styles.scss */
+/* line 317, scss/styles.scss */
 .lowercase {
   text-transform: lowercase;
 }

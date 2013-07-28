@@ -1,7 +1,9 @@
 $color-text: $body-font-color;
+$color-light-text: #666;
 $color-blue: #337abd;
 
 .color-text { color: $color-text; }
+.color-light-text { color: $color-light-text; }
 .color-blue { color: $color-blue; }
 .color-light-blue { color: #2999b7; }
 .color-yellow { color: #f9c600; }

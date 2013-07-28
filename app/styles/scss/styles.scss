@@ -246,6 +246,59 @@ ul.drawer {
 }
 
 //
+// General text
+//
+
+.content {
+    h1, h2, h3, h4, h5 {
+        font-size: 1em;
+        font-weight: normal;
+        font-style: italic;
+
+        strong {
+            font-weight: normal;
+        }
+    }
+
+    p {
+        margin: 1em 0;
+    }
+
+    ol, ul {
+        padding-left: 2em;
+    }
+
+    ul {
+        li {
+            list-style: disc outside none;
+        }
+    }
+
+    ol {
+        li {
+            list-style: decimal outside none;
+        }
+    }
+}
+
+.post {
+    .title {
+        margin: .25em 0 .75em;
+        font-weight: 300;
+        font-size: 1.8em;
+        line-height: 1.2;
+        color: $color-blue;
+    }
+
+    .content {
+        div > p {
+            font-size: .9em;
+            color: $color-light-text;
+        }
+    }
+}
+
+//
 // Helpers
 //
 

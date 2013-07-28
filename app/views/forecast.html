@@ -5,8 +5,8 @@
             <h1 class="title">{{ 'forecast'|translate }}</h1>
         </header>
         <div class="overthrow">
-            <ul ng-repeat="forecast in forecastCtr.forecast">
-                <li ng-repeat="day in forecast.weather">
+            <ul>
+                <li ng-repeat="day in forecastCtr.forecast.data.weather">
                     {{ day.date }}<br />
                     Max: {{ day.temp_max }} – Min: {{ day.temp_min }}<br />
                     <br />

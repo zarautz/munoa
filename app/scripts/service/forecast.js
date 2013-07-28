@@ -1,22 +1,19 @@
 'use strict';
 
 Z.app.factory('forecast', ['$resource', 'apiHost', 'cache', function($resource, apiHost, cache) {
-    var store = $resource(
-        apiHost + '/forecast/:id',
-        { id: '@id' }
-    );
+    var store = $resource(apiHost + '/forecast');
 
     return {
         findAll: function () {
-            var events = cache.get('forecasts.all');
+            var forecast = cache.get('forecasts.all');
 
-            if (!events) {
-                events = store.query(function (data) {
+            if (!forecast) {
+                forecast = store.get(function (data) {
                     cache.set('forecasts.all', data, 10);
                 });
             }
 
-            return events;
+            return forecast;
         }
     };
 }]);

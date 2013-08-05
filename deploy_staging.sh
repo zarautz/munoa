@@ -9,6 +9,12 @@ grunt build --force
 cp ./phonegap-desktop/debugdata.json ./dist/debugdata.json
 cp ./phonegap-desktop/js/phonegap-desktop.js ./dist/phonegap.js
 
+# Create robots
+cat << 'EOF' > ./dist/robots.txt
+User-agent: *
+Disallow: /
+EOF
+
 # Clean remote folder
 ssh zarautz@37.153.97.168 "rm -rf ~/munoa/staging/current/web/*"
 

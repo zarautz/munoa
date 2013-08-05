@@ -11,7 +11,7 @@ https://build.phonegap.com/docs/config-xml
         versionCode = "1" 
         version     = "0.0.1">
 
-    <preference name="phonegap-version" value="2.7.0" />
+    <preference name="phonegap-version" value="2.9.0" />
     <preference name="android-minSdkVersion" value="8" />
 
     <!-- 

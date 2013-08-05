@@ -10,3 +10,4 @@ node_modules
 dist
 build.zip
 build
+libpeerconnection.log

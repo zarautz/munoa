@@ -240,10 +240,24 @@ module.exports = function (grunt) {
                         '.htaccess',
                         '!components/**/*',
                         'images/{,*/}*.{gif,webp}',
+                        'preview/index.html',
                         'styles/fonts/*',
                         'styles/modernizr.custom.js'
                     ]
                 }]
+            }
+        },
+        replace: {
+            dist: {
+                options: {
+                    variables: {
+                        'timestamp': '<%= grunt.template.today() %>'
+                    },
+                    prefix: '@@'
+                },
+                files: [
+                    {expand: true, flatten: true, src: '<%= yeoman.dist %>/preview/index.html', dest: '<%= yeoman.dist %>/preview/'}
+                ]
             }
         },
         compress: {
@@ -340,6 +354,7 @@ module.exports = function (grunt) {
         'cssmin',
         'htmlmin',
         'copy',
+        'replace',
         //'cdnify',
         'ngmin',
         'uglify',

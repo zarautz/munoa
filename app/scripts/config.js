@@ -1,7 +1,27 @@
 'use strict';
 
-//Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', 'settingProvider', function ($routeProvider, babelProvider, menuProvider, settingProvider) {
-Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', function ($routeProvider, babelProvider, menuProvider) {
+Z.app.config(['$httpProvider', '$routeProvider', 'babelProvider', 'menuProvider', function ($httpProvider, $routeProvider, babelProvider, menuProvider) {
+    // -----------
+    // NET LOADING
+    // -----------
+    $httpProvider.responseInterceptors.push(['$q', '$rootScope', function($q, $rootScope) {
+        return function (promise) {
+            return promise.then(function (response) {
+                // Success
+                $rootScope.loadingCount--;
+                $rootScope.loading = $rootScope.loadingCount !== 0;
+
+                return response;
+            }, function (response) {
+                // Error
+                $rootScope.loadingCount--;
+                $rootScope.loading = $rootScope.loadingCount !== 0;
+
+                return $q.reject(response);
+            });
+        };
+    }]);
+
     // -----
     // BABEL
     // -----

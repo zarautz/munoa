@@ -1,4 +1,4 @@
-Z.app.run(function ($http, $rootScope) {
+Z.app.run(['$http', '$rootScope', function ($http, $rootScope) {
     // -----------
     // NET POOLING
     // -----------
@@ -19,4 +19,4 @@ Z.app.run(function ($http, $rootScope) {
     $rootScope.$on('httpCallStopped', function () {
         $rootScope.loading = false;
     });
-});
+}]);

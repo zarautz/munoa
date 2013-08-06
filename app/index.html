@@ -16,6 +16,21 @@
     </head>
     <body ng-class="{ 'active-menu': navCtrl.menu.isActive() }" ng-controller="NavigationController as navCtrl">
 
+        <div ng-show="$root.loading" style="
+            border-radius: 100px;
+            text-align: center;
+            line-height: 100px;
+            z-index: 999999;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        ">Loading</div>
+
         <main ng-view></main>
         <nav class="overthrow">
             <ul class="drawer">
@@ -55,6 +70,7 @@
         <script src="scripts/controller/post.js"></script>
         <script src="scripts/controller/settings.js"></script>
         <script src="scripts/config.js"></script>
+        <script src="scripts/run.js"></script>
         <!-- endbuild -->
 
         <!-- 

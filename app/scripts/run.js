@@ -1,3 +1,5 @@
+'use strict';
+
 Z.app.run(['$http', '$rootScope', function ($http, $rootScope) {
     // -----------
     // NET LOADING

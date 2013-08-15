@@ -239,7 +239,7 @@ module.exports = function (grunt) {
                         'manifest.webapp',
                         '.htaccess',
                         '!components/**/*',
-                        'images/{,*/}*.{gif,webp}',
+                        'images/{,*/}*.{gif,png,webp}',
                         'preview/index.html',
                         'styles/fonts/*',
                         'styles/modernizr.custom.js'

@@ -28,24 +28,6 @@ $push-animation-duration: 0.2s; // Default in iOS 6: "0.25s" (?)
 }
 
 //
-// Scroll and overthrow support
-//
-
-.overthrow-enabled {
-    .overthrow {
-        overflow-x: hidden;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    &.csstransforms3d {
-        .overthrow {
-            @include transform(translateZ(0px));
-        }
-    }
-}
-
-//
 // Navigation rules
 //
 
@@ -53,10 +35,7 @@ html, body {
     height: 100%;
     padding: 0;
     margin: 0;
-
-    &.overthrow-enabled {
-        overflow: hidden;
-    }
+    overflow-y: hidden;
 }
 
 nav {
@@ -106,7 +85,6 @@ section {
     
     > div {
         float: left;
-        height: 100%;
         position: relative;
     }
 
@@ -121,11 +99,44 @@ section {
     }
 
     div.overthrow {
-        position: absolute;
-        top: $action-bar-height;
-        bottom: 0px;
-        left: 0px;
+        margin-top: $action-bar-height;
         width: 100%;
+    }
+}
+
+//
+// Scroll and overthrow support
+//
+
+.overthrow-enabled {
+    overflow-x: hidden;
+    
+    body {
+        overflow-x: hidden;
+    }
+
+    section {
+        > div {
+            height: 100%;
+
+            div.overthrow {
+                overflow-x: hidden;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+
+                margin-top: auto;
+                position: absolute;
+                top: $action-bar-height;
+                bottom: 0px;
+                left: 0px;
+            }
+        }
+    }
+
+    &.csstransforms3d {
+        div.overthrow {
+            @include transform(translateZ(0px));
+        }
     }
 }
 

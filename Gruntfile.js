@@ -83,6 +83,9 @@ module.exports = function (grunt) {
                     ]
                 }]
             },
+            preview: {
+                src: '<%= yeoman.dist %>/preview'
+            },
             server: '.tmp'
         },
         jshint: {
@@ -214,7 +217,6 @@ module.exports = function (grunt) {
                     src: [
                         '<%= yeoman.dist %>/scripts/{,*/}*.js',
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
-                        '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
                         '<%= yeoman.dist %>/styles/fonts/*'
                     ]
                 }
@@ -233,8 +235,8 @@ module.exports = function (grunt) {
                         'manifest.webapp',
                         '.htaccess',
                         '!components/**/*',
-                        'images/{,*/}*.{gif,png,webp}',
-                        'preview/index.html',
+                        'images/**/*',
+                        'preview/**/*',
                         'styles/fonts/*',
                         'styles/modernizr.custom.js'
                     ]
@@ -319,12 +321,10 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
-        // Test Code
         'jshint',
         'test',
-        // Prepare assets
         'assets',
-        'compress'
+        'replace'
     ]);
 
     grunt.registerTask('assets', [
@@ -335,8 +335,6 @@ module.exports = function (grunt) {
         'cssmin',
         'htmlmin',
         'copy',
-        'replace',
-        //'cdnify',
         'ngmin',
         'uglify',
         'rev',
@@ -345,7 +343,9 @@ module.exports = function (grunt) {
 
     grunt.registerTask('phonegap', [
         'build',
-        'phonegap-build:upload'
+        'clean:preview',
+        'compress'
+        //'phonegap-build:upload'
     ]);
 
     grunt.registerTask('default', ['build']);

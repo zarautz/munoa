@@ -344,8 +344,8 @@ module.exports = function (grunt) {
     grunt.registerTask('phonegap', [
         'build',
         'clean:preview',
-        'compress'
-        //'phonegap-build:upload'
+        'compress',
+        'phonegap-build:upload'
     ]);
 
     grunt.registerTask('default', ['build']);

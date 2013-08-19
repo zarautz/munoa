@@ -5,7 +5,7 @@ $experimental-support-for-microsoft: false;
 
 @import "compass";
 
-$touchable-size:              46px; // Default in iOS: "44px"; Android: "48px"
+$touchable-size:              48px; // Default in iOS: "44px"; Android: "48px"
 $tablet-breakpoint:           600px; // Nexus 7
 
 $total-columns:               3;
@@ -15,15 +15,15 @@ $base-padding:                $column-gutter / 2;
 $half-padding:                $column-gutter / 4;
 
 $app-border-radius:           0; // Default in iOS 6: "3px";
-$app-background:              #fdfdfd;
+$app-background:              #fefefe;
 
 $action-bar-height:           $touchable-size;
 $action-bar-background-color: #eaeaea;
-$action-bar-border-size:      0;
-$action-bar-border-color:     darken($action-bar-background-color, 15%);
+$action-bar-border-size:      1px;
+$action-bar-border-color:     darken($action-bar-background-color, 5%);
 $action-bar-text-color:       #666;
-$action-bar-text-size:        20px;
-$action-bar-icon-size:        20px;
+$action-bar-text-size:        19px;
+$action-bar-icon-size:        18px;
 
 $drawer-width:                260px; // 320px - 60px
 $drawer-background:           #22252c;
@@ -32,9 +32,9 @@ $drawer-text-color:           #eff0f2;
 $drawer-menu-border-color:    darken($drawer-background, 3%);
 $drawer-menu-selected:        darken($drawer-background, 5%);
 
-$em-base:                     16px;
-$small-font-size:             14px;
-$smallest-font-size:          12px;
+$em-base:                     17px;
+$small-font-size:             15px;
+$smallest-font-size:          13px;
 $body-font-family:            "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $body-font-color:             #333;
 $body-line-height:            1.4;
@@ -77,7 +77,12 @@ li {
 }
 
 a {
+    color: darken($color-blue, 10%);
     text-decoration: none;
+
+    &:visited {
+        color: $color-blue;
+    }
 }
 
 //
@@ -87,9 +92,10 @@ a {
 body {
     background: $drawer-background;
     line-height: $body-line-height;
+    overflow-x: hidden;
 }
 
-main {
+main, section, section > div {
     background: $app-background;
 }
 
@@ -249,6 +255,14 @@ ul.drawer {
 // General text
 //
 
+.title {
+    margin: .25em 0 .75em;
+    font-weight: 300;
+    font-size: 1.7em;
+    line-height: 1.2;
+    color: $color-blue;
+}
+
 .content {
     h1, h2, h3, h4, h5 {
         font-size: 1em;
@@ -260,12 +274,13 @@ ul.drawer {
         }
     }
 
-    p {
+    p, img {
+        display: block;
         margin: 1em 0;
     }
 
     ol, ul {
-        padding-left: 2em;
+        padding-left: 1.5em;
     }
 
     ul {
@@ -282,16 +297,8 @@ ul.drawer {
 }
 
 .post {
-    .title {
-        margin: .25em 0 .75em;
-        font-weight: 300;
-        font-size: 1.8em;
-        line-height: 1.2;
-        color: $color-blue;
-    }
-
     .content {
-        div > p {
+        div > img + p {
             font-size: .9em;
             color: $color-light-text;
         }

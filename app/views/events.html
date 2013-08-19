@@ -6,11 +6,10 @@
             <h1 class="title">{{ 'events'|translate }}</h1>
         </header>
         <div class="overthrow">
-            <h1 class="placeholder">{{ 'event'|translate }}</h1>
             <ul>
-                <li ng-repeat="event in eventCtrl.events">
+                <li ng-repeat="event in eventCtrl.events.data">
                     <a href ng-click="navCtrl.pushView('event.show', { 'event': event })">
-                        {{ event.title }}
+                        {{ event.name }}
                     </a>
                 </li>
             </ul>
@@ -23,9 +22,17 @@
     <header>
         <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
         <!--<i class="right icon-share"></i>-->
-        <h1 class="title">{{ pushData.event.title }}</h1>
+        <h1 class="title">{{ pushData.event.name }}</h1>
     </header>
     <div class="overthrow">
-        Lorem.
+        <h1 class="title">
+            {{ pushData.event.name }}
+        </h1>
+        {{ pushData.event.description }}
+        <hr>
+        <ul>
+            <li>hasi: {{ pushData.event.startAt }}</li>
+            <li>bukatu: {{ pushData.event.endAt }}</li>
+        </ul>
     </div>
 </script>

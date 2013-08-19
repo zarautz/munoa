@@ -1,7 +1,7 @@
 'use strict';
 
 Z.app.factory('post', ['$resource', 'apiHost', 'cache', function($resource, apiHost, cache) {
-    var store = $resource(apiHost + '/posts');
+    var store = $resource(apiHost + '/posts/zuzarautz');
 
     return {
         findAll: function () {

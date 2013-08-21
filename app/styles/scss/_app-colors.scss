@@ -2,15 +2,21 @@ $color-text: $body-font-color;
 $color-light-text: #666;
 $color-lightest-text: #aaa;
 $color-blue: #337abd;
+$color-green: #73ba5a;
+$color-yellow: #f9c600;
+$color-orange: #fba400;
+$color-red: #cd1c19;
+$color-violet: #6b49c8;
 
 .color-text { color: $color-text; }
 .color-light-text { color: $color-light-text; }
 .color-lightest-text { color: $color-lightest-text; }
 .color-blue { color: $color-blue; }
 .color-light-blue { color: #2999b7; }
-.color-yellow { color: #f9c600; }
-.color-orange { color: #fba400; }
-.color-red { color: #cd1c19; }
-.color-green { color: #73ba5a; }
+.color-green { color: $color-green; }
+.color-yellow { color: $color-yellow; }
+.color-orange { color: $color-orange; }
+.color-red { color: $color-red; }
+.color-violet { color: $color-violet; }
 .color-dark { color: #555; }
 .color-twitter { color: #00aced; }

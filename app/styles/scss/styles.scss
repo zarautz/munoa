@@ -8,6 +8,7 @@ $experimental-support-for-microsoft: false;
 $touchable-size:              48px; // Default in iOS: "44px"; Android: "48px"
 $tablet-breakpoint:           600px; // Nexus 7
 
+$row-width:                   800px;
 $total-columns:               4;
 $block-grid-elements:         5;
 $column-gutter:               $touchable-size / 1.5;
@@ -16,7 +17,7 @@ $half-padding:                $column-gutter / 4;
 $quarter-padding:             $column-gutter / 8;
 
 $app-border-radius:           0; // Default in iOS 6: "3px";
-$app-background:              #fefefe;
+$app-background:              #fff;
 
 $action-bar-height:           $touchable-size;
 $action-bar-background-color: #eaeaea;
@@ -43,6 +44,11 @@ $body-font-weight-strong:     bold;
 
 $tableview-detail-font-color: #337abd;
 $tableview-border-color:      #eaeaea;
+
+$hr-border-width:             1px;
+$hr-border-style:             solid;
+$hr-border-color:             #ddd;
+$hr-margin:                   ($base-padding * 1.5);
 
 //
 // Other rules
@@ -94,7 +100,6 @@ a {
 body {
     background: $drawer-background;
     line-height: $body-line-height;
-    overflow-x: hidden;
 }
 
 main, section, section > div {
@@ -312,15 +317,11 @@ ul.drawer {
 //
 
 // From Foundation/type
-$hr-border-width: 1px !default;
-$hr-border-style: solid !default;
-$hr-border-color: #ddd !default;
-$hr-margin: emCalc(20) !default;
 hr {
     border: $hr-border-style $hr-border-color;
     border-width: $hr-border-width 0 0;
     clear: both;
-    margin: $hr-margin 0 ($hr-margin - emCalc(1));
+    margin: $hr-margin 0;
     height: 0;
 }
 
@@ -342,6 +343,14 @@ hr {
 
 .lowercase {
     text-transform: lowercase;
+}
+
+a.chameleon {
+    &, &:hover {
+        color: inherit;
+        text-decoration: none;
+        cursor: default;
+    }
 }
 
 @import "page-forecast";

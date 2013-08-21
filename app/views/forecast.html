@@ -8,7 +8,7 @@
             <p class="text-smallest text-center">
                 {{ forecastCtrl.today.date|date:'fullDate' }}<br />
                 <span class="color-light-text">
-                    Oskarbi
+                    {{ forecastCtrl.weatherCodes[forecastCtrl.getMainForecastCode(forecastCtrl.today.weather.forecast)].name }}
                 </span>
             </p>
             <div class="row collapse weather-today">

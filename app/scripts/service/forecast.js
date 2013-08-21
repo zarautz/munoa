@@ -5,11 +5,11 @@ Z.app.factory('forecast', ['$resource', 'apiHost', 'cache', function($resource, 
 
     return {
         findAll: function () {
-            var forecast = cache.get('forecasts.all');
+            var forecast = cache.get('forecast.all');
 
             if (!forecast) {
                 forecast = store.get(function (data) {
-                    cache.set('forecasts.all', data, 10);
+                    cache.set('forecast.all', data, 100000);
                 });
             }
 

@@ -6,7 +6,7 @@ Z.app.controller('ForecastController', ['forecast', 'weatherCode', function(fore
     this.activeTab    = 0;
     this.weatherCodes = weatherCode.findAll().data;
 
-    this.getForecastCode = function (forecast, index) {
+    this.getMainWeatherCode = function (forecast, index) {
         var now, key;
 
         if (index === 0) {

@@ -8,13 +8,13 @@
             <p class="text-smallest text-center">
                 {{ forecastCtrl.today.date|date:'fullDate' }}<br />
                 <span class="color-light-text">
-                    {{ forecastCtrl.weatherCodes[forecastCtrl.getForecastCode(forecastCtrl.today.weather.forecast, 0)].name }}
+                    {{ forecastCtrl.weatherCodes[forecastCtrl.getMainWeatherCode(forecastCtrl.today.weather.forecast, 0)].name }}
                 </span>
                 {{ forecastCtrl.nowIndex }}
             </p>
             <div class="row collapse weather-today">
                 <div class="small-2 columns">
-                    <i class="icon-weather-{{ forecastCtrl.getForecastCode(forecastCtrl.today.weather.forecast, 0) }}"></i>
+                    <i class="icon-weather-{{ forecastCtrl.getMainWeatherCode(forecastCtrl.today.weather.forecast, 0) }}"></i>
                 </div>
                 <div class="small-2 columns">
                     <h1 class="temperature">30&deg;</h1>
@@ -26,7 +26,7 @@
                     ng-class="{ 'active': $index == forecastCtrl.activeTab }"
                     ng-click="forecastCtrl.activateTab($index)">
                     <span ng-class="{ 'strong': $first }">{{ day.date|date:'EEE' }}</span><br />
-                    <i class="icon-weather-{{ forecastCtrl.getForecastCode(day.weather.forecast, $index) }}"></i>
+                    <i class="icon-weather-{{ forecastCtrl.getMainWeatherCode(day.weather.forecast, $index) }}"></i>
                     <p class="temperatures">
                         {{ day.weather.tempMax }}&deg; <span class="min">{{ day.weather.tempMin }}&deg;</span>
                     </p>

@@ -6,10 +6,17 @@ Z.app.controller('ForecastController', ['forecast', 'weatherCode', function(fore
     this.activeTab    = 0;
     this.weatherCodes = weatherCode.findAll().data;
 
-    this.getMainForecastCode = function (forecast) {
-        var selectionByLength = { 4: 2, 2: 1, 1: 0};
+    this.getForecastCode = function (forecast, index) {
+        var now, key;
 
-        return forecast[selectionByLength[forecast.length]]['code'];
+        if (index == 0) {
+            now = new Date();
+            key = Math.floor(now.getHours() / (24 / forecast.length));
+        } else { 
+            key = Math.floor(12 / (24 / forecast.length));
+        }
+
+        return forecast[key]['code'];
     }
 
     this.activateTab = function (index) {

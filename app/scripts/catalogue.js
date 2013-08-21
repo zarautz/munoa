@@ -61,4 +61,10 @@ Z.catalogue = {
         'es': 'Generales',
         'fr': ''
     },
+    'sources': {
+        'en': 'Sources',
+        'eu': 'Informazio jatorriak',
+        'es': 'Fuentes',
+        'fr': 'Sources'
+    },
 };

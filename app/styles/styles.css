@@ -1795,19 +1795,21 @@ section.on-5 {
 /* '' */
 /* line 88, scss/_app-icons.scss */
 .icon-weather-43:before,
-.icon-weather-44:before {
+.icon-weather-44:before,
+.icon-weather-45:before,
+.icon-weather-46:before {
   content: '\f047';
 }
 
 /* '' */
-/* line 90, scss/_app-icons.scss */
+/* line 92, scss/_app-icons.scss */
 .icon-weather-51:before,
 .icon-weather-52:before {
   content: '\f046';
 }
 
 /* '' */
-/* line 92, scss/_app-icons.scss */
+/* line 94, scss/_app-icons.scss */
 .icon-weather-53:before,
 .icon-weather-54:before,
 .icon-weather-61:before,
@@ -1818,14 +1820,14 @@ section.on-5 {
 }
 
 /* '' */
-/* line 98, scss/_app-icons.scss */
+/* line 100, scss/_app-icons.scss */
 .icon-weather-71:before,
 .icon-weather-72:before {
   content: '\f054';
 }
 
 /* '' */
-/* line 100, scss/_app-icons.scss */
+/* line 102, scss/_app-icons.scss */
 .icon-weather-73:before,
 .icon-weather-74:before {
   content: '\e801';

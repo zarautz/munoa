@@ -9,17 +9,17 @@ Z.app.controller('ForecastController', ['forecast', 'weatherCode', function(fore
     this.getForecastCode = function (forecast, index) {
         var now, key;
 
-        if (index == 0) {
+        if (index === 0) {
             now = new Date();
             key = Math.floor(now.getHours() / (24 / forecast.length));
-        } else { 
+        } else {
             key = Math.floor(12 / (24 / forecast.length));
         }
 
-        return forecast[key]['code'];
-    }
+        return forecast[key].code;
+    };
 
     this.activateTab = function (index) {
         this.activeTab = index;
-    }
+    };
 }]);

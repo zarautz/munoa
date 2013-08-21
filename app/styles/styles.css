@@ -2006,7 +2006,7 @@ header {
 }
 /* line 159, scss/styles.scss */
 header .title {
-  font-size: 19px;
+  font-size: 20px;
   font-weight: normal;
   line-height: inherit;
   margin: 0 3em 0 0;
@@ -2020,7 +2020,7 @@ header .title {
 header i {
   background-color: #eaeaea;
   padding: 0 16px;
-  font-size: 18px;
+  font-size: 20px;
   color: #666666;
 }
 

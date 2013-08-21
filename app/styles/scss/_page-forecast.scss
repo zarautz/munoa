@@ -31,6 +31,10 @@ $page-today-font-color: #333;
             border-left-color: $app-background;
         }
 
+        &:last-child {
+            border-right: 1px solid $app-background;
+        }
+
         &.active {
             background: $page-today-background-color;
             border-top-color: $page-forecast-border-color;
@@ -42,7 +46,7 @@ $page-today-font-color: #333;
             }
 
             &:last-child {
-                border-right: 1px solid $page-forecast-border-color;
+                border-right-color: $page-forecast-border-color;
             }
         }
 

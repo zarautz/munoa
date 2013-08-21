@@ -2216,74 +2216,78 @@ a.chameleon, a.chameleon:hover {
   border-left-color: white;
 }
 /* line 34, scss/_page-forecast.scss */
+.weather-forecast .column:last-child {
+  border-right: 1px solid white;
+}
+/* line 38, scss/_page-forecast.scss */
 .weather-forecast .column.active {
   background: #ffffee;
   border-top-color: #dddddd;
   color: #333333;
   border-bottom-color: #ffffee;
 }
-/* line 40, scss/_page-forecast.scss */
+/* line 44, scss/_page-forecast.scss */
 .weather-forecast .column.active:first-child {
   border-left-color: #dddddd;
 }
-/* line 44, scss/_page-forecast.scss */
+/* line 48, scss/_page-forecast.scss */
 .weather-forecast .column.active:last-child {
-  border-right: 1px solid #dddddd;
+  border-right-color: #dddddd;
 }
-/* line 49, scss/_page-forecast.scss */
+/* line 53, scss/_page-forecast.scss */
 .weather-forecast .column [class^="icon-"],
 .weather-forecast .column [class*=" icon-"] {
   display: block;
   font-size: 2.5em;
 }
-/* line 54, scss/_page-forecast.scss */
+/* line 58, scss/_page-forecast.scss */
 .weather-forecast .column [class^="icon-"]:before,
 .weather-forecast .column [class*=" icon-"]:before {
   margin-left: 0.15em;
 }
-/* line 59, scss/_page-forecast.scss */
+/* line 63, scss/_page-forecast.scss */
 .weather-forecast .column .temperatures {
   font-size: 15px;
 }
-/* line 62, scss/_page-forecast.scss */
+/* line 66, scss/_page-forecast.scss */
 .weather-forecast .column .temperatures .min {
   color: #aaaaaa;
 }
 
-/* line 70, scss/_page-forecast.scss */
+/* line 74, scss/_page-forecast.scss */
 .weather-uv .label {
   margin: 16px 0 8px;
   padding: .3em .5em;
 }
-/* line 75, scss/_page-forecast.scss */
+/* line 79, scss/_page-forecast.scss */
 .weather-uv [class^="level-"],
 .weather-uv [class*=" level-"] {
   background-color: #6b49c8;
 }
-/* line 80, scss/_page-forecast.scss */
+/* line 84, scss/_page-forecast.scss */
 .weather-uv .level-1,
 .weather-uv .level-2 {
   background-color: #73ba5a;
 }
-/* line 84, scss/_page-forecast.scss */
+/* line 88, scss/_page-forecast.scss */
 .weather-uv .level-3,
 .weather-uv .level-4,
 .weather-uv .level-5 {
   background-color: #f9c600;
 }
-/* line 89, scss/_page-forecast.scss */
+/* line 93, scss/_page-forecast.scss */
 .weather-uv .level-6,
 .weather-uv .level-7 {
   background-color: #fba400;
 }
-/* line 93, scss/_page-forecast.scss */
+/* line 97, scss/_page-forecast.scss */
 .weather-uv .level-8,
 .weather-uv .level-9,
 .weather-uv .level-10 {
   background-color: #cd1c19;
 }
 
-/* line 100, scss/_page-forecast.scss */
+/* line 104, scss/_page-forecast.scss */
 .weather-periods {
   border-width: 0 1px 1px;
   border-style: solid;
@@ -2292,18 +2296,18 @@ a.chameleon, a.chameleon:hover {
   padding: 10px;
   color: #333333;
 }
-/* line 108, scss/_page-forecast.scss */
+/* line 112, scss/_page-forecast.scss */
 .weather-periods ul {
   border-bottom: 1px dotted #dddddd;
   padding-bottom: 4px;
   margin-bottom: 4px;
 }
-/* line 109, scss/_page-forecast.scss */
+/* line 113, scss/_page-forecast.scss */
 .weather-periods ul li {
   font-size: 15px;
   padding-bottom: 0;
 }
-/* line 118, scss/_page-forecast.scss */
+/* line 122, scss/_page-forecast.scss */
 .weather-periods ul:last-child {
   border: 0;
   padding-bottom: 0;

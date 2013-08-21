@@ -5,27 +5,61 @@
             <h1 class="title">{{ 'forecast'|translate }}</h1>
         </header>
         <div class="overthrow">
-            <h2>Astronomy</h2>
-                Sunrise: {{ forecastCtrl.forecast.data.astronomy.sunrise }}<br/>
-                Sunset: {{ forecastCtrl.forecast.data.astronomy.sunset }}<br/>
-            <h2>Tides</h2>
-                Low: <span ng-repeat="hour in forecastCtrl.forecast.data.tide.low" style="margin-right:1em;">{{ hour }}</span><br/>
-                High: <span ng-repeat="hour in forecastCtrl.forecast.data.tide.high" style="margin-right:1em;">{{ hour }}</span><br/>
-            <h2>Weather</h2>
-            <div ng-repeat="day in forecastCtrl.forecast.data.weather">
-                {{ day.date }}<br />
-                Max: {{ day.tempMax }} – Min: {{ day.tempMin }}<br />
-                UV max.: {{ day.uvMax }}<br />
-                <div ng-repeat="period in day.forecast">
-                    <strong>{{ period.period }}</strong><br/>
-                    <div style="margin-left:1em">
-                        {{ period.skyCondition}}<br/>
-                        {{ period.precipitationProb}}%<br/>
-                        {{ period.windDirection}}, {{ period.windSpeed}} km/h<br/>
-                    </div>
+            <p class="text-smallest text-center">
+                {{ forecastCtrl.today.date|date:'fullDate' }}<br />
+                <span class="color-light-text">
+                    Oso hodeitsua, trumoi eta xirimiri arriskuarekin
+                </span>
+            </p>
+            <div class="row collapse weather-today">
+                <div class="small-2 columns">
+                    <i class="icon-weather-{{ forecastCtrl.getMainForecastCode(forecastCtrl.today.weather.forecast) }}"></i>
                 </div>
-                <hr />
+                <div class="small-2 columns">
+                    <h1 class="temperature">{{ forecastCtrl.today.weather.tempMin }}&deg;</h1>
+                </div>
             </div>
+            <div class="row collapse weather-forecast weather-uv">
+                <div class="small-1 column"
+                    ng-repeat="day in forecastCtrl.forecast.data" ng-show="$index < 4"
+                    ng-class="{ 'active': $first }">
+                    <span ng-class="{ 'strong': $first }">{{ day.date|date:'EEE' }}</span><br />
+                    <i class="icon-weather-{{ forecastCtrl.getMainForecastCode(day.weather.forecast) }}"></i>
+                    <p class="temperatures">
+                        {{ day.weather.tempMax }}&deg; <span class="min">{{ day.weather.tempMin }}&deg;</span>
+                    </p>
+                    <span class="radius label level-{{ day.weather.uvMax }}">UV {{ day.weather.uvMax }}</span>
+                </div>
+            </div>
+            <div class="row collapse weather-periods">
+                <ul class="text-small small-block-grid-3 large-block-grid-3"
+                    ng-repeat="period in forecastCtrl.today.weather.forecast">
+                    <li>
+                        <strong>{{ period.period }}</strong>
+                        <i class="icon-weather-{{ period.code }}"></i>
+                    </li>
+                    <li class="text-center">
+                        <i class="icon-rain"></i>
+                        {{ period.precipitationProb}}%
+                    </li>
+                    <li class="text-right">
+                        {{ period.windDirection}} {{ period.windSpeed}}
+                        <i class="icon-wind"></i>
+                    </li>
+                </ul>
+            </div>
+            <div ng-show="forecastCtrl.today.weather.uvMax > 5">
+                <hr />
+                <h1 class="title">Kontuz gaur UV izpiekin</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh nunc, porta ac nunc non, dapibus interdum erat. Sed sit amet nunc metus. Vivamus vitae turpis erat. Etiam aliquam risus felis, eget volutpat nisi luctus ac. Suspendisse facilisis viverra ornare. Pellentesque egestas fermentum arcu, ut malesuada ante eleifend eget.</p>
+            </div>
+            <hr />
+            <p class="text-smallest color-lightest-text">
+                Source:
+                <span ng-repeat="source in forecastCtrl.forecast.meta.source">
+                    {{ source }}<span ng-if="!$last">,</span>
+                </span>
+            </p>
         </div>
     </div>
 </section>

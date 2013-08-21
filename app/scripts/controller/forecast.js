@@ -6,10 +6,20 @@ Z.app.controller('ForecastController', ['forecast', 'weatherCode', function(fore
     this.activeTab    = 0;
     this.weatherCodes = weatherCode.findAll().data;
 
-    this.getMainWeatherCode = function (forecast, index) {
+    this.forecastIsCurrent = function (index) {
+        return index === 0;
+    };
+
+    this.getCurrentHourIndex = function () {
+        var now = new Date();
+
+        return Math.floor(now.getHours() / (24 / this.today.weather.forecast.length));
+    };
+
+    this.getMainWeatherCode = function (forecast, useCurrentHour) {
         var now, key;
 
-        if (index === 0) {
+        if (useCurrentHour) {
             now = new Date();
             key = Math.floor(now.getHours() / (24 / forecast.length));
         } else {

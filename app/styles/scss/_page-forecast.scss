@@ -27,14 +27,23 @@ $page-today-font-color: #333;
         padding: $page-forecast-padding;
         text-align: center;
 
-        &.active {
-            border-top-color: $page-forecast-border-color;
-            color: $page-today-font-color;;
+        &:first-child {
+            border-left-color: $app-background;
         }
 
-        &:first-child {
+        &.active {
             background: $page-today-background-color;
+            border-top-color: $page-forecast-border-color;
+            color: $page-today-font-color;
             border-bottom-color: $page-today-background-color;
+
+            &:first-child {
+                border-left-color: $page-forecast-border-color;
+            }
+
+            &:last-child {
+                border-right: 1px solid $page-forecast-border-color;
+            }
         }
 
         [class^="icon-"],

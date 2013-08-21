@@ -22,7 +22,8 @@
             <div class="row collapse weather-forecast weather-uv">
                 <div class="small-1 column"
                     ng-repeat="day in forecastCtrl.forecast.data.slice(0, 4)"
-                    ng-class="{ 'active': $first }">
+                    ng-class="{ 'active': $index == forecastCtrl.activeTab }"
+                    ng-click="forecastCtrl.activateTab($index)">
                     <span ng-class="{ 'strong': $first }">{{ day.date|date:'EEE' }}</span><br />
                     <i class="icon-weather-{{ forecastCtrl.getMainForecastCode(day.weather.forecast) }}"></i>
                     <p class="temperatures">
@@ -31,9 +32,11 @@
                     <span class="radius label level-{{ day.weather.uvMax }}">UV {{ day.weather.uvMax }}</span>
                 </div>
             </div>
-            <div class="row collapse weather-periods">
+            <div class="row collapse weather-periods"
+                ng-repeat="day in forecastCtrl.forecast.data.slice(0, 4)"
+                ng-show="$index == forecastCtrl.activeTab">
                 <ul class="text-small small-block-grid-3 large-block-grid-3"
-                    ng-repeat="period in forecastCtrl.today.weather.forecast">
+                    ng-repeat="period in day.weather.forecast">
                     <li>
                         <strong>{{ period.period }}</strong>
                         <i class="icon-weather-{{ period.code }}"></i>

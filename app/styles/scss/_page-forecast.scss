@@ -1,0 +1,114 @@
+$page-forecast-padding: 10px;
+$page-forecast-border-color: #ddd;
+$page-today-background-color: #ffe;
+$page-today-font-color: #333; 
+
+.weather-today {
+    padding: $base-padding 0;
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+        font-size: 5em;
+    }
+    
+    .temperature {
+        font-size: 5em;
+        font-weight: 300;
+        margin: 0;
+    }
+}
+
+.weather-forecast {
+    .column {
+        border-width: 1px 0 1px 1px;
+        border-style: solid;
+        border-color: $app-background $page-forecast-border-color $page-forecast-border-color;
+        padding: $page-forecast-padding;
+        text-align: center;
+
+        &.active {
+            border-top-color: $page-forecast-border-color;
+            color: $page-today-font-color;;
+        }
+
+        &:first-child {
+            background: $page-today-background-color;
+            border-bottom-color: $page-today-background-color;
+        }
+
+        [class^="icon-"],
+        [class*=" icon-"] {
+            display: block;
+            font-size: 2.5em;
+
+            &:before {
+                margin-left: 0.15em;
+            }
+        }
+
+        .temperatures {
+            font-size: $small-font-size;
+
+            .min {
+                color: $color-lightest-text;
+            }
+        }
+    }
+}
+
+.weather-uv {
+    .label {
+        margin: $base-padding 0 $half-padding;
+        padding: .3em .5em;
+    }
+
+    .level-1,
+    .level-2 {
+        background-color: green;
+    }
+    .level-3,
+    .level-4,
+    .level-5 {
+        background-color: yellow;
+    }
+    .level-6,
+    .level-7 {
+        background-color: orange;
+    }
+    .level-8,
+    .level-9,
+    .level-10 {
+        background-color: red;
+    }
+    .level-11,
+    .level-12,
+    .level-13 {
+        background-color: red;
+    }
+}
+
+.weather-periods {
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-color: $page-forecast-border-color;
+    background: $page-today-background-color;
+    padding: $page-forecast-padding;
+    color: $page-today-font-color;
+
+    ul {
+        li {
+            font-size: $small-font-size;
+            padding-bottom: 0;
+        }
+
+        border-bottom: 1px dotted $page-forecast-border-color;
+        padding-bottom: $quarter-padding;
+        margin-bottom: $quarter-padding;
+
+        &:last-child {
+            border: 0;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+}

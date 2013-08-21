@@ -8,11 +8,12 @@ $experimental-support-for-microsoft: false;
 $touchable-size:              48px; // Default in iOS: "44px"; Android: "48px"
 $tablet-breakpoint:           600px; // Nexus 7
 
-$total-columns:               3;
+$total-columns:               4;
 $block-grid-elements:         5;
 $column-gutter:               $touchable-size / 1.5;
 $base-padding:                $column-gutter / 2;
 $half-padding:                $column-gutter / 4;
+$quarter-padding:             $column-gutter / 8;
 
 $app-border-radius:           0; // Default in iOS 6: "3px";
 $app-background:              #fefefe;
@@ -38,6 +39,7 @@ $smallest-font-size:          13px;
 $body-font-family:            "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $body-font-color:             #333;
 $body-line-height:            1.4;
+$body-font-weight-strong:     bold;
 
 $tableview-detail-font-color: #337abd;
 $tableview-border-color:      #eaeaea;
@@ -309,11 +311,28 @@ ul.drawer {
 // Helpers
 //
 
-.small {
+// From Foundation/type
+$hr-border-width: 1px !default;
+$hr-border-style: solid !default;
+$hr-border-color: #ddd !default;
+$hr-margin: emCalc(20) !default;
+hr {
+    border: $hr-border-style $hr-border-color;
+    border-width: $hr-border-width 0 0;
+    clear: both;
+    margin: $hr-margin 0 ($hr-margin - emCalc(1));
+    height: 0;
+}
+
+.strong {
+    font-weight: $body-font-weight-strong;
+}
+
+.text-small {
     font-size: $small-font-size;
 }
 
-.smallest {
+.text-smallest {
     font-size: $smallest-font-size;
 }
 
@@ -325,4 +344,5 @@ ul.drawer {
     text-transform: lowercase;
 }
 
+@import "page-forecast";
 @import "dev"; // TODO: delete

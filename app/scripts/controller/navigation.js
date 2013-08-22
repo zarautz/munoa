@@ -34,13 +34,13 @@ Z.app.controller('NavigationController', ['$scope', '$location', 'menu', functio
     };
 
     this.swipe = function(direction) {
-        if (this.activeView == 1) {
-            if (this.menu.isActive() && direction == 'left') {
-                this.menu.setIsActive(false)
-            } else if (!this.menu.isActive() && direction == 'right') {
-                this.menu.setIsActive(true)
+        if (this.activeView === 1) {
+            if (this.menu.isActive() && direction === 'left') {
+                this.menu.setIsActive(false);
+            } else if (!this.menu.isActive() && direction === 'right') {
+                this.menu.setIsActive(true);
             }
-        } else if (direction == 'right') {
+        } else if (direction === 'right') {
             this.activeView--;
         }
     };

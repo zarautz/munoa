@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row collapse weather-forecast weather-uv">
+            <div class="row collapse weather-forecast">
                 <div class="small-1 column"
                     ng-repeat="day in forecastCtrl.forecast.data.slice(forecastCtrl.todayIndex, forecastCtrl.todayIndex + 4)"
                     ng-class="{ 'active': $index == forecastCtrl.activeTab }"
@@ -35,7 +35,7 @@
                     <p class="temperatures">
                         {{ day.weather.tempMax }}&deg; <span class="min">{{ day.weather.tempMin }}&deg;</span>
                     </p>
-                    <span class="radius label level-{{ day.weather.uvMax }}">UV {{ day.weather.uvMax }}</span>
+                    <span class="radius label uv-label-{{ day.weather.uvMax }}">UV {{ day.weather.uvMax }}</span>
                 </div>
             </div>
             <div class="row collapse weather-periods"
@@ -59,10 +59,22 @@
                 </ul>
             </div>
             <div class="row collapse">
-                <div class="large-12 columns" ng-show="forecastCtrl.todayData.weather.uvMax > 5">
+                <div class="large-12 columns" ng-if="forecastCtrl.todayData.weather.uvMax > 5">
                     <hr />
-                    <h1 class="title">Kontuz gaur UV izpiekin</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh nunc, porta ac nunc non, dapibus interdum erat. Sed sit amet nunc metus. Vivamus vitae turpis erat. Etiam aliquam risus felis, eget volutpat nisi luctus ac. Suspendisse facilisis viverra ornare. Pellentesque egestas fermentum arcu, ut malesuada ante eleifend eget.</p>
+                    <h1>{{ 'weather.uv.title'|translate }}</h1>
+                    <p>{{ 'weather.uv.text'|translate }}</p>
+                    <p class="uv-text-orange"
+                        ng-if="forecastCtrl.todayData.weather.uvMax > 5 && forecastCtrl.todayData.weather.uvMax < 8">
+                        {{ 'weather.uv.orange'|translate }}
+                    </p>
+                    <p class="uv-text-red"
+                        ng-if="forecastCtrl.todayData.weather.uvMax > 7 && forecastCtrl.todayData.weather.uvMax < 11">
+                        {{ 'weather.uv.red'|translate }}
+                    </p>
+                    <p class="uv-text-violet"
+                        ng-if="forecastCtrl.todayData.weather.uvMax > 10">
+                        {{ 'weather.uv.violet'|translate }}
+                    </p>
                 </div>
                 <div class="large-12 columns">
                     <hr />

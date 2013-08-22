@@ -288,7 +288,7 @@ module.exports = function (grunt) {
                         //symbian: '<%= yeoman.build %>/symbian.wgz',
                         //blackberry: '<%= yeoman.build %>/blackberry.cod',
                         //webos: '<%= yeoman.build %>/webos.ipk',
-                        ios: '<%= yeoman.build %>/ios.ipa',
+                        //ios: '<%= yeoman.build %>/ios.ipa',
                         android: '<%= yeoman.build %>/android.apk'
                     }
                 }

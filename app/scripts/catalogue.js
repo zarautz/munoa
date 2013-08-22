@@ -21,7 +21,7 @@ Z.catalogue = {
         'fr': "Protegez-vous des rayons UV aujourd'hui"
     },
     'weather.uv.orange': {
-        'eu': 'Eguzkitako betaurrekoak jantzi eta erabil ezazu SPF 30+ duen krema. Arropa eta txapela jantzi eguzkitik babestu ahal izateko, eta saia zaitez ahalik eta eguzki-izpi gutxien jasotzen, goizeko 11etatik arratsaldeko 16akk bitartean.',
+        'eu': 'Eguzkitako betaurrekoak jantzi eta erabil ezazu SPF 30+ duen krema. Arropa eta txapela jantzi eguzkitik babestu ahal izateko, eta saia zaitez ahalik eta eguzki-izpi gutxien jasotzen, goizeko 11etatik arratsaldeko 16ak bitartean.',
         'es': 'Usa crema solar SPF 30+ y gafas de sol. Ponte ropa y sombrero que te proteja de los rayos solares, e intenta estar lo menos expuesto al sol posible entre las 11h y las 16h de la tarde.',
         'en': 'Wear sunglasses and use SPF 30+ sunscreen, cover the body with sun protective clothing and a wide-brim hat, and reduce time in the sun from three hours before to three hours after solar noon.',
         'fr': "Réduire l’exposition entre 11 h et 16 h. Appliquer un écran solaire de haute protection (indice de 30 à 50), porter un chapeau et des lunettes de soleil, et se placer à l’ombre."

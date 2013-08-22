@@ -22,10 +22,10 @@
     <header>
         <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
         <!--<i class="right icon-share"></i>-->
-        <h1 class="color-blue">{{ pushData.post.title }}</h1>
+        <h1 class="title">{{ pushData.post.title }}</h1>
     </header>
     <div class="overthrow post">
-        <h1 class="title">
+        <h1 class="color-blue">
             {{ pushData.post.title }}
         </h1>
         <div class="content" ng-bind-html="pushData.post.content"></div>

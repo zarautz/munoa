@@ -1,12 +1,12 @@
-<section class="on-{{ navCtrl.activeView }}" ng-controller="PostController as postCtrl">
+<section class="on-{{ navCtrl.activeView }}" ng-controller="ZuzarautzController as zuzarautzCtrl">
     <div>
         <header>
             <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
-            <h1 class="title">{{ 'index'|translate }}</h1>
+            <h1 class="title">{{ 'zuzarautz'|translate }}</h1>
         </header>
         <div class="overthrow">
             <ul>
-                <li ng-repeat="post in postCtrl.posts.data">
+                <li ng-repeat="post in posts.data">
                     <a href ng-click="navCtrl.pushView('post.show', { 'post': post })">
                         {{ post.title }}
                     </a>

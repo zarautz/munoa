@@ -34,7 +34,7 @@ Z.app.config(['$httpProvider', '$routeProvider', 'babelProvider', 'menuProvider'
     // ----
     var menuItems = [
         {
-            id: 'index',
+            id: 'zuzarautz',
             path: '/',
             icon: 'icon-home color-blue'
         },
@@ -69,8 +69,8 @@ Z.app.config(['$httpProvider', '$routeProvider', 'babelProvider', 'menuProvider'
     menuProvider.setProfile('zarautz');
 
     // Set the menu items order for each profile
-    menuProvider.sortMenuItems('zarautz', ['settings', 'index', 'events', 'weather', 'sea', 'health', 'places']);
-    menuProvider.sortMenuItems('tourist', ['settings', 'places', 'events', 'weather', 'sea', 'health', 'index']);
+    menuProvider.sortMenuItems('zarautz', ['settings', 'zuzarautz', 'events', 'weather', 'sea', 'health', 'places']);
+    menuProvider.sortMenuItems('tourist', ['settings', 'places', 'events', 'weather', 'sea', 'health', 'zuzarautz']);
 
     // --------
     // SETTINGS

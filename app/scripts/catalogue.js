@@ -45,7 +45,7 @@ Z.catalogue = {
         'en': '',
         'fr': ''
     },
-    'index': {
+    'zuzarautz': {
         'eu': 'Zu Zarautz',
         'es': 'Zarautz',
         'en': 'Zarautz',

@@ -6,27 +6,32 @@
         </header>
         <div class="overthrow">
             <p class="text-smallest text-center">
-                {{ forecastCtrl.today.date|date:'fullDate' }}<br />
+                {{ forecastCtrl.todayData.date|date:'fullDate' }}<br />
                 <span class="color-light-text">
-                    {{ forecastCtrl.weatherCodes[forecastCtrl.getForecastWeatherCode(forecastCtrl.today.weather.forecast, true)].name }}
+                    {{ forecastCtrl.weatherCodes[forecastCtrl.getForecastWeatherCode(forecastCtrl.todayData.weather.forecast, true)].name }}
                 </span>
-                {{ forecastCtrl.nowIndex }}
             </p>
             <div class="row collapse weather-today">
                 <div class="small-2 columns">
-                    <i class="icon-weather-{{ forecastCtrl.getForecastWeatherCode(forecastCtrl.today.weather.forecast, true) }}"></i>
+                    <i class="icon-weather-{{ forecastCtrl.getForecastWeatherCode(forecastCtrl.todayData.weather.forecast, true) }}"></i>
                 </div>
                 <div class="small-2 columns">
-                    <h1 class="temperature">30&deg;</h1>
+                    <h1 ng-show="forecastCtrl.todayData.weather.temp" class="temperature">
+                        {{ forecastCtrl.todayData.weather.temp }}&deg;
+                    </h1>
+                    <div ng-show="!forecastCtrl.todayData.weather.temp" class="temperature-range">
+                        <h2 class="max">{{ forecastCtrl.todayData.weather.tempMax }}&deg;</h2>
+                        <h3 class="min">{{ forecastCtrl.todayData.weather.tempMin }}&deg;</h3>
+                    </div>
                 </div>
             </div>
             <div class="row collapse weather-forecast weather-uv">
                 <div class="small-1 column"
-                    ng-repeat="day in forecastCtrl.forecast.data.slice(0, 4)"
+                    ng-repeat="day in forecastCtrl.forecast.data.slice(forecastCtrl.todayIndex, forecastCtrl.todayIndex + 4)"
                     ng-class="{ 'active': $index == forecastCtrl.activeTab }"
                     ng-click="forecastCtrl.activateTab($index)">
                     <span ng-class="{ 'strong': $first }">{{ day.date|date:'EEE' }}</span><br />
-                    <i class="icon-weather-{{ forecastCtrl.getForecastWeatherCode(day.weather.forecast, forecastCtrl.forecastIsToday($index)) }}"></i>
+                    <i class="icon-weather-{{ forecastCtrl.getForecastWeatherCode(day.weather.forecast, ($index === 0)) }}"></i>
                     <p class="temperatures">
                         {{ day.weather.tempMax }}&deg; <span class="min">{{ day.weather.tempMin }}&deg;</span>
                     </p>
@@ -34,14 +39,11 @@
                 </div>
             </div>
             <div class="row collapse weather-periods"
-                ng-repeat="day in forecastCtrl.forecast.data.slice(0, 4)"
+                ng-repeat="day in forecastCtrl.forecast.data.slice(forecastCtrl.todayIndex, forecastCtrl.todayIndex + 4)"
                 ng-show="$index == forecastCtrl.activeTab">
                 <ul class="text-small small-block-grid-3 large-block-grid-3"
                     ng-repeat="period in day.weather.forecast"
-                    ng-show="
-                        (forecastCtrl.activeTab == 0 && $index >= forecastCtrl.getCurrentHourIndex())
-                        || forecastCtrl.activeTab > 0
-                    ">
+                    ng-show="(forecastCtrl.activeTab == 0 && $index >= forecastCtrl.getCurrentHourIndex()) || forecastCtrl.activeTab > 0">
                     <li>
                         <strong>{{ period.period }}</strong>
                         <i class="icon-weather-{{ period.code }}"></i>
@@ -57,7 +59,7 @@
                 </ul>
             </div>
             <div class="row collapse">
-                <div class="large-12 columns" ng-show="forecastCtrl.today.weather.uvMax > 5">
+                <div class="large-12 columns" ng-show="forecastCtrl.todayData.weather.uvMax > 5">
                     <hr />
                     <h1 class="title">Kontuz gaur UV izpiekin</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh nunc, porta ac nunc non, dapibus interdum erat. Sed sit amet nunc metus. Vivamus vitae turpis erat. Etiam aliquam risus felis, eget volutpat nisi luctus ac. Suspendisse facilisis viverra ornare. Pellentesque egestas fermentum arcu, ut malesuada ante eleifend eget.</p>
@@ -65,7 +67,8 @@
                 <div class="large-12 columns">
                     <hr />
                     <p class="text-smallest color-lightest-text">
-                        {{ 'sources'|translate }}:
+                        {{ 'meta.lastUpdated'|translate }}: {{ forecastCtrl.forecast.meta.lastUpdated|date:'short' }}<br />
+                        {{ 'meta.sources'|translate }}:
                         <span ng-repeat="source in forecastCtrl.forecast.meta.source">
                             {{ source }},
                         </span>

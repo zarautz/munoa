@@ -19,6 +19,14 @@ $quarter-padding:             $column-gutter / 8;
 $app-border-radius:           0; // Default in iOS 6: "3px";
 $app-background:              #fff;
 
+$em-base:                     17px;
+$small-font-size:             15px;
+$smallest-font-size:          13px;
+$body-font-family:            "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-color:             #333;
+$body-line-height:            1.4;
+$body-font-weight-strong:     bold;
+
 $action-bar-height:           $touchable-size;
 $action-bar-background-color: #eaeaea;
 $action-bar-border-size:      1px;
@@ -31,16 +39,9 @@ $drawer-width:                260px; // 320px - 60px
 $drawer-background:           #22252c;
 $drawer-border-right-color:   #121315;
 $drawer-text-color:           #eff0f2;
+$drawer-text-size:            18px;
 $drawer-menu-border-color:    darken($drawer-background, 3%);
 $drawer-menu-selected:        darken($drawer-background, 5%);
-
-$em-base:                     17px;
-$small-font-size:             15px;
-$smallest-font-size:          13px;
-$body-font-family:            "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$body-font-color:             #333;
-$body-line-height:            1.4;
-$body-font-weight-strong:     bold;
 
 $tableview-detail-font-color: #337abd;
 $tableview-border-color:      #eaeaea;
@@ -56,8 +57,8 @@ $hr-margin:                   ($base-padding * 1.5);
 
 @import "app-foundation";
 @import "app-navigation";
-@import "app-icons";
 @import "app-colors";
+@import "app-icons";
 @import "phonegap";
 
 //
@@ -181,6 +182,7 @@ header {
 ul.drawer {
     background: $drawer-background;
     color: $drawer-text-color;
+    font-size: $drawer-text-size;
     
     li {
         height: $touchable-size;
@@ -196,7 +198,7 @@ ul.drawer {
             
             [class^="icon-"] {
                 margin-right: $base-padding;
-                font-size: $em-base;
+                font-size: $drawer-text-size;
             }
             
             &.active {
@@ -354,4 +356,4 @@ a.chameleon {
 }
 
 @import "page-forecast";
-@import "dev"; // TODO: delete
+

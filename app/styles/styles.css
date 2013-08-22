@@ -1480,6 +1480,66 @@ section.on-5 {
   transform: translateX(-80%);
 }
 
+/* line 12, scss/_app-colors.scss */
+.color-text {
+  color: #333333;
+}
+
+/* line 13, scss/_app-colors.scss */
+.color-light-text {
+  color: #666666;
+}
+
+/* line 14, scss/_app-colors.scss */
+.color-lightest-text {
+  color: #aaaaaa;
+}
+
+/* line 15, scss/_app-colors.scss */
+.color-blue {
+  color: #0099cc;
+}
+
+/* line 16, scss/_app-colors.scss */
+.color-light-blue {
+  color: #33b5e5;
+}
+
+/* line 17, scss/_app-colors.scss */
+.color-green {
+  color: #669900;
+}
+
+/* line 18, scss/_app-colors.scss */
+.color-yellow {
+  color: #ffbb33;
+}
+
+/* line 19, scss/_app-colors.scss */
+.color-orange {
+  color: #ff8800;
+}
+
+/* line 20, scss/_app-colors.scss */
+.color-red {
+  color: #cc0000;
+}
+
+/* line 21, scss/_app-colors.scss */
+.color-violet {
+  color: #9933cc;
+}
+
+/* line 22, scss/_app-colors.scss */
+.color-dark {
+  color: #555;
+}
+
+/* line 23, scss/_app-colors.scss */
+.color-twitter {
+  color: #00aced;
+}
+
 @font-face {
   font-family: 'fontello';
   src: url('fonts/fontello.eot') format('embedded-opentype');
@@ -1834,66 +1894,6 @@ section.on-5 {
 }
 
 /* '' */
-/* line 12, scss/_app-colors.scss */
-.color-text {
-  color: #333333;
-}
-
-/* line 13, scss/_app-colors.scss */
-.color-light-text {
-  color: #666666;
-}
-
-/* line 14, scss/_app-colors.scss */
-.color-lightest-text {
-  color: #aaaaaa;
-}
-
-/* line 15, scss/_app-colors.scss */
-.color-blue {
-  color: #337abd;
-}
-
-/* line 16, scss/_app-colors.scss */
-.color-light-blue {
-  color: #2999b7;
-}
-
-/* line 17, scss/_app-colors.scss */
-.color-green {
-  color: #73ba5a;
-}
-
-/* line 18, scss/_app-colors.scss */
-.color-yellow {
-  color: #f9c600;
-}
-
-/* line 19, scss/_app-colors.scss */
-.color-orange {
-  color: #fba400;
-}
-
-/* line 20, scss/_app-colors.scss */
-.color-red {
-  color: #cd1c19;
-}
-
-/* line 21, scss/_app-colors.scss */
-.color-violet {
-  color: #6b49c8;
-}
-
-/* line 22, scss/_app-colors.scss */
-.color-dark {
-  color: #555;
-}
-
-/* line 23, scss/_app-colors.scss */
-.color-twitter {
-  color: #00aced;
-}
-
 /* line 1, scss/_phonegap.scss */
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -1944,67 +1944,67 @@ body {
   }
 }
 
-/* line 77, scss/styles.scss */
+/* line 78, scss/styles.scss */
 p, ul {
   margin: 0;
   padding: 0;
   line-height: 1.4;
 }
 
-/* line 83, scss/styles.scss */
+/* line 84, scss/styles.scss */
 li {
   list-style: none;
 }
 
-/* line 87, scss/styles.scss */
+/* line 88, scss/styles.scss */
 a {
-  color: #286095;
+  color: #007399;
   text-decoration: none;
 }
-/* line 91, scss/styles.scss */
+/* line 92, scss/styles.scss */
 a:visited {
-  color: #337abd;
+  color: #0099cc;
 }
 
-/* line 100, scss/styles.scss */
+/* line 101, scss/styles.scss */
 body {
   background: #22252c;
   line-height: 1.4;
 }
 
-/* line 105, scss/styles.scss */
+/* line 106, scss/styles.scss */
 main, section, section > div {
   background: white;
 }
 
-/* line 110, scss/styles.scss */
+/* line 111, scss/styles.scss */
 section div.overthrow {
   padding: 16px;
 }
 @media only screen and (min-width: 600px) {
-  /* line 110, scss/styles.scss */
+  /* line 111, scss/styles.scss */
   section div.overthrow {
     padding: 32px;
   }
 }
 
-/* line 137, scss/styles.scss */
+/* line 138, scss/styles.scss */
 body.active-menu main {
   border-left: 1px solid #121315;
 }
-/* line 140, scss/styles.scss */
+/* line 141, scss/styles.scss */
 body.active-menu main section > div:first-child {
   border-left: 1px solid #68696b;
 }
 
-/* line 150, scss/styles.scss */
+/* line 151, scss/styles.scss */
 header {
   height: 48px;
   line-height: 48px;
   background-color: #eaeaea;
   border-bottom: 1px solid #dddddd;
 }
-/* line 159, scss/styles.scss */
+/* line 160, scss/styles.scss */
 header .title {
   font-size: 20px;
   font-weight: normal;
@@ -2016,7 +2016,7 @@ header .title {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 169, scss/styles.scss */
+/* line 170, scss/styles.scss */
 header i {
   background-color: #eaeaea;
   padding: 0 16px;
@@ -2024,17 +2024,18 @@ header i {
   color: #666666;
 }
 
-/* line 181, scss/styles.scss */
+/* line 182, scss/styles.scss */
 ul.drawer {
   background: #22252c;
   color: #eff0f2;
+  font-size: 18px;
 }
-/* line 185, scss/styles.scss */
+/* line 187, scss/styles.scss */
 ul.drawer li {
   height: 48px;
   padding: 0 16px;
 }
-/* line 189, scss/styles.scss */
+/* line 191, scss/styles.scss */
 ul.drawer li a {
   display: block;
   height: 48px;
@@ -2045,12 +2046,12 @@ ul.drawer li a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 197, scss/styles.scss */
+/* line 199, scss/styles.scss */
 ul.drawer li a [class^="icon-"] {
   margin-right: 16px;
-  font-size: 17px;
+  font-size: 18px;
 }
-/* line 202, scss/styles.scss */
+/* line 204, scss/styles.scss */
 ul.drawer li a.active {
   background: #17191e;
   margin: 0 -16px;
@@ -2058,21 +2059,21 @@ ul.drawer li a.active {
   margin-top: -1px;
   border-top: 1px solid #1b1e23;
 }
-/* line 210, scss/styles.scss */
+/* line 212, scss/styles.scss */
 ul.drawer li a.settings {
   text-transform: uppercase;
   font-size: 13px;
   color: #434957;
 }
 
-/* line 224, scss/styles.scss */
+/* line 226, scss/styles.scss */
 .table-view ul {
   border-width: 1px 0;
   border-style: solid;
   border-color: #eaeaea;
   margin-right: -16px;
 }
-/* line 230, scss/styles.scss */
+/* line 232, scss/styles.scss */
 .table-view ul a {
   display: block;
   color: #333333;
@@ -2084,70 +2085,70 @@ ul.drawer li a.settings {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 239, scss/styles.scss */
+/* line 241, scss/styles.scss */
 .table-view ul a i {
   float: right;
   color: #b3b3b3;
 }
-/* line 243, scss/styles.scss */
+/* line 245, scss/styles.scss */
 .table-view ul a i.selected {
   color: #337abd;
 }
-/* line 248, scss/styles.scss */
+/* line 250, scss/styles.scss */
 .table-view ul a .detail {
   float: right;
   color: #337abd;
   margin-right: 8px;
 }
-/* line 255, scss/styles.scss */
+/* line 257, scss/styles.scss */
 .table-view ul li:last-child a {
   border: 0;
 }
 
-/* line 265, scss/styles.scss */
+/* line 267, scss/styles.scss */
 .title {
   margin: .25em 0 .75em;
   font-weight: 300;
   font-size: 1.7em;
   line-height: 1.2;
-  color: #337abd;
+  color: #0099cc;
 }
 
-/* line 274, scss/styles.scss */
+/* line 276, scss/styles.scss */
 .content h1, .content h2, .content h3, .content h4, .content h5 {
   font-size: 1em;
   font-weight: normal;
   font-style: italic;
 }
-/* line 279, scss/styles.scss */
+/* line 281, scss/styles.scss */
 .content h1 strong, .content h2 strong, .content h3 strong, .content h4 strong, .content h5 strong {
   font-weight: normal;
 }
-/* line 284, scss/styles.scss */
+/* line 286, scss/styles.scss */
 .content p, .content img {
   display: block;
   margin: 1em 0;
 }
-/* line 289, scss/styles.scss */
+/* line 291, scss/styles.scss */
 .content ol, .content ul {
   padding-left: 1.5em;
 }
-/* line 294, scss/styles.scss */
+/* line 296, scss/styles.scss */
 .content ul li {
   list-style: disc outside none;
 }
-/* line 300, scss/styles.scss */
+/* line 302, scss/styles.scss */
 .content ol li {
   list-style: decimal outside none;
 }
 
-/* line 308, scss/styles.scss */
+/* line 310, scss/styles.scss */
 .post .content div > img + p {
   font-size: .9em;
   color: #666666;
 }
 
-/* line 320, scss/styles.scss */
+/* line 322, scss/styles.scss */
 hr {
   border: solid #dddddd;
   border-width: 1px 0 0;
@@ -2156,32 +2157,32 @@ hr {
   height: 0;
 }
 
-/* line 328, scss/styles.scss */
+/* line 330, scss/styles.scss */
 .strong {
   font-weight: bold;
 }
 
-/* line 332, scss/styles.scss */
+/* line 334, scss/styles.scss */
 .text-small {
   font-size: 15px;
 }
 
-/* line 336, scss/styles.scss */
+/* line 338, scss/styles.scss */
 .text-smallest {
   font-size: 13px;
 }
 
-/* line 340, scss/styles.scss */
+/* line 342, scss/styles.scss */
 .uppercase {
   text-transform: uppercase;
 }
 
-/* line 344, scss/styles.scss */
+/* line 346, scss/styles.scss */
 .lowercase {
   text-transform: lowercase;
 }
 
-/* line 349, scss/styles.scss */
+/* line 351, scss/styles.scss */
 a.chameleon, a.chameleon:hover {
   color: inherit;
   text-decoration: none;
@@ -2189,23 +2190,45 @@ a.chameleon, a.chameleon:hover {
 }
 
 /* line 6, scss/_page-forecast.scss */
+.icon-weather-11:before {
+  color: #ffbb33;
+}
+
+/* line 10, scss/_page-forecast.scss */
 .weather-today {
   padding-bottom: 16px;
   text-align: center;
 }
-/* line 10, scss/_page-forecast.scss */
+/* line 14, scss/_page-forecast.scss */
 .weather-today [class^="icon-"],
 .weather-today [class*=" icon-"] {
   font-size: 5em;
 }
-/* line 15, scss/_page-forecast.scss */
+/* line 19, scss/_page-forecast.scss */
 .weather-today .temperature {
   font-size: 5em;
   font-weight: 300;
   margin: 0;
 }
+/* line 25, scss/_page-forecast.scss */
+.weather-today .temperature-range .max, .weather-today .temperature-range .min {
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+  font-weight: 300;
+}
+/* line 32, scss/_page-forecast.scss */
+.weather-today .temperature-range .max {
+  font-size: 3.5em;
+  margin-top: .25em;
+}
+/* line 36, scss/_page-forecast.scss */
+.weather-today .temperature-range .min {
+  font-size: 2em;
+  color: #aaaaaa;
+}
 
-/* line 23, scss/_page-forecast.scss */
+/* line 44, scss/_page-forecast.scss */
 .weather-forecast .column {
   border-width: 1px 0 1px 1px;
   border-style: solid;
@@ -2213,103 +2236,103 @@ a.chameleon, a.chameleon:hover {
   padding: 10px;
   text-align: center;
 }
-/* line 30, scss/_page-forecast.scss */
+/* line 51, scss/_page-forecast.scss */
 .weather-forecast .column:first-child {
   border-left-color: white;
 }
-/* line 34, scss/_page-forecast.scss */
+/* line 55, scss/_page-forecast.scss */
 .weather-forecast .column:last-child {
   border-right: 1px solid white;
 }
-/* line 38, scss/_page-forecast.scss */
+/* line 59, scss/_page-forecast.scss */
 .weather-forecast .column.active {
-  background: #ffffee;
+  background: whitesmoke;
   border-top-color: #dddddd;
   color: #333333;
-  border-bottom-color: #ffffee;
+  border-bottom-color: whitesmoke;
 }
-/* line 44, scss/_page-forecast.scss */
+/* line 65, scss/_page-forecast.scss */
 .weather-forecast .column.active:first-child {
   border-left-color: #dddddd;
 }
-/* line 48, scss/_page-forecast.scss */
+/* line 69, scss/_page-forecast.scss */
 .weather-forecast .column.active:last-child {
   border-right-color: #dddddd;
 }
-/* line 53, scss/_page-forecast.scss */
+/* line 74, scss/_page-forecast.scss */
 .weather-forecast .column [class^="icon-"],
 .weather-forecast .column [class*=" icon-"] {
   display: block;
   font-size: 2.5em;
 }
-/* line 58, scss/_page-forecast.scss */
+/* line 79, scss/_page-forecast.scss */
 .weather-forecast .column [class^="icon-"]:before,
 .weather-forecast .column [class*=" icon-"]:before {
   margin-left: 0.15em;
 }
-/* line 63, scss/_page-forecast.scss */
+/* line 84, scss/_page-forecast.scss */
 .weather-forecast .column .temperatures {
   font-size: 15px;
 }
-/* line 66, scss/_page-forecast.scss */
+/* line 87, scss/_page-forecast.scss */
 .weather-forecast .column .temperatures .min {
   color: #aaaaaa;
 }
 
-/* line 74, scss/_page-forecast.scss */
+/* line 95, scss/_page-forecast.scss */
 .weather-uv .label {
   margin: 16px 0 8px;
   padding: .3em .5em;
 }
-/* line 79, scss/_page-forecast.scss */
+/* line 100, scss/_page-forecast.scss */
 .weather-uv [class^="level-"],
 .weather-uv [class*=" level-"] {
-  background-color: #6b49c8;
+  background-color: #9933cc;
 }
-/* line 84, scss/_page-forecast.scss */
+/* line 105, scss/_page-forecast.scss */
 .weather-uv .level-1,
 .weather-uv .level-2 {
-  background-color: #73ba5a;
+  background-color: #669900;
 }
-/* line 88, scss/_page-forecast.scss */
+/* line 109, scss/_page-forecast.scss */
 .weather-uv .level-3,
 .weather-uv .level-4,
 .weather-uv .level-5 {
-  background-color: #f9c600;
+  background-color: #ffbb33;
 }
-/* line 93, scss/_page-forecast.scss */
+/* line 114, scss/_page-forecast.scss */
 .weather-uv .level-6,
 .weather-uv .level-7 {
-  background-color: #fba400;
+  background-color: #ff8800;
 }
-/* line 97, scss/_page-forecast.scss */
+/* line 118, scss/_page-forecast.scss */
 .weather-uv .level-8,
 .weather-uv .level-9,
 .weather-uv .level-10 {
-  background-color: #cd1c19;
+  background-color: #cc0000;
 }
 
-/* line 104, scss/_page-forecast.scss */
+/* line 125, scss/_page-forecast.scss */
 .weather-periods {
   border-width: 0 1px 1px;
   border-style: solid;
   border-color: #dddddd;
-  background: #ffffee;
+  background: whitesmoke;
   padding: 10px;
   color: #333333;
 }
-/* line 112, scss/_page-forecast.scss */
+/* line 133, scss/_page-forecast.scss */
 .weather-periods ul {
   border-bottom: 1px dotted #dddddd;
   padding-bottom: 4px;
   margin-bottom: 4px;
 }
-/* line 113, scss/_page-forecast.scss */
+/* line 134, scss/_page-forecast.scss */
 .weather-periods ul li {
   font-size: 15px;
   padding-bottom: 0;
 }
-/* line 122, scss/_page-forecast.scss */
+/* line 143, scss/_page-forecast.scss */
 .weather-periods ul:last-child {
   border: 0;
   padding-bottom: 0;

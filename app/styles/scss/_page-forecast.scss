@@ -1,7 +1,11 @@
 $page-forecast-padding: 10px;
 $page-forecast-border-color: $hr-border-color;
-$page-today-background-color: #ffe;
-$page-today-font-color: #333; 
+$page-today-background-color: whitesmoke;
+$page-today-font-color: #333;
+
+.icon-weather-11:before {
+    color: $color-yellow;
+}
 
 .weather-today {
     padding-bottom: $base-padding;
@@ -16,6 +20,23 @@ $page-today-font-color: #333;
         font-size: 5em;
         font-weight: 300;
         margin: 0;
+    }
+    .temperature-range {
+        .max, .min {
+            margin: 0;
+            padding: 0;
+            line-height: 1em;
+            font-weight: 300;
+        }
+
+        .max {
+            font-size: 3.5em;
+            margin-top: .25em;
+        }
+        .min {
+            font-size: 2em;
+            color: $color-lightest-text;
+        }
     }
 }
 

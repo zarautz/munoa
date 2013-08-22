@@ -1,27 +1,39 @@
 'use strict';
 
 Z.app.controller('ForecastController', ['forecast', 'weatherCode', function(forecast, weatherCode) {
-    var now = new Date();
+    var now   = new Date(),
+        hour  = now.getHours(),
+        day   = now.getDate(),
+        month = now.getMonth() + 1,
+        year  = now.getFullYear(),
+        today = year +'-'+ ('0' + month).slice(-2) +'-'+ ('0' + day).slice(-2);
 
-    this.forecast     = forecast.findAll();
-    this.today        = this.forecast.data[0];
-    this.hour         = now.getHours();
+    this.forecast = forecast.findAll();
+
+    this.getForecastIndexForToday = function () {
+        var i, length;
+
+        for (i = 0, length = this.forecast.data.length; i < length; ++i) {
+            if (this.forecast.data[i].date == today) {
+                return i;
+            }
+        }
+    };
+    
+    this.todayIndex   = this.getForecastIndexForToday();
+    this.todayData    = this.forecast.data[this.todayIndex];
     this.activeTab    = 0;
     this.weatherCodes = weatherCode.findAll().data;
 
-    this.forecastIsToday = function (index) {
-        return index === 0;
-    };
-
     this.getCurrentHourIndex = function () {
-        return Math.floor(this.hour / (24 / this.today.weather.forecast.length));
+        return Math.floor(hour / (24 / this.todayData.weather.forecast.length));
     };
 
     this.getForecastWeatherCode = function (forecast, isToday) {
         var key;
 
         if (isToday) {
-            key = Math.floor(this.hour / (24 / forecast.length));
+            key = Math.floor(hour / (24 / forecast.length));
         } else {
             key = Math.floor(12 / (24 / forecast.length));
         }

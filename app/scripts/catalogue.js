@@ -61,7 +61,13 @@ Z.catalogue = {
         'es': 'Generales',
         'fr': ''
     },
-    'sources': {
+    'meta.lastUpdated': {
+        'en': 'Last updated',
+        'eu': 'Azken eguneraketa',
+        'es': 'Actualización',
+        'fr': 'Actualisée'
+    },
+    'meta.sources': {
         'en': 'Sources',
         'eu': 'Informazio jatorriak',
         'es': 'Fuentes',

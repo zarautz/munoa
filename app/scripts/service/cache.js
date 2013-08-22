@@ -33,6 +33,21 @@ Z.app.factory('cache', ['$log', function(log) {
             log.info('[CACHE] "' + key + '" found');
 
             return data.value;
+        },
+        getOld: function (key) {
+            var data = store.get(key);
+
+            // Check if data is found
+            if (!data) {
+                log.info('[CACHE] Old "' + key + '" not found');
+
+                return null;
+            }
+
+            // It's a valid entry
+            log.info('[CACHE] Old "' + key + '" found');
+
+            return data.value;
         }
     };
 }]);

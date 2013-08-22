@@ -6,13 +6,30 @@
             <h1 class="title">{{ 'events'|translate }}</h1>
         </header>
         <div class="overthrow">
+            <div ng-if="events.isLoading">
+                Loading...
+            </div>
+            Loading: {{ events.isLoading }}<br/>
+            Error: {{ events.isError }}<br/>
+            From cache: {{ events.fromCache }}<br/>
+            Old: {{ events.isOld }}<br/>
+            <hr>
+            Loading: {{ forecast.isLoading }}<br/>
+            Error: {{ forecast.isError }}<br/>
+            From cache: {{ forecast.fromCache }}<br/>
+            Old: {{ forecast.isOld }}<br/>
+            {{ forecast.data }}
+            <hr>
+            {{ today }}
+            <!--
             <ul>
-                <li ng-repeat="event in eventCtrl.events.data">
+                <li ng-repeat="event in events.data">
                     <a href ng-click="navCtrl.pushView('event.show', { 'event': event })">
                         {{ event.name }}
                     </a>
                 </li>
             </ul>
+            -->
         </div>
     </div>
     <div ng-include="view2"></div>

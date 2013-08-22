@@ -2,7 +2,7 @@
 
 var Z = {};
 
-Z.app = angular.module('munoa', ['ngResource', 'ngMobile', 'ngSanitize']);
+Z.app = angular.module('munoa', ['ngRoute', 'ngResource', 'ngTouch', 'ngSanitize']);
 
 Z.app.value('apiHost', true ? 'http://pagoeta.illarra.com/v1' : 'http://pagoeta.zarautz.org/app_dev.php/v1');
 

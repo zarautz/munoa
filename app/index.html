@@ -31,7 +31,10 @@
             background-color: red;
         ">Loading</div>
 
-        <main ng-view></main>
+        <main ng-view
+            ng-swipe-right="navCtrl.swipe('right')"
+            ng-swipe-left="navCtrl.swipe('left')">
+        </main>
         <nav class="overthrow">
             <ul class="drawer">
                 <li ng-repeat="item in navCtrl.menu.getItems()">
@@ -51,8 +54,9 @@
         <script src="components/store.js/json.js"></script>
         <script src="components/store.js/store.js"></script>
         <script src="components/unstable-angular-complete/angular.js"></script>
+        <script src="components/unstable-angular-complete/angular-route.js"></script>
         <script src="components/unstable-angular-complete/angular-resource.js"></script>
-        <script src="components/unstable-angular-complete/angular-mobile.js"></script>
+        <script src="components/unstable-angular-complete/angular-touch.js"></script>
         <script src="components/unstable-angular-complete/angular-sanitize.js"></script>
         <!-- app -->
         <script src="scripts/init.js"></script>

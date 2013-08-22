@@ -21,11 +21,5 @@ Z.app.factory('forecastStore', ['cache', 'apiInterface', '$q', function(cache, a
         return apiResponse.data.data;
     }, ForecastResult);
 
-    ForecastStore.getTodayForecast = function (forecast) {
-        return forecast.data.then(function (data) {
-            return data[0];
-        });
-    }
-
     return ForecastStore;
 }]);

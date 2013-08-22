@@ -14,12 +14,12 @@ Z.app.controller('WeatherController', ['forecast', 'weatherCode', function(forec
         var i, length;
 
         for (i = 0, length = this.forecast.data.length; i < length; ++i) {
-            if (this.forecast.data[i].date == today) {
+            if (this.forecast.data[i].date === today) {
                 return i;
             }
         }
     };
-    
+
     this.todayIndex   = this.getForecastIndexForToday();
     this.todayData    = this.forecast.data[this.todayIndex];
     this.activeTab    = 0;

@@ -147,10 +147,9 @@ $color-temp-min: $color-light-blue;
 
 [class^="uv-text-"],
 [class*=" uv-text-"] {
-    border-left: 10px solid $color-violet;
-    padding-left: $base-padding;
-    font-size: $small-font-size;
-    margin: $base-padding 0;
+    border-right: 10px solid $color-violet;
+    padding-right: $base-padding;
+    margin: $base-padding $half-padding 0 0;
 }
     .uv-text-orange {
         border-color: $color-orange;

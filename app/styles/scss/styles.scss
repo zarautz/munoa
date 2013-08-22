@@ -75,10 +75,9 @@ $hr-margin:                   ($base-padding * 1.5);
 // Typo
 //
 
-h1 {
+h1, h2, h3 {
     margin: .25em 0 .75em;
     font-weight: 300;
-    font-size: 1.7em;
     line-height: 1.2;
 }
 
@@ -355,4 +354,5 @@ a.chameleon {
 }
 
 @import "page-forecast";
+@import "page-sea";
 

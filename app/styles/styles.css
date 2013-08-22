@@ -1945,74 +1945,73 @@ body {
 }
 
 /* line 78, scss/styles.scss */
-h1 {
+h1, h2, h3 {
   margin: .25em 0 .75em;
   font-weight: 300;
-  font-size: 1.7em;
   line-height: 1.2;
 }
 
-/* line 85, scss/styles.scss */
+/* line 84, scss/styles.scss */
 p, ul {
   margin: 0;
   padding: 0;
   line-height: 1.4;
 }
 
-/* line 91, scss/styles.scss */
+/* line 90, scss/styles.scss */
 li {
   list-style: none;
 }
 
-/* line 95, scss/styles.scss */
+/* line 94, scss/styles.scss */
 a {
   color: #007399;
   text-decoration: none;
 }
-/* line 99, scss/styles.scss */
+/* line 98, scss/styles.scss */
 a:visited {
   color: #0099cc;
 }
 
-/* line 108, scss/styles.scss */
+/* line 107, scss/styles.scss */
 body {
   background: #22252c;
   line-height: 1.4;
 }
 
-/* line 113, scss/styles.scss */
+/* line 112, scss/styles.scss */
 main, section, section > div {
   background: white;
 }
 
-/* line 118, scss/styles.scss */
+/* line 117, scss/styles.scss */
 section div.overthrow {
   padding: 16px;
 }
 @media only screen and (min-width: 600px) {
-  /* line 118, scss/styles.scss */
+  /* line 117, scss/styles.scss */
   section div.overthrow {
     padding: 32px;
   }
 }
 
-/* line 145, scss/styles.scss */
+/* line 144, scss/styles.scss */
 body.active-menu main {
   border-left: 1px solid #121315;
 }
-/* line 148, scss/styles.scss */
+/* line 147, scss/styles.scss */
 body.active-menu main section > div:first-child {
   border-left: 1px solid #68696b;
 }
 
-/* line 158, scss/styles.scss */
+/* line 157, scss/styles.scss */
 header {
   height: 48px;
   line-height: 48px;
   background-color: #eaeaea;
   border-bottom: 1px solid #dddddd;
 }
-/* line 167, scss/styles.scss */
+/* line 166, scss/styles.scss */
 header .title {
   font-size: 20px;
   font-weight: normal;
@@ -2024,7 +2023,7 @@ header .title {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 177, scss/styles.scss */
+/* line 176, scss/styles.scss */
 header i {
   background-color: #eaeaea;
   padding: 0 16px;
@@ -2032,18 +2031,18 @@ header i {
   color: #666666;
 }
 
-/* line 189, scss/styles.scss */
+/* line 188, scss/styles.scss */
 ul.drawer {
   background: #22252c;
   color: #eff0f2;
   font-size: 18px;
 }
-/* line 194, scss/styles.scss */
+/* line 193, scss/styles.scss */
 ul.drawer li {
   height: 48px;
   padding: 0 16px;
 }
-/* line 198, scss/styles.scss */
+/* line 197, scss/styles.scss */
 ul.drawer li a {
   display: block;
   height: 48px;
@@ -2054,12 +2053,12 @@ ul.drawer li a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 206, scss/styles.scss */
+/* line 205, scss/styles.scss */
 ul.drawer li a [class^="icon-"] {
   margin-right: 16px;
   font-size: 18px;
 }
-/* line 211, scss/styles.scss */
+/* line 210, scss/styles.scss */
 ul.drawer li a.active {
   background: #17191e;
   margin: 0 -16px;
@@ -2067,21 +2066,21 @@ ul.drawer li a.active {
   margin-top: -1px;
   border-top: 1px solid #1b1e23;
 }
-/* line 219, scss/styles.scss */
+/* line 218, scss/styles.scss */
 ul.drawer li a.settings {
   text-transform: uppercase;
   font-size: 13px;
   color: #434957;
 }
 
-/* line 233, scss/styles.scss */
+/* line 232, scss/styles.scss */
 .table-view ul {
   border-width: 1px 0;
   border-style: solid;
   border-color: #eaeaea;
   margin-right: -16px;
 }
-/* line 239, scss/styles.scss */
+/* line 238, scss/styles.scss */
 .table-view ul a {
   display: block;
   color: #333333;
@@ -2093,61 +2092,61 @@ ul.drawer li a.settings {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 248, scss/styles.scss */
+/* line 247, scss/styles.scss */
 .table-view ul a i {
   float: right;
   color: #b3b3b3;
 }
-/* line 252, scss/styles.scss */
+/* line 251, scss/styles.scss */
 .table-view ul a i.selected {
   color: #337abd;
 }
-/* line 257, scss/styles.scss */
+/* line 256, scss/styles.scss */
 .table-view ul a .detail {
   float: right;
   color: #337abd;
   margin-right: 8px;
 }
-/* line 264, scss/styles.scss */
+/* line 263, scss/styles.scss */
 .table-view ul li:last-child a {
   border: 0;
 }
 
-/* line 275, scss/styles.scss */
+/* line 274, scss/styles.scss */
 .content h1, .content h2, .content h3, .content h4, .content h5 {
   font-size: 1em;
   font-weight: normal;
   font-style: italic;
 }
-/* line 280, scss/styles.scss */
+/* line 279, scss/styles.scss */
 .content h1 strong, .content h2 strong, .content h3 strong, .content h4 strong, .content h5 strong {
   font-weight: normal;
 }
-/* line 285, scss/styles.scss */
+/* line 284, scss/styles.scss */
 .content p, .content img {
   display: block;
   margin: 1em 0;
 }
-/* line 290, scss/styles.scss */
+/* line 289, scss/styles.scss */
 .content ol, .content ul {
   padding-left: 1.5em;
 }
-/* line 295, scss/styles.scss */
+/* line 294, scss/styles.scss */
 .content ul li {
   list-style: disc outside none;
 }
-/* line 301, scss/styles.scss */
+/* line 300, scss/styles.scss */
 .content ol li {
   list-style: decimal outside none;
 }
 
-/* line 309, scss/styles.scss */
+/* line 308, scss/styles.scss */
 .post .content div > img + p {
   font-size: .9em;
   color: #666666;
 }
 
-/* line 321, scss/styles.scss */
+/* line 320, scss/styles.scss */
 hr {
   border: solid #dddddd;
   border-width: 1px 0 0;
@@ -2156,32 +2155,32 @@ hr {
   height: 0;
 }
 
-/* line 329, scss/styles.scss */
+/* line 328, scss/styles.scss */
 .strong {
   font-weight: bold;
 }
 
-/* line 333, scss/styles.scss */
+/* line 332, scss/styles.scss */
 .text-small {
   font-size: 15px;
 }
 
-/* line 337, scss/styles.scss */
+/* line 336, scss/styles.scss */
 .text-smallest {
   font-size: 13px;
 }
 
-/* line 341, scss/styles.scss */
+/* line 340, scss/styles.scss */
 .uppercase {
   text-transform: uppercase;
 }
 
-/* line 345, scss/styles.scss */
+/* line 344, scss/styles.scss */
 .lowercase {
   text-transform: lowercase;
 }
 
-/* line 350, scss/styles.scss */
+/* line 349, scss/styles.scss */
 a.chameleon, a.chameleon:hover {
   color: inherit;
   text-decoration: none;
@@ -2342,23 +2341,22 @@ a.chameleon, a.chameleon:hover {
 /* line 148, scss/_page-forecast.scss */
 [class^="uv-text-"],
 [class*=" uv-text-"] {
-  border-left: 10px solid #9933cc;
-  padding-left: 16px;
-  font-size: 15px;
-  margin: 16px 0;
+  border-right: 10px solid #9933cc;
+  padding-right: 16px;
+  margin: 16px 8px 0 0;
 }
 
-/* line 155, scss/_page-forecast.scss */
+/* line 154, scss/_page-forecast.scss */
 .uv-text-orange {
   border-color: #ff8800;
 }
 
-/* line 158, scss/_page-forecast.scss */
+/* line 157, scss/_page-forecast.scss */
 .uv-text-red {
   border-color: #cc0000;
 }
 
-/* line 161, scss/_page-forecast.scss */
+/* line 160, scss/_page-forecast.scss */
 .uv-text-violet {
   border-color: #9933cc;
 }

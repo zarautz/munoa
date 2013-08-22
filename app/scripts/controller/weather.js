@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.controller('ForecastController', ['forecast', 'weatherCode', function(forecast, weatherCode) {
+Z.app.controller('WeatherController', ['forecast', 'weatherCode', function(forecast, weatherCode) {
     var now   = new Date(),
         hour  = now.getHours(),
         day   = now.getDate(),

@@ -1,10 +1,8 @@
 'use strict';
 
-Z.app.controller('EventController', ['$scope', 'eventsStore', 'forecastStore', function($scope, eventsStore, forecastStore) {
+Z.app.controller('EventController', ['$scope', 'eventsStore', function($scope, eventsStore) {
     $scope.refresh = function () {
-        $scope.events   = eventsStore.getEvents();
-        $scope.forecast = forecastStore.getForecast();
-        $scope.today    = $scope.forecast.getTodayForecast();
+        $scope.events = eventsStore.getEvents();
     }
 
     // Init

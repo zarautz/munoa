@@ -1,6 +1,29 @@
 'use strict';
 
-Z.app.controller('ForecastController', ['forecast', 'weatherCode', function(forecast, weatherCode) {
+Z.app.controller('ForecastController', ['$scope', 'forecastStore', function($scope, forecastStore) {
+    //
+    // Vars
+    //
+    $scope.activeTab = 0;
+
+    //
+    // Functions
+    //
+    $scope.changeTab = function (index) {
+        $scope.activeTab = index;
+    }
+
+    $scope.refresh = function () {
+        $scope.forecast = forecastStore.getForecast();
+        $scope.today    = $scope.forecast.getTodayForecast();
+    }
+
+    //
+    // Init
+    //
+    $scope.refresh();
+
+    /*
     var now   = new Date(),
         hour  = now.getHours(),
         day   = now.getDate(),
@@ -43,5 +66,5 @@ Z.app.controller('ForecastController', ['forecast', 'weatherCode', function(fore
 
     this.activateTab = function (index) {
         this.activeTab = index;
-    };
+    };*/
 }]);

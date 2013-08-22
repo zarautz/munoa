@@ -10,8 +10,9 @@ Z.DataStore.Result = function () {
     this.data      = null;
     this.isError   = false;
     this.fromCache = false;
-    this.isLoading = true;
+    this.isLoaded  = false;
     this.isOld     = false;
+    this.meta      = null;
 }
 
 // A function parameter can't be called "arguments" in strict mode
@@ -28,9 +29,12 @@ Z.DataStore.prototype.addMethod = function (method, requestCb, processCb, result
 
     this[method] = function () {
         var cacheKey = that.generateCacheKey(method, arguments),
-            result = resultObj || new Z.DataStore.Result(),
+            result = resultObj || Z.DataStore.Result,
             cacheData,
             requestPromise;
+
+        // Initialize result
+        result = new result();
 
         // Get cache
         cacheData = that.cache.get(cacheKey);
@@ -43,7 +47,7 @@ Z.DataStore.prototype.addMethod = function (method, requestCb, processCb, result
             // Get cache data and set result defaults
             result.data      = deferred.promise;
             result.fromCache = true;
-            result.isLoading = false;
+            result.isLoaded  = true;
 
             // Resolve deferred
             deferred.resolve(cacheData);
@@ -65,7 +69,7 @@ Z.DataStore.prototype.addMethod = function (method, requestCb, processCb, result
             //
             // Process value with processCb
             var data = processCb(value) || null;
-            result.isLoading = false;
+            result.isLoaded = true;
 
             // Cache data
             that.cache.set(cacheKey, data, 10);
@@ -75,8 +79,8 @@ Z.DataStore.prototype.addMethod = function (method, requestCb, processCb, result
             //
             // ON ERROR
             //
-            result.isError   = true;
-            result.isLoading = false;
+            result.isError  = true;
+            result.isLoaded = true;
 
             // Try to get some old data
             var cacheData = that.cache.getOld(cacheKey);

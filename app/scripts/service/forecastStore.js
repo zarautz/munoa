@@ -1,16 +1,23 @@
 'use strict';
 
-Z.app.factory('forecastStore', ['cache', 'apiInterface', '$q', function(cache, apiInterface, $q) {
+Z.app.factory('forecastStore', ['cache', 'apiInterface', '$q', '$filter', function(cache, apiInterface, $q, $filter) {
     var ForecastStore  = new Z.DataStore('forecast', cache, $q);
     var ForecastResult = function ForecastResult() {};
 
     // Extend Result
     ForecastResult.prototype = new Z.DataStore.Result();
-    ForecastResult.prototype.constructor = ForecastResult;
 
-    ForecastResult.getTodayForecast = function () {
-        return this.data.then(function (data) {
-            return data[0];
+    ForecastResult.prototype.getTodayForecast = function () {
+        return this.data.then(function (forecast) {
+            return forecast[0];
+        });
+    }
+
+    ForecastResult.prototype.getCurrentHourIndex = function () {
+        var hour = (new Date()).getHours();
+
+        return this.getTodayForecast().then(function (today) {
+            return Math.floor(hour / (24 / today.weather.forecast.length));
         });
     }
 
@@ -18,7 +25,21 @@ Z.app.factory('forecastStore', ['cache', 'apiInterface', '$q', function(cache, a
     ForecastStore.addMethod('getForecast', function () {
         return apiInterface.getForecast();
     }, function (apiResponse) {
-        return apiResponse.data.data;
+        // Find out today index
+        var today      = $filter('date')(new Date(), 'yyyy-MM-dd'),
+            forecast   = apiResponse.data.data,
+            todayIndex = 0,
+            i;
+
+        for (i = 0; i < forecast.length; i++) {
+            if (forecast[i].date == today) {
+                todayIndex = i;
+                break;
+            }
+        }
+
+        // Next four days only
+        return forecast.slice(todayIndex, todayIndex + 4);
     }, ForecastResult);
 
     ForecastStore.addMethod('getWeatherCodes', function () {

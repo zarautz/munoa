@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.controller('ForecastController', ['$scope', 'forecastStore', function($scope, forecastStore) {
+Z.app.controller('WeatherController', ['$scope', 'forecastStore', function($scope, forecastStore) {
     //
     // Vars
     //

@@ -2,6 +2,7 @@ $page-forecast-padding: 10px;
 $page-forecast-border-color: $hr-border-color;
 $page-today-background-color: whitesmoke;
 $page-today-font-color: #333;
+$color-temp-min: $color-light-blue;
 
 .icon-weather-11:before {
     color: $color-yellow;
@@ -34,8 +35,8 @@ $page-today-font-color: #333;
             margin-top: .25em;
         }
         .min {
-            font-size: 2em;
-            color: $color-lightest-text;
+            font-size: 1.8em;
+            color: $color-temp-min;
         }
     }
 }
@@ -85,40 +86,9 @@ $page-today-font-color: #333;
             font-size: $small-font-size;
 
             .min {
-                color: $color-lightest-text;
+                color: $color-temp-min;
             }
         }
-    }
-}
-
-.weather-uv {
-    .label {
-        margin: $base-padding 0 $half-padding;
-        padding: .3em .5em;
-    }
-
-    [class^="level-"],
-    [class*=" level-"] {
-        background-color: $color-violet;
-    }
-
-    .level-1,
-    .level-2 {
-        background-color: $color-green;
-    }
-    .level-3,
-    .level-4,
-    .level-5 {
-        background-color: $color-yellow;
-    }
-    .level-6,
-    .level-7 {
-        background-color: $color-orange;
-    }
-    .level-8,
-    .level-9,
-    .level-10 {
-        background-color: $color-red;
     }
 }
 
@@ -147,3 +117,46 @@ $page-today-font-color: #333;
         }
     }
 }
+
+// UV Index
+
+[class^="uv-label-"],
+[class*=" uv-label-"] {
+    margin: $base-padding 0 $half-padding;
+    padding: .3em .5em;
+    background-color: $color-violet;
+}
+    .uv-label-1,
+    .uv-label-2 {
+        background-color: $color-green;
+    }
+    .uv-label-3,
+    .uv-label-4,
+    .uv-label-5 {
+        background-color: $color-yellow;
+    }
+    .uv-label-6,
+    .uv-label-7 {
+        background-color: $color-orange;
+    }
+    .uv-label-8,
+    .uv-label-9,
+    .uv-label-10 {
+        background-color: $color-red;
+    }
+
+[class^="uv-text-"],
+[class*=" uv-text-"] {
+    border-right: 10px solid $color-violet;
+    padding-right: $base-padding;
+    margin: $base-padding $half-padding 0 0;
+}
+    .uv-text-orange {
+        border-color: $color-orange;
+    }
+    .uv-text-red {
+        border-color: $color-red;
+    }
+    .uv-text-violet {
+        border-color: $color-violet;
+    }

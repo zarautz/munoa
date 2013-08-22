@@ -1,18 +1,19 @@
 $color-text: $body-font-color;
 $color-light-text: #666;
 $color-lightest-text: #aaa;
-$color-blue: #337abd;
-$color-green: #73ba5a;
-$color-yellow: #f9c600;
-$color-orange: #fba400;
-$color-red: #cd1c19;
-$color-violet: #6b49c8;
+$color-blue: #09c;
+$color-light-blue: #33b5e5;
+$color-green: #690;
+$color-yellow: #fb3;
+$color-orange: #f80;
+$color-red: #c00;
+$color-violet: #93c;
 
 .color-text { color: $color-text; }
 .color-light-text { color: $color-light-text; }
 .color-lightest-text { color: $color-lightest-text; }
 .color-blue { color: $color-blue; }
-.color-light-blue { color: #2999b7; }
+.color-light-blue { color: $color-light-blue; }
 .color-green { color: $color-green; }
 .color-yellow { color: $color-yellow; }
 .color-orange { color: $color-orange; }

@@ -9,7 +9,7 @@ Z.app.factory('forecast', ['$resource', 'apiHost', 'cache', function($resource, 
 
             if (!forecast) {
                 forecast = store.get(function (data) {
-                    cache.set('forecast.all', data, 100000);
+                    cache.set('forecast.all', data, 10);
                 });
             }
 

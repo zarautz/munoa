@@ -21,5 +21,11 @@ Z.app.factory('forecastStore', ['cache', 'apiInterface', '$q', function(cache, a
         return apiResponse.data.data;
     }, ForecastResult);
 
+    ForecastStore.addMethod('getWeatherCodes', function () {
+        return apiInterface.getWeatherCodes();
+    }, function (apiResponse) {
+        return apiResponse.data.data;
+    });
+
     return ForecastStore;
 }]);

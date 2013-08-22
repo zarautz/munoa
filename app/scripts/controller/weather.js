@@ -12,10 +12,43 @@ Z.app.controller('WeatherController', ['$scope', 'forecastStore', function($scop
     $scope.changeTab = function (index) {
         $scope.activeTab = index;
     }
+/*
+    $scope.getWeatherCode = function (forecast, isToday) {
+        var hour = (new Date()).getHours(),
+            key;
+
+        if (isToday) {
+            key = Math.floor(hour / (24 / forecast.length));
+        } else {
+            key = Math.floor(12 / (24 / forecast.length));
+        }
+
+        return forecast.then(function (forecastData) {
+            console.log(forecastData);
+            return forecastData[key].code;
+        });
+    }
+/*
+    $scope.getWeatherCode = function (forecast, isToday) {
+        var hour = (new Date()).getHours(),
+            key;
+
+        if (isToday) {
+            key = Math.floor(hour / (24 / forecast.length));
+        } else {
+            key = Math.floor(12 / (24 / forecast.length));
+        }
+
+        return $scope.weatherCodes.data.then(function (codes) {
+            console.log(codes);
+            return codes[forecast[key].code];
+        });
+    }*/
 
     $scope.refresh = function () {
-        $scope.forecast = forecastStore.getForecast();
-        $scope.today    = $scope.forecast.getTodayForecast();
+        $scope.forecast     = forecastStore.getForecast();
+        $scope.weatherCodes = forecastStore.getWeatherCodes();
+        $scope.today        = $scope.forecast.getTodayForecast();
     }
 
     //
@@ -24,6 +57,8 @@ Z.app.controller('WeatherController', ['$scope', 'forecastStore', function($scop
     $scope.refresh();
 
     /*
+    {{ weatherCtrl.weatherCodes[weatherCtrl.getForecastWeatherCode(today.weather.forecast, true)].name }}
+
     var now   = new Date(),
         hour  = now.getHours(),
         day   = now.getDate(),

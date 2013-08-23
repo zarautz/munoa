@@ -3,14 +3,14 @@
 Z.app.controller('NavigationController', ['$scope', '$location', 'menu', function ($scope, $location, menu) {
     this.menu = menu;
     this.activeView = 1;
+    $scope.menu = this.menu;
+
+    $scope.$on('$routeChangeSuccess', function(event) {
+        $scope.menu.setIsActive(false);
+    });
 
     this.getClassForPath = function(path, cssClass) {
         return $location.path() === path ? cssClass : '';
-    };
-
-    this.openSection = function(path) {
-        $location.path(path);
-        this.menu.setIsActive(false);
     };
 
     this.popView = function() {
@@ -41,7 +41,7 @@ Z.app.controller('NavigationController', ['$scope', '$location', 'menu', functio
                 this.menu.setIsActive(true);
             }
         } else if (direction === 'right') {
-            this.activeView--;
+            this.popView();
         }
     };
 }]);

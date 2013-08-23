@@ -8,17 +8,16 @@ Z.app.controller('WeatherController', ['$filter', '$scope', 'forecastStore', fun
         $scope.activeTab = index;
     }
 
-    $scope.getForecastWeatherCode = function (forecast, isToday) {
+    $scope.getWeatherCode = function (forecast, useCurrentHour) {
         // Forecast might not be available as it's a promise
         // We end the execution returning null to avoid console warnings
         if (!forecast) { return null; }
 
         var forecast = forecast.weather.forecast,
-            hour     = (new Date()).getHours(),
             key;
 
-        if (isToday) {
-            key = Math.floor(hour / (24 / forecast.length));
+        if (useCurrentHour) {
+            key = Math.floor((new Date()).getHours() / (24 / forecast.length));
         } else {
             key = Math.floor(12 / (24 / forecast.length));
         }

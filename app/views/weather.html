@@ -2,11 +2,15 @@
     <div>
         <header>
             <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
-            <i ng-if="!forecast.isLoaded" class="right icon-spin animate-spin"></i>
+            <i ng-if="!forecast.isLoaded" class="right icon-spin color-blue animate-spin"></i>
+            <i ng-if="forecast.isLoaded && forecast.isError" class="right icon-spin" ng-click="navCtrl.reload()"></i>
             <h1 class="title">{{ 'weather'|translate }}</h1>
         </header>
         <div class="overthrow">
-            <div ng-if="forecast.isLoaded">
+            <div ng-if="forecast.isLoaded && forecast.isError">
+                ERROR: {{ forecast }}
+            </div>
+            <div ng-if="forecast.isLoaded && !forecast.isError">
                 <p class="text-smallest text-center">
                     {{ today.date|date:'fullDate' }}<br />
                     <span class="color-light-text">

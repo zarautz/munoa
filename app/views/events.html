@@ -2,34 +2,24 @@
     <div>
         <header>
             <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
-            <!--<i class="right icon-search"></i>-->
+            <i ng-if="!events.isLoaded" class="right icon-spin color-blue animate-spin"></i>
+            <i ng-if="events.isLoaded && events.isError" class="right icon-spin" ng-click="navCtrl.reload()"></i>
+            <i ng-if="events.isLoaded && !events.isError" class="right icon-search"></i>
             <h1 class="title">{{ 'events'|translate }}</h1>
         </header>
         <div class="overthrow">
-            <div ng-if="events.isLoading">
-                Loading...
+            <div ng-if="events.isLoaded && events.isError">
+                ERROR: {{ events }}
             </div>
-            Loading: {{ events.isLoading }}<br/>
-            Error: {{ events.isError }}<br/>
-            From cache: {{ events.fromCache }}<br/>
-            Old: {{ events.isOld }}<br/>
-            <hr>
-            Loading: {{ forecast.isLoading }}<br/>
-            Error: {{ forecast.isError }}<br/>
-            From cache: {{ forecast.fromCache }}<br/>
-            Old: {{ forecast.isOld }}<br/>
-            {{ forecast.data }}
-            <hr>
-            {{ today }}
-            <!--
-            <ul>
-                <li ng-repeat="event in events.data">
-                    <a href ng-click="navCtrl.pushView('event.show', { 'event': event })">
-                        {{ event.name }}
-                    </a>
-                </li>
-            </ul>
-            -->
+            <div ng-if="events.isLoaded && !events.isError">
+                <ul>
+                    <li ng-repeat="event in events.data">
+                        <a href ng-click="navCtrl.pushView('event.show', { 'event': event })">
+                            {{ event.name }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <div ng-include="view2"></div>

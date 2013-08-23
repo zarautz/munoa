@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.controller('NavigationController', ['$scope', '$location', 'menu', function ($scope, $location, menu) {
+Z.app.controller('NavigationController', ['$scope', '$location', '$route', 'menu', function ($scope, $location, $route, menu) {
     this.menu = menu;
     this.activeView = 1;
     $scope.menu = this.menu;
@@ -43,5 +43,9 @@ Z.app.controller('NavigationController', ['$scope', '$location', 'menu', functio
         } else if (direction === 'right') {
             this.popView();
         }
+    };
+
+    this.reload = function() {
+        $route.reload();
     };
 }]);

@@ -2,28 +2,24 @@
     <div>
         <header>
             <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
+            <i ng-if="!forecast.isLoaded" class="right icon-spin color-blue animate-spin"></i>
+            <i ng-if="forecast.isLoaded && forecast.isError" class="right icon-spin" ng-click="navCtrl.reload()"></i>
             <h1 class="title">{{ 'weather'|translate }}</h1>
         </header>
         <div class="overthrow">
-            <!--
-            forecast.isError   = {{ forecast.isError }}<br/>
-            forecast.fromCache = {{ forecast.fromCache }}<br/>
-            forecast.isLoaded  = {{ forecast.isLoaded }}<br/>
-            forecast.isOld     = {{ forecast.isOld }}<br/>
-            -->
-            <div ng-if="!forecast.isLoaded">
-                Loading...
+            <div ng-if="forecast.isLoaded && forecast.isError">
+                ERROR: {{ forecast }}
             </div>
-            <div ng-if="forecast.isLoaded">
+            <div ng-if="forecast.isLoaded && !forecast.isError">
                 <p class="text-smallest text-center">
                     {{ today.date|date:'fullDate' }}<br />
                     <span class="color-light-text">
-                        {{ getForecastWeatherCode(today) }}
+                        {{ getWeatherCode(today) }}
                     </span>
                 </p>
                 <div class="row collapse weather-today">
                     <div class="small-2 columns">
-                        <i class="icon-weather-{{ getForecastWeatherCode(today) }}"></i>
+                        <i class="icon-weather-{{ getWeatherCode(today) }}"></i>
                     </div>
                     <div class="small-2 columns">
                         <h1 ng-if="today.weather.temp" class="temperature">
@@ -41,7 +37,7 @@
                         ng-class="{ 'active': $index == activeTab }"
                         ng-click="changeTab($index)">
                         <span ng-class="{ 'strong': $first }">{{ day.date|date:'EEE' }}</span><br />
-                        <i class="icon-weather-{{ getForecastWeatherCode(day) }}"></i>
+                        <i class="icon-weather-{{ getWeatherCode(day) }}"></i>
                         <p class="temperatures">
                             {{ day.weather.tempMax }}&deg; <span class="min">{{ day.weather.tempMin }}&deg;</span>
                         </p>
@@ -53,7 +49,7 @@
                     ng-show="$index == activeTab">
                     <ul class="text-small small-block-grid-3 large-block-grid-3"
                         ng-repeat="period in day.weather.forecast"
-                        ng-show="(activeTab == 0 && $index >= currentHourIndex) || activeTab > 0">
+                        ng-show="(activeTab === 0 && $index >= currentHourIndex) || activeTab > 0">
                         <li>
                             <strong>{{ period.period }}</strong>
                             <i class="icon-weather-{{ period.code }}"></i>
@@ -69,7 +65,8 @@
                     </ul>
                 </div>
                 <div class="row collapse">
-                    <div class="large-12 columns" ng-if="today.weather.uvMax > 5">
+                    <div class="large-12 columns"
+                        ng-if="today.weather.uvMax > 5 && getWeatherCode(today) === 11">
                         <hr />
                         <h3><i class="right icon-info"></i> {{ 'weather.uv.title'|translate }}</h3>
                         <p class="uv-text-orange"

@@ -8,6 +8,14 @@
             <h1 class="title">{{ 'events'|translate }}</h1>
         </header>
         <div class="overthrow">
+            <input type="button" ng-click="refresh()" value="UPDATE" /><br />
+            {{ time }}<br/>
+            {{ result }}<br/>
+            {{ code11 }}<br/>
+            <ul>
+                <li ng-repeat="code in result.response.data">{{ code }}</li>
+            </ul>
+            <!--
             <div ng-if="events.isLoaded && events.isError">
                 ERROR: {{ events }}
             </div>
@@ -20,6 +28,7 @@
                     </li>
                 </ul>
             </div>
+            -->
         </div>
     </div>
     <div ng-include="view2"></div>

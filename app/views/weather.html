@@ -2,12 +2,10 @@
     <div>
         <header>
             <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
+            <i ng-if="!forecast.isLoaded" class="right icon-spin animate-spin"></i>
             <h1 class="title">{{ 'weather'|translate }}</h1>
         </header>
         <div class="overthrow">
-            <div ng-if="!forecast.isLoaded" class="loading">
-                Loading...
-            </div>
             <div ng-if="forecast.isLoaded">
                 <p class="text-smallest text-center">
                     {{ today.date|date:'fullDate' }}<br />

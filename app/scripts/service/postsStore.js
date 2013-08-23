@@ -6,7 +6,7 @@ Z.app.factory('postsStore', ['cache', 'apiInterface', '$q', function(cache, apiI
     PostsStore.addMethod('getZuZarautzPosts', function () {
         return apiInterface.getZuZarautzPosts();
     }, function (apiResponse) {
-        return apiResponse.data.data;
+        return apiResponse.data;
     });
 
     return PostsStore;

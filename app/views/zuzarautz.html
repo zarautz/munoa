@@ -6,7 +6,7 @@
         </header>
         <div class="overthrow">
             <ul>
-                <li ng-repeat="post in posts.data">
+                <li ng-repeat="post in posts.response.data">
                     <a href ng-click="navCtrl.pushView('post.show', { 'post': post })">
                         {{ post.title }}
                     </a>

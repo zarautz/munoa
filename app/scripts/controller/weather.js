@@ -8,12 +8,13 @@ Z.app.controller('WeatherController', ['$filter', '$scope', 'forecastStore', fun
         $scope.activeTab = index;
     }
 
-    $scope.getForecastWeatherCode = function (forecast, isToday) {
+    $scope.getForecastWeatherCode = function (forecast) {
         // Forecast might not be available as it's a promise
         // We end the execution returning null to avoid console warnings
         if (!forecast) { return null; }
 
-        var forecast = forecast.weather.forecast,
+        var isToday  = ($filter('date')(new Date(), 'yyyy-MM-dd')) == forecast.date,
+            forecast = forecast.weather.forecast,
             hour     = (new Date()).getHours(),
             key;
 

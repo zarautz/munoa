@@ -6,13 +6,13 @@ Z.app.factory('eventsStore', ['cache', 'apiInterface', '$q', function(cache, api
     EventsStore.addMethod('getEvents', function () {
         return apiInterface.getEvents();
     }, function (apiResponse) {
-        return apiResponse.data.data;
+        return apiResponse.data;
     });
 
     EventsStore.addMethod('getEvent', function (id) {
         return apiInterface.getEvent(id);
     }, function (apiResponse) {
-        return apiResponse.data.data;
+        return apiResponse.data;
     });
 
     return EventsStore;

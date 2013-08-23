@@ -8,8 +8,8 @@ Z.app.factory('forecastStore', ['cache', 'apiInterface', '$q', '$filter', functi
     ForecastResult.prototype = new Z.DataStore.Result();
 
     ForecastResult.prototype.getTodayForecast = function () {
-        return this.data.then(function (forecast) {
-            return forecast[0];
+        return this.response.then(function (response) {
+            return response.data[0];
         });
     }
 
@@ -39,13 +39,15 @@ Z.app.factory('forecastStore', ['cache', 'apiInterface', '$q', '$filter', functi
         }
 
         // Next four days only
-        return forecast.slice(todayIndex, todayIndex + 4);
+        apiResponse.data.data = forecast.slice(todayIndex, todayIndex + 4);
+
+        return apiResponse.data;
     }, ForecastResult);
 
     ForecastStore.addMethod('getWeatherCodes', function () {
         return apiInterface.getWeatherCodes();
     }, function (apiResponse) {
-        return apiResponse.data.data;
+        return apiResponse.data;
     });
 
     return ForecastStore;

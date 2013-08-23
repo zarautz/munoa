@@ -7,12 +7,11 @@ Z.DataStore = function DataStore(cacheKey, cache, q) {
 }
 
 Z.DataStore.Result = function () {
-    this.data      = null;
     this.isError   = false;
     this.fromCache = false;
     this.isLoaded  = false;
     this.isOld     = false;
-    this.meta      = null;
+    this.response  = null;
 }
 
 // A function parameter can't be called "arguments" in strict mode
@@ -45,7 +44,7 @@ Z.DataStore.prototype.addMethod = function (method, requestCb, processCb, result
             var deferred = that.q.defer();
 
             // Get cache data and set result defaults
-            result.data      = deferred.promise;
+            result.response  = deferred.promise;
             result.fromCache = true;
             result.isLoaded  = true;
 
@@ -63,7 +62,7 @@ Z.DataStore.prototype.addMethod = function (method, requestCb, processCb, result
         // ...
 
         // On request success
-        result.data = requestPromise.then(function (value) {
+        result.response = requestPromise.then(function (value) {
             //
             // ON SUCCESS
             //
@@ -93,7 +92,7 @@ Z.DataStore.prototype.addMethod = function (method, requestCb, processCb, result
                 // Set values
                 result.fromCache = true;
                 result.isOld     = true;
-                result.data      = deferred.promise;
+                result.response  = deferred.promise;
             }
         });
 

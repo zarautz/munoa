@@ -1,8 +1,8 @@
 'use strict';
 
-Z.app.controller('ZuzarautzController', ['$scope', 'postsStore', function($scope, postsStore) {
+Z.app.controller('ZuzarautzController', ['$scope', 'PostsStore', function($scope, PostsStore) {
     $scope.refresh = function () {
-        $scope.posts = postsStore.getZuZarautzPosts();
+        $scope.posts = PostsStore.getZuZarautzPosts();
     }
 
     // Init

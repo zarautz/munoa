@@ -1,6 +1,7 @@
 'use strict';
 
 Z.app.controller('WeatherController', ['apiInterface', '$filter', '$scope', 'forecastStore', function(apiInterface, $filter, $scope, forecastStore) {
+    /*
     $scope.refresh = function () {
         this.forecast = apiInterface.getForecast().then(function (response) {
             return response.data;
@@ -15,6 +16,9 @@ Z.app.controller('WeatherController', ['apiInterface', '$filter', '$scope', 'for
     // Init
     //
     $scope.refresh();
+    */
+
+
     /*
     //
     // Functions

@@ -1,19 +1,40 @@
 'use strict';
 
-Z.app.factory('eventsStore', ['cache', 'apiInterface', '$q', function(cache, apiInterface, $q) {
-    var EventsStore = new Z.DataStore('events', cache, $q);
+Z.app.factory('EventsStore', ['api', 'cache', '$q', function (api, cache, $q) {
+    function EventsStore(api, events) {
+        this._api  = api;
+        this._events = events;
+    }
 
-    EventsStore.addMethod('getEvents', function () {
-        return apiInterface.getEvents();
-    }, function (apiResponse) {
-        return apiResponse.data;
-    });
+    EventsStore.prototype._fetchEvents = function () {
+        if (!this._events.isValid()) {
+            var that = this;
 
-    EventsStore.addMethod('getEvent', function (id) {
-        return apiInterface.getEvent(id);
-    }, function (apiResponse) {
-        return apiResponse.data;
-    });
+            // Set a promise for the data, this will only be called 
+            // if there is not valid cache
+            this._events.load(function () {
+                return that.api.getEvents();
+            });
+        }
+    
+        return this._events.get();
+    };
+  
+    EventsStore.prototype.getStatus = function () {
+        return this._events.getStatus();
+    };
 
-    return EventsStore;
+    EventsStore.prototype.getMeta = function () {
+        return this._fetchEvents().then(function (response) {
+            return response.meta;
+        });
+    }
+  
+    EventsStore.prototype.getAll = function () {
+        return this._fetchEvents().then(function (response) {
+            return response.data;
+        });
+    };
+  
+    return new EventsStore(api, new Z.DataBag(cache, $q, 'events'));
 }]);

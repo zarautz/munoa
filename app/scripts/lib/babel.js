@@ -3,24 +3,24 @@
 Z.Babel = function Babel() {
     this._locale    = 'eu';
     this._catalogue = {};
+};
 
-    this.setCatalogue = function (catalogue) {
-        this._catalogue = catalogue;
+Z.Babel.prototype.setCatalogue = function (catalogue) {
+    this._catalogue = catalogue;
 
-        return this;
-    };
+    return this;
+};
 
-    this.setLocale = function (locale) {
-        this._locale = locale;
+Z.Babel.prototype.setLocale = function (locale) {
+    this._locale = locale;
 
-        return this;
-    };
+    return this;
+};
 
-    this.translate = function (key) {
-        if (key in this._catalogue && this._locale in this._catalogue[key]) {
-            return this._catalogue[key][this._locale];
-        } else {
-            return key;
-        }
-    };
+Z.Babel.prototype.translate = function (key) {
+    if (key in this._catalogue && this._locale in this._catalogue[key]) {
+        return this._catalogue[key][this._locale];
+    } else {
+        return key;
+    }
 };

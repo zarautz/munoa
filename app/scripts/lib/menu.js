@@ -4,51 +4,51 @@ Z.Menu = function Menu() {
     this._items    = [];
     this._isActive = false;
     this._profile  = '';
+};
 
-    this.getItems = function () {
-        return this._items;
-    };
+Z.Menu.prototype.getItems = function () {
+    return this._items;
+};
 
-    this.getProfile = function () {
-        return this._profile;
-    };
+Z.Menu.prototype.getProfile = function () {
+    return this._profile;
+};
 
-    this.isActive = function () {
-        return this._isActive;
-    };
+Z.Menu.prototype.isActive = function () {
+    return this._isActive;
+};
 
-    this._reorderItems = function () {
-        var profile = this.getProfile();
+Z.Menu.prototype._reorderItems = function () {
+    var profile = this.getProfile();
 
-        this._items.sort(function (a, b) {
-            return a.sort[profile] - b.sort[profile];
-        });
+    this._items.sort(function (a, b) {
+        return a.sort[profile] - b.sort[profile];
+    });
 
-        return this;
-    };
+    return this;
+};
 
-    this.setIsActive = function (status) {
-        this._isActive = status;
+Z.Menu.prototype.setIsActive = function (status) {
+    this._isActive = status;
 
-        return this;
-    };
+    return this;
+};
 
-    this.setItems = function (items) {
-        this._items = items;
+Z.Menu.prototype.setItems = function (items) {
+    this._items = items;
 
-        return this;
-    };
+    return this;
+};
 
-    this.setProfile = function (profile) {
-        this._profile = profile;
-        this._reorderItems();
+Z.Menu.prototype.setProfile = function (profile) {
+    this._profile = profile;
+    this._reorderItems();
 
-        return this;
-    };
+    return this;
+};
 
-    this.toggleIsActive = function () {
-        this._isActive = !this._isActive;
+Z.Menu.prototype.toggleIsActive = function () {
+    this._isActive = !this._isActive;
 
-        return this;
-    };
+    return this;
 };

@@ -27,6 +27,67 @@ Z.DataStore.prototype.addMethod = function (method, requestCb, processCb, result
     var that = this;
 
     this[method] = function () {
+        var result    = resultObj || Z.DataStore.Result,
+            cacheKey  = that.generateCacheKey(method, arguments),
+            cacheData = that.cache.get(cacheKey),
+            deferred  = that.q.defer(),
+            requestPromise;
+
+        // Defaults
+        result = new result();
+        result.response = deferred.promise;
+
+        if (cacheData) {
+            //
+            // FROM CACHE
+            //
+            deferred.resolve(cacheData);
+            result.isLoaded  = true;
+            result.fromCache = true;
+
+            return result;
+        }
+
+        // Call the request CB with the given argument and DataStore context
+        // It should return a promise
+        requestPromise = requestCb.apply(that, arguments);
+
+        // Check it's a promise?
+        // ...
+
+        // On request success
+        requestPromise.then(function (value) {
+            //
+            // SUCCESS
+            //
+            // Process value with processCb
+            var data = processCb(value) || null;
+
+            that.cache.set(cacheKey, data, 5);
+            deferred.resolve(data);
+            result.isLoaded = true;
+        }, function (reason) {
+            //
+            // ERROR
+            //
+            result.isError  = true;
+            result.isLoaded = true;
+
+            // Try to get some old data
+            var cacheData = that.cache.getOld(cacheKey);
+
+            if (cacheData) {
+                deferred.resolve(cacheData);
+                result.isOld     = true;
+                result.fromCache = true;
+            } else {
+                deferred.reject('kaka');
+            }
+        });
+
+        return result;
+
+        /*
         var cacheKey = that.generateCacheKey(method, arguments),
             result = resultObj || Z.DataStore.Result,
             cacheData,
@@ -97,5 +158,6 @@ Z.DataStore.prototype.addMethod = function (method, requestCb, processCb, result
         });
 
         return result;
+        */
     };
 }

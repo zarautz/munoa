@@ -9,12 +9,31 @@
         </header>
         <div class="overthrow">
             <input type="button" ng-click="refresh()" value="UPDATE" /><br />
-            {{ time }}<br/>
-            {{ result }}<br/>
-            {{ code11 }}<br/>
+            <hr>
             <ul>
-                <li ng-repeat="code in result.response.data">{{ code }}</li>
+                <li ng-repeat="(code, data) in all" 
+                    ng-click="loadCode(code)"
+                    style="
+                    cursor: pointer;
+                    display:inline-block; 
+                    padding: 2px 5px;
+                    margin-right: 3px;
+                    margin-bottom:3px;
+                    background-color: #fafafa;
+                    border: 1px solid #f0f0f0;
+                    border-radius: 3px;
+                    font-size: .8em;
+                    ">
+                    {{ code }}: {{ data.name }}
+                </li>
             </ul>
+            <hr>
+            {{ meta }}<br/>
+            <hr>
+            {{ code }}<br/>
+            <hr>
+            {{ status }}<br/>
+            <hr>
             <!--
             <div ng-if="events.isLoaded && events.isError">
                 ERROR: {{ events }}

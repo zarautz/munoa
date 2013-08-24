@@ -3,6 +3,7 @@
 Z.app.factory('forecastStore', ['cache', 'apiInterface', '$q', '$filter', function(cache, apiInterface, $q, $filter) {
     var ForecastStore  = new Z.DataStore('forecast', cache, $q);
     var ForecastResult = function ForecastResult() {};
+    var WeatherCodesResult = function WeatherCodesResult() {};
 
     // Extend Result
     ForecastResult.prototype = new Z.DataStore.Result();
@@ -18,6 +19,15 @@ Z.app.factory('forecastStore', ['cache', 'apiInterface', '$q', '$filter', functi
 
         return this.getTodayForecast().then(function (today) {
             return Math.floor(hour / (24 / today.weather.forecast.length));
+        });
+    }
+
+    // Extend Result
+    WeatherCodesResult.prototype = new Z.DataStore.Result();
+
+    WeatherCodesResult.prototype.get = function (code) {
+        return this.response.then(function (response) {
+            return response.data[code];
         });
     }
 
@@ -48,7 +58,7 @@ Z.app.factory('forecastStore', ['cache', 'apiInterface', '$q', '$filter', functi
         return apiInterface.getWeatherCodes();
     }, function (apiResponse) {
         return apiResponse.data;
-    });
+    }, WeatherCodesResult);
 
     return ForecastStore;
 }]);

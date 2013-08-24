@@ -24,7 +24,9 @@ Z.app.factory('apiInterface', ['apiHost', '$http', function(apiHost, $http) {
             return $http({
                 method: 'GET',
                 //params: {language: 'eu'},
-                url: apiHost + '/forecast/weather/codes'
+                url: apiHost + '/forecast/weather/codes' + (Math.random() > .5 ? '.xxx' : '')
+            }).then(function (response) {
+                return response.data;
             });
         },
         getPlace: function (id) {

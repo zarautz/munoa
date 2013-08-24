@@ -1,83 +1,50 @@
 'use strict';
 
-Z.app.factory('ForecastStore', ['api', 'cache', '$q', function (api, cache, $q) {
+Z.app.factory('ForecastStore', ['WeatherCodesStore', '$filter', 'api', 'cache', '$q', function (WeatherCodesStore, $filter, api, cache, $q) {
+    //
+    // Forecast
+    //
+    function Forecast() {
+    }
+
+    Forecast.prototype.getCurrentWeatherCode = function () {
+        return this.weather.forecast[this.getCurrentHourIndex()].code;
+    }        
+
+    Forecast.prototype.getWeatherCode = function () {
+        var useCurrentHour = ($filter('date')(new Date(), 'yyyy-MM-dd')) == this.date,
+            forecast       = this.weather.forecast,
+            key;
+
+        if (useCurrentHour) {
+            key = Math.floor((new Date()).getHours() / (24 / forecast.length));
+        } else {
+            key = Math.floor(12 / (24 / forecast.length));
+        }
+
+        return forecast[key].code;
+    }
+
+    Forecast.prototype.getCurrentHourIndex = function () {
+        return Math.floor((new Date()).getHours() / (24 / this.weather.forecast.length));
+    }
+
+    //
+    // ForecastStore
+    //
     function ForecastStore(api, forecast) {
         this._api      = api;
         this._forecast = forecast;
-    }
-/*
-    ForecastStore.prototype._fetchEvents = function () {
-        if (!this._events.isValid()) {
-            var that = this;
 
-            // Set a promise for the data, this will only be called 
-            // if there is not valid cache
-            this._events.load(function () {
-                return that.api.getEvents();
-            });
-        }
-    
-        return this._events.get();
-    };
-  
-    ForecastStore.prototype.getStatus = function () {
-        return this._events.getStatus();
-    };
-
-    ForecastStore.prototype.getMeta = function () {
-        return this._fetchEvents().then(function (response) {
-            return response.meta;
-        });
-    }
-  
-    ForecastStore.prototype.findAll = function () {
-        return this._fetchEvents().then(function (response) {
-            return response.data;
-        });
-    };*/
-  
-    return new ForecastStore(api, new Z.DataBag(cache, $q, 'forecast'));
-}]);
-
-/*
-Z.app.factory('forecastStore', ['cache', 'apiInterface', '$q', '$filter', function(cache, apiInterface, $q, $filter) {
-    var ForecastStore  = new Z.DataStore('forecast', cache, $q);
-    var ForecastResult = function ForecastResult() {};
-    var WeatherCodesResult = function WeatherCodesResult() {};
-
-    // Extend Result
-    ForecastResult.prototype = new Z.DataStore.Result();
-
-    ForecastResult.prototype.getTodayForecast = function () {
-        return this.response.then(function (response) {
-            return response.data[0];
-        });
+        // Set data initialization callback
+        this._forecast.setInitCb(this._initForecast);
     }
 
-    ForecastResult.prototype.getCurrentHourIndex = function () {
-        var hour = (new Date()).getHours();
-
-        return this.getTodayForecast().then(function (today) {
-            return Math.floor(hour / (24 / today.weather.forecast.length));
-        });
-    }
-
-    // Extend Result
-    WeatherCodesResult.prototype = new Z.DataStore.Result();
-
-    WeatherCodesResult.prototype.get = function (code) {
-        return this.response.then(function (response) {
-            return response.data[code];
-        });
-    }
-
-    // DataStore methods
-    ForecastStore.addMethod('getForecast', function () {
-        return apiInterface.getForecast();
-    }, function (apiResponse) {
+    ForecastStore.prototype._initForecast = function (response) {
+        // Get the first 4 Forecasts
         // Find out today index
         var today      = $filter('date')(new Date(), 'yyyy-MM-dd'),
-            forecast   = apiResponse.data.data,
+            forecast   = response.data,
             todayIndex = 0,
             i;
 
@@ -88,17 +55,52 @@ Z.app.factory('forecastStore', ['cache', 'apiInterface', '$q', '$filter', functi
             }
         }
 
-        // Next four days only
-        apiResponse.data.data = forecast.slice(todayIndex, todayIndex + 4);
+        // Get the next four days
+        response.data = forecast.slice(todayIndex, todayIndex + 4);
 
-        return apiResponse.data;
-    }, ForecastResult);
+        // Convert array in Forecast objects
+        angular.forEach(response.data, function (day, i) {
+            response.data[i] = angular.extend(new Forecast(), day);
+        });
 
-    ForecastStore.addMethod('getWeatherCodes', function () {
-        return apiInterface.getWeatherCodes();
-    }, function (apiResponse) {
-        return apiResponse.data;
-    }, WeatherCodesResult);
+        return response;
+    };
 
-    return ForecastStore;
-}]);*/
+    ForecastStore.prototype._fetchForecast = function () {
+        if (!this._forecast.isValid()) {
+            var that = this;
+
+            // Set a promise for the data, this will only be called 
+            // if there is not valid cache
+            this._forecast.load(function () {
+                return that._api.getForecast();
+            });
+        }
+    
+        return this._forecast.get();
+    };
+
+    ForecastStore.prototype.getStatus = function () {
+        return this._forecast.getStatus();
+    };
+
+    ForecastStore.prototype.getMeta = function () {
+        return this._fetchForecast().then(function (response) {
+            return response.meta;
+        });
+    }
+  
+    ForecastStore.prototype.getForecast = function () {
+        return this._fetchForecast().then(function (response) {
+            return response.data;
+        });
+    };
+
+    ForecastStore.prototype.getTodayForecast = function () {
+        return this.getForecast().then(function (forecast) {
+            return forecast[0];
+        });
+    };
+  
+    return new ForecastStore(api, new Z.DataBag(cache, $q, 'forecast'));
+}]);

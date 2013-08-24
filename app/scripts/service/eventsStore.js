@@ -13,7 +13,7 @@ Z.app.factory('EventsStore', ['api', 'cache', '$q', function (api, cache, $q) {
             // Set a promise for the data, this will only be called 
             // if there is not valid cache
             this._events.load(function () {
-                return that.api.getEvents();
+                return that._api.getEvents();
             });
         }
     

@@ -208,6 +208,8 @@ Z.app.controller('EventController', function($scope, $timeout, WeatherCodesServi
     $scope.loadCode = function (code) {
         $scope.code = WeatherCodesService.findOneByCode(code);
     }
+
+    $scope.refresh();
     /*
     $timeout(function refresh() {
         $scope.refresh();

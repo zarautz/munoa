@@ -2,9 +2,9 @@
     <div>
         <header>
             <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
-            <i ng-if="!events.isLoaded" class="right icon-spin color-blue animate-spin"></i>
-            <i ng-if="events.isLoaded && events.isError" class="right icon-spin" ng-click="navCtrl.reload()"></i>
-            <i ng-if="events.isLoaded && !events.isError" class="right icon-search"></i>
+            <i ng-if="status.isLoading" class="right icon-spin color-blue animate-spin"></i>
+            <i ng-if="status.isDone && status.isError" class="right icon-spin" ng-click="navCtrl.reload()"></i>
+            <i ng-if="status.isDone && !status.isError" class="right icon-search"></i>
             <h1 class="title">{{ 'events'|translate }}</h1>
         </header>
         <div class="overthrow">

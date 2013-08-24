@@ -1,6 +1,7 @@
 'use strict';
 
 Z.app.controller('NavigationController', ['$scope', '$location', '$route', '$timeout', 'menu', function ($scope, $location, $route, $timeout, menu) {
+    this.location = $location;
     this.menu = menu;
     this.activeView = this.activeContent = 1;
     $scope.menu = this.menu;
@@ -8,10 +9,6 @@ Z.app.controller('NavigationController', ['$scope', '$location', '$route', '$tim
     $scope.$on('$routeChangeSuccess', function(event) {
         $scope.menu.setIsActive(false);
     });
-
-    this.getClassForPath = function(path, cssClass) {
-        return $location.path() === path ? cssClass : '';
-    };
 
     this.popView = function() {
         var that = this;

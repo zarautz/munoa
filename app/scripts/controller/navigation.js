@@ -1,8 +1,8 @@
 'use strict';
 
-Z.app.controller('NavigationController', ['$scope', '$location', '$route', 'menu', function ($scope, $location, $route, menu) {
+Z.app.controller('NavigationController', ['$scope', '$location', '$route', '$timeout', 'menu', function ($scope, $location, $route, $timeout, menu) {
     this.menu = menu;
-    this.activeView = 1;
+    this.activeView = this.activeContent = 1;
     $scope.menu = this.menu;
 
     $scope.$on('$routeChangeSuccess', function(event) {
@@ -14,7 +14,15 @@ Z.app.controller('NavigationController', ['$scope', '$location', '$route', 'menu
     };
 
     this.popView = function() {
+        var that = this;
+
         this.activeView--;
+
+        // This seems a hack, but works for cleaning scroll status
+        // CSS animation is 0.2s, so 250 should be OK
+        $timeout(function () {
+            that.activeContent--;
+        }, 250);
     };
 
     this.pushView = function(template, data) {
@@ -25,6 +33,7 @@ Z.app.controller('NavigationController', ['$scope', '$location', '$route', 'menu
         }
 
         this.activeView++;
+        this.activeContent++;
         $scope['view' + this.activeView] = template;
         $scope.pushData = data;
     };

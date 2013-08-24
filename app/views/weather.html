@@ -2,25 +2,24 @@
     <div>
         <header>
             <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
-            <i ng-if="!forecast.isLoaded" class="right icon-spin color-blue animate-spin"></i>
-            <i ng-if="forecast.isLoaded && forecast.isError" class="right icon-spin" ng-click="navCtrl.reload()"></i>
+            <i ng-if="status.isLoading" class="right icon-spin color-blue animate-spin"></i>
+            <i ng-if="status.isDone && status.isError" class="right icon-spin" ng-click="navCtrl.reload()"></i>
             <h1 class="title">{{ 'weather'|translate }}</h1>
         </header>
         <div class="overthrow">
-            <div ng-if="forecast.isLoaded && forecast.isError">
+            <div ng-if="status.isDone && status.isError">
                 ERROR: {{ forecast }}
             </div>
-            <div ng-if="forecast.isLoaded && !forecast.isError">
+            <div ng-if="status.isDone && !status.isError">
                 <p class="text-smallest text-center">
                     {{ today.date|date:'fullDate' }}<br />
                     <span class="color-light-text">
-                        {{ getWeatherCode(today) }}
-                        {{ todayCodeName.name }}
+                        {{ todayWeatherCode.name }}
                     </span>
                 </p>
                 <div class="row collapse weather-today">
                     <div class="small-2 columns">
-                        <i class="icon-weather-{{ getWeatherCode(today) }}"></i>
+                        <i class="icon-weather-{{ today.getCurrentWeatherCode() }}"></i>
                     </div>
                     <div class="small-2 columns">
                         <h1 ng-if="today.weather.temp" class="temperature">
@@ -34,11 +33,11 @@
                 </div>
                 <div class="row collapse weather-forecast">
                     <div class="small-1 column"
-                        ng-repeat="day in forecast.response.data"
+                        ng-repeat="day in forecast"
                         ng-class="{ 'active': $index == activeTab }"
                         ng-click="changeTab($index)">
                         <span ng-class="{ 'strong': $first }">{{ day.date|date:'EEE' }}</span><br />
-                        <i class="icon-weather-{{ getWeatherCode(day) }}"></i>
+                        <i class="icon-weather-{{ day.getWeatherCode() }}"></i>
                         <p class="temperatures">
                             {{ day.weather.tempMax }}&deg; <span class="min">{{ day.weather.tempMin }}&deg;</span>
                         </p>
@@ -46,11 +45,11 @@
                     </div>
                 </div>
                 <div class="row collapse weather-periods"
-                    ng-repeat="day in forecast.response.data"
+                    ng-repeat="day in forecast"
                     ng-show="$index == activeTab">
                     <ul class="text-small small-block-grid-3 large-block-grid-3"
                         ng-repeat="period in day.weather.forecast"
-                        ng-show="(activeTab === 0 && $index >= currentHourIndex) || activeTab > 0">
+                        ng-show="(activeTab === 0 && $index >= day.getCurrentHourIndex()) || activeTab > 0">
                         <li>
                             <strong>{{ period.period }}</strong>
                             <i class="icon-weather-{{ period.code }}"></i>
@@ -67,7 +66,7 @@
                 </div>
                 <div class="row collapse">
                     <div class="large-12 columns"
-                        ng-if="today.weather.uvMax > 5 && getWeatherCode(today) === 11">
+                        ng-if="today.weather.uvMax > 5 && today.getCurrentWeatherCode() === 11">
                         <hr />
                         <h3><i class="right icon-info"></i> {{ 'weather.uv.title'|translate }}</h3>
                         <p class="uv-text-orange"
@@ -86,9 +85,9 @@
                     <div class="large-12 columns">
                         <hr />
                         <p class="text-smallest color-lightest-text">
-                            {{ 'meta.lastUpdated'|translate }}: {{ forecast.response.meta.lastUpdated|date:'short' }}<br />
+                            {{ 'meta.lastUpdated'|translate }}: {{ meta.lastUpdated|date:'short' }}<br />
                             {{ 'meta.sources'|translate }}:
-                            <span ng-repeat="source in forecast.response.meta.source">
+                            <span ng-repeat="source in meta.source">
                                 {{ source }},
                             </span>
                             <a class="chameleon" href="http://forecast.io">Forecast.io</a>

@@ -5,6 +5,7 @@ Z.DataBag = function DataBag(cache, $q, cacheKey) {
     this._cache    = cache;
     this._cacheKey = cacheKey || ('key.' + Math.random());
     this._status   = {};
+    this._initCb   = function (data) { return data; };
 
     this._reset();
 }
@@ -17,6 +18,22 @@ Z.DataBag.prototype._reset = function () {
     this._status.isDone    = false;
     this._status.isOld     = false;
     this._status.isLoading = false;
+};
+
+Z.DataBag.prototype._resolve = function (value) {
+    this._status.isDone = true;
+    this._status.isLoading = false;
+    this._data.resolve(this._initCb(value));
+};
+
+Z.DataBag.prototype._resolveWithCache = function (value) {
+    this._status.fromCache = true;
+    this._resolve(value);
+};
+
+Z.DataBag.prototype._resolveWithOldCache = function (value) {
+    this._status.isOld = true;
+    this._resolveWithCache(value);
 };
 
 Z.DataBag.prototype.get = function () {
@@ -97,18 +114,6 @@ Z.DataBag.prototype.load = function (dataPromiseCb) {
     }
 }
 
-Z.DataBag.prototype._resolve = function (value) {
-    this._status.isDone  = true;
-    this._status.isLoading = false;
-    this._data.resolve(value);
-};
-
-Z.DataBag.prototype._resolveWithCache = function (value) {
-    this._status.fromCache = true;
-    this._resolve(value);
-};
-
-Z.DataBag.prototype._resolveWithOldCache = function (value) {
-    this._status.isOld = true;
-    this._resolveWithCache(value);
-};
+Z.DataBag.prototype.setInitCb = function (initCb) {
+    this._initCb = initCb;
+}

@@ -27,6 +27,8 @@ Z.DataSource.prototype._generateCacheKey = function (params) {
 }
 
 Z.DataSource.prototype._load = function (params) {
+    var params = params || {};
+
     // Reset
     this._data = this._$q.defer();
     this._status.reset();

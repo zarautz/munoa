@@ -14,6 +14,14 @@ Z.app.controller('WeatherController', ['$filter', '$scope', 'ForecastStore', 'We
         $scope.todayWeatherCode = $scope.today.then(function (today) {
             return WeatherCodesStore.getOneByCode(today.getCurrentWeatherCode());
         })
+
+        /*
+        // Forecast
+        var forecast = forecastMapper.get({'language': 'fr'});
+
+        this.forecast       = forecast.promise;
+        this.forecastStatus = forecast.status;
+        */
     }
 
     $scope.refresh();

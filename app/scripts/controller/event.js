@@ -1,9 +1,13 @@
 'use strict';
 
-Z.app.controller('EventController', function($scope, $timeout, forecastMapper, placeTypesMapper, placesMapper, placeMapper) {
+Z.app.controller('EventController', ['$scope', 'eventsMapper', function($scope, eventsMapper) {
     $scope.refresh = function () {
-        console.log('-----');
+        var events = eventsMapper.get();
 
+        this.events = events.promise;
+        this.status = events.status;
+        
+/*
         // Forecast
         var forecast = forecastMapper.get({'language': 'fr'});
 
@@ -42,8 +46,8 @@ Z.app.controller('EventController', function($scope, $timeout, forecastMapper, p
             this.typesStatus,
             this.placesStatus,
             this.placeStatus
-        ]);
+        ]);*/
     };
 
     $scope.refresh();
-});
+}]);

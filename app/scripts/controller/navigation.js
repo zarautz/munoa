@@ -1,19 +1,18 @@
 'use strict';
 
 Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'menu', function ($scope, $location, $timeout, menu) {
+    var that = this;
+
     this.location = $location;
     this.menu = menu;
     this.activeView = this.activeContent = 1;
     this.viewHasTransitioned = true;
-    $scope.menu = this.menu;
 
     $scope.$on('$routeChangeSuccess', function(event) {
-        $scope.menu.setIsActive(false);
+        that.menu.setIsActive(false);
     });
 
     this.activateView = function(viewToActivate, isPush, template, data) {
-        var that = this;
-
         // Prevent double click or clicks during CSS transitions
         if (!this.viewHasTransitioned || this.activeView === viewToActivate) {
             return false;

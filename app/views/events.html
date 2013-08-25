@@ -8,8 +8,41 @@
             <h1 class="title">{{ 'events'|translate }}</h1>
         </header>
         <div class="overthrow">
-            <input type="button" ng-click="refresh()" value="UPDATE" /><br />
-            <hr>
+            <style type="text/css">
+                .status { border-radius: 5px; padding: 10px; background-color: #fafafa; }
+                .loading { background-color: orange; }
+                .done { background-color: #cfc; }
+                .error { background-color: #fcc; }
+                .old { background-color: yellow; }
+            </style>
+            <div class="status" ng-class="{loading: status.isLoading, done: status.isDone, error: status.isError}">
+                <input type="button" ng-click="refresh()" value="UPDATE" /> <strong>META STATUS:</strong> isDone: {{ status.isDone }}, isLoading: {{ status.isLoading }}, isOld: {{ status.isOld }}, isError: {{ status.isError }}
+            </div>
+            <div style="padding-top:.5em;margin-top:.5em;border-top:1px solid #eee;">
+                <div class="status" ng-class="{loading: forecastStatus.isLoading, done: forecastStatus.isDone, error: forecastStatus.isError}">
+                    isDone: {{ forecastStatus.isDone }}, isLoading: {{ forecastStatus.isLoading }}, isOld: {{ forecastStatus.isOld }}, isError: {{ forecastStatus.isError }}
+                </div>
+                <div style="height:45px;overflow:hidden">forecast: {{ forecast }}</div>
+            </div>
+            <div style="padding-top:.5em;margin-top:.5em;border-top:1px solid #eee;">
+                <div class="status" ng-class="{loading: typesStatus.isLoading, done: typesStatus.isDone, error: typesStatus.isError}">
+                    isDone: {{ typesStatus.isDone }}, isLoading: {{ typesStatus.isLoading }}, isOld: {{ typesStatus.isOld }}, isError: {{ typesStatus.isError }}
+                </div>
+                <div style="height:45px;overflow:hidden">types: {{ types }}</div>
+            </div>
+            <div style="padding-top:.5em;margin-top:.5em;border-top:1px solid #eee;">
+                <div class="status" ng-class="{loading: placesStatus.isLoading, done: placesStatus.isDone, error: placesStatus.isError}">
+                    isDone: {{ placesStatus.isDone }}, isLoading: {{ placesStatus.isLoading }}, isOld: {{ placesStatus.isOld }}, isError: {{ placesStatus.isError }}
+                </div>
+                <div style="height:45px;overflow:hidden">places: {{ places }}</div>
+            </div>
+            <div style="padding-top:.5em;margin-top:.5em;border-top:1px solid #eee;">
+                <div class="status" ng-class="{loading: placeStatus.isLoading, done: placeStatus.isDone, error: placeStatus.isError}">
+                    isDone: {{ placeStatus.isDone }}, isLoading: {{ placeStatus.isLoading }}, isOld: {{ placeStatus.isOld }}, isError: {{ placeStatus.isError }}
+                </div>
+                <div style="height:45px;overflow:hidden">place: {{ place }}</div>
+            </div>
+            <!--
             <ul>
                 <li ng-repeat="(code, data) in all" 
                     ng-click="loadCode(code)"
@@ -34,6 +67,7 @@
             <hr>
             {{ status }}<br/>
             <hr>
+            -->
             <!--
             <div ng-if="events.isLoaded && events.isError">
                 ERROR: {{ events }}

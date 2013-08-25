@@ -26,34 +26,37 @@ Z.app.factory('api', ['apiHost', '$http', function(apiHost, $http) {
                 return response.data;
             });
         },
-        getWeatherCodes: function () {
+        getWeatherCodes: function (params) {
             return $http({
                 method: 'GET',
-                //params: {language: 'eu'},
+                params: {'language': params.language},
                 url: apiHost + '/forecast/weather/codes'
             }).then(function (response) {
                 return response.data;
             });
         },
-        getPlace: function (id) {
+        getPlace: function (params) {
             return $http({
                 method: 'GET',
-                url: apiHost + '/places/' + id
+                params: {'language': params.language},
+                url: apiHost + '/places/' + params.id
             }).then(function (response) {
                 return response.data;
             });
         },
-        getPlaceTypes: function () {
+        getPlaceTypes: function (params) {
             return $http({
                 method: 'GET',
+                params: {'language': params.language},
                 url: apiHost + '/places/types'
             }).then(function (response) {
                 return response.data;
             });
         },
-        getPlaces: function () {
+        getPlaces: function (params) {
             return $http({
                 method: 'GET',
+                params: params,
                 url: apiHost + '/places'
             }).then(function (response) {
                 return response.data;

@@ -1,38 +1,59 @@
 'use strict';
 
-Z.app.controller('NavigationController', ['$scope', '$location', '$route', '$timeout', 'menu', function ($scope, $location, $route, $timeout, menu) {
+Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'menu', function ($scope, $location, $timeout, menu) {
     this.location = $location;
     this.menu = menu;
     this.activeView = this.activeContent = 1;
+    this.viewHasTransitioned = true;
     $scope.menu = this.menu;
 
     $scope.$on('$routeChangeSuccess', function(event) {
         $scope.menu.setIsActive(false);
     });
 
-    this.popView = function() {
+    this.activateView = function(viewToActivate, isPush, template, data) {
         var that = this;
 
-        this.activeView--;
-
-        // This seems a hack, but works for cleaning scroll status
-        // CSS animation is 0.2s, so 250 should be OK
-        $timeout(function () {
-            that.activeContent--;
-        }, 250);
-    };
-
-    this.pushView = function(template, data) {
+        // Prevent moving between views when menu is open
         if (this.menu.isActive()) {
             this.toggleMenu();
 
             return false;
         }
 
-        this.activeView++;
-        this.activeContent++;
-        $scope['view' + this.activeView] = template;
-        $scope.pushData = data;
+        // Prevent double click
+        if (!this.viewHasTransitioned || viewToActivate === this.activeView) {
+            return false;
+        } else {
+            this.activeView = viewToActivate;
+            this.viewHasTransitioned = false;
+
+            // push needs data...
+            if (isPush) {
+                this.activeContent = viewToActivate;
+                
+                data._activeView = viewToActivate; // Attach it to use in the view
+                $scope['view' + viewToActivate] = template;
+                $scope.pushData = data;
+            }
+        }
+
+        $timeout(function () {
+            that.viewHasTransitioned = true;
+
+            // ...and pop needs little hack for scrolling issue
+            if (!isPush) {
+                that.activeContent = viewToActivate;
+            }
+        }, 200);
+    };
+
+    this.popView = function() {
+        this.activateView(this.activeView - 1, false);
+    };
+
+    this.pushView = function(template, data) {
+        this.activateView(this.activeView + 1, true, template, data);
     };
 
     this.toggleMenu = function() {
@@ -49,9 +70,5 @@ Z.app.controller('NavigationController', ['$scope', '$location', '$route', '$tim
         } else if (direction === 'right') {
             this.popView();
         }
-    };
-
-    this.reload = function() {
-        $route.reload();
     };
 }]);

@@ -14,16 +14,15 @@ Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'me
     this.activateView = function(viewToActivate, isPush, template, data) {
         var that = this;
 
-        // Prevent moving between views when menu is open
-        if (this.menu.isActive()) {
-            this.toggleMenu();
-
+        // Prevent double click or clicks during CSS transitions
+        if (!this.viewHasTransitioned || this.activeView === viewToActivate) {
             return false;
         }
 
-        // Prevent double click
-        if (!this.viewHasTransitioned || viewToActivate === this.activeView) {
-            return false;
+        // Prevent moving between views when menu is open
+        if (this.menu.isActive()) {
+            this.toggleMenu();
+            this.viewHasTransitioned = false;
         } else {
             this.activeView = viewToActivate;
             this.viewHasTransitioned = false;

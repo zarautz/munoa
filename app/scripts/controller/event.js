@@ -43,9 +43,6 @@ Z.app.controller('EventController', function($scope, $timeout, forecastMapper, p
             this.placesStatus,
             this.placeStatus
         ]);
-
-        // Needed for fast update
-        this.status.update();
     };
 
     $scope.refresh();

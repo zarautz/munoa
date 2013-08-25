@@ -14,6 +14,9 @@ Z.Status = function Status(children) {
 
     // Init vars
     this.reset();
+
+    // Update
+    this.update();
 }
 
 Z.Status.prototype.addChild = function (child) {

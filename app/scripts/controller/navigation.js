@@ -1,25 +1,26 @@
 'use strict';
 
 Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'menu', function ($scope, $location, $timeout, menu) {
-    var that = this;
-
     this.location = $location;
     this.menu = menu;
     this.activeView = this.activeContent = 1;
     this.viewHasTransitioned = true;
 
     $scope.$on('$routeChangeSuccess', function(event) {
-        that.menu.setIsActive(false);
+        menu.setIsActive(false);
     });
 
     this.activateView = function(viewToActivate, isPush, template, data) {
+        var that = this,
+            cssTransitionDuration = 200;
+
         // Prevent double click or clicks during CSS transitions
         if (!this.viewHasTransitioned || this.activeView === viewToActivate) {
             return false;
         }
 
         // Prevent moving between views when menu is open
-        if (this.menu.isActive()) {
+        if (menu.isActive()) {
             this.toggleMenu();
             this.viewHasTransitioned = false;
         } else {
@@ -43,7 +44,7 @@ Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'me
             if (!isPush) {
                 that.activeContent = viewToActivate;
             }
-        }, 200);
+        }, cssTransitionDuration);
     };
 
     this.popView = function() {
@@ -55,15 +56,15 @@ Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'me
     };
 
     this.toggleMenu = function() {
-        this.menu.toggleIsActive();
+        menu.toggleIsActive();
     };
 
     this.swipe = function(direction) {
         if (this.activeView === 1) {
-            if (this.menu.isActive() && direction === 'left') {
-                this.menu.setIsActive(false);
-            } else if (!this.menu.isActive() && direction === 'right') {
-                this.menu.setIsActive(true);
+            if (menu.isActive() && direction === 'left') {
+                menu.setIsActive(false);
+            } else if (!menu.isActive() && direction === 'right') {
+                menu.setIsActive(true);
             }
         } else if (direction === 'right') {
             this.popView();

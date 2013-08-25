@@ -25,8 +25,10 @@ Z.DataMapper.prototype._load = function (params) {
     this._$q.all(sourcePromises).then(function (values) {
         var data = that._mapperCb(values);
         that._data.resolve(data);
+        that._status.update();
     }, function (reason) {
         that._data.reject(reason);
+        that._status.update();
     });
 
     this._status.update();

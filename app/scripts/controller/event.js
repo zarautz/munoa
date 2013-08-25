@@ -2,6 +2,8 @@
 
 Z.app.controller('EventController', function($scope, $timeout, forecastMapper, placeTypesMapper, placesMapper, placeMapper) {
     $scope.refresh = function () {
+        console.log('-----');
+
         // Forecast
         var forecast = forecastMapper.get({'language': 'fr'});
 

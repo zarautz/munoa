@@ -33,7 +33,7 @@ Z.DataSource.prototype._load = function (params) {
     
     // We're waiting to the dataPromise
     this._status.isLoading = true;
-    this._status.update('HEMEN');
+    this._status.update();
 
     // Check the cache
     var cacheKey  = this._generateCacheKey(params);

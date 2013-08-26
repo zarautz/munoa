@@ -146,6 +146,10 @@ body.active-menu {
         
         section > div:first-child {
             border-left: 1px solid #68696b;
+
+            div.overthrow {
+                padding-right: ($base-padding - 2px);
+            }
         }
     }
 }
@@ -282,8 +286,20 @@ ul.drawer {
         width: 80%;
         @include border-radius(1000px);
 
-        &.fake {
+        &.color-0 {
             background-color: $color-lightest-blue;
+        }
+        &.color-1 {
+            background-color: $color-lightest-violet;
+        }
+        &.color-2 {
+            background-color: $color-lightest-green;
+        }
+        &.color-3 {
+            background-color: $color-lightest-orange;
+        }
+        &.color-4 {
+            background-color: $color-lightest-red;
         }
     }
 
@@ -291,8 +307,8 @@ ul.drawer {
         margin: $base-padding (-$base-padding);
     }
 
-    .image {
-
+    div:last-child hr {
+        display: none;
     }
 }
 

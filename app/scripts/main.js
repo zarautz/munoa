@@ -1,6 +1,7 @@
 'use strict';
 
 var Z = {};
+Z.Model = {};
 
 Z.app = angular.module('munoa', ['ngRoute', 'ngResource', 'ngTouch', 'ngSanitize']);
 

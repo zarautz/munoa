@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.factory('forecastMapper', ['api', 'cache', '$q', function (api, cache, $q) {
+Z.app.factory('weatherCodesSource', ['api', 'cache', '$q', function (api, cache, $q) {
     var weatherCodesSource = new Z.DataSource(cache, $q);
 
     weatherCodesSource.setCacheKeys(['[weatherCodes]', 'language'])

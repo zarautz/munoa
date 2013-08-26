@@ -12,32 +12,32 @@
             </div>
             <div ng-if="status.isDone && !status.isError">
                 <p class="text-smallest text-center">
-                    {{ today.date|date:'fullDate' }}<br />
+                    {{ forecast.today.date|date:'fullDate' }}<br />
                     <span class="color-light-text">
-                        {{ todayWeatherCode.name }}
+                        {{ forecast.today.getCurrentWeatherCode().name }}
                     </span>
                 </p>
                 <div class="row collapse weather-today">
                     <div class="small-2 columns">
-                        <i class="icon-weather-{{ today.getCurrentWeatherCode() }}"></i>
+                        <i class="icon-weather-{{ forecast.today.getCurrentWeatherCode().code }}"></i>
                     </div>
                     <div class="small-2 columns">
-                        <h1 ng-if="today.weather.temp" class="temperature">
-                            {{ today.weather.temp }}&deg;
+                        <h1 ng-if="forecast.today.weather.temp" class="temperature">
+                            {{ forecast.today.weather.temp }}&deg;
                         </h1>
-                        <div ng-if="!today.weather.temp" class="temperature-range">
-                            <h2 class="max">{{ today.weather.tempMax }}&deg;</h2>
-                            <h3 class="min">{{ today.weather.tempMin }}&deg;</h3>
+                        <div ng-if="!forecast.today.weather.temp" class="temperature-range">
+                            <h2 class="max">{{ forecast.today.weather.tempMax }}&deg;</h2>
+                            <h3 class="min">{{ forecast.today.weather.tempMin }}&deg;</h3>
                         </div>
                     </div>
                 </div>
                 <div class="row collapse weather-forecast">
                     <div class="small-1 column"
-                        ng-repeat="day in forecast"
+                        ng-repeat="day in forecast.days"
                         ng-class="{ 'active': $index == activeTab }"
                         ng-click="changeTab($index)">
                         <span ng-class="{ 'strong': $first }">{{ day.date|date:'EEE' }}</span><br />
-                        <i class="icon-weather-{{ day.getWeatherCode() }}"></i>
+                        <i class="icon-weather-{{ day.getWeatherCode().code }}"></i>
                         <p class="temperatures">
                             {{ day.weather.tempMax }}&deg; <span class="min">{{ day.weather.tempMin }}&deg;</span>
                         </p>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="row collapse weather-periods"
-                    ng-repeat="day in forecast"
+                    ng-repeat="day in forecast.days"
                     ng-show="$index == activeTab">
                     <ul class="text-small small-block-grid-3 large-block-grid-3"
                         ng-repeat="period in day.weather.forecast"
@@ -66,28 +66,28 @@
                 </div>
                 <div class="row collapse">
                     <div class="large-12 columns"
-                        ng-if="today.weather.uvMax > 5 && today.getCurrentWeatherCode() === 11">
+                        ng-if="forecast.today.weather.uvMax > 5 && forecast.today.getCurrentWeatherCode().code === 11">
                         <hr />
                         <h3><i class="right icon-info"></i> {{ 'weather.uv.title'|translate }}</h3>
                         <p class="uv-text-orange"
-                            ng-if="today.weather.uvMax > 5 && today.weather.uvMax < 8">
+                            ng-if="forecast.today.weather.uvMax > 5 && forecast.today.weather.uvMax < 8">
                             {{ 'weather.uv.orange'|translate }}
                         </p>
                         <p class="uv-text-red"
-                            ng-if="today.weather.uvMax > 7 && today.weather.uvMax < 11">
+                            ng-if="forecast.today.weather.uvMax > 7 && forecast.today.weather.uvMax < 11">
                             {{ 'weather.uv.red'|translate }}
                         </p>
                         <p class="uv-text-violet"
-                            ng-if="today.weather.uvMax > 10">
+                            ng-if="forecast.today.weather.uvMax > 10">
                             {{ 'weather.uv.violet'|translate }}
                         </p>
                     </div>
                     <div class="large-12 columns">
                         <hr />
                         <p class="text-smallest color-lightest-text">
-                            {{ 'meta.lastUpdated'|translate }}: {{ meta.lastUpdated|date:'short' }}<br />
+                            {{ 'meta.lastUpdated'|translate }}: {{ forecast.meta.lastUpdated|date:'short' }}<br />
                             {{ 'meta.sources'|translate }}:
-                            <span ng-repeat="source in meta.source">
+                            <span ng-repeat="source in forecast.meta.source">
                                 {{ source }},
                             </span>
                             <a class="chameleon" href="http://forecast.io">Forecast.io</a>

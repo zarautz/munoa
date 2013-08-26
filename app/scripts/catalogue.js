@@ -51,22 +51,10 @@ Z.catalogue = {
         'en': 'Zarautz',
         'fr': 'Zarautz'
     },
-    'language': {
-        'eu': 'Hizkuntza',
-        'es': 'Idioma',
-        'en': 'Language',
-        'fr': ''
-    },
     'places': {
         'eu': 'Zer ikusi',
         'es': '',
         'en': 'Sightseeing',
-        'fr': ''
-    },
-    'profile': {
-        'eu': 'Perfila',
-        'es': 'Perfil',
-        'en': 'Profile',
         'fr': ''
     },
     'sea': {
@@ -81,11 +69,83 @@ Z.catalogue = {
         'en': 'Settings',
         'fr': ''
     },
+    'settings.about': {
+        'eu': 'About(eu)',
+        'es': 'About(es)',
+        'en': 'About',
+        'fr': 'About(fr)'
+    },
+    'settings.about.build': {
+        'eu': 'Build(eu)',
+        'es': 'Build(es)',
+        'en': 'Build',
+        'fr': 'Build(fr)'
+    },
+    'settings.cache': {
+        'eu': 'Datuak ezabatu',
+        'es': 'Borrar datos',
+        'en': 'Clear data',
+        'fr': ''
+    },
     'settings.general': {
         'eu': 'Orokorrak',
         'es': 'Generales',
         'en': 'General',
         'fr': ''
+    },
+    'settings.language': {
+        'eu': 'Hizkuntza',
+        'es': 'Idioma',
+        'en': 'Language',
+        'fr': ''
+    },
+    'settings.language.en': {
+        'eu': 'English',
+        'es': 'English',
+        'en': 'English',
+        'fr': 'English'
+    },
+    'settings.language.es': {
+        'eu': 'Castellano',
+        'es': 'Castellano',
+        'en': 'Castellano',
+        'fr': 'Castellano'
+    },
+    'settings.language.eu': {
+        'eu': 'Euskara',
+        'es': 'Euskara',
+        'en': 'Euskara',
+        'fr': 'Euskara'
+    },
+    'settings.language.fr': {
+        'eu': 'Française',
+        'es': 'Française',
+        'en': 'Française',
+        'fr': 'Française'
+    },
+    'settings.other': {
+        'eu': 'Bestelakoak',
+        'es': 'Otros',
+        'en': 'Other',
+        'fr': ''
+    },
+    'settings.profile': {
+        'eu': 'Perfila',
+        'es': 'Perfil',
+        'en': 'Profile',
+        'fr': ''
+    },
+    'settings.profile.tourist': {
+        'eu': 'Turista',
+        'es': 'Turista',
+        'en': 'Tourist',
+        'fr': ''
+    },
+    'settings.profile.zarautz': {
+        'eu': 'Zarauztarra',
+        'es': 'Zarauztarra',
+        'en': 'Zarauztarra',
+        'fr': 'Zarauztarra'
     },
     'meta.lastUpdated': {
         'eu': 'Azken eguneraketa',

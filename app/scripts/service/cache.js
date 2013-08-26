@@ -4,6 +4,9 @@ Z.app.factory('cache', ['$log', function(log) {
     var store = window.store;
 
     return {
+        clear: function () {
+            store.clear();
+        },
         set: function(key, value, ttl) {
             ttl  = ttl || 0;
             ttl *= 1000;

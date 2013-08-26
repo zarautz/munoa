@@ -1,12 +1,11 @@
 'use strict';
 
-Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', function ($routeProvider, babelProvider, menuProvider) {
+Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', 'settingsProvider', function ($routeProvider, babelProvider, menuProvider, settingsProvider) {
     // -----
     // BABEL
     // -----
-    // This is no the Babel instance, it's the factory class
+    // This is no the Babel instance, it's the configuration of the provider
     babelProvider.setCatalogue(Z.catalogue);
-    babelProvider.setLocale('eu'); // TODO: HAU ALDATU MOBILEKO DEFEKTUZKORA EDO LOCAL STORAGETIK HARTU
 
     // ----
     // MENU
@@ -43,7 +42,7 @@ Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', function ($rout
         }
     ];
 
-    // This is not the Menu instance, it's the factory class
+    // This is not the Menu instance, it's the configuration of the provider
     menuProvider.setMenuItems(menuItems);
     menuProvider.setProfile('zarautz');
 
@@ -54,8 +53,17 @@ Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', function ($rout
     // --------
     // SETTINGS
     // --------
-    // This is no the Settings instance, it's the factory class
-    // settingsProvider.doSomething();
+    // This is no the Settings instance, it's the configuration of the provider
+    settingsProvider.setSettings({
+        language: {
+            selected: 'eu',
+            options: ['es', 'en', 'eu', 'fr']
+        },
+        profile: {
+            selected: 'tourist',
+            options: ['tourist', 'zarautz']
+        }
+    });
 
     // ------
     // ROUTES

@@ -27,8 +27,6 @@ Z.DataSource.prototype._generateCacheKey = function (params) {
 }
 
 Z.DataSource.prototype._load = function (params) {
-    var params = params || {};
-
     // Reset
     this._data = this._$q.defer();
     this._status.reset();
@@ -91,6 +89,8 @@ Z.DataSource.prototype._resolve = function (value) {
 };
 
 Z.DataSource.prototype.get = function (params) {
+    var params = params || {};
+
     if (!this.isValid(params)) {
         this._load(params);
     }
@@ -106,6 +106,11 @@ Z.DataSource.prototype.getStatus = function () {
 }
 
 Z.DataSource.prototype.isValid = function (params) {
+    // Check if the cache is valid
+    if (!this._cache.get(this._generateCacheKey(params)) && !this._status.isLoading) {
+        return false;
+    }
+
     // There has been an error
     // It's old data
     // It's not done and is not loading
@@ -113,11 +118,6 @@ Z.DataSource.prototype.isValid = function (params) {
         this._status.isOld ||
         (!this._status.isDone && !this._status.isLoading)
     ) {
-        return false;
-    }
-
-    // Check if the cache is valid
-    if (!this._cache.get(this._generateCacheKey(params)) && !this._status.isLoading) {
         return false;
     }
 

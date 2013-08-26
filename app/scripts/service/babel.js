@@ -2,22 +2,17 @@
 
 Z.app.provider('babel', function () {
     this._catalogue = {};
-    this._locale    = '';
 
-    this.$get = function () {
+    this.$get = ['settings', function (settings) {
         var babel = new Z.Babel();
 
         babel.setCatalogue(this._catalogue);
-        babel.setLocale(this._locale);
+        babel.setLanguage(settings.get('language'));
 
         return babel;
-    };
+    }];
 
     this.setCatalogue = function (catalogue) {
         this._catalogue = catalogue;
-    };
-
-    this.setLocale = function (locale) {
-        this._locale = locale;
     };
 });

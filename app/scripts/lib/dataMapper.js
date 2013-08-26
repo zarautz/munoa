@@ -35,7 +35,9 @@ Z.DataMapper.prototype._load = function (params) {
 }
 
 Z.DataMapper.prototype.get = function (params) {
-    if (!this.isValid()) {
+    var params = params || {};
+
+    if (!this.isValid(params)) {
         this._load(params);
     }
 
@@ -45,9 +47,16 @@ Z.DataMapper.prototype.get = function (params) {
     };
 };
 
-Z.DataMapper.prototype.isValid = function () {
+Z.DataMapper.prototype.isValid = function (params) {
     // Update status before checking
     this._status.update();
+
+    // Check sources validity
+    for (var i = 0; i < this._sources.length; i++) {
+        if (!this._sources[i].isValid(params)) {
+            return false;
+        }
+    }
 
     // There has been an error
     // It's old data

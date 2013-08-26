@@ -7,25 +7,29 @@
         <div class="overthrow table-view">
             <h4>{{ 'settings.general'|translate }}</h4>
             <ul>
-                <li ng-repeat="setting in setCtrl.settings">
-                    <a href ng-click="navCtrl.pushView('settings.selector', { setting: setting })">
+                <li ng-repeat="id in setCtrl.settings.getIds()">
+                    <a href ng-click="navCtrl.pushView('settings.selector', { id: id, settings: setCtrl.settings })">
                         <i class="icon-right-open"></i>
-                        {{ setting.title|translate }}
-                        <span class="detail">{{ setting.options[setting.selectedKey] }}</span>
+                        {{ ('settings.' + id)|translate }}
+                        <span class="detail">{{ ('settings.' + id + '.' + setCtrl.settings.get(id))|translate }}</span>
                     </a>
                 </li>
             </ul>
-            <h4><br/>Section2</h4>
+            <br/>
+            <h4>{{ 'settings.other'|translate }}</h4>
             <ul>
                 <li>
                     <a href ng-click="navCtrl.pushView('settings.about')">
                         <i class="icon-right-open"></i>
-                        About
+                        {{ 'settings.about'|translate }}
                         <span class="detail"></span>
                     </a>
                 </li>
                 <li>
-                    Build: @@timestamp
+                    <a href ng-click="setCtrl.clearCache()">
+                        {{ 'settings.cache'|translate }}
+                        <span class="detail"></span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -36,14 +40,14 @@
 <script type="text/ng-template" id="settings.selector">
     <header>
         <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
-        <h1 class="title">{{ pushData.setting.title|translate }}</h1>
+        <h1 class="title">{{ ('settings.' + pushData.id)|translate }}</h1>
     </header>
     <div class="overthrow table-view">
         <ul>
-            <li ng-repeat="(key, value) in pushData.setting.options">
-                <a href ng-click="setCtrl.updateSetting(pushData.setting, key)">
-                    <i class="icon-ok selected" ng-show="key == pushData.setting.selectedKey"></i>
-                    {{ value }}
+            <li ng-repeat="option in pushData.settings.getOptions(pushData.id)">
+                <a href ng-click="setCtrl.updateSetting(pushData.id, option)">
+                    <i class="icon-ok selected" ng-show="option == pushData.settings.get(pushData.id)"></i>
+                    {{ ('settings.' + pushData.id + '.' + option)|translate }}
                 </a>
             </li>
         </ul>
@@ -53,9 +57,10 @@
 <script type="text/ng-template" id="settings.about">
     <header>
         <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
-        <h1 class="title">About</h1>
+        <h1 class="title">{{ 'settings.about'|translate }}</h1>
     </header>
     <div class="overthrow">
-        Lorem.
+        <p>Lorem.</p>
+        <p><small>{{ 'settings.about.build'|translate }}: @@timestamp</small></p>
     </div>
 </script>

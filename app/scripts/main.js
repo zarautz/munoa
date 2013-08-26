@@ -1,7 +1,6 @@
 'use strict';
 
-var Z = {};
-Z.Model = {};
+var Z = { Model: {} };
 
 Z.app = angular.module('munoa', ['ngRoute', 'ngResource', 'ngTouch', 'ngSanitize']);
 
@@ -11,4 +10,13 @@ Z.app.filter('translate', ['babel', function (babel) {
     return function (key) {
         return babel.translate(key);
     };
+}]);
+
+//
+// Initialization
+//
+Z.app.run(['settings', function (settings) {
+    if (!settings.isCached()) {
+        alert('WIZARD!');
+    }
 }]);

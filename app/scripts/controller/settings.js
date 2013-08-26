@@ -1,21 +1,13 @@
 'use strict';
 
-Z.app.controller('SettingsController', ['babel', 'cache', 'menu', 'settings', function(babel, cache, menu, settings) {
+Z.app.controller('SettingsController', ['cache', 'settingsManager', function(cache, settingsManager) {
     this.updateSetting = function(id, option) {
-        if (id === 'profile') {
-            menu.setProfile(option);
-        }
-
-        if (id === 'language') {
-            babel.setLanguage(option);
-        }
-
-        settings.set(id, option);
+        settingsManager.updateSetting(id, option);
     };
 
     this.clearCache = function () {
         cache.clear();
     }
 
-    this.settings = settings;
+    this.settings = settingsManager.settings;
 }]);

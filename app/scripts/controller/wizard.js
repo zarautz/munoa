@@ -1,8 +1,8 @@
 'use strict';
 
-Z.app.controller('WizardController', ['$scope', 'babel', 'menu', 'settings', function($scope, babel, menu, settings) {
+Z.app.controller('WizardController', ['settingsManager', function(settingsManager) {
     this.page     = 0;
-    this.settings = settings;
+    this.settings = settingsManager.settings;
 
     this.back = function () {
         this.page--;
@@ -13,19 +13,11 @@ Z.app.controller('WizardController', ['$scope', 'babel', 'menu', 'settings', fun
             this.page = 0;
         }
 
-        return !settings.isCached();
+        return !settingsManager.settings.isCached();
     };
 
     this.updateSetting = function(id, option) {
-        if (id === 'profile') {
-            menu.setProfile(option);
-        }
-
-        if (id === 'language') {
-            babel.setLanguage(option);
-        }
-
-        settings.set(id, option);
+        settingsManager.updateSetting(id, option);
         this.page++;
     };
 }]);

@@ -11,12 +11,7 @@
                 <div class="row collapse"
                     ng-click="navCtrl.pushView('post.show', { 'post': post })">
                     <div class="large-2 small-1 columns">
-                        <img class="thumbnail"
-                            ng-if="post.getThumbnailImage()"
-                            ng-src="{{ post.getThumbnailImage() }}" />
-                        <img class="fake thumbnail"
-                            ng-if="!post.getThumbnailImage()"
-                            ng-src="/images/dot.png" />
+                        <img class="thumbnail color-{{ $index % 5 }}" ng-src="{{ post.getThumbnailImage() }}" />
                     </div>
                     <div class="large-3 small-3 columns">
                         <i class="icon-right-open"></i>

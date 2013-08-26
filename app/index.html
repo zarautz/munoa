@@ -15,39 +15,37 @@
         <title>Zarautz</title>
     </head>
     <body ng-class="{ 'active-menu': navCtrl.menu.isActive() }" ng-controller="NavigationController as navCtrl">
-        <div ng-controller="WizardController as wizardCtrl" style="position: absolute; top:0; left: 0; width: 100%; height; 100%; z-index: 100; background-color: yellow;">
-            <div ng-show="wizardCtrl.isActive()">
-                <div ng-switch="wizardCtrl.page">
-                    <div ng-switch-when="0">
-                        <header>
-                            <h1 class="title">{{ ('settings.language')|translate }}</h1>
-                        </header>
-                        <div class="overthrow table-view">
-                            <ul>
-                                <li ng-repeat="option in wizardCtrl.settings.getOptions('language')">
-                                    <a href ng-click="wizardCtrl.updateSetting('language', option)">
-                                        <i class="icon-ok selected" ng-show="option == wizardCtrl.settings.get('language')"></i>
-                                        {{ ('settings.language.' + option)|translate }}
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+        <div ng-controller="WizardController as wizardCtrl" style="position: absolute; top:0; left: 0; width: 100%; height; 100%; z-index: 100; background-color: yellow;" ng-show="wizardCtrl.isActive()">
+            <div ng-switch="wizardCtrl.page">
+                <div ng-switch-when="0">
+                    <header>
+                        <h1 class="title">{{ ('settings.language')|translate }}</h1>
+                    </header>
+                    <div class="overthrow table-view">
+                        <ul>
+                            <li ng-repeat="option in wizardCtrl.settings.getOptions('language')">
+                                <a href ng-click="wizardCtrl.updateSetting('language', option)">
+                                    <i class="icon-ok selected" ng-show="option == wizardCtrl.settings.get('language')"></i>
+                                    {{ ('settings.language.' + option)|translate }}
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div ng-switch-when="1">
-                        <header>
-                            <a href ng-click="wizardCtrl.back()"><i class="left icon-left"></i></a>
-                            <h1 class="title">{{ ('settings.profile')|translate }}</h1>
-                        </header>
-                        <div class="overthrow table-view">
-                            <ul>
-                                <li ng-repeat="option in wizardCtrl.settings.getOptions('profile')">
-                                    <a href ng-click="wizardCtrl.updateSetting('profile', option)">
-                                        <i class="icon-ok selected" ng-show="option == wizardCtrl.settings.get('profile')"></i>
-                                        {{ ('settings.profile.' + option)|translate }}
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                </div>
+                <div ng-switch-when="1">
+                    <header>
+                        <a href ng-click="wizardCtrl.back()"><i class="left icon-left"></i></a>
+                        <h1 class="title">{{ ('settings.profile')|translate }}</h1>
+                    </header>
+                    <div class="overthrow table-view">
+                        <ul>
+                            <li ng-repeat="option in wizardCtrl.settings.getOptions('profile')">
+                                <a href ng-click="wizardCtrl.updateSetting('profile', option)">
+                                    <i class="icon-ok selected" ng-show="option == wizardCtrl.settings.get('profile')"></i>
+                                    {{ ('settings.profile.' + option)|translate }}
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

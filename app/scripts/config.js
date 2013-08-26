@@ -17,7 +17,7 @@ Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', 'settingsProvid
         },
         {
             id: 'places',
-            icon: 'icon-temperature color-orange'
+            icon: 'icon-temperature color-violet'
         },
         {
             id: 'poi',

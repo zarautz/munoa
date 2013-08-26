@@ -10,7 +10,7 @@ $tablet-breakpoint:           600px; // Nexus 7
 
 $row-width:                   800px;
 $total-columns:               4;
-$block-grid-elements:         5;
+$block-grid-elements:         4;
 $column-gutter:               $touchable-size / 1.5;
 $base-padding:                $column-gutter / 2;
 $half-padding:                $column-gutter / 4;
@@ -22,6 +22,8 @@ $app-background:              #fff;
 $em-base:                     17px;
 $small-font-size:             15px;
 $smallest-font-size:          13px;
+$big-font-size:               26px;
+$biggest-font-size:           34px;
 $body-font-family:            "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $body-font-color:             #333;
 $body-line-height:            1.4;
@@ -272,14 +274,14 @@ ul.drawer {
 
 .list-with-images {
     .title {
-        margin: 0;
+        margin: 0 $base-padding 0 0;
     }
 
     .icon-right-open {
         font-size: 1.2em;
         float: right;
         color: $color-lightest-text;
-        margin: 0 (-$half-padding) 0 $quarter-padding;
+        margin: 0 (-$half-padding) 0 $half-padding;
     }
 
     .thumbnail {
@@ -383,6 +385,14 @@ hr {
 
 .strong {
     font-weight: $body-font-weight-strong;
+}
+
+.text-big {
+    font-size: $big-font-size;
+}
+
+.text-biggest {
+    font-size: $biggest-font-size;
 }
 
 .text-small {

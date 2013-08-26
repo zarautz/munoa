@@ -1,6 +1,5 @@
-$menu-width:              $drawer-width;
-$menu-animation-duration: 0.2s;
-$push-animation-duration: 0.2s; // Default in iOS 6: "0.25s" (?)
+$menu-width:          $drawer-width;
+$transition-duration: 0.2s;
 
 //
 // Mixins
@@ -50,7 +49,7 @@ main {
     z-index: 10;
     height: 100%;
     width: 100%;
-    @include transform-transition($menu-animation-duration, ease-out);
+    @include transform-transition($transition-duration, ease-out);
 }
 
 aside {
@@ -58,7 +57,7 @@ aside {
     z-index: 20;
     height: 100%;
     width: 100%;
-    @include transform-transition($push-animation-duration, linear);
+    @include transform-transition($transition-duration, linear);
     @include transform-translateY(130%);
 }
 
@@ -81,7 +80,7 @@ body.active-modal {
 section {
     position: absolute;
     height: 100%;
-    @include transform-transition($push-animation-duration, linear);
+    @include transform-transition($transition-duration, linear);
     
     > div {
         float: left;

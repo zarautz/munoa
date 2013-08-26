@@ -75,7 +75,7 @@ $hr-margin:                   ($base-padding * 1.5);
 // Typo
 //
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     margin: .25em 0 .75em;
     font-weight: 300;
     line-height: 1.2;
@@ -266,6 +266,36 @@ ul.drawer {
     }
 }
 
+.list-with-images {
+    .title {
+        margin: 0;
+    }
+
+    .icon-right-open {
+        font-size: 1.2em;
+        float: right;
+        color: $color-lightest-text;
+        margin: 0 (-$half-padding) 0 $quarter-padding;
+    }
+
+    .thumbnail {
+        width: 80%;
+        @include border-radius(1000px);
+
+        &.fake {
+            background-color: $color-lightest-blue;
+        }
+    }
+
+    hr {
+        margin: $base-padding (-$base-padding);
+    }
+
+    .image {
+
+    }
+}
+
 //
 // General text
 //
@@ -300,6 +330,16 @@ ul.drawer {
         li {
             list-style: decimal outside none;
         }
+    }
+}
+
+.external-link {
+    @include button(1em, $color-light-blue, 3px, true, false, false);
+    display: block;
+    margin: $column-gutter 0;
+
+    &, &:visited {
+        color: white;
     }
 }
 

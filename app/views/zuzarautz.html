@@ -2,17 +2,31 @@
     <div>
         <header>
             <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
+            <i ng-if="status.isLoading" class="right icon-spin color-blue animate-spin"></i>
+            <i ng-if="status.isDone && status.isError" class="right icon-spin" ng-click="refresh()"></i>
             <h1 class="title">{{ 'zuzarautz'|translate }}</h1>
         </header>
-        <div class="overthrow">
-            <ul>
-                <li ng-repeat="post in posts">
-                    <a href ng-click="navCtrl.pushView('post.show', { 'post': post })">
-                        {{ post.title }}
-                    </a>
-                    <hr />
-                </li>
-            </ul>
+        <div class="overthrow list-with-images">
+            <div ng-repeat="post in posts">
+                <div class="row collapse"
+                    ng-click="navCtrl.pushView('post.show', { 'post': post })">
+                    <div class="large-2 small-1 columns">
+                        <img class="thumbnail"
+                            ng-if="post.getThumbnailImage()"
+                            ng-src="{{ post.getThumbnailImage() }}" />
+                        <img class="fake thumbnail"
+                            ng-if="!post.getThumbnailImage()"
+                            ng-src="/images/dot.png" />
+                    </div>
+                    <div class="large-3 small-3 columns">
+                        <i class="icon-right-open"></i>
+                        <h4 class="title">{{ post.title }}</h4>
+                        <small class="color-lightest-text">{{ post.publishedAt | date:'longDate' }}</small>
+                    </div>
+                </div>
+                <hr />
+            </div>
+            </div>
         </div>
     </div>
     <div ng-include="view2"></div>
@@ -29,5 +43,8 @@
             {{ pushData.post.title }}
         </h1>
         <div class="content" ng-bind-html="pushData.post.content"></div>
+        <a href="{{ pushData.post.permalink }}" class="external-link">
+            "Zu Zarautz" webgunean ikusi
+        </a>
     </div>
 </script>

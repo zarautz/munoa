@@ -15,7 +15,6 @@ Z.app.controller('SettingsController', ['babel', 'cache', 'menu', 'settings', fu
 
     this.clearCache = function () {
         cache.clear();
-        alert('WIZARD!');
     }
 
     this.settings = settings;

@@ -11,12 +11,3 @@ Z.app.filter('translate', ['babel', function (babel) {
         return babel.translate(key);
     };
 }]);
-
-//
-// Initialization
-//
-Z.app.run(['settings', function (settings) {
-    if (!settings.isCached()) {
-        alert('WIZARD!');
-    }
-}]);

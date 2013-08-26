@@ -1,50 +1,52 @@
 'use strict';
 
 Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'menu', function ($scope, $location, $timeout, menu) {
+    var that = this,
+        cssTransitionDuration = 200;
+
     this.location = $location;
     this.menu = menu;
-    this.activeView = this.activeContent = 1;
-    this.viewHasTransitioned = true;
+    this.activeView = 1;
+    this.menuIsInTransition = false;
+    this.viewIsInTransition = false;
 
-    $scope.$on('$routeChangeSuccess', function(event) {
+    $scope.$on('$routeChangeSuccess', function() {
         menu.setIsActive(false);
     });
 
     this.activateView = function(viewToActivate, isPush, template, data) {
-        var that = this,
-            cssTransitionDuration = 200;
-
         // Prevent double click or clicks during CSS transitions
-        if (!this.viewHasTransitioned || this.activeView === viewToActivate) {
+        if (this.viewIsInTransition ||
+            this.menuIsInTransition ||
+            this.activeView === viewToActivate) {
             return false;
         }
 
         // Prevent moving between views when menu is open
         if (menu.isActive()) {
             this.toggleMenu();
-            this.viewHasTransitioned = false;
-        } else {
-            this.activeView = viewToActivate;
-            this.viewHasTransitioned = false;
 
-            // push needs data...
-            if (isPush) {
-                this.activeContent = viewToActivate;
-                
-                data._activeView = viewToActivate; // Attach it to use in the view
-                $scope['view' + viewToActivate] = template;
-                $scope.pushData = data;
-            }
+            return false;
+        }
+
+        // Start transition
+        this.viewIsInTransition = true;
+        this.activeView = viewToActivate;
+
+        // push needs data...
+        if (isPush) {
+            $scope['view' + viewToActivate] = template;
+            $scope.pushData = data;
         }
 
         $timeout(function () {
-            that.viewHasTransitioned = true;
-
-            // ...and pop needs little hack for scrolling issue
-            if (!isPush) {
-                that.activeContent = viewToActivate;
-            }
+            that.viewIsInTransition = false;
         }, cssTransitionDuration);
+    };
+
+    this.contentIsAlive = function(view) {
+        return this.activeView >= view ||
+            (this.viewIsInTransition && this.activeView === (view - 1));
     };
 
     this.popView = function() {
@@ -56,7 +58,12 @@ Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'me
     };
 
     this.toggleMenu = function() {
+        this.menuIsInTransition = true;
         menu.toggleIsActive();
+
+        $timeout(function () {
+            that.menuIsInTransition = false;
+        }, cssTransitionDuration);
     };
 
     this.swipe = function(direction) {

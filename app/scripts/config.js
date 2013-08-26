@@ -12,33 +12,69 @@ Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', 'settingsProvid
     // ----
     var menuItems = [
         {
-            id: 'zuzarautz',
-            path: '/',
-            icon: 'icon-home color-blue'
-        },
-        {
-            id: 'settings',
-            icon: 'icon-cog'
+            id: 'atm',
+            icon: 'icon-medical color-green'
         },
         {
             id: 'events',
             icon: 'icon-calendar color-orange'
         },
         {
-            id: 'places',
+            id: 'gastronomy',
+            icon: 'icon-medical color-green'
+        },
+        {
+            id: 'health',
+            icon: 'icon-medical color-green'
+        },
+        {
+            id: 'lodging',
+            icon: 'icon-medical color-green'
+        },
+        {
+            id: 'parking',
+            icon: 'icon-medical color-green'
+        },
+        {
+            id: 'poi',
             icon: 'icon-pictures color-red'
         },
         {
-            id: 'weather',
-            icon: 'icon-sun-alt color-yellow'
+            id: 'recycling',
+            icon: 'icon-medical color-green'
         },
         {
             id: 'sea',
             icon: 'icon-swim color-light-blue'
         },
         {
-            id: 'health',
+            id: 'settings',
+            icon: 'icon-cog'
+        },
+        {
+            id: 'sports',
             icon: 'icon-medical color-green'
+        },
+        {
+            id: 'stores',
+            icon: 'icon-medical color-green'
+        },
+        {
+            id: 'transport',
+            icon: 'icon-medical color-green'
+        },
+        {
+            id: 'weather',
+            icon: 'icon-sun-alt color-yellow'
+        },
+        {
+            id: 'wifi',
+            icon: 'icon-medical color-green'
+        },
+        {
+            id: 'zuzarautz',
+            path: '/',
+            icon: 'icon-home color-blue'
         }
     ];
 
@@ -47,8 +83,43 @@ Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', 'settingsProvid
     menuProvider.setProfile('zarautz');
 
     // Set the menu items order for each profile
-    menuProvider.sortMenuItems('zarautz', ['settings', 'zuzarautz', 'events', 'weather', 'sea', 'health', 'places']);
-    menuProvider.sortMenuItems('tourist', ['settings', 'places', 'events', 'weather', 'sea', 'health', 'zuzarautz']);
+    menuProvider.sortMenuItems('zarautz', [
+        'settings',
+        'zuzarautz',
+        'events',
+        'weather',
+        'sea',
+        'health',
+        'poi',
+        'wifi',
+        'atm',
+        'stores',
+        'parking',
+        'sports',
+        'transport',
+        'recycling',
+        'gastronomy',
+        'lodging'
+    ]);
+
+    menuProvider.sortMenuItems('tourist', [
+        'settings',
+        'poi',
+        'events',
+        'weather',
+        'sea',
+        'health',
+        'zuzarautz',
+        'wifi',
+        'atm',
+        'stores',
+        'parking',
+        'sports',
+        'transport',
+        'recycling',
+        'gastronomy',
+        'lodging'
+    ]);
 
     // --------
     // SETTINGS
@@ -68,7 +139,7 @@ Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', 'settingsProvid
     // ------
     // ROUTES
     // ------
-    // We get the menu items from the provider as this have been processed
+    // We get the menu items from the menu provider as these have been processed
     angular.forEach(menuProvider.getMenuItems(), function (item) {
         $routeProvider.when(item.path, {templateUrl: item.templateUrl});
     });

@@ -2,7 +2,7 @@
 
 Z.app.factory('api', ['apiHost', '$http', '$q', function(apiHost, $http, $q) {
     return {
-        getFirstPlace: function (params) {
+        getPlaceFirstPage: function (params) {
             if (params.language === undefined) {
                 throw "Language must be defined";
             }
@@ -11,39 +11,47 @@ Z.app.factory('api', ['apiHost', '$http', '$q', function(apiHost, $http, $q) {
                 throw "Types must be defined";
             }
 
-            return $http({
-                method: 'GET',
-                params: {language: params.language, types: params.types, offset: 0, limit: 1},
-                url: apiHost + '/places'
-            }).then(function (response) {
-                return response.data;
+            return this.getPlaces({
+                language: params.language,
+                types: params.types,
+                offset: 0,
+                limit: params.limit
             });
         },
         getAllPlaces: function (params) {
-            var deferred = $q.defer();
+            var deferred  = $q.defer(),
+                that      = this,
+                pageCount = 50,
+                firstPage;
 
-            // Get first place to see the totalCount
-            this.getFirstPlace(params).then(function (response) {
-                var total     = response.meta.totalCount,
-                    pageCount = 50,
-                    pages     = Math.ceil(total / pageCount),
-                    promises  = [],
-                    i, offset, limit, pagePromise;
+            // Set limit for first request
+            params.limit = pageCount;
 
-                // Make a request for each page
-                for (i = 0; i < pages; i++) {
-                    offset = i * pageCount;
-                    limit = pageCount;
+            // Get the first page to see the totalCount
+            firstPage = this.getPlaceFirstPage(params).then(function (firstPageResponse) {
+                var total    = firstPageResponse.meta.totalCount,
+                    pages    = Math.ceil(total / pageCount),
+                    promises = [],
+                    i, offset, limit, firstPageDefer;
 
-                    pagePromise = $http({
-                        method: 'GET',
-                        params: {language: params.language, types: params.types, offset: offset, limit: limit},
-                        url: apiHost + '/places'
-                    }).then(function (response) {
-                        return response.data;
-                    });
+                // First page promise
+                firstPageDefer = $q.defer();
+                firstPageDefer.resolve(firstPageResponse);
+                promises.push(firstPageDefer.promise);
 
-                    promises.push(pagePromise);
+                // Make a request for the rest of the pages
+                if (pages > 1) {
+                    for (i = 1; i < pages; i++) {
+                        offset = i * pageCount;
+                        limit  = pageCount;
+
+                        promises.push(that.getPlaces({
+                            language: params.language,
+                            types: params.types,
+                            offset: offset,
+                            limit: limit
+                        }));
+                    }
                 }
 
                 // When all the pages are loaded, merge them in an array

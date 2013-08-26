@@ -2,6 +2,23 @@
 
 Z.Model.ZuZarautz = function () {}
 
+Z.Model.ZuZarautz.prototype.getContent = function (size) {
+    if (size !== undefined) {
+        var content = this.content,
+            path;
+
+        for (path in this.contentImages) {
+            if (this.contentImages[path].source[size]) {
+                content = content.replace(path, this.contentImages[path].source[size]);
+            }
+        }
+
+        return content;
+    } else {
+        return this.content;
+    }
+}
+
 Z.Model.ZuZarautz.prototype.getThumbnailImage = function () {
     var images = this.contentImages,
         keys   = Object.keys(images);

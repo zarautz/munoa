@@ -42,7 +42,7 @@
         <h1 class="color-blue">
             {{ pushData.post.title }}
         </h1>
-        <div class="content" ng-bind-html="pushData.post.content"></div>
+        <div class="content" ng-bind-html="pushData.post.getContent('small')"></div>
         <a href="{{ pushData.post.permalink }}" class="external-link">
             "Zu Zarautz" webgunean ikusi
         </a>

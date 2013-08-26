@@ -1,4 +1,4 @@
-<section class="on-{{ navCtrl.activeView }}">
+<section class="on-{{ navCtrl.activeView }}" ng-controller="HealthController as healthCtrl">
     <div>
         <header>
             <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
@@ -6,6 +6,11 @@
         </header>
         <div class="overthrow">
             <h1 class="placeholder">Health info</h1>
+            <div ng-repeat="place in healthCtrl.places">
+                {{ place.name }}<br />
+                {{ place.types }}
+                <hr/>
+            </div>
         </div>
     </div>
 </section>

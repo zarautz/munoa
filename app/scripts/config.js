@@ -12,36 +12,16 @@ Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', 'settingsProvid
     // ----
     var menuItems = [
         {
-            id: 'atm',
-            icon: 'icon-medical color-green'
-        },
-        {
             id: 'events',
             icon: 'icon-calendar color-orange'
         },
         {
-            id: 'gastronomy',
-            icon: 'icon-medical color-green'
-        },
-        {
-            id: 'health',
-            icon: 'icon-medical color-green'
-        },
-        {
-            id: 'lodging',
-            icon: 'icon-medical color-green'
-        },
-        {
-            id: 'parking',
-            icon: 'icon-medical color-green'
+            id: 'places',
+            icon: 'icon-temperature color-orange'
         },
         {
             id: 'poi',
             icon: 'icon-pictures color-red'
-        },
-        {
-            id: 'recycling',
-            icon: 'icon-medical color-green'
         },
         {
             id: 'sea',
@@ -52,24 +32,8 @@ Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', 'settingsProvid
             icon: 'icon-cog'
         },
         {
-            id: 'sports',
-            icon: 'icon-medical color-green'
-        },
-        {
-            id: 'stores',
-            icon: 'icon-medical color-green'
-        },
-        {
-            id: 'transport',
-            icon: 'icon-medical color-green'
-        },
-        {
             id: 'weather',
             icon: 'icon-sun-alt color-yellow'
-        },
-        {
-            id: 'wifi',
-            icon: 'icon-medical color-green'
         },
         {
             id: 'zuzarautz',
@@ -89,17 +53,8 @@ Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', 'settingsProvid
         'events',
         'weather',
         'sea',
-        'health',
         'poi',
-        'wifi',
-        'atm',
-        'stores',
-        'parking',
-        'sports',
-        'transport',
-        'recycling',
-        'gastronomy',
-        'lodging'
+        'places',
     ]);
 
     menuProvider.sortMenuItems('tourist', [
@@ -107,18 +62,9 @@ Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', 'settingsProvid
         'poi',
         'events',
         'weather',
+        'places',
         'sea',
-        'health',
-        'zuzarautz',
-        'wifi',
-        'atm',
-        'stores',
-        'parking',
-        'sports',
-        'transport',
-        'recycling',
-        'gastronomy',
-        'lodging'
+        'zuzarautz'
     ]);
 
     // --------

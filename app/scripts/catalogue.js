@@ -2,48 +2,12 @@
 
 Z.catalogue = {
     //
-    // ATM
-    //
-    'atm': {
-        'eu': 'Kutxazainak',
-        'es': 'Cajeros automaticos',
-        'en': 'ATM',
-        'fr': ''
-    },
-    //
     // Events
     //
     'events': {
         'eu': 'Ekitaldiak',
         'es': 'Agenda',
         'en': 'Events',
-        'fr': ''
-    },
-    //
-    // Gastronomy
-    //
-    'gastronomy': {
-        'eu': 'Jatetxeak',
-        'es': '',
-        'en': 'Restaurant',
-        'fr': ''
-    },
-    //
-    // Health
-    //
-    'health': {
-        'eu': 'Osasun zerbitzuak',
-        'es': 'Sanidad?',
-        'en': '',
-        'fr': ''
-    },
-    //
-    // Lodging
-    //
-    'lodging': {
-        'eu': 'Ostatuak',
-        'es': '',
-        'en': 'Lodging',
         'fr': ''
     },
     //
@@ -62,15 +26,6 @@ Z.catalogue = {
         'fr': 'Sources'
     },
     //
-    // Parking
-    //
-    'parking': {
-        'eu': 'Parkinak',
-        'es': '',
-        'en': 'Parking',
-        'fr': ''   
-    },
-    //
     // Point Of Interest
     //
     'poi': {
@@ -78,15 +33,6 @@ Z.catalogue = {
         'es': '',
         'en': 'Sightseeing',
         'fr': ''
-    },
-    //
-    // Recycling
-    //
-    'recycling': {
-        'eu': 'Garbiguneak',
-        'es': '',
-        'en': 'Recycling',
-        'fr': ''   
     },
     //
     // Sea
@@ -185,33 +131,6 @@ Z.catalogue = {
         'fr': 'Zarauztarra'
     },
     //
-    // Sports
-    //
-    'sports': {
-        'eu': 'Kirol eskeintza',
-        'es': '',
-        'en': 'Sports',
-        'fr': ''
-    },
-    //
-    // Stores
-    //
-    'stores': {
-        'eu': 'Dendak',
-        'es': 'Tiendas',
-        'en': 'Stores',
-        'fr': ''   
-    },
-    //
-    // Transport
-    //
-    'transport': {
-        'eu': 'Transporte publikoa',
-        'es': 'Transporte público',
-        'en': 'Public transport',
-        'fr': ''
-    },
-    //
     // Weather
     //
     'weather': {
@@ -243,15 +162,6 @@ Z.catalogue = {
         'es': 'Además de tomar todas las precauciones, ten en cuenta que es importante que lleves gafas de sol y cremas solar SPF 30+. Cubre tu cuerpo con una camiseta de manga larga, unos pantalones y un sombrero. Por último, intenta estar lo menos expuesto al sol posible entre las 11h y las 16h de la tarde.',
         'en': 'Take all precautions, including: wear sunglasses and use SPF 30+ sunscreen, cover the body with a long-sleeve shirt and trousers, wear a very broad hat, and avoid the sun from three hours before until three hours after solar noon.',
         'fr': 'La peau non protégée sera endommagée et peut brûler en quelques minutes. Toute exposition au soleil est dangereuse, et en cas de sortie il faut se couvrir absolument (chapeau, lunettes de soleil, application d\'un écran solaire de très haute protection d\'indice + 50).'
-    },
-    //
-    // Wifi
-    //
-    'wifi': {
-        'eu': 'Wifi guneak',
-        'es': '',
-        'en': 'Wifi spots',
-        'fr': ''
     },
     //
     // Zu Zarautz

@@ -5,7 +5,10 @@
             <h1 class="title">{{ 'places'|translate }}</h1>
         </header>
         <div class="overthrow">
-            <h1 class="placeholder">places</h1>
+            <h1 class="placeholder" ng-show="placesCtrl.status.isLoading">Loading...</h1>
+            <div ng-repeat="place in placesCtrl.places.all()">
+                {{ place.name }}
+            </div>
         </div>
     </div>
 </section>

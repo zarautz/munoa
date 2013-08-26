@@ -15,12 +15,12 @@ Z.app.controller('PlacesController', ['$scope', 'placesMapper', 'settings', func
 
         http://www.geodatasource.com/developers/javascript
     */
-    $scope.refresh = function () {
+    this.refresh = function () {
         var places = placesMapper.get({'language': settings.get('language'), 'types': 'health'});
 
         this.places = places.promise;
         this.status = places.status;
     };
 
-    $scope.refresh();
+    this.refresh();
 }]);

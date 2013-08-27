@@ -5,30 +5,13 @@
             <h1 class="title">{{ 'poi'|translate }}</h1>
         </header>
         <div class="overthrow">
-            <ul class="small-block-grid-3 large-block-grid-4">
-                <li class="text-center text-smallest"
-                    style="border-bottom: 1px solid red; margin-bottom: 15px"
-                    ng-repeat="type in poiCtrl.types"
-                    ng-click="navCtrl.pushView('place.list', { type: type })">
-                    <p class="text-biggest"><i class="icon-home"></i></p>
-                    {{ type }}
-                </li>
-            </ul>
+            <div ng-show="poiCtrl.status.isLoading">Loading...</div>
+            <div ng-show="!poiCtrl.status.isLoading">
+                <a ng-click="poiCtrl.pager.prev()">Prev</a> – <a ng-click="poiCtrl.pager.next()">Next</a>
+                <div ng-repeat="place in poiCtrl.pager.getItems()">
+                    {{ place.name }}
+                </div>
+            </div>
         </div>
     </div>
-    <div ng-include="view2"></div>
-    <div ng-include="view3"></div>
 </section>
-
-<script type="text/ng-template" id="place.list">
-    <header>
-        <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
-        <!--<i class="right icon-share"></i>-->
-        <h1 class="title">{{ pushData.type }}</h1>
-    </header>
-    <div class="overthrow post" ng-if="navCtrl.contentIsAlive(2)">
-        <h1 class="color-blue">
-            {{ pushData.type }}
-        </h1>
-    </div>
-</script>

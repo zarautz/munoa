@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.controller('PoiController', ['placesMapper', 'settings', function(placesMapper, settings) {
+Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'settings', function($scope, placesMapper, settings) {
     this.byDistance = function () {
         var that = this;
 
@@ -20,7 +20,7 @@ Z.app.controller('PoiController', ['placesMapper', 'settings', function(placesMa
     }
 
     this.refresh = function () {
-        var places = placesMapper.get({'language': settings.get('language'), 'types': 'point_of_interest'}),
+        var places = placesMapper.get({'language': settings.get('language'), 'types': $scope.pushData.type}),
             that   = this;
 
         this.status = places.status;

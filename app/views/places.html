@@ -1,23 +1,52 @@
-<section class="on-{{ navCtrl.activeView }}"  ng-controller="PlacesController as placesCtrl">
+<section class="on-{{ navCtrl.activeView }}" ng-controller="PlacesController as placesCtrl">
     <div>
         <header>
             <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
             <h1 class="title">{{ 'places'|translate }}</h1>
         </header>
         <div class="overthrow">
-            <h1 class="placeholder" ng-show="placesCtrl.status.isLoading">Loading...</h1>
-            Longitude: <input ng-model="placesCtrl.userLocation.longitude"/></br>
-            Latitude: <input ng-model="placesCtrl.userLocation.latitude"/></br>
-            {{ placesCtrl.pager.getPage() }} / {{ placesCtrl.pager.getTotalPages() }}<br/>
-            <a class="small button" ng-click="placesCtrl.pager.prev()">Previous</a>
-            <a class="small button" ng-click="placesCtrl.pager.next()">Next</a>
+            <ul class="small-block-grid-3 large-block-grid-4">
+                <li class="text-center text-smallest"
+                    style="border-bottom: 1px solid red; margin-bottom: 15px"
+                    ng-repeat="type in placesCtrl.types"
+                    ng-click="navCtrl.pushView('place.list', { type: type })">
+                    <p class="text-biggest"><i class="icon-home"></i></p>
+                    {{ type }}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div ng-include="view2" ng-controller="PlaceListController as placeListCtrl"></div>
+    <div ng-include="view3"></div>
+</section>
+
+<script type="text/ng-template" id="place.list">
+    <header>
+        <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
+        <!--<i class="right icon-share"></i>-->
+        <h1 class="title">{{ pushData.type|translate }}</h1>
+    </header>
+    <div class="overthrow">
+        <h1 class="placeholder" ng-show="placeListCtrl.status.isLoading">Loading...</h1>
+        <div ng-show="!placeListCtrl.status.isLoading">
+            Longitude: <input ng-model="placeListCtrl.userLocation.longitude"/></br>
+            Latitude: <input ng-model="placeListCtrl.userLocation.latitude"/></br>
+            {{ placeListCtrl.pager.getPage() }} / {{ placeListCtrl.pager.getTotalPages() }}<br/>
+            <a class="small button" ng-click="placeListCtrl.pager.prev()">Previous</a>
+            <a class="small button" ng-click="placeListCtrl.pager.next()">Next</a>
             <br>
-            Order by: <a class="small button" ng-click="placesCtrl.byName()">Name</a> <a class="small button" ng-click="placesCtrl.byDistance()">Distance</a><br>
+            Order by: <a class="small button" ng-click="placeListCtrl.byName()">Name</a> <a class="small button" ng-click="placeListCtrl.byDistance()">Distance</a><br>
             <br>
-            <div ng-repeat="place in placesCtrl.pager.getItems()" style="margin-bottom:.25em;padding-bottom:.25em;border-bottom:1px solid #eee;">
+            <div ng-repeat="place in placeListCtrl.pager.getItems()" style="margin-bottom:.25em;padding-bottom:.25em;border-bottom:1px solid #eee;">
                 {{ place.name }}<br>
-                {{ place.location.distanceTo(placesCtrl.userLocation) | number }} kilometrota
+                {{ place.location.distanceTo(placeListCtrl.userLocation) | number }} kilometrota
             </div>
         </div>
     </div>
+</script>
+
+<!--
+<section class="on-{{ navCtrl.activeView }}"  ng-controller="PlacesController as placesCtrl">
+
 </section>
+-->

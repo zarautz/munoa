@@ -28,7 +28,7 @@ Z.app.factory('api', ['apiHost', '$http', '$q', function(apiHost, $http, $q) {
             params.limit = pageCount;
 
             // Get the first page to see the totalCount
-            firstPage = this.getPlaceFirstPage(params).then(function (firstPageResponse) {
+            this.getPlaceFirstPage(params).then(function (firstPageResponse) {
                 var total    = firstPageResponse.meta.totalCount,
                     pages    = Math.ceil(total / pageCount),
                     promises = [],

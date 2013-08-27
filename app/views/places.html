@@ -6,8 +6,17 @@
         </header>
         <div class="overthrow">
             <h1 class="placeholder" ng-show="placesCtrl.status.isLoading">Loading...</h1>
-            <div ng-repeat="place in placesCtrl.places.all()">
-                {{ place.name }}
+            Longitude: <input ng-model="placesCtrl.userLocation.longitude"/></br>
+            Latitude: <input ng-model="placesCtrl.userLocation.latitude"/></br>
+            {{ placesCtrl.pager.getPage() }} / {{ placesCtrl.pager.getTotalPages() }}<br/>
+            <a class="small button" ng-click="placesCtrl.pager.prev()">Previous</a>
+            <a class="small button" ng-click="placesCtrl.pager.next()">Next</a>
+            <br>
+            Order by: <a class="small button" ng-click="placesCtrl.byName()">Name</a> <a class="small button" ng-click="placesCtrl.byDistance()">Distance</a><br>
+            <br>
+            <div ng-repeat="place in placesCtrl.pager.getItems()" style="margin-bottom:.25em;padding-bottom:.25em;border-bottom:1px solid #eee;">
+                {{ place.name }}<br>
+                {{ place.location.distanceTo(placesCtrl.userLocation) | number }} kilometrota
             </div>
         </div>
     </div>

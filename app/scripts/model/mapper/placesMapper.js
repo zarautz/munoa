@@ -12,6 +12,7 @@ Z.app.factory('placesMapper', ['$q', 'placesSource', 'placeTypesSource', functio
             place = values[0][i];
             types = [];
 
+            // Types
             for (j = 0; j < place.types.length; j++) {
                 types.push(new Z.Model.PlaceType({
                     'code': place.types[j],
@@ -20,6 +21,12 @@ Z.app.factory('placesMapper', ['$q', 'placesSource', 'placeTypesSource', functio
             }
 
             place.types = types;
+
+            // Longitude, Latitude            
+            place.location = new Z.Model.Point(place.geometry.coordinates[0], place.geometry.coordinates[1]);
+            delete place.geometry;
+
+            // Create object
             places.push(new Z.Model.Place(place));
         }
 

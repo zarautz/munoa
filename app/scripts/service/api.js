@@ -4,11 +4,11 @@ Z.app.factory('api', ['apiHost', '$http', '$q', function(apiHost, $http, $q) {
     return {
         getPlaceFirstPage: function (params) {
             if (params.language === undefined) {
-                throw "Language must be defined";
+                throw 'Language must be defined';
             }
 
             if (params.types === undefined) {
-                throw "Types must be defined";
+                throw 'Types must be defined';
             }
 
             return this.getPlaces({
@@ -21,8 +21,7 @@ Z.app.factory('api', ['apiHost', '$http', '$q', function(apiHost, $http, $q) {
         getAllPlaces: function (params) {
             var deferred  = $q.defer(),
                 that      = this,
-                pageCount = 50,
-                firstPage;
+                pageCount = 50;
 
             // Set limit for first request
             params.limit = pageCount;
@@ -67,7 +66,7 @@ Z.app.factory('api', ['apiHost', '$http', '$q', function(apiHost, $http, $q) {
                     deferred.resolve(result);
                 }, function (reason) {
                     deferred.reject(reason);
-                })
+                });
             }, function (reason) {
                 deferred.reject(reason);
             });

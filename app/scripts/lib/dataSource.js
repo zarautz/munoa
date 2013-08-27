@@ -5,9 +5,9 @@ Z.DataSource = function DataSource(cache, $q) {
     this._cache      = cache;
     this._cacheKeys  = ['key.' + Math.random()];
     this._cacheTTL   = 30;
-    this._loadDataCb = function () { return; }
+    this._loadDataCb = function () { return; };
     this._status     = new Z.Status();
-}
+};
 
 Z.DataSource.prototype._generateCacheKey = function (params) {
     var parts = [],
@@ -24,13 +24,13 @@ Z.DataSource.prototype._generateCacheKey = function (params) {
     }
 
     return parts.join('.');
-}
+};
 
 Z.DataSource.prototype._load = function (params) {
     // Reset
     this._data = this._$q.defer();
     this._status.reset();
-    
+
     // We're waiting to the dataPromise
     this._status.isLoading = true;
     this._status.update();
@@ -45,12 +45,12 @@ Z.DataSource.prototype._load = function (params) {
         // Get the data promise
         var loadDataPromise = this._loadDataCb(params);
         var that = this;
-      
+
         // Check if it's a promise, duck typing :-)
         if (!('catch' in loadDataPromise && 'finally' in loadDataPromise && 'then' in loadDataPromise)) {
-            throw "DataBag::load needs a promise as the argument";
+            throw 'DataBag::load needs a promise as the argument';
         }
-    
+
         // When the promise is done
         loadDataPromise.then(function (data) {
             that._resolve(data);
@@ -58,10 +58,10 @@ Z.DataSource.prototype._load = function (params) {
         }, function (reason) {
             // Set the error status
             that._status.isError = true;
-    
+
             // Try to get some old data
             var cacheData = that._cache.getOld(cacheKey);
-    
+
             if (cacheData) {
                 that._status.isOld = true;
                 that._resolve(cacheData);
@@ -70,14 +70,14 @@ Z.DataSource.prototype._load = function (params) {
             }
         });
     }
-}
+};
 
 Z.DataSource.prototype._reject = function (reason) {
     this._data.reject(reason);
 
     // Notify parents
     this._status.update();
-}
+};
 
 Z.DataSource.prototype._resolve = function (value) {
     this._status.isDone = true;
@@ -89,7 +89,7 @@ Z.DataSource.prototype._resolve = function (value) {
 };
 
 Z.DataSource.prototype.get = function (params) {
-    var params = params || {};
+    params = params || {};
 
     if (!this.isValid(params)) {
         this._load(params);
@@ -99,11 +99,11 @@ Z.DataSource.prototype.get = function (params) {
         promise: this._data.promise,
         status:  this._status
     };
-}
+};
 
 Z.DataSource.prototype.getStatus = function () {
     return this._status;
-}
+};
 
 Z.DataSource.prototype.isValid = function (params) {
     // Check if the cache is valid
@@ -122,16 +122,16 @@ Z.DataSource.prototype.isValid = function (params) {
     }
 
     return true;
-}
+};
 
 Z.DataSource.prototype.setCacheKeys = function (cacheKeys) {
     this._cacheKeys = cacheKeys;
-}
+};
 
 Z.DataSource.prototype.setCacheTTL = function (cacheTTL) {
     this._cacheTTL = cacheTTL;
-}
+};
 
 Z.DataSource.prototype.setLoadDataCb = function (loadDataCb) {
     this._loadDataCb = loadDataCb;
-}
+};

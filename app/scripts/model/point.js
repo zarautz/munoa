@@ -3,37 +3,39 @@
 Z.Model.Point = function (longitude, latitude) {
     this.longitude = longitude;
     this.latitude  = latitude;
-}
+};
+
+Z.Model.Point.prototype._deg2rad = function (deg) {
+    return deg * (Math.PI / 180);
+};
 
 Z.Model.Point.prototype.distanceTo = function (point) {
-    // From: http://www.geodatasource.com/developers/javascript
+    // http://stackoverflow.com/questions/27928/how-do-i-calculate-distance-between-two-latitude-longitude-points
     var lat1 = this.latitude;
     var lon1 = this.longitude;
     var lat2 = point.latitude;
     var lon2 = point.longitude;
 
-    var radlat1  = Math.PI * lat1 / 180;
-    var radlat2  = Math.PI * lat2 / 180;
-    var radlon1  = Math.PI * lon1 / 180;
-    var radlon2  = Math.PI * lon2 / 180;
-    var theta    = lon1 - lon2;
-    var radtheta = Math.PI * theta / 180;
-    var dist     = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+    var R    = 6371; // Radius of the earth in km
+    var dLat = this._deg2rad(lat2 - lat1);
+    var dLon = this._deg2rad(lon2 - lon1);
+    var a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(this._deg2rad(lat1)) * Math.cos(this._deg2rad(lat2)) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2)
+    ;
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    var d = R * c; // Distance in km
 
-    dist = Math.acos(dist);
-    dist = dist * 180 / Math.PI;
-    dist = dist * 60 * 1.1515;
-    dist = dist * 1.609344; // To KM
-
-    return dist;
-}
+    return d;
+};
 
 Z.Model.Point.prototype.getKey = function (precision) {
     // Default leave 4 decimals =~ 11m
-    var precision = Math.pow(10, precision || 4);
+    precision = Math.pow(10, precision || 4);
 
     return new Z.Model.Point(
         Math.round(this.longitude * precision) / precision,
         Math.round(this.latitude * precision) / precision
     );
-}
+};

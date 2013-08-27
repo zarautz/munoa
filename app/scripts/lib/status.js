@@ -17,35 +17,35 @@ Z.Status = function Status(children) {
 
     // Update
     this.update();
-}
+};
 
 Z.Status.prototype.addChild = function (child) {
     this._children.push(child);
-}
+};
 
 Z.Status.prototype.getUID = function () {
     return this._uid;
-}
+};
 
 Z.Status.prototype.hasChildren = function () {
     return !!this._children.length;
-}
+};
 
 Z.Status.prototype.hasParent = function () {
     return this._parent !== null;
-}
+};
 
 Z.Status.prototype.reset = function () {
     this.isDone    = false;
     this.isError   = false;
     this.isLoading = false;
     this.isOld     = false;
-}
+};
 
 Z.Status.prototype.setParent = function (parent) {
     parent.addChild(this);
     this._parent = parent;
-}
+};
 
 Z.Status.prototype.update = function () {
     if (this.hasChildren()) {
@@ -69,4 +69,4 @@ Z.Status.prototype.update = function () {
     if (this.hasParent()) {
         this._parent.update();
     }
-}
+};

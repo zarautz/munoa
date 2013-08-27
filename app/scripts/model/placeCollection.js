@@ -2,18 +2,19 @@
 
 Z.Model.PlaceCollection = function (places) {
     this._places = places || [];
-}
+};
 
 Z.Model.PlaceCollection.prototype._sort = function (array, config) {
-    var array  = array.slice(),
-        config = config.reverse(),
-        types  = {},
-        i, sortFn, order;
+    var types = {},
+        i, sortFn;
+
+    array  = array.slice();
+    config = config.reverse();
 
     //
     // Define sort types
     //
-    types.none = function () { 
+    types.none = function () {
         return function () {
             return 0;
         };
@@ -38,7 +39,7 @@ Z.Model.PlaceCollection.prototype._sort = function (array, config) {
                 return equalFn(a, b);
             }
         };
-    }
+    };
 
     types.property = function (order, equalFn, property) {
         return function (a, b) {
@@ -63,7 +64,7 @@ Z.Model.PlaceCollection.prototype._sort = function (array, config) {
             type   = config[i].type,
             params = config[i].params || [];
 
-        if (order == 'ASC') {
+        if (order === 'ASC') {
             order = 1;
         } else {
             order = -1;
@@ -76,17 +77,17 @@ Z.Model.PlaceCollection.prototype._sort = function (array, config) {
     array.sort(sortFn);
 
     return array;
-}
+};
 
 Z.Model.PlaceCollection.prototype.all = function (order) {
     return this._sort(this._places, [
         {type: 'property', order: order || 'ASC', params: ['name']}
     ]);
-}
+};
 
 Z.Model.PlaceCollection.prototype.allByDistance = function (point) {
     return this._sort(this._places, [
         {type: 'distance', order: 'ASC', params: [this._places, point]},
         {type: 'property', order: 'ASC', params: ['name']}
     ]);
-}
+};

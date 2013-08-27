@@ -8,7 +8,7 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'settings', f
             that.pager.setItems(collection.allByDistance(that.userLocation));
             that.pager.moveTo(1);
         });
-    }
+    };
 
     this.byName = function () {
         var that = this;
@@ -17,11 +17,10 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'settings', f
             that.pager.setItems(collection.all('ASC'));
             that.pager.moveTo(1);
         });
-    }
+    };
 
     this.refresh = function () {
-        var places = placesMapper.get({'language': settings.get('language'), 'types': $scope.pushData.type}),
-            that   = this;
+        var places = placesMapper.get({'language': settings.get('language'), 'types': $scope.pushData.type});
 
         this.status = places.status;
         this.places = places.promise;
@@ -31,9 +30,7 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'settings', f
         this.pager = new Z.Paginator();
         this.pager.setPageSize(10);
 
-        this.places.then(function (collection) {
-            that.byName();
-        });
+        this.byName();
     };
 
     this.refresh();

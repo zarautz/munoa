@@ -6,7 +6,7 @@ Z.app.controller('WizardController', ['settingsManager', function(settingsManage
 
     this.back = function () {
         this.page--;
-    }
+    };
 
     this.isActive = function() {
         if (this.page > 1) {

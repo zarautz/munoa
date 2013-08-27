@@ -6,7 +6,7 @@ Z.app.controller('ZuzarautzController', ['$scope', 'zuZarautzMapper', function($
 
         $scope.posts  = posts.promise;
         $scope.status = posts.status;
-    }
+    };
 
     // Init
     $scope.refresh();

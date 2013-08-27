@@ -23,7 +23,7 @@ Z.app.controller('PlacesController', ['$scope', 'placesMapper', 'settings', func
         this.places = places.promise;
         this.status = places.status;*/
     };
-console.log('ep ep!');
+    console.log('ep ep!', settings.get('language'));
     this.refresh();
 
     /*

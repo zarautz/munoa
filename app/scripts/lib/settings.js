@@ -7,18 +7,18 @@ Z.Settings = function Settings(cache) {
 
 Z.Settings.prototype._checkId = function (id) {
     if (!(id in this._settings)) {
-        throw "Settings id: '" + id + "' not found.";
+        throw 'Settings id: "' + id + '" not found.';
     }
-}
+};
 
 Z.Settings.prototype._generateCacheKey = function (id) {
     return '[settings].' + id;
-}
+};
 
 Z.Settings.prototype.get = function (id) {
     this._checkId(id);
     return this._settings[id].selected;
-}
+};
 
 Z.Settings.prototype.getIds = function () {
     var ids = [];
@@ -28,12 +28,12 @@ Z.Settings.prototype.getIds = function () {
     });
 
     return ids;
-}
+};
 
 Z.Settings.prototype.getOptions = function (id) {
     this._checkId(id);
     return this._settings[id].options;
-}
+};
 
 Z.Settings.prototype.isCached = function () {
     var ids = this.getIds(),
@@ -49,7 +49,7 @@ Z.Settings.prototype.isCached = function () {
     }
 
     return true;
-}
+};
 
 Z.Settings.prototype.loadFromCache = function () {
     var ids = this.getIds(),
@@ -63,7 +63,7 @@ Z.Settings.prototype.loadFromCache = function () {
             this._settings[ids[i]].selected = cacheData;
         }
     }
-}
+};
 
 Z.Settings.prototype.set = function (id, option) {
     var found = false,
@@ -73,7 +73,7 @@ Z.Settings.prototype.set = function (id, option) {
 
     // Check if the option exists
     for (i = 0; this._settings[id].options.length; i++) {
-        if (this._settings[id].options[i] == option) {
+        if (this._settings[id].options[i] === option) {
             found = true;
             break;
         }
@@ -81,7 +81,7 @@ Z.Settings.prototype.set = function (id, option) {
 
     // Abort if option is not found
     if (!found) {
-        throw "Invalid option: '" + option + "' for setting id: '" + id + "'.";
+        throw 'Invalid option: "' + option + '" for setting id: "' + id + '".';
     }
 
     // Save in cache
@@ -91,7 +91,7 @@ Z.Settings.prototype.set = function (id, option) {
 
     // Save local value
     this._settings[id].selected = option;
-}
+};
 
 Z.Settings.prototype.setSettings = function (settings) {
     this._settings = settings;
@@ -99,4 +99,4 @@ Z.Settings.prototype.setSettings = function (settings) {
     if (this._cache) {
         this.loadFromCache();
     }
-}
+};

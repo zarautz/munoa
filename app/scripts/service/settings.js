@@ -13,5 +13,5 @@ Z.app.provider('settings', function () {
 
     this.setSettings = function (settings) {
         this._settings = settings;
-    }
+    };
 });

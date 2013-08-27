@@ -2,7 +2,7 @@
 
 Z.DataMapper = function DataMapper($q) {
     this._$q       = $q;
-    this._mapperCb = function (values) { return values; }
+    this._mapperCb = function (values) { return values; };
     this._sources  = [];
     this._status   = new Z.Status();
 };
@@ -17,7 +17,7 @@ Z.DataMapper.prototype._load = function (params) {
     this._status.reset();
 
     // Get source promises list
-    for (i = 0; i < this._sources.length; i++) {        
+    for (i = 0; i < this._sources.length; i++) {
         sourcePromises.push(this._sources[i].get(params).promise);
     }
 
@@ -32,10 +32,10 @@ Z.DataMapper.prototype._load = function (params) {
     });
 
     this._status.update();
-}
+};
 
 Z.DataMapper.prototype.get = function (params) {
-    var params = params || {};
+    params = params || {};
 
     if (!this.isValid(params)) {
         this._load(params);
@@ -64,18 +64,18 @@ Z.DataMapper.prototype.isValid = function (params) {
     // Data is not initialized
     if (this._status.isError ||
         this._status.isOld ||
-        (!this._status.isDone && !this._status.isLoading) || 
+        (!this._status.isDone && !this._status.isLoading) ||
         this._data === undefined
     ) {
         return false;
     }
 
     return true;
-}
+};
 
 Z.DataMapper.prototype.setMapperCb = function (mapperCb) {
     this._mapperCb = mapperCb;
-}
+};
 
 Z.DataMapper.prototype.setSources = function (sources) {
     for (var i = 0; i < sources.length; i++) {
@@ -83,4 +83,4 @@ Z.DataMapper.prototype.setSources = function (sources) {
     }
 
     this._sources = sources;
-}
+};

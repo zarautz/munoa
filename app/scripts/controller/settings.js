@@ -7,7 +7,7 @@ Z.app.controller('SettingsController', ['cache', 'settingsManager', function(cac
 
     this.clearCache = function () {
         cache.clear();
-    }
+    };
 
     this.settings = settingsManager.settings;
 }]);

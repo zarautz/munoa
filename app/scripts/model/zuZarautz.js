@@ -1,6 +1,6 @@
 'use strict';
 
-Z.Model.ZuZarautz = function () {}
+Z.Model.ZuZarautz = function () {};
 
 Z.Model.ZuZarautz.prototype.getContent = function (size) {
     if (size !== undefined) {
@@ -17,7 +17,7 @@ Z.Model.ZuZarautz.prototype.getContent = function (size) {
     } else {
         return this.content;
     }
-}
+};
 
 Z.Model.ZuZarautz.prototype.getThumbnailImage = function () {
     var images = this.contentImages,
@@ -28,4 +28,4 @@ Z.Model.ZuZarautz.prototype.getThumbnailImage = function () {
     } else {
         return 'images/dot.png';
     }
-}
+};

@@ -3,7 +3,7 @@
 Z.app.controller('WeatherController', ['$scope', 'settings', 'forecastMapper', function($scope, settings, forecastMapper) {
     $scope.changeTab = function (index) {
         $scope.activeTab = index;
-    }
+    };
 
     $scope.refresh = function () {
         $scope.activeTab = 0;
@@ -13,7 +13,7 @@ Z.app.controller('WeatherController', ['$scope', 'settings', 'forecastMapper', f
 
         $scope.forecast = forecast.promise;
         $scope.status   = forecast.status;
-    }
+    };
 
     $scope.refresh();
 }]);

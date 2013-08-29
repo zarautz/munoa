@@ -67,7 +67,7 @@
         <nav class="overthrow">
             <ul class="drawer">
                 <li ng-repeat="item in navCtrl.menu.getItems()">
-                    <a href="#{{ item.path }}" class="{{ item.id }}"
+                    <a ng-href="#{{ item.path }}" class="{{ item.id }}"
                         ng-class="{ 'active': item.path === navCtrl.location.path() }">
                         <i class="{{ item.icon }}"></i>{{ item.id|translate }}
                     </a>

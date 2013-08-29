@@ -173,7 +173,7 @@ header {
         font-size: $action-bar-text-size;
         font-weight: normal;
         line-height: inherit;
-        margin: 0 3em 0 0;
+        margin: 0 auto;
         text-align: center;
         color: $action-bar-text-color;
         @include ellipsis();
@@ -181,7 +181,7 @@ header {
     
     i {
         background-color: $action-bar-background-color;
-        padding: 0 $base-padding;
+        margin: 0 $base-padding;
         font-size: $action-bar-icon-size;
         color: $action-bar-text-color;
     }

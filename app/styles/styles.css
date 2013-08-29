@@ -2044,7 +2044,7 @@ header .title {
   font-size: 20px;
   font-weight: normal;
   line-height: inherit;
-  margin: 0 3em 0 0;
+  margin: 0 auto;
   text-align: center;
   color: #666666;
   white-space: nowrap;
@@ -2054,7 +2054,7 @@ header .title {
 /* line 182, scss/styles.scss */
 header i {
   background-color: #eaeaea;
-  padding: 0 16px;
+  margin: 0 16px;
   font-size: 20px;
   color: #666666;
 }

@@ -24,7 +24,7 @@
         <title>Zarautz</title>
     </head>
     <body ng-class="{ 'active-menu': navCtrl.menu.isActive() }" ng-controller="NavigationController as navCtrl">
-        <div ng-controller="WizardController as wizardCtrl" style="position: absolute; top:0; left: 0; width: 100%; height; 100%; z-index: 100; background-color: yellow;" ng-show="wizardCtrl.isActive()">
+        <div ng-controller="WizardController as wizardCtrl" style="position: absolute; top:0; left: 0; width: 100%; height; 100%; z-index: 100; background-color: yellow;" ng-if="wizardCtrl.isActive()">
             <div ng-switch="wizardCtrl.page">
                 <div ng-switch-when="0">
                     <header>

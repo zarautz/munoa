@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', 'settingsProvider', function ($routeProvider, babelProvider, menuProvider, settingsProvider) {
+Z.app.config(['$routeProvider', '$locationProvider', 'babelProvider', 'menuProvider', 'settingsProvider', function ($routeProvider, $locationProvider, babelProvider, menuProvider, settingsProvider) {
     // -----
     // BABEL
     // -----
@@ -90,5 +90,6 @@ Z.app.config(['$routeProvider', 'babelProvider', 'menuProvider', 'settingsProvid
         $routeProvider.when(item.path, {templateUrl: item.templateUrl});
     });
 
-    $routeProvider.otherwise({redirectTo: '/'});
+    //$routeProvider.otherwise({redirectTo: '/zuzarautz'});
+    $locationProvider.html5Mode(true);
 }]);

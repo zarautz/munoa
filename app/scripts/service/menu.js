@@ -31,6 +31,10 @@ Z.app.provider('menu', function () {
                 item.path = '/'+ item.id;
             }
 
+            if (!('route' in item)) {
+                item.route = item.path;
+            }
+
             if (!('templateUrl' in item)) {
                 item.templateUrl = 'views/'+ item.id +'.html';
             }

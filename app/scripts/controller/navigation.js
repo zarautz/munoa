@@ -10,6 +10,8 @@ Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'me
     this.menuIsInTransition = false;
     this.viewIsInTransition = false;
 
+    $scope.dataStack = [];
+
     $scope.$on('$routeChangeSuccess', function() {
         menu.setIsActive(false);
     });
@@ -36,11 +38,18 @@ Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'me
         // push needs data...
         if (isPush) {
             $scope['view' + viewToActivate] = template;
+            $scope.dataStack.push(data);
             $scope.pushData = data;
+        } else {
+            $scope.pushData = $scope.dataStack.pop();
         }
 
         $timeout(function () {
             that.viewIsInTransition = false;
+
+            if (!isPush) {
+                $scope['view' + (viewToActivate + 1)] = '';
+            }
         }, cssTransitionDuration);
     };
 

@@ -17,11 +17,24 @@ Z.app.config(['$routeProvider', '$locationProvider', 'babelProvider', 'menuProvi
         },
         {
             id: 'places',
-            icon: 'icon-temperature color-violet'
+            route: '/places/:section',
+            path: '/places/places',
+            icon: 'icon-temperature color-violet',
+            templateUrl: 'views/places.html'
         },
         {
             id: 'poi',
-            icon: 'icon-pictures color-red'
+            route: '/places/:section',
+            path: '/places/poi',
+            icon: 'icon-pictures color-red',
+            templateUrl: 'views/places.html'
+        },
+        {
+            id: 'health',
+            route: '/places/:section',
+            path: '/places/health',
+            icon: 'icon-medical color-green',
+            templateUrl: 'views/places.html'
         },
         {
             id: 'sea',
@@ -55,6 +68,7 @@ Z.app.config(['$routeProvider', '$locationProvider', 'babelProvider', 'menuProvi
         'sea',
         'poi',
         'places',
+        'health'
     ]);
 
     menuProvider.sortMenuItems('tourist', [
@@ -64,7 +78,8 @@ Z.app.config(['$routeProvider', '$locationProvider', 'babelProvider', 'menuProvi
         'weather',
         'places',
         'sea',
-        'zuzarautz'
+        'zuzarautz',
+        'health'
     ]);
 
     // --------
@@ -87,7 +102,7 @@ Z.app.config(['$routeProvider', '$locationProvider', 'babelProvider', 'menuProvi
     // ------
     // We get the menu items from the menu provider as these have been processed
     angular.forEach(menuProvider.getMenuItems(), function (item) {
-        $routeProvider.when(item.path, {templateUrl: item.templateUrl});
+        $routeProvider.when(item.route, {templateUrl: item.templateUrl});
     });
 
     $routeProvider.otherwise({redirectTo: '/'});

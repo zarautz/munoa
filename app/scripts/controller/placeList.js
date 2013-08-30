@@ -20,7 +20,10 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'settings', f
     };
 
     this.refresh = function () {
-        var places = placesMapper.get({'language': settings.get('language'), 'types': $scope.pushData.type});
+        this.section = $scope.pushData.section;
+        this.group   = $scope.pushData.group;
+
+        var places = placesMapper.get({'language': settings.get('language'), 'types': $scope.pushData.group });
 
         this.status = places.status;
         this.places = places.promise;

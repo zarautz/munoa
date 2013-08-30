@@ -1,52 +1,66 @@
-<section class="on-{{ navCtrl.activeView }}" ng-controller="PlacesController as placesCtrl">
-    <div>
+<section class="on-{{ navCtrl.activeView }}">
+    <div ng-controller="PlacesController as placesCtrl">
         <header>
             <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
-            <h1 class="title">{{ 'places'|translate }}</h1>
+            <h1 class="title">{{ placesCtrl.section|translate }}</h1>
         </header>
         <div class="overthrow">
             <ul class="small-block-grid-3 large-block-grid-4">
                 <li class="text-center text-smallest"
                     style="border-bottom: 1px solid red; margin-bottom: 15px"
-                    ng-repeat="type in placesCtrl.types"
-                    ng-click="navCtrl.pushView('place.list', { type: type })">
+                    ng-repeat="group in placesCtrl.groups"
+                    ng-click="navCtrl.pushView('place.list', { section: placesCtrl.section, group: group })">
                     <p class="text-biggest"><i class="icon-home"></i></p>
-                    {{ type }}
+                    {{ group }}
                 </li>
             </ul>
         </div>
     </div>
-    <div ng-include="view2" ng-controller="PlaceListController as placeListCtrl"></div>
+    <div ng-include="view2"></div>
     <div ng-include="view3"></div>
 </section>
 
 <script type="text/ng-template" id="place.list">
-    <header>
-        <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
-        <!--<i class="right icon-share"></i>-->
-        <h1 class="title">{{ pushData.type|translate }}</h1>
-    </header>
-    <div class="overthrow">
-        <h1 class="placeholder" ng-show="placeListCtrl.status.isLoading">Loading...</h1>
-        <div ng-show="!placeListCtrl.status.isLoading">
-            Longitude: <input ng-model="placeListCtrl.userLocation.longitude"/></br>
-            Latitude: <input ng-model="placeListCtrl.userLocation.latitude"/></br>
-            {{ placeListCtrl.pager.getPage() }} / {{ placeListCtrl.pager.getTotalPages() }}<br/>
-            <a class="small button" ng-click="placeListCtrl.pager.prev()">Previous</a>
-            <a class="small button" ng-click="placeListCtrl.pager.next()">Next</a>
-            <br>
-            Order by: <a class="small button" ng-click="placeListCtrl.byName()">Name</a> <a class="small button" ng-click="placeListCtrl.byDistance()">Distance</a><br>
-            <br>
-            <div ng-repeat="place in placeListCtrl.pager.getItems()" style="margin-bottom:.25em;padding-bottom:.25em;border-bottom:1px solid #eee;">
-                {{ place.name }}<br>
-                {{ place.location.distanceTo(placeListCtrl.userLocation) | number }} kilometrota
+    <div ng-controller="PlaceListController as plistCtrl">
+        <header>
+            <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
+            <!--<i class="right icon-share"></i>-->
+            <h1 class="title">{{ (plistCtrl.section + '.' + plistCtrl.group)|translate }}</h1>
+        </header>
+        <div class="overthrow">
+            <h1 class="placeholder" ng-show="plistCtrl.status.isLoading">Loading...</h1>
+            <div ng-show="!plistCtrl.status.isLoading">
+                Longitude: <input ng-model="plistCtrl.userLocation.longitude"/></br>
+                Latitude: <input ng-model="plistCtrl.userLocation.latitude"/></br>
+                {{ plistCtrl.pager.getPage() }} / {{ plistCtrl.pager.getTotalPages() }}<br/>
+                <a class="small button" ng-click="plistCtrl.pager.prev()">Previous</a>
+                <a class="small button" ng-click="plistCtrl.pager.next()">Next</a>
+                <br>
+                Order by: <a class="small button" ng-click="plistCtrl.byName()">Name</a> <a class="small button" ng-click="plistCtrl.byDistance()">Distance</a><br>
+                <br>
+                <div ng-repeat="place in plistCtrl.pager.getItems()" style="margin-bottom:.25em;padding-bottom:.25em;border-bottom:1px solid #eee;"
+                    ng-click="navCtrl.pushView('place.view', { id: place.id })"
+                    >
+                    {{ place.name }}<br>
+                    {{ place.location.distanceTo(plistCtrl.userLocation) | number }} kilometrota
+                </div>
             </div>
         </div>
     </div>
 </script>
 
-<!--
-<section class="on-{{ navCtrl.activeView }}"  ng-controller="PlacesController as placesCtrl">
-
-</section>
--->
+<script type="text/ng-template" id="place.view">
+    <div ng-controller="PlaceViewController as pviewCtrl">
+        <header>
+            <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
+            <!--<i class="right icon-share"></i>-->
+            <h1 class="title">{{ pviewCtrl.place.name }}</h1>
+        </header>
+        <div class="overthrow">
+            <h1 class="placeholder" ng-show="pviewCtrl.status.isLoading">Loading...</h1>
+            <div ng-show="!pviewCtrl.status.isLoading">
+                <h2>{{ pviewCtrl.place.name }}</h2>
+            </div>
+        </div>
+    </div>
+</script>

@@ -19,7 +19,7 @@ Z.app.config(['$routeProvider', '$locationProvider', 'babelProvider', 'menuProvi
             id: 'places',
             route: '/places/:section',
             path: '/places/places',
-            icon: 'icon-temperature color-violet',
+            icon: 'icon-location color-violet',
             templateUrl: 'views/places.html'
         },
         {

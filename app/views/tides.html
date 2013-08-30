@@ -1,0 +1,18 @@
+<section class="on-{{ navCtrl.activeView }}" ng-controller="TidesController as tidesCtrl">
+    <div>
+        <header>
+            <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
+            <h1 class="title">{{ 'tides'|translate }}</h1>
+        </header>
+        <div class="overthrow">
+            <h1 class="placeholder" ng-show="tidesCtrl.status.isLoading">Loading...</h1>
+            <div ng-show="!tidesCtrl.status.isLoading">
+                <div ng-repeat="tide in tidesCtrl.tides">
+                    {{ tide.date }}<br>
+                    Tides: {{ tide.getTides() }}<br>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

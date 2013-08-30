@@ -35,15 +35,6 @@ Z.catalogue = {
         'fr': ''
     },
     //
-    // Sea
-    //
-    'sea': {
-        'eu': 'Itsasoaren egoera',
-        'es': 'Estado del mar',
-        'en': 'Sea',
-        'fr': ''
-    },
-    //
     // Settings
     //
     'settings': {
@@ -129,6 +120,15 @@ Z.catalogue = {
         'es': 'Zarauztarra',
         'en': 'Zarauztarra',
         'fr': 'Zarauztarra'
+    },
+    //
+    // Tides
+    //
+    'tides': {
+        'eu': 'Mareak',
+        'es': 'Mareas',
+        'en': 'Tides',
+        'fr': ''
     },
     //
     // Weather

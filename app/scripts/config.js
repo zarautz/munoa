@@ -37,7 +37,7 @@ Z.app.config(['$routeProvider', '$locationProvider', 'babelProvider', 'menuProvi
             templateUrl: 'views/places.html'
         },
         {
-            id: 'sea',
+            id: 'tides',
             icon: 'icon-swim color-light-blue'
         },
         {
@@ -65,7 +65,7 @@ Z.app.config(['$routeProvider', '$locationProvider', 'babelProvider', 'menuProvi
         'zuzarautz',
         'events',
         'weather',
-        'sea',
+        'tides',
         'poi',
         'places',
         'health'
@@ -77,7 +77,7 @@ Z.app.config(['$routeProvider', '$locationProvider', 'babelProvider', 'menuProvi
         'events',
         'weather',
         'places',
-        'sea',
+        'tides',
         'zuzarautz',
         'health'
     ]);

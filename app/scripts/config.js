@@ -90,6 +90,5 @@ Z.app.config(['$routeProvider', '$locationProvider', 'babelProvider', 'menuProvi
         $routeProvider.when(item.path, {templateUrl: item.templateUrl});
     });
 
-    //$routeProvider.otherwise({redirectTo: '/zuzarautz'});
-    $locationProvider.html5Mode(true);
+    $routeProvider.otherwise({redirectTo: '/'});
 }]);

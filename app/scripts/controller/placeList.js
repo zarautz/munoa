@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'settings', function($scope, placesMapper, settings) {
+Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placesConfig', 'settings', function($scope, placesMapper, placesConfig, settings) {
     this.byDistance = function () {
         var that = this;
 
@@ -22,8 +22,9 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'settings', f
     this.refresh = function () {
         this.section = $scope.pushData.section;
         this.group   = $scope.pushData.group;
+        this.types   = placesConfig.getSection(this.section).getGroup(this.group).getTypes();
 
-        var places = placesMapper.get({'language': settings.get('language'), 'types': $scope.pushData.group });
+        var places = placesMapper.get({'language': settings.get('language'), 'types': this.types.join(',') });
 
         this.status = places.status;
         this.places = places.promise;

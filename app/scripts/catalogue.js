@@ -11,6 +11,15 @@ Z.catalogue = {
         'fr': ''
     },
     //
+    // Health
+    //
+    'health': {
+        'eu': 'Osasun zerbitzuak',
+        'es': '',
+        'en': '',
+        'fr': ''
+    },
+    //
     // Meta
     //
     'meta.lastUpdated': {
@@ -24,6 +33,15 @@ Z.catalogue = {
         'es': 'Fuentes',
         'en': 'Sources',
         'fr': 'Sources'
+    },
+    //
+    // Places
+    //
+    'places': {
+        'eu': 'Lekuak',
+        'es': '',
+        'en': '',
+        'fr': ''
     },
     //
     // Point Of Interest

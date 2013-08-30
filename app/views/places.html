@@ -30,6 +30,10 @@
         <div class="overthrow">
             <h1 class="placeholder" ng-show="plistCtrl.status.isLoading">Loading...</h1>
             <div ng-show="!plistCtrl.status.isLoading">
+                <div ng-if="plistCtrl.types.length > 1">
+                    Types filter:
+                    {{ plistCtrl.types }}
+                </div>
                 Longitude: <input ng-model="plistCtrl.userLocation.longitude"/></br>
                 Latitude: <input ng-model="plistCtrl.userLocation.latitude"/></br>
                 {{ plistCtrl.pager.getPage() }} / {{ plistCtrl.pager.getTotalPages() }}<br/>

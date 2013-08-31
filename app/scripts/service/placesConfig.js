@@ -38,15 +38,30 @@ Z.PlacesConfig.Section.prototype.getGroup = function (name) {
     return this.groups[name];
 };
 
-Z.PlacesConfig.Section.prototype.getGroups = function () {
+Z.PlacesConfig.Section.prototype.getGroups = function (profile) {
     var groups = [],
+        that   = this,
         group;
 
     for (group in this.groups) {
         groups.push(group);
     }
 
+    groups.sort(function (a, b) {
+        return that.groups[a].sort[profile] - that.groups[b].sort[profile];
+    });
+
     return groups;
+};
+
+Z.PlacesConfig.Section.prototype.sortGroups = function(profile, sorting) {
+    var i, group;
+
+    for (i = 0; i < sorting.length; i++) {
+        this.groups[sorting[i]].sort[profile] = i;
+    }
+
+    return this;
 };
 
 //
@@ -54,6 +69,7 @@ Z.PlacesConfig.Section.prototype.getGroups = function () {
 //
 Z.PlacesConfig.Group = function () {
     this.types = [];
+    this.sort  = {};
 };
 
 Z.PlacesConfig.Group.prototype.setTypes = function (types) {
@@ -82,6 +98,9 @@ Z.app.factory('placesConfig', [function() {
 
     group = section.addGroup('misc');
     group.setTypes(['dentist','doctor','health','health_center','optician','physiotherapist','podologist','psychologist','urgent_care']);
+
+    section.sortGroups('tourist', ['pharmacy', 'misc']);
+    section.sortGroups('zarautz', ['pharmacy', 'misc']);
 
     //
     // Places
@@ -115,6 +134,9 @@ Z.app.factory('placesConfig', [function() {
     group = section.addGroup('lodging');
     group.setTypes(['lodging']);
 
+    section.sortGroups('tourist', ['gastronomy', 'lodging', 'wifi', 'atm', 'stores', 'parking', 'sports', 'transport', 'recycling']);
+    section.sortGroups('zarautz', ['wifi', 'atm', 'stores', 'parking', 'sports', 'transport', 'recycling', 'gastronomy', 'lodging']);
+
     //
     // POI
     //
@@ -122,6 +144,9 @@ Z.app.factory('placesConfig', [function() {
 
     group = section.addGroup('atm');
     group.setTypes(['atm']);
+
+    section.sortGroups('tourist', ['atm']);
+    section.sortGroups('zarautz', ['atm']);
 
     //
     // RETURN CONFIG INSTANCE

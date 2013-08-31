@@ -2,11 +2,16 @@
 
 Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placesConfig', 'settings', 'sort', 'filter', function($scope, placesMapper, placesConfig, settings, sort, filter) {
     this.clearFilters = function () {
+        this.filter.show  = false;
         this.filter.name  = null;
         this.filter.price = null;
         this.filter.type  = null;
 
         this.refreshList();
+    };
+
+    this.isFiltered = function () {
+        return this.filter.name !== null || this.filter.price !== null || this.filter.type !== null;
     };
 
     this.refresh = function () {
@@ -46,15 +51,18 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placesConfig
     };
 
     this.setFilter = function (filter, value) {
-        // If saved value == setFilter value then we switch off the filter
-        if (this.filter[filter] === value) {
-            this.filter[filter] = null;
-        } else {
-            // KeyUp fix
-            if (filter === 'name' && value === undefined) {
+        if (filter === 'name') {
+            if (!value) {
+                value = null;
+            } else {
                 value = this.filter.name;
             }
+        }
 
+        // If saved value == setFilter value then we switch off the filter
+        if (this.filter[filter] === value && filter !== 'name') {
+            this.filter[filter] = null;
+        } else {
             if (value !== null) {
                 this.filter[filter] = value;
             } else {

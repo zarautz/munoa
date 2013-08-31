@@ -31,7 +31,10 @@
             margin-right:.5em;
             cursor: pointer;
         }
-        .filterOn     { background-color: yellow; }
+        .filterOn { background-color: yellow; }
+        .filterInputOn {
+            border-bottom: 10px solid yellow;
+        }
     </style>
     <div ng-controller="PlaceListController as plistCtrl">
         <header>
@@ -43,10 +46,10 @@
             <h1 class="placeholder" ng-show="plistCtrl.status.isLoading">Loading...</h1>
             <div ng-show="!plistCtrl.status.isLoading">
                 <div ng-show="plistCtrl.filter.show">
-                    <h3>Filters <span style="float:right;" class="filterButton" ng-click="plistCtrl.clearFilters()">Garbitu</span></h3>
+                    <h3>Filters <span ng-show="plistCtrl.isFiltered()" style="float:right;" class="filterButton" ng-click="plistCtrl.clearFilters()">Garbitu</span></h3>
                     <div class="filterMargin">
                         Name: 
-                        <input ng-model="plistCtrl.filter.name" ng-keyup="plistCtrl.setFilter('name')" />
+                        <span ng-class="{filterInputOn: plistCtrl.filter.name !== null}"><input ng-model="plistCtrl.filter.name" ng-change="plistCtrl.setFilter('name', plistCtrl.filter.name)" /></span>
                         <span class="filterButton" ng-click="plistCtrl.setFilter('name', '')">X</span>
                     </div>
                     <div class="filterMargin">
@@ -85,6 +88,9 @@
                 <span class="filterButton" ng-class="{filterOn: plistCtrl.sorting.type == 'name'}" ng-click="plistCtrl.setSorting('name')">Name</span>
                 <span class="filterButton" ng-class="{filterOn: plistCtrl.sorting.type == 'distance'}" ng-click="plistCtrl.setSorting('distance')">Distance</span>
                 <hr>
+                <div ng-show="plistCtrl.isFiltered()" style="background-color:#ffc;">
+                    Zerrenda filtratuta dago <span style="float:right;" ng-click="plistCtrl.toggleFilters()" ng-hide="plistCtrl.filter.show">Ikusi</span>
+                </div>
                 <div ng-repeat="place in plistCtrl.pager.getAllItems()" style="margin-bottom:.25em;padding-bottom:.25em;border-bottom:1px solid #eee;"
                     ng-click="navCtrl.pushView('place.view', { id: place.id })"
                     >

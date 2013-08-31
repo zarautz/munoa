@@ -55,7 +55,7 @@ Z.PlacesConfig.Section.prototype.getGroups = function (profile) {
 };
 
 Z.PlacesConfig.Section.prototype.sortGroups = function(profile, sorting) {
-    var i, group;
+    var i;
 
     for (i = 0; i < sorting.length; i++) {
         this.groups[sorting[i]].sort[profile] = i;

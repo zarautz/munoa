@@ -119,7 +119,7 @@ Z.app.factory('placesConfig', [function() {
     group.setTypes(['atm']);
 
     group = section.addGroup('stores');
-    group.setTypes(['hardware_store']);
+    group.setTypes(['hardware_store', 'bakery', 'butcher_shop', 'fish_shop', 'food', 'fruit_shop', 'grocery_or_supermarket', 'ice_cream_parlor']);
     group.setShowPriceFilter(true);
 
     group = section.addGroup('parking');
@@ -135,7 +135,7 @@ Z.app.factory('placesConfig', [function() {
     group.setTypes(['recycling']);
 
     group = section.addGroup('gastronomy');
-    group.setTypes(['bakery', 'bar', 'butcher_shop', 'cafe', 'fish_shop', 'food', 'fruit_shop', 'grocery_or_supermarket', 'ice_cream_parlor', 'meal_takeaway', 'night_club', 'restaurant', 'wine_store']);
+    group.setTypes(['bar', 'cafe', 'meal_takeaway', 'night_club', 'restaurant', 'wine_store']);
     group.setShowPriceFilter(true);
 
     group = section.addGroup('lodging');

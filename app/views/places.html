@@ -21,32 +21,76 @@
 </section>
 
 <script type="text/ng-template" id="place.list">
+    <style type="text/css">
+        .filterMargin { margin-bottom: .5em; }
+        .filterButton { 
+            display: inline-block;
+            margin-bottom: .2em;
+            padding:.25em .5em;
+            background-color:#fafafa;
+            margin-right:.5em;
+            cursor: pointer;
+        }
+        .filterOn     { background-color: yellow; }
+    </style>
     <div ng-controller="PlaceListController as plistCtrl">
         <header>
             <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
-            <!--<i class="right icon-share"></i>-->
+            <a ng-click="plistCtrl.toggleFilters()"><i class="right icon-search"></i></a>
             <h1 class="title">{{ (plistCtrl.section + '.' + plistCtrl.group)|translate }}</h1>
         </header>
         <div class="overthrow">
             <h1 class="placeholder" ng-show="plistCtrl.status.isLoading">Loading...</h1>
             <div ng-show="!plistCtrl.status.isLoading">
-                <div ng-if="plistCtrl.types.length > 1">
-                    Types filter:
-                    {{ plistCtrl.types }}
+                <div ng-show="plistCtrl.filter.show">
+                    <h3>Filters <span style="float:right;" class="filterButton" ng-click="plistCtrl.clearFilters()">Garbitu</span></h3>
+                    <div class="filterMargin">
+                        Name: 
+                        <input ng-model="plistCtrl.filter.name" ng-keyup="plistCtrl.setFilter('name')" />
+                        <span class="filterButton" ng-click="plistCtrl.setFilter('name', '')">X</span>
+                    </div>
+                    <div class="filterMargin">
+                        Price: 
+                        <span 
+                            class="filterButton"
+                            ng-class="{filterOn: price == plistCtrl.filter.price}"
+                            ng-repeat="price in plistCtrl.prices"
+                            ng-click="plistCtrl.setFilter('price', price)">
+                            {{ price }}
+                        </span>
+                        <span class="filterButton" ng-click="plistCtrl.setFilter('price', null)">X</span>
+                    </div>
+                    <div ng-if="plistCtrl.types.length > 1" class="filterMargin">
+                        Types: 
+                        <span 
+                            class = "filterButton"
+                            ng-class="{filterOn: type == plistCtrl.filter.type}"
+                            ng-repeat="type in plistCtrl.types"
+                            ng-click="plistCtrl.setFilter('type', type)">
+                            {{ type }}
+                        </span>
+                        <span class="filterButton" ng-click="plistCtrl.setFilter('type', null)">X</span>
+                    </div>
+                    <hr>
                 </div>
+                <!--
                 Longitude: <input ng-model="plistCtrl.userLocation.longitude"/></br>
                 Latitude: <input ng-model="plistCtrl.userLocation.latitude"/></br>
+                -->
+                <!--
                 {{ plistCtrl.pager.getPage() }} / {{ plistCtrl.pager.getTotalPages() }}<br/>
                 <a class="small button" ng-click="plistCtrl.pager.prev()">Previous</a>
                 <a class="small button" ng-click="plistCtrl.pager.next()">Next</a>
-                <br>
-                Order by: <a class="small button" ng-click="plistCtrl.byName()">Name</a> <a class="small button" ng-click="plistCtrl.byDistance()">Distance</a><br>
-                <br>
-                <div ng-repeat="place in plistCtrl.pager.getItems()" style="margin-bottom:.25em;padding-bottom:.25em;border-bottom:1px solid #eee;"
+                -->
+                <span class="filterButton" ng-class="{filterOn: plistCtrl.sorting.type == 'name'}" ng-click="plistCtrl.setSorting('name')">Name</span>
+                <span class="filterButton" ng-class="{filterOn: plistCtrl.sorting.type == 'distance'}" ng-click="plistCtrl.setSorting('distance')">Distance</span>
+                <hr>
+                <div ng-repeat="place in plistCtrl.pager.getAllItems()" style="margin-bottom:.25em;padding-bottom:.25em;border-bottom:1px solid #eee;"
                     ng-click="navCtrl.pushView('place.view', { id: place.id })"
                     >
                     {{ place.name }}<br>
-                    {{ place.location.distanceTo(plistCtrl.userLocation) | number }} kilometrota
+                    {{ place.location.distanceTo(plistCtrl.userLocation) * 1000 | number:0 }} metrota<br>
+                    <span ng-repeat="type in place.types">{{ type.name }}</span>
                 </div>
             </div>
         </div>

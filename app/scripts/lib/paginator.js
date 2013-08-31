@@ -11,6 +11,10 @@ Z.Paginator.prototype._checkPageNumber = function () {
     this._page = (this._page > this._totalPages) ? this._totalPages : ((this._page < 1) ? 1 : this._page);
 };
 
+Z.Paginator.prototype.getAllItems = function() {
+    return this._items;
+};
+
 Z.Paginator.prototype.getItems = function () {
     var offset = (this._page - 1) * this._pageSize;
 

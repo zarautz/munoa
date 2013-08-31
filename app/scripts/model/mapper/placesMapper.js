@@ -30,7 +30,7 @@ Z.app.factory('placesMapper', ['$q', 'placesSource', 'placeTypesSource', functio
             places.push(new Z.Model.Place(place));
         }
 
-        return new Z.Model.PlaceCollection(places);
+        return places;
     });
 
     return placesMapper;

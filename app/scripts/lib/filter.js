@@ -6,7 +6,7 @@ Z.Filter = function Filter() {
 
 Z.Filter.prototype.addType = function (name, fn) {
     this.types[name] = fn;
-}
+};
 
 Z.Filter.prototype.filter = function(array, configs) {
     var result = [],
@@ -40,5 +40,5 @@ Z.Filter.prototype.filter = function(array, configs) {
         return array;
     }
 
-    return result;    
+    return result;
 };

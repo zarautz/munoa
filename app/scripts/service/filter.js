@@ -7,10 +7,10 @@ Z.app.factory('filter', [function() {
         testType = testType || 'contains';
         testType = testType.toLowerCase();
 
-        if (testType == 'contains') {
-            return this[property].toLowerCase().indexOf(value.toLowerCase()) != -1;
-        } else if (testType == 'equals') {
-            return this[property] == value;
+        if (testType === 'contains') {
+            return this[property].toLowerCase().indexOf(value.toLowerCase()) !== -1;
+        } else if (testType === 'equals') {
+            return this[property] === value;
         }
 
         return false;
@@ -20,7 +20,7 @@ Z.app.factory('filter', [function() {
         var i;
 
         for (i = 0; i < this.types.length; i++) {
-            if (this.types[i].code == type) {
+            if (this.types[i].code === type) {
                 return true;
             }
         }

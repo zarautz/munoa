@@ -5,7 +5,7 @@ Z.PlacesConfig = {};
 //
 // CONFIG
 //
-Z.PlacesConfig.Config = function () {}
+Z.PlacesConfig.Config = function () {};
 
 Z.PlacesConfig.Config.prototype.addSection = function (name) {
     var section = new Z.PlacesConfig.Section();
@@ -13,11 +13,11 @@ Z.PlacesConfig.Config.prototype.addSection = function (name) {
     this[name] = section;
 
     return section;
-}
+};
 
 Z.PlacesConfig.Config.prototype.getSection = function (name) {
     return this[name];
-}
+};
 
 //
 // SECTION

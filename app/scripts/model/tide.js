@@ -22,4 +22,4 @@ Z.Model.Tide.prototype.getTides = function () {
     }
 
     return tides;
-}
+};

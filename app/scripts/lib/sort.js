@@ -13,11 +13,10 @@ Z.Sort = function Sort() {
 
 Z.Sort.prototype.addType = function (name, fn) {
     this.types[name] = fn;
-}
+};
 
 Z.Sort.prototype.sort = function (array, config) {
-    var types = {},
-        i, sortFn;
+    var i, sortFn;
 
     array  = array.slice();
     config = config.reverse();

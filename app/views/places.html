@@ -90,7 +90,7 @@
                     >
                     {{ place.name }}<br>
                     {{ place.location.distanceTo(plistCtrl.userLocation) * 1000 | number:0 }} metrota<br>
-                    <span ng-repeat="type in place.types">{{ type.name }}</span>
+                    <span ng-repeat="type in place.types" style="margin-right:.25em;display:inline-block;">{{ type.name }}</span>
                 </div>
             </div>
         </div>

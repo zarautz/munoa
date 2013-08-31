@@ -17,7 +17,8 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placesConfig
     this.refresh = function () {
         this.section      = $scope.pushData.section;
         this.group        = $scope.pushData.group;
-        this.types        = placesConfig.getSection(this.section).getGroup(this.group).getTypes();
+        this.groupObj     = placesConfig.getSection(this.section).getGroup(this.group);
+        this.types        = this.groupObj.getTypes();
         this.prices       = [0, 1, 2, 3, 4];
         this.sorting      = {'type': null, 'order': null};
         this.filter       = {'show': false};

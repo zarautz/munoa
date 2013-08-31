@@ -52,7 +52,7 @@
                         <span ng-class="{filterInputOn: plistCtrl.filter.name !== null}"><input ng-model="plistCtrl.filter.name" ng-change="plistCtrl.setFilter('name', plistCtrl.filter.name)" /></span>
                         <span class="filterButton" ng-click="plistCtrl.setFilter('name', '')">X</span>
                     </div>
-                    <div class="filterMargin">
+                    <div class="filterMargin" ng-show="plistCtrl.groupObj.showPriceFilter">
                         Price: 
                         <span 
                             class="filterButton"

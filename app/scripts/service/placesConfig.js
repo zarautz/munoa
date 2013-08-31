@@ -68,8 +68,13 @@ Z.PlacesConfig.Section.prototype.sortGroups = function(profile, sorting) {
 // GROUP
 //
 Z.PlacesConfig.Group = function () {
-    this.types = [];
-    this.sort  = {};
+    this.types           = [];
+    this.sort            = {};
+    this.showPriceFilter = false;
+};
+
+Z.PlacesConfig.Group.prototype.getTypes = function () {
+    return this.types;
 };
 
 Z.PlacesConfig.Group.prototype.setTypes = function (types) {
@@ -77,8 +82,8 @@ Z.PlacesConfig.Group.prototype.setTypes = function (types) {
     this.types = types;
 };
 
-Z.PlacesConfig.Group.prototype.getTypes = function () {
-    return this.types;
+Z.PlacesConfig.Group.prototype.setShowPriceFilter = function (show) {
+    this.showPriceFilter = show;
 };
 
 //
@@ -115,6 +120,7 @@ Z.app.factory('placesConfig', [function() {
 
     group = section.addGroup('stores');
     group.setTypes(['hardware_store']);
+    group.setShowPriceFilter(true);
 
     group = section.addGroup('parking');
     group.setTypes(['parking']);
@@ -129,10 +135,12 @@ Z.app.factory('placesConfig', [function() {
     group.setTypes(['recycling']);
 
     group = section.addGroup('gastronomy');
-    group.setTypes(['gastronomy']);
+    group.setTypes(['bakery', 'bar', 'butcher_shop', 'cafe', 'fish_shop', 'food', 'fruit_shop', 'grocery_or_supermarket', 'ice_cream_parlor', 'meal_takeaway', 'night_club', 'restaurant', 'wine_store']);
+    group.setShowPriceFilter(true);
 
     group = section.addGroup('lodging');
     group.setTypes(['lodging']);
+    group.setShowPriceFilter(true);
 
     section.sortGroups('tourist', ['gastronomy', 'lodging', 'wifi', 'atm', 'stores', 'parking', 'sports', 'transport', 'recycling']);
     section.sortGroups('zarautz', ['wifi', 'atm', 'stores', 'parking', 'sports', 'transport', 'recycling', 'gastronomy', 'lodging']);

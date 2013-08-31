@@ -70,7 +70,7 @@
                             ng-class="{filterOn: type == plistCtrl.filter.type}"
                             ng-repeat="type in plistCtrl.types"
                             ng-click="plistCtrl.setFilter('type', type)">
-                            {{ type }}
+                            {{ plistCtrl.typesI18N[type] }}
                         </span>
                         <span class="filterButton" ng-click="plistCtrl.setFilter('type', null)">X</span>
                     </div>

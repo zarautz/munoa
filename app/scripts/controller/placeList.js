@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placesConfig', 'settings', 'sort', 'filter', function($scope, placesMapper, placesConfig, settings, sort, filter) {
+Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMapper', 'placesConfig', 'settings', 'sort', 'filter', function($scope, placesMapper, placeTypesMapper, placesConfig, settings, sort, filter) {
     this.clearFilters = function () {
         this.filter.show  = false;
         this.filter.name  = null;
@@ -10,29 +10,70 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placesConfig
         this.refreshList();
     };
 
-    this.isFiltered = function () {
-        return this.filter.name !== null || this.filter.price !== null || this.filter.type !== null;
+    this.initData = function () {
+        var that = this,
+            i;
+
+        // PlaceTypes for filter types i18n
+        var placeTypes = placeTypesMapper.get({'language': settings.get('language')});
+
+        this.placeTypesStatus = placeTypes.status;
+        this.placeTypes       = placeTypes.promise;
+
+        this.placeTypes.then(function (types) {
+            // Save i18n names
+            for (i = 0; i < that.types.length; i++) {
+                that.typesI18N[that.types[i]] = types[that.types[i]].name;
+            }
+
+            // Sort types based on typesI18N
+            that.types.sort(function (a, b) {
+                a = that.typesI18N[a].toLowerCase();
+                b = that.typesI18N[b].toLowerCase();
+
+                if (a < b) {
+                    return -1;
+                } else if (a > b) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            });
+        });
+
+        // Group place list
+        var places = placesMapper.get({'language': settings.get('language'), 'types': this.types.join(',') });
+
+        this.placesStatus = places.status;
+        this.places       = places.promise;
+
+        // Metastatus
+        this.status = new Z.Status([this.placeTypesStatus, this.placesStatus]);
     };
 
-    this.refresh = function () {
+    this.initVars = function () {
         this.section      = $scope.pushData.section;
         this.group        = $scope.pushData.group;
         this.groupObj     = placesConfig.getSection(this.section).getGroup(this.group);
         this.types        = this.groupObj.getTypes();
+        this.typesI18N    = {};
         this.prices       = [0, 1, 2, 3, 4];
         this.sorting      = {'type': null, 'order': null};
         this.filter       = {'show': false};
         this.userLocation = new Z.Model.Point(-2.175637, 43.286450);
         this.list         = [];
+        this.pager        = new Z.Paginator();
 
-        this.pager = new Z.Paginator();
         this.pager.setPageSize(10);
+    };
 
-        var places = placesMapper.get({'language': settings.get('language'), 'types': this.types.join(',') });
+    this.isFiltered = function () {
+        return this.filter.name !== null || this.filter.price !== null || this.filter.type !== null;
+    };
 
-        this.status = places.status;
-        this.places = places.promise;
-
+    this.refresh = function () {
+        this.initVars();
+        this.initData();
         this.clearFilters();
         this.setSorting('name');
     };

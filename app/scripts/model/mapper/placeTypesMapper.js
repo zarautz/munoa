@@ -5,7 +5,7 @@ Z.app.factory('placeTypesMapper', ['$q', 'placeTypesSource', function ($q, place
 
     placeTypesMapper.setSources([placeTypesSource]);
     placeTypesMapper.setMapperCb(function (values) {
-        return values;
+        return values[0].data;
     });
 
     return placeTypesMapper;

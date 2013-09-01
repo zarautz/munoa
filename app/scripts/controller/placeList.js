@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMapper', 'placesConfig', 'settings', 'sort', 'filter', function($scope, placesMapper, placeTypesMapper, placesConfig, settings, sort, filter) {
+Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMapper', 'placesConfig', 'settings', 'sort', 'filter', 'geolocation', function($scope, placesMapper, placeTypesMapper, placesConfig, settings, sort, filter, geolocation) {
     this.clearFilters = function () {
         this.filter.show  = false;
         this.filter.name  = null;
@@ -12,13 +12,11 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
 
     this.initData = function () {
         var that = this,
-            i;
+            i;        
 
         // PlaceTypes for filter types i18n
-        var placeTypes = placeTypesMapper.get({'language': settings.get('language')});
-
-        this.placeTypesStatus = placeTypes.status;
-        this.placeTypes       = placeTypes.promise;
+        var placeTypes  = placeTypesMapper.get({'language': settings.get('language')});
+        this.placeTypes = placeTypes.promise;
 
         this.placeTypes.then(function (types) {
             // Save i18n names
@@ -42,13 +40,11 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
         });
 
         // Group place list
-        var places = placesMapper.get({'language': settings.get('language'), 'types': this.types.join(',') });
-
-        this.placesStatus = places.status;
-        this.places       = places.promise;
+        var places  = placesMapper.get({'language': settings.get('language'), 'types': this.types.join(',') });
+        this.places = places.promise;
 
         // Metastatus
-        this.status = new Z.Status([this.placeTypesStatus, this.placesStatus]);
+        this.status = new Z.Status([placeTypes.status, places.status]);
     };
 
     this.initVars = function () {
@@ -60,9 +56,9 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
         this.prices       = [0, 1, 2, 3, 4];
         this.sorting      = {'type': null, 'order': null};
         this.filter       = {'show': false};
-        this.userLocation = new Z.Model.Point(-2.175637, 43.286450);
         this.list         = [];
         this.pager        = new Z.Paginator();
+        this.userLocation = geolocation.getCurrentPosition();
 
         this.pager.setPageSize(10);
     };

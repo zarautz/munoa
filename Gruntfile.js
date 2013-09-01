@@ -294,12 +294,6 @@ module.exports = function (grunt) {
                 }
             },
         }
-        /*
-        exec: {
-            phonegap: {
-                cmd: 'curl -u illarra.bros@gmail.com -X PUT -F file=@./build.zip https://build.phonegap.com/api/v1/apps/448397'
-            }
-        },*/
     });
 
     grunt.renameTask('regarde', 'watch');

@@ -77,17 +77,15 @@
                     <hr>
                 </div>
                 <!--
-                Longitude: <input ng-model="plistCtrl.userLocation.longitude"/></br>
-                Latitude: <input ng-model="plistCtrl.userLocation.latitude"/></br>
-                -->
-                <!--
                 {{ plistCtrl.pager.getPage() }} / {{ plistCtrl.pager.getTotalPages() }}<br/>
                 <a class="small button" ng-click="plistCtrl.pager.prev()">Previous</a>
                 <a class="small button" ng-click="plistCtrl.pager.next()">Next</a>
                 -->
-                <span class="filterButton" ng-class="{filterOn: plistCtrl.sorting.type == 'name'}" ng-click="plistCtrl.setSorting('name')">Name</span>
-                <span class="filterButton" ng-class="{filterOn: plistCtrl.sorting.type == 'distance'}" ng-click="plistCtrl.setSorting('distance')">Distance</span>
-                <hr>
+                <div ng-if="plistCtrl.userLocation.location !== false">
+                    <span class="filterButton" ng-class="{filterOn: plistCtrl.sorting.type == 'name'}" ng-click="plistCtrl.setSorting('name')">Name</span>
+                    <span class="filterButton" ng-class="{filterOn: plistCtrl.sorting.type == 'distance'}" ng-click="plistCtrl.setSorting('distance')">Distance</span>
+                    <hr>
+                </div>
                 <div ng-show="plistCtrl.isFiltered()" style="background-color:#ffc;">
                     Zerrenda filtratuta dago <span style="float:right;" ng-click="plistCtrl.toggleFilters()" ng-hide="plistCtrl.filter.show">Ikusi</span>
                 </div>
@@ -95,7 +93,9 @@
                     ng-click="navCtrl.pushView('place.view', { id: place.id })"
                     >
                     {{ place.name }}<br>
-                    {{ place.location.distanceTo(plistCtrl.userLocation) * 1000 | number:0 }} metrota<br>
+                    <div ng-if="plistCtrl.userLocation.location !== false">
+                        {{ place.location.distanceTo(plistCtrl.userLocation.location) * 1000 | number:0 }} metrota<br>
+                    </div>
                     <span ng-repeat="type in place.types" style="margin-right:.25em;display:inline-block;">{{ type.name }}</span>
                 </div>
             </div>

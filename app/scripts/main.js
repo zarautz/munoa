@@ -11,3 +11,7 @@ Z.app.filter('translate', ['babel', function (babel) {
         return babel.translate(key);
     };
 }]);
+
+Z.app.run(['phonegap', 'geolocation', function (phonegap, geolocation) {
+    // We force early initialization by injecting the services
+}]);

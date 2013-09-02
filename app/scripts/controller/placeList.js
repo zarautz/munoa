@@ -143,7 +143,7 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
             // Sort
             //
             if (that.sorting.type === 'distance') {
-                sortCfg.push({type: 'distance', order: that.sorting.order, params: [places, that.userLocation]});
+                sortCfg.push({type: 'distance', order: that.sorting.order, params: [places, that.userLocation.location]});
             }
 
             sortCfg.push({type: 'property', order: that.sorting.order, params: ['name']});

@@ -6,7 +6,7 @@ Z.app.factory('geolocation', ['$q', '$timeout', 'phonegap', function($q, $timeou
     };
 
     function fetchCurrentPosition() {
-        console.debug('[PHONEGAP] GeoLocation: ', currentPosition.location);
+        console.debug('[PHONEGAP] GeoLocation: ', currentPosition.location === false ? false : [currentPosition.location.longitude, currentPosition.location.latitude]);
 
         phonegap.onDeviceReady().then(function () {
             navigator.geolocation.getCurrentPosition(function (position) {

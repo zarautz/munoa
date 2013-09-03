@@ -39,14 +39,16 @@ https://build.phonegap.com/docs/config-xml
     Splash Screen
     The splash screen for both platforms must be hidden via javascript
     on the "deviceready" event.
+
+    https://github.com/phonegap/phonegap/wiki/App-Splash-Screen-Sizes
     http://fusiongrokker.com/post/phonegap-build-splash-screen-sizes-xml-ref
     -->
     <!-- Android -->
     <preference name="splash-screen-duration" value="60000" />
-    <gap:splash src="images/splash/android/320x426.png" gap:platform="android" gap:density="ldpi"  /><!-- width="320" height="426" -->
-    <gap:splash src="images/splash/android/320x470.png" gap:platform="android" gap:density="mdpi"  /><!-- width="320" height="470" -->
-    <gap:splash src="images/splash/android/480x640.png" gap:platform="android" gap:density="hdpi"  /><!-- width="480" height="640" -->
-    <gap:splash src="images/splash/android/720x960.png" gap:platform="android" gap:density="xhdpi" /><!-- width="720" height="960" -->
+    <gap:splash src="images/splash/android/200x320.png" gap:platform="android" gap:density="ldpi"  /><!-- width="320" height="426" -->
+    <gap:splash src="images/splash/android/320x480.png" gap:platform="android" gap:density="mdpi"  /><!-- width="320" height="470" -->
+    <gap:splash src="images/splash/android/480x800.png" gap:platform="android" gap:density="hdpi"  /><!-- width="480" height="640" -->
+    <gap:splash src="images/splash/android/720x1280.png" gap:platform="android" gap:density="xhdpi" /><!-- width="720" height="960" -->
     <!-- iOS -->
     <preference name="auto-hide-splash-screen" value="false" />
     <preference name="show-splash-screen-spinner" value="false" />

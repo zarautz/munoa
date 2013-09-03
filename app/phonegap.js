@@ -440,6 +440,13 @@ phonegapdesktop.objects = {
 // ************************************
 
 //
+// Splashscreen API - http://docs.phonegap.com/en/2.9.0/cordova_splashscreen_splashscreen.md.html
+navigator.splashscreen = {
+	hide: function () {},
+	show: function () {}
+}
+
+//
 //  Accelerometer API - http://docs.phonegap.com/cordova_accelerometer_accelerometer.md.html
 navigator.accelerometer = {
 	getCurrentAcceleration : function(accelerometerSuccess, accelerometerError) {

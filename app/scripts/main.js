@@ -12,6 +12,11 @@ Z.app.filter('translate', ['babel', function (babel) {
     };
 }]);
 
-Z.app.run(['phonegap', 'geolocation', function (phonegap, geolocation) {
-    // We force early initialization by injecting the services
+// We force early initialization by injecting the services
+Z.app.run(['$timeout', 'phonegap', 'geolocation', function ($timeout, phonegap, geolocation) {
+    phonegap.onDeviceReady().then(function () {
+        $timeout(function () {
+            navigator.splashscreen.hide();
+        }, 2000);
+    });
 }]);

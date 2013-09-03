@@ -40,6 +40,7 @@ https://build.phonegap.com/docs/config-xml
     The splash screen for both platforms must be hidden via javascript
     on the "deviceready" event.
 
+    http://developer.android.com/guide/practices/screens_support.html#testing
     https://github.com/phonegap/phonegap/wiki/App-Splash-Screen-Sizes
     http://fusiongrokker.com/post/phonegap-build-splash-screen-sizes-xml-ref
     -->

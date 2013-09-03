@@ -367,6 +367,10 @@ ul.drawer {
             font-size: .9em;
             color: $color-light-text;
         }
+
+        img {
+            width: 100%;
+        }
     }
 }
 
@@ -401,6 +405,10 @@ hr {
 
 .text-smallest {
     font-size: $smallest-font-size;
+}
+
+.text-light {
+    font-weight: 300;
 }
 
 .uppercase {

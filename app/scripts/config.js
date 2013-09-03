@@ -19,7 +19,7 @@ Z.app.config(['$routeProvider', '$locationProvider', 'babelProvider', 'menuProvi
             id: 'places',
             route: '/places/:section',
             path: '/places/places',
-            icon: 'icon-location color-violet',
+            icon: 'icon-location-alt color-violet',
             templateUrl: 'views/places.html'
         },
         {
@@ -66,20 +66,20 @@ Z.app.config(['$routeProvider', '$locationProvider', 'babelProvider', 'menuProvi
         'events',
         'weather',
         'tides',
-        'poi',
         'places',
-        'health'
+        'health',
+        'poi'
     ]);
 
     menuProvider.sortMenuItems('tourist', [
         'settings',
         'poi',
+        'places',
         'events',
         'weather',
-        'places',
         'tides',
-        'zuzarautz',
-        'health'
+        'health',
+        'zuzarautz'
     ]);
 
     // --------

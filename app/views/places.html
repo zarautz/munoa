@@ -6,12 +6,11 @@
         </header>
         <div class="overthrow">
             <ul class="small-block-grid-3 large-block-grid-4">
-                <li class="text-center text-smallest"
-                    style="border-bottom: 1px solid red; margin-bottom: 15px"
+                <li class="text-center text-smallest text-light"
                     ng-repeat="group in placesCtrl.groups"
-                    ng-click="navCtrl.pushView('place.list', { section: placesCtrl.section, group: group })">
-                    <p class="text-biggest"><i class="icon-home"></i></p>
-                    {{ group }}
+                    ng-click="navCtrl.pushView('place.list', { section: placesCtrl.section, group: group.name })">
+                    <p class="text-biggest"><i class="{{ group.icon }}"></i></p>
+                    {{ ('placesGroup.'+ placesCtrl.section +'.'+ group.name)|translate }}
                 </li>
             </ul>
         </div>
@@ -40,7 +39,7 @@
         <header>
             <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
             <a ng-click="plistCtrl.toggleFilters()"><i class="right icon-search"></i></a>
-            <h1 class="title">{{ (plistCtrl.section + '.' + plistCtrl.group)|translate }}</h1>
+            <h1 class="title">{{ ('placesGroup.'+ plistCtrl.section +'.'+ plistCtrl.group)|translate }}</h1>
         </header>
         <div class="overthrow">
             <h1 class="placeholder" ng-show="plistCtrl.status.isLoading">Loading...</h1>
@@ -107,7 +106,7 @@
     <div ng-controller="PlaceViewController as pviewCtrl">
         <header>
             <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
-            <!--<i class="right icon-share"></i>-->
+            <i class="right icon-star-empty"></i>
             <h1 class="title">{{ pviewCtrl.place.name }}</h1>
         </header>
         <div class="overthrow">

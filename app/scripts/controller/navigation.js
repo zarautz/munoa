@@ -2,7 +2,7 @@
 
 Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'menu', function ($scope, $location, $timeout, menu) {
     var that = this,
-        cssTransitionDuration = 200;
+        cssTransitionDuration = 300; // Actual transition is 200
 
     this.location = $location;
     this.menu = menu;

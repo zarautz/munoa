@@ -29,6 +29,7 @@ Z.PlacesConfig.Section = function () {
 Z.PlacesConfig.Section.prototype.addGroup = function (name) {
     var group = new Z.PlacesConfig.Group();
 
+    group.setName(name);
     this.groups[name] = group;
 
     return group;
@@ -40,15 +41,14 @@ Z.PlacesConfig.Section.prototype.getGroup = function (name) {
 
 Z.PlacesConfig.Section.prototype.getGroups = function (profile) {
     var groups = [],
-        that   = this,
         group;
 
     for (group in this.groups) {
-        groups.push(group);
+        groups.push(this.groups[group]);
     }
 
     groups.sort(function (a, b) {
-        return that.groups[a].sort[profile] - that.groups[b].sort[profile];
+        return a.sort[profile] - b.sort[profile];
     });
 
     return groups;
@@ -70,20 +70,38 @@ Z.PlacesConfig.Section.prototype.sortGroups = function(profile, sorting) {
 Z.PlacesConfig.Group = function () {
     this.types           = [];
     this.sort            = {};
+    this.name            = '';
+    this.icon            = '';
     this.showPriceFilter = false;
+};
+
+Z.PlacesConfig.Group.prototype.setTypes = function (types) {
+    types.sort();
+    this.types = types;
+
+    return this;
 };
 
 Z.PlacesConfig.Group.prototype.getTypes = function () {
     return this.types;
 };
 
-Z.PlacesConfig.Group.prototype.setTypes = function (types) {
-    types.sort();
-    this.types = types;
+Z.PlacesConfig.Group.prototype.setName = function (name) {
+    this.name = name;
+
+    return this;
+};
+
+Z.PlacesConfig.Group.prototype.setIcon = function (icon) {
+    this.icon = icon;
+
+    return this;
 };
 
 Z.PlacesConfig.Group.prototype.setShowPriceFilter = function (show) {
     this.showPriceFilter = show;
+
+    return this;
 };
 
 //
@@ -94,67 +112,140 @@ Z.app.factory('placesConfig', [function() {
         section, group;
 
     //
-    // Health
+    // HEALTH
     //
     section = config.addSection('health');
 
     group = section.addGroup('pharmacy');
-    group.setTypes(['pharmacy']);
+    group
+        .setTypes(['pharmacy'])
+        .setIcon('icon-hospital')
+    ;
 
-    group = section.addGroup('misc');
-    group.setTypes(['dentist','doctor','health','health_center','optician','physiotherapist','podologist','psychologist','urgent_care']);
+    group = section.addGroup('doctors');
+    group
+        .setTypes(['dentist','doctor','health','health_center','optician','physiotherapist','podologist','psychologist','urgent_care'])
+        .setIcon('icon-medical-alt')
+    ;
 
-    section.sortGroups('tourist', ['pharmacy', 'misc']);
-    section.sortGroups('zarautz', ['pharmacy', 'misc']);
+    section.sortGroups('tourist', ['pharmacy', 'doctors']);
+    section.sortGroups('zarautz', ['pharmacy', 'doctors']);
 
     //
-    // Places
+    // PLACES
     //
     section = config.addSection('places');
 
     group = section.addGroup('wifi');
-    group.setTypes(['wifi']);
+    group
+        .setTypes(['wifi'])
+        .setIcon('icon-wifi')
+    ;
 
     group = section.addGroup('atm');
-    group.setTypes(['atm']);
+    group
+        .setTypes(['atm'])
+        .setIcon('icon-credit-card')
+    ;
 
-    group = section.addGroup('stores');
-    group.setTypes(['hardware_store', 'bakery', 'butcher_shop', 'fish_shop', 'food', 'fruit_shop', 'grocery_or_supermarket', 'ice_cream_parlor']);
-    group.setShowPriceFilter(true);
+    group = section.addGroup('food');
+    group
+        .setTypes(['bakery', 'butcher_shop', 'fish_shop', 'food', 'fruit_shop', 'grocery_or_supermarket', 'ice_cream_parlor', 'general_store'])
+        .setIcon('icon-basket')
+        .setShowPriceFilter(true)
+    ;
+
+    group = section.addGroup('shopping');
+    group
+        .setTypes(['hardware_store', 'clothing_store'])
+        .setIcon('icon-shop')
+        .setShowPriceFilter(true)
+    ;
 
     group = section.addGroup('parking');
-    group.setTypes(['parking']);
+    group
+        .setTypes(['parking'])
+        .setIcon('icon-parking')
+    ;
 
-    group = section.addGroup('sports');
-    group.setTypes(['sports']);
+    group = section.addGroup('sports', 'golf', 'gym', 'surf_school');
+    group
+        .setTypes(['sports'])
+        .setIcon('icon-pitch')
+    ;
 
-    group = section.addGroup('transport');
-    group.setTypes(['transport']);
+    group = section.addGroup('transport', 'train_station');
+    group
+        .setTypes(['transport'])
+        .setIcon('icon-bus')
+    ;
 
     group = section.addGroup('recycling');
-    group.setTypes(['recycling']);
+    group
+        .setTypes(['recycling'])
+        .setIcon('icon-leaf')
+    ;
 
-    group = section.addGroup('gastronomy');
-    group.setTypes(['bar', 'cafe', 'meal_takeaway', 'night_club', 'restaurant', 'wine_store']);
-    group.setShowPriceFilter(true);
+    group = section.addGroup('drinking');
+    group
+        .setTypes(['bar', 'cafe', 'night_club', 'wine_store'])
+        .setIcon('icon-beer')
+        .setShowPriceFilter(true)
+    ;
+
+    group = section.addGroup('restaurant');
+    group
+        .setTypes(['meal_takeaway', 'restaurant'])
+        .setIcon('icon-restaurant')
+    ;
 
     group = section.addGroup('lodging');
-    group.setTypes(['lodging']);
-    group.setShowPriceFilter(true);
+    group
+        .setTypes(['lodging', 'campground'])
+        .setIcon('icon-lodging')
+        .setShowPriceFilter(true)
+    ;
 
-    section.sortGroups('tourist', ['gastronomy', 'lodging', 'wifi', 'atm', 'stores', 'parking', 'sports', 'transport', 'recycling']);
-    section.sortGroups('zarautz', ['wifi', 'atm', 'stores', 'parking', 'sports', 'transport', 'recycling', 'gastronomy', 'lodging']);
+    section.sortGroups('tourist', ['wifi', 'atm', 'food', 'restaurant', 'lodging', 'drinking', 'shopping', 'sports', 'parking', 'transport', 'recycling']);
+    section.sortGroups('zarautz', ['wifi', 'atm', 'transport', 'restaurant', 'drinking', 'food', 'shopping', 'sports', 'parking', 'recycling', 'lodging']);
 
     //
     // POI
     //
     section = config.addSection('poi');
 
-    group = section.addGroup('atm');
-    group.setTypes(['atm']);
+    group = section.addGroup('poi');
+    group
+        .setTypes(['point_of_interest'])
+        .setIcon('icon-tree-2')
+    ;
 
-    section.sortGroups('tourist', ['atm']);
-    section.sortGroups('zarautz', ['atm']);
+    group = section.addGroup('nature');
+    group
+        .setTypes(['natural_feature'])
+        .setIcon('icon-tree-2')
+    ;
+
+    group = section.addGroup('museum');
+    group
+        .setTypes(['museum', 'library'])
+        .setIcon('icon-town-hall')
+    ;
+
+    group = section.addGroup('theater');
+    group
+        .setTypes(['theater'])
+        .setIcon('icon-theatre')
+    ;
+
+    group = section.addGroup('sculpture');
+    group
+        .setTypes(['sculpture'])
+        .setIcon('icon-layers')
+    ;
+
+    section.sortGroups('tourist', ['nature', 'museum', 'sculpture', 'theater']);
+    section.sortGroups('zarautz', ['nature', 'museum', 'sculpture', 'theater']);
 
     //
     // RETURN CONFIG INSTANCE

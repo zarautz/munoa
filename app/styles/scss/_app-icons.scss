@@ -45,45 +45,99 @@
 .icon-na:before { content: '\f018'; } /* '' */
 .icon-celcius:before { content: '\f019'; } /* '' */
 .icon-fahrenheit:before { content: '\f020'; } /* '' */
+.icon-weather-53:before { content: '\f021'; } /* '' */
 .icon-moon-inv:before { content: '\f023'; } /* '' */
 .icon-sunrise:before { content: '\f031'; } /* '' */
+.icon-weather-11:before { content: '\f032'; } /* '' */
 .icon-moon:before { content: '\f033'; } /* '' */
 .icon-eclipse:before { content: '\f034'; } /* '' */
+.icon-weather-12:before { content: '\f035'; } /* '' */
 .icon-wind:before { content: '\f036'; } /* '' */
 .icon-snow:before { content: '\f037'; } /* '' */
+.icon-weather-13:before { content: '\f080'; } /* '' */
 .icon-cloud-moon:before { content: '\f039'; } /* '' */
+.icon-uv:before { content: '\f071'; } /* '' */
 .icon-fog:before { content: '\f043'; } /* '' */
+.icon-weather-14:before { content: '\f044'; } /* '' */
+.icon-weather-51:before { content: '\f046'; } /* '' */
+.icon-weather-43:before { content: '\f047'; } /* '' */
+.icon-weather-23:before { content: '\f048'; } /* '' */
 .icon-windy:before { content: '\f049'; } /* '' */
 .icon-windy-rain:before { content: '\f050'; } /* '' */
+.icon-weather-33:before { content: '\f081'; } /* '' */
+.icon-weather-35:before { content: '\f053'; } /* '' */
+.icon-weather-71:before { content: '\f054'; } /* '' */
+.icon-weather-15:before { content: '\f055'; } /* '' */
 .icon-info:before { content: '\f003'; } /* '' */
 .icon-left:before { content: '\f064'; } /* '' */
 .icon-right:before { content: '\f065'; } /* '' */
 .icon-home:before { content: '\f057'; } /* '' */
 .icon-sun-alt:before { content: '\f009'; } /* '' */
+.icon-rain:before { content: '\f070'; } /* '' */
+.icon-star:before { content: '\e827'; } /* '' */
+.icon-star-empty:before { content: '\e826'; } /* '' */
 .icon-layout:before { content: '\f002'; } /* '' */
 .icon-flag:before { content: '\f004'; } /* '' */
 .icon-ok:before { content: '\f066'; } /* '' */
+.icon-accessibility:before { content: '\e81e'; } /* '' */
+.icon-book:before { content: '\e81f'; } /* '' */
 .icon-cog-alt:before { content: '\f061'; } /* '' */
 .icon-cog:before { content: '\f060'; } /* '' */
+.icon-tag:before { content: '\e825'; } /* '' */
 .icon-share:before { content: '\f063'; } /* '' */
+.icon-location:before { content: '\f082'; } /* '' */
+.icon-basket:before { content: '\e823'; } /* '' */
+.icon-layers:before { content: '\e824'; } /* '' */
+.icon-bar:before { content: '\e80a'; } /* '' */
+.icon-beer:before { content: '\e80b'; } /* '' */
+.icon-bicycle:before { content: '\e81d'; } /* '' */
+.icon-bus:before { content: '\e80c'; } /* '' */
+.icon-cafe:before { content: '\e808'; } /* '' */
+.icon-campsite:before { content: '\e807'; } /* '' */
+.icon-credit-card:before { content: '\e81b'; } /* '' */
+.icon-fast-food:before { content: '\e806'; } /* '' */
+.icon-fuel:before { content: '\e811'; } /* '' */
+.icon-garden:before { content: '\e805'; } /* '' */
+.icon-golf:before { content: '\e820'; } /* '' */
+.icon-harbor:before { content: '\e814'; } /* '' */
+.icon-hospital:before { content: '\e804'; } /* '' */
+.icon-library:before { content: '\e803'; } /* '' */
+.icon-lodging:before { content: '\e802'; } /* '' */
+.icon-museum:before { content: '\e81a'; } /* '' */
+.icon-pitch:before { content: '\e813'; } /* '' */
+.icon-police:before { content: '\e810'; } /* '' */
+.icon-post:before { content: '\e816'; } /* '' */
+.icon-rail:before { content: '\e809'; } /* '' */
+.icon-religious-christian:before { content: '\e817'; } /* '' */
 .icon-spin:before { content: '\f069'; } /* '' */
+.icon-restaurant:before { content: '\e801'; } /* '' */
+.icon-school:before { content: '\e800'; } /* '' */
+.icon-shop:before { content: '\e818'; } /* '' */
+.icon-soccer:before { content: '\e821'; } /* '' */
 .icon-swim:before { content: '\f058'; } /* '' */
+.icon-theatre:before { content: '\e819'; } /* '' */
+.icon-town-hall:before { content: '\e80d'; } /* '' */
+.icon-trash:before { content: '\e80e'; } /* '' */
+.icon-tree-1:before { content: '\e80f'; } /* '' */
+.icon-tree-2:before { content: '\e81c'; } /* '' */
 .icon-right-open:before { content: '\f067'; } /* '' */
 .icon-left-open:before { content: '\f068'; } /* '' */
+.icon-location-alt:before { content: '\e822'; } /* '' */
 .icon-menu:before { content: '\f006'; } /* '' */
 .icon-medical-alt:before { content: '\f007'; } /* '' */
 .icon-medical:before { content: '\f008'; } /* '' */
 .icon-twitter:before { content: '\f059'; } /* '' */
 .icon-pictures:before { content: '\f001'; } /* '' */
+.icon-leaf:before { content: '\e812'; } /* '' */
 .icon-calendar:before { content: '\f005'; } /* '' */
+.icon-wifi:before { content: '\e815'; } /* '' */
 .icon-search:before { content: '\f062'; } /* '' */
-.icon-rain:before { content: '\f070'; } /* '' */
-.icon-uv:before { content: '\f071'; } /* '' */
-.icon-location:before { content: '\e802'; } /* '' */
+
+.icon-parking:before { content: 'P'; font-family: inherit; font-weight: bold; } /* '' */
 
 .icon-weather-11:before { content: '\f032'; } /* '' */
 .icon-weather-12:before,
-.icon-weather-13:before { content: '\e800'; } /* '' */
+.icon-weather-13:before { content: '\f080'; } /* '' */
 .icon-weather-14:before { content: '\f044'; } /* '' */
 .icon-weather-15:before,
 .icon-weather-16:before,
@@ -93,7 +147,7 @@
 .icon-weather-25:before,
 .icon-weather-26:before { content: '\f048'; } /* '' */
 .icon-weather-33:before,
-.icon-weather-34:before { content: '\e801'; } /* '' */
+.icon-weather-34:before { content: '\f081'; } /* '' */
 .icon-weather-35:before,
 .icon-weather-36:before { content: '\f053'; } /* '' */
 .icon-weather-43:before,
@@ -111,8 +165,7 @@
 .icon-weather-71:before,
 .icon-weather-72:before { content: '\f054'; } /* '' */
 .icon-weather-73:before,
-.icon-weather-74:before { content: '\e801'; } /* '' */
-
+.icon-weather-74:before { content: '\f081'; } /* '' */
 
 //
 // Animation example, for spinners

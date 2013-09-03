@@ -17,6 +17,6 @@ Z.app.run(['$timeout', 'phonegap', 'geolocation', function ($timeout, phonegap, 
     phonegap.onDeviceReady().then(function () {
         $timeout(function () {
             navigator.splashscreen.hide();
-        }, 2000);
+        }, 1500);
     });
 }]);

@@ -38,8 +38,8 @@
             {{ pushData.post.title }}
         </h1>
         <div class="content" ng-bind-html="pushData.post.getContent('medium')"></div>
-        <a href="{{ pushData.post.permalink }}" class="external-link">
-            "Zu Zarautz" webgunean ikusi
+        <a href ng-click="navCtrl.openExternalLink(pushData.post.permalink)" class="external-link">
+            Zu Zarautz webgunean ikusi
         </a>
     </div>
 </script>

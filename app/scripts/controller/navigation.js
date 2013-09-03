@@ -86,4 +86,8 @@ Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'me
             this.popView();
         }
     };
+
+    this.openExternalLink = function(url) {
+        window.open(url, '_system');
+    };
 }]);

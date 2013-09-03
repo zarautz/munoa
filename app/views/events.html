@@ -23,23 +23,27 @@
         </div>
     </div>
     <div ng-include="view2"></div>
+    <div ng-include="view3"></div>
 </section>
 
 <script type="text/ng-template" id="event.show">
-    <header>
-        <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
-        <!--<i class="right icon-share"></i>-->
-        <h1 class="title">{{ pushData.event.name }}</h1>
-    </header>
-    <div class="overthrow">
-        <h1 class="title">
-            {{ pushData.event.name }}
-        </h1>
-        {{ pushData.event.description }}
-        <hr>
-        <ul>
-            <li>hasi: {{ pushData.event.startAt }}</li>
-            <li>bukatu: {{ pushData.event.endAt }}</li>
-        </ul>
+    <div ng-controller="EventViewController as eventViewCtrl">
+        <header>
+            <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
+            <!--<i class="right icon-share"></i>-->
+            <h1 class="title">{{ eventViewCtrl.event.name }}</h1>
+        </header>
+        <div class="overthrow">
+            <h1 class="title">
+                {{ eventViewCtrl.event.name }}
+            </h1>
+            {{ eventViewCtrl.event.description }}
+            <hr>
+            <ul>
+                <li>hasi: {{ eventViewCtrl.event.startAt }}</li>
+                <li>bukatu: {{ eventViewCtrl.event.endAt }}</li>
+            </ul>
+            <a ng-click="navCtrl.pushView('views/placeView.html', { id: 460 })">Test place view</a>
+        </div>
     </div>
 </script>

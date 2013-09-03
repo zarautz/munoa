@@ -89,7 +89,7 @@
                     Zerrenda filtratuta dago <span style="float:right;" ng-click="plistCtrl.toggleFilters()" ng-hide="plistCtrl.filter.show">Ikusi</span>
                 </div>
                 <div ng-repeat="place in plistCtrl.pager.getAllItems()" style="margin-bottom:.25em;padding-bottom:.25em;border-bottom:1px solid #eee;"
-                    ng-click="navCtrl.pushView('place.view', { id: place.id })"
+                    ng-click="navCtrl.pushView('views/placeView.html', { id: place.id })"
                     >
                     {{ place.name }}<br>
                     <div ng-if="plistCtrl.userLocation.location !== false">
@@ -97,22 +97,6 @@
                     </div>
                     <span ng-repeat="type in place.types" style="margin-right:.25em;display:inline-block;">{{ type.name }}</span>
                 </div>
-            </div>
-        </div>
-    </div>
-</script>
-
-<script type="text/ng-template" id="place.view">
-    <div ng-controller="PlaceViewController as pviewCtrl">
-        <header>
-            <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
-            <i class="right icon-star-empty"></i>
-            <h1 class="title">{{ pviewCtrl.place.name }}</h1>
-        </header>
-        <div class="overthrow">
-            <h1 class="placeholder" ng-show="pviewCtrl.status.isLoading">Loading...</h1>
-            <div ng-show="!pviewCtrl.status.isLoading">
-                <h2>{{ pviewCtrl.place.name }}</h2>
             </div>
         </div>
     </div>

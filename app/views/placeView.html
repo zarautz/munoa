@@ -1,0 +1,13 @@
+<div ng-controller="PlaceViewController as pviewCtrl">
+    <header>
+        <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
+        <i class="right icon-star-empty"></i>
+        <h1 class="title">{{ pviewCtrl.place.name }}</h1>
+    </header>
+    <div class="overthrow">
+        <h1 class="placeholder" ng-show="pviewCtrl.status.isLoading">Loading...</h1>
+        <div ng-show="!pviewCtrl.status.isLoading">
+            <h2>{{ pviewCtrl.place.name }}</h2>
+        </div>
+    </div>
+</div>

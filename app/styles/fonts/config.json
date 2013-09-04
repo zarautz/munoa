@@ -11,6 +11,12 @@
       "src": "fontelico"
     },
     {
+      "uid": "921e3974e54ff9e8b7cd906a3dc74636",
+      "css": "direction",
+      "code": 59433,
+      "src": "fontawesome"
+    },
+    {
       "uid": "559647a6f430b3aeadbecd67194451dd",
       "css": "menu",
       "code": 61446,
@@ -87,6 +93,12 @@
       "css": "wifi",
       "code": 59413,
       "src": "entypo"
+    },
+    {
+      "uid": "67f793f91864e379458a92ccc61d9ccf",
+      "css": "sort-alphabet",
+      "code": 59432,
+      "src": "typicons"
     },
     {
       "uid": "d2c499942f8a7c037d5a94f123eeb478",

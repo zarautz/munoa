@@ -59,6 +59,7 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
         this.list         = [];
         this.pager        = new Z.Paginator();
         this.userLocation = geolocation.getCurrentPosition();
+        this.totalItems   = 0;
 
         this.pager.setPageSize(10);
     };
@@ -121,6 +122,9 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
         this.places.then(function (places) {
             var filterCfg = [],
                 sortCfg   = [];
+
+            // Keep a REAL total
+            that.totalItems = places.length;
 
             //
             // Filter

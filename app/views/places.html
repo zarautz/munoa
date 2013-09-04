@@ -1,16 +1,17 @@
 <section class="on-{{ navCtrl.activeView }}">
     <div ng-controller="PlacesController as placesCtrl">
         <header>
-            <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
+            <i ng-click="navCtrl.toggleMenu()" class="left icon-menu"></i>
             <h1 class="title">{{ placesCtrl.section|translate }}</h1>
         </header>
         <div class="overthrow">
-            <ul class="small-block-grid-3 large-block-grid-4">
-                <li class="text-center text-smallest text-light"
-                    ng-repeat="group in placesCtrl.groups"
+            <ul class="small-block-grid-3 large-block-grid-4 block-grid-icons">
+                <li ng-repeat="group in placesCtrl.groups"
                     ng-click="navCtrl.pushView('place.list', { section: placesCtrl.section, group: group.name })">
-                    <p class="text-biggest"><i class="{{ group.icon }}"></i></p>
-                    {{ ('placesGroup.'+ placesCtrl.section +'.'+ group.name)|translate }}
+                    <i class="{{ group.icon }}"></i>
+                    <p class="color-{{ $index % 5 }}">
+                        {{ ('placesGroup.'+ placesCtrl.section +'.'+ group.name)|translate }}
+                    </p>
                 </li>
             </ul>
         </div>
@@ -20,30 +21,27 @@
 </section>
 
 <script type="text/ng-template" id="place.list">
-    <style type="text/css">
-        .filterMargin { margin-bottom: .5em; }
-        .filterButton { 
-            display: inline-block;
-            margin-bottom: .2em;
-            padding:.25em .5em;
-            background-color:#fafafa;
-            margin-right:.5em;
-            cursor: pointer;
-        }
-        .filterOn { background-color: yellow; }
-        .filterInputOn {
-            border-bottom: 10px solid yellow;
-        }
-    </style>
     <div ng-controller="PlaceListController as plistCtrl">
         <header>
             <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
-            <a ng-click="plistCtrl.toggleFilters()"><i class="right icon-search"></i></a>
+            <div ng-switch on="plistCtrl.status.isLoading">
+                <div ng-switch-when="true">
+                    <i class="right icon-spin color-blue animate-spin"></i>
+                </div>
+                <div ng-switch-default>
+                    <i ng-click="plistCtrl.toggleFilters()" class="right icon-search" ng-class="{ 'color-blue': plistCtrl.isFiltered() }"></i>
+                </div>
+            </div>
             <h1 class="title">{{ ('placesGroup.'+ plistCtrl.section +'.'+ plistCtrl.group)|translate }}</h1>
         </header>
-        <div class="overthrow">
-            <h1 class="placeholder" ng-show="plistCtrl.status.isLoading">Loading...</h1>
-            <div ng-show="!plistCtrl.status.isLoading">
+        <div ng-if="plistCtrl.status.isDone && plistCtrl.status.isError" class="error">
+            <p ng-click="plistCtrl.reload()">
+                {{ 'error.connection'|translate }}
+                <strong>{{ 'error.retry'|translate }} <i class="icon-spin"></i></strong>
+            </p>
+        </div>
+        <div ng-if="!plistCtrl.status.isLoading" class="overthrow">
+            <div class="filter-box">
                 <div ng-show="plistCtrl.filter.show">
                     <h3>Filters <span ng-show="plistCtrl.isFiltered()" style="float:right;" class="filterButton" ng-click="plistCtrl.clearFilters()">Garbitu</span></h3>
                     <div class="filterMargin">
@@ -73,30 +71,57 @@
                         </span>
                         <span class="filterButton" ng-click="plistCtrl.setFilter('type', null)">X</span>
                     </div>
-                    <hr>
                 </div>
                 <!--
                 {{ plistCtrl.pager.getPage() }} / {{ plistCtrl.pager.getTotalPages() }}<br/>
                 <a class="small button" ng-click="plistCtrl.pager.prev()">Previous</a>
                 <a class="small button" ng-click="plistCtrl.pager.next()">Next</a>
                 -->
-                <div ng-if="plistCtrl.userLocation.location !== false">
-                    <span class="filterButton" ng-class="{filterOn: plistCtrl.sorting.type == 'name'}" ng-click="plistCtrl.setSorting('name')">Name</span>
-                    <span class="filterButton" ng-class="{filterOn: plistCtrl.sorting.type == 'distance'}" ng-click="plistCtrl.setSorting('distance')">Distance</span>
-                    <hr>
+            </div>
+                    
+            <div class="list-with-images">
+                <div ng-if="plistCtrl.userLocation.location !== false" class="sort-options">
+                    <i ng-class="{ 'on': plistCtrl.sorting.type == 'name'}" ng-click="plistCtrl.setSorting('name')" class="left bicon icon-sort-alphabet"></i>
+                    <i ng-class="{ 'on': plistCtrl.sorting.type == 'distance'}" ng-click="plistCtrl.setSorting('distance')" class="right bicon icon-direction"></i>
+                    <i ng-show="plistCtrl.isFiltered()" class="icon-filter color-blue"></i>
+                    {{ plistCtrl.pager.getTotalItems() }} {{ 'list.results'|translate }}
+                    / {{ plistCtrl.totalItems }}
                 </div>
-                <div ng-show="plistCtrl.isFiltered()" style="background-color:#ffc;">
-                    Zerrenda filtratuta dago <span style="float:right;" ng-click="plistCtrl.toggleFilters()" ng-hide="plistCtrl.filter.show">Ikusi</span>
-                </div>
-                <div ng-repeat="place in plistCtrl.pager.getAllItems()" style="margin-bottom:.25em;padding-bottom:.25em;border-bottom:1px solid #eee;"
-                    ng-click="navCtrl.pushView('views/placeView.html', { id: place.id })"
-                    >
-                    {{ place.name }}<br>
-                    <div ng-if="plistCtrl.userLocation.location !== false">
-                        {{ place.location.distanceTo(plistCtrl.userLocation.location) * 1000 | number:0 }} metrota<br>
+                <div ng-repeat="place in plistCtrl.pager.getAllItems()">
+                    <hr />
+                    <div class="row collapse"
+                        ng-click="navCtrl.pushView('place.view', { id: place.id })">
+                        <div class="large-1 small-1 columns">
+                            <img class="thumbnail color-{{ $index % 5 }}" ng-src="{{ place.getThumbnailImage() }}" />
+                        </div>
+                        <div class="large-3 small-3 columns">
+                            <i class="icon-right-open"></i>
+                            <h4 class="title">{{ place.name }}</h4>
+                            <small class="color-lightest-text">{{ type.name }}</small>
+                            <small ng-repeat="type in place.types"
+                                class="color-lightest-text">{{ type.name }}</small><br>
+                            <small ng-if="plistCtrl.userLocation.location !== false">
+                        {{ place.location.distanceTo(plistCtrl.userLocation.location) * 1000 | number:0 }} metrota
+                            </small>
+                        </div>
                     </div>
-                    <span ng-repeat="type in place.types" style="margin-right:.25em;display:inline-block;">{{ type.name }}</span>
                 </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="place.view">
+    <div ng-controller="PlaceViewController as pviewCtrl">
+        <header>
+            <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
+            <i class="right" ng-class="{ 'icon-star color-blue': pviewCtrl.isFavorite, 'icon-star-empty': !pviewCtrl.isFavorite }" ng-click="pviewCtrl.toggleIsFavorite()"></i>
+            <h1 class="title">{{ pviewCtrl.place.name }}</h1>
+        </header>
+        <div class="overthrow">
+            <h1 class="placeholder" ng-show="pviewCtrl.status.isLoading">Loading...</h1>
+            <div ng-show="!pviewCtrl.status.isLoading">
+                <h2>{{ pviewCtrl.place.name }}</h2>
             </div>
         </div>
     </div>

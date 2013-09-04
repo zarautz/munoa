@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.controller('WizardController', ['settingsManager', function(settingsManager) {
+Z.app.controller('WizardController', ['settingsManager', '$scope', function(settingsManager, $scope) {
     this.page     = 0;
     this.settings = settingsManager.settings;
 
@@ -19,5 +19,10 @@ Z.app.controller('WizardController', ['settingsManager', function(settingsManage
     this.updateSetting = function(id, option) {
         settingsManager.updateSetting(id, option);
         this.page++;
+
+        if (this.page === 2) {
+            $scope.navCtrl.popView();
+            $scope.navCtrl.location.path('/');
+        }
     };
 }]);

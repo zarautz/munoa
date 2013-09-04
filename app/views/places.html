@@ -84,20 +84,20 @@
                     <i ng-show="plistCtrl.isFiltered()" class="icon-filter color-blue"></i>
                     {{ plistCtrl.pager.getTotalItems() }} {{ 'list.results'|translate }}
                     {{ '/ ' + plistCtrl.totalItems }}
-                    <i class="right bicon icon-star"></i>
+                    <i class="right bicon icon-star" ng-class="{ 'on': plistCtrl.sorting.type == 'favorite'}" ng-click="plistCtrl.setSorting('favorite')"></i>
                     <i ng-if="plistCtrl.userLocation.location !== false" ng-class="{ 'on': plistCtrl.sorting.type == 'distance'}" ng-click="plistCtrl.setSorting('distance')" class="right bicon icon-direction"></i>
                     <i ng-if="plistCtrl.userLocation.location !== false" ng-class="{ 'on': plistCtrl.sorting.type == 'name'}" ng-click="plistCtrl.setSorting('name')" class="right bicon icon-sort-alphabet"></i>
                 </div>
                 <div ng-repeat="place in plistCtrl.pager.getAllItems()">
                     <hr />
                     <div class="row collapse"
-                        ng-click="navCtrl.pushView('place.view', { id: place.id })">
+                        ng-click="navCtrl.pushView('views/placeView.html', { id: place.id, plistCtrl: plistCtrl })">
                         <div class="large-1 small-1 columns">
                             <img class="thumbnail color-{{ $index % 5 }}" ng-src="{{ place.getThumbnailImage() }}" />
                         </div>
                         <div class="large-3 small-3 columns">
                             <i class="icon-right-open"></i>
-                            <h4 class="title">{{ place.name }} <i class="icon-star color-yellow"></i></h4>
+                            <h4 class="title">{{ place.name }} <i class="icon-star color-yellow" ng-show="plistCtrl.favorite.isFavorite(place.id)"></i></h4>
                             <p>
                                 <i class="icon-location"></i>
                                 {{ place.address }}
@@ -112,22 +112,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</script>
-
-<script type="text/ng-template" id="place.view">
-    <div ng-controller="PlaceViewController as pviewCtrl">
-        <header>
-            <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
-            <i class="right" ng-class="{ 'icon-star color-yellow': pviewCtrl.isFavorite, 'icon-star-empty': !pviewCtrl.isFavorite }" ng-click="pviewCtrl.toggleIsFavorite()"></i>
-            <h1 class="title">{{ pviewCtrl.place.name }}</h1>
-        </header>
-        <div class="overthrow">
-            <h1 class="placeholder" ng-show="pviewCtrl.status.isLoading">Loading...</h1>
-            <div ng-show="!pviewCtrl.status.isLoading">
-                <h2>{{ pviewCtrl.place.name }}</h2>
             </div>
         </div>
     </div>

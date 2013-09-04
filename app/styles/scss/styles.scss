@@ -330,7 +330,7 @@ ul.drawer {
 
 .list-with-images {
     .title {
-        margin: 0 $base-padding $half-padding 0;
+        margin: 0 $base-padding 0 0;
     }
 
     .icon-right-open {
@@ -348,6 +348,7 @@ ul.drawer {
 
     p {
         @include smallest-font();
+        margin-top: $half-padding;
 
         .distance {
             color: $color-lightest-text;

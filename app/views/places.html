@@ -80,9 +80,9 @@
             </div>
                     
             <div class="list-with-images">
-                <div ng-if="plistCtrl.userLocation.location !== false" class="sort-options">
-                    <i ng-class="{ 'on': plistCtrl.sorting.type == 'name'}" ng-click="plistCtrl.setSorting('name')" class="left bicon icon-sort-alphabet"></i>
-                    <i ng-class="{ 'on': plistCtrl.sorting.type == 'distance'}" ng-click="plistCtrl.setSorting('distance')" class="right bicon icon-direction"></i>
+                <div class="sort-options">
+                    <i ng-if="plistCtrl.userLocation.location !== false" ng-class="{ 'on': plistCtrl.sorting.type == 'name'}" ng-click="plistCtrl.setSorting('name')" class="left bicon icon-sort-alphabet"></i>
+                    <i ng-if="plistCtrl.userLocation.location !== false" ng-class="{ 'on': plistCtrl.sorting.type == 'distance'}" ng-click="plistCtrl.setSorting('distance')" class="right bicon icon-direction"></i>
                     <i ng-show="plistCtrl.isFiltered()" class="icon-filter color-blue"></i>
                     {{ plistCtrl.pager.getTotalItems() }} {{ 'list.results'|translate }}
                     / {{ plistCtrl.totalItems }}
@@ -97,12 +97,16 @@
                         <div class="large-3 small-3 columns">
                             <i class="icon-right-open"></i>
                             <h4 class="title">{{ place.name }}</h4>
-                            <small class="color-lightest-text">{{ type.name }}</small>
-                            <small ng-repeat="type in place.types"
-                                class="color-lightest-text">{{ type.name }}</small><br>
-                            <small ng-if="plistCtrl.userLocation.location !== false">
-                        {{ place.location.distanceTo(plistCtrl.userLocation.location) * 1000 | number:0 }} metrota
-                            </small>
+                            <p>
+                                {{ place.address }}
+                                <span class="distance" ng-if="plistCtrl.userLocation.location !== false">
+                                    ({{ place.location.distanceTo(plistCtrl.userLocation.location) * 1000 | number:0 }} {{ 'location.distance.meters'|translate }})
+                                </span><br/>
+                                <i class="icon-tag"></i>
+                                <span ng-repeat="type in place.types">
+                                    {{ type.name }}<span ng-if="!$last">,</span>
+                                </span>
+                            </p>
                         </div>
                     </div>
                 </div>

@@ -337,7 +337,7 @@ ul.drawer {
         font-size: 1.2em;
         float: right;
         color: $color-lightest-text;
-        margin: 0 (-$half-padding) 0 $half-padding;
+        margin: -3px (-$half-padding) $half-padding $half-padding;
     }
 
     .thumbnail {
@@ -362,7 +362,7 @@ ul.drawer {
         [class^="icon-"],
         [class*=" icon-"] {
             float: left;
-            margin: 1px 0 0 -3px;
+            margin: 0 0 0 -3px;
             font-size: .9em;
         }
     }
@@ -373,13 +373,13 @@ ul.drawer {
 
     div.sort-options {
         @include clearfix();
-        text-align: center;
         @include smallest-font();
         font-style: italic;
         line-height: $big-font-size;
         color: $color-lightest-text;
 
         .bicon {
+            text-align: center;
             display: block;
             background: whitesmoke;
             height: 25px;
@@ -388,6 +388,7 @@ ul.drawer {
             @include border-radius(3px);
             font-size: $small-font-size;
             margin: 0;
+            margin-left: $quarter-padding;
             padding: 0;
 
             &.icon-sort-alphabet {

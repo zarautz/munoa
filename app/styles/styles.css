@@ -2529,7 +2529,7 @@ ul.drawer li a.settings {
   font-size: 1.2em;
   float: right;
   color: #bbbbbb;
-  margin: 0 -8px 0 8px;
+  margin: -3px -8px 8px 8px;
 }
 /* line 343, scss/styles.scss */
 .list-with-images .thumbnail {
@@ -2576,7 +2576,7 @@ ul.drawer li a.settings {
 .list-with-images p [class^="icon-"],
 .list-with-images p [class*=" icon-"] {
   float: left;
-  margin: 1px 0 0 -3px;
+  margin: 0 0 0 -3px;
   font-size: .9em;
 }
 /* line 370, scss/styles.scss */
@@ -2586,7 +2586,6 @@ ul.drawer li a.settings {
 /* line 374, scss/styles.scss */
 .list-with-images div.sort-options {
   *zoom: 1;
-  text-align: center;
   font-size: 13px;
   line-height: 1.3;
   font-style: italic;
@@ -2602,8 +2601,9 @@ ul.drawer li a.settings {
 .list-with-images div.sort-options:after {
   clear: both;
 }
-/* line 382, scss/styles.scss */
+/* line 381, scss/styles.scss */
 .list-with-images div.sort-options .bicon {
+  text-align: center;
   display: block;
   background: whitesmoke;
   height: 25px;
@@ -2613,67 +2613,68 @@ ul.drawer li a.settings {
   border-radius: 3px;
   font-size: 15px;
   margin: 0;
+  margin-left: 4px;
   padding: 0;
 }
-/* line 393, scss/styles.scss */
+/* line 394, scss/styles.scss */
 .list-with-images div.sort-options .bicon.icon-sort-alphabet {
   padding-right: 3px;
 }
-/* line 397, scss/styles.scss */
+/* line 398, scss/styles.scss */
 .list-with-images div.sort-options .bicon.on {
   background-color: #0099cc;
   color: white;
 }
 
-/* line 410, scss/styles.scss */
+/* line 411, scss/styles.scss */
 .block-grid-icons li {
   text-align: center;
   margin: 4px 0;
 }
-/* line 414, scss/styles.scss */
+/* line 415, scss/styles.scss */
 .block-grid-icons li i {
   font-size: 34px;
 }
-/* line 418, scss/styles.scss */
+/* line 419, scss/styles.scss */
 .block-grid-icons li p {
   padding-top: 5px;
   font-size: 13px;
   line-height: 1.3;
 }
 
-/* line 432, scss/styles.scss */
+/* line 433, scss/styles.scss */
 .content h1, .content h2, .content h3, .content h4, .content h5 {
   font-size: 1em;
   font-weight: normal;
   font-style: italic;
 }
-/* line 437, scss/styles.scss */
+/* line 438, scss/styles.scss */
 .content h1 strong, .content h2 strong, .content h3 strong, .content h4 strong, .content h5 strong {
   font-weight: normal;
 }
-/* line 442, scss/styles.scss */
+/* line 443, scss/styles.scss */
 .content p, .content img {
   display: block;
   margin: 1em 0;
 }
-/* line 447, scss/styles.scss */
+/* line 448, scss/styles.scss */
 .content ol, .content ul {
   padding-left: 1.5em;
 }
-/* line 450, scss/styles.scss */
+/* line 451, scss/styles.scss */
 .content ol li, .content ul li {
   margin-bottom: .5em;
 }
-/* line 456, scss/styles.scss */
+/* line 457, scss/styles.scss */
 .content ul li {
   list-style: disc outside none;
 }
-/* line 462, scss/styles.scss */
+/* line 463, scss/styles.scss */
 .content ol li {
   list-style: decimal outside none;
 }
 
-/* line 468, scss/styles.scss */
+/* line 469, scss/styles.scss */
 .external-link {
   border-style: solid;
   border-width: 1px;
@@ -2712,22 +2713,22 @@ ul.drawer li a.settings {
 .external-link:hover, .external-link:focus {
   color: white;
 }
-/* line 473, scss/styles.scss */
+/* line 474, scss/styles.scss */
 .external-link, .external-link:visited {
   color: white;
 }
 
-/* line 480, scss/styles.scss */
+/* line 481, scss/styles.scss */
 .post .content div > img + p {
   font-size: .9em;
   color: #666666;
 }
-/* line 485, scss/styles.scss */
+/* line 486, scss/styles.scss */
 .post .content img {
   width: 100%;
 }
 
-/* line 496, scss/styles.scss */
+/* line 497, scss/styles.scss */
 hr {
   border: solid #dddddd;
   border-width: 1px 0 0;
@@ -2736,47 +2737,47 @@ hr {
   height: 0;
 }
 
-/* line 504, scss/styles.scss */
+/* line 505, scss/styles.scss */
 .strong {
   font-weight: bold;
 }
 
-/* line 508, scss/styles.scss */
+/* line 509, scss/styles.scss */
 .text-big {
   font-size: 26px;
 }
 
-/* line 512, scss/styles.scss */
+/* line 513, scss/styles.scss */
 .text-biggest {
   font-size: 34px;
 }
 
-/* line 516, scss/styles.scss */
+/* line 517, scss/styles.scss */
 .text-small {
   font-size: 15px;
 }
 
-/* line 520, scss/styles.scss */
+/* line 521, scss/styles.scss */
 .text-smallest {
   font-size: 13px;
 }
 
-/* line 524, scss/styles.scss */
+/* line 525, scss/styles.scss */
 .text-light {
   font-weight: 300;
 }
 
-/* line 528, scss/styles.scss */
+/* line 529, scss/styles.scss */
 .uppercase {
   text-transform: uppercase;
 }
 
-/* line 532, scss/styles.scss */
+/* line 533, scss/styles.scss */
 .lowercase {
   text-transform: lowercase;
 }
 
-/* line 537, scss/styles.scss */
+/* line 538, scss/styles.scss */
 a.chameleon, a.chameleon:hover {
   color: inherit;
   text-decoration: none;

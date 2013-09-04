@@ -81,11 +81,12 @@
                     
             <div class="list-with-images">
                 <div class="sort-options">
-                    <i ng-if="plistCtrl.userLocation.location !== false" ng-class="{ 'on': plistCtrl.sorting.type == 'name'}" ng-click="plistCtrl.setSorting('name')" class="left bicon icon-sort-alphabet"></i>
-                    <i ng-if="plistCtrl.userLocation.location !== false" ng-class="{ 'on': plistCtrl.sorting.type == 'distance'}" ng-click="plistCtrl.setSorting('distance')" class="right bicon icon-direction"></i>
                     <i ng-show="plistCtrl.isFiltered()" class="icon-filter color-blue"></i>
                     {{ plistCtrl.pager.getTotalItems() }} {{ 'list.results'|translate }}
-                    / {{ plistCtrl.totalItems }}
+                    {{ '/ ' + plistCtrl.totalItems }}
+                    <i class="right bicon icon-star"></i>
+                    <i ng-if="plistCtrl.userLocation.location !== false" ng-class="{ 'on': plistCtrl.sorting.type == 'distance'}" ng-click="plistCtrl.setSorting('distance')" class="right bicon icon-direction"></i>
+                    <i ng-if="plistCtrl.userLocation.location !== false" ng-class="{ 'on': plistCtrl.sorting.type == 'name'}" ng-click="plistCtrl.setSorting('name')" class="right bicon icon-sort-alphabet"></i>
                 </div>
                 <div ng-repeat="place in plistCtrl.pager.getAllItems()">
                     <hr />
@@ -96,7 +97,7 @@
                         </div>
                         <div class="large-3 small-3 columns">
                             <i class="icon-right-open"></i>
-                            <h4 class="title">{{ place.name }}</h4>
+                            <h4 class="title">{{ place.name }} <i class="icon-star color-yellow"></i></h4>
                             <p>
                                 <i class="icon-location"></i>
                                 {{ place.address }}
@@ -104,7 +105,7 @@
                                     ({{ place.location.distanceTo(plistCtrl.userLocation.location) * 1000 | number:0 }} {{ 'location.distance.meters'|translate }})
                                 </span><br/>
                                 <i class="icon-tag"></i>
-                                <span ng-repeat="type in place.types" class="tag">
+                                <span ng-show="type.code !== 'murkil'" ng-repeat="type in place.types" class="tag">
                                     {{ type.name }}<span ng-if="!$last">, </span>
                                 </span>
                             </p>
@@ -120,7 +121,7 @@
     <div ng-controller="PlaceViewController as pviewCtrl">
         <header>
             <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
-            <i class="right" ng-class="{ 'icon-star color-blue': pviewCtrl.isFavorite, 'icon-star-empty': !pviewCtrl.isFavorite }" ng-click="pviewCtrl.toggleIsFavorite()"></i>
+            <i class="right" ng-class="{ 'icon-star color-yellow': pviewCtrl.isFavorite, 'icon-star-empty': !pviewCtrl.isFavorite }" ng-click="pviewCtrl.toggleIsFavorite()"></i>
             <h1 class="title">{{ pviewCtrl.place.name }}</h1>
         </header>
         <div class="overthrow">

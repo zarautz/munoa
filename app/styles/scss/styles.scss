@@ -7,6 +7,7 @@ $experimental-support-for-microsoft: false;
 
 $touchable-size:              48px; // Default in iOS: "44px"; Android: "48px"
 $tablet-breakpoint:           600px; // Nexus 7
+$mobile-breakpoint:           320px; // iPhone
 
 $row-width:                   800px;
 $total-columns:               4;
@@ -73,6 +74,24 @@ $hr-margin:                   ($base-padding * 1.5);
     text-overflow: ellipsis;
 }
 
+@mixin color-alternation($attribute) {
+    &.color-0 {
+        #{$attribute}: $color-lightest-blue;
+    }
+    &.color-1 {
+        #{$attribute}: $color-lightest-green;
+    }
+    &.color-2 {
+        #{$attribute}: $color-lightest-violet;
+    }
+    &.color-3 {
+        #{$attribute}: $color-lightest-orange;
+    }
+    &.color-4 {
+        #{$attribute}: $color-lightest-red;
+    }
+}
+
 //
 // Typo
 //
@@ -123,6 +142,28 @@ section {
             padding: ($base-padding * 2);
         }
     }
+
+    div.error {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 1000;
+
+        p {
+            font-size: $smallest-font-size;
+            text-align: center;
+            line-height: 1.3;
+            background: $color-yellow;
+            padding: $half-padding;
+            margin: $base-padding;
+            @include border-radius(3px);
+        }
+    }
+
+    div.filter-box {
+        margin: (-($base-padding)) (-($base-padding)) $base-padding;
+        background: yellow;
+    }
 }
 
 //
@@ -164,19 +205,29 @@ header {
     height: $action-bar-height;
     line-height: $action-bar-height;
     background-color: $action-bar-background-color;
+    position: relative;
     
     @if $action-bar-border-size != 0 {
         border-bottom: $action-bar-border-size solid $action-bar-border-color;
     }
     
     .title {
+        position:absolute;
+        top: 0;
+        left: 20%;
+        width: 60%;
+        margin: 0;
         font-size: $action-bar-text-size;
         font-weight: normal;
         line-height: inherit;
-        margin: 0 3em 0 0;
         text-align: center;
         color: $action-bar-text-color;
         @include ellipsis();
+
+        @media only screen and (min-width: $mobile-breakpoint) {
+            left: 17%;
+            width: 66%;
+        }
     }
     
     i {
@@ -208,7 +259,8 @@ ul.drawer {
             color: $drawer-text-color;
             @include ellipsis();
             
-            [class^="icon-"] {
+            [class^="icon-"],
+            [class*=" icon-"] {
                 margin-right: $base-padding;
                 font-size: $drawer-text-size;
             }
@@ -287,30 +339,60 @@ ul.drawer {
     .thumbnail {
         width: 80%;
         @include border-radius(1000px);
-
-        &.color-0 {
-            background-color: $color-lightest-blue;
-        }
-        &.color-1 {
-            background-color: $color-lightest-violet;
-        }
-        &.color-2 {
-            background-color: $color-lightest-green;
-        }
-        &.color-3 {
-            background-color: $color-lightest-orange;
-        }
-        &.color-4 {
-            background-color: $color-lightest-red;
-        }
+        @include color-alternation('background-color');
     }
 
     hr {
         margin: $base-padding (-$base-padding);
     }
 
-    div:last-child hr {
-        display: none;
+    div.sort-options {
+        @include clearfix();
+        text-align: center;
+        font-size: $smallest-font-size;
+        font-style: italic;
+        line-height: $big-font-size;
+        color: $color-lightest-text;
+
+        [class^="icon-"],
+        [class*=" icon-"] {
+            display: block;
+            background: whitesmoke;
+            height: 25px;
+            width: 40px;
+            line-height: 25px;
+            @include border-radius(3px);
+            font-size: $small-font-size;
+            margin: 0;
+            padding: 0;
+
+            &.on {
+                background-color: $color-blue;
+                color: white;
+            }
+        }
+    }
+}
+
+//
+// Icon grid
+//
+
+.block-grid-icons {
+    li {
+        text-align: center;
+        margin: $quarter-padding 0;
+
+        i {
+            font-size: $biggest-font-size;
+        }
+
+        p {
+            padding-top: 5px;
+            font-size: $smallest-font-size;
+            line-height: 1.3;
+            //@include color-alternation('border-top-color');
+        }
     }
 }
 
@@ -336,6 +418,10 @@ ul.drawer {
 
     ol, ul {
         padding-left: 1.5em;
+
+        li {
+            margin-bottom: .5em;
+        }
     }
 
     ul {

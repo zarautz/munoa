@@ -1,19 +1,19 @@
 'use strict';
 
 Z.app.controller('WeatherController', ['$scope', 'settings', 'forecastMapper', function($scope, settings, forecastMapper) {
-    $scope.changeTab = function (index) {
-        $scope.activeTab = index;
+    this.changeTab = function (index) {
+        this.activeTab = index;
     };
 
-    $scope.refresh = function () {
-        $scope.activeTab = 0;
+    this.refresh = function () {
+        this.activeTab = 0;
 
         // Forecast
         var forecast = forecastMapper.get({'language': settings.get('language')});
 
-        $scope.forecast = forecast.promise;
-        $scope.status   = forecast.status;
+        this.forecast = forecast.promise;
+        this.status   = forecast.status;
     };
 
-    $scope.refresh();
+    this.refresh();
 }]);

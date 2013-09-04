@@ -1,16 +1,22 @@
-<section class="on-{{ navCtrl.activeView }}" ng-controller="ZuzarautzController as zuzarautzCtrl">
+<section class="on-{{ navCtrl.activeView }}" ng-controller="ZuzarautzController as zzCtrl">
     <div>
         <header>
-            <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
-            <i ng-if="status.isLoading" class="right icon-spin color-blue animate-spin"></i>
-            <i ng-if="status.isDone && status.isError" class="right icon-spin" ng-click="refresh()"></i>
+            <i ng-click="navCtrl.toggleMenu()" class="left icon-menu"></i>
+            <i ng-if="zzCtrl.status.isLoading" class="right icon-spin color-blue animate-spin"></i>
             <h1 class="title">{{ 'zuzarautz'|translate }}</h1>
         </header>
-        <div class="overthrow list-with-images">
-            <div ng-repeat="post in posts">
+        <div ng-if="zzCtrl.status.isDone && zzCtrl.status.isError" class="error">
+            <p ng-click="zzCtrl.reload()">
+                {{ 'error.connection'|translate }}
+                <strong>{{ 'error.retry'|translate }} <i class="icon-spin"></i></strong>
+            </p>
+        </div>
+        <div ng-if="!zzCtrl.status.isLoading" class="overthrow list-with-images">
+            <div ng-repeat="post in zzCtrl.posts">
+                <hr ng-hide="$index == 0"/>
                 <div class="row collapse"
                     ng-click="navCtrl.pushView('post.show', { 'post': post })">
-                    <div class="large-2 small-1 columns">
+                    <div class="large-1 small-1 columns">
                         <img class="thumbnail color-{{ $index % 5 }}" ng-src="{{ post.getThumbnailImage() }}" />
                     </div>
                     <div class="large-3 small-3 columns">
@@ -19,8 +25,6 @@
                         <small class="color-lightest-text">{{ post.publishedAt | date:'longDate' }}</small>
                     </div>
                 </div>
-                <hr />
-            </div>
             </div>
         </div>
     </div>

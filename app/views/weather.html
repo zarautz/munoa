@@ -1,98 +1,98 @@
 <section class="on-{{ navCtrl.activeView }}" ng-controller="WeatherController as weatherCtrl">
     <div>
         <header>
-            <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
-            <i ng-if="status.isLoading" class="right icon-spin color-blue animate-spin"></i>
-            <i ng-if="status.isDone && status.isError" class="right icon-spin" ng-click="refresh()"></i>
+            <i ng-click="navCtrl.toggleMenu()" class="left icon-menu"></i>
+            <i ng-if="weatherCtrl.status.isLoading" class="right icon-spin color-blue animate-spin"></i>
             <h1 class="title">{{ 'weather'|translate }}</h1>
         </header>
-        <div class="overthrow">
-            <div ng-if="status.isDone && status.isError">
-                ERROR: {{ forecast }}
+        <div ng-if="weatherCtrl.status.isDone && weatherCtrl.status.isError" class="error">
+            <p ng-click="weatherCtrl.reload()">
+                {{ 'error.connection'|translate }}
+                <strong>{{ 'error.retry'|translate }} <i class="icon-spin"></i></strong>
+            </p>
+        </div>
+        <div ng-if="!weatherCtrl.status.isLoading" class="overthrow">
+            <p class="text-smallest text-center">
+                {{ weatherCtrl.forecast.today.date|date:'fullDate' }}<br />
+                <span class="color-light-text">
+                    {{ weatherCtrl.forecast.today.getCurrentWeatherCode().name }}
+                </span>
+            </p>
+            <div class="row collapse weather-today">
+                <div class="small-2 columns">
+                    <i class="icon-weather-{{ weatherCtrl.forecast.today.getCurrentWeatherCode().code }}"></i>
+                </div>
+                <div class="small-2 columns">
+                    <h1 ng-if="weatherCtrl.forecast.today.weather.temp" class="temperature">
+                        {{ weatherCtrl.forecast.today.weather.temp }}&deg;
+                    </h1>
+                    <div ng-if="!weatherCtrl.forecast.today.weather.temp" class="temperature-range">
+                        <h2 class="max">{{ weatherCtrl.forecast.today.weather.tempMax }}&deg;</h2>
+                        <h3 class="min">{{ weatherCtrl.forecast.today.weather.tempMin }}&deg;</h3>
+                    </div>
+                </div>
             </div>
-            <div ng-if="status.isDone && !status.isError">
-                <p class="text-smallest text-center">
-                    {{ forecast.today.date|date:'fullDate' }}<br />
-                    <span class="color-light-text">
-                        {{ forecast.today.getCurrentWeatherCode().name }}
-                    </span>
-                </p>
-                <div class="row collapse weather-today">
-                    <div class="small-2 columns">
-                        <i class="icon-weather-{{ forecast.today.getCurrentWeatherCode().code }}"></i>
-                    </div>
-                    <div class="small-2 columns">
-                        <h1 ng-if="forecast.today.weather.temp" class="temperature">
-                            {{ forecast.today.weather.temp }}&deg;
-                        </h1>
-                        <div ng-if="!forecast.today.weather.temp" class="temperature-range">
-                            <h2 class="max">{{ forecast.today.weather.tempMax }}&deg;</h2>
-                            <h3 class="min">{{ forecast.today.weather.tempMin }}&deg;</h3>
-                        </div>
-                    </div>
+            <div class="row collapse weather-forecast">
+                <div class="small-1 column"
+                    ng-repeat="day in weatherCtrl.forecast.days"
+                    ng-class="{ 'active': $index == weatherCtrl.activeTab }"
+                    ng-click="weatherCtrl.changeTab($index)">
+                    <span ng-class="{ 'strong': $first }">{{ day.date|date:'EEE' }}</span><br />
+                    <i class="icon-weather-{{ day.getWeatherCode().code }}"></i>
+                    <p class="temperatures">
+                        {{ day.weather.tempMax }}&deg; <span class="min">{{ day.weather.tempMin }}&deg;</span>
+                    </p>
+                    <span class="radius label uv-label-{{ day.weather.uvMax }}">UV {{ day.weather.uvMax }}</span>
                 </div>
-                <div class="row collapse weather-forecast">
-                    <div class="small-1 column"
-                        ng-repeat="day in forecast.days"
-                        ng-class="{ 'active': $index == activeTab }"
-                        ng-click="changeTab($index)">
-                        <span ng-class="{ 'strong': $first }">{{ day.date|date:'EEE' }}</span><br />
-                        <i class="icon-weather-{{ day.getWeatherCode().code }}"></i>
-                        <p class="temperatures">
-                            {{ day.weather.tempMax }}&deg; <span class="min">{{ day.weather.tempMin }}&deg;</span>
-                        </p>
-                        <span class="radius label uv-label-{{ day.weather.uvMax }}">UV {{ day.weather.uvMax }}</span>
-                    </div>
+            </div>
+            <div class="row collapse weather-periods"
+                ng-repeat="day in weatherCtrl.forecast.days"
+                ng-show="$index == weatherCtrl.activeTab">
+                <ul class="text-small small-block-grid-3 large-block-grid-3"
+                    ng-repeat="period in day.weather.forecast"
+                    ng-show="(weatherCtrl.activeTab === 0 && $index >= day.getCurrentHourIndex()) || weatherCtrl.activeTab > 0">
+                    <li>
+                        <strong>{{ period.period }}</strong>
+                        <i class="icon-weather-{{ period.code }}"></i>
+                    </li>
+                    <li class="text-center">
+                        <i class="icon-rain"></i>
+                        {{ period.precipitationProb }}%
+                    </li>
+                    <li class="text-right">
+                        {{ period.windDirection }} {{ period.windSpeed }}
+                        <i class="icon-wind"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="row collapse">
+                <div class="large-12 columns"
+                    ng-if="weatherCtrl.forecast.today.weather.uvMax > 5 && weatherCtrl.forecast.today.getCurrentWeatherCode().code === 11">
+                    <hr />
+                    <h3><i class="right icon-info"></i> {{ 'weather.uv.title'|translate }}</h3>
+                    <p class="uv-text-orange"
+                        ng-if="weatherCtrl.forecast.today.weather.uvMax > 5 && weatherCtrl.forecast.today.weather.uvMax < 8">
+                        {{ 'weather.uv.orange'|translate }}
+                    </p>
+                    <p class="uv-text-red"
+                        ng-if="weatherCtrl.forecast.today.weather.uvMax > 7 && weatherCtrl.forecast.today.weather.uvMax < 11">
+                        {{ 'weather.uv.red'|translate }}
+                    </p>
+                    <p class="uv-text-violet"
+                        ng-if="weatherCtrl.forecast.today.weather.uvMax > 10">
+                        {{ 'weather.uv.violet'|translate }}
+                    </p>
                 </div>
-                <div class="row collapse weather-periods"
-                    ng-repeat="day in forecast.days"
-                    ng-show="$index == activeTab">
-                    <ul class="text-small small-block-grid-3 large-block-grid-3"
-                        ng-repeat="period in day.weather.forecast"
-                        ng-show="(activeTab === 0 && $index >= day.getCurrentHourIndex()) || activeTab > 0">
-                        <li>
-                            <strong>{{ period.period }}</strong>
-                            <i class="icon-weather-{{ period.code }}"></i>
-                        </li>
-                        <li class="text-center">
-                            <i class="icon-rain"></i>
-                            {{ period.precipitationProb }}%
-                        </li>
-                        <li class="text-right">
-                            {{ period.windDirection }} {{ period.windSpeed }}
-                            <i class="icon-wind"></i>
-                        </li>
-                    </ul>
-                </div>
-                <div class="row collapse">
-                    <div class="large-12 columns"
-                        ng-if="forecast.today.weather.uvMax > 5 && forecast.today.getCurrentWeatherCode().code === 11">
-                        <hr />
-                        <h3><i class="right icon-info"></i> {{ 'weather.uv.title'|translate }}</h3>
-                        <p class="uv-text-orange"
-                            ng-if="forecast.today.weather.uvMax > 5 && forecast.today.weather.uvMax < 8">
-                            {{ 'weather.uv.orange'|translate }}
-                        </p>
-                        <p class="uv-text-red"
-                            ng-if="forecast.today.weather.uvMax > 7 && forecast.today.weather.uvMax < 11">
-                            {{ 'weather.uv.red'|translate }}
-                        </p>
-                        <p class="uv-text-violet"
-                            ng-if="forecast.today.weather.uvMax > 10">
-                            {{ 'weather.uv.violet'|translate }}
-                        </p>
-                    </div>
-                    <div class="large-12 columns">
-                        <hr />
-                        <p class="text-smallest color-lightest-text">
-                            {{ 'meta.lastUpdated'|translate }}: {{ forecast.meta.lastUpdated|date:'short' }}<br />
-                            {{ 'meta.sources'|translate }}:
-                            <span ng-repeat="source in forecast.meta.source">
-                                {{ source }},
-                            </span>
-                            <a class="chameleon" href="http://forecast.io">Forecast.io</a>
-                        </p>
-                    </div>
+                <div class="large-12 columns">
+                    <hr />
+                    <p class="text-smallest color-lightest-text">
+                        {{ 'meta.lastUpdated'|translate }}: {{ weatherCtrl.forecast.meta.lastUpdated|date:'short' }}<br />
+                        {{ 'meta.sources'|translate }}:
+                        <span ng-repeat="source in weatherCtrl.forecast.meta.source">
+                            {{ source }},
+                        </span>
+                        <a class="chameleon" href="http://forecast.io">Forecast.io</a>
+                    </p>
                 </div>
             </div>
         </div>

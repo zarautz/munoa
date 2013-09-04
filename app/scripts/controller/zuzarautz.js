@@ -1,13 +1,13 @@
 'use strict';
 
 Z.app.controller('ZuzarautzController', ['$scope', 'zuZarautzMapper', function($scope, zuZarautzMapper) {
-    $scope.refresh = function () {
+    this.refresh = function () {
         var posts = zuZarautzMapper.get();
 
-        $scope.posts  = posts.promise;
-        $scope.status = posts.status;
+        this.posts  = posts.promise;
+        this.status = posts.status;
     };
 
     // Init
-    $scope.refresh();
+    this.refresh();
 }]);

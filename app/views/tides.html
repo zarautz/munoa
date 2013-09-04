@@ -1,17 +1,21 @@
 <section class="on-{{ navCtrl.activeView }}" ng-controller="TidesController as tidesCtrl">
     <div>
         <header>
-            <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
+            <i ng-click="navCtrl.toggleMenu()" class="left icon-menu"></i>
+            <i ng-if="tidesCtrl.status.isLoading" class="right icon-spin color-blue animate-spin"></i>
             <h1 class="title">{{ 'tides'|translate }}</h1>
         </header>
-        <div class="overthrow">
-            <h1 class="placeholder" ng-show="tidesCtrl.status.isLoading">Loading...</h1>
-            <div ng-show="!tidesCtrl.status.isLoading">
-                <div ng-repeat="tide in tidesCtrl.tides">
-                    {{ tide.date }}<br>
-                    Tides: {{ tide.getTides() }}<br>
-                    <hr>
-                </div>
+        <div ng-if="tidesCtrl.status.isDone && tidesCtrl.status.isError" class="error">
+            <p ng-click="tidesCtrl.reload()">
+                {{ 'error.connection'|translate }}
+                <strong>{{ 'error.retry'|translate }} <i class="icon-spin"></i></strong>
+            </p>
+        </div>
+        <div ng-if="!tidesCtrl.status.isLoading" class="overthrow">
+            <div ng-repeat="tide in tidesCtrl.tides">
+                {{ tide.date }}<br>
+                Tides: {{ tide.getTides() }}<br>
+                <hr>
             </div>
         </div>
     </div>

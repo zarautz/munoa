@@ -2,10 +2,11 @@
 
 Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMapper', 'placesConfig', 'placeFavorite', 'settings', 'sort', 'filter', 'geolocation', function($scope, placesMapper, placeTypesMapper, placesConfig, placeFavorite, settings, sort, filter, geolocation) {
     this.clearFilters = function () {
-        this.filter.show  = false;
-        this.filter.name  = null;
-        this.filter.price = null;
-        this.filter.type  = null;
+        this.filter.show     = false;
+        this.filter.favorite = null;
+        this.filter.name     = null;
+        this.filter.price    = null;
+        this.filter.type     = null;
 
         this.refreshList();
     };
@@ -130,6 +131,10 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
             //
             // Filter
             //
+            if (!!that.filter.favorite) {
+                filterCfg.push({type: 'favorite', value: true});
+            }
+
             if (!!that.filter.name) {
                 filterCfg.push({type: 'property', value: that.filter.name, params: ['name', 'contains']});
             }
@@ -147,9 +152,9 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
             //
             // Sort
             //
-            if (that.sorting.type === 'favorite') {
-                sortCfg.push({type: 'favorite', order: that.sorting.order});
-            }
+            //if (that.sorting.type === 'favorite') {
+            //    sortCfg.push({type: 'favorite', order: that.sorting.order});
+            //}
 
             if (that.sorting.type === 'distance') {
                 sortCfg.push({type: 'distance', order: that.sorting.order, params: [places, that.userLocation.location]});

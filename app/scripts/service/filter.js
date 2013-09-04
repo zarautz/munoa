@@ -1,7 +1,11 @@
 'use strict';
 
-Z.app.factory('filter', [function() {
+Z.app.factory('filter', ['placeFavorite', function(placeFavorite) {
     var filter = new Z.Filter();
+
+    filter.addType('favorite', function (value) {
+        return placeFavorite.isFavorite(this.id) === value;
+    });
 
     filter.addType('property', function (value, property, testType) {
         testType = testType || 'contains';

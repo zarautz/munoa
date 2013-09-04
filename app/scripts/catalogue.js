@@ -1,6 +1,24 @@
 'use strict';
 
 Z.catalogue = {
+    'error.connection': {
+        'eu': 'Ezin izan dira datu berriak jaso. Ziurtatu konektatuta zaudela.',
+        'es': 'No se pueden cargar nuevos datos. Compruebe la conexión.',
+        'en': 'Can\'t load new data. Check your connection.',
+        'fr': 'Impossible de charger de nouvelles données. Vérifiez votre connexion.'
+    },
+    'error.retry': {
+        'eu': 'Berriro saiatu',
+        'es': 'Volver a intentar',
+        'en': 'Retry',
+        'fr': 'Réessayez'
+    },
+    'list.results': {
+        'eu': 'emaitza',
+        'es': 'resultados',
+        'en': 'results',
+        'fr': 'résultats'        
+    },
     //
     // Events
     //
@@ -273,7 +291,19 @@ Z.catalogue = {
         'en': 'Recycling',
         'fr': '--Recycling'        
     },
+    'placesGroup.places.police': {
+        'eu': 'Polizia',
+        'es': 'Policía',
+        'en': 'Police',
+        'fr': 'La police'        
+    },
     // POIs
+    'placesGroup.poi.poi': {
+        'eu': 'Interes guneak',
+        'es': 'Puntos de interés',
+        'en': 'Points of interest',
+        'fr': 'Points d\'intérêt'        
+    },
     'placesGroup.poi.nature': {
         'eu': 'Natura',
         'es': 'Naturaleza',
@@ -293,9 +323,9 @@ Z.catalogue = {
         'fr': '--Sculptures'        
     },
     'placesGroup.poi.theater': {
-        'eu': 'Antzezlekua',
-        'es': 'Teatro',
-        'en': 'Theater',
-        'fr': '--Theater'        
+        'eu': 'Bestelakoak',
+        'es': 'Otros',
+        'en': 'Other',
+        'fr': '--Other'        
     }
 };

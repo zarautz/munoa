@@ -388,15 +388,30 @@ ul.drawer {
             @include border-radius(3px);
             font-size: $small-font-size;
             margin: 0;
-            margin-left: $quarter-padding;
             padding: 0;
 
             &.icon-sort-alphabet {
                 padding-right: 3px;
+                @include border-top-right-radius(0);
+                @include border-bottom-right-radius(0);
+            }
+
+            &.icon-direction {
+                @include border-top-left-radius(0);
+                @include border-bottom-left-radius(0);
+            }
+
+            &.icon-star {
+                margin-left: $half-padding;
             }
 
             &.on {
                 background-color: $color-blue;
+                color: white;
+            }
+
+            &.fav-on {
+                background-color: $color-yellow;
                 color: white;
             }
         }

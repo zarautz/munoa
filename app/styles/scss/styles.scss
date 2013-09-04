@@ -354,8 +354,7 @@ ul.drawer {
         line-height: $big-font-size;
         color: $color-lightest-text;
 
-        [class^="icon-"],
-        [class*=" icon-"] {
+        .bicon {
             display: block;
             background: whitesmoke;
             height: 25px;
@@ -365,6 +364,10 @@ ul.drawer {
             font-size: $small-font-size;
             margin: 0;
             padding: 0;
+
+            &.icon-sort-alphabet {
+                padding-right: 3px;
+            }
 
             &.on {
                 background-color: $color-blue;

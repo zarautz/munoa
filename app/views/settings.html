@@ -26,7 +26,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href ng-click="setCtrl.clearCache()">
+                    <a href ng-click="navCtrl.pushView('settings.cache')">
+                        <i class="icon-right-open"></i>
                         {{ 'settings.cache'|translate }}
                         <span class="detail"></span>
                     </a>
@@ -62,5 +63,17 @@
     <div class="overthrow">
         <p>Lorem.</p>
         <p><small>{{ 'settings.about.build'|translate }}: @@timestamp</small></p>
+    </div>
+</script>
+
+
+<script type="text/ng-template" id="settings.cache">
+    <header>
+        <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
+        <h1 class="title">{{ 'settings.cache'|translate }}</h1>
+    </header>
+    <div class="overthrow">
+        <p>Lorem.</p>
+        <p><a class="button" ng-click="setCtrl.clearCache()">Do it!</a></p>
     </div>
 </script>

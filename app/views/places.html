@@ -81,7 +81,7 @@
                     
             <div class="list-with-images">
                 <div class="sort-options">
-                    <i ng-show="plistCtrl.isFiltered()" class="icon-filter color-blue"></i>
+                    <i ng-show="plistCtrl.isFiltered() || plistCtrl.filter.favorite !== null" class="icon-filter color-blue"></i>
                     {{ plistCtrl.pager.getTotalItems() }} {{ 'list.results'|translate }}
                     {{ '/ ' + plistCtrl.totalItems }}
                     <i class="right bicon icon-star" ng-class="{ 'fav-on': plistCtrl.filter.favorite !== null }" ng-click="plistCtrl.setFilter('favorite', true)"></i>

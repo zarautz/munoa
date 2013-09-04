@@ -84,8 +84,18 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
             order = 'DESC';
         }
 
-        this.sorting.type  = name;
-        this.sorting.order = order;
+        // Sort order toggle for 'name'
+        if (name === this.sorting.type && name === 'name') {
+            if (this.sorting.order === 'ASC') {
+                this.sorting.order = 'DESC';
+            } else {
+                this.sorting.order = 'ASC';
+            }
+        } else {
+            // Change sorting type
+            this.sorting.order = order;
+            this.sorting.type  = name;
+        }
 
         this.refreshList();
     };

@@ -13,7 +13,7 @@ Z.app.factory('geolocation', ['$q', '$timeout', 'phonegap', function($q, $timeou
                 currentPosition.location = new Z.Model.Point(position.coords.longitude, position.coords.latitude);
             }, function () {
                 currentPosition.location = false;
-            })
+            });
         }, function () {
             currentPosition.location = false;
         });
@@ -21,7 +21,7 @@ Z.app.factory('geolocation', ['$q', '$timeout', 'phonegap', function($q, $timeou
         // Check position every 30 secs
         $timeout(fetchCurrentPosition, 30000);
 
-        return '';  
+        return '';
     }
 
     fetchCurrentPosition();

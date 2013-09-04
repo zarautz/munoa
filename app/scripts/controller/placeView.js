@@ -3,7 +3,7 @@
 Z.app.controller('PlaceViewController', ['$scope', 'placeMapper', 'settings', function($scope, placeMapper, settings) {
     this.toggleIsFavorite = function () {
         this.isFavorite = !this.isFavorite;
-    }
+    };
 
     this.refresh = function () {
         var place = placeMapper.get({'language': settings.get('language'), 'id': $scope.pushData.id });

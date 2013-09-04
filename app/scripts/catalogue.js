@@ -17,7 +17,7 @@ Z.catalogue = {
         'eu': 'emaitza',
         'es': 'resultados',
         'en': 'results',
-        'fr': 'résultats'        
+        'fr': 'résultats'
     },
     'location.distance.meters': {
         'eu': 'm.',
@@ -222,116 +222,116 @@ Z.catalogue = {
         'eu': 'Farmaziak',
         'es': 'Farmacias',
         'en': 'Pharmacies',
-        'fr': '--Pharmacies'        
+        'fr': '--Pharmacies'
     },
     'placesGroup.health.doctors': {
         'eu': 'Medikuak',
         'es': 'Médicos',
         'en': 'Doctors',
-        'fr': '--Doctors'        
+        'fr': '--Doctors'
     },
     // PLACES
     'placesGroup.places.wifi': {
         'eu': 'Wi-Fia',
         'es': 'Wi-Fi',
         'en': 'Wi-Fi',
-        'fr': 'Wi-Fi'        
+        'fr': 'Wi-Fi'
     },
     'placesGroup.places.atm': {
         'eu': 'Kutxazainak',
         'es': 'Cajeros',
         'en': 'ATMs',
-        'fr': '--ATMs'        
+        'fr': '--ATMs'
     },
     'placesGroup.places.food': {
         'eu': 'Janaria',
         'es': 'Comida',
         'en': 'Food',
-        'fr': '--Food'        
+        'fr': '--Food'
     },
     'placesGroup.places.restaurant': {
         'eu': 'Jatetxeak',
         'es': 'Restaurantes',
         'en': 'Restaurants',
-        'fr': '--Restaurants'        
+        'fr': '--Restaurants'
     },
     'placesGroup.places.lodging': {
         'eu': 'Non lo egin',
         'es': 'Donde dormir',
         'en': 'Lodging',
-        'fr': '--Lodging'        
+        'fr': '--Lodging'
     },
     'placesGroup.places.drinking': {
         'eu': 'Tabernak',
         'es': 'Bares',
         'en': 'Bars',
-        'fr': '--Bars'        
+        'fr': '--Bars'
     },
     'placesGroup.places.shopping': {
         'eu': 'Dendak',
         'es': 'Tiendas',
         'en': 'Shopping',
-        'fr': '--Shopping'        
+        'fr': '--Shopping'
     },
     'placesGroup.places.sports': {
         'eu': 'Kirolak',
         'es': 'Deporte',
         'en': 'Sport',
-        'fr': '--Sport'        
+        'fr': '--Sport'
     },
     'placesGroup.places.parking': {
         'eu': 'Parking',
         'es': 'Parkings',
         'en': 'Parkings',
-        'fr': '--Parkings'        
+        'fr': '--Parkings'
     },
     'placesGroup.places.transport': {
         'eu': 'Garraiobideak',
         'es': 'Transportes',
         'en': 'Transport',
-        'fr': '--Transport'        
+        'fr': '--Transport'
     },
     'placesGroup.places.recycling': {
         'eu': 'Birziklaketa',
         'es': 'Reciclaje',
         'en': 'Recycling',
-        'fr': '--Recycling'        
+        'fr': '--Recycling'
     },
     'placesGroup.places.police': {
         'eu': 'Polizia',
         'es': 'Policía',
         'en': 'Police',
-        'fr': 'La police'        
+        'fr': 'La police'
     },
     // POIs
     'placesGroup.poi.poi': {
         'eu': 'Interes guneak',
         'es': 'Puntos de interés',
         'en': 'Points of interest',
-        'fr': 'Points d\'intérêt'        
+        'fr': 'Points d\'intérêt'
     },
     'placesGroup.poi.nature': {
         'eu': 'Natura',
         'es': 'Naturaleza',
         'en': 'Nature',
-        'fr': '--Nature'        
+        'fr': '--Nature'
     },
     'placesGroup.poi.museum': {
         'eu': 'Museoak',
         'es': 'Museos',
         'en': 'Museums',
-        'fr': '--Museums'        
+        'fr': '--Museums'
     },
     'placesGroup.poi.sculpture': {
         'eu': 'Eskulturak',
         'es': 'Esculturas',
         'en': 'Sculptures',
-        'fr': '--Sculptures'        
+        'fr': '--Sculptures'
     },
     'placesGroup.poi.theater': {
         'eu': 'Bestelakoak',
         'es': 'Otros',
         'en': 'Other',
-        'fr': '--Other'        
+        'fr': '--Other'
     }
 };

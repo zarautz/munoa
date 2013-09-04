@@ -12,7 +12,7 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
 
     this.initData = function () {
         var that = this,
-            i;        
+            i;
 
         // PlaceTypes for filter types i18n
         var placeTypes  = placeTypesMapper.get({'language': settings.get('language')});

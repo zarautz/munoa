@@ -353,8 +353,16 @@ ul.drawer {
             color: $color-lightest-text;
         }
 
-        .icon-tag {
-            margin: 1px -4px 0;
+        .tag {
+            display: block;
+            float: left;
+            margin-right: 0.2em;
+        }
+
+        [class^="icon-"],
+        [class*=" icon-"] {
+            float: left;
+            margin: 1px 0 0 -3px;
             font-size: .9em;
         }
     }

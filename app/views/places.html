@@ -98,13 +98,14 @@
                             <i class="icon-right-open"></i>
                             <h4 class="title">{{ place.name }}</h4>
                             <p>
+                                <i class="icon-location"></i>
                                 {{ place.address }}
                                 <span class="distance" ng-if="plistCtrl.userLocation.location !== false">
                                     ({{ place.location.distanceTo(plistCtrl.userLocation.location) * 1000 | number:0 }} {{ 'location.distance.meters'|translate }})
                                 </span><br/>
                                 <i class="icon-tag"></i>
-                                <span ng-repeat="type in place.types">
-                                    {{ type.name }}<span ng-if="!$last">,</span>
+                                <span ng-repeat="type in place.types" class="tag">
+                                    {{ type.name }}<span ng-if="!$last">, </span>
                                 </span>
                             </p>
                         </div>

@@ -9,7 +9,14 @@ Z.Model.Place.prototype.distanceTo = function (point) {
 };
 
 Z.Model.Place.prototype.getThumbnailImage = function () {
-    var images = this.images;
+    var images = this.images,
+        image = this.image;
+
+    if (this.image !== undefined && this.image !== null) {
+        return this.image.source.square;
+    } else if (this.images !== undefined && this.images.length > 0) {
+        return this.images[0].source.square;
+    }
 
     return 'images/dot.png';
 };

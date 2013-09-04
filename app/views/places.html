@@ -91,7 +91,7 @@
                 <div ng-repeat="place in plistCtrl.pager.getAllItems()">
                     <hr />
                     <div class="row collapse"
-                        ng-click="navCtrl.pushView('views/placeView.html', { id: place.id, plistCtrl: plistCtrl })">
+                        ng-click="navCtrl.pushView('views/placeView.html', { id: place.id, name: place.name, plistCtrl: plistCtrl })">
                         <div class="large-1 small-1 columns">
                             <img class="thumbnail color-{{ $index % 5 }}" ng-src="{{ place.getThumbnailImage() }}" />
                         </div>

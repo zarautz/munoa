@@ -15,6 +15,7 @@ Z.app.controller('PlaceViewController', ['$scope', 'placeMapper', 'placeFavorite
         this.favorite = placeFavorite;
         this.status   = place.status;
         this.place    = place.promise;console.log($scope);
+        this.title    = $scope.pushData.name;
     };
 
     this.refresh();

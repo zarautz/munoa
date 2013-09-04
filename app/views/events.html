@@ -1,25 +1,26 @@
 <section class="on-{{ navCtrl.activeView }}" ng-controller="EventController as eventCtrl">
     <div>
         <header>
-            <a href ng-click="navCtrl.toggleMenu()"><i class="left icon-menu"></i></a>
-            <i ng-if="status.isLoading" class="right icon-spin color-blue animate-spin"></i>
-            <i ng-if="status.isDone && status.isError" class="right icon-spin" ng-click="navCtrl.reload()"></i>
-            <i ng-if="status.isDone && !status.isError" class="right icon-search"></i>
+            <i ng-click="navCtrl.toggleMenu()" class="left icon-menu"></i>
+            <i ng-if="eventCtrl.status.isLoading" class="right icon-spin color-blue animate-spin"></i>
+            <i ng-if="!eventCtrl.status.isLoading" class="right icon-search"></i>
             <h1 class="title">{{ 'events'|translate }}</h1>
         </header>
-        <div class="overthrow">
-            <div ng-if="status.isDone && status.isError">
-                ERROR: {{ events }}
-            </div>
-            <div ng-if="status.isDone && !status.isError">
-                <ul>
-                    <li ng-repeat="event in events">
-                        <a href ng-click="navCtrl.pushView('event.show', { 'event': event })">
-                            {{ event.name }}
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <div ng-if="eventCtrl.status.isDone && eventCtrl.status.isError" class="error">
+            <p ng-click="eventCtrl.reload()">
+                <i class="right icon-spin"></i>
+                {{ 'error.connection'|translate }}
+                <strong>{{ 'error.retry'|translate }}.</strong>
+            </p>
+        </div>
+        <div ng-if="!eventCtrl.status.isLoading" class="overthrow">
+            <ul>
+                <li ng-repeat="event in events">
+                    <a href ng-click="navCtrl.pushView('event.show', { 'event': event })">
+                        {{ event.name }}
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
     <div ng-include="view2"></div>

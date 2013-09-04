@@ -150,14 +150,13 @@ Z.app.factory('placesConfig', [function() {
 
     group = section.addGroup('food');
     group
-        .setTypes(['bakery', 'butcher_shop', 'fish_shop', 'food', 'fruit_shop', 'grocery_or_supermarket', 'ice_cream_parlor', 'general_store'])
+        .setTypes(['bakery', 'butcher_shop', 'fish_shop', 'food', 'fruit_shop', 'grocery_or_supermarket', 'ice_cream_parlor'])
         .setIcon('icon-basket')
-        .setShowPriceFilter(true)
     ;
 
     group = section.addGroup('shopping');
     group
-        .setTypes(['hardware_store', 'clothing_store'])
+        .setTypes(['clothing_store'])
         .setIcon('icon-shop')
         .setShowPriceFilter(true)
     ;
@@ -190,13 +189,13 @@ Z.app.factory('placesConfig', [function() {
     group
         .setTypes(['bar', 'cafe', 'night_club', 'wine_store'])
         .setIcon('icon-beer')
-        .setShowPriceFilter(true)
     ;
 
     group = section.addGroup('restaurant');
     group
         .setTypes(['meal_takeaway', 'restaurant'])
         .setIcon('icon-restaurant')
+        .setShowPriceFilter(true)
     ;
 
     group = section.addGroup('lodging');
@@ -206,8 +205,14 @@ Z.app.factory('placesConfig', [function() {
         .setShowPriceFilter(true)
     ;
 
-    section.sortGroups('tourist', ['wifi', 'atm', 'food', 'restaurant', 'lodging', 'drinking', 'shopping', 'sports', 'parking', 'transport', 'recycling']);
-    section.sortGroups('zarautz', ['wifi', 'atm', 'transport', 'restaurant', 'drinking', 'food', 'shopping', 'sports', 'parking', 'recycling', 'lodging']);
+    group = section.addGroup('police');
+    group
+        .setTypes(['police'])
+        .setIcon('icon-police')
+    ;
+
+    section.sortGroups('tourist', ['wifi', 'atm', 'food', 'restaurant', 'lodging', 'drinking', 'shopping', 'sports', 'parking', 'transport', 'police', 'recycling']);
+    section.sortGroups('zarautz', ['wifi', 'atm', 'transport', 'restaurant', 'drinking', 'food', 'shopping', 'sports', 'parking', 'recycling', 'police', 'lodging']);
 
     //
     // POI
@@ -217,7 +222,7 @@ Z.app.factory('placesConfig', [function() {
     group = section.addGroup('poi');
     group
         .setTypes(['point_of_interest'])
-        .setIcon('icon-tree-2')
+        .setIcon('icon-ok')
     ;
 
     group = section.addGroup('nature');

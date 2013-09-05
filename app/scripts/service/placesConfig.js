@@ -158,7 +158,7 @@ Z.app.factory('placesConfig', [function() {
     group
         .setTypes(['clothing_store'])
         .setIcon('icon-shop')
-        .setShowPriceFilter(true)
+        //.setShowPriceFilter(true)
     ;
 
     group = section.addGroup('parking');
@@ -195,14 +195,14 @@ Z.app.factory('placesConfig', [function() {
     group
         .setTypes(['meal_takeaway', 'restaurant'])
         .setIcon('icon-restaurant')
-        .setShowPriceFilter(true)
+        //.setShowPriceFilter(true)
     ;
 
     group = section.addGroup('lodging');
     group
         .setTypes(['lodging', 'campground'])
         .setIcon('icon-lodging')
-        .setShowPriceFilter(true)
+        //.setShowPriceFilter(true)
     ;
 
     group = section.addGroup('police');

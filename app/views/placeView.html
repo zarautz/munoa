@@ -13,9 +13,7 @@
     </header>
     <div class="map-container" id="map-canvas"></div>
     <div ng-if="!pviewCtrl.status.isLoading" class="overthrow">
-        <div class="banner">
-
-        </div>
+        <div class="banner" ng-style="{ 'background-image': 'url('+ pviewCtrl.place.getImage('medium') +')' }"></div>
         <h2>
             <i class="right" ng-class="{ 'icon-star color-yellow': pviewCtrl.favorite.isFavorite(pviewCtrl.place.id), 'icon-star-empty': !pviewCtrl.favorite.isFavorite(pviewCtrl.place.id) }" ng-click="pviewCtrl.toggleFavorite(pviewCtrl.place.id)"></i>
             {{ pviewCtrl.place.name }}

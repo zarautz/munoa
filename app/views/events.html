@@ -15,7 +15,7 @@
         </div>
         <div ng-if="!eventCtrl.status.isLoading" class="overthrow">
             <ul>
-                <li ng-repeat="event in events">
+                <li ng-repeat="event in eventCtrl.events">
                     <a href ng-click="navCtrl.pushView('event.show', { 'event': event })">
                         {{ event.name }}
                     </a>

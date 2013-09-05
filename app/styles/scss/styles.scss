@@ -426,10 +426,18 @@ ul.drawer {
 .block-grid-icons {
     li {
         text-align: center;
-        margin: $quarter-padding 0;
+        margin: $quarter-padding 0 0;
 
         i {
             font-size: $biggest-font-size;
+            @include border-radius(1000px);
+            height: 1.6em;
+            width: 1.6em;
+            display: block;
+            margin: 0 auto;
+            line-height: 1.6;
+
+            @include color-alternation('background-color');
         }
 
         p {

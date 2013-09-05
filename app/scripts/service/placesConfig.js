@@ -191,7 +191,7 @@ Z.app.factory('placesConfig', [function() {
         .setIcon('icon-beer')
     ;
 
-    group = section.addGroup('restaurant');
+    group = section.addGroup('eating');
     group
         .setTypes(['meal_takeaway', 'restaurant'])
         .setIcon('icon-restaurant')
@@ -211,8 +211,8 @@ Z.app.factory('placesConfig', [function() {
         .setIcon('icon-police')
     ;
 
-    section.sortGroups('tourist', ['wifi', 'atm', 'food', 'restaurant', 'lodging', 'drinking', 'shopping', 'sports', 'parking', 'transport', 'police', 'recycling']);
-    section.sortGroups('zarautz', ['wifi', 'atm', 'transport', 'restaurant', 'drinking', 'food', 'shopping', 'sports', 'parking', 'recycling', 'police', 'lodging']);
+    section.sortGroups('tourist', ['wifi', 'atm', 'food', 'eating', 'lodging', 'drinking', 'shopping', 'sports', 'parking', 'transport', 'police', 'recycling']);
+    section.sortGroups('zarautz', ['wifi', 'atm', 'transport', 'eating', 'drinking', 'food', 'shopping', 'sports', 'parking', 'recycling', 'police', 'lodging']);
 
     //
     // POI

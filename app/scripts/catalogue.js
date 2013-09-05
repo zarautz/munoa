@@ -23,10 +23,10 @@ Z.catalogue = {
     // Events
     //
     'events': {
-        'eu': 'Ekitaldiak',
+        'eu': 'Agenda',
         'es': 'Agenda',
         'en': 'Events',
-        'fr': ''
+        'fr': 'Événements'
     },
     //
     // Health
@@ -57,8 +57,8 @@ Z.catalogue = {
     //
     'places': {
         'eu': 'Lekuak',
-        'es': '',
-        'en': '',
+        'es': 'Lugares',
+        'en': 'Places',
         'fr': ''
     },
     //
@@ -243,17 +243,17 @@ Z.catalogue = {
         'en': 'Food',
         'fr': '--Food'
     },
-    'placesGroup.places.restaurant': {
-        'eu': 'Jatetxeak',
-        'es': 'Restaurantes',
-        'en': 'Restaurants',
-        'fr': '--Restaurants'
+    'placesGroup.places.eating': {
+        'eu': 'Non jan',
+        'es': 'Donde comer',
+        'en': 'Where to eat',
+        'fr': 'Où manger'
     },
     'placesGroup.places.lodging': {
         'eu': 'Non lo egin',
         'es': 'Donde dormir',
-        'en': 'Lodging',
-        'fr': '--Lodging'
+        'en': 'Where to sleep',
+        'fr': 'Où dormir'
     },
     'placesGroup.places.drinking': {
         'eu': 'Tabernak',

@@ -8,7 +8,7 @@
             <ul class="small-block-grid-3 large-block-grid-4 block-grid-icons">
                 <li ng-repeat="group in placesCtrl.groups"
                     ng-click="navCtrl.pushView('place.list', { section: placesCtrl.section, group: group.name })">
-                    <i class="{{ group.icon }}"></i>
+                    <i class="{{ group.icon }} color-{{ $index % 5 }}"></i>
                     <p class="color-{{ $index % 5 }}">
                         {{ ('placesGroup.'+ placesCtrl.section +'.'+ group.name)|translate }}
                     </p>

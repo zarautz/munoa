@@ -210,6 +210,7 @@ header {
     line-height: $action-bar-height;
     background-color: $action-bar-background-color;
     position: relative;
+    z-index: 1000;
     
     @if $action-bar-border-size != 0 {
         border-bottom: $action-bar-border-size solid $action-bar-border-color;
@@ -382,7 +383,7 @@ ul.drawer {
         .bicon {
             text-align: center;
             display: block;
-            background: whitesmoke;
+            background: $action-bar-background-color;
             height: 25px;
             width: 40px;
             line-height: 25px;
@@ -435,7 +436,7 @@ ul.drawer {
             width: 1.6em;
             display: block;
             margin: 0 auto;
-            line-height: 1.6;
+            line-height: 1.55;
 
             @include color-alternation('background-color');
         }
@@ -446,6 +447,36 @@ ul.drawer {
             line-height: 1.3;
             //@include color-alternation('border-top-color');
         }
+    }
+}
+
+//
+// Image banner
+//
+
+.banner {
+    margin: (-($base-padding)) (-($base-padding)) $base-padding;
+    height: 180px;
+    background: #fafafa none center center no-repeat;
+    background-size: cover;
+}
+
+//
+// Map
+//
+
+.map-container {
+    position: absolute;
+    z-index: 500;
+    top: $action-bar-height;
+    bottom: 0;
+    width: 100%;
+    background: yellow;
+    @include transform-transition($transition-duration, ease-out);
+    @include transform-translateY(-100%);
+
+    div.active-map & {
+        @include transform-translateY(0);
     }
 }
 

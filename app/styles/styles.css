@@ -1479,7 +1479,7 @@ section.on-5 {
 
 /* line 23, scss/_app-colors.scss */
 .color-yellow {
-  color: #fcd052;
+  color: #ffbb33;
 }
 
 /* line 24, scss/_app-colors.scss */
@@ -1846,342 +1846,348 @@ section.on-5 {
 
 /* '' */
 /* line 93, scss/_app-icons.scss */
+.icon-map:before {
+  content: '\e86a';
+}
+
+/* '' */
+/* line 94, scss/_app-icons.scss */
 .icon-basket-alt:before {
   content: '\e808';
 }
 
 /* '' */
-/* line 94, scss/_app-icons.scss */
+/* line 95, scss/_app-icons.scss */
 .icon-basket:before {
   content: '\e81b';
 }
 
 /* '' */
-/* line 95, scss/_app-icons.scss */
+/* line 96, scss/_app-icons.scss */
 .icon-layers:before {
   content: '\e817';
 }
 
 /* '' */
-/* line 96, scss/_app-icons.scss */
+/* line 97, scss/_app-icons.scss */
 .icon-smiley:before {
   content: '\e800';
 }
 
 /* '' */
-/* line 97, scss/_app-icons.scss */
+/* line 98, scss/_app-icons.scss */
 .icon-art:before {
   content: '\e841';
 }
 
 /* '' */
-/* line 98, scss/_app-icons.scss */
+/* line 99, scss/_app-icons.scss */
 .icon-bar:before {
   content: '\e842';
 }
 
 /* '' */
-/* line 99, scss/_app-icons.scss */
+/* line 100, scss/_app-icons.scss */
 .icon-beer:before {
   content: '\e843';
 }
 
 /* '' */
-/* line 100, scss/_app-icons.scss */
+/* line 101, scss/_app-icons.scss */
 .icon-bicycle:before {
   content: '\e844';
 }
 
 /* '' */
-/* line 101, scss/_app-icons.scss */
+/* line 102, scss/_app-icons.scss */
 .icon-bus:before {
   content: '\e845';
 }
 
 /* '' */
-/* line 102, scss/_app-icons.scss */
+/* line 103, scss/_app-icons.scss */
 .icon-cafe:before {
   content: '\e846';
 }
 
 /* '' */
-/* line 103, scss/_app-icons.scss */
+/* line 104, scss/_app-icons.scss */
 .icon-campsite:before {
   content: '\e847';
 }
 
 /* '' */
-/* line 104, scss/_app-icons.scss */
+/* line 105, scss/_app-icons.scss */
 .icon-credit-card:before {
   content: '\e848';
 }
 
 /* '' */
-/* line 105, scss/_app-icons.scss */
+/* line 106, scss/_app-icons.scss */
 .icon-fast-food:before {
   content: '\e849';
 }
 
 /* '' */
-/* line 106, scss/_app-icons.scss */
+/* line 107, scss/_app-icons.scss */
 .icon-fuel:before {
   content: '\e84a';
 }
 
 /* '' */
-/* line 107, scss/_app-icons.scss */
+/* line 108, scss/_app-icons.scss */
 .icon-garden:before {
   content: '\e84b';
 }
 
 /* '' */
-/* line 108, scss/_app-icons.scss */
+/* line 109, scss/_app-icons.scss */
 .icon-golf:before {
   content: '\e84c';
 }
 
 /* '' */
-/* line 109, scss/_app-icons.scss */
+/* line 110, scss/_app-icons.scss */
 .icon-harbor:before {
   content: '\e84d';
 }
 
 /* '' */
-/* line 110, scss/_app-icons.scss */
+/* line 111, scss/_app-icons.scss */
 .icon-hospital:before {
   content: '\e84e';
 }
 
 /* '' */
-/* line 111, scss/_app-icons.scss */
+/* line 112, scss/_app-icons.scss */
 .icon-library:before {
   content: '\e84f';
 }
 
 /* '' */
-/* line 112, scss/_app-icons.scss */
+/* line 113, scss/_app-icons.scss */
 .icon-lodging:before {
   content: '\e850';
 }
 
 /* '' */
-/* line 113, scss/_app-icons.scss */
+/* line 114, scss/_app-icons.scss */
 .icon-museum:before {
   content: '\e851';
 }
 
 /* '' */
-/* line 114, scss/_app-icons.scss */
+/* line 115, scss/_app-icons.scss */
 .icon-pitch:before {
   content: '\e852';
 }
 
 /* '' */
-/* line 115, scss/_app-icons.scss */
+/* line 116, scss/_app-icons.scss */
 .icon-police:before {
   content: '\e853';
 }
 
 /* '' */
-/* line 116, scss/_app-icons.scss */
+/* line 117, scss/_app-icons.scss */
 .icon-post:before {
   content: '\e854';
 }
 
 /* '' */
-/* line 117, scss/_app-icons.scss */
+/* line 118, scss/_app-icons.scss */
 .icon-rail:before {
   content: '\e855';
 }
 
 /* '' */
-/* line 118, scss/_app-icons.scss */
+/* line 119, scss/_app-icons.scss */
 .icon-christian:before {
   content: '\e856';
 }
 
 /* '' */
-/* line 119, scss/_app-icons.scss */
+/* line 120, scss/_app-icons.scss */
 .icon-restaurant:before {
   content: '\e857';
 }
 
 /* '' */
-/* line 120, scss/_app-icons.scss */
+/* line 121, scss/_app-icons.scss */
 .icon-spin:before {
   content: '\e801';
 }
 
 /* '' */
-/* line 121, scss/_app-icons.scss */
+/* line 122, scss/_app-icons.scss */
 .icon-school:before {
   content: '\e858';
 }
 
 /* '' */
-/* line 122, scss/_app-icons.scss */
+/* line 123, scss/_app-icons.scss */
 .icon-shop:before {
   content: '\e859';
 }
 
 /* '' */
-/* line 123, scss/_app-icons.scss */
+/* line 124, scss/_app-icons.scss */
 .icon-football:before {
   content: '\e85a';
 }
 
 /* '' */
-/* line 124, scss/_app-icons.scss */
+/* line 125, scss/_app-icons.scss */
 .icon-swim:before {
   content: '\e85b';
 }
 
 /* '' */
-/* line 125, scss/_app-icons.scss */
+/* line 126, scss/_app-icons.scss */
 .icon-theatre:before {
   content: '\e85c';
 }
 
 /* '' */
-/* line 126, scss/_app-icons.scss */
+/* line 127, scss/_app-icons.scss */
 .icon-toilet:before {
   content: '\e85d';
 }
 
 /* '' */
-/* line 127, scss/_app-icons.scss */
+/* line 128, scss/_app-icons.scss */
 .icon-town-hall:before {
   content: '\e85e';
 }
 
 /* '' */
-/* line 128, scss/_app-icons.scss */
+/* line 129, scss/_app-icons.scss */
 .icon-trash:before {
   content: '\e85f';
 }
 
 /* '' */
-/* line 129, scss/_app-icons.scss */
+/* line 130, scss/_app-icons.scss */
 .icon-tree-alt:before {
   content: '\e860';
 }
 
 /* '' */
-/* line 130, scss/_app-icons.scss */
+/* line 131, scss/_app-icons.scss */
 .icon-tree:before {
   content: '\e861';
 }
 
 /* '' */
-/* line 131, scss/_app-icons.scss */
+/* line 132, scss/_app-icons.scss */
 .icon-right-open:before {
   content: '\e83e';
 }
 
 /* '' */
-/* line 132, scss/_app-icons.scss */
+/* line 133, scss/_app-icons.scss */
 .icon-left-open:before {
   content: '\e83d';
 }
 
 /* '' */
-/* line 133, scss/_app-icons.scss */
+/* line 134, scss/_app-icons.scss */
 .icon-location-alt:before {
   content: '\e83c';
 }
 
 /* '' */
-/* line 134, scss/_app-icons.scss */
+/* line 135, scss/_app-icons.scss */
 .icon-phone-alt:before {
   content: '\e806';
 }
 
 /* '' */
-/* line 135, scss/_app-icons.scss */
+/* line 136, scss/_app-icons.scss */
 .icon-filter:before {
   content: '\e80a';
 }
 
 /* '' */
-/* line 136, scss/_app-icons.scss */
+/* line 137, scss/_app-icons.scss */
 .icon-menu:before {
   content: '\e807';
 }
 
 /* '' */
-/* line 137, scss/_app-icons.scss */
+/* line 138, scss/_app-icons.scss */
 .icon-money:before {
   content: '\e80b';
 }
 
 /* '' */
-/* line 138, scss/_app-icons.scss */
+/* line 139, scss/_app-icons.scss */
 .icon-download:before {
   content: '\e802';
 }
 
 /* '' */
-/* line 139, scss/_app-icons.scss */
+/* line 140, scss/_app-icons.scss */
 .icon-medical-alt:before {
   content: '\e80c';
 }
 
 /* '' */
-/* line 140, scss/_app-icons.scss */
+/* line 141, scss/_app-icons.scss */
 .icon-medical:before {
   content: '\e80d';
 }
 
 /* '' */
-/* line 141, scss/_app-icons.scss */
+/* line 142, scss/_app-icons.scss */
 .icon-direction:before {
   content: '\e804';
 }
 
 /* '' */
-/* line 142, scss/_app-icons.scss */
+/* line 143, scss/_app-icons.scss */
 .icon-twitter:before {
   content: '\e862';
 }
 
 /* '' */
-/* line 143, scss/_app-icons.scss */
+/* line 144, scss/_app-icons.scss */
 .icon-pictures:before {
   content: '\e80e';
 }
 
 /* '' */
-/* line 144, scss/_app-icons.scss */
+/* line 145, scss/_app-icons.scss */
 .icon-leaf:before {
   content: '\e809';
 }
 
 /* '' */
-/* line 145, scss/_app-icons.scss */
+/* line 146, scss/_app-icons.scss */
 .icon-calendar:before {
   content: '\e814';
 }
 
 /* '' */
-/* line 146, scss/_app-icons.scss */
+/* line 147, scss/_app-icons.scss */
 .icon-phone:before {
   content: '\e805';
 }
 
 /* '' */
-/* line 147, scss/_app-icons.scss */
+/* line 148, scss/_app-icons.scss */
 .icon-wifi:before {
   content: '\e815';
 }
 
 /* '' */
-/* line 148, scss/_app-icons.scss */
+/* line 149, scss/_app-icons.scss */
 .icon-search:before {
   content: '\e869';
 }
 
 /* '' */
-/* line 150, scss/_app-icons.scss */
+/* line 151, scss/_app-icons.scss */
 .icon-parking:before {
   content: 'P';
   font-family: inherit;
@@ -2189,26 +2195,26 @@ section.on-5 {
 }
 
 /* '' */
-/* line 152, scss/_app-icons.scss */
+/* line 153, scss/_app-icons.scss */
 .icon-weather-11:before {
   content: '\e824';
 }
 
 /* '' */
-/* line 153, scss/_app-icons.scss */
+/* line 154, scss/_app-icons.scss */
 .icon-weather-12:before,
 .icon-weather-13:before {
   content: '\e82a';
 }
 
 /* '' */
-/* line 155, scss/_app-icons.scss */
+/* line 156, scss/_app-icons.scss */
 .icon-weather-14:before {
   content: '\e82e';
 }
 
 /* '' */
-/* line 156, scss/_app-icons.scss */
+/* line 157, scss/_app-icons.scss */
 .icon-weather-15:before,
 .icon-weather-16:before,
 .icon-weather-17:before {
@@ -2216,7 +2222,7 @@ section.on-5 {
 }
 
 /* '' */
-/* line 159, scss/_app-icons.scss */
+/* line 160, scss/_app-icons.scss */
 .icon-weather-23:before,
 .icon-weather-24:before,
 .icon-weather-25:before,
@@ -2225,21 +2231,21 @@ section.on-5 {
 }
 
 /* '' */
-/* line 163, scss/_app-icons.scss */
+/* line 164, scss/_app-icons.scss */
 .icon-weather-33:before,
 .icon-weather-34:before {
   content: '\e834';
 }
 
 /* '' */
-/* line 165, scss/_app-icons.scss */
+/* line 166, scss/_app-icons.scss */
 .icon-weather-35:before,
 .icon-weather-36:before {
   content: '\e835';
 }
 
 /* '' */
-/* line 167, scss/_app-icons.scss */
+/* line 168, scss/_app-icons.scss */
 .icon-weather-43:before,
 .icon-weather-44:before,
 .icon-weather-45:before,
@@ -2248,14 +2254,14 @@ section.on-5 {
 }
 
 /* '' */
-/* line 171, scss/_app-icons.scss */
+/* line 172, scss/_app-icons.scss */
 .icon-weather-51:before,
 .icon-weather-52:before {
   content: '\e82f';
 }
 
 /* '' */
-/* line 173, scss/_app-icons.scss */
+/* line 174, scss/_app-icons.scss */
 .icon-weather-53:before,
 .icon-weather-54:before,
 .icon-weather-61:before,
@@ -2266,14 +2272,14 @@ section.on-5 {
 }
 
 /* '' */
-/* line 179, scss/_app-icons.scss */
+/* line 180, scss/_app-icons.scss */
 .icon-weather-71:before,
 .icon-weather-72:before {
   content: '\e836';
 }
 
 /* '' */
-/* line 181, scss/_app-icons.scss */
+/* line 182, scss/_app-icons.scss */
 .icon-weather-73:before,
 .icon-weather-74:before {
   content: '\e834';
@@ -2281,14 +2287,14 @@ section.on-5 {
 
 /* '' */
 @-webkit-keyframes spin {
-  /* line 201, scss/_app-icons.scss */
+  /* line 202, scss/_app-icons.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 207, scss/_app-icons.scss */
+  /* line 208, scss/_app-icons.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);
@@ -2297,14 +2303,14 @@ section.on-5 {
 }
 
 @-moz-keyframes spin {
-  /* line 201, scss/_app-icons.scss */
+  /* line 202, scss/_app-icons.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 207, scss/_app-icons.scss */
+  /* line 208, scss/_app-icons.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);
@@ -2313,14 +2319,14 @@ section.on-5 {
 }
 
 @keyframes spin {
-  /* line 201, scss/_app-icons.scss */
+  /* line 202, scss/_app-icons.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 207, scss/_app-icons.scss */
+  /* line 208, scss/_app-icons.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);
@@ -2440,7 +2446,7 @@ section div.error p {
   font-size: 13px;
   line-height: 1.3;
   text-align: center;
-  background: #fcd052;
+  background: #ffbb33;
   padding: 8px;
   margin: 16px;
   -webkit-border-radius: 3px;
@@ -2471,9 +2477,10 @@ header {
   line-height: 48px;
   background-color: #eaeaea;
   position: relative;
+  z-index: 1000;
   border-bottom: 1px solid #dddddd;
 }
-/* line 218, scss/styles.scss */
+/* line 219, scss/styles.scss */
 header .title {
   position: absolute;
   top: 0;
@@ -2490,13 +2497,13 @@ header .title {
   text-overflow: ellipsis;
 }
 @media only screen and (min-width: 320px) {
-  /* line 218, scss/styles.scss */
+  /* line 219, scss/styles.scss */
   header .title {
     left: 17%;
     width: 66%;
   }
 }
-/* line 237, scss/styles.scss */
+/* line 238, scss/styles.scss */
 header i {
   background-color: #eaeaea;
   margin: 0 16px;
@@ -2504,18 +2511,18 @@ header i {
   color: #666666;
 }
 
-/* line 249, scss/styles.scss */
+/* line 250, scss/styles.scss */
 ul.drawer {
   background: #22252c;
   color: #eff0f2;
   font-size: 18px;
 }
-/* line 254, scss/styles.scss */
+/* line 255, scss/styles.scss */
 ul.drawer li {
   height: 48px;
   padding: 0 16px;
 }
-/* line 258, scss/styles.scss */
+/* line 259, scss/styles.scss */
 ul.drawer li a {
   display: block;
   height: 48px;
@@ -2526,13 +2533,13 @@ ul.drawer li a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 266, scss/styles.scss */
+/* line 267, scss/styles.scss */
 ul.drawer li a [class^="icon-"],
 ul.drawer li a [class*=" icon-"] {
   margin-right: 16px;
   font-size: 18px;
 }
-/* line 272, scss/styles.scss */
+/* line 273, scss/styles.scss */
 ul.drawer li a.active {
   background: #17191e;
   margin: 0 -16px;
@@ -2540,21 +2547,21 @@ ul.drawer li a.active {
   margin-top: -1px;
   border-top: 1px solid #1b1e23;
 }
-/* line 280, scss/styles.scss */
+/* line 281, scss/styles.scss */
 ul.drawer li a.settings {
   text-transform: uppercase;
   font-size: 13px;
   color: #434957;
 }
 
-/* line 294, scss/styles.scss */
+/* line 295, scss/styles.scss */
 .table-view ul {
   border-width: 1px 0;
   border-style: solid;
   border-color: #eaeaea;
   margin-right: -16px;
 }
-/* line 300, scss/styles.scss */
+/* line 301, scss/styles.scss */
 .table-view ul a {
   display: block;
   color: #333333;
@@ -2566,38 +2573,38 @@ ul.drawer li a.settings {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 309, scss/styles.scss */
+/* line 310, scss/styles.scss */
 .table-view ul a i {
   float: right;
   color: #b3b3b3;
 }
-/* line 313, scss/styles.scss */
+/* line 314, scss/styles.scss */
 .table-view ul a i.selected {
   color: #337abd;
 }
-/* line 318, scss/styles.scss */
+/* line 319, scss/styles.scss */
 .table-view ul a .detail {
   float: right;
   color: #337abd;
   margin-right: 8px;
 }
-/* line 325, scss/styles.scss */
+/* line 326, scss/styles.scss */
 .table-view ul li:last-child a {
   border: 0;
 }
 
-/* line 332, scss/styles.scss */
+/* line 333, scss/styles.scss */
 .list-with-images .title {
   margin: 0 16px 0 0;
 }
-/* line 336, scss/styles.scss */
+/* line 337, scss/styles.scss */
 .list-with-images .icon-right-open {
   font-size: 1.2em;
   float: right;
   color: #bbbbbb;
   margin: -3px -8px 8px 8px;
 }
-/* line 343, scss/styles.scss */
+/* line 344, scss/styles.scss */
 .list-with-images .thumbnail {
   width: 80%;
   -webkit-border-radius: 1000px;
@@ -2623,34 +2630,34 @@ ul.drawer li a.settings {
 .list-with-images .thumbnail.color-4 {
   background-color: #ffe4e4;
 }
-/* line 349, scss/styles.scss */
+/* line 350, scss/styles.scss */
 .list-with-images p {
   font-size: 13px;
   line-height: 1.3;
   margin-top: 8px;
 }
-/* line 353, scss/styles.scss */
+/* line 354, scss/styles.scss */
 .list-with-images p .distance {
   color: #bbbbbb;
 }
-/* line 357, scss/styles.scss */
+/* line 358, scss/styles.scss */
 .list-with-images p .tag {
   display: block;
   float: left;
   margin-right: 0.2em;
 }
-/* line 363, scss/styles.scss */
+/* line 364, scss/styles.scss */
 .list-with-images p [class^="icon-"],
 .list-with-images p [class*=" icon-"] {
   float: left;
   margin: 0 0 0 -3px;
   font-size: .9em;
 }
-/* line 371, scss/styles.scss */
+/* line 372, scss/styles.scss */
 .list-with-images hr {
   margin: 16px -16px;
 }
-/* line 375, scss/styles.scss */
+/* line 376, scss/styles.scss */
 .list-with-images div.sort-options {
   *zoom: 1;
   font-size: 13px;
@@ -2668,11 +2675,11 @@ ul.drawer li a.settings {
 .list-with-images div.sort-options:after {
   clear: both;
 }
-/* line 382, scss/styles.scss */
+/* line 383, scss/styles.scss */
 .list-with-images div.sort-options .bicon {
   text-align: center;
   display: block;
-  background: whitesmoke;
+  background: #eaeaea;
   height: 25px;
   width: 40px;
   line-height: 25px;
@@ -2682,7 +2689,7 @@ ul.drawer li a.settings {
   margin: 0;
   padding: 0;
 }
-/* line 394, scss/styles.scss */
+/* line 395, scss/styles.scss */
 .list-with-images div.sort-options .bicon.icon-sort-alphabet {
   padding-right: 3px;
   -webkit-border-top-right-radius: 0;
@@ -2690,34 +2697,34 @@ ul.drawer li a.settings {
   -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-/* line 400, scss/styles.scss */
+/* line 401, scss/styles.scss */
 .list-with-images div.sort-options .bicon.icon-direction {
   -webkit-border-top-left-radius: 0;
   border-top-left-radius: 0;
   -webkit-border-bottom-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-/* line 405, scss/styles.scss */
+/* line 406, scss/styles.scss */
 .list-with-images div.sort-options .bicon.icon-star {
   margin-left: 8px;
 }
-/* line 409, scss/styles.scss */
+/* line 410, scss/styles.scss */
 .list-with-images div.sort-options .bicon.on {
   background-color: #0099cc;
   color: white;
 }
-/* line 414, scss/styles.scss */
+/* line 415, scss/styles.scss */
 .list-with-images div.sort-options .bicon.fav-on {
-  background-color: #fcd052;
+  background-color: #ffbb33;
   color: white;
 }
 
-/* line 427, scss/styles.scss */
+/* line 428, scss/styles.scss */
 .block-grid-icons li {
   text-align: center;
   margin: 4px 0 0;
 }
-/* line 431, scss/styles.scss */
+/* line 432, scss/styles.scss */
 .block-grid-icons li i {
   font-size: 34px;
   -webkit-border-radius: 1000px;
@@ -2726,7 +2733,7 @@ ul.drawer li a.settings {
   width: 1.6em;
   display: block;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.55;
 }
 /* line 83, scss/styles.scss */
 .block-grid-icons li i.color-0 {
@@ -2748,7 +2755,7 @@ ul.drawer li a.settings {
 .block-grid-icons li i.color-4 {
   background-color: #ffe4e4;
 }
-/* line 443, scss/styles.scss */
+/* line 444, scss/styles.scss */
 .block-grid-icons li p {
   padding-top: 5px;
   font-size: 13px;
@@ -2756,38 +2763,71 @@ ul.drawer li a.settings {
 }
 
 /* line 457, scss/styles.scss */
+.banner {
+  margin: -16px -16px 16px;
+  height: 180px;
+  background: #fafafa none center center no-repeat;
+  background-size: cover;
+}
+
+/* line 468, scss/styles.scss */
+.map-container {
+  position: absolute;
+  z-index: 500;
+  top: 48px;
+  bottom: 0;
+  width: 100%;
+  background: yellow;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+/* line 478, scss/styles.scss */
+div.active-map .map-container {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/* line 488, scss/styles.scss */
 .content h1, .content h2, .content h3, .content h4, .content h5 {
   font-size: 1em;
   font-weight: normal;
   font-style: italic;
 }
-/* line 462, scss/styles.scss */
+/* line 493, scss/styles.scss */
 .content h1 strong, .content h2 strong, .content h3 strong, .content h4 strong, .content h5 strong {
   font-weight: normal;
 }
-/* line 467, scss/styles.scss */
+/* line 498, scss/styles.scss */
 .content p, .content img {
   display: block;
   margin: 1em 0;
 }
-/* line 472, scss/styles.scss */
+/* line 503, scss/styles.scss */
 .content ol, .content ul {
   padding-left: 1.5em;
 }
-/* line 475, scss/styles.scss */
+/* line 506, scss/styles.scss */
 .content ol li, .content ul li {
   margin-bottom: .5em;
 }
-/* line 481, scss/styles.scss */
+/* line 512, scss/styles.scss */
 .content ul li {
   list-style: disc outside none;
 }
-/* line 487, scss/styles.scss */
+/* line 518, scss/styles.scss */
 .content ol li {
   list-style: decimal outside none;
 }
 
-/* line 493, scss/styles.scss */
+/* line 524, scss/styles.scss */
 .external-link {
   border-style: solid;
   border-width: 1px;
@@ -2826,22 +2866,22 @@ ul.drawer li a.settings {
 .external-link:hover, .external-link:focus {
   color: white;
 }
-/* line 498, scss/styles.scss */
+/* line 529, scss/styles.scss */
 .external-link, .external-link:visited {
   color: white;
 }
 
-/* line 505, scss/styles.scss */
+/* line 536, scss/styles.scss */
 .post .content div > img + p {
   font-size: .9em;
   color: #666666;
 }
-/* line 510, scss/styles.scss */
+/* line 541, scss/styles.scss */
 .post .content img {
   width: 100%;
 }
 
-/* line 521, scss/styles.scss */
+/* line 552, scss/styles.scss */
 hr {
   border: solid #dddddd;
   border-width: 1px 0 0;
@@ -2850,47 +2890,47 @@ hr {
   height: 0;
 }
 
-/* line 529, scss/styles.scss */
+/* line 560, scss/styles.scss */
 .strong {
   font-weight: bold;
 }
 
-/* line 533, scss/styles.scss */
+/* line 564, scss/styles.scss */
 .text-big {
   font-size: 26px;
 }
 
-/* line 537, scss/styles.scss */
+/* line 568, scss/styles.scss */
 .text-biggest {
   font-size: 34px;
 }
 
-/* line 541, scss/styles.scss */
+/* line 572, scss/styles.scss */
 .text-small {
   font-size: 15px;
 }
 
-/* line 545, scss/styles.scss */
+/* line 576, scss/styles.scss */
 .text-smallest {
   font-size: 13px;
 }
 
-/* line 549, scss/styles.scss */
+/* line 580, scss/styles.scss */
 .text-light {
   font-weight: 300;
 }
 
-/* line 553, scss/styles.scss */
+/* line 584, scss/styles.scss */
 .uppercase {
   text-transform: uppercase;
 }
 
-/* line 557, scss/styles.scss */
+/* line 588, scss/styles.scss */
 .lowercase {
   text-transform: lowercase;
 }
 
-/* line 562, scss/styles.scss */
+/* line 593, scss/styles.scss */
 a.chameleon, a.chameleon:hover {
   color: inherit;
   text-decoration: none;
@@ -2899,7 +2939,7 @@ a.chameleon, a.chameleon:hover {
 
 /* line 7, scss/_page-weather.scss */
 .icon-weather-11:before {
-  color: #fcd052;
+  color: #ffbb33;
 }
 
 /* line 11, scss/_page-weather.scss */
@@ -3033,7 +3073,7 @@ a.chameleon, a.chameleon:hover {
 .uv-label-3,
 .uv-label-4,
 .uv-label-5 {
-  background-color: #fcd052;
+  background-color: #ffbb33;
 }
 
 /* line 139, scss/_page-weather.scss */

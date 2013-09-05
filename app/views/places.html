@@ -102,7 +102,7 @@
                                 <i class="icon-location"></i>
                                 {{ place.address }}
                                 <span class="distance" ng-if="plistCtrl.userLocation.location !== false">
-                                    ({{ place.location.distanceTo(plistCtrl.userLocation.location) * 1000 | number:0 }} {{ 'location.distance.meters'|translate }})
+                                    ({{ place.location.distanceTo(plistCtrl.userLocation.location) | distance }})
                                 </span><br/>
                                 <i class="icon-tag"></i>
                                 <span ng-show="type.code !== 'murkil'" ng-repeat="type in place.types" class="tag">

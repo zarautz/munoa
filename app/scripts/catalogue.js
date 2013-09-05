@@ -19,12 +19,6 @@ Z.catalogue = {
         'en': 'results',
         'fr': 'résultats'
     },
-    'location.distance.meters': {
-        'eu': 'm.',
-        'es': 'm.',
-        'en': 'm.',
-        'fr': 'm.'
-    },
     //
     // Events
     //

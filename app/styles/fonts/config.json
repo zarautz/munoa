@@ -5,93 +5,129 @@
   "hinting": true,
   "glyphs": [
     {
+      "uid": "c64623255a4a7c72436b199b05296c4f",
+      "css": "smiley",
+      "code": 59392,
+      "src": "fontelico"
+    },
+    {
       "uid": "2a6740fc2f9d0edea54205963f662594",
       "css": "spin",
-      "code": 61545,
+      "code": 59393,
       "src": "fontelico"
+    },
+    {
+      "uid": "f5999a012fc3752386635ec02a858447",
+      "css": "download",
+      "code": 59394,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "c76b7947c957c9b78b11741173c8349b",
+      "css": "attention",
+      "code": 59395,
+      "src": "fontawesome"
     },
     {
       "uid": "921e3974e54ff9e8b7cd906a3dc74636",
       "css": "direction",
-      "code": 59433,
+      "code": 59396,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "9f7e588c66cfd6891f6f507cf6f6596b",
+      "css": "phone",
+      "code": 59397,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "ec488dfd1f548948c09671ca5a60ec92",
+      "css": "phone-alt",
+      "code": 59398,
       "src": "fontawesome"
     },
     {
       "uid": "559647a6f430b3aeadbecd67194451dd",
       "css": "menu",
-      "code": 61446,
+      "code": 59399,
       "src": "fontawesome"
     },
     {
       "uid": "9affc98d652b86628d650ee58dbf0357",
-      "css": "basket",
-      "code": 59427,
+      "css": "basket-alt",
+      "code": 59400,
       "src": "fontawesome"
     },
     {
       "uid": "19e7b342a5e6bd0cd86de6d6208486a4",
       "css": "leaf",
-      "code": 59410,
+      "code": 59401,
       "src": "fontawesome"
     },
     {
       "uid": "4109c474ff99cad28fd5a2c38af2ec6f",
       "css": "filter",
-      "code": 59434,
+      "code": 59402,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "f279f25007794fa6837ff78fe94b216e",
+      "css": "money",
+      "code": 59403,
       "src": "fontawesome"
     },
     {
       "uid": "5590d2f643b64d2d0757ae660f9c24cb",
       "css": "medical-alt",
-      "code": 61447,
+      "code": 59404,
       "src": "fontawesome"
     },
     {
       "uid": "46120eb259799eab0dac0691137e5706",
       "css": "medical",
-      "code": 61448,
+      "code": 59405,
       "src": "fontawesome"
     },
     {
       "uid": "3def559c3c39b8500882e02892b7daa8",
       "css": "pictures",
-      "code": 61441,
+      "code": 59406,
       "src": "entypo"
     },
     {
       "uid": "5e9f01871d44e56b45ecbfd00f4dbc3a",
       "css": "layout",
-      "code": 61442,
+      "code": 59407,
       "src": "entypo"
     },
     {
       "uid": "63b86fedd4ee9ad2105f54f4888e7088",
       "css": "info",
-      "code": 61443,
+      "code": 59408,
       "src": "entypo"
     },
     {
       "uid": "1d2a6c3d9236b88b0f185c7c4530fa52",
       "css": "flag",
-      "code": 61444,
+      "code": 59409,
       "src": "entypo"
     },
     {
       "uid": "390d6d13398cbf8c8c3c5493f7d34088",
       "css": "share",
-      "code": 61539,
+      "code": 59410,
       "src": "entypo"
     },
     {
       "uid": "a42b598e4298f3319b25a2702a02e7ff",
       "css": "location",
-      "code": 61570,
+      "code": 59411,
       "src": "entypo"
     },
     {
       "uid": "413717f5ea649e8d8b93938be277264a",
       "css": "calendar",
-      "code": 61445,
+      "code": 59412,
       "src": "entypo"
     },
     {
@@ -103,475 +139,505 @@
     {
       "uid": "67f793f91864e379458a92ccc61d9ccf",
       "css": "sort-alphabet",
-      "code": 59432,
+      "code": 59414,
       "src": "typicons"
     },
     {
       "uid": "d2c499942f8a7c037d5a94f123eeb478",
       "css": "layers",
-      "code": 59428,
+      "code": 59415,
       "src": "iconic"
     },
     {
       "uid": "48050e07077b01021f7fbdbbec8f7de7",
       "css": "sun-alt",
-      "code": 61449,
+      "code": 59416,
       "src": "iconic"
     },
     {
       "uid": "fd8e75dc94d9b3ff9ac959fd8f7e83e6",
       "css": "rain",
-      "code": 61552,
+      "code": 59417,
       "src": "iconic"
     },
     {
       "uid": "9vefjlcta42r6tjjmog0mpx7mf63jgag",
       "css": "tag",
-      "code": 59429,
+      "code": 59418,
+      "src": "modernpics"
+    },
+    {
+      "uid": "vqyhv5kmwcj9zxq28dhq5npykr2k39co",
+      "css": "basket",
+      "code": 59419,
       "src": "modernpics"
     },
     {
       "uid": "906a8ebb0faf8db0411028a0364bb16d",
       "css": "temperature",
-      "code": 61462,
+      "code": 59420,
       "src": "meteocons"
     },
     {
       "uid": "a6a5b2ea227f86157ba54ae543785161",
       "css": "compass",
-      "code": 61463,
+      "code": 59421,
       "src": "meteocons"
     },
     {
       "uid": "053a1eaf96184e74876f45bd0f4970eb",
       "css": "na",
-      "code": 61464,
+      "code": 59422,
       "src": "meteocons"
     },
     {
       "uid": "39a24b1eb625a4a551585745107e8ef0",
       "css": "celcius",
-      "code": 61465,
+      "code": 59423,
       "src": "meteocons"
     },
     {
       "uid": "5478f7c5cc0ad4897835f711eccea4dd",
       "css": "fahrenheit",
-      "code": 61472,
+      "code": 59424,
       "src": "meteocons"
     },
     {
       "uid": "d05dd160c24e53afc4addd30b5655b74",
       "css": "weather-53",
-      "code": 61473,
+      "code": 59425,
       "src": "meteocons"
     },
     {
       "uid": "2adfda136b09532bd8174b025b67fe87",
       "css": "moon-inv",
-      "code": 61475,
+      "code": 59426,
       "src": "meteocons"
     },
     {
       "uid": "1c2a34e8bd2f8a53e3b059447a8e544f",
       "css": "sunrise",
-      "code": 61489,
+      "code": 59427,
       "src": "meteocons"
     },
     {
       "uid": "95fb2e5fdd1ea7e4a420b6ed330e6b08",
       "css": "weather-11",
-      "code": 61490,
+      "code": 59428,
       "src": "meteocons"
     },
     {
       "uid": "34e68aa8fbf61f02a748043ccf448a3b",
       "css": "moon",
-      "code": 61491,
+      "code": 59429,
       "src": "meteocons"
     },
     {
       "uid": "48ab39ab0ba664052cfbf0e52563246a",
       "css": "eclipse",
-      "code": 61492,
+      "code": 59430,
       "src": "meteocons"
     },
     {
       "uid": "a555120b3743d482efcc3058733d3fd9",
       "css": "weather-12",
-      "code": 61493,
+      "code": 59431,
       "src": "meteocons"
     },
     {
       "uid": "2efb5347832a09ae69de043f897ec4b9",
       "css": "wind",
-      "code": 61494,
+      "code": 59432,
       "src": "meteocons"
     },
     {
       "uid": "d0c325468a74095e565664bec2623aa3",
       "css": "snow",
-      "code": 61495,
+      "code": 59433,
       "src": "meteocons"
     },
     {
       "uid": "9cd3e294ca3ad3dda66bc5a804021c46",
       "css": "weather-13",
-      "code": 61568,
+      "code": 59434,
       "src": "meteocons"
     },
     {
       "uid": "2440f961b415837c6bf30424a6711708",
       "css": "cloud-moon",
-      "code": 61497,
+      "code": 59435,
       "src": "meteocons"
     },
     {
       "uid": "957fd72e52a0e9eb585a0361114c4c83",
       "css": "uv",
-      "code": 61553,
+      "code": 59436,
       "src": "meteocons"
     },
     {
       "uid": "2ca5a006e414e0827f7fc5b187689c04",
       "css": "fog",
-      "code": 61507,
+      "code": 59437,
       "src": "meteocons"
     },
     {
       "uid": "17463471d0f132cee16835507ea51ecf",
       "css": "weather-14",
-      "code": 61508,
+      "code": 59438,
       "src": "meteocons"
     },
     {
       "uid": "9af2b75a89bd99b83457f041df26da8b",
       "css": "weather-51",
-      "code": 61510,
+      "code": 59439,
       "src": "meteocons"
     },
     {
       "uid": "f59875f40cbc5ad1b04775cd96feabf1",
       "css": "weather-43",
-      "code": 61511,
+      "code": 59440,
       "src": "meteocons"
     },
     {
       "uid": "d577552bb94bdeb53e6517873481aeea",
       "css": "weather-23",
-      "code": 61512,
+      "code": 59441,
       "src": "meteocons"
     },
     {
       "uid": "5fad7d41511701337ddd5ad9896edc4b",
       "css": "windy",
-      "code": 61513,
+      "code": 59442,
       "src": "meteocons"
     },
     {
       "uid": "86351391d6cbc7a85730414294139661",
       "css": "windy-rain",
-      "code": 61520,
+      "code": 59443,
       "src": "meteocons"
     },
     {
       "uid": "127ed05f3c024a9c73487f18cf3d530d",
       "css": "weather-33",
-      "code": 61569,
+      "code": 59444,
       "src": "meteocons"
     },
     {
       "uid": "0f6059e468716a93329821bcbf11220d",
       "css": "weather-35",
-      "code": 61523,
+      "code": 59445,
       "src": "meteocons"
     },
     {
       "uid": "b500010a53f4807828ac252725dc6fd1",
       "css": "weather-71",
-      "code": 61524,
+      "code": 59446,
       "src": "meteocons"
     },
     {
       "uid": "b215adc51ca2aa37e7bbe244d1fa52cc",
       "css": "weather-15",
-      "code": 61525,
+      "code": 59447,
       "src": "meteocons"
     },
     {
       "uid": "b392c847bf41826598f12c02be842253",
       "css": "star",
-      "code": 59431,
+      "code": 59448,
       "src": "mfglabs"
     },
     {
       "uid": "ee382df412dfdf65191b52ae33160abc",
       "css": "star-empty",
-      "code": 59430,
+      "code": 59449,
       "src": "mfglabs"
     },
     {
       "uid": "ce50292e85eb5d6ee3be61b32bf2bdf3",
       "css": "ok",
-      "code": 61542,
+      "code": 59450,
       "src": "mfglabs"
     },
     {
       "uid": "018571e697f22ca41803de480e10ed10",
       "css": "home",
-      "code": 61527,
+      "code": 59451,
       "src": "mfglabs"
     },
     {
       "uid": "291e2e127efe7a6bc580af6d3ead3771",
       "css": "location-alt",
-      "code": 59426,
+      "code": 59452,
       "src": "mfglabs"
     },
     {
       "uid": "b714be5a812a474811604f700dfc87ce",
       "css": "left-open",
-      "code": 61544,
+      "code": 59453,
       "src": "mfglabs"
     },
     {
       "uid": "37910a1398001a5ccb541cb2a253a2c7",
       "css": "right-open",
-      "code": 61543,
+      "code": 59454,
       "src": "mfglabs"
     },
     {
       "uid": "c21d309f797d3644dc8d28c4617738ce",
       "css": "left",
-      "code": 61540,
+      "code": 59455,
       "src": "mfglabs"
     },
     {
       "uid": "1d35198f5190ec004dd4ec742fbe19ca",
       "css": "right",
-      "code": 61541,
+      "code": 59456,
       "src": "mfglabs"
+    },
+    {
+      "uid": "05417ae0104ab18a0fe454358579a987",
+      "css": "art",
+      "code": 59457,
+      "src": "maki"
     },
     {
       "uid": "5c8822b310f20896a3c55a25b71008a8",
       "css": "bar",
-      "code": 59402,
+      "code": 59458,
       "src": "maki"
     },
     {
       "uid": "77886ff217450e06c8ffb7c88cb41e8b",
       "css": "beer",
-      "code": 59403,
+      "code": 59459,
       "src": "maki"
     },
     {
       "uid": "aab7e7622e6ee1ed8166fb73f20e8c9a",
       "css": "bicycle",
-      "code": 59421,
+      "code": 59460,
       "src": "maki"
     },
     {
       "uid": "2b39f74a074e338a67270567e95142cb",
       "css": "bus",
-      "code": 59404,
+      "code": 59461,
       "src": "maki"
     },
     {
       "uid": "492fe0ef4cb41d4e4de8502897685399",
       "css": "cafe",
-      "code": 59400,
+      "code": 59462,
       "src": "maki"
     },
     {
       "uid": "244d3253e3ca5a0d602dd3574050fe93",
       "css": "campsite",
-      "code": 59399,
+      "code": 59463,
       "src": "maki"
     },
     {
       "uid": "5f1e8c36dffb553902e0e5c0c71faf6b",
       "css": "credit-card",
-      "code": 59419,
+      "code": 59464,
       "src": "maki"
     },
     {
       "uid": "d27bcf5c8638e4078aaadae1d49b6909",
       "css": "fast-food",
-      "code": 59398,
+      "code": 59465,
       "src": "maki"
     },
     {
       "uid": "63af7ffdab0d3546333634c63554bb82",
       "css": "fuel",
-      "code": 59409,
+      "code": 59466,
       "src": "maki"
     },
     {
       "uid": "d06b13f30947afbbdae6977413144183",
       "css": "garden",
-      "code": 59397,
+      "code": 59467,
       "src": "maki"
     },
     {
       "uid": "93f72325e13529f1673ae0c3be4b7d22",
       "css": "golf",
-      "code": 59424,
+      "code": 59468,
       "src": "maki"
     },
     {
       "uid": "484b90ec34c04b0db020143526d3c21a",
       "css": "harbor",
-      "code": 59412,
+      "code": 59469,
       "src": "maki"
     },
     {
       "uid": "f43389fa3f5a5b152ed0231fe7bb18a7",
       "css": "hospital",
-      "code": 59396,
+      "code": 59470,
       "src": "maki"
     },
     {
       "uid": "56a766cedf13005162899b02cf9546b9",
       "css": "library",
-      "code": 59395,
+      "code": 59471,
       "src": "maki"
     },
     {
       "uid": "de3978220965d0d1b1cbe671a5a57f9a",
       "css": "lodging",
-      "code": 59394,
+      "code": 59472,
       "src": "maki"
     },
     {
       "uid": "192955900fa17f5677c4fdf2b3f01be7",
       "css": "museum",
-      "code": 59418,
+      "code": 59473,
       "src": "maki"
     },
     {
       "uid": "5040789d726273a910ac5b59e9d8227a",
       "css": "pitch",
-      "code": 59411,
+      "code": 59474,
       "src": "maki"
     },
     {
       "uid": "2e7c67db76849147d16a6763d07a03a9",
       "css": "police",
-      "code": 59408,
+      "code": 59475,
       "src": "maki"
     },
     {
       "uid": "3333e460aa2cf5a69989c42c334a4194",
       "css": "post",
-      "code": 59414,
+      "code": 59476,
       "src": "maki"
     },
     {
       "uid": "70276caa975cb1354bc375ca334f6b4b",
       "css": "rail",
-      "code": 59401,
+      "code": 59477,
       "src": "maki"
     },
     {
       "uid": "7f8b6c0519d85119a6f41fa3c5794806",
-      "css": "religious-christian",
-      "code": 59415,
+      "css": "christian",
+      "code": 59478,
       "src": "maki"
     },
     {
       "uid": "5cc58545bb38c912940470480d3df145",
       "css": "restaurant",
-      "code": 59393,
+      "code": 59479,
       "src": "maki"
     },
     {
       "uid": "653750436fc99eeb29ccd487e6a5bfa6",
       "css": "school",
-      "code": 59392,
+      "code": 59480,
       "src": "maki"
     },
     {
       "uid": "83a806d41893e8bc6fac601669c76cd2",
       "css": "shop",
-      "code": 59416,
+      "code": 59481,
       "src": "maki"
     },
     {
       "uid": "d8813acae9d35ada76fda399a6000587",
-      "css": "soccer",
-      "code": 59425,
+      "css": "football",
+      "code": 59482,
       "src": "maki"
     },
     {
       "uid": "d368c9b110be1daa21f992afca084b8c",
       "css": "swim",
-      "code": 61528,
+      "code": 59483,
       "src": "maki"
     },
     {
       "uid": "5f89d009e91c94c7c9be2f8711d7a2eb",
       "css": "theatre",
-      "code": 59417,
+      "code": 59484,
+      "src": "maki"
+    },
+    {
+      "uid": "0d0a49f05cb202227853f85ce5f63cdc",
+      "css": "toilet",
+      "code": 59485,
       "src": "maki"
     },
     {
       "uid": "4c8822c296f8b46e1b0a1c0f627be146",
       "css": "town-hall",
-      "code": 59405,
+      "code": 59486,
       "src": "maki"
     },
     {
       "uid": "cad619ef78a5500c1e5b3d021d2fdd65",
       "css": "trash",
-      "code": 59406,
+      "code": 59487,
       "src": "maki"
     },
     {
       "uid": "878dccd7b810bc231a132d86a3028afe",
-      "css": "tree-1",
-      "code": 59407,
+      "css": "tree-alt",
+      "code": 59488,
       "src": "maki"
     },
     {
       "uid": "35b65a48339004a947a1dea3092e1daa",
-      "css": "tree-2",
-      "code": 59420,
+      "css": "tree",
+      "code": 59489,
       "src": "maki"
     },
     {
       "uid": "4c01f5d3ba5fbf029bca8630cce41e6a",
       "css": "twitter",
-      "code": 61529,
+      "code": 59490,
       "src": "brandico"
     },
     {
       "uid": "6083c8aa5e3345476a24a28ac1afaa61",
       "css": "cog",
-      "code": 61536,
+      "code": 59491,
       "src": "elusive"
     },
     {
       "uid": "7560ca08e3d83e43c58fcbf8f16d8f03",
       "css": "cog-alt",
-      "code": 61537,
+      "code": 59492,
       "src": "elusive"
     },
     {
       "uid": "a4232c4b087d715e826ba0793dab59ae",
       "css": "book",
-      "code": 59423,
+      "code": 59493,
+      "src": "elusive"
+    },
+    {
+      "uid": "10fdd98fb50c590b805a3ad6ff9c55f5",
+      "css": "asl",
+      "code": 59494,
+      "src": "elusive"
+    },
+    {
+      "uid": "88ae7d00391a440ac7ccd009bcb34e4e",
+      "css": "guidedog",
+      "code": 59495,
       "src": "elusive"
     },
     {
       "uid": "afe93fc3d2e6e389194bb3771f00fdb1",
       "css": "accessibility",
-      "code": 59422,
+      "code": 59496,
       "src": "elusive"
     },
     {
       "uid": "221947bea81f49a11b863c686a7bd235",
       "css": "search",
-      "code": 61538,
+      "code": 59497,
       "src": "websymbols"
     }
   ]

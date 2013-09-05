@@ -40,135 +40,146 @@
     }
 }
 
-.icon-temperature:before { content: '\f016'; } /* '' */
-.icon-compass:before { content: '\f017'; } /* '' */
-.icon-na:before { content: '\f018'; } /* '' */
-.icon-celcius:before { content: '\f019'; } /* '' */
-.icon-fahrenheit:before { content: '\f020'; } /* '' */
-.icon-weather-53:before { content: '\f021'; } /* '' */
-.icon-moon-inv:before { content: '\f023'; } /* '' */
-.icon-sunrise:before { content: '\f031'; } /* '' */
-.icon-weather-11:before { content: '\f032'; } /* '' */
-.icon-moon:before { content: '\f033'; } /* '' */
-.icon-eclipse:before { content: '\f034'; } /* '' */
-.icon-weather-12:before { content: '\f035'; } /* '' */
-.icon-wind:before { content: '\f036'; } /* '' */
-.icon-snow:before { content: '\f037'; } /* '' */
-.icon-weather-13:before { content: '\f080'; } /* '' */
-.icon-cloud-moon:before { content: '\f039'; } /* '' */
-.icon-uv:before { content: '\f071'; } /* '' */
-.icon-fog:before { content: '\f043'; } /* '' */
-.icon-weather-14:before { content: '\f044'; } /* '' */
-.icon-weather-51:before { content: '\f046'; } /* '' */
-.icon-weather-43:before { content: '\f047'; } /* '' */
-.icon-weather-23:before { content: '\f048'; } /* '' */
-.icon-windy:before { content: '\f049'; } /* '' */
-.icon-windy-rain:before { content: '\f050'; } /* '' */
-.icon-weather-33:before { content: '\f081'; } /* '' */
-.icon-weather-35:before { content: '\f053'; } /* '' */
-.icon-weather-71:before { content: '\f054'; } /* '' */
-.icon-weather-15:before { content: '\f055'; } /* '' */
-.icon-info:before { content: '\f003'; } /* '' */
-.icon-left:before { content: '\f064'; } /* '' */
-.icon-right:before { content: '\f065'; } /* '' */
-.icon-home:before { content: '\f057'; } /* '' */
-.icon-sun-alt:before { content: '\f009'; } /* '' */
-.icon-rain:before { content: '\f070'; } /* '' */
-.icon-star:before { content: '\e827'; } /* '' */
-.icon-star-empty:before { content: '\e826'; } /* '' */
-.icon-layout:before { content: '\f002'; } /* '' */
-.icon-flag:before { content: '\f004'; } /* '' */
-.icon-ok:before { content: '\f066'; } /* '' */
-.icon-accessibility:before { content: '\e81e'; } /* '' */
-.icon-sort-alphabet:before { content: '\e828'; } /* '' */
-.icon-book:before { content: '\e81f'; } /* '' */
-.icon-cog-alt:before { content: '\f061'; } /* '' */
-.icon-cog:before { content: '\f060'; } /* '' */
-.icon-tag:before { content: '\e825'; } /* '' */
-.icon-share:before { content: '\f063'; } /* '' */
-.icon-location:before { content: '\f082'; } /* '' */
-.icon-basket:before { content: '\e823'; } /* '' */
-.icon-layers:before { content: '\e824'; } /* '' */
-.icon-bar:before { content: '\e80a'; } /* '' */
-.icon-beer:before { content: '\e80b'; } /* '' */
-.icon-bicycle:before { content: '\e81d'; } /* '' */
-.icon-bus:before { content: '\e80c'; } /* '' */
-.icon-cafe:before { content: '\e808'; } /* '' */
-.icon-campsite:before { content: '\e807'; } /* '' */
-.icon-credit-card:before { content: '\e81b'; } /* '' */
-.icon-fast-food:before { content: '\e806'; } /* '' */
-.icon-fuel:before { content: '\e811'; } /* '' */
-.icon-garden:before { content: '\e805'; } /* '' */
-.icon-golf:before { content: '\e820'; } /* '' */
-.icon-harbor:before { content: '\e814'; } /* '' */
-.icon-hospital:before { content: '\e804'; } /* '' */
-.icon-library:before { content: '\e803'; } /* '' */
-.icon-lodging:before { content: '\e802'; } /* '' */
-.icon-museum:before { content: '\e81a'; } /* '' */
-.icon-pitch:before { content: '\e813'; } /* '' */
-.icon-police:before { content: '\e810'; } /* '' */
-.icon-post:before { content: '\e816'; } /* '' */
-.icon-rail:before { content: '\e809'; } /* '' */
-.icon-religious-christian:before { content: '\e817'; } /* '' */
-.icon-spin:before { content: '\f069'; } /* '' */
-.icon-restaurant:before { content: '\e801'; } /* '' */
-.icon-school:before { content: '\e800'; } /* '' */
-.icon-shop:before { content: '\e818'; } /* '' */
-.icon-soccer:before { content: '\e821'; } /* '' */
-.icon-swim:before { content: '\f058'; } /* '' */
-.icon-theatre:before { content: '\e819'; } /* '' */
-.icon-town-hall:before { content: '\e80d'; } /* '' */
-.icon-trash:before { content: '\e80e'; } /* '' */
-.icon-tree-1:before { content: '\e80f'; } /* '' */
-.icon-tree-2:before { content: '\e81c'; } /* '' */
-.icon-right-open:before { content: '\f067'; } /* '' */
-.icon-left-open:before { content: '\f068'; } /* '' */
-.icon-location-alt:before { content: '\e822'; } /* '' */
-.icon-menu:before { content: '\f006'; } /* '' */
-.icon-medical-alt:before { content: '\f007'; } /* '' */
-.icon-medical:before { content: '\f008'; } /* '' */
-.icon-direction:before { content: '\e829'; } /* '' */
-.icon-twitter:before { content: '\f059'; } /* '' */
-.icon-pictures:before { content: '\f001'; } /* '' */
-.icon-leaf:before { content: '\e812'; } /* '' */
-.icon-calendar:before { content: '\f005'; } /* '' */
+.icon-temperature:before { content: '\e81c'; } /* '' */
+.icon-compass:before { content: '\e81d'; } /* '' */
+.icon-na:before { content: '\e81e'; } /* '' */
+.icon-celcius:before { content: '\e81f'; } /* '' */
+.icon-fahrenheit:before { content: '\e820'; } /* '' */
+.icon-weather-53:before { content: '\e821'; } /* '' */
+.icon-moon-inv:before { content: '\e822'; } /* '' */
+.icon-sunrise:before { content: '\e823'; } /* '' */
+.icon-weather-11:before { content: '\e824'; } /* '' */
+.icon-moon:before { content: '\e825'; } /* '' */
+.icon-eclipse:before { content: '\e826'; } /* '' */
+.icon-weather-12:before { content: '\e827'; } /* '' */
+.icon-wind:before { content: '\e828'; } /* '' */
+.icon-snow:before { content: '\e829'; } /* '' */
+.icon-weather-13:before { content: '\e82a'; } /* '' */
+.icon-cloud-moon:before { content: '\e82b'; } /* '' */
+.icon-uv:before { content: '\e82c'; } /* '' */
+.icon-fog:before { content: '\e82d'; } /* '' */
+.icon-weather-14:before { content: '\e82e'; } /* '' */
+.icon-weather-51:before { content: '\e82f'; } /* '' */
+.icon-weather-43:before { content: '\e830'; } /* '' */
+.icon-weather-23:before { content: '\e831'; } /* '' */
+.icon-windy:before { content: '\e832'; } /* '' */
+.icon-windy-rain:before { content: '\e833'; } /* '' */
+.icon-weather-33:before { content: '\e834'; } /* '' */
+.icon-weather-35:before { content: '\e835'; } /* '' */
+.icon-weather-71:before { content: '\e836'; } /* '' */
+.icon-weather-15:before { content: '\e837'; } /* '' */
+.icon-info:before { content: '\e810'; } /* '' */
+.icon-left:before { content: '\e83f'; } /* '' */
+.icon-right:before { content: '\e840'; } /* '' */
+.icon-home:before { content: '\e83b'; } /* '' */
+.icon-sun-alt:before { content: '\e818'; } /* '' */
+.icon-rain:before { content: '\e819'; } /* '' */
+.icon-star:before { content: '\e838'; } /* '' */
+.icon-star-empty:before { content: '\e839'; } /* '' */
+.icon-layout:before { content: '\e80f'; } /* '' */
+.icon-flag:before { content: '\e811'; } /* '' */
+.icon-attention:before { content: '\e803'; } /* '' */
+.icon-ok:before { content: '\e83a'; } /* '' */
+.icon-accessibility:before { content: '\e868'; } /* '' */
+.icon-guidedog:before { content: '\e867'; } /* '' */
+.icon-asl:before { content: '\e866'; } /* '' */
+.icon-sort-alphabet:before { content: '\e816'; } /* '' */
+.icon-book:before { content: '\e865'; } /* '' */
+.icon-cog-alt:before { content: '\e864'; } /* '' */
+.icon-cog:before { content: '\e863'; } /* '' */
+.icon-tag:before { content: '\e81a'; } /* '' */
+.icon-share:before { content: '\e812'; } /* '' */
+.icon-location:before { content: '\e813'; } /* '' */
+.icon-basket-alt:before { content: '\e808'; } /* '' */
+.icon-basket:before { content: '\e81b'; } /* '' */
+.icon-layers:before { content: '\e817'; } /* '' */
+.icon-smiley:before { content: '\e800'; } /* '' */
+.icon-art:before { content: '\e841'; } /* '' */
+.icon-bar:before { content: '\e842'; } /* '' */
+.icon-beer:before { content: '\e843'; } /* '' */
+.icon-bicycle:before { content: '\e844'; } /* '' */
+.icon-bus:before { content: '\e845'; } /* '' */
+.icon-cafe:before { content: '\e846'; } /* '' */
+.icon-campsite:before { content: '\e847'; } /* '' */
+.icon-credit-card:before { content: '\e848'; } /* '' */
+.icon-fast-food:before { content: '\e849'; } /* '' */
+.icon-fuel:before { content: '\e84a'; } /* '' */
+.icon-garden:before { content: '\e84b'; } /* '' */
+.icon-golf:before { content: '\e84c'; } /* '' */
+.icon-harbor:before { content: '\e84d'; } /* '' */
+.icon-hospital:before { content: '\e84e'; } /* '' */
+.icon-library:before { content: '\e84f'; } /* '' */
+.icon-lodging:before { content: '\e850'; } /* '' */
+.icon-museum:before { content: '\e851'; } /* '' */
+.icon-pitch:before { content: '\e852'; } /* '' */
+.icon-police:before { content: '\e853'; } /* '' */
+.icon-post:before { content: '\e854'; } /* '' */
+.icon-rail:before { content: '\e855'; } /* '' */
+.icon-christian:before { content: '\e856'; } /* '' */
+.icon-restaurant:before { content: '\e857'; } /* '' */
+.icon-spin:before { content: '\e801'; } /* '' */
+.icon-school:before { content: '\e858'; } /* '' */
+.icon-shop:before { content: '\e859'; } /* '' */
+.icon-football:before { content: '\e85a'; } /* '' */
+.icon-swim:before { content: '\e85b'; } /* '' */
+.icon-theatre:before { content: '\e85c'; } /* '' */
+.icon-toilet:before { content: '\e85d'; } /* '' */
+.icon-town-hall:before { content: '\e85e'; } /* '' */
+.icon-trash:before { content: '\e85f'; } /* '' */
+.icon-tree-alt:before { content: '\e860'; } /* '' */
+.icon-tree:before { content: '\e861'; } /* '' */
+.icon-right-open:before { content: '\e83e'; } /* '' */
+.icon-left-open:before { content: '\e83d'; } /* '' */
+.icon-location-alt:before { content: '\e83c'; } /* '' */
+.icon-phone-alt:before { content: '\e806'; } /* '' */
+.icon-filter:before { content: '\e80a'; } /* '' */
+.icon-menu:before { content: '\e807'; } /* '' */
+.icon-money:before { content: '\e80b'; } /* '' */
+.icon-download:before { content: '\e802'; } /* '' */
+.icon-medical-alt:before { content: '\e80c'; } /* '' */
+.icon-medical:before { content: '\e80d'; } /* '' */
+.icon-direction:before { content: '\e804'; } /* '' */
+.icon-twitter:before { content: '\e862'; } /* '' */
+.icon-pictures:before { content: '\e80e'; } /* '' */
+.icon-leaf:before { content: '\e809'; } /* '' */
+.icon-calendar:before { content: '\e814'; } /* '' */
+.icon-phone:before { content: '\e805'; } /* '' */
 .icon-wifi:before { content: '\e815'; } /* '' */
-.icon-search:before { content: '\f062'; } /* '' */
-.icon-filter:before { content: '\e82a'; } /* '' */
+.icon-search:before { content: '\e869'; } /* '' */
 
 .icon-parking:before { content: 'P'; font-family: inherit; font-weight: bold; } /* '' */
 
-.icon-weather-11:before { content: '\f032'; } /* '' */
+.icon-weather-11:before { content: '\e824'; } /* '' */
 .icon-weather-12:before,
-.icon-weather-13:before { content: '\f080'; } /* '' */
-.icon-weather-14:before { content: '\f044'; } /* '' */
+.icon-weather-13:before { content: '\e82a'; } /* '' */
+.icon-weather-14:before { content: '\e82e'; } /* '' */
 .icon-weather-15:before,
 .icon-weather-16:before,
-.icon-weather-17:before { content: '\f055'; } /* '' */
+.icon-weather-17:before { content: '\e837'; } /* '' */
 .icon-weather-23:before,
 .icon-weather-24:before,
 .icon-weather-25:before,
-.icon-weather-26:before { content: '\f048'; } /* '' */
+.icon-weather-26:before { content: '\e831'; } /* '' */
 .icon-weather-33:before,
-.icon-weather-34:before { content: '\f081'; } /* '' */
+.icon-weather-34:before { content: '\e834'; } /* '' */
 .icon-weather-35:before,
-.icon-weather-36:before { content: '\f053'; } /* '' */
+.icon-weather-36:before { content: '\e835'; } /* '' */
 .icon-weather-43:before,
 .icon-weather-44:before,
 .icon-weather-45:before,
-.icon-weather-46:before { content: '\f047'; } /* '' */
+.icon-weather-46:before { content: '\e830'; } /* '' */
 .icon-weather-51:before,
-.icon-weather-52:before { content: '\f046'; } /* '' */
+.icon-weather-52:before { content: '\e82f'; } /* '' */
 .icon-weather-53:before,
 .icon-weather-54:before,
 .icon-weather-61:before,
 .icon-weather-62:before,
 .icon-weather-63:before,
-.icon-weather-64:before { content: '\f021'; } /* '' */
+.icon-weather-64:before { content: '\e821'; } /* '' */
 .icon-weather-71:before,
-.icon-weather-72:before { content: '\f054'; } /* '' */
+.icon-weather-72:before { content: '\e836'; } /* '' */
 .icon-weather-73:before,
-.icon-weather-74:before { content: '\f081'; } /* '' */
+.icon-weather-74:before { content: '\e834'; } /* '' */
 
 //
 // Animation example, for spinners

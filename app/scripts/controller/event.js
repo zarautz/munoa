@@ -1,7 +1,7 @@
 'use strict';
 
 Z.app.controller('EventController', ['$scope', 'eventsMapper', 'settings', function($scope, eventsMapper, settings) {
-    $scope.refresh = function () {
+    this.refresh = function () {
         var events = eventsMapper.get({
             language: settings.get('language'),
             from: '2013-08-01',
@@ -12,5 +12,5 @@ Z.app.controller('EventController', ['$scope', 'eventsMapper', 'settings', funct
         this.status = events.status;
     };
 
-    $scope.refresh();
+    this.refresh();
 }]);

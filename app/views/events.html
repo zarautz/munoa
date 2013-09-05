@@ -7,7 +7,7 @@
             <h1 class="title">{{ 'events'|translate }}</h1>
         </header>
         <div ng-if="eventCtrl.status.isDone && eventCtrl.status.isError" class="error">
-            <p ng-click="eventCtrl.reload()">
+            <p ng-click="eventCtrl.refresh()">
                 <i class="right icon-spin"></i>
                 {{ 'error.connection'|translate }}
                 <strong>{{ 'error.retry'|translate }}.</strong>

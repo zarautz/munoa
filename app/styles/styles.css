@@ -2765,7 +2765,7 @@ ul.drawer li a.settings {
 /* line 457, scss/styles.scss */
 .banner {
   margin: -16px -16px 16px;
-  height: 180px;
+  height: 200px;
   background: #fafafa none center center no-repeat;
   background-size: cover;
 }

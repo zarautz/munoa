@@ -228,7 +228,7 @@ Z.app.factory('placesConfig', [function() {
     group = section.addGroup('nature');
     group
         .setTypes(['natural_feature'])
-        .setIcon('icon-tree-2')
+        .setIcon('icon-tree')
     ;
 
     group = section.addGroup('museum');

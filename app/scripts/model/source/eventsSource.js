@@ -6,8 +6,8 @@ Z.app.factory('eventsSource', ['api', 'cache', '$q', function (api, cache, $q) {
     eventsSource.setCacheKeys(['[events]']);
     eventsSource.setCacheTTL(5);
 
-    eventsSource.setLoadDataCb(function () {
-        return api.getEvents();
+    eventsSource.setLoadDataCb(function (params) {
+        return api.getEvents(params);
     });
 
     return eventsSource;

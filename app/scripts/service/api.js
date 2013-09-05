@@ -73,17 +73,19 @@ Z.app.factory('api', ['apiHost', '$http', '$q', function(apiHost, $http, $q) {
 
             return deferred.promise;
         },
-        getEvent: function (id) {
+        getEvent: function (params) {
             return $http({
                 method: 'GET',
-                url: apiHost + '/events/' + id
+                params: {'language': params.language},
+                url: apiHost + '/events/' + params.id
             }).then(function (response) {
                 return response.data;
             });
         },
-        getEvents: function () {
+        getEvents: function (params) {
             return $http({
                 method: 'GET',
+                params: {'language': params.language, 'from': params.from, 'to': params.to},
                 url: apiHost + '/events'
             }).then(function (response) {
                 return response.data;

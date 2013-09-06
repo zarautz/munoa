@@ -57,7 +57,6 @@ Z.app.config(['$routeProvider', '$locationProvider', 'babelProvider', 'menuProvi
 
     // This is not the Menu instance, it's the configuration of the provider
     menuProvider.setMenuItems(menuItems);
-    menuProvider.setProfile('zarautz');
 
     // Set the menu items order for each profile
     menuProvider.sortMenuItems('zarautz', [

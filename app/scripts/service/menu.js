@@ -5,17 +5,16 @@
 //
 Z.app.provider('menu', function () {
     this._items   = [];
-    this._profile = 'zarautz';
     this._map     = {};
 
-    this.$get = function () {
+    this.$get = ['settings', function (settings) {
         var menu = new Z.Menu();
 
         menu.setItems(this._items);
-        menu.setProfile(this._profile);
+        menu.setProfile(settings.get('profile'));
 
         return menu;
-    };
+    }];
 
     this.getMenuItems = function () {
         return this._items;
@@ -45,10 +44,6 @@ Z.app.provider('menu', function () {
         }
 
         this._items = items;
-    };
-
-    this.setProfile = function (profile) {
-        this._profile = profile;
     };
 
     this.sortMenuItems = function (profile, sort) {

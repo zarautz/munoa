@@ -35,7 +35,7 @@
             <h1 class="title">{{ ('placesGroup.'+ plistCtrl.section +'.'+ plistCtrl.group)|translate }}</h1>
         </header>
         <div ng-if="plistCtrl.status.isDone && plistCtrl.status.isError" class="error">
-            <p ng-click="plistCtrl.reload()">
+            <p ng-click="plistCtrl.refresh()">
                 {{ 'error.connection'|translate }}
                 <strong>{{ 'error.retry'|translate }} <i class="icon-spin"></i></strong>
             </p>

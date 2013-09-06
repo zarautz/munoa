@@ -6,7 +6,7 @@
             <h1 class="title">{{ 'weather'|translate }}</h1>
         </header>
         <div ng-if="weatherCtrl.status.isDone && weatherCtrl.status.isError" class="error">
-            <p ng-click="weatherCtrl.reload()">
+            <p ng-click="weatherCtrl.refresh()">
                 {{ 'error.connection'|translate }}
                 <strong>{{ 'error.retry'|translate }} <i class="icon-spin"></i></strong>
             </p>

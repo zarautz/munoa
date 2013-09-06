@@ -8,6 +8,5 @@ Z.app.controller('ZuzarautzController', ['$scope', 'zuZarautzMapper', function($
         this.status = posts.status;
     };
 
-    // Init
     this.refresh();
 }]);

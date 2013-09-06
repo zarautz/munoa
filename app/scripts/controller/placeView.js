@@ -30,7 +30,7 @@ Z.app.controller('PlaceViewController', ['$scope', '$timeout', 'placeMapper', 'p
 
         this.favorite = placeFavorite;
         this.status   = place.status;
-        this.place    = place.promise;console.log($scope);
+        this.place    = place.promise;
         this.title    = $scope.pushData.name;
     };
 

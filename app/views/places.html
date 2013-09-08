@@ -93,7 +93,7 @@
                     <div class="row collapse"
                         ng-click="navCtrl.pushView('views/placeView.html', { id: place.id, name: place.name, plistCtrl: plistCtrl })">
                         <div class="large-1 small-1 columns">
-                            <img class="thumbnail color-{{ $index % 5 }}" ng-src="{{ place.getThumbnailImage() }}" />
+                            <div class="thumbnail color-{{ $index % 5 }}" ng-style="{ 'background-image': 'url('+ place.getThumbnailImage() +')' }"><img src="images/dot.png" /></div>
                         </div>
                         <div class="large-3 small-3 columns">
                             <i class="icon-right-open"></i>
@@ -105,9 +105,7 @@
                                     ({{ place.location.distanceTo(plistCtrl.userLocation.location) | distance }})
                                 </span><br/>
                                 <i class="icon-tag"></i>
-                                <span ng-show="type.code !== 'murkil'" ng-repeat="type in place.types" class="tag">
-                                    {{ type.name }}<span ng-if="!$last">, </span>
-                                </span>
+                                {{ place.getTypeNamesExcept(['murkil']).join(', ') }}
                             </p>
                         </div>
                     </div>

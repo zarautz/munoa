@@ -21,3 +21,17 @@ Z.Model.Place.prototype.getImage = function (size) {
 Z.Model.Place.prototype.getThumbnailImage = function () {
     return this.getImage('square');
 };
+
+Z.Model.Place.prototype.getTypeNamesExcept = function (excludeTypes) {
+    var types = [], i, name;
+
+    for (i in this.types) {
+        name = this.types[i].name;
+
+        if (-1 === excludeTypes.indexOf(name)) {
+            types.push(name);
+        }
+    }
+
+    return types;
+};

@@ -6,21 +6,31 @@
                 <i class="right icon-spin color-blue animate-spin"></i>
             </div>
             <div ng-switch-default>
-                <i ng-click="pviewCtrl.toggleMap()" class="right icon-map" ng-class="{ 'color-blue': pviewCtrl.mapIsActive }"></i>
+                <i ng-click="pviewCtrl.toggleMap()" class="right" ng-class="{ 'icon-location-alt': !pviewCtrl.mapIsActive, 'icon-cancel': pviewCtrl.mapIsActive }"></i>
             </div>
         </div>
         <h1 class="title">{{ pviewCtrl.title }}</h1>
     </header>
-    <div class="map-container" id="map-canvas"></div>
+    <div class="map-container">
+        <div il-map latitude="{{ pviewCtrl.place.location.latitude }}" longitude="{{ pviewCtrl.place.location.longitude }}"></div>
+    </div>
     <div ng-if="!pviewCtrl.status.isLoading" class="overthrow">
         <div class="banner" ng-style="{ 'background-image': 'url('+ pviewCtrl.place.getImage('medium') +')' }"></div>
-        <h2>
-            <i class="right" ng-class="{ 'icon-star color-yellow': pviewCtrl.favorite.isFavorite(pviewCtrl.place.id), 'icon-star-empty': !pviewCtrl.favorite.isFavorite(pviewCtrl.place.id) }" ng-click="pviewCtrl.toggleFavorite(pviewCtrl.place.id)"></i>
+        <span class="right color-lightest-text">
+            {{ pviewCtrl.place.location.distanceTo(pviewCtrl.userLocation.location) | distance }}
+        </span>
+        <h3>
             {{ pviewCtrl.place.name }}
-        </h2>
+        </h3>
+        <p class="text-small">
+            {{ pviewCtrl.place.getTypeNamesExcept(['murkil']).join(', ') }}<br />
+            <span class="color-light-text">{{ pviewCtrl.place.address }}</span>
+        </p>
+        <ul class="small-block-grid-3 large-block-grid-3 cta-grid">
+            <li><a ng-href="tel:{{ pviewCtrl.place.telephone }}"><i class="icon-phone color-light-blue"></i></a></li>
+            <li><i class="icon-post color-lightest-text"></i></li>
+            <li><i class="icon-star" ng-class="{ 'color-yellow': pviewCtrl.favorite.isFavorite(pviewCtrl.place.id), 'color-lightest-text': !pviewCtrl.favorite.isFavorite(pviewCtrl.place.id) }" ng-click="pviewCtrl.toggleFavorite(pviewCtrl.place.id)"></i></li>
+        </ul>
         <div class="content" ng-bind-html="pviewCtrl.place.description"></div>
-
-        <a ng-href="geo:{{ pviewCtrl.place.location.latitude + ',' + pviewCtrl.place.location.longitude }}">geo</a><br/><br/>
-        <a ng-href="tel:{{ pviewCtrl.place.telephone }}">telephone</a>
     </div>
 </div>

@@ -1,6 +1,12 @@
 'use strict';
 
-Z.app.config(['$routeProvider', '$locationProvider', 'babelProvider', 'menuProvider', 'settingsProvider', function ($routeProvider, $locationProvider, babelProvider, menuProvider, settingsProvider) {
+Z.app.config(['$compileProvider', '$routeProvider', '$locationProvider', 'babelProvider', 'menuProvider', 'settingsProvider', function ($compileProvider, $routeProvider, $locationProvider, babelProvider, menuProvider, settingsProvider) {
+    // ----
+    // URLs
+    // ----
+    // Add "tel:" and "map:" links as safe providers
+    $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|mailto|tel):/);
+
     // -----
     // BABEL
     // -----

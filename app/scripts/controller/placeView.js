@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.controller('PlaceViewController', ['$scope', '$timeout', 'placeMapper', 'placeFavorite', 'settings', function($scope, $timeout, placeMapper, placeFavorite, settings) {
+Z.app.controller('PlaceViewController', ['$scope', '$timeout', 'placeMapper', 'placeFavorite', 'settings', 'geolocation', function($scope, $timeout, placeMapper, placeFavorite, settings, geolocation) {
     var that = this,
         cssTransitionDuration = 300;
 
@@ -32,6 +32,7 @@ Z.app.controller('PlaceViewController', ['$scope', '$timeout', 'placeMapper', 'p
         this.status   = place.status;
         this.place    = place.promise;
         this.title    = $scope.pushData.name;
+        this.userLocation = geolocation.getCurrentPosition();
     };
 
     this.refresh();

@@ -1,14 +1,14 @@
-<section class="on-{{ navCtrl.activeView }}" ng-controller="SettingsController as setCtrl">
+<section class="on-{{ navigation.activeView }}" ng-controller="SettingsController as setCtrl">
     <div>
         <header>
-            <i ng-click="navCtrl.toggleMenu()" class="left icon-menu"></i>
+            <i ng-click="navigation.toggleMenu()" class="left icon-menu"></i>
             <h1 class="title">{{ 'settings'|translate }}</h1>
         </header>
         <div class="overthrow table-view">
             <h4>{{ 'settings.general'|translate }}</h4>
             <ul>
                 <li ng-repeat="id in setCtrl.settings.getIds()">
-                    <a href ng-click="navCtrl.pushView('settings.selector', { id: id, settings: setCtrl.settings })">
+                    <a href ng-click="navigation.pushView('settings.selector', { id: id, settings: setCtrl.settings })">
                         <i class="icon-right-open"></i>
                         {{ ('settings.' + id)|translate }}
                         <span class="detail">{{ ('settings.' + id + '.' + setCtrl.settings.get(id))|translate }}</span>
@@ -19,14 +19,14 @@
             <h4>{{ 'settings.other'|translate }}</h4>
             <ul>
                 <li>
-                    <a href ng-click="navCtrl.pushView('settings.about')">
+                    <a href ng-click="navigation.pushView('settings.about')">
                         <i class="icon-right-open"></i>
                         {{ 'settings.about'|translate }}
                         <span class="detail"></span>
                     </a>
                 </li>
                 <li>
-                    <a href ng-click="navCtrl.pushView('settings.cache')">
+                    <a href ng-click="navigation.pushView('settings.cache')">
                         <i class="icon-right-open"></i>
                         {{ 'settings.cache'|translate }}
                         <span class="detail"></span>
@@ -40,7 +40,7 @@
 
 <script type="text/ng-template" id="settings.selector">
     <header>
-        <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
+        <a href ng-click="navigation.popView()"><i class="left icon-left"></i></a>
         <h1 class="title">{{ ('settings.' + pushData.id)|translate }}</h1>
     </header>
     <div class="overthrow table-view">
@@ -57,7 +57,7 @@
 
 <script type="text/ng-template" id="settings.about">
     <header>
-        <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
+        <a href ng-click="navigation.popView()"><i class="left icon-left"></i></a>
         <h1 class="title">{{ 'settings.about'|translate }}</h1>
     </header>
     <div class="overthrow">
@@ -69,7 +69,7 @@
 
 <script type="text/ng-template" id="settings.cache">
     <header>
-        <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
+        <a href ng-click="navigation.popView()"><i class="left icon-left"></i></a>
         <h1 class="title">{{ 'settings.cache'|translate }}</h1>
     </header>
     <div class="overthrow">

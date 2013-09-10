@@ -1,22 +1,30 @@
 'use strict';
 
-Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'menu', function ($scope, $location, $timeout, menu) {
-    var that = this,
-        cssTransitionDuration = 300; // Actual transition is 200
+Z.app.factory('navigation', ['$location', '$rootScope', '$timeout', 'menu', function($location, $rootScope, $timeout, menu) {
+    var navigation = {},
+        dataStack = [],
+        cssTransitionDuration = 300;  // Actual transition is 200
 
-    this.location = $location;
-    this.menu = menu;
-    this.activeView = 1;
-    this.menuIsInTransition = false;
-    this.viewIsInTransition = false;
-
-    $scope.dataStack = [];
-
-    $scope.$on('$routeChangeSuccess', function() {
+    // Watch routeChange
+    $rootScope.$on('$routeChangeSuccess', function() {
         menu.setIsActive(false);
     });
 
-    this.activateView = function(viewToActivate, isPush, template, data) {
+    //
+    // Vars
+    // 
+    navigation.menu = menu;
+    navigation.location = $location;
+    navigation.activeView = 1;
+    navigation.menuIsInTransition = false;
+    navigation.viewIsInTransition = false;
+
+    //
+    // Methods
+    //
+    navigation.activateView = function(viewToActivate, isPush, template, data) {
+        var that = this;
+
         // Prevent double click or clicks during CSS transitions
         if (this.viewIsInTransition ||
             this.menuIsInTransition ||
@@ -37,36 +45,39 @@ Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'me
 
         // push needs data...
         if (isPush) {
-            $scope['view' + viewToActivate] = template;
-            $scope.dataStack.push(data);
-            $scope.pushData = data;
+            dataStack.push(data);
+
+            $rootScope['view' + viewToActivate] = template;
+            $rootScope.pushData = data;
         } else {
-            $scope.pushData = $scope.dataStack.pop();
+            $rootScope.pushData = dataStack.pop();
         }
 
         $timeout(function () {
             that.viewIsInTransition = false;
 
             if (!isPush) {
-                $scope['view' + (viewToActivate + 1)] = '';
+                $rootScope['view' + (viewToActivate + 1)] = '';
             }
         }, cssTransitionDuration);
     };
 
-    this.contentIsAlive = function(view) {
+    navigation.contentIsAlive = function(view) {
         return this.activeView >= view ||
             (this.viewIsInTransition && this.activeView === (view - 1));
     };
 
-    this.popView = function() {
+    navigation.popView = function() {
         this.activateView(this.activeView - 1, false);
     };
 
-    this.pushView = function(template, data) {
+    navigation.pushView = function(template, data) {
         this.activateView(this.activeView + 1, true, template, data);
     };
 
-    this.toggleMenu = function() {
+    navigation.toggleMenu = function() {
+        var that = this;
+
         this.menuIsInTransition = true;
         menu.toggleIsActive();
 
@@ -75,7 +86,7 @@ Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'me
         }, cssTransitionDuration);
     };
 
-    this.swipe = function(direction) {
+    navigation.swipe = function(direction) {
         if (this.activeView === 1) {
             if (menu.isActive() && direction === 'left') {
                 menu.setIsActive(false);
@@ -87,7 +98,9 @@ Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'me
         }
     };
 
-    this.openExternalLink = function(url) {
+    navigation.openExternalLink = function(url) {
         window.open(url, '_system');
     };
+
+    return navigation;
 }]);

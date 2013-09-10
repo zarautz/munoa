@@ -1,13 +1,13 @@
-<section class="on-{{ navCtrl.activeView }}">
+<section class="on-{{ navigation.activeView }}">
     <div ng-controller="PlacesController as placesCtrl">
         <header>
-            <i ng-click="navCtrl.toggleMenu()" class="left icon-menu"></i>
+            <i ng-click="navigation.toggleMenu()" class="left icon-menu"></i>
             <h1 class="title">{{ placesCtrl.section|translate }}</h1>
         </header>
         <div class="overthrow">
             <ul class="small-block-grid-3 large-block-grid-4 block-grid-icons">
                 <li ng-repeat="group in placesCtrl.groups"
-                    ng-click="navCtrl.pushView('place.list', { section: placesCtrl.section, group: group.name })">
+                    ng-click="navigation.pushView('place.list', { section: placesCtrl.section, group: group.name })">
                     <i class="{{ group.icon }} color-{{ $index % 5 }}"></i>
                     <p class="color-{{ $index % 5 }}">
                         {{ ('placesGroup.'+ placesCtrl.section +'.'+ group.name)|translate }}
@@ -23,7 +23,7 @@
 <script type="text/ng-template" id="place.list">
     <div ng-controller="PlaceListController as plistCtrl">
         <header>
-            <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
+            <a href ng-click="navigation.popView()"><i class="left icon-left"></i></a>
             <div ng-switch on="plistCtrl.status.isLoading">
                 <div ng-switch-when="true">
                     <i class="right icon-spin color-blue animate-spin"></i>
@@ -91,7 +91,7 @@
                 <div ng-repeat="place in plistCtrl.pager.getAllItems()">
                     <hr />
                     <div class="row collapse"
-                        ng-click="navCtrl.pushView('views/placeView.html', { id: place.id, name: place.name, plistCtrl: plistCtrl })">
+                        ng-click="navigation.pushView('views/placeView.html', { id: place.id, name: place.name, plistCtrl: plistCtrl })">
                         <div class="large-1 small-1 columns">
                             <div class="thumbnail color-{{ $index % 5 }}" ng-style="{ 'background-image': 'url('+ place.getThumbnailImage() +')' }"><img src="images/dot.png" /></div>
                         </div>

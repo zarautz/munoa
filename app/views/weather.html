@@ -1,7 +1,7 @@
-<section class="on-{{ navCtrl.activeView }}" ng-controller="WeatherController as weatherCtrl">
+<section class="on-{{ navigation.activeView }}" ng-controller="WeatherController as weatherCtrl">
     <div>
         <header>
-            <i ng-click="navCtrl.toggleMenu()" class="left icon-menu"></i>
+            <i ng-click="navigation.toggleMenu()" class="left icon-menu"></i>
             <i ng-if="weatherCtrl.status.isLoading" class="right icon-spin color-blue animate-spin"></i>
             <h1 class="title">{{ 'weather'|translate }}</h1>
         </header>

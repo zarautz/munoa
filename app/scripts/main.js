@@ -8,14 +8,25 @@ Z.app.value('apiHost', true ? 'http://pagoeta.illarra.com/v1' : 'http://pagoeta.
 Z.app.value('googleApiKey', 'AIzaSyBopLXCM1kLoklpwOOvyA_QurVbj1H02C0');
 
 // We force early initialization by injecting the services
-Z.app.run(['$timeout', 'phonegap', function ($timeout, phonegap) {
+Z.app.run(['$rootScope', '$timeout', 'navigation', 'phonegap', function ($rootScope, $timeout, navigation, phonegap) {
+    // Make navigation accesible by all the scopes
+    $rootScope.navigation = navigation;
+
     phonegap.onDeviceReady().then(function () {
         // Back Button
         document.addEventListener('backbutton', function () {
-            console.debug('[PHONEGAP] Back button');
+            $rootScope.$apply(function () {
+                if (navigation.activeView > 1) {
+                    navigation.popView();
+                } else {
+                    navigation.toggleMenu();
+                }
+            });
         });
 
         // Splash
-        navigator.splashscreen.hide();
+        $timeout(function () {
+            navigator.splashscreen.hide();    
+        }, 250);
     });
 }]);

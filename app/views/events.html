@@ -1,7 +1,7 @@
-<section class="on-{{ navCtrl.activeView }}" ng-controller="EventController as eventCtrl">
+<section class="on-{{ navigation.activeView }}" ng-controller="EventController as eventCtrl">
     <div>
         <header>
-            <i ng-click="navCtrl.toggleMenu()" class="left icon-menu"></i>
+            <i ng-click="navigation.toggleMenu()" class="left icon-menu"></i>
             <i ng-if="eventCtrl.status.isLoading" class="right icon-spin color-blue animate-spin"></i>
             <i ng-if="!eventCtrl.status.isLoading" class="right icon-search"></i>
             <h1 class="title">{{ 'events'|translate }}</h1>
@@ -16,7 +16,7 @@
         <div ng-if="!eventCtrl.status.isLoading" class="overthrow">
             <ul>
                 <li ng-repeat="event in eventCtrl.events">
-                    <a href ng-click="navCtrl.pushView('event.show', { 'event': event })">
+                    <a href ng-click="navigation.pushView('event.show', { 'event': event })">
                         {{ event.name }}
                     </a>
                 </li>
@@ -30,7 +30,7 @@
 <script type="text/ng-template" id="event.show">
     <div ng-controller="EventViewController as eventViewCtrl">
         <header>
-            <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
+            <a href ng-click="navigation.popView()"><i class="left icon-left"></i></a>
             <!--<i class="right icon-share"></i>-->
             <h1 class="title">{{ eventViewCtrl.event.name }}</h1>
         </header>
@@ -44,7 +44,7 @@
                 <li>hasi: {{ eventViewCtrl.event.startAt }}</li>
                 <li>bukatu: {{ eventViewCtrl.event.endAt }}</li>
             </ul>
-            <a ng-click="navCtrl.pushView('views/placeView.html', { id: 460 })">Test place view</a>
+            <a ng-click="navigation.pushView('views/placeView.html', { id: 460 })">Test place view</a>
         </div>
     </div>
 </script>

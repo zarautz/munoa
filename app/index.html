@@ -29,7 +29,7 @@
         <meta name="format-detection" content="telephone=no" />
         <title>Zarautz</title>
     </head>
-    <body ng-class="{ 'active-menu': navCtrl.menu.isActive() }" ng-controller="NavigationController as navCtrl">
+    <body ng-class="{ 'active-menu': navigation.menu.isActive() }">
         <div ng-controller="WizardController as wizardCtrl" style="position: absolute; top:0; left: 0; width: 100%; height; 100%; z-index: 100; background-color: yellow;" ng-show="wizardCtrl.isActive()">
             <div ng-switch="wizardCtrl.page">
                 <div ng-switch-when="0">
@@ -67,14 +67,14 @@
         </div>
 
         <main ng-view
-            ng-swipe-right="navCtrl.swipe('right')"
-            ng-swipe-left="navCtrl.swipe('left')">
+            ng-swipe-right="navigation.swipe('right')"
+            ng-swipe-left="navigation.swipe('left')">
         </main>
         <nav class="overthrow">
             <ul class="drawer">
-                <li ng-repeat="item in navCtrl.menu.getItems()">
+                <li ng-repeat="item in navigation.menu.getItems()">
                     <a ng-href="#{{ item.path }}" class="{{ item.id }}"
-                        ng-class="{ 'active': item.path === navCtrl.location.path() }">
+                        ng-class="{ 'active': item.path === navigation.location.path() }">
                         <i class="{{ item.icon }}"></i>{{ item.id|translate }}
                     </a>
                 </li>
@@ -100,7 +100,6 @@
         <!-- controller -->
         <script src="scripts/controller/event.js"></script>
         <script src="scripts/controller/eventView.js"></script>
-        <script src="scripts/controller/navigation.js"></script>
         <script src="scripts/controller/placeList.js"></script>
         <script src="scripts/controller/places.js"></script>
         <script src="scripts/controller/placeView.js"></script>
@@ -150,6 +149,7 @@
         <script src="scripts/service/filter.js"></script>
         <script src="scripts/service/geolocation.js"></script>
         <script src="scripts/service/menu.js"></script>
+        <script src="scripts/service/navigation.js"></script>
         <script src="scripts/service/phonegap.js"></script>
         <script src="scripts/service/placeFavorite.js"></script>
         <script src="scripts/service/placesConfig.js"></script>

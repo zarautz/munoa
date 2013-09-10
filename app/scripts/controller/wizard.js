@@ -21,8 +21,8 @@ Z.app.controller('WizardController', ['settingsManager', '$scope', function(sett
         this.page++;
 
         if (this.page === 2) {
-            $scope.navCtrl.popView();
-            $scope.navCtrl.location.path('/');
+            $scope.navigation.popView();
+            $scope.navigation.location.path('/');
         }
     };
 }]);

@@ -1,7 +1,7 @@
-<section class="on-{{ navCtrl.activeView }}" ng-controller="ZuzarautzController as zzCtrl">
+<section class="on-{{ navigation.activeView }}" ng-controller="ZuzarautzController as zzCtrl">
     <div>
         <header>
-            <i ng-click="navCtrl.toggleMenu()" class="left icon-menu"></i>
+            <i ng-click="navigation.toggleMenu()" class="left icon-menu"></i>
             <i ng-if="zzCtrl.status.isLoading" class="right icon-spin color-blue animate-spin"></i>
             <h1 class="title">{{ 'zuzarautz'|translate }}</h1>
         </header>
@@ -15,7 +15,7 @@
             <div ng-repeat="post in zzCtrl.posts">
                 <hr ng-hide="$index == 0"/>
                 <div class="row collapse"
-                    ng-click="navCtrl.pushView('post.show', { 'post': post })">
+                    ng-click="navigation.pushView('post.show', { 'post': post })">
                     <div class="large-1 small-1 columns">
                         <div class="thumbnail color-{{ $index % 5 }}" ng-style="{ 'background-image': 'url('+ post.getThumbnailImage() +')' }"><img src="images/dot.png" /></div>
                     </div>
@@ -33,16 +33,16 @@
 
 <script type="text/ng-template" id="post.show">
     <header>
-        <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
+        <a href ng-click="navigation.popView()"><i class="left icon-left"></i></a>
         <!--<i class="right icon-share"></i>-->
         <h1 class="title">{{ pushData.post.title }}</h1>
     </header>
-    <div class="overthrow post" ng-if="navCtrl.contentIsAlive(2)">
+    <div class="overthrow post" ng-if="navigation.contentIsAlive(2)">
         <h1 class="color-blue">
             {{ pushData.post.title }}
         </h1>
         <div class="content" ng-bind-html="pushData.post.getContent('medium')"></div>
-        <a href ng-click="navCtrl.openExternalLink(pushData.post.permalink)" class="external-link">
+        <a href ng-click="navigation.openExternalLink(pushData.post.permalink)" class="external-link">
             Zu Zarautz webgunean ikusi
         </a>
     </div>

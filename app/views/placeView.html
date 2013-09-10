@@ -1,6 +1,6 @@
 <div ng-controller="PlaceViewController as pviewCtrl" ng-class="{ 'active-map': pviewCtrl.mapIsActive }">
     <header>
-        <a href ng-click="navCtrl.popView()"><i class="left icon-left"></i></a>
+        <a href ng-click="navigation.popView()"><i class="left icon-left"></i></a>
         <div ng-switch on="pviewCtrl.status.isLoading">
             <div ng-switch-when="true">
                 <i class="right icon-spin color-blue animate-spin"></i>

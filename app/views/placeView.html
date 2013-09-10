@@ -6,7 +6,7 @@
                 <i class="right icon-spin color-blue animate-spin"></i>
             </div>
             <div ng-switch-default>
-                <i ng-click="navCtrl.toggleGestures(); pviewCtrl.toggleMap(navCtrl);" class="right" ng-class="{ 'icon-location-alt': !pviewCtrl.mapIsActive, 'icon-cancel': pviewCtrl.mapIsActive }"></i>
+                <i ng-click="pviewCtrl.toggleMap();" class="right" ng-class="{ 'icon-location-alt': !pviewCtrl.mapIsActive, 'icon-cancel': pviewCtrl.mapIsActive }"></i>
             </div>
         </div>
         <h1 class="title">{{ pviewCtrl.title }}</h1>

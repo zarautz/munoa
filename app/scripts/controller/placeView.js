@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.controller('PlaceViewController', ['$scope', '$timeout', 'placeMapper', 'placeFavorite', 'settings', 'geolocation', function($scope, $timeout, placeMapper, placeFavorite, settings, geolocation) {
+Z.app.controller('PlaceViewController', ['$scope', '$timeout', 'placeMapper', 'placeFavorite', 'settings', 'geolocation', 'navigation', function($scope, $timeout, placeMapper, placeFavorite, settings, geolocation, navigation) {
     var that = this,
         cssTransitionDuration = 300;
 
@@ -19,6 +19,7 @@ Z.app.controller('PlaceViewController', ['$scope', '$timeout', 'placeMapper', 'p
 
         this.mapIsInTransition = true;
         this.mapIsActive = !this.mapIsActive;
+        navigation.toggleGestures();
 
         $timeout(function () {
             that.mapIsInTransition = false;

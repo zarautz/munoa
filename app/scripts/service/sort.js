@@ -34,9 +34,9 @@ Z.app.factory('sort', ['placeFavorite', function(placeFavorite) {
             } else if (aFav > bFav) {
                 return -order;
             } else {
-                return equalFn(a, b)
+                return equalFn(a, b);
             }
-        }
+        };
     });
 
     sort.addType('property', function (order, equalFn, property) {

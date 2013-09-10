@@ -8,7 +8,6 @@ Z.app.directive('ilMap', ['geolocation', function (geolocation) {
             buildMap,
             userLatitude = geolocation.getCurrentPosition().location.latitude,
             userLongitude = geolocation.getCurrentPosition().location.longitude,
-            latLng,
             userLatLng = new google.maps.LatLng(userLatitude, userLongitude),
             fakeLat, fakeLng;
 
@@ -37,7 +36,7 @@ Z.app.directive('ilMap', ['geolocation', function (geolocation) {
                     fillColor: '0099cc',
                     strokeOpacity: 1.0,
                     strokeColor: '0099cc',
-                    strokeWeight: 3.0, 
+                    strokeWeight: 3.0,
                     scale: 10 //pixels
                 }
             });
@@ -52,7 +51,7 @@ Z.app.directive('ilMap', ['geolocation', function (geolocation) {
 
             // Set center
             map.setCenter(userLatLng);
-        }
+        };
 
         attrs.$observe('latitude', buildMap);
         attrs.$observe('longitude', buildMap);

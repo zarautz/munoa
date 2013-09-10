@@ -28,7 +28,7 @@ Z.Model.Place.prototype.getTypeNamesExcept = function (excludeTypes) {
     for (i in this.types) {
         name = this.types[i].name;
 
-        if (-1 === excludeTypes.indexOf(name)) {
+        if (-1 === excludeTypes.indexOf(this.types[i].code)) {
             types.push(name);
         }
     }

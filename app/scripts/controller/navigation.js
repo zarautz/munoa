@@ -7,8 +7,9 @@ Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'me
     this.location = $location;
     this.menu = menu;
     this.activeView = 1;
-    this.menuIsInTransition = false;
-    this.viewIsInTransition = false;
+    this.menuIsInTransition  = false;
+    this.viewIsInTransition  = false;
+    this.gesturesAreDisabled = false;
 
     $scope.dataStack = [];
 
@@ -23,6 +24,9 @@ Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'me
             this.activeView === viewToActivate) {
             return false;
         }
+
+        // Reset gestures behavior
+        this.gesturesAreDisabled = false;
 
         // Prevent moving between views when menu is open
         if (menu.isActive()) {
@@ -75,7 +79,15 @@ Z.app.controller('NavigationController', ['$scope', '$location', '$timeout', 'me
         }, cssTransitionDuration);
     };
 
+    this.toggleGestures = function() {
+        this.gesturesAreDisabled = !this.gesturesAreDisabled;
+    };
+
     this.swipe = function(direction) {
+        if (this.gesturesAreDisabled) {
+            return false;
+        }
+
         if (this.activeView === 1) {
             if (menu.isActive() && direction === 'left') {
                 menu.setIsActive(false);

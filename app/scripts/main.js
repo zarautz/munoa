@@ -9,11 +9,17 @@ Z.app.value('googleApiKey', 'AIzaSyBopLXCM1kLoklpwOOvyA_QurVbj1H02C0');
 
 // We force early initialization by injecting the services
 Z.app.run(['$timeout', 'phonegap', function ($timeout, phonegap) {
-    /*
     phonegap.onDeviceReady().then(function () {
+        // Back Button
+        document.addEventListener('backbutton', function () {
+            console.debug('[PHONEGAP] Back button');
+        });
+
+        // Splash
+        /*
         $timeout(function () {
             navigator.splashscreen.hide();
         }, 250);
+        */
     });
-    */
 }]);

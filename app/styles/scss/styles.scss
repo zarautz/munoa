@@ -500,7 +500,7 @@ ul.drawer {
     top: $action-bar-height;
     bottom: 0;
     width: 100%;
-    background: yellow;
+    background: $app-background;
     @include transform-transition($transition-duration, ease-out);
     @include transform-translateY(-100%);
 
@@ -515,6 +515,24 @@ ul.drawer {
         img {
             max-width: none;
         }
+    }
+}
+
+//
+// Big message
+//
+
+.big-message {
+    text-align: center;
+    padding-top: 2em;
+    font-size: 2em;
+    font-weight: 300;
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+        display: block;
+        font-size: 3em;
+        color: $color-yellow;
     }
 }
 

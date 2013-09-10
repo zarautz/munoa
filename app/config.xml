@@ -81,8 +81,10 @@ https://build.phonegap.com/docs/config-xml
     <!--
     <access origin="http://zarautz.org" subdomains="true" browserOnly="true" />
     -->
+    <!--
     <access origin="http://google.com" subdomains="true" browserOnly="true" />
     <access origin="http://googleapis.com" subdomains="true" browserOnly="true" />
     <access origin="http://gstatic.com" subdomains="true" browserOnly="true" />
-
+    -->
+    <access origin="*" browserOnly="true" />
 </widget>

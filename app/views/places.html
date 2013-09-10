@@ -85,8 +85,8 @@
                     {{ plistCtrl.pager.getTotalItems() }} {{ 'list.results'|translate }}
                     {{ '/ ' + plistCtrl.totalItems }}
                     <i class="right bicon icon-star" ng-class="{ 'fav-on': plistCtrl.filter.favorite !== null }" ng-click="plistCtrl.setFilter('favorite', true)"></i>
-                    <i ng-if="plistCtrl.userLocation.location !== false" ng-class="{ 'on': plistCtrl.sorting.type == 'distance'}" ng-click="plistCtrl.setSorting('distance')" class="right bicon icon-direction"></i>
-                    <i ng-if="plistCtrl.userLocation.location !== false" ng-class="{ 'on': plistCtrl.sorting.type == 'name'}" ng-click="plistCtrl.setSorting('name')" class="right bicon icon-sort-alphabet"></i>
+                    <i ng-if="plistCtrl.userLocation !== false" ng-class="{ 'on': plistCtrl.sorting.type == 'name'}" ng-click="plistCtrl.setSorting('name')" class="right bicon icon-sort-alphabet"></i>
+                    <i ng-if="plistCtrl.userLocation !== false" ng-class="{ 'on': plistCtrl.sorting.type == 'distance'}" ng-click="plistCtrl.setSorting('distance')" class="right bicon icon-direction"></i>
                 </div>
                 <div ng-repeat="place in plistCtrl.pager.getAllItems()">
                     <hr />
@@ -101,8 +101,8 @@
                             <p>
                                 <i class="icon-location"></i>
                                 {{ place.address }}
-                                <span class="distance" ng-if="plistCtrl.userLocation.location !== false">
-                                    ({{ place.location.distanceTo(plistCtrl.userLocation.location) | distance }})
+                                <span class="distance" ng-if="plistCtrl.userLocation !== false">
+                                    ({{ place.location.distanceTo(plistCtrl.userLocation) | distance }})
                                 </span><br/>
                                 <i class="icon-tag"></i>
                                 {{ place.getTypeNamesExcept(['murkil']).join(', ') }}

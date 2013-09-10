@@ -59,7 +59,7 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
         this.filter       = {'show': false};
         this.list         = [];
         this.pager        = new Z.Paginator();
-        this.userLocation = geolocation.getCurrentPosition();
+        this.userLocation = geolocation.getCurrentPosition().location;
         this.totalItems   = 0;
         this.favorite     = placeFavorite;
 
@@ -74,7 +74,12 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
         this.initVars();
         this.initData();
         this.clearFilters();
-        this.setSorting('name');
+
+        if (this.userLocation !== false ) {
+            this.setSorting('distance');
+        } else {
+            this.setSorting('name');
+        }
     };
 
     this.setSorting = function (name, order) {
@@ -157,7 +162,7 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
             //}
 
             if (that.sorting.type === 'distance') {
-                sortCfg.push({type: 'distance', order: that.sorting.order, params: [places, that.userLocation.location]});
+                sortCfg.push({type: 'distance', order: that.sorting.order, params: [places, that.userLocation]});
             }
 
             sortCfg.push({type: 'property', order: that.sorting.order, params: ['name']});

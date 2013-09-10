@@ -2702,15 +2702,15 @@ ul.drawer li a.settings {
   padding: 0;
 }
 /* line 406, scss/styles.scss */
-.list-with-images div.sort-options .bicon.icon-sort-alphabet {
-  padding-right: 3px;
+.list-with-images div.sort-options .bicon.icon-direction {
   -webkit-border-top-right-radius: 0;
   border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-/* line 412, scss/styles.scss */
-.list-with-images div.sort-options .bicon.icon-direction {
+/* line 411, scss/styles.scss */
+.list-with-images div.sort-options .bicon.icon-sort-alphabet {
+  padding-right: 3px;
   -webkit-border-top-left-radius: 0;
   border-top-left-radius: 0;
   -webkit-border-bottom-left-radius: 0;

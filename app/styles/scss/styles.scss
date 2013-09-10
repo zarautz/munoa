@@ -403,13 +403,13 @@ ul.drawer {
             margin: 0;
             padding: 0;
 
-            &.icon-sort-alphabet {
-                padding-right: 3px;
+            &.icon-direction {
                 @include border-top-right-radius(0);
                 @include border-bottom-right-radius(0);
             }
 
-            &.icon-direction {
+            &.icon-sort-alphabet {
+                padding-right: 3px;
                 @include border-top-left-radius(0);
                 @include border-bottom-left-radius(0);
             }

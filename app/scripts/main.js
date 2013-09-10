@@ -16,10 +16,6 @@ Z.app.run(['$timeout', 'phonegap', function ($timeout, phonegap) {
         });
 
         // Splash
-        /*
-        $timeout(function () {
-            navigator.splashscreen.hide();
-        }, 250);
-        */
+        navigator.splashscreen.hide();
     });
 }]);

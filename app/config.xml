@@ -46,25 +46,22 @@ https://build.phonegap.com/docs/config-xml
     http://fusiongrokker.com/post/phonegap-build-splash-screen-sizes-xml-ref
     -->
     <!-- Android -->
-    <!--
     <preference name="splash-screen-duration" value="60000" />
-    <gap:splash src="images/splash/android/200x320.png" gap:platform="android" gap:density="ldpi"  /><!-- width="320" height="426" 
-    <gap:splash src="images/splash/android/320x480.png" gap:platform="android" gap:density="mdpi"  /><!-- width="320" height="470" 
-    <gap:splash src="images/splash/android/480x800.png" gap:platform="android" gap:density="hdpi"  /><!-- width="480" height="640" 
-    <gap:splash src="images/splash/android/720x1280.png" gap:platform="android" gap:density="xhdpi" /><!-- width="720" height="960" 
-    -->
+    <gap:splash src="images/splash/android/200x320.png" gap:platform="android" gap:density="ldpi"  /><!-- width="320" height="426" -->
+    <gap:splash src="images/splash/android/320x480.png" gap:platform="android" gap:density="mdpi"  /><!-- width="320" height="470" -->
+    <gap:splash src="images/splash/android/480x800.png" gap:platform="android" gap:density="hdpi"  /><!-- width="480" height="640" -->
+    <gap:splash src="images/splash/android/720x1280.png" gap:platform="android" gap:density="xhdpi" /><!-- width="720" height="960" -->
     <!-- iOS -->
-    <!--
     <preference name="auto-hide-splash-screen" value="false" />
     <preference name="show-splash-screen-spinner" value="false" />
-    <gap:splash src="images/splash/ios/480x320.png"   gap:platform="ios" width="320"  height="480"  /><!-- Regular iPhone4
-    <gap:splash src="images/splash/ios/640x960.png"   gap:platform="ios" width="640"  height="960"  /><!-- Retina iPhone4
-    <gap:splash src="images/splash/ios/640x1136.png"  gap:platform="ios" width="640"  height="1136" /><!-- iPhone5
-    <gap:splash src="images/splash/ios/768x1004.png"  gap:platform="ios" width="768"  height="1004" /><!-- iPad Portrait
-    <gap:splash src="images/splash/ios/1024x748.png"  gap:platform="ios" width="1024" height="748"  /><!-- iPad Landscape
-    <gap:splash src="images/splash/ios/1536x2008.png" gap:platform="ios" width="1536" height="2008" /><!-- Retina iPad: Portrait
-    <gap:splash src="images/splash/ios/2048x1496.png" gap:platform="ios" width="2048" height="1496" /><!-- Retina iPad: Landscape
-    -->
+    <gap:splash src="images/splash/ios/480x320.png"   gap:platform="ios" width="320"  height="480"  /><!-- Regular iPhone4 -->
+    <gap:splash src="images/splash/ios/640x960.png"   gap:platform="ios" width="640"  height="960"  /><!-- Retina iPhone4 -->
+    <gap:splash src="images/splash/ios/640x1136.png"  gap:platform="ios" width="640"  height="1136" /><!-- iPhone5 -->
+    <gap:splash src="images/splash/ios/768x1004.png"  gap:platform="ios" width="768"  height="1004" /><!-- iPad Portrait -->
+    <gap:splash src="images/splash/ios/1024x748.png"  gap:platform="ios" width="1024" height="748"  /><!-- iPad Landscape -->
+    <gap:splash src="images/splash/ios/1536x2008.png" gap:platform="ios" width="1536" height="2008" /><!-- Retina iPad: Portrait -->
+    <gap:splash src="images/splash/ios/2048x1496.png" gap:platform="ios" width="2048" height="1496" /><!-- Retina iPad: Landscape -->
+
     <!-- 
     Icons
     -->

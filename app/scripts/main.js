@@ -26,7 +26,7 @@ Z.app.run(['$rootScope', '$timeout', 'navigation', 'phonegap', function ($rootSc
 
         // Splash
         $timeout(function () {
-            navigator.splashscreen.hide();    
+            navigator.splashscreen.hide();
         }, 250);
     });
 }]);

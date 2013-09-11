@@ -193,14 +193,14 @@ Z.app.factory('placesConfig', [function() {
 
     group = section.addGroup('eating');
     group
-        .setTypes(['meal_takeaway', 'restaurant'])
+        .setTypes(['meal_takeaway', 'restaurant', 'food_establishment'])
         .setIcon('icon-restaurant')
         //.setShowPriceFilter(true)
     ;
 
     group = section.addGroup('lodging');
     group
-        .setTypes(['lodging', 'campground'])
+        .setTypes(['hotel', 'lodging', 'campground', 'agritourism'])
         .setIcon('icon-lodging')
         //.setShowPriceFilter(true)
     ;
@@ -221,7 +221,7 @@ Z.app.factory('placesConfig', [function() {
 
     group = section.addGroup('poi');
     group
-        .setTypes(['point_of_interest'])
+        .setTypes(['point_of_interest', 'park'])
         .setIcon('icon-ok')
     ;
 
@@ -231,15 +231,9 @@ Z.app.factory('placesConfig', [function() {
         .setIcon('icon-tree')
     ;
 
-    group = section.addGroup('museum');
+    group = section.addGroup('culture');
     group
-        .setTypes(['museum', 'library'])
-        .setIcon('icon-town-hall')
-    ;
-
-    group = section.addGroup('theater');
-    group
-        .setTypes(['theater'])
+        .setTypes(['cultural_center', 'museum', 'library', 'theater'])
         .setIcon('icon-theatre')
     ;
 
@@ -249,8 +243,14 @@ Z.app.factory('placesConfig', [function() {
         .setIcon('icon-layers')
     ;
 
-    section.sortGroups('tourist', ['nature', 'museum', 'sculpture', 'theater']);
-    section.sortGroups('zarautz', ['nature', 'museum', 'sculpture', 'theater']);
+    group = section.addGroup('architecture');
+    group
+        .setTypes(['architectural_heritage'])
+        .setIcon('icon-town-hall')
+    ;
+
+    section.sortGroups('tourist', ['poi', 'nature', 'culture', 'sculpture', 'architecture']);
+    section.sortGroups('zarautz', ['poi', 'nature', 'culture', 'sculpture', 'architecture']);
 
     //
     // RETURN CONFIG INSTANCE

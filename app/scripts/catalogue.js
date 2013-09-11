@@ -238,8 +238,8 @@ Z.catalogue = {
         'fr': '--ATMs'
     },
     'placesGroup.places.food': {
-        'eu': 'Janaria',
-        'es': 'Comida',
+        'eu': 'Elikadura',
+        'es': 'Alimentación',
         'en': 'Food',
         'fr': '--Food'
     },
@@ -308,24 +308,33 @@ Z.catalogue = {
         'eu': 'Natura',
         'es': 'Naturaleza',
         'en': 'Nature',
-        'fr': '--Nature'
+        'fr': 'Nature'
     },
-    'placesGroup.poi.museum': {
-        'eu': 'Museoak',
-        'es': 'Museos',
-        'en': 'Museums',
-        'fr': '--Museums'
+    'placesGroup.poi.culture': {
+        'eu': 'Kultur guneak',
+        'es': 'Centro culturales',
+        'en': 'Cultural centers',
+        'fr': 'Centres culturels'
     },
     'placesGroup.poi.sculpture': {
         'eu': 'Eskulturak',
         'es': 'Esculturas',
         'en': 'Sculptures',
-        'fr': '--Sculptures'
+        'fr': 'Sculptures'
     },
-    'placesGroup.poi.theater': {
-        'eu': 'Bestelakoak',
-        'es': 'Otros',
-        'en': 'Other',
-        'fr': '--Other'
+    'placesGroup.poi.architecture': {
+        'eu': 'Ondare arkitektonikoa',
+        'es': 'Patrimonio arquitectónico',
+        'en': 'Architectural heritage',
+        'fr': 'Patrimoine architectural'
+    },
+    //
+    // Other
+    //
+    'murkil': {
+        'eu': 'Murkileko kidea',
+        'es': 'Socio de Murkil',
+        'en': 'Murkil member',
+        'fr': 'Murkil membre'
     }
 };

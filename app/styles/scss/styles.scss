@@ -297,7 +297,7 @@ ul.drawer {
             &.settings {
                 text-transform: uppercase;
                 font-size: $smallest-font-size;
-                color: lighten($drawer-background, 15%);
+                color: lighten($drawer-background, 25%);
             }
         }
     }

@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.directive('ilMap', ['phonegap', 'babel', function (phonegap, babel) {
+Z.app.directive('ilMap', ['navigation', 'phonegap', 'babel', function (navigation, phonegap, babel) {
     return {
         restrict: 'A',
         link: function (scope, element, attrs) {
@@ -53,6 +53,14 @@ Z.app.directive('ilMap', ['phonegap', 'babel', function (phonegap, babel) {
                     bounds.extend(userMarker.getPosition());
                     map.fitBounds(bounds);
                 }
+
+                // Capture links
+                google.maps.event.addListener(map, 'tilesloaded', function() {
+                    element.find('a').on('click', function(event) {
+                        event.preventDefault();
+                        navigation.openExternalLink(angular.element(this).attr('href'));
+                    });
+                });
             };
 
             if (typeof google === 'object' && typeof google.maps === 'object') {

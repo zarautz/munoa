@@ -440,7 +440,8 @@ ul.drawer {
         text-align: center;
         margin: $quarter-padding 0 0;
 
-        i {
+        [class^="icon-"],
+        [class*=" icon-"] {
             font-size: $biggest-font-size;
             @include border-radius(1000px);
             height: 1.6em;
@@ -461,20 +462,33 @@ ul.drawer {
     }
 }
 
-.cta-grid {
-    font-size: 1.5em;
+.cta-list {
     margin: $base-padding 0;
-    border-top: 1px solid $hr-border-color;
-    border-bottom: 1px solid $hr-border-color;
 
     li {
-        text-align: center;
+        border-top: 1px solid $hr-border-color;
+        height: $touchable-size;
+        line-height: $touchable-size;
         margin: 0;
-        padding: $half-padding $base-padding;
-        border-right: 1px solid $hr-border-color;
+
+        [class^="icon-"],
+        [class*=" icon-"] {
+            display: block;
+            font-size: 1.2em;
+            color: $color-light-blue;
+            float: left;
+            margin-right: $half-padding;
+
+            &.right {
+                font-size: $smallest-font-size;
+                margin: 0 0 0 $half-padding;
+                float: right;
+                color: $color-lightest-text;
+            }
+        }
 
         &:last-child {
-            border: 0;
+            border-bottom: 1px solid $hr-border-color;
         }
     }
 }

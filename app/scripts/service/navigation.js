@@ -40,6 +40,9 @@ Z.app.factory('navigation', ['$location', '$rootScope', '$timeout', 'menu', func
             return false;
         }
 
+        // Reset gestures, in case a map was left open
+        this.gesturesAreDisabled = false;
+
         // Start transition
         this.viewIsInTransition = true;
         this.activeView = viewToActivate;

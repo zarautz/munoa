@@ -560,6 +560,7 @@ ul.drawer {
     font-weight: 300;
     color: $color-lightest-text;
     @include big-font();
+    @include transform-translateZ(0);
 
     [class^="icon-"],
     [class*=" icon-"] {

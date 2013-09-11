@@ -11,9 +11,6 @@
         </div>
         <h1 class="title">{{ pviewCtrl.title }}</h1>
     </header>
-    <div class="map-container">
-        <div il-map latitude="{{ pviewCtrl.place.location.latitude }}" longitude="{{ pviewCtrl.place.location.longitude }}"></div>
-    </div>
     <div ng-if="pviewCtrl.status.isLoading" class="big-message absolute">
         <i class="icon-download"></i>
         {{ 'loading' | translate }}
@@ -50,5 +47,8 @@
             </li>
         </ul>
         <div class="content" ng-bind-html="pviewCtrl.place.description"></div>
+    </div>
+    <div class="map-container">
+        <div il-map latitude="{{ pviewCtrl.place.location.latitude }}" longitude="{{ pviewCtrl.place.location.longitude }}"></div>
     </div>
 </div>

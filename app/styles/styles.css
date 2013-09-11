@@ -1350,6 +1350,9 @@ body.active-modal aside {
 section {
   position: absolute;
   height: 100%;
+}
+/* line 85, scss/_app-navigation.scss */
+.csstransforms3d section {
   -webkit-transition-property: -webkit-transform;
   transition-property: transform;
   -webkit-transition-duration: 0.2s;
@@ -1359,12 +1362,12 @@ section {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* line 85, scss/_app-navigation.scss */
+/* line 89, scss/_app-navigation.scss */
 section > div {
   float: left;
   position: relative;
 }
-/* line 90, scss/_app-navigation.scss */
+/* line 94, scss/_app-navigation.scss */
 section header {
   position: absolute;
   top: 0px;
@@ -1378,25 +1381,25 @@ section header {
   -webkit-transform: translateZ(0px);
   transform: translateZ(0px);
 }
-/* line 100, scss/_app-navigation.scss */
+/* line 104, scss/_app-navigation.scss */
 section div.overthrow {
   margin-top: 48px;
   width: 100%;
 }
 
-/* line 110, scss/_app-navigation.scss */
+/* line 114, scss/_app-navigation.scss */
 .overthrow-enabled {
   overflow-y: hidden;
 }
-/* line 113, scss/_app-navigation.scss */
+/* line 117, scss/_app-navigation.scss */
 .overthrow-enabled body {
   overflow-y: hidden;
 }
-/* line 118, scss/_app-navigation.scss */
+/* line 122, scss/_app-navigation.scss */
 .overthrow-enabled section > div {
   height: 100%;
 }
-/* line 121, scss/_app-navigation.scss */
+/* line 125, scss/_app-navigation.scss */
 .overthrow-enabled section > div div.overthrow {
   overflow-x: hidden;
   overflow-y: auto;
@@ -1407,41 +1410,41 @@ section div.overthrow {
   bottom: 0px;
   left: 0px;
 }
-/* line 136, scss/_app-navigation.scss */
+/* line 140, scss/_app-navigation.scss */
 .overthrow-enabled.csstransforms3d div.overthrow {
   -webkit-transform: translateZ(0px);
   transform: translateZ(0px);
 }
 
-/* line 148, scss/_app-navigation.scss */
+/* line 152, scss/_app-navigation.scss */
 section {
   width: 500%;
 }
-/* line 151, scss/_app-navigation.scss */
+/* line 155, scss/_app-navigation.scss */
 section > div {
   width: 20%;
 }
-/* line 155, scss/_app-navigation.scss */
+/* line 159, scss/_app-navigation.scss */
 section.on-1 {
   -webkit-transform: translateX(0%);
   transform: translateX(0%);
 }
-/* line 160, scss/_app-navigation.scss */
+/* line 164, scss/_app-navigation.scss */
 section.on-2 {
   -webkit-transform: translateX(-20%);
   transform: translateX(-20%);
 }
-/* line 160, scss/_app-navigation.scss */
+/* line 164, scss/_app-navigation.scss */
 section.on-3 {
   -webkit-transform: translateX(-40%);
   transform: translateX(-40%);
 }
-/* line 160, scss/_app-navigation.scss */
+/* line 164, scss/_app-navigation.scss */
 section.on-4 {
   -webkit-transform: translateX(-60%);
   transform: translateX(-60%);
 }
-/* line 160, scss/_app-navigation.scss */
+/* line 164, scss/_app-navigation.scss */
 section.on-5 {
   -webkit-transform: translateX(-80%);
   transform: translateX(-80%);

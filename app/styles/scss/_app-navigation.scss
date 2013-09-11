@@ -80,7 +80,11 @@ body.active-modal {
 section {
     position: absolute;
     height: 100%;
-    @include transform-transition($transition-duration, linear);
+
+    // Reduce CSS load in older mobiles...
+    .csstransforms3d & {
+        @include transform-transition($transition-duration, linear);
+    }
     
     > div {
         float: left;

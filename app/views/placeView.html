@@ -20,16 +20,29 @@
             <i class="icon-direction"></i> {{ pviewCtrl.place.location.distanceTo(pviewCtrl.geolocation) | distance }}
         </span>
         <h3>
-            {{ pviewCtrl.place.name }}
+            {{ pviewCtrl.place.name }} <i ng-click="pviewCtrl.toggleFavorite(pviewCtrl.place.id)" ng-class="{ 'icon-star color-yellow': pviewCtrl.favorite.isFavorite(pviewCtrl.place.id), 'icon-star-empty color-lightest-text': !pviewCtrl.favorite.isFavorite(pviewCtrl.place.id) }"></i>
         </h3>
         <p class="text-small">
             {{ pviewCtrl.place.getTypeNamesExcept(['murkil']).join(', ') }}<br />
             <span class="color-light-text">{{ pviewCtrl.place.address }}</span>
         </p>
-        <ul class="small-block-grid-3 large-block-grid-3 cta-grid">
-            <li><a ng-href="tel:{{ pviewCtrl.place.telephone }}"><i class="icon-phone color-light-blue"></i></a></li>
-            <li><i class="icon-post color-lightest-text"></i></li>
-            <li><i class="icon-star" ng-class="{ 'color-yellow': pviewCtrl.favorite.isFavorite(pviewCtrl.place.id), 'color-lightest-text': !pviewCtrl.favorite.isFavorite(pviewCtrl.place.id) }" ng-click="pviewCtrl.toggleFavorite(pviewCtrl.place.id)"></i></li>
+        <ul class="cta-list">
+            <li ng-if="pviewCtrl.place.telephone"
+                ng-click="navigation.openExternalLink('tel:'+ pviewCtrl.place.getCleanTelephone())">
+                <i class="icon-phone"></i>
+                {{ pviewCtrl.place.telephone }}
+            </li>
+            <li ng-if="pviewCtrl.place.email"
+                ng-click="navigation.openExternalLink('mailto:'+ pviewCtrl.place.email)">
+                <i class="icon-post"></i>
+                {{ pviewCtrl.place.email }}
+            </li>
+            <li ng-if="pviewCtrl.zarauztarra && pviewCtrl.place.isOfType('murkil')"
+                ng-click="navigation.openExternalLink('http://www.murkil.com/index.php?lang='+ pviewCtrl.language)">
+                <i class="icon-bag"></i>
+                <i class="icon-link-external right"></i>
+                {{ 'murkil' | translate }}
+            </li>
         </ul>
         <div class="content" ng-bind-html="pviewCtrl.place.description"></div>
     </div>

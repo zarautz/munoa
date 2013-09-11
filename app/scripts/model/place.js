@@ -8,6 +8,10 @@ Z.Model.Place.prototype.distanceTo = function (point) {
     return this.location.distanceTo(point);
 };
 
+Z.Model.Place.prototype.getCleanTelephone = function () {
+    return this.telephone.replace(/\s/g, '');
+};
+
 Z.Model.Place.prototype.getImage = function (size) {
     if (this.image !== undefined && this.image !== null) {
         return this.image.source[size];
@@ -34,4 +38,16 @@ Z.Model.Place.prototype.getTypeNamesExcept = function (excludeTypes) {
     }
 
     return types;
+};
+
+Z.Model.Place.prototype.isOfType = function (typeCode) {
+    var types = [], i;
+
+    for (i in this.types) {
+        if (this.types[i].code === typeCode) {
+            return true;
+        }
+    }
+
+    return false;
 };

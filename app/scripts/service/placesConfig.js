@@ -167,15 +167,15 @@ Z.app.factory('placesConfig', [function() {
         .setIcon('icon-parking')
     ;
 
-    group = section.addGroup('sports', 'golf', 'gym', 'surf_school');
+    group = section.addGroup('sports');
     group
-        .setTypes(['sports'])
+        .setTypes(['sports', 'golf', 'gym', 'surf_school'])
         .setIcon('icon-pitch')
     ;
 
-    group = section.addGroup('transport', 'train_station');
+    group = section.addGroup('transport');
     group
-        .setTypes(['transport'])
+        .setTypes(['transport', 'train_station'])
         .setIcon('icon-bus')
     ;
 

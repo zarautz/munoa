@@ -111,6 +111,18 @@
                     </div>
                 </div>
             </div>
+
+            <div ng-if="plistCtrl.pager.getTotalItems() === 0 && plistCtrl.filter.favorite === null"
+                class="big-message">
+                <i class="icon-emo-sleep"></i>
+                {{ 'list.no_results' | translate }}
+            </div>
+
+            <div ng-if="plistCtrl.pager.getTotalItems() === 0 && plistCtrl.filter.favorite !== null"
+                class="big-message">
+                <i class="icon-star-empty"></i>
+                {{ 'list.no_favorites' | translate }}
+            </div>
         </div>
     </div>
 </script>

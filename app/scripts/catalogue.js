@@ -19,6 +19,18 @@ Z.catalogue = {
         'en': 'results',
         'fr': 'résultats'
     },
+    'list.no_results': {
+        'eu': 'Ez dago emaitzarik',
+        'es': 'No hay resultados',
+        'en': 'No results found',
+        'fr': 'Aucun résultat'
+    },
+    'list.no_favorites': {
+        'eu': 'Oraindik ez duzu faboritorik atal honetan',
+        'es': 'No tienes favoritos en este apartado',
+        'en': 'You don\'t have favorites in this section',
+        'fr': 'Vous n\'avez pas de favoris dans cette section'
+    },
     //
     // Events
     //

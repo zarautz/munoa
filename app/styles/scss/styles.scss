@@ -495,7 +495,7 @@ ul.drawer {
 
 .star-button {
     font-size: $big-font-size;
-    margin-left: $base-padding;
+    margin: 0 (-($half-padding)) 0 $base-padding;
     float: right;
 }
 
@@ -655,6 +655,10 @@ hr {
 
 .text-light {
     font-weight: 300;
+}
+
+.ucfirst:first-letter {
+    text-transform: uppercase;
 }
 
 .uppercase {

@@ -2828,7 +2828,7 @@ ul.drawer li a.settings {
 /* line 496, scss/styles.scss */
 .star-button {
   font-size: 26px;
-  margin-left: 16px;
+  margin: 0 -8px 0 16px;
   float: right;
 }
 
@@ -3017,16 +3017,21 @@ hr {
 }
 
 /* line 660, scss/styles.scss */
-.uppercase {
+.ucfirst:first-letter {
   text-transform: uppercase;
 }
 
 /* line 664, scss/styles.scss */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* line 668, scss/styles.scss */
 .lowercase {
   text-transform: lowercase;
 }
 
-/* line 669, scss/styles.scss */
+/* line 673, scss/styles.scss */
 a.chameleon, a.chameleon:hover {
   color: inherit;
   text-decoration: none;

@@ -13,7 +13,7 @@
         </div>
         <div ng-if="!weatherCtrl.status.isLoading" class="overthrow">
             <p class="text-smallest text-center">
-                {{ weatherCtrl.forecast.today.date|date:'fullDate' }}<br />
+                {{ weatherCtrl.forecast.today.date|amDateFormat:'dddd, LL' }}<br />
                 <span class="color-light-text">
                     {{ weatherCtrl.forecast.today.getCurrentWeatherCode().name }}
                 </span>
@@ -37,7 +37,7 @@
                     ng-repeat="day in weatherCtrl.forecast.days"
                     ng-class="{ 'active': $index == weatherCtrl.activeTab }"
                     ng-click="weatherCtrl.changeTab($index)">
-                    <span ng-class="{ 'strong': $first }">{{ day.date|date:'EEE' }}</span><br />
+                    <span ng-class="{ 'strong': $first }">{{ day.date|amDateFormat:'ddd' }}</span><br />
                     <i class="icon-weather-{{ day.getWeatherCode().code }}"></i>
                     <p class="temperatures">
                         {{ day.weather.tempMax }}&deg; <span class="min">{{ day.weather.tempMin }}&deg;</span>
@@ -86,7 +86,7 @@
                 <div class="large-12 columns">
                     <hr />
                     <p class="text-smallest color-lightest-text">
-                        {{ 'meta.lastUpdated'|translate }}: {{ weatherCtrl.forecast.meta.lastUpdated|date:'short' }}<br />
+                        {{ 'meta.lastUpdated'|translate }}: {{ weatherCtrl.forecast.meta.lastUpdated|amDateFormat:'L LT' }}<br />
                         {{ 'meta.sources'|translate }}:
                         <span ng-repeat="(name, url) in weatherCtrl.forecast.meta.source">
                             <a href="{{ url }}" class="chameleon">{{ name }}</a><span ng-hide="$last">, </span>

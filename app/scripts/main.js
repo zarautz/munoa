@@ -2,13 +2,16 @@
 
 var Z = { Model: {} };
 
-Z.app = angular.module('munoa', ['ngRoute', 'ngTouch', 'ngSanitize']);
+Z.app = angular.module('munoa', ['angularMoment', 'ngRoute', 'ngTouch', 'ngSanitize']);
 
 Z.app.value('apiHost', true ? 'http://pagoeta.illarra.com/v1' : 'http://pagoeta.zarautz.org/app_dev.php/v1');
 Z.app.value('googleApiKey', 'AIzaSyBopLXCM1kLoklpwOOvyA_QurVbj1H02C0');
 
 // We force early initialization by injecting the services
-Z.app.run(['$rootScope', '$timeout', 'navigation', 'phonegap', function ($rootScope, $timeout, navigation, phonegap) {
+Z.app.run(['$rootScope', '$timeout', 'navigation', 'phonegap', 'settings', function ($rootScope, $timeout, navigation, phonegap, settings) {
+    // Init Moment language
+    moment.lang(settings.get('language'));
+
     // Make navigation accesible by all the scopes
     $rootScope.navigation = navigation;
 

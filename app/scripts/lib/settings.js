@@ -60,7 +60,7 @@ Z.Settings.prototype.loadFromCache = function () {
         cacheData = this._cache.get(cacheKey);
 
         if (cacheData) {
-            this._settings[ids[i]].selected = cacheData;
+            this.set(ids[i], cacheData);
         }
     }
 };

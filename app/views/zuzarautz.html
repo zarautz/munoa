@@ -45,7 +45,7 @@
         <h1 class="color-blue">
             {{ pushData.post.title }}
         </h1>
-        <div class="content" ng-bind-html="pushData.post.getContent('medium')"></div>
+        <div il-link-converter content="{{ pushData.post.getContent('medium') }}" class="content"></div>
         <a href ng-click="navigation.openExternalLink(pushData.post.permalink)" class="external-link">
             Zu Zarautz webgunean ikusi
         </a>

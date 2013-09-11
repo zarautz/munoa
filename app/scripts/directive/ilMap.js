@@ -3,7 +3,7 @@
 Z.app.directive('ilMap', ['phonegap', 'babel', function (phonegap, babel) {
     return {
         restrict: 'A',
-        link: function (scope, elem, attrs) {
+        link: function (scope, element, attrs) {
             var latitude,
                 longitude,
                 map, bounds, latLng, marker, userMarker,
@@ -15,7 +15,7 @@ Z.app.directive('ilMap', ['phonegap', 'babel', function (phonegap, babel) {
                 longitude = parseFloat(attrs.longitude, 10) || 2;
                 latLng = new google.maps.LatLng(latitude, longitude);
 
-                map = new google.maps.Map(elem[0], {
+                map = new google.maps.Map(element[0], {
                     zoom: 16,
                     center: latLng,
                     mapTypeControl: false,
@@ -59,7 +59,7 @@ Z.app.directive('ilMap', ['phonegap', 'babel', function (phonegap, babel) {
                 attrs.$observe('latitude', buildMap);
                 attrs.$observe('longitude', buildMap);
             } else {
-                elem.append(angular.element('<p class="big-message"><i class="icon-attention"></i>'+ babel.translate('error.gmaps') +'</p>'));
+                element.append(angular.element('<p class="big-message"><i class="icon-attention"></i>'+ babel.translate('error.gmaps') +'</p>'));
             }
         }
     };

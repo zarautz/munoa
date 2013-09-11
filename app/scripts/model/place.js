@@ -41,7 +41,7 @@ Z.Model.Place.prototype.getTypeNamesExcept = function (excludeTypes) {
 };
 
 Z.Model.Place.prototype.isOfType = function (typeCode) {
-    var types = [], i;
+    var i;
 
     for (i in this.types) {
         if (this.types[i].code === typeCode) {

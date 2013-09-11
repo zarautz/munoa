@@ -34,6 +34,8 @@ Z.app.controller('PlaceViewController', ['$scope', '$timeout', 'placeMapper', 'p
         this.place       = place.promise;
         this.title       = $scope.pushData.name;
         this.geolocation = phonegap.geolocation;
+        this.zarauztarra = settings.get('profile') === 'zarautz';
+        this.language    = settings.get('language');
     };
 
     this.refresh();

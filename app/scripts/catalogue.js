@@ -13,6 +13,12 @@ Z.catalogue = {
         'en': 'Retry',
         'fr': 'Réessayez'
     },
+    'error.gmaps': {
+        'eu': 'Arazoren bat izan da mapa osatzerakoan',
+        'es': 'Ha habido algún problema al crear el mapa',
+        'en': 'There was a problem creating the map',
+        'fr': 'Il y avait un problème de création de la carte'
+    },
     'list.results': {
         'eu': 'emaitza',
         'es': 'resultados',

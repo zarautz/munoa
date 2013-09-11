@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.directive('ilMap', ['phonegap', function (phonegap) {
+Z.app.directive('ilMap', ['phonegap', 'babel', function (phonegap, babel) {
     return {
         restrict: 'A',
         link: function (scope, elem, attrs) {
@@ -59,7 +59,7 @@ Z.app.directive('ilMap', ['phonegap', function (phonegap) {
                 attrs.$observe('latitude', buildMap);
                 attrs.$observe('longitude', buildMap);
             } else {
-                elem.append(angular.element('<p class="big-message"><i class="icon-attention"></i>Text</p>'));
+                elem.append(angular.element('<p class="big-message"><i class="icon-attention"></i>'+ babel.translate('error.gmaps') +'</p>'));
             }
         }
     };

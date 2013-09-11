@@ -13,6 +13,10 @@
                 <strong>{{ 'error.retry'|translate }}.</strong>
             </p>
         </div>
+        <div ng-if="eventCtrl.status.isLoading" class="big-message absolute">
+            <i class="icon-download"></i>
+            {{ 'loading' | translate }}
+        </div>
         <div ng-if="!eventCtrl.status.isLoading" class="overthrow">
             <ul>
                 <li ng-repeat="event in eventCtrl.events">

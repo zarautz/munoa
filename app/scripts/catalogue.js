@@ -1,6 +1,12 @@
 'use strict';
 
 Z.catalogue = {
+    'loading': {
+        'eu': 'Eguneratzen...',
+        'es': 'Actualizando...',
+        'en': 'Updating...',
+        'fr': 'Mise à jour...'
+    },
     'error.connection': {
         'eu': 'Ezin izan dira datu berriak jaso. Ziurtatu konektatuta zaudela.',
         'es': 'No se pueden cargar nuevos datos. Compruebe la conexión.',

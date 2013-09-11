@@ -11,6 +11,10 @@
                 <strong>{{ 'error.retry'|translate }} <i class="icon-spin"></i></strong>
             </p>
         </div>
+        <div ng-if="tidesCtrl.status.isLoading" class="big-message absolute">
+            <i class="icon-download"></i>
+            {{ 'loading' | translate }}
+        </div>
         <div ng-if="!tidesCtrl.status.isLoading" class="overthrow">
             <div ng-repeat="tide in tidesCtrl.tides">
                 {{ tide.date }}<br>

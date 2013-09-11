@@ -150,6 +150,12 @@ main, section, section > div {
 }
 
 section {
+    div.big-message.absolute {
+        position: absolute;
+        top: $action-bar-height;
+        width: 100%;
+    }
+
     div.overthrow {
         padding: $base-padding;
 

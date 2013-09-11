@@ -37,7 +37,7 @@
                     ng-repeat="day in weatherCtrl.forecast.days"
                     ng-class="{ 'active': $index == weatherCtrl.activeTab }"
                     ng-click="weatherCtrl.changeTab($index)">
-                    <span class="uppercase" ng-class="{ 'strong': $first }">{{ day.date | amDateFormat:'dd' }}</span><br />
+                    <span class="uppercase" ng-class="{ 'strong': $first }">{{ day.date | amDateFormat:'ddd' }}</span><br />
                     <i class="icon-weather-{{ day.getWeatherCode().code }}"></i>
                     <p class="temperatures">
                         {{ day.weather.tempMax }}&deg; <span class="min">{{ day.weather.tempMin }}&deg;</span>

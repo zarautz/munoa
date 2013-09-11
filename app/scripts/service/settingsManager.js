@@ -8,6 +8,7 @@ Z.app.factory('settingsManager', ['babel', 'menu', 'settings', function(babel, m
             }
 
             if (id === 'language') {
+                moment.lang(option);
                 babel.setLanguage(option);
             }
 

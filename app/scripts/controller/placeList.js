@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMapper', 'placesConfig', 'placeFavorite', 'settings', 'sort', 'filter', 'geolocation', function($scope, placesMapper, placeTypesMapper, placesConfig, placeFavorite, settings, sort, filter, geolocation) {
+Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMapper', 'placesConfig', 'placeFavorite', 'settings', 'sort', 'filter', 'phonegap', function($scope, placesMapper, placeTypesMapper, placesConfig, placeFavorite, settings, sort, filter, phonegap) {
     this.clearFilters = function () {
         this.filter.show     = false;
         this.filter.favorite = null;
@@ -59,7 +59,7 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
         this.filter       = {'show': false};
         this.list         = [];
         this.pager        = new Z.Paginator();
-        this.userLocation = geolocation.getCurrentPosition().location;
+        this.geolocation  = phonegap.geolocation;
         this.totalItems   = 0;
         this.favorite     = placeFavorite;
 
@@ -75,7 +75,7 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
         this.initData();
         this.clearFilters();
 
-        if (this.userLocation !== false ) {
+        if (this.geolocation.available) {
             this.setSorting('distance');
         } else {
             this.setSorting('name');
@@ -162,7 +162,7 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
             //}
 
             if (that.sorting.type === 'distance') {
-                sortCfg.push({type: 'distance', order: that.sorting.order, params: [places, that.userLocation]});
+                sortCfg.push({type: 'distance', order: that.sorting.order, params: [places, that.geolocation]});
             }
 
             sortCfg.push({type: 'property', order: that.sorting.order, params: ['name']});

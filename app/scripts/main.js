@@ -24,6 +24,10 @@ Z.app.run(['$rootScope', '$timeout', 'navigation', 'phonegap', function ($rootSc
             });
         });
 
+        // Buttons
+        document.addEventListener('menubutton', function () {});
+        document.addEventListener('searchbutton', function () {});
+
         // Splash
         $timeout(function () {
             navigator.splashscreen.hide();

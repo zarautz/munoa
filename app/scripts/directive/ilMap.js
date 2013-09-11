@@ -1,13 +1,13 @@
 'use strict';
 
-Z.app.directive('ilMap', ['geolocation', function (geolocation) {
+Z.app.directive('ilMap', ['phonegap', function (phonegap) {
     return {
         restrict: 'A',
         link: function (scope, elem, attrs) {
             var latitude,
                 longitude,
                 map, bounds, latLng, marker, userMarker,
-                userLocation = geolocation.getCurrentPosition().location,
+                geolocation = phonegap.geolocation,
                 buildMap;
 
             buildMap = function() {
@@ -32,9 +32,9 @@ Z.app.directive('ilMap', ['geolocation', function (geolocation) {
                 });
 
                 // Set user marker if we have location
-                if (userLocation !== false) {
+                if (geolocation.available) {
                     userMarker = new google.maps.Marker({
-                        position: new google.maps.LatLng(userLocation.latitude, userLocation.longitude),
+                        position: new google.maps.LatLng(geolocation.latitude, geolocation.longitude),
                         map: map,
                         icon: {
                             path: google.maps.SymbolPath.CIRCLE,

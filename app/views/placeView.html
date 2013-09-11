@@ -16,8 +16,8 @@
     </div>
     <div ng-if="!pviewCtrl.status.isLoading" class="overthrow">
         <div class="banner" ng-style="{ 'background-image': 'url('+ pviewCtrl.place.getImage('medium') +')' }"></div>
-        <span class="right text-smallest color-lightest-text">
-            <i class="icon-direction"></i> {{ pviewCtrl.place.location.distanceTo(pviewCtrl.userLocation.location) | distance }}
+        <span class="right text-smallest color-lightest-text" ng-if="pviewCtrl.geolocation.available">
+            <i class="icon-direction"></i> {{ pviewCtrl.place.location.distanceTo(pviewCtrl.geolocation) | distance }}
         </span>
         <h3>
             {{ pviewCtrl.place.name }}

@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.controller('PlaceViewController', ['$scope', '$timeout', 'placeMapper', 'placeFavorite', 'settings', 'geolocation', 'navigation', function($scope, $timeout, placeMapper, placeFavorite, settings, geolocation, navigation) {
+Z.app.controller('PlaceViewController', ['$scope', '$timeout', 'placeMapper', 'placeFavorite', 'settings', 'phonegap', 'navigation', function($scope, $timeout, placeMapper, placeFavorite, settings, phonegap, navigation) {
     var that = this,
         cssTransitionDuration = 300;
 
@@ -29,11 +29,11 @@ Z.app.controller('PlaceViewController', ['$scope', '$timeout', 'placeMapper', 'p
     this.refresh = function () {
         var place = placeMapper.get({'language': settings.get('language'), 'id': $scope.pushData.id });
 
-        this.favorite = placeFavorite;
-        this.status   = place.status;
-        this.place    = place.promise;
-        this.title    = $scope.pushData.name;
-        this.userLocation = geolocation.getCurrentPosition();
+        this.favorite    = placeFavorite;
+        this.status      = place.status;
+        this.place       = place.promise;
+        this.title       = $scope.pushData.name;
+        this.geolocation = phonegap.geolocation;
     };
 
     this.refresh();

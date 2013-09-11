@@ -1549,672 +1549,600 @@ section.on-5 {
 }
 
 /* line 43, scss/_app-icons.scss */
-.icon-temperature:before {
-  content: '\e81c';
-}
-
-/* '' */
-/* line 44, scss/_app-icons.scss */
 .icon-compass:before {
-  content: '\e81d';
-}
-
-/* '' */
-/* line 45, scss/_app-icons.scss */
-.icon-na:before {
-  content: '\e81e';
-}
-
-/* '' */
-/* line 46, scss/_app-icons.scss */
-.icon-celcius:before {
   content: '\e81f';
 }
 
 /* '' */
-/* line 47, scss/_app-icons.scss */
-.icon-fahrenheit:before {
+/* line 44, scss/_app-icons.scss */
+.icon-na:before {
   content: '\e820';
 }
 
 /* '' */
-/* line 48, scss/_app-icons.scss */
-.icon-weather-53:before {
+/* line 45, scss/_app-icons.scss */
+.icon-celcius:before {
   content: '\e821';
 }
 
 /* '' */
-/* line 49, scss/_app-icons.scss */
-.icon-moon-inv:before {
+/* line 46, scss/_app-icons.scss */
+.icon-fahrenheit:before {
   content: '\e822';
 }
 
 /* '' */
-/* line 50, scss/_app-icons.scss */
-.icon-sunrise:before {
+/* line 47, scss/_app-icons.scss */
+.icon-weather-53:before {
   content: '\e823';
 }
 
 /* '' */
-/* line 51, scss/_app-icons.scss */
-.icon-weather-11:before {
+/* line 48, scss/_app-icons.scss */
+.icon-moon-inv:before {
   content: '\e824';
 }
 
 /* '' */
-/* line 52, scss/_app-icons.scss */
-.icon-moon:before {
+/* line 49, scss/_app-icons.scss */
+.icon-sunrise:before {
   content: '\e825';
 }
 
 /* '' */
-/* line 53, scss/_app-icons.scss */
-.icon-eclipse:before {
+/* line 50, scss/_app-icons.scss */
+.icon-weather-11:before {
   content: '\e826';
 }
 
 /* '' */
-/* line 54, scss/_app-icons.scss */
-.icon-weather-12:before {
+/* line 51, scss/_app-icons.scss */
+.icon-moon:before {
   content: '\e827';
 }
 
 /* '' */
-/* line 55, scss/_app-icons.scss */
-.icon-wind:before {
+/* line 52, scss/_app-icons.scss */
+.icon-eclipse:before {
   content: '\e828';
 }
 
 /* '' */
-/* line 56, scss/_app-icons.scss */
-.icon-snow:before {
+/* line 53, scss/_app-icons.scss */
+.icon-weather-12:before {
   content: '\e829';
 }
 
 /* '' */
-/* line 57, scss/_app-icons.scss */
-.icon-weather-13:before {
+/* line 54, scss/_app-icons.scss */
+.icon-wind:before {
   content: '\e82a';
 }
 
 /* '' */
-/* line 58, scss/_app-icons.scss */
-.icon-cloud-moon:before {
+/* line 55, scss/_app-icons.scss */
+.icon-snow:before {
   content: '\e82b';
 }
 
 /* '' */
-/* line 59, scss/_app-icons.scss */
-.icon-uv:before {
+/* line 56, scss/_app-icons.scss */
+.icon-weather-13:before {
   content: '\e82c';
 }
 
 /* '' */
-/* line 60, scss/_app-icons.scss */
-.icon-fog:before {
+/* line 57, scss/_app-icons.scss */
+.icon-cloud-moon:before {
   content: '\e82d';
 }
 
 /* '' */
-/* line 61, scss/_app-icons.scss */
-.icon-weather-14:before {
+/* line 58, scss/_app-icons.scss */
+.icon-uv:before {
   content: '\e82e';
 }
 
 /* '' */
-/* line 62, scss/_app-icons.scss */
-.icon-weather-51:before {
+/* line 59, scss/_app-icons.scss */
+.icon-fog:before {
   content: '\e82f';
 }
 
 /* '' */
-/* line 63, scss/_app-icons.scss */
-.icon-weather-43:before {
+/* line 60, scss/_app-icons.scss */
+.icon-weather-14:before {
   content: '\e830';
 }
 
 /* '' */
-/* line 64, scss/_app-icons.scss */
-.icon-weather-23:before {
+/* line 61, scss/_app-icons.scss */
+.icon-weather-51:before {
   content: '\e831';
 }
 
 /* '' */
-/* line 65, scss/_app-icons.scss */
-.icon-windy:before {
+/* line 62, scss/_app-icons.scss */
+.icon-weather-43:before {
   content: '\e832';
 }
 
 /* '' */
-/* line 66, scss/_app-icons.scss */
-.icon-windy-rain:before {
+/* line 63, scss/_app-icons.scss */
+.icon-weather-23:before {
   content: '\e833';
 }
 
 /* '' */
-/* line 67, scss/_app-icons.scss */
-.icon-weather-33:before {
+/* line 64, scss/_app-icons.scss */
+.icon-windy:before {
   content: '\e834';
 }
 
 /* '' */
-/* line 68, scss/_app-icons.scss */
-.icon-weather-35:before {
+/* line 65, scss/_app-icons.scss */
+.icon-windy-rain:before {
   content: '\e835';
 }
 
 /* '' */
-/* line 69, scss/_app-icons.scss */
-.icon-weather-71:before {
+/* line 66, scss/_app-icons.scss */
+.icon-weather-33:before {
   content: '\e836';
 }
 
 /* '' */
-/* line 70, scss/_app-icons.scss */
-.icon-weather-15:before {
+/* line 67, scss/_app-icons.scss */
+.icon-weather-35:before {
   content: '\e837';
 }
 
 /* '' */
-/* line 71, scss/_app-icons.scss */
+/* line 68, scss/_app-icons.scss */
+.icon-weather-71:before {
+  content: '\e838';
+}
+
+/* '' */
+/* line 69, scss/_app-icons.scss */
+.icon-weather-15:before {
+  content: '\e839';
+}
+
+/* '' */
+/* line 70, scss/_app-icons.scss */
 .icon-info:before {
-  content: '\e810';
+  content: '\e812';
 }
 
-/* '' */
-/* line 72, scss/_app-icons.scss */
+/* '' */
+/* line 71, scss/_app-icons.scss */
 .icon-left:before {
-  content: '\e83f';
-}
-
-/* '' */
-/* line 73, scss/_app-icons.scss */
-.icon-right:before {
   content: '\e840';
 }
 
 /* '' */
-/* line 74, scss/_app-icons.scss */
+/* line 72, scss/_app-icons.scss */
+.icon-right:before {
+  content: '\e841';
+}
+
+/* '' */
+/* line 73, scss/_app-icons.scss */
 .icon-home:before {
-  content: '\e83b';
+  content: '\e83c';
 }
 
-/* '' */
-/* line 75, scss/_app-icons.scss */
+/* '' */
+/* line 74, scss/_app-icons.scss */
 .icon-sun-alt:before {
-  content: '\e818';
+  content: '\e81b';
 }
 
-/* '' */
-/* line 76, scss/_app-icons.scss */
+/* '' */
+/* line 75, scss/_app-icons.scss */
 .icon-rain:before {
-  content: '\e819';
+  content: '\e81c';
 }
 
-/* '' */
-/* line 77, scss/_app-icons.scss */
+/* '' */
+/* line 76, scss/_app-icons.scss */
 .icon-star:before {
-  content: '\e86d';
-}
-
-/* '' */
-/* line 78, scss/_app-icons.scss */
-.icon-star-empty:before {
-  content: '\e86c';
-}
-
-/* '' */
-/* line 79, scss/_app-icons.scss */
-.icon-layout:before {
-  content: '\e80f';
-}
-
-/* '' */
-/* line 80, scss/_app-icons.scss */
-.icon-flag:before {
-  content: '\e811';
-}
-
-/* '' */
-/* line 81, scss/_app-icons.scss */
-.icon-attention:before {
   content: '\e803';
 }
 
 /* '' */
-/* line 82, scss/_app-icons.scss */
+/* line 77, scss/_app-icons.scss */
+.icon-star-empty:before {
+  content: '\e804';
+}
+
+/* '' */
+/* line 78, scss/_app-icons.scss */
+.icon-layout:before {
+  content: '\e811';
+}
+
+/* '' */
+/* line 79, scss/_app-icons.scss */
+.icon-flag:before {
+  content: '\e813';
+}
+
+/* '' */
+/* line 80, scss/_app-icons.scss */
+.icon-attention:before {
+  content: '\e807';
+}
+
+/* '' */
+/* line 81, scss/_app-icons.scss */
 .icon-ok:before {
   content: '\e83a';
 }
 
 /* '' */
-/* line 83, scss/_app-icons.scss */
+/* line 82, scss/_app-icons.scss */
 .icon-cancel:before {
-  content: '\e86b';
+  content: '\e83b';
 }
 
-/* '' */
-/* line 84, scss/_app-icons.scss */
+/* '' */
+/* line 83, scss/_app-icons.scss */
 .icon-accessibility:before {
-  content: '\e868';
+  content: '\e861';
 }
 
-/* '' */
-/* line 85, scss/_app-icons.scss */
-.icon-guidedog:before {
-  content: '\e867';
-}
-
-/* '' */
-/* line 86, scss/_app-icons.scss */
-.icon-asl:before {
-  content: '\e866';
-}
-
-/* '' */
-/* line 87, scss/_app-icons.scss */
+/* '' */
+/* line 84, scss/_app-icons.scss */
 .icon-sort-alphabet:before {
-  content: '\e816';
+  content: '\e819';
 }
 
-/* '' */
-/* line 88, scss/_app-icons.scss */
+/* '' */
+/* line 85, scss/_app-icons.scss */
 .icon-book:before {
-  content: '\e865';
+  content: '\e860';
 }
 
-/* '' */
-/* line 89, scss/_app-icons.scss */
+/* '' */
+/* line 86, scss/_app-icons.scss */
 .icon-cog-alt:before {
-  content: '\e864';
+  content: '\e85f';
 }
 
-/* '' */
-/* line 90, scss/_app-icons.scss */
+/* '' */
+/* line 87, scss/_app-icons.scss */
 .icon-cog:before {
-  content: '\e863';
+  content: '\e85e';
 }
 
-/* '' */
-/* line 91, scss/_app-icons.scss */
+/* '' */
+/* line 88, scss/_app-icons.scss */
 .icon-tag:before {
+  content: '\e81d';
+}
+
+/* '' */
+/* line 89, scss/_app-icons.scss */
+.icon-share:before {
+  content: '\e814';
+}
+
+/* '' */
+/* line 90, scss/_app-icons.scss */
+.icon-location:before {
+  content: '\e815';
+}
+
+/* '' */
+/* line 91, scss/_app-icons.scss */
+.icon-basket-alt:before {
+  content: '\e80b';
+}
+
+/* '' */
+/* line 92, scss/_app-icons.scss */
+.icon-basket:before {
+  content: '\e81e';
+}
+
+/* '' */
+/* line 93, scss/_app-icons.scss */
+.icon-layers:before {
   content: '\e81a';
 }
 
 /* '' */
-/* line 92, scss/_app-icons.scss */
-.icon-share:before {
-  content: '\e812';
-}
-
-/* '' */
-/* line 93, scss/_app-icons.scss */
-.icon-location:before {
-  content: '\e813';
-}
-
-/* '' */
 /* line 94, scss/_app-icons.scss */
-.icon-map:before {
-  content: '\e86a';
-}
-
-/* '' */
-/* line 95, scss/_app-icons.scss */
-.icon-basket-alt:before {
-  content: '\e808';
-}
-
-/* '' */
-/* line 96, scss/_app-icons.scss */
-.icon-basket:before {
-  content: '\e81b';
-}
-
-/* '' */
-/* line 97, scss/_app-icons.scss */
-.icon-layers:before {
-  content: '\e817';
-}
-
-/* '' */
-/* line 98, scss/_app-icons.scss */
 .icon-smiley:before {
   content: '\e800';
 }
 
 /* '' */
-/* line 99, scss/_app-icons.scss */
+/* line 95, scss/_app-icons.scss */
 .icon-emo-sleep:before {
-  content: '\e86e';
-}
-
-/* '' */
-/* line 100, scss/_app-icons.scss */
-.icon-art:before {
-  content: '\e841';
-}
-
-/* '' */
-/* line 101, scss/_app-icons.scss */
-.icon-bar:before {
-  content: '\e842';
-}
-
-/* '' */
-/* line 102, scss/_app-icons.scss */
-.icon-beer:before {
-  content: '\e843';
-}
-
-/* '' */
-/* line 103, scss/_app-icons.scss */
-.icon-bicycle:before {
-  content: '\e844';
-}
-
-/* '' */
-/* line 104, scss/_app-icons.scss */
-.icon-bus:before {
-  content: '\e845';
-}
-
-/* '' */
-/* line 105, scss/_app-icons.scss */
-.icon-cafe:before {
-  content: '\e846';
-}
-
-/* '' */
-/* line 106, scss/_app-icons.scss */
-.icon-campsite:before {
-  content: '\e847';
-}
-
-/* '' */
-/* line 107, scss/_app-icons.scss */
-.icon-credit-card:before {
-  content: '\e848';
-}
-
-/* '' */
-/* line 108, scss/_app-icons.scss */
-.icon-fast-food:before {
-  content: '\e849';
-}
-
-/* '' */
-/* line 109, scss/_app-icons.scss */
-.icon-fuel:before {
-  content: '\e84a';
-}
-
-/* '' */
-/* line 110, scss/_app-icons.scss */
-.icon-garden:before {
-  content: '\e84b';
-}
-
-/* '' */
-/* line 111, scss/_app-icons.scss */
-.icon-golf:before {
-  content: '\e84c';
-}
-
-/* '' */
-/* line 112, scss/_app-icons.scss */
-.icon-harbor:before {
-  content: '\e84d';
-}
-
-/* '' */
-/* line 113, scss/_app-icons.scss */
-.icon-hospital:before {
-  content: '\e84e';
-}
-
-/* '' */
-/* line 114, scss/_app-icons.scss */
-.icon-library:before {
-  content: '\e84f';
-}
-
-/* '' */
-/* line 115, scss/_app-icons.scss */
-.icon-lodging:before {
-  content: '\e850';
-}
-
-/* '' */
-/* line 116, scss/_app-icons.scss */
-.icon-museum:before {
-  content: '\e851';
-}
-
-/* '' */
-/* line 117, scss/_app-icons.scss */
-.icon-pitch:before {
-  content: '\e852';
-}
-
-/* '' */
-/* line 118, scss/_app-icons.scss */
-.icon-police:before {
-  content: '\e853';
-}
-
-/* '' */
-/* line 119, scss/_app-icons.scss */
-.icon-post:before {
-  content: '\e854';
-}
-
-/* '' */
-/* line 120, scss/_app-icons.scss */
-.icon-rail:before {
-  content: '\e855';
-}
-
-/* '' */
-/* line 121, scss/_app-icons.scss */
-.icon-christian:before {
-  content: '\e856';
-}
-
-/* '' */
-/* line 122, scss/_app-icons.scss */
-.icon-spin:before {
   content: '\e801';
 }
 
 /* '' */
-/* line 123, scss/_app-icons.scss */
-.icon-restaurant:before {
-  content: '\e857';
+/* line 96, scss/_app-icons.scss */
+.icon-art:before {
+  content: '\e842';
 }
 
-/* '' */
-/* line 124, scss/_app-icons.scss */
-.icon-school:before {
-  content: '\e858';
+/* '' */
+/* line 97, scss/_app-icons.scss */
+.icon-bar:before {
+  content: '\e843';
 }
 
-/* '' */
-/* line 125, scss/_app-icons.scss */
-.icon-shop:before {
-  content: '\e859';
+/* '' */
+/* line 98, scss/_app-icons.scss */
+.icon-beer:before {
+  content: '\e844';
 }
 
-/* '' */
-/* line 126, scss/_app-icons.scss */
-.icon-football:before {
-  content: '\e85a';
+/* '' */
+/* line 99, scss/_app-icons.scss */
+.icon-bicycle:before {
+  content: '\e845';
 }
 
-/* '' */
-/* line 127, scss/_app-icons.scss */
-.icon-swim:before {
-  content: '\e85b';
+/* '' */
+/* line 100, scss/_app-icons.scss */
+.icon-bus:before {
+  content: '\e846';
 }
 
-/* '' */
-/* line 128, scss/_app-icons.scss */
-.icon-theatre:before {
-  content: '\e85c';
+/* '' */
+/* line 101, scss/_app-icons.scss */
+.icon-cafe:before {
+  content: '\e847';
 }
 
-/* '' */
-/* line 129, scss/_app-icons.scss */
-.icon-toilet:before {
-  content: '\e85d';
+/* '' */
+/* line 102, scss/_app-icons.scss */
+.icon-campsite:before {
+  content: '\e848';
 }
 
-/* '' */
-/* line 130, scss/_app-icons.scss */
-.icon-town-hall:before {
-  content: '\e85e';
+/* '' */
+/* line 103, scss/_app-icons.scss */
+.icon-credit-card:before {
+  content: '\e849';
 }
 
-/* '' */
-/* line 131, scss/_app-icons.scss */
-.icon-trash:before {
-  content: '\e85f';
+/* '' */
+/* line 104, scss/_app-icons.scss */
+.icon-fast-food:before {
+  content: '\e84a';
 }
 
-/* '' */
-/* line 132, scss/_app-icons.scss */
-.icon-tree-alt:before {
-  content: '\e860';
+/* '' */
+/* line 105, scss/_app-icons.scss */
+.icon-fuel:before {
+  content: '\e84b';
 }
 
-/* '' */
-/* line 133, scss/_app-icons.scss */
-.icon-tree:before {
-  content: '\e861';
+/* '' */
+/* line 106, scss/_app-icons.scss */
+.icon-hospital:before {
+  content: '\e84c';
 }
 
-/* '' */
-/* line 134, scss/_app-icons.scss */
-.icon-right-open:before {
-  content: '\e83e';
+/* '' */
+/* line 107, scss/_app-icons.scss */
+.icon-library:before {
+  content: '\e84d';
 }
 
-/* '' */
-/* line 135, scss/_app-icons.scss */
-.icon-left-open:before {
-  content: '\e83d';
+/* '' */
+/* line 108, scss/_app-icons.scss */
+.icon-lodging:before {
+  content: '\e84e';
 }
 
-/* '' */
-/* line 136, scss/_app-icons.scss */
-.icon-location-alt:before {
-  content: '\e83c';
+/* '' */
+/* line 109, scss/_app-icons.scss */
+.icon-pitch:before {
+  content: '\e84f';
 }
 
-/* '' */
-/* line 137, scss/_app-icons.scss */
-.icon-phone-alt:before {
-  content: '\e806';
+/* '' */
+/* line 110, scss/_app-icons.scss */
+.icon-police:before {
+  content: '\e850';
 }
 
-/* '' */
-/* line 138, scss/_app-icons.scss */
-.icon-filter:before {
-  content: '\e80a';
+/* '' */
+/* line 111, scss/_app-icons.scss */
+.icon-post:before {
+  content: '\e851';
 }
 
-/* '' */
-/* line 139, scss/_app-icons.scss */
-.icon-menu:before {
-  content: '\e807';
+/* '' */
+/* line 112, scss/_app-icons.scss */
+.icon-rail:before {
+  content: '\e852';
 }
 
-/* '' */
-/* line 140, scss/_app-icons.scss */
-.icon-money:before {
-  content: '\e80b';
-}
-
-/* '' */
-/* line 141, scss/_app-icons.scss */
-.icon-download:before {
+/* '' */
+/* line 113, scss/_app-icons.scss */
+.icon-spin:before {
   content: '\e802';
 }
 
 /* '' */
-/* line 142, scss/_app-icons.scss */
-.icon-medical-alt:before {
-  content: '\e80c';
+/* line 114, scss/_app-icons.scss */
+.icon-restaurant:before {
+  content: '\e853';
 }
 
-/* '' */
-/* line 143, scss/_app-icons.scss */
-.icon-medical:before {
+/* '' */
+/* line 115, scss/_app-icons.scss */
+.icon-school:before {
+  content: '\e854';
+}
+
+/* '' */
+/* line 116, scss/_app-icons.scss */
+.icon-shop:before {
+  content: '\e855';
+}
+
+/* '' */
+/* line 117, scss/_app-icons.scss */
+.icon-football:before {
+  content: '\e856';
+}
+
+/* '' */
+/* line 118, scss/_app-icons.scss */
+.icon-swim:before {
+  content: '\e857';
+}
+
+/* '' */
+/* line 119, scss/_app-icons.scss */
+.icon-theatre:before {
+  content: '\e858';
+}
+
+/* '' */
+/* line 120, scss/_app-icons.scss */
+.icon-toilet:before {
+  content: '\e859';
+}
+
+/* '' */
+/* line 121, scss/_app-icons.scss */
+.icon-town-hall:before {
+  content: '\e85a';
+}
+
+/* '' */
+/* line 122, scss/_app-icons.scss */
+.icon-tree-alt:before {
+  content: '\e85b';
+}
+
+/* '' */
+/* line 123, scss/_app-icons.scss */
+.icon-tree:before {
+  content: '\e85c';
+}
+
+/* '' */
+/* line 124, scss/_app-icons.scss */
+.icon-right-open:before {
+  content: '\e83f';
+}
+
+/* '' */
+/* line 125, scss/_app-icons.scss */
+.icon-left-open:before {
+  content: '\e83e';
+}
+
+/* '' */
+/* line 126, scss/_app-icons.scss */
+.icon-location-alt:before {
+  content: '\e83d';
+}
+
+/* '' */
+/* line 127, scss/_app-icons.scss */
+.icon-filter:before {
   content: '\e80d';
 }
 
 /* '' */
-/* line 144, scss/_app-icons.scss */
-.icon-direction:before {
-  content: '\e804';
+/* line 128, scss/_app-icons.scss */
+.icon-menu:before {
+  content: '\e80a';
 }
 
-/* '' */
-/* line 145, scss/_app-icons.scss */
-.icon-link-external:before {
-  content: '\e839';
+/* '' */
+/* line 129, scss/_app-icons.scss */
+.icon-download:before {
+  content: '\e806';
 }
 
-/* '' */
-/* line 146, scss/_app-icons.scss */
-.icon-twitter:before {
-  content: '\e862';
-}
-
-/* '' */
-/* line 147, scss/_app-icons.scss */
-.icon-pictures:before {
+/* '' */
+/* line 130, scss/_app-icons.scss */
+.icon-medical-alt:before {
   content: '\e80e';
 }
 
 /* '' */
-/* line 148, scss/_app-icons.scss */
-.icon-leaf:before {
-  content: '\e809';
+/* line 131, scss/_app-icons.scss */
+.icon-medical:before {
+  content: '\e80f';
 }
 
-/* '' */
-/* line 149, scss/_app-icons.scss */
-.icon-bag:before {
-  content: '\e838';
+/* '' */
+/* line 132, scss/_app-icons.scss */
+.icon-direction:before {
+  content: '\e808';
 }
 
-/* '' */
-/* line 150, scss/_app-icons.scss */
-.icon-calendar:before {
-  content: '\e814';
-}
-
-/* '' */
-/* line 151, scss/_app-icons.scss */
-.icon-phone:before {
+/* '' */
+/* line 133, scss/_app-icons.scss */
+.icon-link-external:before {
   content: '\e805';
 }
 
 /* '' */
-/* line 152, scss/_app-icons.scss */
+/* line 134, scss/_app-icons.scss */
+.icon-twitter:before {
+  content: '\e85d';
+}
+
+/* '' */
+/* line 135, scss/_app-icons.scss */
+.icon-pictures:before {
+  content: '\e810';
+}
+
+/* '' */
+/* line 136, scss/_app-icons.scss */
+.icon-leaf:before {
+  content: '\e80c';
+}
+
+/* '' */
+/* line 137, scss/_app-icons.scss */
+.icon-bag:before {
+  content: '\e816';
+}
+
+/* '' */
+/* line 138, scss/_app-icons.scss */
+.icon-calendar:before {
+  content: '\e817';
+}
+
+/* '' */
+/* line 139, scss/_app-icons.scss */
+.icon-phone:before {
+  content: '\e809';
+}
+
+/* '' */
+/* line 140, scss/_app-icons.scss */
 .icon-wifi:before {
-  content: '\e815';
+  content: '\e818';
 }
 
-/* '' */
-/* line 153, scss/_app-icons.scss */
+/* '' */
+/* line 141, scss/_app-icons.scss */
 .icon-search:before {
-  content: '\e869';
+  content: '\e862';
 }
 
-/* '' */
-/* line 155, scss/_app-icons.scss */
+/* '' */
+/* line 143, scss/_app-icons.scss */
 .icon-parking:before {
   content: 'P';
   font-family: inherit;
@@ -2222,106 +2150,106 @@ section.on-5 {
 }
 
 /* '' */
-/* line 157, scss/_app-icons.scss */
+/* line 145, scss/_app-icons.scss */
 .icon-weather-11:before {
-  content: '\e824';
+  content: '\e826';
 }
 
 /* '' */
-/* line 158, scss/_app-icons.scss */
+/* line 146, scss/_app-icons.scss */
 .icon-weather-12:before,
 .icon-weather-13:before {
-  content: '\e82a';
+  content: '\e829';
 }
 
 /* '' */
-/* line 160, scss/_app-icons.scss */
+/* line 148, scss/_app-icons.scss */
 .icon-weather-14:before {
-  content: '\e82e';
+  content: '\e830';
 }
 
 /* '' */
-/* line 161, scss/_app-icons.scss */
+/* line 149, scss/_app-icons.scss */
 .icon-weather-15:before,
 .icon-weather-16:before,
 .icon-weather-17:before {
-  content: '\e837';
+  content: '\e839';
 }
 
 /* '' */
-/* line 164, scss/_app-icons.scss */
+/* line 152, scss/_app-icons.scss */
 .icon-weather-23:before,
 .icon-weather-24:before,
 .icon-weather-25:before,
 .icon-weather-26:before {
-  content: '\e831';
+  content: '\e833';
 }
 
 /* '' */
-/* line 168, scss/_app-icons.scss */
+/* line 156, scss/_app-icons.scss */
 .icon-weather-33:before,
 .icon-weather-34:before {
-  content: '\e834';
+  content: '\e836';
 }
 
 /* '' */
-/* line 170, scss/_app-icons.scss */
+/* line 158, scss/_app-icons.scss */
 .icon-weather-35:before,
 .icon-weather-36:before {
-  content: '\e835';
+  content: '\e837';
 }
 
 /* '' */
-/* line 172, scss/_app-icons.scss */
+/* line 160, scss/_app-icons.scss */
 .icon-weather-43:before,
 .icon-weather-44:before,
 .icon-weather-45:before,
 .icon-weather-46:before {
-  content: '\e830';
+  content: '\e832';
 }
 
 /* '' */
-/* line 176, scss/_app-icons.scss */
+/* line 164, scss/_app-icons.scss */
 .icon-weather-51:before,
 .icon-weather-52:before {
-  content: '\e82f';
+  content: '\e831';
 }
 
 /* '' */
-/* line 178, scss/_app-icons.scss */
+/* line 166, scss/_app-icons.scss */
 .icon-weather-53:before,
 .icon-weather-54:before,
 .icon-weather-61:before,
 .icon-weather-62:before,
 .icon-weather-63:before,
 .icon-weather-64:before {
-  content: '\e821';
+  content: '\e823';
 }
 
 /* '' */
-/* line 184, scss/_app-icons.scss */
+/* line 172, scss/_app-icons.scss */
 .icon-weather-71:before,
 .icon-weather-72:before {
-  content: '\e836';
+  content: '\e838';
 }
 
 /* '' */
-/* line 186, scss/_app-icons.scss */
+/* line 174, scss/_app-icons.scss */
 .icon-weather-73:before,
 .icon-weather-74:before {
-  content: '\e834';
+  content: '\e836';
 }
 
 /* '' */
 @-webkit-keyframes spin {
-  /* line 206, scss/_app-icons.scss */
+  /* line 194, scss/_app-icons.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 212, scss/_app-icons.scss */
+  /* line 200, scss/_app-icons.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);
@@ -2330,14 +2258,14 @@ section.on-5 {
 }
 
 @-moz-keyframes spin {
-  /* line 206, scss/_app-icons.scss */
+  /* line 194, scss/_app-icons.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 212, scss/_app-icons.scss */
+  /* line 200, scss/_app-icons.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);
@@ -2346,14 +2274,14 @@ section.on-5 {
 }
 
 @keyframes spin {
-  /* line 206, scss/_app-icons.scss */
+  /* line 194, scss/_app-icons.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 212, scss/_app-icons.scss */
+  /* line 200, scss/_app-icons.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);

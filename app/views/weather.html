@@ -88,10 +88,9 @@
                     <p class="text-smallest color-lightest-text">
                         {{ 'meta.lastUpdated'|translate }}: {{ weatherCtrl.forecast.meta.lastUpdated|date:'short' }}<br />
                         {{ 'meta.sources'|translate }}:
-                        <span ng-repeat="source in weatherCtrl.forecast.meta.source">
-                            {{ source }},
+                        <span ng-repeat="(name, url) in weatherCtrl.forecast.meta.source">
+                            <a href="{{ url }}" class="chameleon">{{ name }}</a><span ng-hide="$last">, </span>
                         </span>
-                        <a class="chameleon" href="http://forecast.io">Forecast.io</a>
                     </p>
                 </div>
             </div>

@@ -470,6 +470,7 @@ ul.drawer {
         height: $touchable-size;
         line-height: $touchable-size;
         margin: 0;
+        @include ellipsis();
 
         [class^="icon-"],
         [class*=" icon-"] {

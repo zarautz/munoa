@@ -1,20 +1,22 @@
+$lighten-percentage: 30%;
+
 $color-text: $body-font-color;
 $color-light-text: #555;
 $color-lightest-text: #999;
 $color-blue: #34aadc;
 $color-flashy-blue: #007aff;
 $color-light-blue: #5ac8fa;
-$color-lightest-blue: lighten($color-blue, 25%);
-$color-green: #690;
-$color-lightest-green: lighten($color-green, 45%);
+$color-lightest-blue: lighten($color-blue, $lighten-percentage);
+$color-green: #4cd964;
+$color-lightest-green: lighten($color-green, $lighten-percentage);
 $color-yellow: #ffcc00;
-$color-lightest-yellow: lighten($color-yellow, 30%);
+$color-lightest-yellow: lighten($color-yellow, $lighten-percentage);
 $color-orange: #ff9500;
-$color-lightest-orange: lighten($color-orange, 30%);
+$color-lightest-orange: lighten($color-orange, $lighten-percentage);
 $color-red: #ff3b30;
-$color-lightest-red: lighten($color-red, 25%);
+$color-lightest-red: lighten($color-red, $lighten-percentage);
 $color-violet: #93c;
-$color-lightest-violet: lighten($color-violet, 35%);
+$color-lightest-violet: lighten($color-violet, $lighten-percentage);
 
 .color-text { color: $color-text; }
 .color-light-text { color: $color-light-text; }

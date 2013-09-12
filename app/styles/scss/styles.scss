@@ -209,7 +209,9 @@ section {
             padding: 0 $half-padding;
             @include border-bottom-left-radius($app-secondary-border-radius);
             @include border-bottom-right-radius($app-secondary-border-radius);
-            box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.15);
+            border: 1px solid $filter-box-separation-color;
+            border-top: 0;
+            box-shadow: 0px 0px $half-padding 0px rgba(0, 0, 0, 0.1);
 
             input {
                 width: 100%;
@@ -218,6 +220,7 @@ section {
                 padding: $half-padding;
                 @include border-radius($app-secondary-border-radius);
                 @include small-font();
+                @include box-shadow(none);
             }
 
             .section-title {

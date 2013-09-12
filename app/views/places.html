@@ -29,7 +29,7 @@
                     <i class="right icon-spin color-blue animate-spin"></i>
                 </div>
                 <div ng-switch-default>
-                    <i ng-click="plistCtrl.toggleFilters()" class="right icon-search" ng-class="{ 'color-blue': plistCtrl.isFiltered() }"></i>
+                    <i ng-click="plistCtrl.toggleFilters()" class="right" ng-class="{ 'icon-search': !plistCtrl.isFiltered(), 'icon-filter color-blue': plistCtrl.isFiltered() }"></i>
                 </div>
             </div>
             <h1 class="title">{{ ('placesGroup.'+ plistCtrl.section +'.'+ plistCtrl.group)|translate }}</h1>
@@ -51,7 +51,7 @@
         <div ng-if="!plistCtrl.status.isLoading" class="overthrow">
             <div class="list-with-images">
                 <div class="sort-options">
-                    <i ng-show="plistCtrl.isFiltered() || plistCtrl.filter.favorite !== null" class="icon-filter color-blue"></i>
+                    <i ng-show="plistCtrl.isFiltered() || plistCtrl.filter.favorite !== null" class="icon-filter"></i>
                     {{ plistCtrl.pager.getTotalItems() }} {{ 'list.results'|translate }}
                     {{ '/ ' + plistCtrl.totalItems }}
                     <i class="right bicon icon-star" ng-class="{ 'fav-on': plistCtrl.filter.favorite !== null }" ng-click="plistCtrl.setFilter('favorite', true)"></i>

@@ -1,0 +1,153 @@
+//
+// TableView
+//
+$tableview-detail-font-color: $color-dark-blue;
+$tableview-border-color:      #eaeaea;
+
+.table-view {
+    //font-size: 1.1em;
+
+    h5 {
+        border-width: 0 0 1px 0;
+        border-style: solid;
+        border-color: $tableview-border-color;
+    }
+
+    ul {
+        border-width: 0 0 1px 0;
+        border-style: solid;
+        border-color: $tableview-border-color;
+
+        a {
+            display: block;
+            color: $body-font-color;
+            border-bottom: 1px solid $tableview-border-color;
+            height: $touchable-size;
+            line-height: $touchable-size;
+            @include ellipsis();
+
+            i {
+                float: right;
+                color: lighten($body-font-color, 50%);
+
+                &.selected {
+                    color: $tableview-detail-font-color;
+                }
+            }
+
+            .detail {
+                float: right;
+                color: $tableview-detail-font-color;
+                margin-right: $half-padding;
+            }
+        }
+
+        li:last-child a {
+            border: 0;
+        }
+    }
+
+    p.explanation {
+        margin: $column-gutter $base-padding;
+        text-align: center;
+        color: $color-dark-blue;
+        @include small-font();
+    }
+}
+
+.table-view-images {
+    .title {
+        margin: 0 $base-padding 0 0;
+    }
+
+    .icon-right-open {
+        font-size: 1.2em;
+        float: right;
+        color: $color-lightest-text;
+        margin: -3px (-$half-padding) $half-padding $half-padding;
+    }
+
+    .thumbnail {
+        width: 80%;
+        @include border-radius(1000px);
+        background: transparent none center;
+        background-size: contain;
+        @include color-alternation('background-color');
+
+        img {
+            width: 100%;
+        }
+    }
+
+    p {
+        @include smallest-font();
+        margin-top: $half-padding;
+
+        .distance {
+            color: $color-lightest-text;
+        }
+
+        .tag {
+            display: block;
+            float: left;
+            margin-right: 0.2em;
+        }
+
+        [class^="icon-"],
+        [class*=" icon-"] {
+            float: left;
+            margin: 0 0 0 -3px;
+            font-size: .9em;
+        }
+    }
+
+    hr {
+        margin: $base-padding (-$base-padding);
+    }
+
+    div.sort-options {
+        @include clearfix();
+        @include smallest-font();
+        font-style: italic;
+        line-height: 32px;
+        color: $color-lightest-text;
+
+        .bicon {
+            text-align: center;
+            display: block;
+            background: $action-bar-background-color;
+            height: 32px;
+            width: 40px;
+            line-height: 32px;
+            @include border-radius($app-secondary-border-radius);
+            font-size: $small-font-size;
+            margin: 0;
+            padding: 0;
+
+            &.icon-direction {
+                @include border-top-right-radius(0);
+                @include border-bottom-right-radius(0);
+            }
+
+            &.icon-sort-alphabet {
+                padding-right: 3px;
+                @include border-top-left-radius(0);
+                @include border-bottom-left-radius(0);
+            }
+
+            &.icon-star {
+                margin-left: $base-padding;
+            }
+
+            &.on {
+                background-color: $color-blue;
+                color: white;
+            }
+
+            &.fav-on {
+                background-color: $color-yellow;
+                color: white;
+            }
+        }
+    }
+}

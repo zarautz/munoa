@@ -15,7 +15,7 @@
             <i class="icon-download"></i>
             {{ 'loading' | translate }}
         </div>
-        <div ng-if="!zzCtrl.status.isLoading" class="overthrow list-with-images">
+        <div ng-if="!zzCtrl.status.isLoading" class="overthrow table-view-images">
             <div ng-repeat="post in zzCtrl.posts">
                 <hr ng-hide="$index == 0"/>
                 <div class="row collapse"
@@ -42,9 +42,14 @@
         <h1 class="title">{{ pushData.post.title }}</h1>
     </header>
     <div class="overthrow post" ng-if="navigation.contentIsAlive(2)">
-        <h1 class="color-blue">
+        <h1 class="color-dark-blue">
             {{ pushData.post.title }}
         </h1>
+        <p class="text-small color-lightest-text">
+            <i class="icon-user"></i> {{ pushData.post.author }}<br />
+            <i class="icon-calendar"></i> {{ pushData.post.publishedAt | amDateFormat:'LL' }}<br />
+            <i class="icon-tag"></i> {{ pushData.post.tags.join(', ') }}<br />
+        </p>
         <div munoa-link-converter content="{{ pushData.post.getContent('medium') }}" class="content"></div>
         <a href ng-click="navigation.openExternalLink(pushData.post.permalink)" class="external-link">
             Zu Zarautz webgunean ikusi

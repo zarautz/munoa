@@ -27,7 +27,7 @@ $smallest-font-size:          13px;
 $big-font-size:               26px;
 $biggest-font-size:           34px;
 $body-font-family:            "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$body-font-color:             #333;
+$body-font-color:             #222;
 $body-line-height:            1.4;
 $body-font-weight-strong:     bold;
 
@@ -50,9 +50,6 @@ $drawer-menu-selected:        darken($drawer-background, 5%);
 $filter-box-background-color: #efefef;
 $filter-box-width:            60%;
 $filter-box-separation-color: #ddd;
-
-$tableview-detail-font-color: #337abd;
-$tableview-border-color:      #eaeaea;
 
 $hr-border-width:             1px;
 $hr-border-style:             solid;
@@ -122,6 +119,15 @@ h1, h2, h3, h4 {
     line-height: 1.2;
 }
 
+h5 {
+    text-transform: uppercase;
+    @include smallest-font();
+    color: $color-lightest-text;
+    font-weight: normal;
+    margin: 0;
+    line-height: 2.5em;
+}
+
 p, ul {
     margin: 0;
     padding: 0;
@@ -133,11 +139,11 @@ li {
 }
 
 a {
-    color: darken($color-blue, 10%);
+    color: $color-dark-blue;
     text-decoration: none;
 
     &:visited {
-        color: $color-blue;
+        color: $color-dark-blue;
     }
 }
 
@@ -223,14 +229,7 @@ section {
                 @include box-shadow(none);
             }
 
-            .section-title {
-                text-transform: uppercase;
-                @include smallest-font();
-                color: $color-lightest-text;
-                font-weight: normal;
-                margin: 0;
-                line-height: 2.5em;
-
+            h5 {
                 [class^="icon-"],
                 [class*=" icon-"] {
                     float: right;
@@ -390,145 +389,6 @@ ul.drawer {
 }
 
 //
-// TableView
-//
-
-.table-view {
-    ul {
-        border-width: 1px 0;
-        border-style: solid;
-        border-color: $tableview-border-color;
-        margin-right: -($base-padding);
-
-        a {
-            display: block;
-            color: $body-font-color;
-            border-bottom: 1px solid $tableview-border-color;
-            height: $touchable-size;
-            line-height: $touchable-size;
-            padding-right: $base-padding;
-            @include ellipsis();
-
-            i {
-                float: right;
-                color: lighten($body-font-color, 50%);
-
-                &.selected {
-                    color: $tableview-detail-font-color;
-                }
-            }
-
-            .detail {
-                float: right;
-                color: $tableview-detail-font-color;
-                margin-right: $half-padding;
-            }
-        }
-
-        li:last-child a {
-            border: 0;
-        }
-    }
-}
-
-.list-with-images {
-    .title {
-        margin: 0 $base-padding 0 0;
-    }
-
-    .icon-right-open {
-        font-size: 1.2em;
-        float: right;
-        color: $color-lightest-text;
-        margin: -3px (-$half-padding) $half-padding $half-padding;
-    }
-
-    .thumbnail {
-        width: 80%;
-        @include border-radius(1000px);
-        background: transparent none center;
-        background-size: contain;
-        @include color-alternation('background-color');
-
-        img {
-            width: 100%;
-        }
-    }
-
-    p {
-        @include smallest-font();
-        margin-top: $half-padding;
-
-        .distance {
-            color: $color-lightest-text;
-        }
-
-        .tag {
-            display: block;
-            float: left;
-            margin-right: 0.2em;
-        }
-
-        [class^="icon-"],
-        [class*=" icon-"] {
-            float: left;
-            margin: 0 0 0 -3px;
-            font-size: .9em;
-        }
-    }
-
-    hr {
-        margin: $base-padding (-$base-padding);
-    }
-
-    div.sort-options {
-        @include clearfix();
-        @include smallest-font();
-        font-style: italic;
-        line-height: 32px;
-        color: $color-lightest-text;
-
-        .bicon {
-            text-align: center;
-            display: block;
-            background: $action-bar-background-color;
-            height: 32px;
-            width: 40px;
-            line-height: 32px;
-            @include border-radius($app-secondary-border-radius);
-            font-size: $small-font-size;
-            margin: 0;
-            padding: 0;
-
-            &.icon-direction {
-                @include border-top-right-radius(0);
-                @include border-bottom-right-radius(0);
-            }
-
-            &.icon-sort-alphabet {
-                padding-right: 3px;
-                @include border-top-left-radius(0);
-                @include border-bottom-left-radius(0);
-            }
-
-            &.icon-star {
-                margin-left: $base-padding;
-            }
-
-            &.on {
-                background-color: $color-blue;
-                color: white;
-            }
-
-            &.fav-on {
-                background-color: $color-yellow;
-                color: white;
-            }
-        }
-    }
-}
-
-//
 // Icon grid
 //
 
@@ -672,7 +532,7 @@ ul.drawer {
         }
     }
 
-    p, img {
+    p, img, blockquote {
         display: block;
         margin: 1em 0;
     }
@@ -696,10 +556,16 @@ ul.drawer {
             list-style: decimal outside none;
         }
     }
+
+    blockquote {
+        font-size: $small-font-size;
+        padding-left: $base-padding;
+        border-left: 5px solid $color-lightest-blue;
+    }
 }
 
 .external-link {
-    @include button(1em, $color-light-blue, $app-secondary-border-radius, true, false, false);
+    @include button(1em, $color-blue, $app-secondary-border-radius, true, false, false);
     display: block;
     margin: $column-gutter 0;
 
@@ -779,3 +645,4 @@ a.chameleon {
 }
 
 @import "page-weather";
+@import "module-tableview";

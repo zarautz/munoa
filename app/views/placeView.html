@@ -39,10 +39,14 @@
                 <i class="icon-post"></i>
                 {{ pviewCtrl.place.email }}
             </li>
+            <li ng-if="pviewCtrl.place.url"
+                ng-click="navigation.openExternalLink(pviewCtrl.place.url)">
+                <i class="icon-link-external"></i>
+                {{ pviewCtrl.place.url }}
+            </li>
             <li ng-if="pviewCtrl.zarauztarra && pviewCtrl.place.isOfType('murkil')"
                 ng-click="navigation.openExternalLink('http://www.murkil.com/index.php?lang='+ pviewCtrl.language)">
                 <i class="icon-bag"></i>
-                <i class="icon-link-external right"></i>
                 {{ 'murkil' | translate }}
             </li>
         </ul>

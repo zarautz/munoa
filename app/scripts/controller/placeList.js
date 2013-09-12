@@ -123,6 +123,12 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
         this.filter.show = !this.filter.show;
     };
 
+    this.closeFilters = function () {
+        if (this.filter.show) {
+            this.filter.show = false;
+        }
+    };
+
     this.refreshList = function () {
         var that = this;
 

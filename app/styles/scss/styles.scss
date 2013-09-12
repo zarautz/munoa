@@ -19,6 +19,7 @@ $quarter-padding:             $column-gutter / 8;
 
 $app-border-radius:           0; // Default in iOS 6: "3px";
 $app-background:              #fff;
+$app-secondary-border-radius: 3px;
 
 $em-base:                     17px;
 $small-font-size:             15px;
@@ -45,6 +46,10 @@ $drawer-text-color:           #eff0f2;
 $drawer-text-size:            18px;
 $drawer-menu-border-color:    darken($drawer-background, 3%);
 $drawer-menu-selected:        darken($drawer-background, 5%);
+
+$filter-box-background-color: #fafafa;
+$filter-box-width:            60%;
+$filter-box-separation-color: #ddd;
 
 $tableview-detail-font-color: #337abd;
 $tableview-border-color:      #eaeaea;
@@ -176,13 +181,89 @@ section {
             background: $color-yellow;
             padding: $half-padding;
             margin: $base-padding;
-            @include border-radius(3px);
+            @include border-radius($app-secondary-border-radius);
         }
     }
 
-    div.filter-box {
-        margin: (-($base-padding)) (-($base-padding)) $base-padding;
-        background: yellow;
+    div.filter-container {
+        position: absolute;
+        top: $action-bar-height;
+        bottom: 0;
+        width: 100%;
+
+        .capture-click {
+            height: 100%;
+            width: 100%;
+        }
+
+        .filter-box {
+            position: absolute;
+            top: 0;
+            right: $quarter-padding;
+            z-index: 50;
+            width: $filter-box-width;
+            background: $filter-box-background-color;
+            padding: 0 $half-padding;
+            @include small-font();
+            @include border-bottom-left-radius($app-secondary-border-radius);
+            @include border-bottom-right-radius($app-secondary-border-radius);
+            box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.15);
+
+            input {
+                width: 100%;
+                margin: $half-padding 0 0;
+                border: 1px solid $filter-box-separation-color;
+                padding: $quarter-padding;
+                @include border-radius($app-secondary-border-radius);
+                @include small-font();
+            }
+
+            .section-title {
+                text-transform: uppercase;
+                @include smallest-font();
+                color: $color-lightest-text;
+                font-weight: normal;
+                margin: 0;
+                line-height: 3em;
+
+                [class^="icon-"],
+                [class*=" icon-"] {
+                    float: right;
+                    margin-right: 1px;
+                }
+            }
+
+            li {
+                line-height: $touchable-size - $half-padding;
+                height: $touchable-size - $half-padding;
+                border-top: 1px solid $filter-box-separation-color;
+                padding: 0 $half-padding;
+                margin: 0 (-($half-padding));
+                @include ellipsis();
+
+                [class^="icon-"],
+                [class*=" icon-"] {
+                    display: none;
+                    color: $color-blue;
+                    float: right;
+                    margin-left: $half-padding;
+                }
+
+                &.on {
+                    background-color: lighten($color-blue, 40%);
+
+                    [class^="icon-"],
+                    [class*=" icon-"] {
+                        display: block;
+                    }
+                }
+            }
+
+            &.ng-hide {
+                padding: 0;
+                border: 0;
+            }
+        }
     }
 }
 
@@ -409,7 +490,7 @@ ul.drawer {
             height: 32px;
             width: 40px;
             line-height: 32px;
-            @include border-radius(3px);
+            @include border-radius($app-secondary-border-radius);
             font-size: $small-font-size;
             margin: 0;
             padding: 0;
@@ -613,7 +694,7 @@ ul.drawer {
 }
 
 .external-link {
-    @include button(1em, $color-light-blue, 3px, true, false, false);
+    @include button(1em, $color-light-blue, $app-secondary-border-radius, true, false, false);
     display: block;
     margin: $column-gutter 0;
 

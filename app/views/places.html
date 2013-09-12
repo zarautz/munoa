@@ -34,6 +34,8 @@
             </div>
             <h1 class="title">{{ ('placesGroup.'+ plistCtrl.section +'.'+ plistCtrl.group)|translate }}</h1>
         </header>
+
+        <!-- Status messages -->
         <div ng-if="plistCtrl.status.isDone && plistCtrl.status.isError" class="error">
             <p ng-click="plistCtrl.refresh()">
                 {{ 'error.connection'|translate }}
@@ -44,45 +46,9 @@
             <i class="icon-download"></i>
             {{ 'loading' | translate }}
         </div>
+
+        <!-- Main contents -->
         <div ng-if="!plistCtrl.status.isLoading" class="overthrow">
-            <div class="filter-box">
-                <div ng-show="plistCtrl.filter.show">
-                    <h3>Filters <span ng-show="plistCtrl.isFiltered()" style="float:right;" class="filterButton" ng-click="plistCtrl.clearFilters()">Garbitu</span></h3>
-                    <div class="filterMargin">
-                        Name: 
-                        <span ng-class="{filterInputOn: plistCtrl.filter.name !== null}"><input ng-model="plistCtrl.filter.name" ng-change="plistCtrl.setFilter('name', plistCtrl.filter.name)" /></span>
-                        <span class="filterButton" ng-click="plistCtrl.setFilter('name', '')">X</span>
-                    </div>
-                    <div class="filterMargin" ng-show="plistCtrl.groupObj.showPriceFilter">
-                        Price: 
-                        <span 
-                            class="filterButton"
-                            ng-class="{filterOn: price == plistCtrl.filter.price}"
-                            ng-repeat="price in plistCtrl.prices"
-                            ng-click="plistCtrl.setFilter('price', price)">
-                            {{ price }}
-                        </span>
-                        <span class="filterButton" ng-click="plistCtrl.setFilter('price', null)">X</span>
-                    </div>
-                    <div ng-if="plistCtrl.types.length > 1" class="filterMargin">
-                        Types: 
-                        <span 
-                            class = "filterButton"
-                            ng-class="{filterOn: type == plistCtrl.filter.type}"
-                            ng-repeat="type in plistCtrl.types"
-                            ng-click="plistCtrl.setFilter('type', type)">
-                            {{ plistCtrl.typesI18N[type] }}
-                        </span>
-                        <span class="filterButton" ng-click="plistCtrl.setFilter('type', null)">X</span>
-                    </div>
-                </div>
-                <!--
-                {{ plistCtrl.pager.getPage() }} / {{ plistCtrl.pager.getTotalPages() }}<br/>
-                <a class="small button" ng-click="plistCtrl.pager.prev()">Previous</a>
-                <a class="small button" ng-click="plistCtrl.pager.next()">Next</a>
-                -->
-            </div>
-                    
             <div class="list-with-images">
                 <div class="sort-options">
                     <i ng-show="plistCtrl.isFiltered() || plistCtrl.filter.favorite !== null" class="icon-filter color-blue"></i>
@@ -124,6 +90,46 @@
             <div ng-if="plistCtrl.pager.getTotalItems() === 0 && plistCtrl.filter.favorite !== null" class="big-message">
                 <i class="icon-star-empty"></i>
                 {{ 'list.no_favorites' | translate }}
+            </div>
+        </div>
+        
+        <!-- Filter -->
+        <div ng-show="plistCtrl.filter.show" class="filter-container">
+            <div ng-click="plistCtrl.closeFilters()" class="capture-click"></div>
+            <div class="filter-box">
+                <input ng-model="plistCtrl.filter.name" ng-change="plistCtrl.setFilter('name', plistCtrl.filter.name)" placeholder="Search" />
+                <div ng-show="plistCtrl.groupObj.showPriceFilter">
+                    <h5 class="section-title">
+                        Price
+                        <i class="icon-cancel"
+                            ng-show="plistCtrl.filter.price !== null"
+                            ng-click="plistCtrl.setFilter('price', null)"></i>
+                    </h5>
+                    <ul>
+                        <li ng-repeat="price in plistCtrl.prices"
+                            ng-class="{ 'on': price == plistCtrl.filter.price }"
+                            ng-click="plistCtrl.setFilter('price', price)">
+                            <i class="icon-ok"></i>
+                            {{ price }}
+                        </li>
+                    </ul>
+                </div>
+                <div ng-if="plistCtrl.types.length > 1">
+                    <h5 class="section-title">
+                        Types
+                        <i class="icon-cancel"
+                            ng-show="plistCtrl.filter.type !== null"
+                            ng-click="plistCtrl.setFilter('type', null)"></i>
+                    </h5>
+                    <ul>
+                        <li ng-repeat="type in plistCtrl.types"
+                            ng-class="{ 'on': type == plistCtrl.filter.type }"
+                            ng-click="plistCtrl.setFilter('type', type)">
+                            <i class="icon-ok"></i>
+                            {{ plistCtrl.typesI18N[type] }}
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

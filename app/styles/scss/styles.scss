@@ -202,6 +202,8 @@ section {
             right: $quarter-padding;
             z-index: 50;
             width: $filter-box-width;
+            max-height: 95%;
+            overflow-x: scroll;
             background: $filter-box-background-color;
             padding: 0 $half-padding;
             @include small-font();

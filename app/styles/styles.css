@@ -2432,6 +2432,8 @@ section div.filter-container .filter-box {
   right: 4px;
   z-index: 50;
   width: 60%;
+  max-height: 95%;
+  overflow-x: scroll;
   background: #fafafa;
   padding: 0 8px;
   font-size: 15px;
@@ -2442,7 +2444,7 @@ section div.filter-container .filter-box {
   border-bottom-right-radius: 3px;
   box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.15);
 }
-/* line 212, scss/styles.scss */
+/* line 214, scss/styles.scss */
 section div.filter-container .filter-box input {
   width: 100%;
   margin: 0 0 8px;
@@ -2453,7 +2455,7 @@ section div.filter-container .filter-box input {
   font-size: 15px;
   line-height: 1.3;
 }
-/* line 221, scss/styles.scss */
+/* line 223, scss/styles.scss */
 section div.filter-container .filter-box .section-title {
   text-transform: uppercase;
   font-size: 13px;
@@ -2463,13 +2465,13 @@ section div.filter-container .filter-box .section-title {
   margin: 0;
   line-height: 2.5em;
 }
-/* line 229, scss/styles.scss */
+/* line 231, scss/styles.scss */
 section div.filter-container .filter-box .section-title [class^="icon-"],
 section div.filter-container .filter-box .section-title [class*=" icon-"] {
   float: right;
   margin-right: 1px;
 }
-/* line 236, scss/styles.scss */
+/* line 238, scss/styles.scss */
 section div.filter-container .filter-box li {
   line-height: 40px;
   height: 40px;
@@ -2480,7 +2482,7 @@ section div.filter-container .filter-box li {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 244, scss/styles.scss */
+/* line 246, scss/styles.scss */
 section div.filter-container .filter-box li [class^="icon-"],
 section div.filter-container .filter-box li [class*=" icon-"] {
   display: none;
@@ -2488,35 +2490,35 @@ section div.filter-container .filter-box li [class*=" icon-"] {
   float: right;
   margin-left: 8px;
 }
-/* line 252, scss/styles.scss */
+/* line 254, scss/styles.scss */
 section div.filter-container .filter-box li.on {
   background-color: #e2f3fa;
 }
-/* line 255, scss/styles.scss */
+/* line 257, scss/styles.scss */
 section div.filter-container .filter-box li.on [class^="icon-"],
 section div.filter-container .filter-box li.on [class*=" icon-"] {
   display: block;
 }
-/* line 262, scss/styles.scss */
+/* line 264, scss/styles.scss */
 section div.filter-container .filter-box.ng-hide {
   padding: 0;
   border: 0;
 }
 
-/* line 288, scss/styles.scss */
+/* line 290, scss/styles.scss */
 body.active-menu main {
   border-left: 1px solid #121315;
 }
-/* line 291, scss/styles.scss */
+/* line 293, scss/styles.scss */
 body.active-menu main section > div:first-child {
   border-left: 1px solid #68696b;
 }
-/* line 294, scss/styles.scss */
+/* line 296, scss/styles.scss */
 body.active-menu main section > div:first-child div.overthrow {
   padding-right: 14px;
 }
 
-/* line 305, scss/styles.scss */
+/* line 307, scss/styles.scss */
 header {
   height: 48px;
   line-height: 48px;
@@ -2525,7 +2527,7 @@ header {
   z-index: 1000;
   border-bottom: 1px solid #dddddd;
 }
-/* line 316, scss/styles.scss */
+/* line 318, scss/styles.scss */
 header .title {
   position: absolute;
   top: 0;
@@ -2542,13 +2544,13 @@ header .title {
   text-overflow: ellipsis;
 }
 @media only screen and (min-width: 320px) {
-  /* line 316, scss/styles.scss */
+  /* line 318, scss/styles.scss */
   header .title {
     left: 17%;
     width: 66%;
   }
 }
-/* line 335, scss/styles.scss */
+/* line 337, scss/styles.scss */
 header i {
   background-color: #eaeaea;
   margin: 0 16px;
@@ -2556,18 +2558,18 @@ header i {
   color: #666666;
 }
 
-/* line 347, scss/styles.scss */
+/* line 349, scss/styles.scss */
 ul.drawer {
   background: #22252c;
   color: #eff0f2;
   font-size: 18px;
 }
-/* line 352, scss/styles.scss */
+/* line 354, scss/styles.scss */
 ul.drawer li {
   height: 48px;
   padding: 0 16px;
 }
-/* line 356, scss/styles.scss */
+/* line 358, scss/styles.scss */
 ul.drawer li a {
   display: block;
   height: 48px;
@@ -2578,13 +2580,13 @@ ul.drawer li a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 364, scss/styles.scss */
+/* line 366, scss/styles.scss */
 ul.drawer li a [class^="icon-"],
 ul.drawer li a [class*=" icon-"] {
   margin-right: 16px;
   font-size: 18px;
 }
-/* line 370, scss/styles.scss */
+/* line 372, scss/styles.scss */
 ul.drawer li a.active {
   background: #17191e;
   margin: 0 -16px;
@@ -2592,21 +2594,21 @@ ul.drawer li a.active {
   margin-top: -1px;
   border-top: 1px solid #1b1e23;
 }
-/* line 378, scss/styles.scss */
+/* line 380, scss/styles.scss */
 ul.drawer li a.settings {
   text-transform: uppercase;
   font-size: 13px;
   color: #5a6174;
 }
 
-/* line 392, scss/styles.scss */
+/* line 394, scss/styles.scss */
 .table-view ul {
   border-width: 1px 0;
   border-style: solid;
   border-color: #eaeaea;
   margin-right: -16px;
 }
-/* line 398, scss/styles.scss */
+/* line 400, scss/styles.scss */
 .table-view ul a {
   display: block;
   color: #333333;
@@ -2618,38 +2620,38 @@ ul.drawer li a.settings {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 407, scss/styles.scss */
+/* line 409, scss/styles.scss */
 .table-view ul a i {
   float: right;
   color: #b3b3b3;
 }
-/* line 411, scss/styles.scss */
+/* line 413, scss/styles.scss */
 .table-view ul a i.selected {
   color: #337abd;
 }
-/* line 416, scss/styles.scss */
+/* line 418, scss/styles.scss */
 .table-view ul a .detail {
   float: right;
   color: #337abd;
   margin-right: 8px;
 }
-/* line 423, scss/styles.scss */
+/* line 425, scss/styles.scss */
 .table-view ul li:last-child a {
   border: 0;
 }
 
-/* line 430, scss/styles.scss */
+/* line 432, scss/styles.scss */
 .list-with-images .title {
   margin: 0 16px 0 0;
 }
-/* line 434, scss/styles.scss */
+/* line 436, scss/styles.scss */
 .list-with-images .icon-right-open {
   font-size: 1.2em;
   float: right;
   color: #bbbbbb;
   margin: -3px -8px 8px 8px;
 }
-/* line 441, scss/styles.scss */
+/* line 443, scss/styles.scss */
 .list-with-images .thumbnail {
   width: 80%;
   -webkit-border-radius: 1000px;
@@ -2677,38 +2679,38 @@ ul.drawer li a.settings {
 .list-with-images .thumbnail.color-4 {
   background-color: #ffb4b0;
 }
-/* line 448, scss/styles.scss */
+/* line 450, scss/styles.scss */
 .list-with-images .thumbnail img {
   width: 100%;
 }
-/* line 453, scss/styles.scss */
+/* line 455, scss/styles.scss */
 .list-with-images p {
   font-size: 13px;
   line-height: 1.3;
   margin-top: 8px;
 }
-/* line 457, scss/styles.scss */
+/* line 459, scss/styles.scss */
 .list-with-images p .distance {
   color: #bbbbbb;
 }
-/* line 461, scss/styles.scss */
+/* line 463, scss/styles.scss */
 .list-with-images p .tag {
   display: block;
   float: left;
   margin-right: 0.2em;
 }
-/* line 467, scss/styles.scss */
+/* line 469, scss/styles.scss */
 .list-with-images p [class^="icon-"],
 .list-with-images p [class*=" icon-"] {
   float: left;
   margin: 0 0 0 -3px;
   font-size: .9em;
 }
-/* line 475, scss/styles.scss */
+/* line 477, scss/styles.scss */
 .list-with-images hr {
   margin: 16px -16px;
 }
-/* line 479, scss/styles.scss */
+/* line 481, scss/styles.scss */
 .list-with-images div.sort-options {
   *zoom: 1;
   font-size: 13px;
@@ -2726,7 +2728,7 @@ ul.drawer li a.settings {
 .list-with-images div.sort-options:after {
   clear: both;
 }
-/* line 486, scss/styles.scss */
+/* line 488, scss/styles.scss */
 .list-with-images div.sort-options .bicon {
   text-align: center;
   display: block;
@@ -2740,14 +2742,14 @@ ul.drawer li a.settings {
   margin: 0;
   padding: 0;
 }
-/* line 498, scss/styles.scss */
+/* line 500, scss/styles.scss */
 .list-with-images div.sort-options .bicon.icon-direction {
   -webkit-border-top-right-radius: 0;
   border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-/* line 503, scss/styles.scss */
+/* line 505, scss/styles.scss */
 .list-with-images div.sort-options .bicon.icon-sort-alphabet {
   padding-right: 3px;
   -webkit-border-top-left-radius: 0;
@@ -2755,27 +2757,27 @@ ul.drawer li a.settings {
   -webkit-border-bottom-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-/* line 509, scss/styles.scss */
+/* line 511, scss/styles.scss */
 .list-with-images div.sort-options .bicon.icon-star {
   margin-left: 16px;
 }
-/* line 513, scss/styles.scss */
+/* line 515, scss/styles.scss */
 .list-with-images div.sort-options .bicon.on {
   background-color: #34aadc;
   color: white;
 }
-/* line 518, scss/styles.scss */
+/* line 520, scss/styles.scss */
 .list-with-images div.sort-options .bicon.fav-on {
   background-color: #ffcc00;
   color: white;
 }
 
-/* line 531, scss/styles.scss */
+/* line 533, scss/styles.scss */
 .block-grid-icons li {
   text-align: center;
   margin: 4px 0 0;
 }
-/* line 535, scss/styles.scss */
+/* line 537, scss/styles.scss */
 .block-grid-icons li [class^="icon-"],
 .block-grid-icons li [class*=" icon-"] {
   font-size: 34px;
@@ -2812,18 +2814,18 @@ ul.drawer li a.settings {
 .block-grid-icons li [class*=" icon-"].color-4 {
   background-color: #ffb4b0;
 }
-/* line 548, scss/styles.scss */
+/* line 550, scss/styles.scss */
 .block-grid-icons li p {
   padding-top: 5px;
   font-size: 13px;
   line-height: 1.3;
 }
 
-/* line 557, scss/styles.scss */
+/* line 559, scss/styles.scss */
 .cta-list {
   margin: 16px 0;
 }
-/* line 560, scss/styles.scss */
+/* line 562, scss/styles.scss */
 .cta-list li {
   border-top: 1px solid #dddddd;
   height: 48px;
@@ -2833,7 +2835,7 @@ ul.drawer li a.settings {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 567, scss/styles.scss */
+/* line 569, scss/styles.scss */
 .cta-list li [class^="icon-"],
 .cta-list li [class*=" icon-"] {
   display: block;
@@ -2842,7 +2844,7 @@ ul.drawer li a.settings {
   float: left;
   margin-right: 8px;
 }
-/* line 575, scss/styles.scss */
+/* line 577, scss/styles.scss */
 .cta-list li [class^="icon-"].right,
 .cta-list li [class*=" icon-"].right {
   font-size: 13px;
@@ -2850,19 +2852,19 @@ ul.drawer li a.settings {
   float: right;
   color: #bbbbbb;
 }
-/* line 583, scss/styles.scss */
+/* line 585, scss/styles.scss */
 .cta-list li:last-child {
   border-bottom: 1px solid #dddddd;
 }
 
-/* line 589, scss/styles.scss */
+/* line 591, scss/styles.scss */
 .star-button {
   font-size: 26px;
   margin: 0 -4px 0 16px;
   float: right;
 }
 
-/* line 599, scss/styles.scss */
+/* line 601, scss/styles.scss */
 .banner {
   margin: -16px -16px 16px;
   height: 200px;
@@ -2870,7 +2872,7 @@ ul.drawer li a.settings {
   background-size: cover;
 }
 
-/* line 610, scss/styles.scss */
+/* line 612, scss/styles.scss */
 .map-container {
   position: absolute;
   z-index: 500;
@@ -2889,22 +2891,22 @@ ul.drawer li a.settings {
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
 }
-/* line 620, scss/styles.scss */
+/* line 622, scss/styles.scss */
 div.active-map .map-container {
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
-/* line 624, scss/styles.scss */
+/* line 626, scss/styles.scss */
 .map-container > div {
   height: 100%;
   width: 100%;
 }
-/* line 628, scss/styles.scss */
+/* line 630, scss/styles.scss */
 .map-container > div img {
   max-width: none;
 }
 
-/* line 638, scss/styles.scss */
+/* line 640, scss/styles.scss */
 .big-message {
   text-align: center;
   padding: 2em 1em;
@@ -2918,7 +2920,7 @@ div.active-map .map-container {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
-/* line 646, scss/styles.scss */
+/* line 648, scss/styles.scss */
 .big-message [class^="icon-"],
 .big-message [class*=" icon-"] {
   display: block;
@@ -2927,39 +2929,39 @@ div.active-map .map-container {
   margin-bottom: 16px;
 }
 
-/* line 660, scss/styles.scss */
+/* line 662, scss/styles.scss */
 .content h1, .content h2, .content h3, .content h4, .content h5 {
   font-size: 1em;
   font-weight: normal;
   font-style: italic;
 }
-/* line 665, scss/styles.scss */
+/* line 667, scss/styles.scss */
 .content h1 strong, .content h2 strong, .content h3 strong, .content h4 strong, .content h5 strong {
   font-weight: normal;
 }
-/* line 670, scss/styles.scss */
+/* line 672, scss/styles.scss */
 .content p, .content img {
   display: block;
   margin: 1em 0;
 }
-/* line 675, scss/styles.scss */
+/* line 677, scss/styles.scss */
 .content ol, .content ul {
   padding-left: 1.5em;
 }
-/* line 678, scss/styles.scss */
+/* line 680, scss/styles.scss */
 .content ol li, .content ul li {
   margin-bottom: .5em;
 }
-/* line 684, scss/styles.scss */
+/* line 686, scss/styles.scss */
 .content ul li {
   list-style: disc outside none;
 }
-/* line 690, scss/styles.scss */
+/* line 692, scss/styles.scss */
 .content ol li {
   list-style: decimal outside none;
 }
 
-/* line 696, scss/styles.scss */
+/* line 698, scss/styles.scss */
 .external-link {
   border-style: solid;
   border-width: 1px;
@@ -2998,22 +3000,22 @@ div.active-map .map-container {
 .external-link:hover, .external-link:focus {
   color: white;
 }
-/* line 701, scss/styles.scss */
+/* line 703, scss/styles.scss */
 .external-link, .external-link:visited {
   color: white;
 }
 
-/* line 708, scss/styles.scss */
+/* line 710, scss/styles.scss */
 .post .content div > img + p {
   font-size: .9em;
   color: #666666;
 }
-/* line 713, scss/styles.scss */
+/* line 715, scss/styles.scss */
 .post .content img {
   width: 100%;
 }
 
-/* line 724, scss/styles.scss */
+/* line 726, scss/styles.scss */
 hr {
   border: solid #dddddd;
   border-width: 1px 0 0;
@@ -3022,54 +3024,54 @@ hr {
   height: 0;
 }
 
-/* line 732, scss/styles.scss */
+/* line 734, scss/styles.scss */
 .strong {
   font-weight: bold;
 }
 
-/* line 736, scss/styles.scss */
+/* line 738, scss/styles.scss */
 .text-big {
   font-size: 26px;
 }
 
-/* line 740, scss/styles.scss */
+/* line 742, scss/styles.scss */
 .text-biggest {
   font-size: 34px;
 }
 
-/* line 744, scss/styles.scss */
+/* line 746, scss/styles.scss */
 .text-small {
   font-size: 15px;
   line-height: 1.3;
 }
 
-/* line 748, scss/styles.scss */
+/* line 750, scss/styles.scss */
 .text-smallest {
   font-size: 13px;
   line-height: 1.3;
 }
 
-/* line 752, scss/styles.scss */
+/* line 754, scss/styles.scss */
 .text-light {
   font-weight: 300;
 }
 
-/* line 756, scss/styles.scss */
+/* line 758, scss/styles.scss */
 .ucfirst:first-letter {
   text-transform: uppercase;
 }
 
-/* line 760, scss/styles.scss */
+/* line 762, scss/styles.scss */
 .uppercase {
   text-transform: uppercase;
 }
 
-/* line 764, scss/styles.scss */
+/* line 766, scss/styles.scss */
 .lowercase {
   text-transform: lowercase;
 }
 
-/* line 769, scss/styles.scss */
+/* line 771, scss/styles.scss */
 a.chameleon, a.chameleon:hover {
   color: inherit;
   text-decoration: none;

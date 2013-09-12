@@ -353,6 +353,12 @@
       "src": "meteocons"
     },
     {
+      "uid": "11d74f891bce30f1bdf73d3259d59ed5",
+      "css": "user",
+      "code": 61441,
+      "src": "mfglabs"
+    },
+    {
       "uid": "ce50292e85eb5d6ee3be61b32bf2bdf3",
       "css": "ok",
       "code": 59450,

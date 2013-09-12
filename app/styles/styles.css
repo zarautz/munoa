@@ -2445,9 +2445,9 @@ section div.filter-container .filter-box {
 /* line 212, scss/styles.scss */
 section div.filter-container .filter-box input {
   width: 100%;
-  margin: 8px 0 0;
+  margin: 0 0 8px;
   border: 1px solid #dddddd;
-  padding: 4px;
+  padding: 4px 8px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   font-size: 15px;
@@ -2461,7 +2461,7 @@ section div.filter-container .filter-box .section-title {
   color: #bbbbbb;
   font-weight: normal;
   margin: 0;
-  line-height: 3em;
+  line-height: 2.5em;
 }
 /* line 229, scss/styles.scss */
 section div.filter-container .filter-box .section-title [class^="icon-"],

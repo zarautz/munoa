@@ -43,6 +43,30 @@ Z.catalogue = {
         'en': 'You don\'t have favorites in this section',
         'fr': 'Vous n\'avez pas de favoris dans cette section'
     },
+    'filter.name': {
+        'eu': 'Izena',
+        'es': 'Nombre',
+        'en': 'Name',
+        'fr': 'Nom'
+    },
+    'filter.price': {
+        'eu': 'Prezioa',
+        'es': 'Precio',
+        'en': 'Price',
+        'fr': 'Prix'
+    },
+    'filter.type': {
+        'eu': 'Mota',
+        'es': 'Tipo',
+        'en': 'Type',
+        'fr': 'Catégorie'
+    },
+    'filter.search': {
+        'eu': 'Bilatu',
+        'es': 'Buscar',
+        'en': 'Search',
+        'fr': 'Rechercher'
+    },
     //
     // Events
     //

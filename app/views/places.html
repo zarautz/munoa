@@ -97,10 +97,18 @@
         <div ng-show="plistCtrl.filter.show" class="filter-container">
             <div ng-click="plistCtrl.closeFilters()" class="capture-click"></div>
             <div class="filter-box">
-                <input ng-model="plistCtrl.filter.name" ng-change="plistCtrl.setFilter('name', plistCtrl.filter.name)" placeholder="Search" />
+                <div>
+                    <h5 class="section-title">
+                        {{ 'filter.name' | translate }}
+                        <i class="icon-cancel"
+                            ng-show="plistCtrl.filter.name !== null"
+                            ng-click="plistCtrl.setFilter('name', null)"></i>
+                    </h5>
+                    <input ng-model="plistCtrl.filter.name" ng-change="plistCtrl.setFilter('name', plistCtrl.filter.name)" placeholder="{{ 'filter.search' | translate }}" />
+                </div>
                 <div ng-show="plistCtrl.groupObj.showPriceFilter">
                     <h5 class="section-title">
-                        Price
+                        {{ 'filter.price' | translate }}
                         <i class="icon-cancel"
                             ng-show="plistCtrl.filter.price !== null"
                             ng-click="plistCtrl.setFilter('price', null)"></i>
@@ -116,7 +124,7 @@
                 </div>
                 <div ng-if="plistCtrl.types.length > 1">
                     <h5 class="section-title">
-                        Types
+                        {{ 'filter.type' | translate }}
                         <i class="icon-cancel"
                             ng-show="plistCtrl.filter.type !== null"
                             ng-click="plistCtrl.setFilter('type', null)"></i>

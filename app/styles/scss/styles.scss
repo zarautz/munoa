@@ -211,9 +211,9 @@ section {
 
             input {
                 width: 100%;
-                margin: $half-padding 0 0;
+                margin: 0 0 $half-padding;
                 border: 1px solid $filter-box-separation-color;
-                padding: $quarter-padding;
+                padding: $quarter-padding $half-padding;
                 @include border-radius($app-secondary-border-radius);
                 @include small-font();
             }
@@ -224,7 +224,7 @@ section {
                 color: $color-lightest-text;
                 font-weight: normal;
                 margin: 0;
-                line-height: 3em;
+                line-height: 2.5em;
 
                 [class^="icon-"],
                 [class*=" icon-"] {

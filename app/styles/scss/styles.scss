@@ -47,7 +47,7 @@ $drawer-text-size:            18px;
 $drawer-menu-border-color:    darken($drawer-background, 3%);
 $drawer-menu-selected:        darken($drawer-background, 5%);
 
-$filter-box-background-color: #fafafa;
+$filter-box-background-color: #efefef;
 $filter-box-width:            60%;
 $filter-box-separation-color: #ddd;
 
@@ -199,14 +199,14 @@ section {
         .filter-box {
             position: absolute;
             top: 0;
-            right: $quarter-padding;
+            right: $half-padding;
             z-index: 50;
             width: $filter-box-width;
             max-height: 95%;
             overflow-x: scroll;
+            overflow-y: hidden;
             background: $filter-box-background-color;
             padding: 0 $half-padding;
-            @include small-font();
             @include border-bottom-left-radius($app-secondary-border-radius);
             @include border-bottom-right-radius($app-secondary-border-radius);
             box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.15);
@@ -215,7 +215,7 @@ section {
                 width: 100%;
                 margin: 0 0 $half-padding;
                 border: 1px solid $filter-box-separation-color;
-                padding: $quarter-padding $half-padding;
+                padding: $half-padding;
                 @include border-radius($app-secondary-border-radius);
                 @include small-font();
             }

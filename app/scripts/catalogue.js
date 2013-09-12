@@ -68,24 +68,6 @@ Z.catalogue = {
         'fr': 'Rechercher'
     },
     //
-    // Events
-    //
-    'events': {
-        'eu': 'Agenda',
-        'es': 'Agenda',
-        'en': 'Events',
-        'fr': 'Événements'
-    },
-    //
-    // Health
-    //
-    'health': {
-        'eu': 'Osasun zerbitzuak',
-        'es': '',
-        'en': '',
-        'fr': ''
-    },
-    //
     // Meta
     //
     'meta.lastUpdated': {
@@ -99,6 +81,24 @@ Z.catalogue = {
         'es': 'Fuentes',
         'en': 'Sources',
         'fr': 'Sources'
+    },
+    //
+    // Events
+    //
+    'events': {
+        'eu': 'Agenda',
+        'es': 'Agenda',
+        'en': 'Events',
+        'fr': 'Événements'
+    },
+    //
+    // Health
+    //
+    'health': {
+        'eu': 'Osasun zerbitzuak',
+        'es': 'Servicios sanitarios',
+        'en': 'Health care',
+        'fr': 'Soins de santé'
     },
     //
     // Places
@@ -125,11 +125,11 @@ Z.catalogue = {
         'eu': 'Aukerak',
         'es': 'Configuración',
         'en': 'Settings',
-        'fr': ''
+        'fr': 'Réglages'
     },
     'settings.about': {
         'eu': 'About(eu)',
-        'es': 'About(es)',
+        'es': 'Acerca de',
         'en': 'About',
         'fr': 'About(fr)'
     },
@@ -143,19 +143,19 @@ Z.catalogue = {
         'eu': 'Datuak ezabatu',
         'es': 'Borrar datos',
         'en': 'Clear data',
-        'fr': ''
+        'fr': 'Effacer les données'
     },
     'settings.general': {
         'eu': 'Orokorrak',
         'es': 'Generales',
         'en': 'General',
-        'fr': ''
+        'fr': 'Général'
     },
     'settings.language': {
         'eu': 'Hizkuntza',
         'es': 'Idioma',
         'en': 'Language',
-        'fr': ''
+        'fr': 'Langue'
     },
     'settings.language.en': {
         'eu': 'English',
@@ -176,32 +176,44 @@ Z.catalogue = {
         'fr': 'Euskara'
     },
     'settings.language.fr': {
-        'eu': 'Française',
-        'es': 'Française',
-        'en': 'Française',
-        'fr': 'Française'
+        'eu': 'Français',
+        'es': 'Français',
+        'en': 'Français',
+        'fr': 'Français'
     },
     'settings.other': {
         'eu': 'Bestelakoak',
         'es': 'Otros',
         'en': 'Other',
-        'fr': ''
+        'fr': 'Autres'
     },
     'settings.profile': {
         'eu': 'Perfila',
         'es': 'Perfil',
         'en': 'Profile',
-        'fr': ''
+        'fr': 'Profil'
     },
     'settings.profile.tourist': {
-        'eu': 'Turista',
-        'es': 'Turista',
-        'en': 'Tourist',
-        'fr': ''
+        'eu': 'Zarautz ezagutu nahi dut',
+        'es': 'Quiero conocer Zarautz',
+        'en': 'I want to discover Zarautz',
+        'fr': 'Je veux découvrir Zarautz'
     },
     'settings.profile.zarautz': {
-        'eu': 'Zarauztarra',
-        'es': 'Zarauztarra',
+        'eu': 'Zarautzen bizi naiz',
+        'es': 'Vivo en Zarautz',
+        'en': 'I live in Zarautz',
+        'fr': 'J\'habite à Zarautz'
+    },
+    'settings.profile.tourist.explanation': {
+        'eu': 'Zarautz ezagutu nahi dut',
+        'es': 'Quiero conocer Zarautz',
+        'en': 'I want to discover Zarautz',
+        'fr': 'Je veux découvrir Zarautz'
+    },
+    'settings.profile.zarautz.explanation': {
+        'eu': 'Zarautzen bizi bazara lekuen informazioa ikustean kontutan izango dugu.',
+        'es': 'Zarauztarra ',
         'en': 'Zarauztarra',
         'fr': 'Zarauztarra'
     },

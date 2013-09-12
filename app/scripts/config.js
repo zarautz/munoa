@@ -94,11 +94,11 @@ Z.app.config(['$compileProvider', '$routeProvider', '$locationProvider', 'babelP
     settingsProvider.setSettings({
         language: {
             selected: 'eu',
-            options: ['es', 'en', 'eu', 'fr']
+            options: ['eu', 'es', 'en', 'fr']
         },
         profile: {
-            selected: 'tourist',
-            options: ['tourist', 'zarautz']
+            selected: 'zarautz',
+            options: ['zarautz', 'tourist']
         }
     });
 

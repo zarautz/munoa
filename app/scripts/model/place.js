@@ -15,8 +15,6 @@ Z.Model.Place.prototype.getCleanTelephone = function () {
 Z.Model.Place.prototype.getImage = function (size) {
     if (this.image !== undefined && this.image !== null) {
         return this.image.source[size];
-    } else if (this.images !== undefined && this.images.length > 0) {
-        return this.images[0].source[size];
     }
 
     return 'images/dot.png';

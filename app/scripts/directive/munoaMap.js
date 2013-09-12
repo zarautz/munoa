@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.directive('ilMap', ['navigation', 'phonegap', 'babel', function (navigation, phonegap, babel) {
+Z.app.directive('munoaMap', ['navigation', 'phonegap', 'babel', function (navigation, phonegap, babel) {
     return {
         restrict: 'A',
         link: function (scope, element, attrs) {

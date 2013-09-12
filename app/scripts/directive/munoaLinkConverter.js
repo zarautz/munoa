@@ -1,6 +1,6 @@
 'use strict';
 
-Z.app.directive('ilLinkConverter', ['$sce', '$compile', function ($sce, $compile) {
+Z.app.directive('munoaLinkConverter', ['$sce', '$compile', function ($sce, $compile) {
     return {
         restrict: 'A',
         link: function (scope, element, attrs) {

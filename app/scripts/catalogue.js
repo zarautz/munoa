@@ -337,7 +337,7 @@ Z.catalogue = {
         'eu': 'Birziklaketa',
         'es': 'Reciclaje',
         'en': 'Recycling',
-        'fr': '--Recycling'
+        'fr': 'Recyclage'
     },
     'placesGroup.places.police': {
         'eu': 'Polizia',

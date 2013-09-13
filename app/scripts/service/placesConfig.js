@@ -119,7 +119,7 @@ Z.app.factory('placesConfig', [function() {
     group = section.addGroup('health_care');
     group
         .setTypes(['health_center', 'urgent_care'])
-        .setIcon('icon-hospital')
+        .setIcon('icon-hospital-h')
     ;
 
     group = section.addGroup('pharmacy');

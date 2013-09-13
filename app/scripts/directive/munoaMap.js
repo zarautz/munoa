@@ -21,7 +21,7 @@ Z.app.directive('munoaMap', ['navigation', 'phonegap', 'babel', function (naviga
                     mapTypeControl: false,
                     zoomControl: false,
                     streetViewControlOptions: {
-                        position: google.maps.ControlPosition.RIGHT_BOTTOM
+                        position: google.maps.ControlPosition.BOTTOM_CENTER
                     },
                     maxZoom: 19
                 });

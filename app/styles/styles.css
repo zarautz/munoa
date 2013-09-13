@@ -1757,10 +1757,10 @@ section.on-4 {
 /* '' */
 /* line 76, scss/_app-icons.scss */
 .icon-star:before {
-  content: '\e803';
+  content: '\f020';
 }
 
-/* '' */
+/* '' */
 /* line 77, scss/_app-icons.scss */
 .icon-star-empty:before {
   content: '\e804';
@@ -2177,26 +2177,34 @@ section.on-4 {
 }
 
 /* '' */
-/* line 148, scss/_app-icons.scss */
+/* line 147, scss/_app-icons.scss */
+.icon-hospital-h:before {
+  content: 'H';
+  font-family: inherit;
+  font-weight: bold;
+}
+
+/* '' */
+/* line 149, scss/_app-icons.scss */
 .icon-weather-11:before {
   content: '\e826';
 }
 
 /* '' */
-/* line 149, scss/_app-icons.scss */
+/* line 150, scss/_app-icons.scss */
 .icon-weather-12:before,
 .icon-weather-13:before {
   content: '\e82c';
 }
 
 /* '' */
-/* line 151, scss/_app-icons.scss */
+/* line 152, scss/_app-icons.scss */
 .icon-weather-14:before {
   content: '\e830';
 }
 
 /* '' */
-/* line 152, scss/_app-icons.scss */
+/* line 153, scss/_app-icons.scss */
 .icon-weather-15:before,
 .icon-weather-16:before,
 .icon-weather-17:before {
@@ -2204,7 +2212,7 @@ section.on-4 {
 }
 
 /* '' */
-/* line 155, scss/_app-icons.scss */
+/* line 156, scss/_app-icons.scss */
 .icon-weather-23:before,
 .icon-weather-24:before,
 .icon-weather-25:before,
@@ -2213,21 +2221,21 @@ section.on-4 {
 }
 
 /* '' */
-/* line 159, scss/_app-icons.scss */
+/* line 160, scss/_app-icons.scss */
 .icon-weather-33:before,
 .icon-weather-34:before {
   content: '\e836';
 }
 
 /* '' */
-/* line 161, scss/_app-icons.scss */
+/* line 162, scss/_app-icons.scss */
 .icon-weather-35:before,
 .icon-weather-36:before {
   content: '\e837';
 }
 
 /* '' */
-/* line 163, scss/_app-icons.scss */
+/* line 164, scss/_app-icons.scss */
 .icon-weather-43:before,
 .icon-weather-44:before,
 .icon-weather-45:before,
@@ -2236,14 +2244,14 @@ section.on-4 {
 }
 
 /* '' */
-/* line 167, scss/_app-icons.scss */
+/* line 168, scss/_app-icons.scss */
 .icon-weather-51:before,
 .icon-weather-52:before {
   content: '\e831';
 }
 
 /* '' */
-/* line 169, scss/_app-icons.scss */
+/* line 170, scss/_app-icons.scss */
 .icon-weather-53:before,
 .icon-weather-54:before,
 .icon-weather-61:before,
@@ -2254,14 +2262,14 @@ section.on-4 {
 }
 
 /* '' */
-/* line 175, scss/_app-icons.scss */
+/* line 176, scss/_app-icons.scss */
 .icon-weather-71:before,
 .icon-weather-72:before {
   content: '\e838';
 }
 
 /* '' */
-/* line 177, scss/_app-icons.scss */
+/* line 178, scss/_app-icons.scss */
 .icon-weather-73:before,
 .icon-weather-74:before {
   content: '\e836';
@@ -2269,14 +2277,14 @@ section.on-4 {
 
 /* '' */
 @-webkit-keyframes spin {
-  /* line 197, scss/_app-icons.scss */
+  /* line 198, scss/_app-icons.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 203, scss/_app-icons.scss */
+  /* line 204, scss/_app-icons.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);
@@ -2285,14 +2293,14 @@ section.on-4 {
 }
 
 @-moz-keyframes spin {
-  /* line 197, scss/_app-icons.scss */
+  /* line 198, scss/_app-icons.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 203, scss/_app-icons.scss */
+  /* line 204, scss/_app-icons.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);
@@ -2301,14 +2309,14 @@ section.on-4 {
 }
 
 @keyframes spin {
-  /* line 197, scss/_app-icons.scss */
+  /* line 198, scss/_app-icons.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 203, scss/_app-icons.scss */
+  /* line 204, scss/_app-icons.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);

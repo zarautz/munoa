@@ -39,7 +39,7 @@ Z.app.config(['$compileProvider', '$routeProvider', '$locationProvider', 'babelP
             id: 'health',
             route: '/places/:section',
             path: '/places/health',
-            icon: 'icon-medical color-green',
+            icon: 'icon-hospital-alt color-green',
             templateUrl: 'views/places.html'
         },
         {

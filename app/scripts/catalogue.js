@@ -194,7 +194,7 @@ Z.catalogue = {
         'fr': 'Profil'
     },
     'settings.profile.tourist': {
-        'eu': 'Zarautz ezagutu nahi dut',
+        'eu': 'Zarautzera bisitan nator',
         'es': 'Quiero conocer Zarautz',
         'en': 'I want to discover Zarautz',
         'fr': 'Je veux découvrir Zarautz'
@@ -206,16 +206,16 @@ Z.catalogue = {
         'fr': 'J\'habite à Zarautz'
     },
     'settings.profile.tourist.explanation': {
-        'eu': 'Zarautz ezagutu nahi dut',
-        'es': 'Quiero conocer Zarautz',
-        'en': 'I want to discover Zarautz',
-        'fr': 'Je veux découvrir Zarautz'
+        'eu': 'Zarautzera oporretan edo asteburu pasa bazatoz, gure herria deskubritu dezakezu aplikazio honekin. Zarautzen egin eta ikusi ditzakezunak eta Zarauzko gida osotua topatuko dituzu bertan.',
+        'es': 'Si vienes a Zarautz de vacaciones o a pasar el fin de semana, con esta aplicación puedes descubrir nuestro pueblo. En élla encontrarás una guía completa de Zarautz, así como actividades que puedes ver y realizar.',
+        'en': 'If you come to spend a weekend or on holidays to Zarautz, you can use this app to find out what\'s interesting in our town. You will find a complete guide of Zarautz, as well as activities you can see or join.',
+        'fr': '--'
     },
     'settings.profile.zarautz.explanation': {
-        'eu': 'Zarautzen bizi bazara lekuen informazioa ikustean kontutan izango dugu.',
-        'es': 'Zarauztarra ',
-        'en': 'Zarauztarra',
-        'fr': 'Zarauztarra'
+        'eu': 'Herriko orainkaria, Zarauzko albiste eta ekitaldiak eguneratuta topatuko dituzu aplikazio honetan. Bestalde Zarauzko gida, bilatzen dituzun tokiak klik batez eskura izateko.',
+        'es': 'Noticiario local, en esta aplicación encontrarás noticias y actividades actualizadas de Zarautz. Por otra parte la guía de Zarautz, para tener al alcance de un click los lugares que buscas.',
+        'en': 'Zarautz’s breaking news and updated activities that are taking place in the town. On the other hand, Zarautz’s guide so that you can find easily what you are looking for.',
+        'fr': '--'
     },
     //
     // Tides
@@ -224,7 +224,7 @@ Z.catalogue = {
         'eu': 'Mareak',
         'es': 'Mareas',
         'en': 'Tides',
-        'fr': ''
+        'fr': 'Marées'
     },
     //
     // Weather
@@ -233,7 +233,7 @@ Z.catalogue = {
         'eu': 'Eguraldia',
         'es': 'El tiempo',
         'en': 'Weather',
-        'fr': ''
+        'fr': 'Météo'
     },
     'weather.uv.title': {
         'eu': 'Kontuz gaur UV izpiekin',
@@ -276,13 +276,31 @@ Z.catalogue = {
         'eu': 'Farmaziak',
         'es': 'Farmacias',
         'en': 'Pharmacies',
-        'fr': '--Pharmacies'
+        'fr': 'Pharmacies'
     },
-    'placesGroup.health.doctors': {
+    'placesGroup.health.health_care': {
+        'eu': 'Osasun zerbitzuak',
+        'es': 'Servicios sanitarios',
+        'en': 'Health care',
+        'fr': 'Soins de santé'
+    },
+    'placesGroup.health.dentist': {
+        'eu': 'Dentistak',
+        'es': 'Dentistas',
+        'en': 'Dentists',
+        'fr': 'Dentistes'
+    },
+    'placesGroup.health.doctor': {
         'eu': 'Medikuak',
         'es': 'Médicos',
         'en': 'Doctors',
-        'fr': '--Doctors'
+        'fr': 'Docteurs'
+    },
+    'placesGroup.health.other': {
+        'eu': 'Bestelakoak',
+        'es': 'Otros',
+        'en': 'Other',
+        'fr': 'Autre'
     },
     // PLACES
     'placesGroup.places.wifi': {
@@ -295,13 +313,13 @@ Z.catalogue = {
         'eu': 'Kutxazainak',
         'es': 'Cajeros',
         'en': 'ATMs',
-        'fr': '--ATMs'
+        'fr': 'DABs'
     },
     'placesGroup.places.food': {
         'eu': 'Elikadura',
         'es': 'Alimentación',
         'en': 'Food',
-        'fr': '--Food'
+        'fr': 'Alimentation'
     },
     'placesGroup.places.eating': {
         'eu': 'Non jan',
@@ -319,19 +337,19 @@ Z.catalogue = {
         'eu': 'Tabernak',
         'es': 'Bares',
         'en': 'Bars',
-        'fr': '--Bars'
+        'fr': 'Bars'
     },
     'placesGroup.places.shopping': {
         'eu': 'Dendak',
         'es': 'Tiendas',
         'en': 'Shopping',
-        'fr': '--Shopping'
+        'fr': 'Magasins'
     },
     'placesGroup.places.sports': {
         'eu': 'Kirolak',
         'es': 'Deporte',
         'en': 'Sport',
-        'fr': '--Sport'
+        'fr': 'Sport'
     },
     'placesGroup.places.parking': {
         'eu': 'Parking',

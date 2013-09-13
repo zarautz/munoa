@@ -116,20 +116,38 @@ Z.app.factory('placesConfig', [function() {
     //
     section = config.addSection('health');
 
-    group = section.addGroup('pharmacy');
+    group = section.addGroup('health_care');
     group
-        .setTypes(['pharmacy'])
+        .setTypes(['health_center', 'urgent_care'])
         .setIcon('icon-hospital')
     ;
 
-    group = section.addGroup('doctors');
+    group = section.addGroup('pharmacy');
     group
-        .setTypes(['dentist','doctor','health','health_center','optician','physiotherapist','podologist','psychologist','urgent_care'])
-        .setIcon('icon-medical-alt')
+        .setTypes(['pharmacy', 'parapharmacy'])
+        .setIcon('icon-hospital-alt')
     ;
 
-    section.sortGroups('tourist', ['pharmacy', 'doctors']);
-    section.sortGroups('zarautz', ['pharmacy', 'doctors']);
+    group = section.addGroup('dentist');
+    group
+        .setTypes(['dentist'])
+        .setIcon('icon-ellipsis')
+    ;
+
+    group = section.addGroup('doctor');
+    group
+        .setTypes(['doctor'])
+        .setIcon('icon-doctor')
+    ;
+
+    group = section.addGroup('other');
+    group
+        .setTypes(['optician','physiotherapist','podologist','psychologist'])
+        .setIcon('icon-doctor-alt')
+    ;
+
+    section.sortGroups('tourist', ['health_care', 'pharmacy', 'dentist', 'other']);
+    section.sortGroups('zarautz', ['health_care', 'pharmacy', 'dentist', 'other']);
 
     //
     // PLACES
@@ -156,7 +174,7 @@ Z.app.factory('placesConfig', [function() {
 
     group = section.addGroup('shopping');
     group
-        .setTypes(['clothing_store'])
+        .setTypes(['clothing_store', 'book_store', 'bicycle_store', 'hardware_store'])
         .setIcon('icon-shop')
         //.setShowPriceFilter(true)
     ;
@@ -169,13 +187,13 @@ Z.app.factory('placesConfig', [function() {
 
     group = section.addGroup('sports');
     group
-        .setTypes(['sports', 'golf', 'gym', 'surf_school'])
+        .setTypes(['fronton', 'swimming_pool', 'football_field', 'basketball_court', 'gym', 'surf_school', 'sport'])
         .setIcon('icon-pitch')
     ;
 
     group = section.addGroup('transport');
     group
-        .setTypes(['transport', 'train_station'])
+        .setTypes(['bus_stop', 'car_rental', 'taxi_stop', 'train_station'])
         .setIcon('icon-bus')
     ;
 

@@ -52,7 +52,7 @@
                 </a>
             </li>
         </ul>
-        <p class="explanation">
+        <p ng-if="['profile'].indexOf(pushData.id) !== -1" class="explanation">
             {{ ('settings.'+ pushData.id +'.'+ pushData.settings.get(pushData.id)) +'.explanation' | translate }}
         </p>
     </div>

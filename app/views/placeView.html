@@ -15,17 +15,17 @@
         <i class="icon-download"></i>
         {{ 'loading' | translate }}
     </div>
-    <div ng-if="!pviewCtrl.status.isLoading" class="overthrow">
+    <div ng-if="!pviewCtrl.status.isLoading" class="overthrow place-info">
         <div class="banner" ng-style="{ 'background-image': 'url('+ pviewCtrl.place.getImage('medium') +')' }"></div>
-        <span class="right text-smallest color-lightest-text" ng-if="pviewCtrl.geolocation.available">
+        <span class="location" ng-if="pviewCtrl.geolocation.available">
             <i class="icon-direction"></i> {{ pviewCtrl.place.location.distanceTo(pviewCtrl.geolocation) | distance }}
         </span>
         <h3>
             {{ pviewCtrl.place.name }}
         </h3>
-        <p class="text-small">
+        <p class="text-small ucfirst">
             <i class="star-button" ng-click="pviewCtrl.toggleFavorite(pviewCtrl.place.id)" ng-class="{ 'icon-star color-yellow': pviewCtrl.favorite.isFavorite(pviewCtrl.place.id), 'icon-star-empty color-lightest-text': !pviewCtrl.favorite.isFavorite(pviewCtrl.place.id) }"></i>
-            {{ pviewCtrl.place.getTypeNamesExcept(['murkil']).join(', ') }}<br />
+            {{ pviewCtrl.place.getTypeNamesExcept(['murkil']).join(', ') | lowercase }}<br />
             <span class="color-light-text">{{ pviewCtrl.place.address }}</span>
         </p>
         <ul class="cta-list">

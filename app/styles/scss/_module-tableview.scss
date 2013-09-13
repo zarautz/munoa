@@ -51,7 +51,6 @@ $tableview-border-color:      #eaeaea;
         margin: $column-gutter $base-padding;
         text-align: center;
         color: $color-dark-blue;
-        @include small-font();
     }
 }
 

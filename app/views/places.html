@@ -75,7 +75,7 @@
                                     ({{ place.location.distanceTo(plistCtrl.geolocation) | distance }})
                                 </span><br/>
                                 <i class="icon-tag"></i>
-                                {{ place.getTypeNamesExcept(['murkil']).join(', ') }}
+                                {{ place.getTypeNamesExcept(['murkil']).join(', ') | lowercase }}
                             </p>
                         </div>
                     </div>

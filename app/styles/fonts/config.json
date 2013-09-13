@@ -83,21 +83,33 @@
       "src": "fontawesome"
     },
     {
+      "uid": "107ce08c7231097c7447d8f4d059b55f",
+      "css": "ellipsis",
+      "code": 61458,
+      "src": "fontawesome"
+    },
+    {
       "uid": "4109c474ff99cad28fd5a2c38af2ec6f",
       "css": "filter",
       "code": 59405,
       "src": "fontawesome"
     },
     {
+      "uid": "9e8430ce95f56720ae8e7afba291df88",
+      "css": "doctor",
+      "code": 61456,
+      "src": "fontawesome"
+    },
+    {
       "uid": "5590d2f643b64d2d0757ae660f9c24cb",
-      "css": "medical-alt",
+      "css": "doctor-alt",
       "code": 59406,
       "src": "fontawesome"
     },
     {
-      "uid": "46120eb259799eab0dac0691137e5706",
-      "css": "medical",
-      "code": 59407,
+      "uid": "6f41d9b99564a01f1fde503b7f03bf1a",
+      "css": "hospital",
+      "code": 61457,
       "src": "fontawesome"
     },
     {
@@ -468,7 +480,7 @@
     },
     {
       "uid": "f43389fa3f5a5b152ed0231fe7bb18a7",
-      "css": "hospital",
+      "css": "hospital-alt",
       "code": 59468,
       "src": "maki"
     },

@@ -1,29 +1,12 @@
 'use strict';
 
-Z.app.controller('PlaceViewController', ['$scope', '$timeout', 'placeMapper', 'placeFavorite', 'settings', 'phonegap', 'navigation', function($scope, $timeout, placeMapper, placeFavorite, settings, phonegap, navigation) {
-    var that = this,
-        cssTransitionDuration = 300;
-
+Z.app.controller('PlaceViewController', ['$scope', '$timeout', 'placeMapper', 'placeFavorite', 'settings', 'phonegap', function($scope, $timeout, placeMapper, placeFavorite, settings, phonegap) {
     this.toggleFavorite = function (id) {
         this.favorite.toggle(id);
 
         if ($scope.pushData.plistCtrl) {
             $scope.pushData.plistCtrl.refreshList();
         }
-    };
-
-    this.toggleMap = function () {
-        if (this.mapIsInTransition) {
-            return false;
-        }
-
-        this.mapIsInTransition = true;
-        this.mapIsActive = !this.mapIsActive;
-        navigation.toggleGestures();
-
-        $timeout(function () {
-            that.mapIsInTransition = false;
-        }, cssTransitionDuration);
     };
 
     this.refresh = function () {

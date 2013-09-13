@@ -2,7 +2,14 @@
     <div>
         <header>
             <i ng-click="navigation.toggleMenu()" class="left icon-menu"></i>
-            <i ng-if="zzCtrl.status.isLoading" class="right icon-spin color-blue animate-spin"></i>
+            <div ng-switch on="zzCtrl.status.isLoading">
+                <div ng-switch-when="true">
+                    <i class="right icon-spin color-blue animate-spin"></i>
+                </div>
+                <div ng-switch-default>
+                    <i ng-if="zzCtrl.zarauztarra" ng-click="navigation.toggleAside();" class="right" ng-class="{ 'icon-info': !navigation.asideIsActive, 'icon-cancel': navigation.asideIsActive }"></i>
+                </div>
+            </div>
             <h1 class="title">{{ 'zuzarautz'|translate }}</h1>
         </header>
         <div ng-if="zzCtrl.status.isDone && zzCtrl.status.isError" class="error">
@@ -30,6 +37,17 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="aside zz-info">
+            <h2>
+                Denon artean egiten dugu Zarautz
+            </h2>
+            <p>
+                Zu Zarautz herritarrentzat hedabide izateaz gainera, herritarrentzat aplikazio ere bada. Edonor erregistratu daiteke <strong>ZuZarautz.info</strong> webgunean, gure komunitatearentzat interesgarri diren albisteak partekatzeko.
+            </p>
+            <a href ng-click="navigation.openExternalLink('http://zuzarautz.info/erabiltzailea-eskatu/')" class="external-link">
+                Parte hartu nahi duzu?
+            </a>
         </div>
     </div>
     <div ng-include="view2"></div>

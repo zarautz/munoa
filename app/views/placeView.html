@@ -1,4 +1,4 @@
-<div ng-controller="PlaceViewController as pviewCtrl" ng-class="{ 'active-map': pviewCtrl.mapIsActive }">
+<div ng-controller="PlaceViewController as pviewCtrl" ng-class="{ 'active-aside': pviewCtrl.mapIsActive }">
     <header>
         <a href ng-click="navigation.popView()"><i class="left icon-left"></i></a>
         <div ng-switch on="pviewCtrl.status.isLoading">
@@ -6,7 +6,7 @@
                 <i class="right icon-spin color-blue animate-spin"></i>
             </div>
             <div ng-switch-default>
-                <i ng-click="pviewCtrl.toggleMap();" class="right" ng-class="{ 'icon-location-alt': !pviewCtrl.mapIsActive, 'icon-cancel': pviewCtrl.mapIsActive }"></i>
+                <i ng-click="navigation.toggleAside();" class="right" ng-class="{ 'icon-location-alt': !navigation.asideIsActive, 'icon-cancel': navigation.asideIsActive }"></i>
             </div>
         </div>
         <h1 class="title">{{ pviewCtrl.title }}</h1>
@@ -52,7 +52,7 @@
         </ul>
         <div class="content" ng-bind-html="pviewCtrl.place.description"></div>
     </div>
-    <div class="map-container">
+    <div class="aside map-container">
         <div munoa-map latitude="{{ pviewCtrl.place.location.latitude }}" longitude="{{ pviewCtrl.place.location.longitude }}"></div>
     </div>
 </div>

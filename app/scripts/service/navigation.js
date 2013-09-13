@@ -16,6 +16,8 @@ Z.app.factory('navigation', ['$location', '$rootScope', '$timeout', 'menu', func
     navigation.menu = menu;
     navigation.location = $location;
     navigation.activeView = 1;
+    navigation.asideIsActive = false;
+    navigation.asideIsInTransition = false;
     navigation.menuIsInTransition = false;
     navigation.viewIsInTransition = false;
     navigation.gesturesAreDisabled = false;
@@ -29,6 +31,7 @@ Z.app.factory('navigation', ['$location', '$rootScope', '$timeout', 'menu', func
         // Prevent double click or clicks during CSS transitions
         if (this.viewIsInTransition ||
             this.menuIsInTransition ||
+            this.asideIsInTransition ||
             this.activeView === viewToActivate) {
             return false;
         }
@@ -39,9 +42,6 @@ Z.app.factory('navigation', ['$location', '$rootScope', '$timeout', 'menu', func
 
             return false;
         }
-
-        // Reset gestures, in case a map was left open
-        this.gesturesAreDisabled = false;
 
         // Start transition
         this.viewIsInTransition = true;
@@ -59,6 +59,9 @@ Z.app.factory('navigation', ['$location', '$rootScope', '$timeout', 'menu', func
 
         $timeout(function () {
             that.viewIsInTransition = false;
+            // Hide aside and reset gestures
+            that.asideIsActive = false;
+            that.gesturesAreDisabled = false;
 
             if (!isPush) {
                 $rootScope['view' + (viewToActivate + 1)] = '';
@@ -79,6 +82,18 @@ Z.app.factory('navigation', ['$location', '$rootScope', '$timeout', 'menu', func
         this.activateView(this.activeView + 1, true, template, data);
     };
 
+    navigation.toggleAside = function() {
+        var that = this;
+
+        this.asideIsInTransition = true;
+        this.asideIsActive = !this.asideIsActive;
+        this.gesturesAreDisabled = !this.gesturesAreDisabled;
+
+        $timeout(function () {
+            that.asideIsInTransition = false;
+        }, cssTransitionDuration);
+    };
+
     navigation.toggleMenu = function() {
         var that = this;
 
@@ -88,10 +103,6 @@ Z.app.factory('navigation', ['$location', '$rootScope', '$timeout', 'menu', func
         $timeout(function () {
             that.menuIsInTransition = false;
         }, cssTransitionDuration);
-    };
-
-    navigation.toggleGestures = function() {
-        this.gesturesAreDisabled = !this.gesturesAreDisabled;
     };
 
     navigation.swipe = function(direction) {

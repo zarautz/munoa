@@ -15,20 +15,9 @@
 // Map
 //
 
-.map-container {
-    position: absolute;
-    z-index: 500;
-    top: $action-bar-height;
-    bottom: 0;
-    width: 100%;
-    background: $app-background;
-    @include transform-transition($transition-duration, ease-out);
-    @include transform-translateY(-100%);
-
-    div.active-map & {
-        @include transform-translateY(0);
-    }
-
+div.map-container {
+    padding: 0;
+    
     > div {
         height: 100%;
         width: 100%;

@@ -47,6 +47,8 @@ $drawer-text-size:            18px;
 $drawer-menu-border-color:    darken($drawer-background, 3%);
 $drawer-menu-selected:        darken($drawer-background, 5%);
 
+$aside-background:            whitesmoke;
+
 $filter-box-background-color: #efefef;
 $filter-box-width:            60%;
 $filter-box-separation-color: #ddd;
@@ -539,6 +541,7 @@ ul.drawer {
     @include button(1em, $color-blue, $app-secondary-border-radius, true, false, false);
     display: block;
     margin: $column-gutter 0;
+    font-size: $em-base;
 
     &, &:visited {
         color: white;
@@ -619,3 +622,4 @@ a.chameleon {
 @import "page-placeView";
 @import "page-tides";
 @import "page-weather";
+@import "page-zuzarautz";

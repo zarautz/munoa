@@ -52,13 +52,21 @@ main {
     @include transform-transition($transition-duration, ease-out);
 }
 
-aside {
+div.aside {
     position: absolute;
-    z-index: 20;
-    height: 100%;
+    z-index: 500;
+    top: $action-bar-height;
+    bottom: 0;
     width: 100%;
-    @include transform-transition($transition-duration, linear);
-    @include transform-translateY(130%);
+    background: $app-background;
+    @include transform-transition($transition-duration, ease-out);
+    @include transform-translateY(-100%);
+    background-color: $aside-background;
+    padding: $column-gutter;
+
+    body.active-aside & {
+        @include transform-translateY(0);
+    }
 }
 
 body.active-menu {
@@ -147,7 +155,7 @@ section {
 // Flex pages predefinition
 //
 
-$flex-pages: 5;
+$flex-pages: 4;
 
 section {
     width: 100% * $flex-pages;

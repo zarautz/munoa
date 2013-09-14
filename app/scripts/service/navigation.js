@@ -125,5 +125,10 @@ Z.app.factory('navigation', ['$location', '$rootScope', '$timeout', 'menu', func
         window.open(url, '_system');
     };
 
+    navigation.toHomepage = function() {
+        this.activeView = 1;
+        $location.path(menu._items[1].path);
+    };
+
     return navigation;
 }]);

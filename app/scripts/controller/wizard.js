@@ -1,16 +1,20 @@
 'use strict';
 
-Z.app.controller('WizardController', ['settingsManager', '$scope', function(settingsManager, $scope) {
-    this.page     = 0;
-    this.settings = settingsManager.settings;
+Z.app.controller('WizardController', ['settingsManager', 'navigation', function(settingsManager, navigation) {
+    this.activeView = 1;
+    this.settings   = settingsManager.settings;
 
-    this.back = function () {
-        this.page--;
+    this.popView = function () {
+        this.activeView--;
+    };
+
+    this.pushView = function () {
+        this.activeView++;
     };
 
     this.isActive = function() {
-        if (this.page > 1) {
-            this.page = 0;
+        if (this.activeView > 2) {
+            this.activeView = 1;
         }
 
         return !settingsManager.settings.isCached();
@@ -18,11 +22,10 @@ Z.app.controller('WizardController', ['settingsManager', '$scope', function(sett
 
     this.updateSetting = function(id, option) {
         settingsManager.updateSetting(id, option);
-        this.page++;
+        this.pushView();
 
-        if (this.page === 2) {
-            $scope.navigation.popView();
-            $scope.navigation.location.path('/');
+        if (this.activeView === 3) {
+            navigation.toHomepage();
         }
     };
 }]);

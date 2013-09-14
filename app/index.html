@@ -30,6 +30,23 @@
         <title>Zarautz</title>
     </head>
     <body ng-class="{ 'active-menu': navigation.menu.isActive(), 'active-aside': navigation.asideIsActive }">
+        <main
+            ng-swipe-right="navigation.swipe('right')"
+            ng-swipe-left="navigation.swipe('left')">
+            <div ng-view></div>
+        </main>
+        <nav class="overthrow">
+            <ul class="drawer">
+                <li ng-repeat="item in navigation.menu.getItems()">
+                    <a ng-href="#{{ item.path }}" class="{{ item.id }}"
+                        ng-class="{ 'active': item.path === navigation.location.path() }">
+                        <i class="{{ item.icon }}"></i>{{ item.id|translate }}
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Wizard -->
         <div ng-controller="WizardController as wizardCtrl" style="position: absolute; top:0; left: 0; width: 100%; height; 100%; z-index: 100; background-color: yellow;" ng-show="wizardCtrl.isActive()">
             <div ng-switch="wizardCtrl.page">
                 <div ng-switch-when="0">
@@ -66,21 +83,6 @@
             </div>
         </div>
 
-        <main ng-view
-            ng-swipe-right="navigation.swipe('right')"
-            ng-swipe-left="navigation.swipe('left')">
-        </main>
-        <nav class="overthrow">
-            <ul class="drawer">
-                <li ng-repeat="item in navigation.menu.getItems()">
-                    <a ng-href="#{{ item.path }}" class="{{ item.id }}"
-                        ng-class="{ 'active': item.path === navigation.location.path() }">
-                        <i class="{{ item.icon }}"></i>{{ item.id|translate }}
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <!--<aside></aside>-->
 
         <!-- build:js scripts/scripts.js -->
         <!-- el orden de los factores altera el producto -->

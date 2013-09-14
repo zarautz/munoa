@@ -158,7 +158,11 @@ body {
     line-height: $body-line-height;
 }
 
-main, section, section > div {
+main {
+    background: $aside-background;
+}
+
+section, section > div {
     background: $app-background;
 }
 
@@ -478,7 +482,7 @@ ul.drawer {
     text-align: center;
     padding: 2em 1em;
     font-weight: 300;
-    color: $color-lightest-text;
+    color: lighten($color-lightest-text, 5%);
     @include big-font();
     @include transform-translateZ(0);
 

@@ -79,12 +79,6 @@ body.active-menu {
     }
 }
 
-body.active-modal {
-    aside {
-        @include transform-translateY(0px);
-    }
-}
-
 section {
     position: absolute;
     height: 100%;

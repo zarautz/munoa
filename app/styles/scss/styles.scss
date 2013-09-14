@@ -21,9 +21,10 @@ $app-border-radius:           0; // Default in iOS 6: "3px";
 $app-background:              #fff;
 $app-secondary-border-radius: 3px;
 
+$em-base-smaller:             16px;
 $em-base:                     17px;
 $em-base-bigger:              18px;
-$em-base-biggest:             20px;
+$em-base-biggest:             19px;
 $small-font-size:             0.9em;
 $smallest-font-size:          0.8em;
 $big-font-size:               1.5em;
@@ -41,7 +42,7 @@ $action-bar-text-color:       #666;
 $action-bar-text-size:        20px;
 $action-bar-icon-size:        20px;
 
-$drawer-width:                260px; // 320px - 60px
+$drawer-width:                15.3em; // 320px - 60px
 $drawer-background:           #22252c;
 $drawer-border-right-color:   #121315;
 $drawer-text-color:           #eff0f2;
@@ -158,6 +159,10 @@ a {
 html, body {
     font-size: $em-base;
     
+    @media only screen and (max-width: 280px) {
+        font-size: $em-base-smaller;
+    }
+
     @media only screen and (min-width: $mobile-breakpoint) {
         font-size: $em-base-bigger;
     }
@@ -191,7 +196,7 @@ section {
         padding: $base-padding;
 
         @media only screen and (min-width: $tablet-breakpoint) {
-            padding: ($base-padding * 2);
+            padding: ($base-padding * 3) ($base-padding * 6);
         }
     }
 
@@ -289,6 +294,12 @@ section {
             }
         }
     }
+}
+
+div.aside {
+    background: $aside-background url(../images/zuzarautz.png) no-repeat center -190px;
+    padding: 45px $column-gutter $column-gutter;
+    border-top: 3px solid $color-blue;
 }
 
 //

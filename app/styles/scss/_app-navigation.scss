@@ -65,11 +65,8 @@ div.aside {
     top: $action-bar-height;
     bottom: 0;
     width: 100%;
-    background: $app-background;
     @include transform-transition($transition-duration, ease-out);
     @include transform-translateY(-100%);
-    background-color: $aside-background;
-    padding: $column-gutter;
 
     body.active-aside & {
         @include transform-translateY(0);

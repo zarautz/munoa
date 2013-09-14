@@ -7,7 +7,7 @@ $experimental-support-for-microsoft: false;
 
 $touchable-size:              48px; // Default in iOS: "44px"; Android: "48px"
 $tablet-breakpoint:           600px; // Nexus 7
-$mobile-breakpoint:           320px; // iPhone
+$mobile-breakpoint:           360px;
 
 $row-width:                   800px;
 $total-columns:               4;
@@ -22,10 +22,12 @@ $app-background:              #fff;
 $app-secondary-border-radius: 3px;
 
 $em-base:                     17px;
-$small-font-size:             15px;
-$smallest-font-size:          13px;
-$big-font-size:               26px;
-$biggest-font-size:           34px;
+$em-base-bigger:              18px;
+$em-base-biggest:             20px;
+$small-font-size:             0.9em;
+$smallest-font-size:          0.8em;
+$big-font-size:               1.5em;
+$biggest-font-size:           2em;
 $body-font-family:            "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $body-font-color:             #222;
 $body-line-height:            1.4;
@@ -43,7 +45,7 @@ $drawer-width:                260px; // 320px - 60px
 $drawer-background:           #22252c;
 $drawer-border-right-color:   #121315;
 $drawer-text-color:           #eff0f2;
-$drawer-text-size:            18px;
+$drawer-text-size:            1.05em;
 $drawer-menu-border-color:    darken($drawer-background, 3%);
 $drawer-menu-selected:        darken($drawer-background, 5%);
 
@@ -152,6 +154,18 @@ a {
 //
 // Layout
 //
+
+html, body {
+    font-size: $em-base;
+    
+    @media only screen and (min-width: $mobile-breakpoint) {
+        font-size: $em-base-bigger;
+    }
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        font-size: $em-base-biggest;
+    }
+}
 
 body {
     background: $drawer-background;
@@ -482,7 +496,7 @@ ul.drawer {
     text-align: center;
     padding: 2em 1em;
     font-weight: 300;
-    color: lighten($color-lightest-text, 5%);
+    color: lighten($color-lightest-text, 15%);
     @include big-font();
     @include transform-translateZ(0);
 

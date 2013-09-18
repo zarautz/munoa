@@ -267,8 +267,14 @@ Z.app.factory('placesConfig', [function() {
         .setIcon('icon-town-hall')
     ;
 
-    section.sortGroups('tourist', ['poi', 'nature', 'culture', 'sculpture', 'architecture']);
-    section.sortGroups('zarautz', ['poi', 'nature', 'culture', 'sculpture', 'architecture']);
+    group = section.addGroup('children');
+    group
+        .setTypes(['playground'])
+        .setIcon('icon-school')
+    ;
+
+    section.sortGroups('tourist', ['poi', 'nature', 'culture', 'sculpture', 'architecture', 'children']);
+    section.sortGroups('zarautz', ['poi', 'nature', 'culture', 'sculpture', 'architecture', 'children']);
 
     //
     // RETURN CONFIG INSTANCE

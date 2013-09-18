@@ -14,6 +14,7 @@ Z.app.run(['$rootScope', '$timeout', 'navigation', 'phonegap', 'settings', funct
 
     // Make navigation accesible by all the scopes
     $rootScope.navigation = navigation;
+    $rootScope.settings   = settings;
 
     phonegap.onDeviceReady().then(function () {
         // Back Button

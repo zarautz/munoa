@@ -107,7 +107,7 @@ Z.app.config(['$compileProvider', '$routeProvider', '$locationProvider', 'babelP
     // ------
     // We get the menu items from the menu provider as these have been processed
     angular.forEach(menuProvider.getMenuItems(), function (item) {
-        $routeProvider.when(item.route, {templateUrl: item.templateUrl});
+        $routeProvider.when(item.route, { templateUrl: item.templateUrl });
     });
 
     $routeProvider.otherwise({redirectTo: '/'});

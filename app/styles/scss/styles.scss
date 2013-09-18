@@ -6,8 +6,10 @@ $experimental-support-for-microsoft: false;
 @import "compass";
 
 $touchable-size:              48px; // Default in iOS: "44px"; Android: "48px"
+$touchable-size-min:          40px;
 $tablet-breakpoint:           600px; // Nexus 7
 $mobile-breakpoint:           360px;
+$mobile-height-breakpoint:    481px;
 
 $row-width:                   800px;
 $total-columns:               4;
@@ -27,7 +29,7 @@ $em-base-bigger:              18px;
 $em-base-biggest:             19px;
 $small-font-size:             0.9em;
 $smallest-font-size:          0.8em;
-$big-font-size:               1.5em;
+$big-font-size:               1.4em;
 $biggest-font-size:           2em;
 $body-font-family:            "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $body-font-color:             #222;
@@ -42,7 +44,7 @@ $action-bar-text-color:       #666;
 $action-bar-text-size:        20px;
 $action-bar-icon-size:        20px;
 
-$drawer-width:                15.3em; // 320px - 60px
+$drawer-width:                15.2em; // 320px - 60px
 $drawer-background:           #22252c;
 $drawer-border-right-color:   #121315;
 $drawer-text-color:           #eff0f2;
@@ -122,6 +124,22 @@ h1, h2, h3, h4 {
     margin: .25em 0 .75em;
     font-weight: 300;
     line-height: 1.2;
+}
+
+h1 {
+    font-size: $biggest-font-size;
+}
+
+h2 {
+    font-size: $big-font-size;
+}
+
+h3, h4 {
+    font-size: 1em;
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        font-size: 1.1em;
+    }
 }
 
 h5 {
@@ -204,7 +222,7 @@ section {
         position: absolute;
         bottom: 0;
         width: 100%;
-        z-index: 1000;
+        z-index: 80;
 
         p {
             @include smallest-font();
@@ -263,12 +281,17 @@ section {
             }
 
             li {
-                line-height: $touchable-size - $half-padding;
-                height: $touchable-size - $half-padding;
+                line-height: $touchable-size-min;
+                height: $touchable-size-min;
                 border-top: 1px solid $filter-box-separation-color;
                 padding: 0 $half-padding;
-                margin: 0 (-($half-padding));
+                margin: 0 (-$half-padding);
                 @include ellipsis();
+
+                @media only screen and (min-height: $mobile-height-breakpoint) {
+                    line-height: $touchable-size;
+                    height: $touchable-size;
+                }
 
                 [class^="icon-"],
                 [class*=" icon-"] {
@@ -297,10 +320,9 @@ section {
 }
 
 div.aside {
-    background: $aside-background url(../images/zuzarautz.png) no-repeat center -190px;
-    padding: 45px $column-gutter $column-gutter;
-    border-top: 3px solid $color-blue;
+    padding: $column-gutter;
 }
+
 
 //
 // Border radius
@@ -404,7 +426,7 @@ ul.drawer {
             
             &.active {
                 background: $drawer-menu-selected;
-                margin: 0 (-($base-padding));
+                margin: 0 (-$base-padding);
                 padding: 0 $base-padding;
                 margin-top: -1px;
                 border-top: 1px solid $drawer-menu-border-color;
@@ -426,19 +448,24 @@ ul.drawer {
 .block-grid-icons {
     li {
         text-align: center;
-        margin: $quarter-padding 0;
+        padding-top: $quarter-padding;
+        padding-bottom: $base-padding;
 
         [class^="icon-"],
         [class*=" icon-"] {
             font-size: $biggest-font-size;
             @include border-radius(1000px);
-            height: 1.6em;
-            width: 1.6em;
+            border: 4px solid $app-background;
+            height: 1.7em;
+            width: 1.7em;
             display: block;
             margin: 0 auto;
-            line-height: 1.55;
+            line-height: 1.5;
 
-            @include color-alternation('background-color');
+            &.icon-shop { line-height: 1.4; }
+            &.icon-town-hall { line-height: 1.35; }
+
+            @include color-alternation('border-color');
         }
 
         p {
@@ -446,6 +473,25 @@ ul.drawer {
             font-size: $smallest-font-size;
             line-height: 1.3;
             //@include color-alternation('border-top-color');
+        }
+
+        @media only screen and (min-height: $mobile-height-breakpoint) {
+            padding-top: $base-padding * 0.75;
+        }
+
+        @media only screen and (min-width: $tablet-breakpoint) {
+            padding-top: $column-gutter;
+            padding-bottom: $column-gutter;
+
+            [class^="icon-"],
+            [class*=" icon-"] {
+                font-size: $biggest-font-size * 1.4;
+                border-width: 5px;
+            }
+
+            p {
+                font-size: $small-font-size;
+            }
         }
     }
 }
@@ -463,16 +509,20 @@ ul.drawer {
         [class^="icon-"],
         [class*=" icon-"] {
             display: block;
-            font-size: 1.2em;
-            color: $color-light-blue;
+            color: $color-blue;
             float: left;
             margin-right: $half-padding;
+            font-size: 1.1em;
 
             &.right {
-                font-size: $smallest-font-size;
+                font-size: 1.2em;
                 margin: 0 0 0 $half-padding;
                 float: right;
                 color: $color-lightest-text;
+            }
+
+            &.color-alert {
+                color: $color-orange;
             }
         }
 
@@ -482,21 +532,21 @@ ul.drawer {
     }
 }
 
-.star-button {
-    font-size: $big-font-size;
-    margin: 0 (-($quarter-padding)) 0 $base-padding;
-    float: right;
+.simple-list {
+    li {
+        padding: $half-padding 0;
+        border-bottom: 1px solid $hr-border-color;
+
+        &:last-child {
+            border: 0;
+        } 
+    }
 }
 
-//
-// Image banner
-//
-
-.banner {
-    margin: (-($base-padding)) (-($base-padding)) $base-padding;
-    height: 200px;
-    background: #fafafa none center center no-repeat;
-    background-size: cover;
+.star-button {
+    font-size: $big-font-size;
+    margin: 0 (-$quarter-padding) 0 $base-padding;
+    float: right;
 }
 
 //
@@ -575,17 +625,49 @@ ul.drawer {
     &, &:visited {
         color: white;
     }
+
+    &.alert { @include button-style($bg:$alert-color); }
 }
 
 .post {
+    .title {
+        font-size: $big-font-size;
+        color: $color-dark-blue;
+    }
     .content {
         div > img + p {
             font-size: .9em;
             color: $color-light-text;
+            margin-top: -$half-padding;
         }
 
         img {
             width: 100%;
+        }
+    }
+}
+
+//
+// Branding
+//
+
+div.branding {
+    background: $aside-background url(../images/zuzarautz.png) no-repeat center -195px;
+    border-top: 3px solid $color-blue;
+
+    &, section & {
+        padding: 50px 1.9em 1.9em;
+
+        @media only screen and (max-width: 319px) {
+            padding: 50px $base-padding $base-padding;
+        }
+    }
+
+    @media only screen and (min-height: $mobile-height-breakpoint) {
+        background-position: center -184px;
+
+        &, section & {
+            padding-top: 80px;
         }
     }
 }
@@ -648,6 +730,7 @@ a.chameleon {
 }
 
 @import "module-tableview";
+@import "page-eventView";
 @import "page-placeView";
 @import "page-tides";
 @import "page-weather";

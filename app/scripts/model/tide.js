@@ -7,18 +7,18 @@ Z.Model.Tide = function (tide) {
 Z.Model.Tide.prototype.getTides = function () {
     var tides = [],
         all   = this.high.concat(this.low),
-        tide, i;
+        value, i;
 
     all.sort();
 
     for (i = 0; i < all.length; i++) {
-        if (this.high.indexOf(all[i]) >= 0) {
-            tide = 'high';
+        if (this.high.indexOf(all[i]) !== -1) {
+            value = 'high';
         } else {
-            tide = 'low';
+            value = 'low';
         }
 
-        tides.push({tide: tide, hour: all[i]});
+        tides.push({ tide: value, hour: all[i] });
     }
 
     return tides;

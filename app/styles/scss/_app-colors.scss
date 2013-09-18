@@ -1,11 +1,11 @@
-$lighten-percentage: 28%;
+$lighten-percentage: 15%;
 
 $color-text: $body-font-color;
-$color-light-text: #555;
+$color-light-text: #666;
 $color-lightest-text: #999;
 $color-blue: #34aadc;
 $color-flashy-blue: #007aff;
-$color-dark-blue: darken($color-blue, 10%);
+$color-dark-blue: darken($color-blue, 15%);
 $color-light-blue: #5ac8fa;
 $color-lightest-blue: lighten($color-blue, $lighten-percentage);
 $color-green: #4cd964;

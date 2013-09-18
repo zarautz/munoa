@@ -3,7 +3,7 @@
         <header>
             <h1 class="title" ng-bind="('settings.language') | translate"></h1>
         </header>
-        <div class="overthrow table-view">
+        <div class="overthrow table-view branding">
             <ul>
                 <li ng-repeat="option in wizardCtrl.settings.getOptions('language')">
                     <a href ng-click="wizardCtrl.updateSetting('language', option)">
@@ -14,9 +14,7 @@
             </ul>
             <p class="explanation">
                 Aukeratu zure hizkuntza<br/>
-                <em>Elige tu idioma</em><br/>
-                Choose your language<br/>
-                <em>Choisissez votre langue</em>
+                <em>Choose your language</em>
             </p>
         </div>
     </div>
@@ -25,7 +23,7 @@
             <a href ng-click="wizardCtrl.popView()"><i class="left icon-left"></i></a>
             <h1 class="title">{{ ('settings.profile')|translate }}</h1>
         </header>
-        <div class="overthrow table-view">
+        <div class="overthrow table-view branding">
             <ul>
                 <li ng-repeat="option in wizardCtrl.settings.getOptions('profile')">
                     <a href ng-click="wizardCtrl.updateSetting('profile', option)">

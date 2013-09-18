@@ -32,6 +32,11 @@ Z.app.factory('tidesMapper', ['$q', 'forecastSource', function ($q, forecastSour
             }));
         }
 
+        // Preprocess to avoid ng-repeat problems
+        for (i = 0; i < tides.length; i++) {
+            tides[i]['tides'] = tides[i].getTides();
+        }
+
         return tides;
     });
 

@@ -5,8 +5,6 @@ $tableview-detail-font-color: $color-dark-blue;
 $tableview-border-color:      #eaeaea;
 
 .table-view {
-    //font-size: 1.1em;
-
     h5 {
         border-width: 0 0 1px 0;
         border-style: solid;
@@ -18,7 +16,7 @@ $tableview-border-color:      #eaeaea;
         border-style: solid;
         border-color: $tableview-border-color;
 
-        a {
+        a, .a {
             display: block;
             color: $body-font-color;
             border-bottom: 1px solid $tableview-border-color;
@@ -37,12 +35,20 @@ $tableview-border-color:      #eaeaea;
 
             .detail {
                 float: right;
-                color: $tableview-detail-font-color;
                 margin-right: $half-padding;
+                font-size: $small-font-size;
+                color: $color-light-text;
             }
         }
 
-        li:last-child a {
+        a {
+            .detail {
+                color: $tableview-detail-font-color;
+                font-size: 1em;
+            }
+        }
+
+        li:last-child a, li:last-child .a {
             border: 0;
         }
     }
@@ -76,27 +82,40 @@ $tableview-border-color:      #eaeaea;
         img {
             width: 100%;
         }
+
+        &.featured {
+            border: 4px solid $color-yellow;
+        }
     }
 
-    p {
-        @include smallest-font();
-        margin-top: $half-padding;
+    .main-td {
+        p {
+            @include smallest-font();
+            margin-top: $half-padding;
+            color: $color-light-text;
+            padding-left: $base-padding;
 
-        .distance {
-            color: $color-lightest-text;
-        }
+            .distance {
+                color: $color-lightest-text;
+            }
 
-        .tag {
-            display: block;
-            float: left;
-            margin-right: 0.2em;
-        }
+            .tag {
+                display: block;
+                float: left;
+                margin-right: 0.2em;
+            }
 
-        [class^="icon-"],
-        [class*=" icon-"] {
-            float: left;
-            margin: 0 0 0 -3px;
-            font-size: .9em;
+            [class^="icon-"],
+            [class*=" icon-"] {
+                float: left;
+                margin-left: -($base-padding + 4px);
+                margin-right: 1px;
+                color: lighten($color-light-text, 5%);
+
+                &.color-blue {
+                    color: $color-blue;
+                }
+            }
         }
     }
 
@@ -119,19 +138,23 @@ $tableview-border-color:      #eaeaea;
             width: 40px;
             line-height: 32px;
             @include border-radius($app-secondary-border-radius);
-            font-size: $small-font-size;
+            font-size: $em-base;
             margin: 0;
             padding: 0;
 
-            &.icon-direction {
+            &.left-radius {
                 @include border-top-right-radius(0);
                 @include border-bottom-right-radius(0);
             }
 
-            &.icon-sort-alphabet {
+            &.right-radius {
                 padding-right: 3px;
                 @include border-top-left-radius(0);
                 @include border-bottom-left-radius(0);
+            }
+
+            &.icon-sort-alphabet {
+                padding-right: 3px;
             }
 
             &.icon-star {
@@ -148,5 +171,18 @@ $tableview-border-color:      #eaeaea;
                 color: white;
             }
         }
+    }
+}
+
+p.table-view-separator {
+    border-bottom: 1px solid $color-blue;
+    color: $color-dark-blue;
+    padding: $half-padding $base-padding;
+    margin: ($base-padding * 1.5) (-$base-padding) $base-padding;
+    @include smallest-font();
+    text-transform: uppercase;
+
+    &.compress {
+        margin-top: 0;
     }
 }

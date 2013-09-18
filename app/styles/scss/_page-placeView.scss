@@ -1,4 +1,24 @@
 //
+// Image banner
+//
+
+.banner {
+    margin: (-($base-padding)) (-($base-padding)) $base-padding;
+    height: 198px;
+    background: #fafafa none center center no-repeat;
+    background-size: cover;
+
+    @media only screen and (min-height: $mobile-height-breakpoint) {
+        height: 214px;
+    }
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        height: 300px;
+        margin: (-$base-padding) 0 ($column-gutter);
+    }
+}
+
+//
 // Ficha
 //
 

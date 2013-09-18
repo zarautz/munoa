@@ -1,6 +1,12 @@
 'use strict';
 
 Z.catalogue = {
+    'app': {
+        'eu': 'Zarautz App',
+        'es': 'Zarautz App',
+        'en': 'Zarautz App',
+        'fr': 'Zarautz App'
+    },
     'loading': {
         'eu': 'Eguneratzen...',
         'es': 'Actualizando...',
@@ -91,6 +97,39 @@ Z.catalogue = {
         'en': 'Events',
         'fr': 'Événements'
     },
+    'event.count': { // % events
+        'eu': 'lotutako ekitaldi',
+        'es': 'eventos relacionados',
+        'en': 'related events',
+        'fr': 'événements liés'
+    },
+    'event.targetAge.children': {
+        'eu': 'Haurrentzat',
+        'es': 'Para niños',
+        'en': 'For children',
+        'fr': 'Pour les enfants'
+    },
+    'event.targetAge.adult': {
+        'eu': 'Helduentzat',
+        'es': 'Para adultos',
+        'en': 'For adults',
+        'fr': 'Pour les adultes'
+    },
+    //
+    // Tides
+    //
+    'tides.level.high': {
+        'eu': 'Goian',
+        'es': 'Alta',
+        'en': 'High',
+        'fr': 'Haute'
+    },
+    'tides.level.low': {
+        'eu': 'Behean',
+        'es': 'Baja',
+        'en': 'Low',
+        'fr': 'Basse'
+    },
     //
     // Health
     //
@@ -107,16 +146,16 @@ Z.catalogue = {
         'eu': 'Lekuak',
         'es': 'Lugares',
         'en': 'Places',
-        'fr': ''
+        'fr': 'Lieux'
     },
     //
     // Point Of Interest
     //
     'poi': {
         'eu': 'Zer ikusi',
-        'es': '',
-        'en': 'Sightseeing',
-        'fr': ''
+        'es': 'Qué ver',
+        'en': 'What to see',
+        'fr': 'Que voir'
     },
     //
     // Settings
@@ -128,18 +167,30 @@ Z.catalogue = {
         'fr': 'Réglages'
     },
     'settings.about': {
-        'eu': 'About(eu)',
+        'eu': 'Aplikazioari buruz',
         'es': 'Acerca de',
         'en': 'About',
-        'fr': 'About(fr)'
+        'fr': 'Sur'
+    },
+    'settings.about.opensource': {
+        'eu': 'Open source',
+        'es': 'Open source',
+        'en': 'Open source',
+        'fr': 'Open source'
     },
     'settings.about.build': {
-        'eu': 'Build(eu)',
-        'es': 'Build(es)',
+        'eu': 'Build-a',
+        'es': 'Build',
         'en': 'Build',
-        'fr': 'Build(fr)'
+        'fr': 'Build'
     },
-    'settings.cache': {
+    'settings.data': {
+        'eu': 'Datuak',
+        'es': 'Datos',
+        'en': 'Data',
+        'fr': 'Données'
+    },
+    'settings.data.cache': {
         'eu': 'Datuak ezabatu',
         'es': 'Borrar datos',
         'en': 'Clear data',
@@ -401,10 +452,16 @@ Z.catalogue = {
         'fr': 'Sculptures'
     },
     'placesGroup.poi.architecture': {
-        'eu': 'Ondare arkitektonikoa',
-        'es': 'Patrimonio arquitectónico',
-        'en': 'Architectural heritage',
-        'fr': 'Patrimoine architectural'
+        'eu': 'Arkitektura',
+        'es': 'Arquitectura',
+        'en': 'Architecture',
+        'fr': 'L\'architecture'
+    },
+    'placesGroup.poi.children': {
+        'eu': 'Haurrentzat',
+        'es': 'Para niños',
+        'en': 'For children',
+        'fr': 'Pour les enfants'
     },
     //
     // Other

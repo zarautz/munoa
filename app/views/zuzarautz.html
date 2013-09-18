@@ -7,7 +7,7 @@
                     <i class="right icon-spin color-blue animate-spin"></i>
                 </div>
                 <div ng-switch-default>
-                    <i ng-if="zzCtrl.zarauztarra" ng-click="navigation.toggleAside();" class="right" ng-class="{ 'icon-info': !navigation.asideIsActive, 'icon-cancel': navigation.asideIsActive }"></i>
+                    <i ng-if="settings.get('profile') === 'zarautz'" ng-click="navigation.toggleAside();" class="right" ng-class="{ 'icon-info': !navigation.asideIsActive, 'icon-cancel': navigation.asideIsActive }"></i>
                 </div>
             </div>
             <h1 class="title">{{ 'zuzarautz'|translate }}</h1>
@@ -24,21 +24,24 @@
         </div>
         <div ng-if="!zzCtrl.status.isLoading" class="overthrow table-view-images">
             <div ng-repeat="post in zzCtrl.posts">
-                <hr ng-hide="$index == 0"/>
+                <hr ng-hide="$index === 0"/>
                 <div class="row collapse"
                     ng-click="navigation.pushView('post.show', { 'post': post })">
                     <div class="large-1 small-1 columns">
                         <div class="thumbnail color-{{ $index % 5 }}" ng-style="{ 'background-image': 'url('+ post.getThumbnailImage() +')' }"><img src="images/dot.png" /></div>
                     </div>
-                    <div class="large-3 small-3 columns">
+                    <div class="large-3 small-3 columns main-td">
                         <i class="icon-right-open"></i>
                         <h4 class="title">{{ post.title }}</h4>
-                        <p class="color-lightest-text">{{ post.publishedAt | amDateFormat:'LL' }}</p>
+                        <p>
+                            <i class="icon-calendar-alt"></i>
+                            {{ post.publishedAt | amDateFormat:'LL' }}
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="aside zz-info">
+        <div class="aside branding">
             <h2>
                 Denon artean egiten dugu Zarautz
             </h2>
@@ -60,12 +63,12 @@
         <h1 class="title">{{ pushData.post.title }}</h1>
     </header>
     <div class="overthrow post" ng-if="navigation.contentIsAlive(2)">
-        <h1 class="color-dark-blue">
+        <h1 class="title">
             {{ pushData.post.title }}
         </h1>
         <p class="text-small color-lightest-text">
             <i class="icon-user"></i> {{ pushData.post.author }}<br />
-            <i class="icon-calendar"></i> {{ pushData.post.publishedAt | amDateFormat:'LL' }}<br />
+            <i class="icon-calendar-alt"></i> {{ pushData.post.publishedAt | amDateFormat:'LL' }}<br />
             <i class="icon-tag"></i> {{ pushData.post.tags.join(', ') }}<br />
         </p>
         <div munoa-link-converter content="{{ pushData.post.getContent('medium') }}" class="content"></div>

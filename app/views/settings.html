@@ -16,20 +16,34 @@
                 </li>
             </ul>
             <br/>
-            <h5>{{ 'settings.other' | translate }}</h5>
+            <h5>{{ 'app' | translate }}</h5>
             <ul>
-                <li>
+                <!--<li>
                     <a href ng-click="navigation.pushView('settings.about')">
                         <i class="icon-right-open"></i>
                         {{ 'settings.about' | translate }}
-                        <span class="detail"></span>
                     </a>
                 </li>
                 <li>
-                    <a href ng-click="navigation.pushView('settings.cache')">
+                    <a href ng-click="navigation.pushView('settings.about.opensource')">
                         <i class="icon-right-open"></i>
-                        {{ 'settings.cache' | translate }}
-                        <span class="detail"></span>
+                        {{ 'settings.about.opensource' | translate }}
+                    </a>
+                </li>-->
+                <li>
+                    <span class="a">
+                        {{ 'settings.about.build'|translate }}
+                        <span class="detail">{{ '@@timestamp' | amDateFormat:'llll' }}</span>
+                    </span>
+                </li>
+            </ul>
+            <br/>
+            <h5>{{ 'settings.data' | translate }}</h5>
+            <ul>
+                <li>
+                    <a href ng-click="navigation.pushView('settings.data.cache')">
+                        <i class="icon-right-open"></i>
+                        {{ 'settings.data.cache' | translate }}
                     </a>
                 </li>
             </ul>
@@ -64,29 +78,45 @@
         <h1 class="title">{{ 'settings.about'|translate }}</h1>
     </header>
     <div class="overthrow">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        <p><small>{{ 'settings.about.build'|translate }}: @@timestamp</small></p>
+        <p></p>
         <ul class="cta-list">
-            <li ng-click="navigation.openExternalLink('http://illarra.com/')">
-                <i class="icon-phone"></i>
-                Url
+            <li ng-click="navigation.openExternalLink('mailto:turismoa@zarautz.org')">
+                <i class="icon-info"></i>
+                turismoa@zarautz.org
             </li>
-            <li ng-click="navigation.openExternalLink('mailto:team@illarra.com'">
-                <i class="icon-post"></i>
+            <li ng-click="navigation.openExternalLink('mailto:team@illarra.com')">
+                <i class="icon-cog"></i>
                 team@illarra.com
             </li>
         </ul>
     </div>
 </script>
 
-
-<script type="text/ng-template" id="settings.cache">
+<script type="text/ng-template" id="settings.about.opensource">
     <header>
         <a href ng-click="navigation.popView()"><i class="left icon-left"></i></a>
-        <h1 class="title">{{ 'settings.cache'|translate }}</h1>
+        <h1 class="title">{{ 'settings.about.opensource'|translate }}</h1>
     </header>
     <div class="overthrow">
-        <p>Lorem.</p>
-        <p><a class="button" ng-click="setCtrl.clearCache()">Do it!</a></p>
+        <p></p>
+        <ul class="cta-list">
+            <li ng-click="navigation.openExternalLink(setCtrl.apiDocs)">
+                <i class="icon-download"></i>
+                Zarautz API
+            </li>
+        </ul>
+    </div>
+</script>
+
+<script type="text/ng-template" id="settings.data.cache">
+    <header>
+        <a href ng-click="navigation.popView()"><i class="left icon-left"></i></a>
+        <h1 class="title">{{ 'settings.data.cache'|translate }}</h1>
+    </header>
+    <div class="overthrow">
+        <!--<p>{{ 'settings.cache.explanation' | translate }}</p>-->
+        <a href ng-click="setCtrl.clearCache()" class="external-link alert">
+            {{ 'settings.data.cache' | translate }}
+        </a>
     </div>
 </script>

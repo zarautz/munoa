@@ -1290,7 +1290,7 @@ nav {
   position: absolute;
   z-index: 0;
   height: 100%;
-  width: 15.3em;
+  width: 15.2em;
 }
 
 /* line 47, scss/_app-navigation.scss */
@@ -1343,8 +1343,8 @@ body.active-aside div.aside {
 
 /* line 77, scss/_app-navigation.scss */
 body.active-menu main {
-  -webkit-transform: translateX(15.3em);
-  transform: translateX(15.3em);
+  -webkit-transform: translateX(15.2em);
+  transform: translateX(15.2em);
 }
 @media only screen and (max-width: 315px) {
   /* line 77, scss/_app-navigation.scss */
@@ -1460,7 +1460,7 @@ section.on-4 {
 
 /* line 23, scss/_app-colors.scss */
 .color-light-text {
-  color: #555555;
+  color: #666666;
 }
 
 /* line 24, scss/_app-colors.scss */
@@ -1480,7 +1480,7 @@ section.on-4 {
 
 /* line 27, scss/_app-colors.scss */
 .color-dark-blue {
-  color: #218ebd;
+  color: #1d7ea7;
 }
 
 /* line 28, scss/_app-colors.scss */
@@ -1558,208 +1558,208 @@ section.on-4 {
 
 /* line 43, scss/_app-icons.scss */
 .icon-compass:before {
-  content: '\e81f';
-}
-
-/* '' */
-/* line 44, scss/_app-icons.scss */
-.icon-na:before {
-  content: '\e820';
-}
-
-/* '' */
-/* line 45, scss/_app-icons.scss */
-.icon-celcius:before {
-  content: '\e821';
-}
-
-/* '' */
-/* line 46, scss/_app-icons.scss */
-.icon-fahrenheit:before {
   content: '\e822';
 }
 
 /* '' */
-/* line 47, scss/_app-icons.scss */
-.icon-weather-53:before {
+/* line 44, scss/_app-icons.scss */
+.icon-na:before {
   content: '\e823';
 }
 
 /* '' */
-/* line 48, scss/_app-icons.scss */
-.icon-moon-inv:before {
+/* line 45, scss/_app-icons.scss */
+.icon-celcius:before {
   content: '\e824';
 }
 
 /* '' */
-/* line 49, scss/_app-icons.scss */
-.icon-sunrise:before {
+/* line 46, scss/_app-icons.scss */
+.icon-fahrenheit:before {
   content: '\e825';
 }
 
 /* '' */
-/* line 50, scss/_app-icons.scss */
-.icon-weather-11:before {
+/* line 47, scss/_app-icons.scss */
+.icon-weather-53:before {
   content: '\e826';
 }
 
 /* '' */
-/* line 51, scss/_app-icons.scss */
-.icon-moon:before {
+/* line 48, scss/_app-icons.scss */
+.icon-moon-inv:before {
   content: '\e827';
 }
 
 /* '' */
-/* line 52, scss/_app-icons.scss */
-.icon-eclipse:before {
+/* line 49, scss/_app-icons.scss */
+.icon-sunrise:before {
   content: '\e828';
 }
 
 /* '' */
-/* line 53, scss/_app-icons.scss */
-.icon-weather-12:before {
+/* line 50, scss/_app-icons.scss */
+.icon-weather-11:before {
   content: '\e829';
 }
 
 /* '' */
-/* line 54, scss/_app-icons.scss */
-.icon-wind:before {
+/* line 51, scss/_app-icons.scss */
+.icon-moon:before {
   content: '\e82a';
 }
 
 /* '' */
-/* line 55, scss/_app-icons.scss */
-.icon-snow:before {
+/* line 52, scss/_app-icons.scss */
+.icon-eclipse:before {
   content: '\e82b';
 }
 
 /* '' */
-/* line 56, scss/_app-icons.scss */
-.icon-weather-13:before {
+/* line 53, scss/_app-icons.scss */
+.icon-weather-12:before {
   content: '\e82c';
 }
 
 /* '' */
-/* line 57, scss/_app-icons.scss */
-.icon-cloud-moon:before {
+/* line 54, scss/_app-icons.scss */
+.icon-wind:before {
   content: '\e82d';
 }
 
 /* '' */
-/* line 58, scss/_app-icons.scss */
-.icon-uv:before {
+/* line 55, scss/_app-icons.scss */
+.icon-snow:before {
   content: '\e82e';
 }
 
 /* '' */
-/* line 59, scss/_app-icons.scss */
-.icon-fog:before {
+/* line 56, scss/_app-icons.scss */
+.icon-weather-13:before {
   content: '\e82f';
 }
 
 /* '' */
-/* line 60, scss/_app-icons.scss */
-.icon-weather-14:before {
+/* line 57, scss/_app-icons.scss */
+.icon-cloud-moon:before {
   content: '\e830';
 }
 
 /* '' */
-/* line 61, scss/_app-icons.scss */
-.icon-weather-51:before {
+/* line 58, scss/_app-icons.scss */
+.icon-uv:before {
   content: '\e831';
 }
 
 /* '' */
-/* line 62, scss/_app-icons.scss */
-.icon-weather-43:before {
+/* line 59, scss/_app-icons.scss */
+.icon-fog:before {
   content: '\e832';
 }
 
 /* '' */
-/* line 63, scss/_app-icons.scss */
-.icon-weather-23:before {
+/* line 60, scss/_app-icons.scss */
+.icon-weather-14:before {
   content: '\e833';
 }
 
 /* '' */
-/* line 64, scss/_app-icons.scss */
-.icon-windy:before {
+/* line 61, scss/_app-icons.scss */
+.icon-weather-51:before {
   content: '\e834';
 }
 
 /* '' */
-/* line 65, scss/_app-icons.scss */
-.icon-windy-rain:before {
+/* line 62, scss/_app-icons.scss */
+.icon-weather-43:before {
   content: '\e835';
 }
 
 /* '' */
-/* line 66, scss/_app-icons.scss */
-.icon-weather-33:before {
+/* line 63, scss/_app-icons.scss */
+.icon-weather-23:before {
   content: '\e836';
 }
 
 /* '' */
-/* line 67, scss/_app-icons.scss */
-.icon-weather-35:before {
+/* line 64, scss/_app-icons.scss */
+.icon-windy:before {
   content: '\e837';
 }
 
 /* '' */
-/* line 68, scss/_app-icons.scss */
-.icon-weather-71:before {
+/* line 65, scss/_app-icons.scss */
+.icon-windy-rain:before {
   content: '\e838';
 }
 
 /* '' */
-/* line 69, scss/_app-icons.scss */
-.icon-weather-15:before {
+/* line 66, scss/_app-icons.scss */
+.icon-weather-33:before {
   content: '\e839';
 }
 
 /* '' */
-/* line 70, scss/_app-icons.scss */
-.icon-info:before {
-  content: '\e812';
+/* line 67, scss/_app-icons.scss */
+.icon-weather-35:before {
+  content: '\e83a';
 }
 
-/* '' */
-/* line 71, scss/_app-icons.scss */
-.icon-left:before {
-  content: '\e840';
+/* '' */
+/* line 68, scss/_app-icons.scss */
+.icon-weather-71:before {
+  content: '\e83b';
 }
 
-/* '' */
-/* line 72, scss/_app-icons.scss */
-.icon-right:before {
-  content: '\e841';
-}
-
-/* '' */
-/* line 73, scss/_app-icons.scss */
-.icon-home:before {
+/* '' */
+/* line 69, scss/_app-icons.scss */
+.icon-weather-15:before {
   content: '\e83c';
 }
 
 /* '' */
+/* line 70, scss/_app-icons.scss */
+.icon-info:before {
+  content: '\e814';
+}
+
+/* '' */
+/* line 71, scss/_app-icons.scss */
+.icon-left:before {
+  content: '\e844';
+}
+
+/* '' */
+/* line 72, scss/_app-icons.scss */
+.icon-right:before {
+  content: '\e845';
+}
+
+/* '' */
+/* line 73, scss/_app-icons.scss */
+.icon-home:before {
+  content: '\e840';
+}
+
+/* '' */
 /* line 74, scss/_app-icons.scss */
 .icon-sun-alt:before {
-  content: '\e81b';
+  content: '\e81e';
 }
 
-/* '' */
+/* '' */
 /* line 75, scss/_app-icons.scss */
 .icon-rain:before {
-  content: '\e81c';
+  content: '\e81f';
 }
 
-/* '' */
+/* '' */
 /* line 76, scss/_app-icons.scss */
 .icon-star:before {
-  content: '\f020';
+  content: '\e803';
 }
 
-/* '' */
+/* '' */
 /* line 77, scss/_app-icons.scss */
 .icon-star-empty:before {
   content: '\e804';
@@ -1768,16 +1768,16 @@ section.on-4 {
 /* '' */
 /* line 78, scss/_app-icons.scss */
 .icon-layout:before {
-  content: '\e811';
-}
-
-/* '' */
-/* line 79, scss/_app-icons.scss */
-.icon-flag:before {
   content: '\e813';
 }
 
 /* '' */
+/* line 79, scss/_app-icons.scss */
+.icon-flag:before {
+  content: '\e815';
+}
+
+/* '' */
 /* line 80, scss/_app-icons.scss */
 .icon-attention:before {
   content: '\e807';
@@ -1786,64 +1786,64 @@ section.on-4 {
 /* '' */
 /* line 81, scss/_app-icons.scss */
 .icon-ok:before {
-  content: '\e83a';
+  content: '\e83e';
 }
 
-/* '' */
+/* '' */
 /* line 82, scss/_app-icons.scss */
 .icon-cancel:before {
-  content: '\e83b';
+  content: '\e83f';
 }
 
-/* '' */
+/* '' */
 /* line 83, scss/_app-icons.scss */
 .icon-accessibility:before {
-  content: '\e861';
+  content: '\e865';
 }
 
-/* '' */
+/* '' */
 /* line 84, scss/_app-icons.scss */
 .icon-sort-alphabet:before {
-  content: '\e819';
+  content: '\e81c';
 }
 
-/* '' */
+/* '' */
 /* line 85, scss/_app-icons.scss */
 .icon-book:before {
-  content: '\e860';
+  content: '\e864';
 }
 
-/* '' */
+/* '' */
 /* line 86, scss/_app-icons.scss */
 .icon-cog-alt:before {
-  content: '\e85f';
+  content: '\e863';
 }
 
-/* '' */
+/* '' */
 /* line 87, scss/_app-icons.scss */
 .icon-cog:before {
-  content: '\e85e';
+  content: '\e862';
 }
 
-/* '' */
+/* '' */
 /* line 88, scss/_app-icons.scss */
 .icon-tag:before {
-  content: '\e81d';
+  content: '\e820';
 }
 
-/* '' */
+/* '' */
 /* line 89, scss/_app-icons.scss */
 .icon-share:before {
-  content: '\e814';
+  content: '\e816';
 }
 
-/* '' */
+/* '' */
 /* line 90, scss/_app-icons.scss */
 .icon-location:before {
-  content: '\e815';
+  content: '\e817';
 }
 
-/* '' */
+/* '' */
 /* line 91, scss/_app-icons.scss */
 .icon-basket-alt:before {
   content: '\e80b';
@@ -1852,331 +1852,362 @@ section.on-4 {
 /* '' */
 /* line 92, scss/_app-icons.scss */
 .icon-basket:before {
-  content: '\e81e';
+  content: '\e821';
 }
 
-/* '' */
+/* '' */
 /* line 93, scss/_app-icons.scss */
-.icon-layers:before {
-  content: '\e81a';
+.icon-calendar-alt:before {
+  content: '\e868';
 }
 
-/* '' */
+/* '' */
 /* line 94, scss/_app-icons.scss */
+.icon-layers:before {
+  content: '\e81d';
+}
+
+/* '' */
+/* line 95, scss/_app-icons.scss */
 .icon-smiley:before {
   content: '\e800';
 }
 
 /* '' */
-/* line 95, scss/_app-icons.scss */
+/* line 96, scss/_app-icons.scss */
 .icon-emo-sleep:before {
   content: '\e801';
 }
 
 /* '' */
-/* line 96, scss/_app-icons.scss */
-.icon-art:before {
-  content: '\e842';
-}
-
-/* '' */
 /* line 97, scss/_app-icons.scss */
-.icon-bar:before {
-  content: '\e843';
-}
-
-/* '' */
-/* line 98, scss/_app-icons.scss */
-.icon-beer:before {
-  content: '\e844';
-}
-
-/* '' */
-/* line 99, scss/_app-icons.scss */
-.icon-bicycle:before {
-  content: '\e845';
-}
-
-/* '' */
-/* line 100, scss/_app-icons.scss */
-.icon-bus:before {
+.icon-art:before {
   content: '\e846';
 }
 
 /* '' */
-/* line 101, scss/_app-icons.scss */
-.icon-cafe:before {
+/* line 98, scss/_app-icons.scss */
+.icon-bar:before {
   content: '\e847';
 }
 
 /* '' */
-/* line 102, scss/_app-icons.scss */
-.icon-campsite:before {
+/* line 99, scss/_app-icons.scss */
+.icon-beer:before {
   content: '\e848';
 }
 
 /* '' */
-/* line 103, scss/_app-icons.scss */
-.icon-credit-card:before {
+/* line 100, scss/_app-icons.scss */
+.icon-bicycle:before {
   content: '\e849';
 }
 
 /* '' */
-/* line 104, scss/_app-icons.scss */
-.icon-fast-food:before {
+/* line 101, scss/_app-icons.scss */
+.icon-bus:before {
   content: '\e84a';
 }
 
 /* '' */
-/* line 105, scss/_app-icons.scss */
-.icon-fuel:before {
+/* line 102, scss/_app-icons.scss */
+.icon-cafe:before {
   content: '\e84b';
 }
 
 /* '' */
-/* line 106, scss/_app-icons.scss */
-.icon-hospital-alt:before {
+/* line 103, scss/_app-icons.scss */
+.icon-campsite:before {
   content: '\e84c';
 }
 
 /* '' */
-/* line 107, scss/_app-icons.scss */
-.icon-library:before {
+/* line 104, scss/_app-icons.scss */
+.icon-credit-card:before {
   content: '\e84d';
 }
 
 /* '' */
-/* line 108, scss/_app-icons.scss */
-.icon-lodging:before {
+/* line 105, scss/_app-icons.scss */
+.icon-fast-food:before {
   content: '\e84e';
 }
 
 /* '' */
-/* line 109, scss/_app-icons.scss */
-.icon-pitch:before {
+/* line 106, scss/_app-icons.scss */
+.icon-fuel:before {
   content: '\e84f';
 }
 
 /* '' */
-/* line 110, scss/_app-icons.scss */
-.icon-police:before {
+/* line 107, scss/_app-icons.scss */
+.icon-hospital-alt:before {
   content: '\e850';
 }
 
 /* '' */
-/* line 111, scss/_app-icons.scss */
-.icon-post:before {
+/* line 108, scss/_app-icons.scss */
+.icon-library:before {
   content: '\e851';
 }
 
 /* '' */
-/* line 112, scss/_app-icons.scss */
-.icon-rail:before {
+/* line 109, scss/_app-icons.scss */
+.icon-lodging:before {
   content: '\e852';
 }
 
 /* '' */
-/* line 113, scss/_app-icons.scss */
-.icon-spin:before {
-  content: '\f000';
-}
-
-/* '' */
-/* line 114, scss/_app-icons.scss */
-.icon-restaurant:before {
+/* line 110, scss/_app-icons.scss */
+.icon-pitch:before {
   content: '\e853';
 }
 
 /* '' */
-/* line 115, scss/_app-icons.scss */
-.icon-school:before {
+/* line 111, scss/_app-icons.scss */
+.icon-police:before {
   content: '\e854';
 }
 
 /* '' */
-/* line 116, scss/_app-icons.scss */
-.icon-shop:before {
+/* line 112, scss/_app-icons.scss */
+.icon-post:before {
   content: '\e855';
 }
 
 /* '' */
-/* line 117, scss/_app-icons.scss */
-.icon-football:before {
+/* line 113, scss/_app-icons.scss */
+.icon-rail:before {
   content: '\e856';
 }
 
 /* '' */
-/* line 118, scss/_app-icons.scss */
-.icon-swim:before {
+/* line 114, scss/_app-icons.scss */
+.icon-restaurant:before {
   content: '\e857';
 }
 
 /* '' */
-/* line 119, scss/_app-icons.scss */
-.icon-theatre:before {
+/* line 115, scss/_app-icons.scss */
+.icon-spin:before {
+  content: '\e867';
+}
+
+/* '' */
+/* line 116, scss/_app-icons.scss */
+.icon-school:before {
   content: '\e858';
 }
 
 /* '' */
-/* line 120, scss/_app-icons.scss */
-.icon-toilet:before {
+/* line 117, scss/_app-icons.scss */
+.icon-shop:before {
   content: '\e859';
 }
 
 /* '' */
-/* line 121, scss/_app-icons.scss */
-.icon-town-hall:before {
+/* line 118, scss/_app-icons.scss */
+.icon-football:before {
   content: '\e85a';
 }
 
 /* '' */
-/* line 122, scss/_app-icons.scss */
-.icon-tree-alt:before {
+/* line 119, scss/_app-icons.scss */
+.icon-swim:before {
   content: '\e85b';
 }
 
 /* '' */
-/* line 123, scss/_app-icons.scss */
-.icon-tree:before {
+/* line 120, scss/_app-icons.scss */
+.icon-theatre:before {
   content: '\e85c';
 }
 
 /* '' */
+/* line 121, scss/_app-icons.scss */
+.icon-toilet:before {
+  content: '\e85d';
+}
+
+/* '' */
+/* line 122, scss/_app-icons.scss */
+.icon-town-hall:before {
+  content: '\e85e';
+}
+
+/* '' */
+/* line 123, scss/_app-icons.scss */
+.icon-tree-alt:before {
+  content: '\e85f';
+}
+
+/* '' */
 /* line 124, scss/_app-icons.scss */
-.icon-right-open:before {
-  content: '\e83f';
+.icon-tree:before {
+  content: '\e860';
 }
 
-/* '' */
+/* '' */
 /* line 125, scss/_app-icons.scss */
-.icon-left-open:before {
-  content: '\e83e';
+.icon-right-open:before {
+  content: '\e843';
 }
 
-/* '' */
+/* '' */
 /* line 126, scss/_app-icons.scss */
+.icon-left-open:before {
+  content: '\e842';
+}
+
+/* '' */
+/* line 127, scss/_app-icons.scss */
 .icon-location-alt:before {
+  content: '\e841';
+}
+
+/* '' */
+/* line 128, scss/_app-icons.scss */
+.icon-user:before {
   content: '\e83d';
 }
 
 /* '' */
-/* line 127, scss/_app-icons.scss */
-.icon-user:before {
-  content: '\f001';
-}
-
-/* '' */
-/* line 128, scss/_app-icons.scss */
-.icon-filter:before {
-  content: '\e80d';
-}
-
-/* '' */
 /* line 129, scss/_app-icons.scss */
+.icon-filter:before {
+  content: '\e80e';
+}
+
+/* '' */
+/* line 130, scss/_app-icons.scss */
 .icon-menu:before {
   content: '\e80a';
 }
 
 /* '' */
-/* line 130, scss/_app-icons.scss */
+/* line 131, scss/_app-icons.scss */
 .icon-download:before {
   content: '\e806';
 }
 
 /* '' */
-/* line 131, scss/_app-icons.scss */
-.icon-doctor:before {
-  content: '\f010';
-}
-
-/* '' */
 /* line 132, scss/_app-icons.scss */
-.icon-doctor-alt:before {
-  content: '\e80e';
+.icon-doctor:before {
+  content: '\e80f';
 }
 
-/* '' */
+/* '' */
 /* line 133, scss/_app-icons.scss */
-.icon-hospital:before {
-  content: '\f011';
+.icon-doctor-alt:before {
+  content: '\e810';
 }
 
-/* '' */
+/* '' */
 /* line 134, scss/_app-icons.scss */
+.icon-hospital:before {
+  content: '\e811';
+}
+
+/* '' */
+/* line 135, scss/_app-icons.scss */
 .icon-direction:before {
   content: '\e808';
 }
 
 /* '' */
-/* line 135, scss/_app-icons.scss */
-.icon-ellipsis:before {
-  content: '\f012';
+/* line 136, scss/_app-icons.scss */
+.icon-help:before {
+  content: '\e802';
 }
 
-/* '' */
-/* line 136, scss/_app-icons.scss */
+/* '' */
+/* line 137, scss/_app-icons.scss */
+.icon-attention-alt:before {
+  content: '\e86a';
+}
+
+/* '' */
+/* line 138, scss/_app-icons.scss */
+.icon-ellipsis:before {
+  content: '\e80d';
+}
+
+/* '' */
+/* line 139, scss/_app-icons.scss */
 .icon-link-external:before {
   content: '\e805';
 }
 
 /* '' */
-/* line 137, scss/_app-icons.scss */
+/* line 140, scss/_app-icons.scss */
+.icon-euro:before {
+  content: '\e869';
+}
+
+/* '' */
+/* line 141, scss/_app-icons.scss */
 .icon-twitter:before {
-  content: '\e85d';
+  content: '\e861';
 }
 
-/* '' */
-/* line 138, scss/_app-icons.scss */
+/* '' */
+/* line 142, scss/_app-icons.scss */
 .icon-pictures:before {
-  content: '\e810';
+  content: '\e812';
 }
 
-/* '' */
-/* line 139, scss/_app-icons.scss */
+/* '' */
+/* line 143, scss/_app-icons.scss */
 .icon-leaf:before {
   content: '\e80c';
 }
 
 /* '' */
-/* line 140, scss/_app-icons.scss */
+/* line 144, scss/_app-icons.scss */
 .icon-bag:before {
-  content: '\e816';
+  content: '\e818';
 }
 
-/* '' */
-/* line 141, scss/_app-icons.scss */
+/* '' */
+/* line 145, scss/_app-icons.scss */
 .icon-calendar:before {
-  content: '\e817';
+  content: '\e819';
 }
 
-/* '' */
-/* line 142, scss/_app-icons.scss */
+/* '' */
+/* line 146, scss/_app-icons.scss */
 .icon-phone:before {
   content: '\e809';
 }
 
 /* '' */
-/* line 143, scss/_app-icons.scss */
+/* line 147, scss/_app-icons.scss */
 .icon-wifi:before {
-  content: '\e818';
+  content: '\e81b';
 }
 
-/* '' */
-/* line 144, scss/_app-icons.scss */
+/* '' */
+/* line 148, scss/_app-icons.scss */
 .icon-search:before {
-  content: '\e862';
+  content: '\e866';
 }
 
-/* '' */
-/* line 146, scss/_app-icons.scss */
+/* '' */
+/* line 149, scss/_app-icons.scss */
+.icon-clock:before {
+  content: '\e81a';
+}
+
+/* '' */
+/* line 151, scss/_app-icons.scss */
 .icon-parking:before {
   content: 'P';
   font-family: inherit;
   font-weight: bold;
+  margin-right: 0.15em;
 }
 
 /* '' */
-/* line 147, scss/_app-icons.scss */
+/* line 152, scss/_app-icons.scss */
 .icon-hospital-h:before {
   content: 'H';
   font-family: inherit;
@@ -2184,106 +2215,115 @@ section.on-4 {
 }
 
 /* '' */
-/* line 149, scss/_app-icons.scss */
+/* line 153, scss/_app-icons.scss */
+.icon-euro:before {
+  content: '€';
+  font-family: inherit;
+  font-weight: bold;
+  margin-right: 0.15em;
+}
+
+/* '' */
+/* line 155, scss/_app-icons.scss */
 .icon-weather-11:before {
-  content: '\e826';
+  content: '\e829';
 }
 
 /* '' */
-/* line 150, scss/_app-icons.scss */
+/* line 156, scss/_app-icons.scss */
 .icon-weather-12:before,
 .icon-weather-13:before {
-  content: '\e82c';
+  content: '\e82f';
 }
 
 /* '' */
-/* line 152, scss/_app-icons.scss */
+/* line 158, scss/_app-icons.scss */
 .icon-weather-14:before {
-  content: '\e830';
+  content: '\e833';
 }
 
 /* '' */
-/* line 153, scss/_app-icons.scss */
+/* line 159, scss/_app-icons.scss */
 .icon-weather-15:before,
 .icon-weather-16:before,
 .icon-weather-17:before {
-  content: '\e839';
+  content: '\e83c';
 }
 
 /* '' */
-/* line 156, scss/_app-icons.scss */
+/* line 162, scss/_app-icons.scss */
 .icon-weather-23:before,
 .icon-weather-24:before,
 .icon-weather-25:before,
 .icon-weather-26:before {
-  content: '\e833';
-}
-
-/* '' */
-/* line 160, scss/_app-icons.scss */
-.icon-weather-33:before,
-.icon-weather-34:before {
   content: '\e836';
 }
 
+/* '' */
+/* line 166, scss/_app-icons.scss */
+.icon-weather-33:before,
+.icon-weather-34:before {
+  content: '\e839';
+}
+
 /* '' */
-/* line 162, scss/_app-icons.scss */
+/* line 168, scss/_app-icons.scss */
 .icon-weather-35:before,
 .icon-weather-36:before {
-  content: '\e837';
+  content: '\e83a';
 }
 
 /* '' */
-/* line 164, scss/_app-icons.scss */
+/* line 170, scss/_app-icons.scss */
 .icon-weather-43:before,
 .icon-weather-44:before,
 .icon-weather-45:before,
 .icon-weather-46:before {
-  content: '\e832';
+  content: '\e835';
 }
 
 /* '' */
-/* line 168, scss/_app-icons.scss */
+/* line 174, scss/_app-icons.scss */
 .icon-weather-51:before,
 .icon-weather-52:before {
-  content: '\e831';
+  content: '\e834';
 }
 
 /* '' */
-/* line 170, scss/_app-icons.scss */
+/* line 176, scss/_app-icons.scss */
 .icon-weather-53:before,
 .icon-weather-54:before,
 .icon-weather-61:before,
 .icon-weather-62:before,
 .icon-weather-63:before,
 .icon-weather-64:before {
-  content: '\e823';
+  content: '\e826';
 }
 
 /* '' */
-/* line 176, scss/_app-icons.scss */
+/* line 182, scss/_app-icons.scss */
 .icon-weather-71:before,
 .icon-weather-72:before {
-  content: '\e838';
+  content: '\e83b';
 }
 
 /* '' */
-/* line 178, scss/_app-icons.scss */
+/* line 184, scss/_app-icons.scss */
 .icon-weather-73:before,
 .icon-weather-74:before {
-  content: '\e836';
+  content: '\e839';
 }
 
 /* '' */
 @-webkit-keyframes spin {
-  /* line 198, scss/_app-icons.scss */
+  /* line 204, scss/_app-icons.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 204, scss/_app-icons.scss */
+  /* line 210, scss/_app-icons.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);
@@ -2292,14 +2332,14 @@ section.on-4 {
 }
 
 @-moz-keyframes spin {
-  /* line 198, scss/_app-icons.scss */
+  /* line 204, scss/_app-icons.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 204, scss/_app-icons.scss */
+  /* line 210, scss/_app-icons.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);
@@ -2308,14 +2348,14 @@ section.on-4 {
 }
 
 @keyframes spin {
-  /* line 198, scss/_app-icons.scss */
+  /* line 204, scss/_app-icons.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 204, scss/_app-icons.scss */
+  /* line 210, scss/_app-icons.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);
@@ -2373,14 +2413,35 @@ body {
   }
 }
 
-/* line 121, scss/styles.scss */
+/* line 123, scss/styles.scss */
 h1, h2, h3, h4 {
   margin: .25em 0 .75em;
   font-weight: 300;
   line-height: 1.2;
 }
 
-/* line 127, scss/styles.scss */
+/* line 129, scss/styles.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 133, scss/styles.scss */
+h2 {
+  font-size: 1.4em;
+}
+
+/* line 137, scss/styles.scss */
+h3, h4 {
+  font-size: 1em;
+}
+@media only screen and (min-width: 600px) {
+  /* line 137, scss/styles.scss */
+  h3, h4 {
+    font-size: 1.1em;
+  }
+}
+
+/* line 145, scss/styles.scss */
 h5 {
   text-transform: uppercase;
   font-size: 0.8em;
@@ -2391,91 +2452,91 @@ h5 {
   line-height: 2.5em;
 }
 
-/* line 136, scss/styles.scss */
+/* line 154, scss/styles.scss */
 p, ul {
   margin: 0;
   padding: 0;
   line-height: 1.4;
 }
 
-/* line 142, scss/styles.scss */
+/* line 160, scss/styles.scss */
 li {
   list-style: none;
 }
 
-/* line 146, scss/styles.scss */
+/* line 164, scss/styles.scss */
 a {
-  color: #218ebd;
+  color: #1d7ea7;
   text-decoration: none;
 }
-/* line 150, scss/styles.scss */
+/* line 168, scss/styles.scss */
 a:visited {
-  color: #218ebd;
+  color: #1d7ea7;
 }
 
-/* line 159, scss/styles.scss */
+/* line 177, scss/styles.scss */
 html, body {
   font-size: 17px;
 }
 @media only screen and (max-width: 280px) {
-  /* line 159, scss/styles.scss */
+  /* line 177, scss/styles.scss */
   html, body {
     font-size: 16px;
   }
 }
 @media only screen and (min-width: 360px) {
-  /* line 159, scss/styles.scss */
+  /* line 177, scss/styles.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media only screen and (min-width: 600px) {
-  /* line 159, scss/styles.scss */
+  /* line 177, scss/styles.scss */
   html, body {
     font-size: 19px;
   }
 }
 
-/* line 175, scss/styles.scss */
+/* line 193, scss/styles.scss */
 body {
   background: #22252c;
   line-height: 1.4;
 }
 
-/* line 180, scss/styles.scss */
+/* line 198, scss/styles.scss */
 main {
   background: whitesmoke;
 }
 
-/* line 184, scss/styles.scss */
+/* line 202, scss/styles.scss */
 section, section > div {
   background: white;
 }
 
-/* line 189, scss/styles.scss */
+/* line 207, scss/styles.scss */
 section div.big-message.absolute {
   position: absolute;
   top: 48px;
   width: 100%;
 }
-/* line 195, scss/styles.scss */
+/* line 213, scss/styles.scss */
 section div.overthrow {
   padding: 16px;
 }
 @media only screen and (min-width: 600px) {
-  /* line 195, scss/styles.scss */
+  /* line 213, scss/styles.scss */
   section div.overthrow {
     padding: 48px 96px;
   }
 }
-/* line 203, scss/styles.scss */
+/* line 221, scss/styles.scss */
 section div.error {
   position: absolute;
   bottom: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 80;
 }
-/* line 209, scss/styles.scss */
+/* line 227, scss/styles.scss */
 section div.error p {
   font-size: 0.8em;
   line-height: 1.3;
@@ -2486,19 +2547,19 @@ section div.error p {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 219, scss/styles.scss */
+/* line 237, scss/styles.scss */
 section div.filter-container {
   position: absolute;
   top: 48px;
   bottom: 0;
   width: 100%;
 }
-/* line 225, scss/styles.scss */
+/* line 243, scss/styles.scss */
 section div.filter-container .capture-click {
   height: 100%;
   width: 100%;
 }
-/* line 230, scss/styles.scss */
+/* line 248, scss/styles.scss */
 section div.filter-container .filter-box {
   position: absolute;
   top: 0;
@@ -2519,7 +2580,7 @@ section div.filter-container .filter-box {
   -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
 }
-/* line 247, scss/styles.scss */
+/* line 265, scss/styles.scss */
 section div.filter-container .filter-box input {
   width: 100%;
   margin: 0 0 8px;
@@ -2532,13 +2593,13 @@ section div.filter-container .filter-box input {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 258, scss/styles.scss */
+/* line 276, scss/styles.scss */
 section div.filter-container .filter-box h5 [class^="icon-"],
 section div.filter-container .filter-box h5 [class*=" icon-"] {
   float: right;
   margin-right: 1px;
 }
-/* line 265, scss/styles.scss */
+/* line 283, scss/styles.scss */
 section div.filter-container .filter-box li {
   line-height: 40px;
   height: 40px;
@@ -2549,7 +2610,14 @@ section div.filter-container .filter-box li {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 273, scss/styles.scss */
+@media only screen and (min-height: 481px) {
+  /* line 283, scss/styles.scss */
+  section div.filter-container .filter-box li {
+    line-height: 48px;
+    height: 48px;
+  }
+}
+/* line 296, scss/styles.scss */
 section div.filter-container .filter-box li [class^="icon-"],
 section div.filter-container .filter-box li [class*=" icon-"] {
   display: none;
@@ -2557,42 +2625,40 @@ section div.filter-container .filter-box li [class*=" icon-"] {
   float: right;
   margin-left: 8px;
 }
-/* line 281, scss/styles.scss */
+/* line 304, scss/styles.scss */
 section div.filter-container .filter-box li.on {
   background-color: #e2f3fa;
 }
-/* line 284, scss/styles.scss */
+/* line 307, scss/styles.scss */
 section div.filter-container .filter-box li.on [class^="icon-"],
 section div.filter-container .filter-box li.on [class*=" icon-"] {
   display: block;
 }
-/* line 291, scss/styles.scss */
+/* line 314, scss/styles.scss */
 section div.filter-container .filter-box.ng-hide {
   padding: 0;
   border: 0;
 }
 
-/* line 299, scss/styles.scss */
+/* line 322, scss/styles.scss */
 div.aside {
-  background: whitesmoke url(../images/zuzarautz.png) no-repeat center -190px;
-  padding: 45px 32px 32px;
-  border-top: 3px solid #34aadc;
+  padding: 32px;
 }
 
-/* line 323, scss/styles.scss */
+/* line 345, scss/styles.scss */
 body.active-menu main {
   border-left: 1px solid #121315;
 }
-/* line 326, scss/styles.scss */
+/* line 348, scss/styles.scss */
 body.active-menu main section > div:first-child {
   border-left: 1px solid #68696b;
 }
-/* line 329, scss/styles.scss */
+/* line 351, scss/styles.scss */
 body.active-menu main section > div:first-child div.overthrow {
   padding-right: 14px;
 }
 
-/* line 340, scss/styles.scss */
+/* line 362, scss/styles.scss */
 header {
   height: 48px;
   line-height: 48px;
@@ -2601,7 +2667,7 @@ header {
   z-index: 1000;
   border-bottom: 1px solid #dddddd;
 }
-/* line 351, scss/styles.scss */
+/* line 373, scss/styles.scss */
 header .title {
   position: absolute;
   top: 0;
@@ -2618,13 +2684,13 @@ header .title {
   text-overflow: ellipsis;
 }
 @media only screen and (min-width: 360px) {
-  /* line 351, scss/styles.scss */
+  /* line 373, scss/styles.scss */
   header .title {
     left: 17%;
     width: 66%;
   }
 }
-/* line 370, scss/styles.scss */
+/* line 392, scss/styles.scss */
 header i {
   background-color: #eaeaea;
   margin: 0 16px;
@@ -2632,18 +2698,18 @@ header i {
   color: #666666;
 }
 
-/* line 382, scss/styles.scss */
+/* line 404, scss/styles.scss */
 ul.drawer {
   background: #22252c;
   color: #eff0f2;
   font-size: 1.05em;
 }
-/* line 387, scss/styles.scss */
+/* line 409, scss/styles.scss */
 ul.drawer li {
   height: 48px;
   padding: 0 16px;
 }
-/* line 391, scss/styles.scss */
+/* line 413, scss/styles.scss */
 ul.drawer li a {
   display: block;
   height: 48px;
@@ -2654,13 +2720,13 @@ ul.drawer li a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 399, scss/styles.scss */
+/* line 421, scss/styles.scss */
 ul.drawer li a [class^="icon-"],
 ul.drawer li a [class*=" icon-"] {
   margin-right: 16px;
   font-size: 1.05em;
 }
-/* line 405, scss/styles.scss */
+/* line 427, scss/styles.scss */
 ul.drawer li a.active {
   background: #17191e;
   margin: 0 -16px;
@@ -2668,67 +2734,102 @@ ul.drawer li a.active {
   margin-top: -1px;
   border-top: 1px solid #1b1e23;
 }
-/* line 413, scss/styles.scss */
+/* line 435, scss/styles.scss */
 ul.drawer li a.settings {
   text-transform: uppercase;
   font-size: 0.8em;
   color: #5a6174;
 }
 
-/* line 427, scss/styles.scss */
+/* line 449, scss/styles.scss */
 .block-grid-icons li {
   text-align: center;
-  margin: 4px 0;
+  padding-top: 4px;
+  padding-bottom: 16px;
 }
-/* line 431, scss/styles.scss */
+/* line 454, scss/styles.scss */
 .block-grid-icons li [class^="icon-"],
 .block-grid-icons li [class*=" icon-"] {
   font-size: 2em;
   -webkit-border-radius: 1000px;
   border-radius: 1000px;
-  height: 1.6em;
-  width: 1.6em;
+  border: 4px solid white;
+  height: 1.7em;
+  width: 1.7em;
   display: block;
   margin: 0 auto;
-  line-height: 1.55;
+  line-height: 1.5;
 }
-/* line 100, scss/styles.scss */
+/* line 465, scss/styles.scss */
+.block-grid-icons li [class^="icon-"].icon-shop,
+.block-grid-icons li [class*=" icon-"].icon-shop {
+  line-height: 1.4;
+}
+/* line 466, scss/styles.scss */
+.block-grid-icons li [class^="icon-"].icon-town-hall,
+.block-grid-icons li [class*=" icon-"].icon-town-hall {
+  line-height: 1.35;
+}
+/* line 102, scss/styles.scss */
 .block-grid-icons li [class^="icon-"].color-0,
 .block-grid-icons li [class*=" icon-"].color-0 {
-  background-color: #aeddf1;
+  border-color: #75c5e7;
 }
-/* line 103, scss/styles.scss */
+/* line 105, scss/styles.scss */
 .block-grid-icons li [class^="icon-"].color-1,
 .block-grid-icons li [class*=" icon-"].color-1 {
-  background-color: #c2f2ca;
+  border-color: #8be69b;
 }
-/* line 106, scss/styles.scss */
+/* line 108, scss/styles.scss */
 .block-grid-icons li [class^="icon-"].color-2,
 .block-grid-icons li [class*=" icon-"].color-2 {
-  background-color: #d2a5e9;
+  border-color: #b870db;
 }
-/* line 109, scss/styles.scss */
+/* line 111, scss/styles.scss */
 .block-grid-icons li [class^="icon-"].color-3,
 .block-grid-icons li [class*=" icon-"].color-3 {
-  background-color: #ffd08f;
+  border-color: #ffb54d;
 }
-/* line 112, scss/styles.scss */
+/* line 114, scss/styles.scss */
 .block-grid-icons li [class^="icon-"].color-4,
 .block-grid-icons li [class*=" icon-"].color-4 {
-  background-color: #ffc2bf;
+  border-color: #ff837c;
 }
-/* line 444, scss/styles.scss */
+/* line 471, scss/styles.scss */
 .block-grid-icons li p {
   padding-top: 5px;
   font-size: 0.8em;
   line-height: 1.3;
 }
+@media only screen and (min-height: 481px) {
+  /* line 449, scss/styles.scss */
+  .block-grid-icons li {
+    padding-top: 12px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  /* line 449, scss/styles.scss */
+  .block-grid-icons li {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  /* line 486, scss/styles.scss */
+  .block-grid-icons li [class^="icon-"],
+  .block-grid-icons li [class*=" icon-"] {
+    font-size: 2.8em;
+    border-width: 5px;
+  }
+  /* line 492, scss/styles.scss */
+  .block-grid-icons li p {
+    font-size: 0.9em;
+  }
+}
 
-/* line 453, scss/styles.scss */
+/* line 499, scss/styles.scss */
 .cta-list {
   margin: 16px 0;
 }
-/* line 456, scss/styles.scss */
+/* line 502, scss/styles.scss */
 .cta-list li {
   border-top: 1px solid #dddddd;
   height: 48px;
@@ -2738,50 +2839,57 @@ ul.drawer li a.settings {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 463, scss/styles.scss */
+/* line 509, scss/styles.scss */
 .cta-list li [class^="icon-"],
 .cta-list li [class*=" icon-"] {
   display: block;
-  font-size: 1.2em;
-  color: #5ac8fa;
+  color: #34aadc;
   float: left;
   margin-right: 8px;
+  font-size: 1.1em;
 }
-/* line 471, scss/styles.scss */
+/* line 517, scss/styles.scss */
 .cta-list li [class^="icon-"].right,
 .cta-list li [class*=" icon-"].right {
-  font-size: 0.8em;
+  font-size: 1.2em;
   margin: 0 0 0 8px;
   float: right;
   color: #999999;
 }
-/* line 479, scss/styles.scss */
+/* line 524, scss/styles.scss */
+.cta-list li [class^="icon-"].color-alert,
+.cta-list li [class*=" icon-"].color-alert {
+  color: #ff9500;
+}
+/* line 529, scss/styles.scss */
 .cta-list li:last-child {
   border-bottom: 1px solid #dddddd;
 }
 
-/* line 485, scss/styles.scss */
+/* line 536, scss/styles.scss */
+.simple-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #dddddd;
+}
+/* line 540, scss/styles.scss */
+.simple-list li:last-child {
+  border: 0;
+}
+
+/* line 546, scss/styles.scss */
 .star-button {
-  font-size: 1.5em;
+  font-size: 1.4em;
   margin: 0 -4px 0 16px;
   float: right;
 }
 
-/* line 495, scss/styles.scss */
-.banner {
-  margin: -16px -16px 16px;
-  height: 200px;
-  background: #fafafa none center center no-repeat;
-  background-size: cover;
-}
-
-/* line 506, scss/styles.scss */
+/* line 556, scss/styles.scss */
 .big-message {
   text-align: center;
   padding: 2em 1em;
   font-weight: 300;
   color: #bfbfbf;
-  font-size: 1.5em;
+  font-size: 1.4em;
   line-height: 1.2;
 }
 /* line 24, scss/_app-navigation.scss */
@@ -2789,7 +2897,7 @@ ul.drawer li a.settings {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
-/* line 514, scss/styles.scss */
+/* line 564, scss/styles.scss */
 .big-message [class^="icon-"],
 .big-message [class*=" icon-"] {
   display: block;
@@ -2798,44 +2906,44 @@ ul.drawer li a.settings {
   margin-bottom: 16px;
 }
 
-/* line 528, scss/styles.scss */
+/* line 578, scss/styles.scss */
 .content h1, .content h2, .content h3, .content h4, .content h5 {
   font-size: 1em;
   font-weight: normal;
   font-style: italic;
 }
-/* line 533, scss/styles.scss */
+/* line 583, scss/styles.scss */
 .content h1 strong, .content h2 strong, .content h3 strong, .content h4 strong, .content h5 strong {
   font-weight: normal;
 }
-/* line 538, scss/styles.scss */
+/* line 588, scss/styles.scss */
 .content p, .content img, .content blockquote {
   display: block;
   margin: 1em 0;
 }
-/* line 543, scss/styles.scss */
+/* line 593, scss/styles.scss */
 .content ol, .content ul {
   padding-left: 1.5em;
 }
-/* line 546, scss/styles.scss */
+/* line 596, scss/styles.scss */
 .content ol li, .content ul li {
   margin-bottom: .5em;
 }
-/* line 552, scss/styles.scss */
+/* line 602, scss/styles.scss */
 .content ul li {
   list-style: disc outside none;
 }
-/* line 558, scss/styles.scss */
+/* line 608, scss/styles.scss */
 .content ol li {
   list-style: decimal outside none;
 }
-/* line 563, scss/styles.scss */
+/* line 613, scss/styles.scss */
 .content blockquote {
   padding-left: 16px;
-  border-left: 5px solid #aeddf1;
+  border-left: 5px solid #75c5e7;
 }
 
-/* line 569, scss/styles.scss */
+/* line 619, scss/styles.scss */
 .external-link {
   border-style: solid;
   border-width: 1px;
@@ -2875,22 +2983,68 @@ ul.drawer li a.settings {
 .external-link:hover, .external-link:focus {
   color: white;
 }
-/* line 575, scss/styles.scss */
+/* line 625, scss/styles.scss */
 .external-link, .external-link:visited {
   color: white;
 }
+/* line 629, scss/styles.scss */
+.external-link.alert {
+  background-color: #c60f13;
+  border-color: #970b0e;
+  color: white;
+}
+/* line 121, ../../../../../../.rvm/gems/ruby-2.0.0-p0/gems/zurb-foundation-4.3.1/scss/foundation/components/_buttons.scss */
+.external-link.alert:hover, .external-link.alert:focus {
+  background-color: #970b0e;
+}
+/* line 132, ../../../../../../.rvm/gems/ruby-2.0.0-p0/gems/zurb-foundation-4.3.1/scss/foundation/components/_buttons.scss */
+.external-link.alert:hover, .external-link.alert:focus {
+  color: white;
+}
 
-/* line 582, scss/styles.scss */
+/* line 633, scss/styles.scss */
+.post .title {
+  font-size: 1.4em;
+  color: #1d7ea7;
+}
+/* line 638, scss/styles.scss */
 .post .content div > img + p {
   font-size: .9em;
-  color: #555555;
+  color: #666666;
+  margin-top: -8px;
 }
-/* line 587, scss/styles.scss */
+/* line 644, scss/styles.scss */
 .post .content img {
   width: 100%;
 }
 
-/* line 598, scss/styles.scss */
+/* line 654, scss/styles.scss */
+div.branding {
+  background: whitesmoke url(../images/zuzarautz.png) no-repeat center -195px;
+  border-top: 3px solid #34aadc;
+}
+/* line 658, scss/styles.scss */
+div.branding, section div.branding {
+  padding: 50px 1.9em 1.9em;
+}
+@media only screen and (max-width: 319px) {
+  /* line 658, scss/styles.scss */
+  div.branding, section div.branding {
+    padding: 50px 16px 16px;
+  }
+}
+@media only screen and (min-height: 481px) {
+  /* line 654, scss/styles.scss */
+  div.branding {
+    background-position: center -184px;
+  }
+  /* line 669, scss/styles.scss */
+  div.branding, section div.branding {
+    padding-top: 80px;
+  }
+}
+
+/* line 680, scss/styles.scss */
 hr {
   border: solid #dddddd;
   border-width: 1px 0 0;
@@ -2899,74 +3053,74 @@ hr {
   height: 0;
 }
 
-/* line 606, scss/styles.scss */
+/* line 688, scss/styles.scss */
 .strong {
   font-weight: bold;
 }
 
-/* line 610, scss/styles.scss */
+/* line 692, scss/styles.scss */
 .text-big {
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
-/* line 614, scss/styles.scss */
+/* line 696, scss/styles.scss */
 .text-biggest {
   font-size: 2em;
 }
 
-/* line 618, scss/styles.scss */
+/* line 700, scss/styles.scss */
 .text-small {
   font-size: 0.9em;
   line-height: 1.3;
 }
 
-/* line 622, scss/styles.scss */
+/* line 704, scss/styles.scss */
 .text-smallest {
   font-size: 0.8em;
   line-height: 1.3;
 }
 
-/* line 626, scss/styles.scss */
+/* line 708, scss/styles.scss */
 .text-light {
   font-weight: 300;
 }
 
-/* line 630, scss/styles.scss */
+/* line 712, scss/styles.scss */
 .ucfirst:first-letter {
   text-transform: uppercase;
 }
 
-/* line 634, scss/styles.scss */
+/* line 716, scss/styles.scss */
 .uppercase {
   text-transform: uppercase;
 }
 
-/* line 638, scss/styles.scss */
+/* line 720, scss/styles.scss */
 .lowercase {
   text-transform: lowercase;
 }
 
-/* line 643, scss/styles.scss */
+/* line 725, scss/styles.scss */
 a.chameleon, a.chameleon:hover {
   color: inherit;
   text-decoration: none;
   cursor: default;
 }
 
-/* line 10, scss/_module-tableview.scss */
+/* line 8, scss/_module-tableview.scss */
 .table-view h5 {
   border-width: 0 0 1px 0;
   border-style: solid;
   border-color: #eaeaea;
 }
-/* line 16, scss/_module-tableview.scss */
+/* line 14, scss/_module-tableview.scss */
 .table-view ul {
   border-width: 0 0 1px 0;
   border-style: solid;
   border-color: #eaeaea;
 }
-/* line 21, scss/_module-tableview.scss */
-.table-view ul a {
+/* line 19, scss/_module-tableview.scss */
+.table-view ul a, .table-view ul .a {
   display: block;
   color: #222222;
   border-bottom: 1px solid #eaeaea;
@@ -2976,44 +3130,50 @@ a.chameleon, a.chameleon:hover {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 29, scss/_module-tableview.scss */
-.table-view ul a i {
+/* line 27, scss/_module-tableview.scss */
+.table-view ul a i, .table-view ul .a i {
   float: right;
   color: #a2a2a2;
 }
-/* line 33, scss/_module-tableview.scss */
-.table-view ul a i.selected {
-  color: #218ebd;
+/* line 31, scss/_module-tableview.scss */
+.table-view ul a i.selected, .table-view ul .a i.selected {
+  color: #1d7ea7;
 }
-/* line 38, scss/_module-tableview.scss */
-.table-view ul a .detail {
+/* line 36, scss/_module-tableview.scss */
+.table-view ul a .detail, .table-view ul .a .detail {
   float: right;
-  color: #218ebd;
   margin-right: 8px;
+  font-size: 0.9em;
+  color: #666666;
 }
 /* line 45, scss/_module-tableview.scss */
-.table-view ul li:last-child a {
+.table-view ul a .detail {
+  color: #1d7ea7;
+  font-size: 1em;
+}
+/* line 51, scss/_module-tableview.scss */
+.table-view ul li:last-child a, .table-view ul li:last-child .a {
   border: 0;
 }
-/* line 50, scss/_module-tableview.scss */
+/* line 56, scss/_module-tableview.scss */
 .table-view p.explanation {
   margin: 32px 16px;
   text-align: center;
-  color: #218ebd;
+  color: #1d7ea7;
 }
 
-/* line 58, scss/_module-tableview.scss */
+/* line 64, scss/_module-tableview.scss */
 .table-view-images .title {
   margin: 0 16px 0 0;
 }
-/* line 62, scss/_module-tableview.scss */
+/* line 68, scss/_module-tableview.scss */
 .table-view-images .icon-right-open {
   font-size: 1.2em;
   float: right;
   color: #999999;
   margin: -3px -8px 8px 8px;
 }
-/* line 69, scss/_module-tableview.scss */
+/* line 75, scss/_module-tableview.scss */
 .table-view-images .thumbnail {
   width: 80%;
   -webkit-border-radius: 1000px;
@@ -3021,58 +3181,70 @@ a.chameleon, a.chameleon:hover {
   background: transparent none center;
   background-size: contain;
 }
-/* line 100, scss/styles.scss */
+/* line 102, scss/styles.scss */
 .table-view-images .thumbnail.color-0 {
-  background-color: #aeddf1;
+  background-color: #75c5e7;
 }
-/* line 103, scss/styles.scss */
+/* line 105, scss/styles.scss */
 .table-view-images .thumbnail.color-1 {
-  background-color: #c2f2ca;
+  background-color: #8be69b;
 }
-/* line 106, scss/styles.scss */
+/* line 108, scss/styles.scss */
 .table-view-images .thumbnail.color-2 {
-  background-color: #d2a5e9;
+  background-color: #b870db;
 }
-/* line 109, scss/styles.scss */
+/* line 111, scss/styles.scss */
 .table-view-images .thumbnail.color-3 {
-  background-color: #ffd08f;
+  background-color: #ffb54d;
 }
-/* line 112, scss/styles.scss */
+/* line 114, scss/styles.scss */
 .table-view-images .thumbnail.color-4 {
-  background-color: #ffc2bf;
+  background-color: #ff837c;
 }
-/* line 76, scss/_module-tableview.scss */
+/* line 82, scss/_module-tableview.scss */
 .table-view-images .thumbnail img {
   width: 100%;
 }
-/* line 81, scss/_module-tableview.scss */
-.table-view-images p {
+/* line 86, scss/_module-tableview.scss */
+.table-view-images .thumbnail.featured {
+  border: 4px solid #ffcc00;
+}
+/* line 92, scss/_module-tableview.scss */
+.table-view-images .main-td p {
   font-size: 0.8em;
   line-height: 1.3;
   margin-top: 8px;
+  color: #666666;
+  padding-left: 16px;
 }
-/* line 85, scss/_module-tableview.scss */
-.table-view-images p .distance {
+/* line 98, scss/_module-tableview.scss */
+.table-view-images .main-td p .distance {
   color: #999999;
 }
-/* line 89, scss/_module-tableview.scss */
-.table-view-images p .tag {
+/* line 102, scss/_module-tableview.scss */
+.table-view-images .main-td p .tag {
   display: block;
   float: left;
   margin-right: 0.2em;
 }
-/* line 95, scss/_module-tableview.scss */
-.table-view-images p [class^="icon-"],
-.table-view-images p [class*=" icon-"] {
+/* line 108, scss/_module-tableview.scss */
+.table-view-images .main-td p [class^="icon-"],
+.table-view-images .main-td p [class*=" icon-"] {
   float: left;
-  margin: 0 0 0 -3px;
-  font-size: .9em;
+  margin-left: -20px;
+  margin-right: 1px;
+  color: #737373;
 }
-/* line 103, scss/_module-tableview.scss */
+/* line 115, scss/_module-tableview.scss */
+.table-view-images .main-td p [class^="icon-"].color-blue,
+.table-view-images .main-td p [class*=" icon-"].color-blue {
+  color: #34aadc;
+}
+/* line 122, scss/_module-tableview.scss */
 .table-view-images hr {
   margin: 16px -16px;
 }
-/* line 107, scss/_module-tableview.scss */
+/* line 126, scss/_module-tableview.scss */
 .table-view-images div.sort-options {
   *zoom: 1;
   font-size: 0.8em;
@@ -3090,7 +3262,7 @@ a.chameleon, a.chameleon:hover {
 .table-view-images div.sort-options:after {
   clear: both;
 }
-/* line 114, scss/_module-tableview.scss */
+/* line 133, scss/_module-tableview.scss */
 .table-view-images div.sort-options .bicon {
   text-align: center;
   display: block;
@@ -3100,41 +3272,128 @@ a.chameleon, a.chameleon:hover {
   line-height: 32px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  font-size: 0.9em;
+  font-size: 17px;
   margin: 0;
   padding: 0;
 }
-/* line 126, scss/_module-tableview.scss */
-.table-view-images div.sort-options .bicon.icon-direction {
+/* line 145, scss/_module-tableview.scss */
+.table-view-images div.sort-options .bicon.left-radius {
   -webkit-border-top-right-radius: 0;
   border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-/* line 131, scss/_module-tableview.scss */
-.table-view-images div.sort-options .bicon.icon-sort-alphabet {
+/* line 150, scss/_module-tableview.scss */
+.table-view-images div.sort-options .bicon.right-radius {
   padding-right: 3px;
   -webkit-border-top-left-radius: 0;
   border-top-left-radius: 0;
   -webkit-border-bottom-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-/* line 137, scss/_module-tableview.scss */
+/* line 156, scss/_module-tableview.scss */
+.table-view-images div.sort-options .bicon.icon-sort-alphabet {
+  padding-right: 3px;
+}
+/* line 160, scss/_module-tableview.scss */
 .table-view-images div.sort-options .bicon.icon-star {
   margin-left: 16px;
 }
-/* line 141, scss/_module-tableview.scss */
+/* line 164, scss/_module-tableview.scss */
 .table-view-images div.sort-options .bicon.on {
   background-color: #34aadc;
   color: white;
 }
-/* line 146, scss/_module-tableview.scss */
+/* line 169, scss/_module-tableview.scss */
 .table-view-images div.sort-options .bicon.fav-on {
   background-color: #ffcc00;
   color: white;
 }
 
-/* line 6, scss/_page-placeView.scss */
+/* line 177, scss/_module-tableview.scss */
+p.table-view-separator {
+  border-bottom: 1px solid #34aadc;
+  color: #1d7ea7;
+  padding: 8px 16px;
+  margin: 24px -16px 16px;
+  font-size: 0.8em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+/* line 185, scss/_module-tableview.scss */
+p.table-view-separator.compress {
+  margin-top: 0;
+}
+
+/* line 1, scss/_page-eventView.scss */
+.sub-events-list {
+  margin: 0;
+}
+/* line 4, scss/_page-eventView.scss */
+.sub-events-list li {
+  border-bottom: 1px dotted #dddddd;
+  padding: 12.8px 0 12.8px 32px;
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.3;
+}
+/* line 10, scss/_page-eventView.scss */
+.sub-events-list li [class^="icon-"],
+.sub-events-list li [class*=" icon-"] {
+  display: block;
+  float: left;
+  margin-left: -29px;
+  margin-right: 8px;
+}
+/* line 17, scss/_page-eventView.scss */
+.sub-events-list li [class^="icon-"].right,
+.sub-events-list li [class*=" icon-"].right {
+  font-size: 1.2em;
+  margin: 0 0 0 8px;
+  float: right;
+  color: #999999;
+}
+/* line 25, scss/_page-eventView.scss */
+.sub-events-list li:first-child {
+  padding-top: 0;
+}
+/* line 29, scss/_page-eventView.scss */
+.sub-events-list li:last-child {
+  border: 0;
+  padding-bottom: 0;
+}
+/* line 34, scss/_page-eventView.scss */
+.sub-events-list li.date {
+  font-size: 0.8em;
+  line-height: 1.3;
+  text-transform: uppercase;
+  background: whitesmoke;
+  margin: 0 -16px;
+  padding: 16px 16px 8px;
+}
+
+/* line 5, scss/_page-placeView.scss */
+.banner {
+  margin: -16px -16px 16px;
+  height: 198px;
+  background: #fafafa none center center no-repeat;
+  background-size: cover;
+}
+@media only screen and (min-height: 481px) {
+  /* line 5, scss/_page-placeView.scss */
+  .banner {
+    height: 214px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  /* line 5, scss/_page-placeView.scss */
+  .banner {
+    height: 300px;
+    margin: -16px 0 32px;
+  }
+}
+
+/* line 26, scss/_page-placeView.scss */
 .place-info .location {
   float: right;
   font-size: 0.8em;
@@ -3143,18 +3402,24 @@ a.chameleon, a.chameleon:hover {
   margin: 4px 0 0 16px;
 }
 
-/* line 18, scss/_page-placeView.scss */
+/* line 38, scss/_page-placeView.scss */
 div.map-container {
   padding: 0;
 }
-/* line 21, scss/_page-placeView.scss */
+/* line 41, scss/_page-placeView.scss */
 div.map-container > div {
   height: 100%;
   width: 100%;
 }
-/* line 25, scss/_page-placeView.scss */
+/* line 45, scss/_page-placeView.scss */
 div.map-container > div img {
   max-width: none;
+}
+
+/* line 1, scss/_page-tides.scss */
+.tide-level {
+  float: right;
+  text-transform: uppercase;
 }
 
 /* line 7, scss/_page-weather.scss */

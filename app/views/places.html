@@ -3,9 +3,11 @@
         <header>
             <i ng-click="navigation.toggleMenu()" class="left icon-menu"></i>
             <h1 class="title">{{ placesCtrl.section|translate }}</h1>
+            <i ng-if="placesCtrl.section === 'poi' && settings.get('profile') === 'tourist'" ng-click="navigation.toggleAside();" class="right" ng-class="{ 'icon-info': !navigation.asideIsActive, 'icon-cancel': navigation.asideIsActive }"></i>
         </header>
         <div class="overthrow">
-            <ul class="small-block-grid-3 large-block-grid-4 block-grid-icons">
+            <div ng-if="placesCtrl.section === 'poi'" class="banner" style="background-image: url(http://pagoeta.illarra.com/cache/api_medium/image/place/10d1133cb26e65622e5580f5e62f8e0f713af6a1.jpeg);"></div>
+            <ul class="small-block-grid-3 large-block-grid-3 block-grid-icons">
                 <li ng-repeat="group in placesCtrl.groups"
                     ng-click="navigation.pushView('place.list', { section: placesCtrl.section, group: group.name })">
                     <i class="{{ group.icon }} color-{{ $index % 5 }}"></i>
@@ -55,8 +57,8 @@
                     {{ plistCtrl.pager.getTotalItems() }} {{ 'list.results'|translate }}
                     {{ '/ ' + plistCtrl.totalItems }}
                     <i class="right bicon icon-star" ng-class="{ 'fav-on': plistCtrl.filter.favorite !== null }" ng-click="plistCtrl.setFilter('favorite', true)"></i>
-                    <i ng-if="plistCtrl.geolocation.available" ng-class="{ 'on': plistCtrl.sorting.type == 'name'}" ng-click="plistCtrl.setSorting('name')" class="right bicon icon-sort-alphabet"></i>
-                    <i ng-if="plistCtrl.geolocation.available" ng-class="{ 'on': plistCtrl.sorting.type == 'distance'}" ng-click="plistCtrl.setSorting('distance')" class="right bicon icon-direction"></i>
+                    <i ng-if="plistCtrl.geolocation.available" ng-class="{ 'on': plistCtrl.sorting.type == 'name'}" ng-click="plistCtrl.setSorting('name')" class="right right-radius bicon icon-sort-alphabet"></i>
+                    <i ng-if="plistCtrl.geolocation.available" ng-class="{ 'on': plistCtrl.sorting.type == 'distance'}" ng-click="plistCtrl.setSorting('distance')" class="right bicon left-radius icon-direction"></i>
                 </div>
                 <div ng-repeat="place in plistCtrl.pager.getAllItems()">
                     <hr />
@@ -65,7 +67,7 @@
                         <div class="large-1 small-1 columns">
                             <div class="thumbnail color-{{ $index % 5 }}" ng-style="{ 'background-image': 'url('+ place.getThumbnailImage() +')' }"><img src="images/dot.png" /></div>
                         </div>
-                        <div class="large-3 small-3 columns">
+                        <div class="large-3 small-3 columns main-td">
                             <i class="icon-right-open"></i>
                             <h4 class="title">{{ place.name }} <i class="icon-star color-yellow" ng-show="plistCtrl.favorite.isFavorite(place.id)"></i></h4>
                             <p>

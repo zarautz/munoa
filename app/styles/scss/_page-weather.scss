@@ -1,25 +1,30 @@
 $page-forecast-padding: 10px;
 $page-forecast-border-color: $hr-border-color;
-$page-today-background-color: whitesmoke;
+$page-today-background-color: #fff;
 $page-today-font-color: #333;
-$color-temp-min: $color-light-blue;
+$color-temp-min: $color-blue;
 
 .icon-weather-11:before {
     color: $color-yellow;
 }
 
 .weather-today {
-    padding-bottom: $base-padding;
+    padding-top: $base-padding;
     text-align: center;
+
+    &.banner {
+        margin-bottom: 0;
+        background-color: lighten($color-light-blue, 28%);
+    }
 
     [class^="icon-"],
     [class*=" icon-"] {
         font-size: 6em;
-        line-height: 1.2;
+        line-height: 1;
     }
     
     .temperature {
-        font-size: 5em;
+        font-size: 5.2em;
         font-weight: 300;
         margin: 0;
     }
@@ -32,7 +37,7 @@ $color-temp-min: $color-light-blue;
         }
 
         .max {
-            font-size: 3.5em;
+            font-size: 3.6em;
             margin-top: .25em;
         }
         .min {
@@ -43,12 +48,25 @@ $color-temp-min: $color-light-blue;
 }
 
 .weather-forecast {
+    margin-left: -$base-padding;
+    margin-right: -$base-padding;
+    width: auto;
+
     .column {
-        border-width: 1px 0 1px 1px;
+        border-width: 0 0 1px 1px;
         border-style: solid;
         border-color: $app-background $page-forecast-border-color $page-forecast-border-color;
-        padding: $page-forecast-padding;
+        padding: 0 $page-forecast-padding $page-forecast-padding;
         text-align: center;
+
+        // Color
+        @include opacity(0.6);
+
+        .day {
+            display: block;
+            text-transform: uppercase;
+            border-top: $half-padding solid $app-background;
+        }
 
         &:first-child {
             border-left-color: $app-background;
@@ -59,6 +77,7 @@ $color-temp-min: $color-light-blue;
         }
 
         &.active {
+            @include opacity(1);
             background: $page-today-background-color;
             border-top-color: $page-forecast-border-color;
             color: $page-today-font-color;
@@ -70,6 +89,13 @@ $color-temp-min: $color-light-blue;
 
             &:last-child {
                 border-right-color: $page-forecast-border-color;
+            }
+
+            .day {
+                font-weight: bold;
+                padding-top: $half-padding;
+                margin-top: -$half-padding;
+                border-color: $color-blue;
             }
         }
 
@@ -94,11 +120,13 @@ $color-temp-min: $color-light-blue;
 }
 
 .weather-periods {
+    margin: 0 (-$base-padding) $base-padding (-$base-padding);
+    width: auto;
     border-width: 0 1px 1px;
     border-style: solid;
     border-color: $page-forecast-border-color;
     background: $page-today-background-color;
-    padding: $page-forecast-padding;
+    padding: $half-padding $base-padding $base-padding;
     color: $page-today-font-color;
 
     ul {
@@ -108,8 +136,7 @@ $color-temp-min: $color-light-blue;
         }
 
         border-bottom: 1px dotted $page-forecast-border-color;
-        padding-bottom: $quarter-padding;
-        margin-bottom: $quarter-padding;
+        padding: $half-padding 0;
 
         &:last-child {
             border: 0;
@@ -125,25 +152,32 @@ $color-temp-min: $color-light-blue;
 [class*=" uv-label-"] {
     margin: $half-padding 0 $half-padding;
     padding: .3em .5em;
-    background-color: $color-violet;
+    background-color: #bbb;
 }
-    .uv-label-1,
-    .uv-label-2 {
-        background-color: $color-green;
-    }
-    .uv-label-3,
-    .uv-label-4,
-    .uv-label-5 {
-        background-color: $color-yellow;
-    }
-    .uv-label-6,
-    .uv-label-7 {
-        background-color: $color-orange;
-    }
-    .uv-label-8,
-    .uv-label-9,
-    .uv-label-10 {
-        background-color: $color-red;
+    .active {
+        [class^="uv-label-"],
+        [class*=" uv-label-"] {
+            background-color: $color-violet;
+        }
+
+        .uv-label-1,
+        .uv-label-2 {
+            background-color: $color-green;
+        }
+        .uv-label-3,
+        .uv-label-4,
+        .uv-label-5 {
+            background-color: $color-yellow;
+        }
+        .uv-label-6,
+        .uv-label-7 {
+            background-color: $color-orange;
+        }
+        .uv-label-8,
+        .uv-label-9,
+        .uv-label-10 {
+            background-color: $color-red;
+        }
     }
 
 [class^="uv-text-"],

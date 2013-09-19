@@ -16,32 +16,34 @@
             {{ 'loading' | translate }}
         </div>
         <div ng-if="!weatherCtrl.status.isLoading" class="overthrow">
-            <p class="text-smallest text-center ucfirst">
-                {{ weatherCtrl.forecast.today.date|amDateFormat:'dddd, LL' }}<br />
-                <span class="color-light-text">
-                    {{ weatherCtrl.forecast.today.getCurrentWeatherCode().name }}
-                </span>
-            </p>
-            <div class="row collapse weather-today">
-                <div class="small-2 columns">
-                    <i class="icon-weather-{{ weatherCtrl.forecast.today.getCurrentWeatherCode().code }}"></i>
-                </div>
-                <div class="small-2 columns">
-                    <h1 ng-if="weatherCtrl.forecast.today.weather.temp" class="temperature">
-                        {{ weatherCtrl.forecast.today.weather.temp }}&deg;
-                    </h1>
-                    <div ng-if="!weatherCtrl.forecast.today.weather.temp" class="temperature-range">
-                        <h2 class="max">{{ weatherCtrl.forecast.today.weather.tempMax }}&deg;</h2>
-                        <h3 class="min">{{ weatherCtrl.forecast.today.weather.tempMin }}&deg;</h3>
+            <div class="row collapse">
+                <div class="weather-today banner">
+                    <p class="text-smallest ucfirst">
+                        {{ weatherCtrl.forecast.today.date|amDateFormat:'dddd, LL' }}<br />
+                        <span class="color-light-text">
+                            {{ weatherCtrl.forecast.today.getCurrentWeatherCode().name }}
+                        </span>
+                    </p>
+                    <div class="small-2 columns">
+                        <i class="icon-weather-{{ weatherCtrl.forecast.today.getCurrentWeatherCode().code }}"></i>
+                    </div>
+                    <div class="small-2 columns">
+                        <h1 ng-if="weatherCtrl.forecast.today.weather.temp" class="temperature">
+                            {{ weatherCtrl.forecast.today.weather.temp }}&deg;
+                        </h1>
+                        <div ng-if="!weatherCtrl.forecast.today.weather.temp" class="temperature-range">
+                            <h2 class="max">{{ weatherCtrl.forecast.today.weather.tempMax }}&deg;</h2>
+                            <h3 class="min">{{ weatherCtrl.forecast.today.weather.tempMin }}&deg;</h3>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row collapse weather-forecast">
                 <div class="small-1 column"
                     ng-repeat="day in weatherCtrl.forecast.days"
-                    ng-class="{ 'active': $index == weatherCtrl.activeTab }"
+                    ng-class="{ 'active': $index === weatherCtrl.activeTab }"
                     ng-click="weatherCtrl.changeTab($index)">
-                    <span class="uppercase" ng-class="{ 'strong': $first }">{{ day.date | amDateFormat:'ddd' }}</span><br />
+                    <span class="day">{{ day.date | amDateFormat:'ddd' }}</span>
                     <i class="icon-weather-{{ day.getWeatherCode().code }}"></i>
                     <p class="temperatures">
                         {{ day.weather.tempMax }}&deg; <span class="min">{{ day.weather.tempMin }}&deg;</span>
@@ -57,7 +59,7 @@
                     ng-show="(weatherCtrl.activeTab === 0 && $index >= day.getCurrentHourIndex()) || weatherCtrl.activeTab > 0">
                     <li>
                         <strong>{{ period.period }}</strong>
-                        <i class="icon-weather-{{ period.code }}"></i>
+                        <i class="icon-weather-{{ period.code.code }}"></i>
                     </li>
                     <li class="text-center">
                         <i class="icon-rain"></i>
@@ -88,7 +90,6 @@
                     </p>
                 </div>
                 <div class="large-12 columns">
-                    <hr />
                     <p class="text-smallest color-lightest-text">
                         {{ 'meta.lastUpdated'|translate }}: {{ weatherCtrl.forecast.meta.lastUpdated|amDateFormat:'L LT' }}<br />
                         {{ 'meta.sources'|translate }}:

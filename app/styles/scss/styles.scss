@@ -635,6 +635,8 @@ ul.drawer {
         color: $color-dark-blue;
     }
     .content {
+        margin-top: $column-gutter;
+
         div > img + p {
             font-size: .9em;
             color: $color-light-text;

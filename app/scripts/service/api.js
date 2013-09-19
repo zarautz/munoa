@@ -135,6 +135,14 @@ Z.app.factory('api', ['apiHost', '$http', '$q', function(apiHost, $http, $q) {
                 return response.data;
             });
         },
+        getPharmaciesOnDuty: function () {
+            return $http({
+                method: 'GET',
+                url: apiHost + '/pharmacies/duty'
+            }).then(function (response) {
+                return response.data;
+            });
+        },
         getZuZarautzPosts: function () {
             return $http({
                 method: 'GET',

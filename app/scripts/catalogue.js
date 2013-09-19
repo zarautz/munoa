@@ -139,6 +139,12 @@ Z.catalogue = {
         'en': 'Health care',
         'fr': 'Soins de santé'
     },
+    'health.pharmacies.duty': {
+        'eu': 'Guardiako farmaziak',
+        'es': 'Farmacias de guardia',
+        'en': 'Pharmacies on duty',
+        'fr': 'Pharmacies de garde'
+    },
     //
     // Places
     //

@@ -61,6 +61,10 @@ $tableview-border-color:      #eaeaea;
 }
 
 .table-view-images {
+    &.padded {
+        padding-left: .7em;
+    }
+
     .title {
         margin: 0 $base-padding 0 0;
     }
@@ -114,6 +118,17 @@ $tableview-border-color:      #eaeaea;
 
                 &.color-blue {
                     color: $color-blue;
+                }
+            }
+
+            &.strong {
+                margin-top: 0;
+                color: $color-text;
+                font-size: $em-base;
+
+                [class^="icon-"],
+                [class*=" icon-"] {
+                    color: inherit;
                 }
             }
         }

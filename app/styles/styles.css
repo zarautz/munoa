@@ -3163,17 +3163,21 @@ a.chameleon, a.chameleon:hover {
 }
 
 /* line 64, scss/_module-tableview.scss */
+.table-view-images.padded {
+  padding-left: .7em;
+}
+/* line 68, scss/_module-tableview.scss */
 .table-view-images .title {
   margin: 0 16px 0 0;
 }
-/* line 68, scss/_module-tableview.scss */
+/* line 72, scss/_module-tableview.scss */
 .table-view-images .icon-right-open {
   font-size: 1.2em;
   float: right;
   color: #999999;
   margin: -3px -8px 8px 8px;
 }
-/* line 75, scss/_module-tableview.scss */
+/* line 79, scss/_module-tableview.scss */
 .table-view-images .thumbnail {
   width: 80%;
   -webkit-border-radius: 1000px;
@@ -3201,15 +3205,15 @@ a.chameleon, a.chameleon:hover {
 .table-view-images .thumbnail.color-4 {
   background-color: #ff837c;
 }
-/* line 82, scss/_module-tableview.scss */
+/* line 86, scss/_module-tableview.scss */
 .table-view-images .thumbnail img {
   width: 100%;
 }
-/* line 86, scss/_module-tableview.scss */
+/* line 90, scss/_module-tableview.scss */
 .table-view-images .thumbnail.featured {
   border: 4px solid #ffcc00;
 }
-/* line 92, scss/_module-tableview.scss */
+/* line 96, scss/_module-tableview.scss */
 .table-view-images .main-td p {
   font-size: 0.8em;
   line-height: 1.3;
@@ -3217,17 +3221,17 @@ a.chameleon, a.chameleon:hover {
   color: #666666;
   padding-left: 16px;
 }
-/* line 98, scss/_module-tableview.scss */
+/* line 102, scss/_module-tableview.scss */
 .table-view-images .main-td p .distance {
   color: #999999;
 }
-/* line 102, scss/_module-tableview.scss */
+/* line 106, scss/_module-tableview.scss */
 .table-view-images .main-td p .tag {
   display: block;
   float: left;
   margin-right: 0.2em;
 }
-/* line 108, scss/_module-tableview.scss */
+/* line 112, scss/_module-tableview.scss */
 .table-view-images .main-td p [class^="icon-"],
 .table-view-images .main-td p [class*=" icon-"] {
   float: left;
@@ -3235,16 +3239,27 @@ a.chameleon, a.chameleon:hover {
   margin-right: 1px;
   color: #737373;
 }
-/* line 115, scss/_module-tableview.scss */
+/* line 119, scss/_module-tableview.scss */
 .table-view-images .main-td p [class^="icon-"].color-blue,
 .table-view-images .main-td p [class*=" icon-"].color-blue {
   color: #34aadc;
 }
-/* line 122, scss/_module-tableview.scss */
+/* line 124, scss/_module-tableview.scss */
+.table-view-images .main-td p.strong {
+  margin-top: 0;
+  color: #222222;
+  font-size: 17px;
+}
+/* line 129, scss/_module-tableview.scss */
+.table-view-images .main-td p.strong [class^="icon-"],
+.table-view-images .main-td p.strong [class*=" icon-"] {
+  color: inherit;
+}
+/* line 137, scss/_module-tableview.scss */
 .table-view-images hr {
   margin: 16px -16px;
 }
-/* line 126, scss/_module-tableview.scss */
+/* line 141, scss/_module-tableview.scss */
 .table-view-images div.sort-options {
   *zoom: 1;
   font-size: 0.8em;
@@ -3262,7 +3277,7 @@ a.chameleon, a.chameleon:hover {
 .table-view-images div.sort-options:after {
   clear: both;
 }
-/* line 133, scss/_module-tableview.scss */
+/* line 148, scss/_module-tableview.scss */
 .table-view-images div.sort-options .bicon {
   text-align: center;
   display: block;
@@ -3276,14 +3291,14 @@ a.chameleon, a.chameleon:hover {
   margin: 0;
   padding: 0;
 }
-/* line 145, scss/_module-tableview.scss */
+/* line 160, scss/_module-tableview.scss */
 .table-view-images div.sort-options .bicon.left-radius {
   -webkit-border-top-right-radius: 0;
   border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-/* line 150, scss/_module-tableview.scss */
+/* line 165, scss/_module-tableview.scss */
 .table-view-images div.sort-options .bicon.right-radius {
   padding-right: 3px;
   -webkit-border-top-left-radius: 0;
@@ -3291,26 +3306,26 @@ a.chameleon, a.chameleon:hover {
   -webkit-border-bottom-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-/* line 156, scss/_module-tableview.scss */
+/* line 171, scss/_module-tableview.scss */
 .table-view-images div.sort-options .bicon.icon-sort-alphabet {
   padding-right: 3px;
 }
-/* line 160, scss/_module-tableview.scss */
+/* line 175, scss/_module-tableview.scss */
 .table-view-images div.sort-options .bicon.icon-star {
   margin-left: 16px;
 }
-/* line 164, scss/_module-tableview.scss */
+/* line 179, scss/_module-tableview.scss */
 .table-view-images div.sort-options .bicon.on {
   background-color: #34aadc;
   color: white;
 }
-/* line 169, scss/_module-tableview.scss */
+/* line 184, scss/_module-tableview.scss */
 .table-view-images div.sort-options .bicon.fav-on {
   background-color: #ffcc00;
   color: white;
 }
 
-/* line 177, scss/_module-tableview.scss */
+/* line 192, scss/_module-tableview.scss */
 p.table-view-separator {
   border-bottom: 1px solid #34aadc;
   color: #1d7ea7;
@@ -3320,7 +3335,7 @@ p.table-view-separator {
   line-height: 1.3;
   text-transform: uppercase;
 }
-/* line 185, scss/_module-tableview.scss */
+/* line 200, scss/_module-tableview.scss */
 p.table-view-separator.compress {
   margin-top: 0;
 }

@@ -18,9 +18,10 @@
             </ul>
             <div ng-if="placesCtrl.section === 'health'" class="table-view-images padded">
                 <p class="table-view-separator">
+                    <i ng-if="placesCtrl.pharmaciesStatus.isLoading" class="right icon-spin color-blue animate-spin"></i>
                     {{ 'health.pharmacies.duty' | translate }}
                 </p>
-                <div ng-repeat="period in placesCtrl.pharmacies | filter: placesCtrl.inHour">
+                <div ng-repeat="period in placesCtrl.pharmacies.data | filter: placesCtrl.inHour">
                     <hr ng-if="$index !== 0" />
                     <div class="row collapse"
                         ng-click="navigation.pushView('views/placeView.html', { id: period.place.id, name: period.place.name })">

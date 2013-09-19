@@ -12,7 +12,7 @@ Z.app.controller('PlacesController', ['$routeParams', '$scope', 'pharmaciesMappe
 
             this.geolocation = phonegap.geolocation;
             this.pharmacies = pharmacies.promise;
-            this.status = pharmacies.status;
+            this.pharmaciesStatus = pharmacies.status;
 
             this.inHour = function(period) {
                 return hour >= period.from && hour < period.to;

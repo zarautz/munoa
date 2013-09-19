@@ -49,7 +49,9 @@ Z.app.factory('pharmaciesMapper', ['$q', 'pharmaciesSource', function ($q, pharm
             }
         }
 
-        return today;
+        values[0].data = today;
+
+        return values[0];
     });
 
     return pharmaciesMapper;

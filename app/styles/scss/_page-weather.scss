@@ -5,7 +5,7 @@ $page-today-font-color: #333;
 $color-temp-min: $color-blue;
 
 .icon-weather-11:before {
-    color: $color-yellow;
+    color: $color-orange;
 }
 
 .weather-today {
@@ -20,7 +20,7 @@ $color-temp-min: $color-blue;
     [class^="icon-"],
     [class*=" icon-"] {
         font-size: 6em;
-        line-height: 1;
+        line-height: 1.3;
     }
     
     .temperature {

@@ -74,8 +74,7 @@
             <div class="row collapse">
                 <div class="large-12 columns"
                     ng-if="weatherCtrl.forecast.today.weather.uvMax > 5 && weatherCtrl.forecast.today.getCurrentWeatherCode().code === 11">
-                    <hr />
-                    <h3><i class="right icon-info"></i> {{ 'weather.uv.title'|translate }}</h3>
+                    <h2><i class="right icon-info"></i> {{ 'weather.uv.title'|translate }}</h2>
                     <p class="uv-text-orange"
                         ng-if="weatherCtrl.forecast.today.weather.uvMax > 5 && weatherCtrl.forecast.today.weather.uvMax < 8">
                         {{ 'weather.uv.orange'|translate }}
@@ -88,6 +87,7 @@
                         ng-if="weatherCtrl.forecast.today.weather.uvMax > 10">
                         {{ 'weather.uv.violet'|translate }}
                     </p>
+                    <hr />
                 </div>
                 <div class="large-12 columns">
                     <p class="text-smallest color-lightest-text">

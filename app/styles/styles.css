@@ -3168,7 +3168,7 @@ a.chameleon, a.chameleon:hover {
 
 /* line 64, scss/_module-tableview.scss */
 .table-view-images.padded {
-  padding-left: .7em;
+  padding-left: .75em;
 }
 /* line 68, scss/_module-tableview.scss */
 .table-view-images .title {
@@ -3443,7 +3443,7 @@ div.map-container > div img {
 
 /* line 7, scss/_page-weather.scss */
 .icon-weather-11:before {
-  color: #ffcc00;
+  color: #ff9500;
 }
 
 /* line 11, scss/_page-weather.scss */
@@ -3460,7 +3460,7 @@ div.map-container > div img {
 .weather-today [class^="icon-"],
 .weather-today [class*=" icon-"] {
   font-size: 6em;
-  line-height: 1;
+  line-height: 1.3;
 }
 /* line 26, scss/_page-weather.scss */
 .weather-today .temperature {

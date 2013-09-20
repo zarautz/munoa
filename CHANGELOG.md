@@ -1,3 +1,7 @@
+0.2.1
+-----
+Fixed an error in cache that prevented showing cached info properly
+
 0.2.0
 -----
 Added information about pharmacies on duty

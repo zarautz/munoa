@@ -67,6 +67,7 @@ Z.Status.prototype.update = function () {
     }
 
     if (this.hasParent()) {
+        this.isDone = false;
         this._parent.update();
     }
 };

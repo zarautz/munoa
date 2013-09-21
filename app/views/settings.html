@@ -32,10 +32,16 @@
                 </li>-->
                 <li>
                     <span class="a">
-                        {{ 'settings.about.build'|translate }}
-                        <span class="detail">{{ '@@timestamp' | amDateFormat:'llll' }}</span>
+                        {{ 'settings.about.version' | translate }}
+                        <span class="detail">@@version</span>
                     </span>
                 </li>
+                <!--<li>
+                    <span class="a">
+                        {{ 'settings.about.build' | translate }}
+                        <span class="detail">{{ '@@timestamp' | amDateFormat:'llll' }}</span>
+                    </span>
+                </li>-->
             </ul>
             <br/>
             <h5>{{ 'settings.data' | translate }}</h5>

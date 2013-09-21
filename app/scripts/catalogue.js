@@ -190,6 +190,12 @@ Z.catalogue = {
         'en': 'Build',
         'fr': 'Build'
     },
+    'settings.about.version': {
+        'eu': 'Bertsioa',
+        'es': 'Versión',
+        'en': 'Version',
+        'fr': 'Version'
+    },
     'settings.data': {
         'eu': 'Datuak',
         'es': 'Datos',

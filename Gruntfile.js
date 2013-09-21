@@ -247,13 +247,16 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     variables: {
-                        'timestamp': '<%= grunt.template.today() %>'
+                        'timestamp': '<%= grunt.template.today() %>',
+                        'version': '0.2.2',
+                        'versionCode': '5',
                     },
                     prefix: '@@'
                 },
                 files: [
                     { expand: true, flatten: true, src: '<%= yeoman.dist %>/preview/index.html', dest: '<%= yeoman.dist %>/preview/' },
-                    { expand: true, flatten: true, src: '<%= yeoman.dist %>/views/settings.html', dest: '<%= yeoman.dist %>/views/' }
+                    { expand: true, flatten: true, src: '<%= yeoman.dist %>/views/settings.html', dest: '<%= yeoman.dist %>/views/' },
+                    { expand: true, flatten: true, src: '<%= yeoman.dist %>/config.xml', dest: '<%= yeoman.dist %>/' }
                 ]
             }
         },

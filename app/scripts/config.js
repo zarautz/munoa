@@ -56,9 +56,15 @@ Z.app.config(['$compileProvider', '$routeProvider', '$locationProvider', 'babelP
         },
         {
             id: 'zuzarautz',
-            path: '/',
+            path: '/zuzarautz',
             icon: 'icon-home color-blue'
-        }
+        },
+        // Home page is used only for redirecting
+        {
+            id: 'redirect',
+            path: '/',
+            controller: 'RedirectController'
+        },
     ];
 
     // This is not the Menu instance, it's the configuration of the provider
@@ -107,8 +113,16 @@ Z.app.config(['$compileProvider', '$routeProvider', '$locationProvider', 'babelP
     // ------
     // We get the menu items from the menu provider as these have been processed
     angular.forEach(menuProvider.getMenuItems(), function (item) {
-        $routeProvider.when(item.route, { templateUrl: item.templateUrl });
+        var params;
+
+        if (item.controller !== undefined) {
+            params = { controller: item.controller, templateUrl: item.templateUrl };
+        } else {
+            params = { templateUrl: item.templateUrl };
+        }
+
+        $routeProvider.when(item.route, params);
     });
 
-    $routeProvider.otherwise({redirectTo: '/'});
+    $routeProvider.otherwise({ redirectTo: '/' });
 }]);

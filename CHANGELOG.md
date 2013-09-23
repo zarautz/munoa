@@ -1,3 +1,8 @@
+0.2.3
+-----
+Events now show in the selected language
+Initial page now changes depending on user profile
+
 0.2.2
 -----
 Added provisional fix to angular.js to have routing working on Android 2.3.3-2.3.7

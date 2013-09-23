@@ -42,7 +42,8 @@
             <ul class="drawer">
                 <li ng-repeat="item in navigation.menu.getItems()">
                     <a ng-href="#{{ item.path }}" class="{{ item.id }}"
-                        ng-class="{ 'active': item.path === navigation.location.path() }">
+                        ng-class="{ 'active': item.path === navigation.location.path() }"
+                        ng-if="item.path !== '/'">
                         <i class="{{ item.icon }}"></i>{{ item.id|translate }}
                     </a>
                 </li>
@@ -75,6 +76,7 @@
         <script src="scripts/controller/placeList.js"></script>
         <script src="scripts/controller/places.js"></script>
         <script src="scripts/controller/placeView.js"></script>
+        <script src="scripts/controller/redirect.js"></script>
         <script src="scripts/controller/settings.js"></script>
         <script src="scripts/controller/tides.js"></script>
         <script src="scripts/controller/weather.js"></script>

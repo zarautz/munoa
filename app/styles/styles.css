@@ -1737,468 +1737,480 @@ section.on-4 {
 
 /* '' */
 /* line 73, scss/_app-icons.scss */
+.icon-infinity:before {
+  content: '\e86b';
+}
+
+/* '' */
+/* line 74, scss/_app-icons.scss */
 .icon-home:before {
   content: '\e840';
 }
 
 /* '' */
-/* line 74, scss/_app-icons.scss */
+/* line 75, scss/_app-icons.scss */
 .icon-sun-alt:before {
   content: '\e81e';
 }
 
 /* '' */
-/* line 75, scss/_app-icons.scss */
+/* line 76, scss/_app-icons.scss */
 .icon-rain:before {
   content: '\e81f';
 }
 
 /* '' */
-/* line 76, scss/_app-icons.scss */
+/* line 77, scss/_app-icons.scss */
 .icon-star:before {
   content: '\e803';
 }
 
 /* '' */
-/* line 77, scss/_app-icons.scss */
+/* line 78, scss/_app-icons.scss */
 .icon-star-empty:before {
   content: '\e804';
 }
 
 /* '' */
-/* line 78, scss/_app-icons.scss */
+/* line 79, scss/_app-icons.scss */
 .icon-layout:before {
   content: '\e813';
 }
 
 /* '' */
-/* line 79, scss/_app-icons.scss */
+/* line 80, scss/_app-icons.scss */
 .icon-flag:before {
   content: '\e815';
 }
 
 /* '' */
-/* line 80, scss/_app-icons.scss */
+/* line 81, scss/_app-icons.scss */
 .icon-attention:before {
   content: '\e807';
 }
 
 /* '' */
-/* line 81, scss/_app-icons.scss */
+/* line 82, scss/_app-icons.scss */
 .icon-ok:before {
   content: '\e83e';
 }
 
 /* '' */
-/* line 82, scss/_app-icons.scss */
+/* line 83, scss/_app-icons.scss */
 .icon-cancel:before {
   content: '\e83f';
 }
 
 /* '' */
-/* line 83, scss/_app-icons.scss */
+/* line 84, scss/_app-icons.scss */
 .icon-accessibility:before {
   content: '\e865';
 }
 
 /* '' */
-/* line 84, scss/_app-icons.scss */
+/* line 85, scss/_app-icons.scss */
 .icon-sort-alphabet:before {
   content: '\e81c';
 }
 
 /* '' */
-/* line 85, scss/_app-icons.scss */
+/* line 86, scss/_app-icons.scss */
 .icon-book:before {
   content: '\e864';
 }
 
 /* '' */
-/* line 86, scss/_app-icons.scss */
+/* line 87, scss/_app-icons.scss */
 .icon-cog-alt:before {
   content: '\e863';
 }
 
 /* '' */
-/* line 87, scss/_app-icons.scss */
+/* line 88, scss/_app-icons.scss */
 .icon-cog:before {
   content: '\e862';
 }
 
 /* '' */
-/* line 88, scss/_app-icons.scss */
+/* line 89, scss/_app-icons.scss */
 .icon-tag:before {
   content: '\e820';
 }
 
 /* '' */
-/* line 89, scss/_app-icons.scss */
+/* line 90, scss/_app-icons.scss */
 .icon-share:before {
   content: '\e816';
 }
 
 /* '' */
-/* line 90, scss/_app-icons.scss */
+/* line 91, scss/_app-icons.scss */
 .icon-location:before {
   content: '\e817';
 }
 
 /* '' */
-/* line 91, scss/_app-icons.scss */
+/* line 92, scss/_app-icons.scss */
 .icon-basket-alt:before {
   content: '\e80b';
 }
 
 /* '' */
-/* line 92, scss/_app-icons.scss */
+/* line 93, scss/_app-icons.scss */
 .icon-basket:before {
   content: '\e821';
 }
 
 /* '' */
-/* line 93, scss/_app-icons.scss */
+/* line 94, scss/_app-icons.scss */
 .icon-calendar-alt:before {
   content: '\e868';
 }
 
 /* '' */
-/* line 94, scss/_app-icons.scss */
+/* line 95, scss/_app-icons.scss */
 .icon-layers:before {
   content: '\e81d';
 }
 
 /* '' */
-/* line 95, scss/_app-icons.scss */
+/* line 96, scss/_app-icons.scss */
 .icon-smiley:before {
   content: '\e800';
 }
 
 /* '' */
-/* line 96, scss/_app-icons.scss */
+/* line 97, scss/_app-icons.scss */
 .icon-emo-sleep:before {
   content: '\e801';
 }
 
 /* '' */
-/* line 97, scss/_app-icons.scss */
+/* line 98, scss/_app-icons.scss */
 .icon-art:before {
   content: '\e846';
 }
 
 /* '' */
-/* line 98, scss/_app-icons.scss */
+/* line 99, scss/_app-icons.scss */
 .icon-bar:before {
   content: '\e847';
 }
 
 /* '' */
-/* line 99, scss/_app-icons.scss */
+/* line 100, scss/_app-icons.scss */
 .icon-beer:before {
   content: '\e848';
 }
 
 /* '' */
-/* line 100, scss/_app-icons.scss */
+/* line 101, scss/_app-icons.scss */
 .icon-bicycle:before {
   content: '\e849';
 }
 
 /* '' */
-/* line 101, scss/_app-icons.scss */
+/* line 102, scss/_app-icons.scss */
 .icon-bus:before {
   content: '\e84a';
 }
 
 /* '' */
-/* line 102, scss/_app-icons.scss */
+/* line 103, scss/_app-icons.scss */
 .icon-cafe:before {
   content: '\e84b';
 }
 
 /* '' */
-/* line 103, scss/_app-icons.scss */
+/* line 104, scss/_app-icons.scss */
 .icon-campsite:before {
   content: '\e84c';
 }
 
 /* '' */
-/* line 104, scss/_app-icons.scss */
+/* line 105, scss/_app-icons.scss */
 .icon-credit-card:before {
   content: '\e84d';
 }
 
 /* '' */
-/* line 105, scss/_app-icons.scss */
+/* line 106, scss/_app-icons.scss */
 .icon-fast-food:before {
   content: '\e84e';
 }
 
 /* '' */
-/* line 106, scss/_app-icons.scss */
+/* line 107, scss/_app-icons.scss */
 .icon-fuel:before {
   content: '\e84f';
 }
 
 /* '' */
-/* line 107, scss/_app-icons.scss */
+/* line 108, scss/_app-icons.scss */
 .icon-hospital-alt:before {
   content: '\e850';
 }
 
 /* '' */
-/* line 108, scss/_app-icons.scss */
+/* line 109, scss/_app-icons.scss */
 .icon-library:before {
   content: '\e851';
 }
 
 /* '' */
-/* line 109, scss/_app-icons.scss */
+/* line 110, scss/_app-icons.scss */
 .icon-lodging:before {
   content: '\e852';
 }
 
 /* '' */
-/* line 110, scss/_app-icons.scss */
+/* line 111, scss/_app-icons.scss */
 .icon-pitch:before {
   content: '\e853';
 }
 
 /* '' */
-/* line 111, scss/_app-icons.scss */
+/* line 112, scss/_app-icons.scss */
 .icon-police:before {
   content: '\e854';
 }
 
 /* '' */
-/* line 112, scss/_app-icons.scss */
+/* line 113, scss/_app-icons.scss */
 .icon-post:before {
   content: '\e855';
 }
 
 /* '' */
-/* line 113, scss/_app-icons.scss */
+/* line 114, scss/_app-icons.scss */
 .icon-rail:before {
   content: '\e856';
 }
 
 /* '' */
-/* line 114, scss/_app-icons.scss */
+/* line 115, scss/_app-icons.scss */
 .icon-restaurant:before {
   content: '\e857';
 }
 
 /* '' */
-/* line 115, scss/_app-icons.scss */
+/* line 116, scss/_app-icons.scss */
 .icon-spin:before {
   content: '\e867';
 }
 
 /* '' */
-/* line 116, scss/_app-icons.scss */
+/* line 117, scss/_app-icons.scss */
 .icon-school:before {
   content: '\e858';
 }
 
 /* '' */
-/* line 117, scss/_app-icons.scss */
+/* line 118, scss/_app-icons.scss */
 .icon-shop:before {
   content: '\e859';
 }
 
 /* '' */
-/* line 118, scss/_app-icons.scss */
+/* line 119, scss/_app-icons.scss */
 .icon-football:before {
   content: '\e85a';
 }
 
 /* '' */
-/* line 119, scss/_app-icons.scss */
+/* line 120, scss/_app-icons.scss */
 .icon-swim:before {
   content: '\e85b';
 }
 
 /* '' */
-/* line 120, scss/_app-icons.scss */
+/* line 121, scss/_app-icons.scss */
 .icon-theatre:before {
   content: '\e85c';
 }
 
 /* '' */
-/* line 121, scss/_app-icons.scss */
+/* line 122, scss/_app-icons.scss */
 .icon-toilet:before {
   content: '\e85d';
 }
 
 /* '' */
-/* line 122, scss/_app-icons.scss */
+/* line 123, scss/_app-icons.scss */
 .icon-town-hall:before {
   content: '\e85e';
 }
 
 /* '' */
-/* line 123, scss/_app-icons.scss */
+/* line 124, scss/_app-icons.scss */
 .icon-tree-alt:before {
   content: '\e85f';
 }
 
 /* '' */
-/* line 124, scss/_app-icons.scss */
+/* line 125, scss/_app-icons.scss */
 .icon-tree:before {
   content: '\e860';
 }
 
 /* '' */
-/* line 125, scss/_app-icons.scss */
+/* line 126, scss/_app-icons.scss */
 .icon-right-open:before {
   content: '\e843';
 }
 
 /* '' */
-/* line 126, scss/_app-icons.scss */
+/* line 127, scss/_app-icons.scss */
 .icon-left-open:before {
   content: '\e842';
 }
 
 /* '' */
-/* line 127, scss/_app-icons.scss */
+/* line 128, scss/_app-icons.scss */
 .icon-location-alt:before {
   content: '\e841';
 }
 
 /* '' */
-/* line 128, scss/_app-icons.scss */
+/* line 129, scss/_app-icons.scss */
 .icon-user:before {
   content: '\e83d';
 }
 
 /* '' */
-/* line 129, scss/_app-icons.scss */
+/* line 130, scss/_app-icons.scss */
 .icon-filter:before {
   content: '\e80e';
 }
 
 /* '' */
-/* line 130, scss/_app-icons.scss */
+/* line 131, scss/_app-icons.scss */
 .icon-menu:before {
   content: '\e80a';
 }
 
 /* '' */
-/* line 131, scss/_app-icons.scss */
+/* line 132, scss/_app-icons.scss */
 .icon-download:before {
   content: '\e806';
 }
 
 /* '' */
-/* line 132, scss/_app-icons.scss */
+/* line 133, scss/_app-icons.scss */
 .icon-doctor:before {
   content: '\e80f';
 }
 
 /* '' */
-/* line 133, scss/_app-icons.scss */
+/* line 134, scss/_app-icons.scss */
 .icon-doctor-alt:before {
   content: '\e810';
 }
 
 /* '' */
-/* line 134, scss/_app-icons.scss */
+/* line 135, scss/_app-icons.scss */
 .icon-hospital:before {
   content: '\e811';
 }
 
 /* '' */
-/* line 135, scss/_app-icons.scss */
+/* line 136, scss/_app-icons.scss */
 .icon-direction:before {
   content: '\e808';
 }
 
 /* '' */
-/* line 136, scss/_app-icons.scss */
+/* line 137, scss/_app-icons.scss */
 .icon-help:before {
   content: '\e802';
 }
 
 /* '' */
-/* line 137, scss/_app-icons.scss */
+/* line 138, scss/_app-icons.scss */
 .icon-attention-alt:before {
   content: '\e86a';
 }
 
 /* '' */
-/* line 138, scss/_app-icons.scss */
+/* line 139, scss/_app-icons.scss */
 .icon-ellipsis:before {
   content: '\e80d';
 }
 
 /* '' */
-/* line 139, scss/_app-icons.scss */
+/* line 140, scss/_app-icons.scss */
+.icon-level-up:before {
+  content: '\e86c';
+}
+
+/* '' */
+/* line 141, scss/_app-icons.scss */
 .icon-link-external:before {
   content: '\e805';
 }
 
 /* '' */
-/* line 140, scss/_app-icons.scss */
+/* line 142, scss/_app-icons.scss */
 .icon-euro:before {
   content: '\e869';
 }
 
 /* '' */
-/* line 141, scss/_app-icons.scss */
+/* line 143, scss/_app-icons.scss */
 .icon-twitter:before {
   content: '\e861';
 }
 
 /* '' */
-/* line 142, scss/_app-icons.scss */
+/* line 144, scss/_app-icons.scss */
 .icon-pictures:before {
   content: '\e812';
 }
 
 /* '' */
-/* line 143, scss/_app-icons.scss */
+/* line 145, scss/_app-icons.scss */
 .icon-leaf:before {
   content: '\e80c';
 }
 
 /* '' */
-/* line 144, scss/_app-icons.scss */
+/* line 146, scss/_app-icons.scss */
 .icon-bag:before {
   content: '\e818';
 }
 
 /* '' */
-/* line 145, scss/_app-icons.scss */
+/* line 147, scss/_app-icons.scss */
 .icon-calendar:before {
   content: '\e819';
 }
 
 /* '' */
-/* line 146, scss/_app-icons.scss */
+/* line 148, scss/_app-icons.scss */
 .icon-phone:before {
   content: '\e809';
 }
 
 /* '' */
-/* line 147, scss/_app-icons.scss */
+/* line 149, scss/_app-icons.scss */
 .icon-wifi:before {
   content: '\e81b';
 }
 
 /* '' */
-/* line 148, scss/_app-icons.scss */
+/* line 150, scss/_app-icons.scss */
 .icon-search:before {
   content: '\e866';
 }
 
 /* '' */
-/* line 149, scss/_app-icons.scss */
+/* line 151, scss/_app-icons.scss */
 .icon-clock:before {
   content: '\e81a';
 }
 
 /* '' */
-/* line 151, scss/_app-icons.scss */
+/* line 153, scss/_app-icons.scss */
 .icon-parking:before {
   content: 'P';
   font-family: inherit;
@@ -2207,7 +2219,7 @@ section.on-4 {
 }
 
 /* '' */
-/* line 152, scss/_app-icons.scss */
+/* line 154, scss/_app-icons.scss */
 .icon-hospital-h:before {
   content: 'H';
   font-family: inherit;
@@ -2215,7 +2227,7 @@ section.on-4 {
 }
 
 /* '' */
-/* line 153, scss/_app-icons.scss */
+/* line 155, scss/_app-icons.scss */
 .icon-euro:before {
   content: '€';
   font-family: inherit;
@@ -2224,26 +2236,26 @@ section.on-4 {
 }
 
 /* '' */
-/* line 155, scss/_app-icons.scss */
+/* line 160, scss/_app-icons.scss */
 .icon-weather-11:before {
   content: '\e829';
 }
 
 /* '' */
-/* line 156, scss/_app-icons.scss */
+/* line 161, scss/_app-icons.scss */
 .icon-weather-12:before,
 .icon-weather-13:before {
   content: '\e82f';
 }
 
 /* '' */
-/* line 158, scss/_app-icons.scss */
+/* line 163, scss/_app-icons.scss */
 .icon-weather-14:before {
   content: '\e833';
 }
 
 /* '' */
-/* line 159, scss/_app-icons.scss */
+/* line 164, scss/_app-icons.scss */
 .icon-weather-15:before,
 .icon-weather-16:before,
 .icon-weather-17:before {
@@ -2251,7 +2263,7 @@ section.on-4 {
 }
 
 /* '' */
-/* line 162, scss/_app-icons.scss */
+/* line 167, scss/_app-icons.scss */
 .icon-weather-23:before,
 .icon-weather-24:before,
 .icon-weather-25:before,
@@ -2260,21 +2272,21 @@ section.on-4 {
 }
 
 /* '' */
-/* line 166, scss/_app-icons.scss */
+/* line 171, scss/_app-icons.scss */
 .icon-weather-33:before,
 .icon-weather-34:before {
   content: '\e839';
 }
 
 /* '' */
-/* line 168, scss/_app-icons.scss */
+/* line 173, scss/_app-icons.scss */
 .icon-weather-35:before,
 .icon-weather-36:before {
   content: '\e83a';
 }
 
 /* '' */
-/* line 170, scss/_app-icons.scss */
+/* line 175, scss/_app-icons.scss */
 .icon-weather-43:before,
 .icon-weather-44:before,
 .icon-weather-45:before,
@@ -2283,14 +2295,14 @@ section.on-4 {
 }
 
 /* '' */
-/* line 174, scss/_app-icons.scss */
+/* line 179, scss/_app-icons.scss */
 .icon-weather-51:before,
 .icon-weather-52:before {
   content: '\e834';
 }
 
 /* '' */
-/* line 176, scss/_app-icons.scss */
+/* line 181, scss/_app-icons.scss */
 .icon-weather-53:before,
 .icon-weather-54:before,
 .icon-weather-61:before,
@@ -2301,29 +2313,82 @@ section.on-4 {
 }
 
 /* '' */
-/* line 182, scss/_app-icons.scss */
+/* line 187, scss/_app-icons.scss */
 .icon-weather-71:before,
 .icon-weather-72:before {
   content: '\e83b';
 }
 
 /* '' */
-/* line 184, scss/_app-icons.scss */
+/* line 189, scss/_app-icons.scss */
 .icon-weather-73:before,
 .icon-weather-74:before {
   content: '\e839';
 }
 
 /* '' */
+/* line 197, scss/_app-icons.scss */
+[class^="icon-wind-"]:before,
+[class*=" icon-wind-"]:before {
+  content: '\e86c';
+}
+
+/* line 199, scss/_app-icons.scss */
+.icon-wind-:before {
+  content: '-';
+}
+
+/* line 200, scss/_app-icons.scss */
+.icon-wind-N:before {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* line 201, scss/_app-icons.scss */
+.icon-wind-NE:before {
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+/* line 202, scss/_app-icons.scss */
+.icon-wind-E:before {
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+/* line 203, scss/_app-icons.scss */
+.icon-wind-SE:before {
+  -webkit-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+
+/* line 205, scss/_app-icons.scss */
+.icon-wind-SW:before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* line 206, scss/_app-icons.scss */
+.icon-wind-W:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* line 207, scss/_app-icons.scss */
+.icon-wind-NW:before {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
 @-webkit-keyframes spin {
-  /* line 204, scss/_app-icons.scss */
+  /* line 226, scss/_app-icons.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 210, scss/_app-icons.scss */
+  /* line 232, scss/_app-icons.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);
@@ -2332,14 +2397,14 @@ section.on-4 {
 }
 
 @-moz-keyframes spin {
-  /* line 204, scss/_app-icons.scss */
+  /* line 226, scss/_app-icons.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 210, scss/_app-icons.scss */
+  /* line 232, scss/_app-icons.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);
@@ -2348,14 +2413,14 @@ section.on-4 {
 }
 
 @keyframes spin {
-  /* line 204, scss/_app-icons.scss */
+  /* line 226, scss/_app-icons.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 210, scss/_app-icons.scss */
+  /* line 232, scss/_app-icons.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);
@@ -3058,53 +3123,58 @@ hr {
 }
 
 /* line 690, scss/styles.scss */
-.strong {
+strong, .strong {
   font-weight: bold;
 }
 
 /* line 694, scss/styles.scss */
+sup, .sup {
+  font-size: 0.65em;
+}
+
+/* line 698, scss/styles.scss */
 .text-big {
   font-size: 1.4em;
 }
 
-/* line 698, scss/styles.scss */
+/* line 702, scss/styles.scss */
 .text-biggest {
   font-size: 2em;
 }
 
-/* line 702, scss/styles.scss */
+/* line 706, scss/styles.scss */
 .text-small {
   font-size: 0.9em;
   line-height: 1.3;
 }
 
-/* line 706, scss/styles.scss */
+/* line 710, scss/styles.scss */
 .text-smallest {
   font-size: 0.8em;
   line-height: 1.3;
 }
 
-/* line 710, scss/styles.scss */
+/* line 714, scss/styles.scss */
 .text-light {
   font-weight: 300;
 }
 
-/* line 714, scss/styles.scss */
+/* line 718, scss/styles.scss */
 .ucfirst:first-letter {
   text-transform: uppercase;
 }
 
-/* line 718, scss/styles.scss */
+/* line 722, scss/styles.scss */
 .uppercase {
   text-transform: uppercase;
 }
 
-/* line 722, scss/styles.scss */
+/* line 726, scss/styles.scss */
 .lowercase {
   text-transform: lowercase;
 }
 
-/* line 727, scss/styles.scss */
+/* line 731, scss/styles.scss */
 a.chameleon, a.chameleon:hover {
   color: inherit;
   text-decoration: none;

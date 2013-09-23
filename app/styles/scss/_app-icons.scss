@@ -70,6 +70,7 @@
 .icon-info:before { content: '\e814'; } /* '' */
 .icon-left:before { content: '\e844'; } /* '' */
 .icon-right:before { content: '\e845'; } /* '' */
+.icon-infinity:before { content: '\e86b'; } /* '' */
 .icon-home:before { content: '\e840'; } /* '' */
 .icon-sun-alt:before { content: '\e81e'; } /* '' */
 .icon-rain:before { content: '\e81f'; } /* '' */
@@ -136,6 +137,7 @@
 .icon-help:before { content: '\e802'; } /* '' */
 .icon-attention-alt:before { content: '\e86a'; } /* '' */
 .icon-ellipsis:before { content: '\e80d'; } /* '' */
+.icon-level-up:before { content: '\e86c'; } /* '' */
 .icon-link-external:before { content: '\e805'; } /* '' */
 .icon-euro:before { content: '\e869'; } /* '' */
 .icon-twitter:before { content: '\e861'; } /* '' */
@@ -152,6 +154,9 @@
 .icon-hospital-h:before { content: 'H'; font-family: inherit; font-weight: bold; } /* '' */
 .icon-euro:before { content: '€'; font-family: inherit; font-weight: bold; margin-right: 0.15em; } /* '' */
 
+//
+// Weather codes
+//
 .icon-weather-11:before { content: '\e829'; } /* '' */
 .icon-weather-12:before,
 .icon-weather-13:before { content: '\e82f'; } /* '' */
@@ -183,6 +188,23 @@
 .icon-weather-72:before { content: '\e83b'; } /* '' */
 .icon-weather-73:before,
 .icon-weather-74:before { content: '\e839'; } /* '' */
+
+//
+// Wind
+//
+[class^="icon-wind-"],
+[class*=" icon-wind-"] {
+    &:before { content: '\e86c'; }
+}
+.icon-wind-:before { content: '-'; }
+.icon-wind-N:before { @include transform(rotate(180deg)); }
+.icon-wind-NE:before { @include transform(rotate(225deg)); }
+.icon-wind-E:before { @include transform(rotate(270deg)); }
+.icon-wind-SE:before { @include transform(rotate(315deg)); }
+.icon-wind-S:before { }
+.icon-wind-SW:before { @include transform(rotate(45deg)); }
+.icon-wind-W:before { @include transform(rotate(90deg)); }
+.icon-wind-NW:before { @include transform(rotate(135deg)); }
 
 //
 // Animation example, for spinners

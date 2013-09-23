@@ -687,8 +687,12 @@ hr {
     height: 0;
 }
 
-.strong {
+strong, .strong {
     font-weight: $body-font-weight-strong;
+}
+
+sup, .sup {
+    font-size: 0.65em;
 }
 
 .text-big {

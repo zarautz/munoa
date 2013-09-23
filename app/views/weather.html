@@ -66,8 +66,9 @@
                         {{ period.precipitationProb }}%
                     </li>
                     <li class="text-right">
-                        {{ period.windDirection }} {{ period.windSpeed }}
-                        <i class="icon-wind"></i>
+                        <i class="icon-wind-{{ period.windDirection }}"></i>
+                        {{ period.windSpeed }}
+                        <sup>km/h</sup>
                     </li>
                 </ul>
             </div>

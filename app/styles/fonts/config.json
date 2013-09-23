@@ -89,6 +89,12 @@
       "src": "fontawesome"
     },
     {
+      "uid": "dea706a9bd3144316ce37406ec10f469",
+      "css": "level-up",
+      "code": 59500,
+      "src": "fontawesome"
+    },
+    {
       "uid": "19e7b342a5e6bd0cd86de6d6208486a4",
       "css": "leaf",
       "code": 59404,
@@ -188,6 +194,12 @@
       "uid": "84a7262985600b683bbab0da9298776d",
       "css": "wifi",
       "code": 59419,
+      "src": "entypo"
+    },
+    {
+      "uid": "34ba50fe8e4f95e7f3d76c6534814a70",
+      "css": "infinity",
+      "code": 59499,
       "src": "entypo"
     },
     {

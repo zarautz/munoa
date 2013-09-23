@@ -3,7 +3,7 @@
 Z.app.factory('eventsSource', ['api', 'cache', '$q', function (api, cache, $q) {
     var eventsSource = new Z.DataSource(cache, $q);
 
-    eventsSource.setCacheKeys(['[events]']);
+    eventsSource.setCacheKeys(['[events]', 'language']);
     eventsSource.setCacheTTL(60 * 60 * 2);
 
     eventsSource.setLoadDataCb(function (params) {

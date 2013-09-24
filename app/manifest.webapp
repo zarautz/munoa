@@ -1,4 +1,5 @@
 {
+    "version": "@@version",
     "name": "Zarautz",
     "description": "Zarauzko Udalaren App ofiziala. Zarautzen gertatzen eta egiten denaren berri izan eta gure herria deskubritzeko ezinbesteko tresna. Minutura eguneratutako albiste eta ekitaldiak topatuko dituzu bertan, zure neurrira egindako orainkarian. Horrez gain, Zarautzen bizitzeko zein Zarautz deskubritzeko bertako lekuen zerrenda osotua eskaintzen dizu aplikazio honek: non jan, non lo egin, wifira non konektatu... Onena zuk zeuk eskua sartu eta arakatzea izango da. Zu ere baitzara Zarautz!",
     "launch_path": "/index.html",

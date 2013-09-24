@@ -256,7 +256,8 @@ module.exports = function (grunt) {
                 files: [
                     { expand: true, flatten: true, src: '<%= yeoman.dist %>/preview/index.html', dest: '<%= yeoman.dist %>/preview/' },
                     { expand: true, flatten: true, src: '<%= yeoman.dist %>/views/settings.html', dest: '<%= yeoman.dist %>/views/' },
-                    { expand: true, flatten: true, src: '<%= yeoman.dist %>/config.xml', dest: '<%= yeoman.dist %>/' }
+                    { expand: true, flatten: true, src: '<%= yeoman.dist %>/config.xml', dest: '<%= yeoman.dist %>/' },
+                    { expand: true, flatten: true, src: '<%= yeoman.dist %>/manifest.webapp', dest: '<%= yeoman.dist %>/' }
                 ]
             }
         },

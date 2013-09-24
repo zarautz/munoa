@@ -5,7 +5,7 @@ Z.app.config(['$compileProvider', '$routeProvider', '$locationProvider', 'babelP
     // URLs
     // ----
     // Add "tel:" and "map:" links as safe providers
-    $compileProvider.aHrefSanitizationWhitelist(/^\s*(file|https?|mailto|tel):/);
+    $compileProvider.aHrefSanitizationWhitelist(/^\s*(app|file|https?|mailto|tel):/);
 
     // -----
     // BABEL

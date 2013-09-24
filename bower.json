@@ -7,7 +7,7 @@
         "angular-route": "1.2.0-rc.2",
         "angular-touch": "1.2.0-rc.2",
         "angular-sanitize": "1.2.0-rc.2",
-        "angular-moment": "0.2.0",
+        "angular-moment": "0.2.1",
         "foundation": "~4.3.1",
         "overthrow": "git://github.com/filamentgroup/Overthrow.git"
     },

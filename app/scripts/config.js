@@ -62,8 +62,7 @@ Z.app.config(['$compileProvider', '$routeProvider', '$locationProvider', 'babelP
         // Home page is used only for redirecting
         {
             id: 'redirect',
-            path: '/',
-            controller: 'RedirectController'
+            path: '/'
         },
     ];
 
@@ -115,8 +114,8 @@ Z.app.config(['$compileProvider', '$routeProvider', '$locationProvider', 'babelP
     angular.forEach(menuProvider.getMenuItems(), function (item) {
         var params;
 
-        if (item.controller !== undefined) {
-            params = { controller: item.controller, templateUrl: item.templateUrl };
+        if (item.id === 'redirect') {
+            params = { controller: 'RedirectController', templateUrl: 'redirect' };
         } else {
             params = { templateUrl: item.templateUrl };
         }

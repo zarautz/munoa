@@ -38,10 +38,6 @@ Z.app.provider('menu', function () {
                 item.templateUrl = 'views/'+ item.id +'.html';
             }
 
-            if ('controller' in item) {
-                item.controller = item.controller;
-            }
-
             item.sort = {};
 
             this._map[item.id] = item;

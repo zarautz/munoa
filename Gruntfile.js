@@ -237,8 +237,7 @@ module.exports = function (grunt) {
                         '!components/**/*',
                         'images/**/*',
                         'preview/**/*',
-                        'styles/fonts/*',
-                        'styles/modernizr.custom.js'
+                        'styles/fonts/*'
                     ]
                 }]
             }

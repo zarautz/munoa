@@ -2,9 +2,6 @@
 https://build.phonegap.com/docs/config-xml
 -->
 <?xml version="1.0" encoding="UTF-8" ?>
-    <!-- 
-    versionCode: is optional and Android only
-    -->
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.illarra.zarautz.munoa"
@@ -20,7 +17,7 @@ https://build.phonegap.com/docs/config-xml
     App description
     -->
     <name>Zarautz</name>
-    <description>Zarautz app description</description>
+    <description>Official application of the City of Zarautz. A must-have to know what's going on in our town and discover its charms. News and up to the minute events calendar and a complete catalog of all the places you can find in Zarautz when you come to visit us.</description>
     <author href="http://illarra.com" email="team@illarra.com">illarra</author>
 
     <!--
@@ -66,15 +63,17 @@ https://build.phonegap.com/docs/config-xml
     <!-- 
     Icons
     -->
-    <icon src="images/icons/ios/57.png" gap:platform="ios" width="57" height="57" />
-    <icon src="images/icons/ios/72.png" gap:platform="ios" width="72" height="72" />
-    <icon src="images/icons/ios/57@2x.png" gap:platform="ios" width="114" height="114" />
-    <icon src="images/icons/ios/72@2x.png" gap:platform="ios" width="144" height="144" />
+    <!-- Android -->
     <icon src="images/icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
     <icon src="images/icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
     <icon src="images/icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
     <icon src="images/icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
     <icon src="images/icons/android/xxhdpi.png" gap:platform="android" gap:density="xxhdpi" />
+    <!-- iOS -->
+    <icon src="images/icons/ios/57.png" gap:platform="ios" width="57" height="57" />
+    <icon src="images/icons/ios/72.png" gap:platform="ios" width="72" height="72" />
+    <icon src="images/icons/ios/57@2x.png" gap:platform="ios" width="114" height="114" />
+    <icon src="images/icons/ios/72@2x.png" gap:platform="ios" width="144" height="144" />
 
     <!--
     Allow access to zarautz.org

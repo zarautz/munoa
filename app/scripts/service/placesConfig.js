@@ -124,7 +124,7 @@ Z.app.factory('placesConfig', [function() {
 
     group = section.addGroup('pharmacy');
     group
-        .setTypes(['pharmacy', 'parapharmacy'])
+        .setTypes(['pharmacy'])
         .setIcon('icon-hospital-alt')
     ;
 
@@ -142,7 +142,7 @@ Z.app.factory('placesConfig', [function() {
 
     group = section.addGroup('other');
     group
-        .setTypes(['optician','physiotherapist','podologist','psychologist'])
+        .setTypes(['optician', 'physiotherapist', 'podologist', 'psychologist', 'parapharmacy'])
         .setIcon('icon-doctor-alt')
     ;
 

@@ -95,7 +95,7 @@ Z.catalogue = {
         'eu': 'Agenda',
         'es': 'Agenda',
         'en': 'Events',
-        'fr': 'Événements'
+        'fr': 'Activités'
     },
     'event.count': { // % events
         'eu': 'lotutako ekitaldi',
@@ -137,7 +137,7 @@ Z.catalogue = {
         'eu': 'Osasun zerbitzuak',
         'es': 'Servicios sanitarios',
         'en': 'Health care',
-        'fr': 'Soins de santé'
+        'fr': 'Santé'
     },
     'health.pharmacies.duty': {
         'eu': 'Guardiako farmaziak',
@@ -436,7 +436,7 @@ Z.catalogue = {
         'eu': 'Polizia',
         'es': 'Policía',
         'en': 'Police',
-        'fr': 'La police'
+        'fr': 'Police'
     },
     // POIs
     'placesGroup.poi.poi': {
@@ -467,7 +467,7 @@ Z.catalogue = {
         'eu': 'Arkitektura',
         'es': 'Arquitectura',
         'en': 'Architecture',
-        'fr': 'L\'architecture'
+        'fr': 'Architecture'
     },
     'placesGroup.poi.children': {
         'eu': 'Haurrentzat',

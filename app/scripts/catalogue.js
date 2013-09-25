@@ -459,7 +459,7 @@ Z.catalogue = {
     },
     'placesGroup.poi.culture': {
         'eu': 'Kultur guneak',
-        'es': 'Centro culturales',
+        'es': 'Centros culturales',
         'en': 'Cultural centers',
         'fr': 'Centres culturels'
     },

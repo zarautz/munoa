@@ -211,7 +211,7 @@ Z.app.factory('placesConfig', [function() {
 
     group = section.addGroup('eating');
     group
-        .setTypes(['meal_takeaway', 'restaurant', 'food_establishment'])
+        .setTypes(['meal_takeaway', 'restaurant', 'pintxo_bar'])
         .setIcon('icon-restaurant')
         //.setShowPriceFilter(true)
     ;

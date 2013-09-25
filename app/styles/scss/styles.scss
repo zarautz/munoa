@@ -140,6 +140,25 @@ h3, h4 {
     @media only screen and (min-width: $tablet-breakpoint) {
         font-size: 1.1em;
     }
+
+    .privacy-policy & {
+        border-bottom: 1px solid $hr-border-color;
+        font-size: 1.1em;
+        margin: ($half-padding * 3) 0 $base-padding;
+        padding: 0 15% $half-padding ($half-padding * 3);
+
+        [class^="icon-"],
+        [class*=" icon-"] {
+            float: left;
+            margin-left: -($base-padding * 1.7);
+            color: $color-dark-blue;
+
+            &.icon-smiley {
+                font-size: .9em;
+                margin-top: .15em;
+            }
+        }
+    }
 }
 
 h5 {
@@ -155,6 +174,10 @@ p, ul {
     margin: 0;
     padding: 0;
     line-height: $body-line-height;
+
+    .privacy-policy & {
+        padding-left: $half-padding * 3;
+    }
 }
 
 li {
@@ -211,7 +234,7 @@ section {
     }
 
     div.overthrow {
-        padding: $base-padding;
+        padding: $base-padding $base-padding $column-gutter;
 
         @media only screen and (min-width: $tablet-breakpoint) {
             padding: ($base-padding * 3) ($base-padding * 6);

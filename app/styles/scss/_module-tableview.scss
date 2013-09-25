@@ -24,7 +24,8 @@ $tableview-border-color:      #eaeaea;
             line-height: $touchable-size;
             @include ellipsis();
 
-            i {
+            [class^="icon-"],
+            [class*=" icon-"] {
                 float: right;
                 color: lighten($body-font-color, 50%);
 

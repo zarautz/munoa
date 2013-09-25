@@ -247,8 +247,8 @@ module.exports = function (grunt) {
                 options: {
                     variables: {
                         'timestamp': '<%= grunt.template.today() %>',
-                        'version': '0.2.3',
-                        'versionCode': '6',
+                        'version': '0.2.4',
+                        'versionCode': '7',
                     },
                     prefix: '@@'
                 },
@@ -291,7 +291,7 @@ module.exports = function (grunt) {
                         //symbian: '<%= yeoman.build %>/symbian.wgz',
                         //blackberry: '<%= yeoman.build %>/blackberry.cod',
                         //webos: '<%= yeoman.build %>/webos.ipk',
-                        //ios: '<%= yeoman.build %>/ios.ipa',
+                        ios: '<%= yeoman.build %>/ios.ipa',
                         android: '<%= yeoman.build %>/android.apk'
                     }
                 }

@@ -178,6 +178,12 @@ Z.catalogue = {
         'en': 'About',
         'fr': 'Sur'
     },
+    'settings.about.privacy': {
+        'eu': 'Pribatutasun politika',
+        'es': 'Política de privacidad',
+        'en': 'Privacy policy',
+        'fr': 'Politique de confidentialité'
+    },
     'settings.about.opensource': {
         'eu': 'Open source',
         'es': 'Open source',

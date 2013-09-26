@@ -5,8 +5,7 @@
     "launch_path": "/index.html",
     "icons": {
         "60":  "/images/icons/firefoxos/circle-60.png",
-        "128": "/images/icons/logo-128.png",
-        "256": "/images/icons/logo-256.png"
+        "144": "/images/icons/android/xxhdpi.png"
     },
     "developer": {
         "name": "illarra",

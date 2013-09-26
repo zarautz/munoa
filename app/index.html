@@ -40,18 +40,14 @@
         </aside>
         <nav class="overthrow">
             <ul class="drawer">
-                <li ng-repeat="item in navigation.menu.getItems()">
-                    <a ng-href="#{{ item.path }}"
-                        class="{{ item.id }}" ng-class="{ 'active': item.path === navigation.location.path() }"
-                        ng-if="['redirect', 'info'].indexOf(item.id) === -1">
-                        <i class="{{ item.icon }}"></i>{{ item.id|translate }}
-                    </a>
-                    <a ng-href="#{{ item.path }}"
-                        class="{{ item.id }}" ng-class="{ 'active': item.path === navigation.location.path() }"
-                        ng-if="item.id === 'info' && settings.get('profile') === 'tourist'">
-                        <i class="{{ item.icon }}"></i>{{ item.id|translate }}
-                    </a>
-                </li>
+                <div ng-repeat="item in navigation.menu.getItems()">
+                    <li ng-if="item.showFor[settings.get('profile')]">
+                        <a ng-href="#{{ item.path }}"
+                        class="{{ item.id }}" ng-class="{ 'active': item.path === navigation.location.path() }">
+                            <i class="{{ item.icon }}"></i>{{ item.id|translate }}
+                        </a>
+                    </li>
+                </div>
             </ul>
         </nav>
 

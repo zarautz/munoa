@@ -39,6 +39,7 @@ Z.app.provider('menu', function () {
             }
 
             item.sort = {};
+            item.showFor = { 'tourist': false, 'zarautz': false };
 
             this._map[item.id] = item;
         }
@@ -52,6 +53,7 @@ Z.app.provider('menu', function () {
         for (i = 0; i < sort.length; i++) {
             item = this._map[sort[i]];
             item.sort[profile] = i;
+            item.showFor[profile] = true;
         }
     };
 });

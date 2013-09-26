@@ -91,11 +91,11 @@ Z.app.config(['$compileProvider', '$routeProvider', '$locationProvider', 'babelP
         'poi',
         'places',
         'events',
+        'info',
         'weather',
         'tides',
         'health',
-        'zuzarautz',
-        'info'
+        'zuzarautz'
     ]);
 
     // --------

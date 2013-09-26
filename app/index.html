@@ -41,9 +41,14 @@
         <nav class="overthrow">
             <ul class="drawer">
                 <li ng-repeat="item in navigation.menu.getItems()">
-                    <a ng-href="#{{ item.path }}" class="{{ item.id }}"
-                        ng-class="{ 'active': item.path === navigation.location.path() }"
-                        ng-if="item.path !== '/'">
+                    <a ng-href="#{{ item.path }}"
+                        class="{{ item.id }}" ng-class="{ 'active': item.path === navigation.location.path() }"
+                        ng-if="['redirect', 'info'].indexOf(item.id) === -1">
+                        <i class="{{ item.icon }}"></i>{{ item.id|translate }}
+                    </a>
+                    <a ng-href="#{{ item.path }}"
+                        class="{{ item.id }}" ng-class="{ 'active': item.path === navigation.location.path() }"
+                        ng-if="item.id === 'info' && settings.get('profile') === 'tourist'">
                         <i class="{{ item.icon }}"></i>{{ item.id|translate }}
                     </a>
                 </li>
@@ -75,6 +80,7 @@
         <!-- controller -->
         <script src="scripts/controller/event.js"></script>
         <script src="scripts/controller/eventView.js"></script>
+        <script src="scripts/controller/info.js"></script>
         <script src="scripts/controller/placeList.js"></script>
         <script src="scripts/controller/places.js"></script>
         <script src="scripts/controller/placeView.js"></script>

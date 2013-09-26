@@ -338,6 +338,15 @@ Z.catalogue = {
         'fr': 'Zarautz'
     },
     //
+    // Turismo Bulegoa
+    //
+    'info': {
+        'eu': 'Turismo Bulegoa',
+        'es': 'Oficina de Turismo',
+        'en': 'Tourist Office',
+        'fr': 'Office de Tourisme'
+    },
+    //
     // Places groups
     //
     // HEALTH

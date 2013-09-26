@@ -59,6 +59,11 @@ Z.app.config(['$compileProvider', '$routeProvider', '$locationProvider', 'babelP
             path: '/zuzarautz',
             icon: 'icon-home color-blue'
         },
+        {
+            id: 'info',
+            path: '/info',
+            icon: 'icon-info color-blue'
+        },
         // Home page is used only for redirecting
         {
             id: 'redirect',
@@ -89,7 +94,8 @@ Z.app.config(['$compileProvider', '$routeProvider', '$locationProvider', 'babelP
         'weather',
         'tides',
         'health',
-        'zuzarautz'
+        'zuzarautz',
+        'info'
     ]);
 
     // --------

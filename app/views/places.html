@@ -3,7 +3,6 @@
         <header>
             <i ng-click="navigation.toggleMenu()" class="left icon-menu"></i>
             <h1 class="title">{{ placesCtrl.section|translate }}</h1>
-            <i ng-if="placesCtrl.section === 'poi' && settings.get('profile') === 'tourist'" ng-click="navigation.toggleAside();" class="right" ng-class="{ 'icon-info': !navigation.asideIsActive, 'icon-cancel': navigation.asideIsActive }"></i>
         </header>
         <div class="overthrow">
             <div ng-if="placesCtrl.section === 'poi'" class="banner" style="background-image: url(http://pagoeta.illarra.com/cache/api_medium/image/place/10d1133cb26e65622e5580f5e62f8e0f713af6a1.jpeg);"></div>

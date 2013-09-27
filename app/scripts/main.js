@@ -8,7 +8,7 @@ Z.app.value('apiHost', true ? 'http://pagoeta.illarra.com/v1' : 'http://pagoeta.
 Z.app.value('googleApiKey', 'AIzaSyBopLXCM1kLoklpwOOvyA_QurVbj1H02C0');
 
 // We force early initialization by injecting the services
-Z.app.run(['$rootScope', '$timeout', 'navigation', 'phonegap', 'settings', function ($rootScope, $timeout, navigation, phonegap, settings) {
+Z.app.run(['$rootScope', '$window', '$timeout', 'navigation', 'phonegap', 'settings', function ($rootScope, $window, $timeout, navigation, phonegap, settings) {
     // Init Moment language
     moment.lang(settings.get('language'));
 
@@ -17,6 +17,11 @@ Z.app.run(['$rootScope', '$timeout', 'navigation', 'phonegap', 'settings', funct
     $rootScope.settings   = settings;
 
     phonegap.onDeviceReady().then(function () {
+        // Detect iOS7 for status-bar CSS hacks
+        if ($window.device.platform === 'iOS' && parseFloat($window.device.version) >= 7.0) {
+            angular.element(document.documentElement).addClass('x-ios7');
+        }
+
         // Back Button
         document.addEventListener('backbutton', function () {
             $rootScope.$apply(function () {

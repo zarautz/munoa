@@ -146,12 +146,12 @@ h3, h4 {
         border-bottom: 1px solid $hr-border-color;
         font-size: 1.1em;
         margin: ($half-padding * 3) 0 $base-padding;
-        padding: 0 15% $half-padding ($half-padding * 3);
+        padding: 0 ($base-padding * 2) $half-padding 0;
 
         [class^="icon-"],
         [class*=" icon-"] {
-            float: left;
-            margin-left: -($base-padding * 1.7);
+            float: right;
+            margin-right: -($base-padding * 2);
             color: $color-dark-blue;
 
             &.icon-smiley {
@@ -175,10 +175,6 @@ p, ul {
     margin: 0;
     padding: 0;
     line-height: $body-line-height;
-
-    .privacy-policy & {
-        padding-left: $half-padding * 3;
-    }
 }
 
 li {

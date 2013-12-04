@@ -1,14 +1,13 @@
 'use strict';
 
 Z.app.controller('EventController', ['$scope', 'eventsMapper', 'settings', function($scope, eventsMapper, settings) {
-    this.clearFilters = function () {
-        this.filter.category = null;
-
-        this.refreshList();
+    this.toggleFilters = function () {
+        this.filter.show = !this.filter.show;
     };
 
-    this.isFiltered = function () {
-        return this.filter.category !== null;
+    this.setFilter = function (filter) {
+        this.filter.type = filter;
+        this.toggleFilters();
     };
 
     this.refresh = function () {
@@ -19,6 +18,7 @@ Z.app.controller('EventController', ['$scope', 'eventsMapper', 'settings', funct
         });
 
         this.events = events.promise;
+        this.filter = { show: false, type: 'other' };
         this.status = events.status;
     };
 

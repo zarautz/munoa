@@ -115,6 +115,18 @@ Z.catalogue = {
         'en': 'For adults',
         'fr': 'Pour les adultes'
     },
+    'event.filter.type.exhibition': {
+        'eu': 'Erakusketak',
+        'es': 'Exposiciones',
+        'en': 'Exhibitions',
+        'fr': 'Expositions'
+    },
+    'event.filter.type.other': {
+        'eu': 'Bestelakoak',
+        'es': 'Otros',
+        'en': 'Other',
+        'fr': 'Autre'
+    },
     //
     // Tides
     //

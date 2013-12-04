@@ -2,8 +2,14 @@
     <div>
         <header>
             <i ng-click="navigation.toggleMenu()" class="left icon-menu"></i>
-            <i ng-if="eventCtrl.status.isLoading" class="right icon-spin color-blue animate-spin"></i>
-            <i ng-if="false && !eventCtrl.status.isLoading" class="right icon-search"></i>
+            <div ng-switch on="eventCtrl.status.isLoading">
+                <div ng-switch-when="true">
+                    <i class="right icon-spin color-blue animate-spin"></i>
+                </div>
+                <div ng-switch-default>
+                    <i ng-click="eventCtrl.toggleFilters()" class="right icon-filter color-blue"></i>
+                </div>
+            </div>
             <h1 class="title">{{ 'events'|translate }}</h1>
         </header>
         <div ng-if="eventCtrl.status.isDone && eventCtrl.status.isError" class="error">
@@ -18,15 +24,16 @@
             {{ 'loading' | translate }}
         </div>
         <div ng-if="!eventCtrl.status.isLoading" class="overthrow table-view-images">
-            <!--<div class="sort-options">
-                <i ng-show="plistCtrl.isFiltered() || plistCtrl.filter.favorite !== null" class="icon-filter"></i>
-                {{ plistCtrl.pager.getTotalItems() }} {{ 'list.results'|translate }}
-                {{ '/ ' + plistCtrl.totalItems }}
-                <i class="right bicon yellow icon-school" ng-class="{ 'on': false }" ng-click="plistCtrl.setFilter('favorite', true)"></i>
-            </div>-->
-            <div ng-repeat="day in eventCtrl.events">
+            <div ng-repeat="day in eventCtrl.events[eventCtrl.filter.type]">
                 <p class="table-view-separator" ng-class="{ 'compress': $index === 0 }">
-                    {{ day.date | amDateFormat:'dddd, L' }}
+                    <span ng-switch on="eventCtrl.filter.type">
+                        <span ng-switch-when="exhibition">
+                            <i class="icon-right"></i> {{ day.date | amDateFormat:'L' }}
+                        </span>
+                        <span ng-switch-default>
+                            {{ day.date | amDateFormat:'dddd, L' }}
+                        </span>
+                    </span>
                 </p>
                 <div ng-repeat="event in day.events">
                     <hr ng-hide="$index === 0"/>
@@ -70,6 +77,20 @@
                 </div>
             </div>
         </div>
+        <!-- Filter -->
+        <div ng-show="eventCtrl.filter.show" class="filter-container">
+            <div ng-click="eventCtrl.closeFilters()" class="capture-click"></div>
+            <div class="filter-box">
+                <ul>
+                    <li ng-repeat="type in ['exhibition','other']"
+                        ng-class="{ 'on': type == eventCtrl.filter.type }"
+                        ng-click="eventCtrl.setFilter(type)">
+                        <i class="icon-ok"></i>
+                        {{ ('event.filter.type.'+ type) | translate }}
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
     <div ng-include="view2"></div>
     <div ng-include="view3"></div>
@@ -108,11 +129,15 @@
                                 ({{ eviewCtrl.event.place.location.distanceTo(plistCtrl.geolocation) | distance }})
                             </span>
                         </li>
-                        <li ng-if="eviewCtrl.event.startAt">
+                        <li ng-if="eviewCtrl.event.startAt && eviewCtrl.event.category.code !== 'exhibition'">
                             <i class="icon-calendar-alt"></i>
                             {{ eviewCtrl.event.startAt | amDateFormat:'dddd, ll' }}
                         </li>
-                        <li ng-if="eviewCtrl.event.subEvents.length === 0 && eviewCtrl.event.timeIsSet('startAt')">
+                        <li ng-if="eviewCtrl.event.endAt && eviewCtrl.event.category.code === 'exhibition'">
+                            <i class="icon-right"></i>
+                            {{ eviewCtrl.event.endAt | amDateFormat:'dddd, ll' }}
+                        </li>
+                        <li ng-if="eviewCtrl.event.timeIsSet('startAt') && eviewCtrl.event.category.code !== 'exhibition' && eviewCtrl.event.subEvents.length === 0">
                             <i class="icon-clock"></i>
                             {{ eviewCtrl.event.startAt | amDateFormat:'HH:mm' }}
                         </li>

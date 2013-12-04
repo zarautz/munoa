@@ -188,7 +188,7 @@ Z.catalogue = {
         'eu': 'Aplikazioari buruz',
         'es': 'Acerca de',
         'en': 'About',
-        'fr': 'Sur'
+        'fr': 'About'
     },
     'settings.about.privacy': {
         'eu': 'Pribatutasun politika',
@@ -286,17 +286,23 @@ Z.catalogue = {
         'en': 'I live in Zarautz',
         'fr': 'J\'habite à Zarautz'
     },
+    'settings.profile.wizard': {
+        'eu': 'Informazio hau eduki egokituak erakusteko erabiliko dugu',
+        'es': 'Emplearemos esta información para mostrarte contenidos adaptados',
+        'en': 'We will use this information to show you adapted content',
+        'fr': 'Nous allons utiliser cette information pour vous montrer contenu adapté'
+    },
     'settings.profile.tourist.explanation': {
         'eu': 'Zarautzera oporretan edo asteburu pasa bazatoz, gure herria deskubritu dezakezu aplikazio honekin. Zarautzen egin eta ikusi ditzakezunak eta Zarauzko gida osotua topatuko dituzu bertan.',
-        'es': 'Si vienes a Zarautz de vacaciones o a pasar el fin de semana, con esta aplicación puedes descubrir nuestro pueblo. En élla encontrarás una guía completa de Zarautz, así como actividades que puedes ver y realizar.',
+        'es': 'Si vienes a Zarautz de vacaciones o a pasar el fin de semana, con esta aplicación puedes descubrir nuestro pueblo. En ella encontrarás una guía completa de Zarautz, así como actividades que puedes ver y realizar.',
         'en': 'If you come to spend a weekend or on holidays to Zarautz, you can use this app to find out what\'s interesting in our town. You will find a complete guide of Zarautz, as well as activities you can see or join.',
-        'fr': '--'
+        'fr': 'Vous venez un weekend à Zarautz ou vous voulez y passer vos vacances? Avec cette application vous pourrez découvrir notre ville. Vous y trouverez un guide complet de Zarautz, ainsi qu\'un agenda des activités auxquelles vous pouvez participer.'
     },
     'settings.profile.zarautz.explanation': {
         'eu': 'Herriko orainkaria, Zarauzko albiste eta ekitaldiak eguneratuta topatuko dituzu aplikazio honetan. Bestalde Zarauzko gida, bilatzen dituzun tokiak klik batez eskura izateko.',
         'es': 'Noticiario local, en esta aplicación encontrarás noticias y actividades actualizadas de Zarautz. Por otra parte la guía de Zarautz, para tener al alcance de un click los lugares que buscas.',
         'en': 'Zarautz’s breaking news and updated activities that are taking place in the town. On the other hand, Zarautz’s guide so that you can find easily what you are looking for.',
-        'fr': '--'
+        'fr': 'Apprenez les dernières nouvelles et les activités actuelles de Zarautz, ou consultez le guide de nore ville afin de trouver facilement ce que vous cherchez.'
     },
     //
     // Tides
@@ -445,13 +451,13 @@ Z.catalogue = {
         'eu': 'Parking',
         'es': 'Parkings',
         'en': 'Parkings',
-        'fr': '--Parkings'
+        'fr': 'Parkings'
     },
     'placesGroup.places.transport': {
         'eu': 'Garraiobideak',
         'es': 'Transportes',
         'en': 'Transport',
-        'fr': '--Transport'
+        'fr': 'Transport'
     },
     'placesGroup.places.recycling': {
         'eu': 'Birziklaketa',

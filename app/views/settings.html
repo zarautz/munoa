@@ -18,12 +18,12 @@
             <br/>
             <h5>{{ 'app' | translate }}</h5>
             <ul>
-                <!--<li>
-                    <a href ng-click="navigation.pushView('settings.about')">
+                <li>
+                    <a href ng-click="navigation.pushView('settings.about', { settings: setCtrl.settings })">
                         <i class="icon-right-open"></i>
                         {{ 'settings.about' | translate }}
                     </a>
-                </li>-->
+                </li>
                 <!--<li>
                     <a href ng-click="navigation.pushView('settings.about.opensource')">
                         <i class="icon-right-open"></i>
@@ -86,7 +86,24 @@
         <h1 class="title">{{ 'settings.about' | translate }}</h1>
     </header>
     <div class="overthrow">
-        <p></p>
+        <div class="content" ng-switch="pushData.settings.get('language')">
+            <div ng-switch-when="en">
+                <p>This application has been developed by <strong>illarra</strong> for the municipality of Zarautz, in collaboration with Garoa Web Consulting.</p>
+                <p>All contents are directly managed by the City of Zarautz: if you see any incorrect information or if you have any suggestions please contact the Tourist Office.</p>
+            </div>
+            <div ng-switch-when="es">
+                <p>Esta aplicación ha sido desarrollada por <strong>illarra</strong> para el Ayuntamiento de Zarautz, con la colaboración de Garoa Web Consulting.</p>
+                <p>Todos los contenidos son gestionados directamente por el Ayuntamiento de Zarautz: si ves algún dato incorrecto o si tienes alguna sugerencia puedes ponerte en contacto con la Oficina de Turismo.</p>
+            </div>
+            <div ng-switch-when="fr">
+                <p>Cette application a été développée par <strong>illarra</strong> pour la commune de Zarautz, en collaboration avec Garoa Web Consulting.</p>
+                <p>Tous les contenus sont gérés directement par la commune de Zarautz: si vous voyez des informations incorrectes ou si vous avez des suggestions, veuillez contacter l'Office de Tourisme.</p>
+            </div>
+            <div ng-switch-default>
+                <p>Aplikazio hau <strong>illarra</strong>k Zarauzko Udalarentzat burutu du, Garoa Web Consulting-en kolaborazioarekin.</p>
+                <p>Edukiak Zarauzko Udalak kudeatzen ditu: jarri harremanetan Turismo Bulegoarekin daturen bat gaizki dagoela ikusten baduzu, edo zerbait faltan botatzen baduzu. </p>
+            </div>
+        </div>
         <ul class="cta-list">
             <li ng-click="navigation.openExternalLink('mailto:turismoa@zarautz.org')">
                 <i class="icon-info"></i>
@@ -96,7 +113,12 @@
                 <i class="icon-cog"></i>
                 team@illarra.com
             </li>
+            <li ng-click="navigation.openExternalLink('http://www.illarra.com')">
+                <i class="icon-link-external"></i>
+                www.illarra.com
+            </li>
         </ul>
+        <p class="text-center text-smallest color-lightest-text">handcrafted by illarra</p>
     </div>
 </script>
 

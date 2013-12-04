@@ -608,6 +608,10 @@ ul.drawer {
     p, img, blockquote {
         display: block;
         margin: 1em 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
     }
 
     ol, ul {

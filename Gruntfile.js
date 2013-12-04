@@ -247,8 +247,8 @@ module.exports = function (grunt) {
                 options: {
                     variables: {
                         'timestamp': '<%= grunt.template.today() %>',
-                        'version': '0.2.4',
-                        'versionCode': '7',
+                        'version': '0.3.1',
+                        'versionCode': '9',
                     },
                     prefix: '@@'
                 },

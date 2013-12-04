@@ -26,7 +26,7 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
             }
 
             // Sort types based on typesI18N
-            that.types.sort(function (a, b) {
+            /*that.types.sort(function (a, b) {
                 a = that.typesI18N[a].toLowerCase();
                 b = that.typesI18N[b].toLowerCase();
 
@@ -37,7 +37,7 @@ Z.app.controller('PlaceListController', ['$scope', 'placesMapper', 'placeTypesMa
                 } else {
                     return 0;
                 }
-            });
+            });*/
         });
 
         // Group place list

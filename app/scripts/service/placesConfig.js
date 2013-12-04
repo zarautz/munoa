@@ -76,7 +76,6 @@ Z.PlacesConfig.Group = function () {
 };
 
 Z.PlacesConfig.Group.prototype.setTypes = function (types) {
-    types.sort();
     this.types = types;
 
     return this;
@@ -211,7 +210,7 @@ Z.app.factory('placesConfig', [function() {
 
     group = section.addGroup('eating');
     group
-        .setTypes(['meal_takeaway', 'restaurant', 'pintxo_bar'])
+        .setTypes(['restaurant', 'pintxo_bar', 'food_establishment'])
         .setIcon('icon-restaurant')
         //.setShowPriceFilter(true)
     ;

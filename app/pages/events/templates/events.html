@@ -1,0 +1,21 @@
+<ion-navbar *navbar>
+    <button menuToggle><ion-icon name="menu"></ion-icon></button>
+    <ion-title>Events</ion-title>
+    <ion-buttons end>
+        <button (click)="presentInfoModal()">
+            <ion-icon name="information"></ion-icon>
+        </button>
+    </ion-buttons>
+</ion-navbar>
+
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="#item of items" (click)="itemTapped($event, item)">
+            <ion-thumbnail item-left>
+                <img src="//ionicframework.com/dist/preview-app/www/img/thumbnail-totoro.png">
+            </ion-thumbnail>
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.note }}</p>
+        </ion-item>
+    </ion-list>
+</ion-content>

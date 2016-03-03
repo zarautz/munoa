@@ -1,0 +1,19 @@
+<ion-menu [content]="content">
+    <ion-toolbar>
+        <ion-title>Zarautz</ion-title>
+        <ion-buttons end>
+            <button menuClose (click)="openPage(settingsPage)">
+                <ion-icon name="settings"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-content>
+        <ion-list>
+            <button ion-item menuClose *ngFor="#p of pages" (click)="openPage(p)">
+                <ion-icon [name]="p.icon" item-left></ion-icon>
+                {{ p.title | babel }}
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-nav id="nav" [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

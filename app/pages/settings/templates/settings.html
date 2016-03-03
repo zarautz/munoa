@@ -1,0 +1,33 @@
+<ion-navbar *navbar>
+    <button menuToggle><ion-icon name="menu"></ion-icon></button>
+    <ion-title>{{ 'settings' | babel }}</ion-title>
+</ion-navbar>
+
+<ion-content>
+    <ion-list>
+        <ion-list-header>{{ 'settings__general' | babel }}</ion-list-header>
+        <ion-item>
+            <ion-label>{{ 'settings__language' | babel }}</ion-label>
+            <ion-select [(ngModel)]="babel.language" cancelText="Nah" okText="Okay!">
+                <ion-option value="es">Castellano</ion-option>
+                <ion-option value="en">English</ion-option>
+                <ion-option value="eu">Euskara</ion-option>
+                <ion-option value="fr">Français</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>{{ 'settings__profile' | babel }}</ion-label>
+            <ion-select cancelText="Nah" okText="Okay!">
+                <ion-option value="zarautz">{{ 'settings__profile__zarautz' | babel }}</ion-option>
+                <ion-option value="tourist">{{ 'settings__profile__tourist' | babel }}</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header>{{ 'app' | babel }}</ion-list-header>
+        <ion-item>{{ 'settings__about' | babel }}</ion-item>
+        <ion-item>{{ 'settings__about__version' | babel }}</ion-item>
+        <ion-item>{{ 'settings__about__privacy' | babel }}</ion-item>
+        <ion-item>{{ 'settings__data__cache' | babel }}</ion-item>
+    </ion-list>
+</ion-content>

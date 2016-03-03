@@ -1,0 +1,9 @@
+<ion-navbar *navbar>
+    <button menuToggle><ion-icon name="menu"></ion-icon></button>
+    <ion-title>{{ item.title }}</ion-title>
+</ion-navbar>
+
+<ion-content>
+    {{ item.note }}
+    <a (click)="itemTapped($event, item)">Open place</a>
+</ion-content>

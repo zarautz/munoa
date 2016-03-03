@@ -1,68 +1,36 @@
 Munoa
 =====
 
-`Munoa` es el nombre en clave de la aplicación para moviles y tablets del municipio de 
-[Zarautz](http://zarautz.org).
+[![license-badge]](LICENSE.md)
 
-Angular.js y Phonegap
----------------------
+`Munoa` is the code name for "Zarautz App", the mobile application of the city of [Zarautz](http://www.zarautz.org/).
 
-`Munoa` se basa en los estandares web (HTML, JS y CSS), funciona sobre el framework `Angular.js` y
-la plataforma para aplicaciónes moviles `Phonegap`. Para consultar la documentación:
+For developers
+==============
 
-  - Angular.js: [http://angularjs.org](http://angularjs.org)
-  - Phonegap: [http://phonegap.com](http://phonegap.com)
+Munoa uses [Ionic](http://ionicframework.com/) and [Angular](https://angular.io/) (with TypeScript).
+Feel free to contribute to the project.
 
-Yeoman
-------
+Application dependencies
+------------------------
+The application uses [NPM](https://www.npmjs.com/), the Node Package Manager, to install dependencies.
+While in development, you can install the necessary packages using the `npm` commands:
 
-Para ejecutar el servidor de pruebas, crear los builds para moviles, etc. es necesario
-instalar `Yeoman`: [http://yeoman.io](http://yeoman.io)
+    $ npm update
 
-### Bower
+Running the server
+------------------
+The Ionic CLI is required to work with the application locally. You can install Ionic CLI
+[here](http://ionicframework.com/docs/v2/cli/). Once installed, the application can be viewed using the
+following command:
 
-Instalar dependencias:
+    $ ionic serve --lab
 
-```
-$ bower install
-```
+Style guide
+-----------
+Unless otherwise specified, follow the
+[TypeScript Coding Guidelines](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines).
+Tab size is **4 spaces**. Maximum line length is 119.
 
-Actualizar dependencias:
 
-```
-$ bower update
-```
-
-### Grunt
-
-Iniciar el servidor de pruebas:
-
-```
-$ grunt server
-```
-
-Verificar que el código javascript es correcto:
-
-```
-$ grunt jshint:all
-```
-
-Hacer un build via [`Phonegap Build`](http://build.phonegap.com):
-
-```
-$ grunt phonegap --force
-```
-
-Deploy
-------
-
-En caso de querer probar la aplicación en un servidor HTTP, editar el script `deploy_staging.sh` y
-luego ejecutar:
-
-```
-$ ./deploy_staging.sh
-```
-
-Para el servidor es suficiente un alojamiento "estatico" (incluso puede servir Dropbox o Google 
-Drive). Recuerda que hay disponible una representación de la aplicación en la carpeta
-`preview`. Ejemplo: `http://munoa.example.com/preview`.
+[license-badge]: https://img.shields.io/badge/license-MIT-blue.svg

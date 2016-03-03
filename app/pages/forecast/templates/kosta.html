@@ -1,0 +1,14 @@
+<ion-content>
+    <ion-card *ngFor="#image of timexImages; #i = index">
+        <img [src]="image.medium">
+        <ion-card-content>
+            <h2>Timex {{ i }}</h2>
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngFor="#image of snapshots; #i = index">
+        <img [src]="image.medium">
+        <ion-card-content>
+            <h2>Snapshot {{ i }}</h2>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

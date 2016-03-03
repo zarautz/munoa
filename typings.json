@@ -1,0 +1,5 @@
+{
+    "ambientDependencies": {
+        "firebase": "github:DefinitelyTyped/DefinitelyTyped/firebase/firebase.d.ts#e2251a6de4ec74c4c71cbb04baccdd261a643909"
+    }
+}

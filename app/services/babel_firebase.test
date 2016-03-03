@@ -1,0 +1,23 @@
+export class BabelService {
+    language: string;
+    ref: Firebase;
+    messages: any = {};
+
+    constructor() {
+        this.language = 'eu';
+        this.ref = new Firebase('https://munoa.firebaseio.com/app/babel');
+        this.ref.on('value', (snapshot) => this.messages = snapshot.val());
+    }
+
+    setLanguage(language: string) {
+        this.language = language;
+    }
+
+    translate(messageKey: string) {
+        if (messageKey in this.messages) {
+            return this.messages[messageKey][this.language];
+        } else {
+            return messageKey;
+        }
+    }
+}

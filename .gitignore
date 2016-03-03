@@ -1,13 +1,21 @@
-# Tools
-.c9revisions
+# --------------------
+# OS or Editor folders
+# --------------------
 .DS_Store
+Thumbs.db
 
-# Yeoman
-.tmp
-.sass-cache
-app/components
-node_modules
-dist
-build.zip
-build
-libpeerconnection.log
+
+# ---
+# APP
+# ---
+node_modules/
+platforms/
+plugins/
+www/build/
+*.swp
+
+
+# -----------
+# CREDENTIALS
+# -----------
+.io-config.json

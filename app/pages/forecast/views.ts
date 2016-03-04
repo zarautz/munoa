@@ -1,7 +1,7 @@
 import {Type} from 'angular2/core';
 import {Page} from 'ionic-angular';
 
-import {ForecastService} from '../../services/forecast';
+import {ForecastService, Forecast} from '../../services/api/forecast';
 
 
 @Page({
@@ -28,10 +28,10 @@ export class KostaPage {
     snapshots: Array<any>;
     timexImages: Array<any>;
 
-    constructor(private service: ForecastService) {
-        this.service.load().subscribe(res => {
-            this.snapshots = res.live.snapshots;
-            this.timexImages = res.live.timex;
+    constructor(private _service: ForecastService) {
+        this._service.load().subscribe(res => {
+            this.snapshots = res.images.snapshots;
+            this.timexImages = res.images.timex;
         });
     }
 }
@@ -41,10 +41,10 @@ export class KostaPage {
     templateUrl: 'build/pages/forecast/templates/sea.html'
 })
 export class SeaPage {
-    forecast: any;
+    forecast: Array<Forecast>;
 
-    constructor(private service: ForecastService) {
-        this.service.load().subscribe(res => this.forecast = res.data);
+    constructor(private _service: ForecastService) {
+        this._service.load().subscribe(res => this.forecast = res.forecast);
     }
 }
 
@@ -53,9 +53,9 @@ export class SeaPage {
     templateUrl: 'build/pages/forecast/templates/weather.html'
 })
 export class WeatherPage {
-    forecast: any;
+    forecast: Array<Forecast>;
 
-    constructor(private service: ForecastService) {
-        this.service.load().subscribe(res => this.forecast = res.data);
+    constructor(private _service: ForecastService) {
+        this._service.load().subscribe(res => this.forecast = res.forecast);
     }
 }

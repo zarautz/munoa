@@ -12,11 +12,14 @@ import {PlacesGridPage, PoiGridPage} from './pages/places/views';
 import {PostsListPage} from './pages/posts/views';
 import {SettingsPage} from './pages/settings/views';
 import {TrafficTabs} from './pages/traffic/views';
+
 import {BabelPipe} from './pipes/babel';
+
 import {BabelService} from './services/babel';
 import {ConfigService} from './services/config';
-import {ForecastService} from './services/forecast';
-import {PostsService} from './services/posts';
+
+import {ForecastService} from './services/api/forecast';
+import {PostsService} from './services/api/posts';
 
 
 @App({

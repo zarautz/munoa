@@ -3,22 +3,25 @@ import 'rxjs/add/operator/map';
 import {Http} from 'angular2/http';
 import {Page, NavController, NavParams, ViewController} from 'ionic-angular';
 
-import {PostManager} from '../../models/post';
-import {PostsService} from '../../services/posts';
+import {PostsService, Post} from '../../services/api/posts';
 
 
 @Page({
     templateUrl: 'build/pages/posts/templates/posts.html'
 })
 export class PostsListPage {
-    items: Array<any>;
+    metadata: any;
+    items: Array<Post>;
 
-    constructor(private nav: NavController, private navParams: NavParams, private service: PostsService) {
-        this.service.load().subscribe(res => this.items = new PostManager(res.data).objects);
+    constructor(private _nav: NavController, private _service: PostsService) {
+        this._service.load().subscribe(res => {
+            this.metadata = res.metadata;
+            this.items = res.posts;
+        });
     }
 
     itemTapped($event, item) {
-        this.nav.push(PostsDetailPage, {
+        this._nav.push(PostsDetailPage, {
             item: item
         });
     }
@@ -29,9 +32,9 @@ export class PostsListPage {
     templateUrl: 'build/pages/posts/templates/post.html'
 })
 export class PostsDetailPage {
-    item: any;
+    item: Post;
 
-    constructor(private navParams: NavParams) {
-        this.item = navParams.get('item');
+    constructor(private _navParams: NavParams) {
+        this.item = this._navParams.get('item');
     }
 }

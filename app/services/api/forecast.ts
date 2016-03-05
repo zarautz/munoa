@@ -1,13 +1,14 @@
 import 'rxjs/add/operator/map';
 
 import {Injectable} from 'angular2/core';
-import {Http} from 'angular2/http';
+
+import {ApiService} from '../api';
 
 
 export class Forecast {
-    constructor(private _data) {
-        for (var property in _data) {
-            this[property] = _data[property];
+    constructor(private _data: any) {
+        for (var property in this._data) {
+            this[property] = this._data[property];
         }
     }
 
@@ -17,34 +18,33 @@ export class Forecast {
     }
 }
 
+
 @Injectable()
 export class ForecastService {
-    private _endpoint: string = 'http://data.zarautz.xyz/v1/forecast/';
-    private _forecast: Array<Forecast> = [];
+    private _endpoint: string = 'v1/forecast/';
     private _metadata: any;
+    private _forecast: Array<Forecast> = [];
     private _images: any;
 
-    constructor(private _http: Http) {
+    constructor(private _api: ApiService) {
     }
 
     load() {
         // TODO: add a storage engine here, and check that we don´t call the API every time load() is called
         this._forecast = [];
 
-        return this._http.get(this._endpoint)
-            .map((res) => res.json())
-            .map((res) => {
-                this._metadata = res['meta'];
-                this._images = res['live'];
-                res['data'].forEach((f) => {
-                    this._forecast.push(new Forecast(f));
-                });
-
-                return {
-                    'metadata': this._metadata,
-                    'forecast': this._forecast,
-                    'images': this._images
-                }
+        return this._api.get(this._endpoint).map((res) => {
+            this._metadata = res['meta'];
+            this._images = res['live'];
+            res['data'].forEach((f) => {
+                this._forecast.push(new Forecast(f));
             });
+
+            return {
+                'metadata': this._metadata,
+                'forecast': this._forecast,
+                'images': this._images
+            }
+        });
     }
 }

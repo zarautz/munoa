@@ -15,10 +15,12 @@ import {TrafficTabs} from './pages/traffic/views';
 
 import {BabelPipe} from './pipes/babel';
 
+import {ApiService} from './services/api';
 import {BabelService} from './services/babel';
 import {ConfigService} from './services/config';
 
 import {ForecastService} from './services/api/forecast';
+import {PharmaciesService} from './services/api/health';
 import {PostsService} from './services/api/posts';
 
 
@@ -27,8 +29,8 @@ import {PostsService} from './services/api/posts';
     config: {},
     providers: [
         HTTP_PROVIDERS,
-        BabelService, ConfigService,
-        ForecastService, PostsService,
+        ApiService, BabelService, ConfigService,
+        ForecastService, PharmaciesService, PostsService,
         provide(PLATFORM_PIPES, {useValue: [BabelPipe], multi: true})
     ]
 })
@@ -38,7 +40,7 @@ class MyApp {
     settingsPage: {component: Type};
     pages: Array<{title: string, icon: string, component: Type}>
 
-    constructor(private app: IonicApp, private platform: Platform, private babel: BabelService) {
+    constructor(private _app: IonicApp, private _platform: Platform, private _babel: BabelService) {
         this.initializeApp();
         this.storage = new Storage(SqlStorage);
         this.pages = [
@@ -53,12 +55,8 @@ class MyApp {
         this.settingsPage = {component: SettingsPage}
     }
 
-    setLanguage(language) {
-        this.babel.setLanguage(language);
-    }
-
     initializeApp() {
-        this.platform.ready().then(() => {
+        this._platform.ready().then(() => {
             // The platform is now ready. Note: if this callback fails to fire, follow
             // the Troubleshooting guide for a number of possible solutions:
             //
@@ -79,7 +77,11 @@ class MyApp {
     openPage(page) {
         // Reset the content nav to have just this page
         // we wouldn't want the back button to show in this scenario
-        let nav = this.app.getComponent('nav');
+        let nav = this._app.getComponent('nav');
         nav.setRoot(page.component);
+    }
+
+    setLanguage(language) {
+        this._babel.setLanguage(language);
     }
 }

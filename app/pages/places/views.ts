@@ -7,12 +7,12 @@ import {Page, NavController, NavParams} from 'ionic-angular';
 export class PlacesGridPage {
     section: string;
 
-    constructor(private nav: NavController) {
+    constructor(private _nav: NavController) {
         this.section = 'places';
     }
 
     itemTapped($event) {
-        this.nav.push(PlacesListPage);
+        this._nav.push(PlacesListPage);
     }
 }
 
@@ -31,7 +31,7 @@ export class PoiGridPage extends PlacesGridPage {
 export class PlacesListPage {
     items: Array<{ title: string, note: string }>;
 
-    constructor(private nav: NavController) {
+    constructor(private _nav: NavController) {
         this.items = [];
         for (let i = 1; i < 8; i++) {
             this.items.push({
@@ -42,7 +42,7 @@ export class PlacesListPage {
     }
 
     itemTapped($event, item) {
-        this.nav.push(PlacesDetailPage, {
+        this._nav.push(PlacesDetailPage, {
             item: item
         });
     }
@@ -55,7 +55,7 @@ export class PlacesListPage {
 export class PlacesDetailPage {
     item: any;
 
-    constructor(private navParams: NavParams) {
-        this.item = navParams.get('item');
+    constructor(private _navParams: NavParams) {
+        this.item = _navParams.get('item');
     }
 }

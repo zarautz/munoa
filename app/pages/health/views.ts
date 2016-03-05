@@ -1,12 +1,24 @@
 import {Page, NavController, NavParams} from 'ionic-angular';
 
-import {PlacesGridPage} from '../places/views';
+import {PlacesListPage} from '../places/views';
+import {PharmaciesService} from '../../services/api/health';
 
 
-export class HealthCareGridPage extends PlacesGridPage {
-    constructor(nav: NavController) {
-        super(nav);
-        this.section = 'health';
+@Page({
+    templateUrl: 'build/pages/places/templates/places-section-grid.html'
+})
+export class HealthCareGridPage {
+    section: string = 'health';
+    metadata: any;
+
+    constructor(private _nav: NavController, private _service: PharmaciesService) {
+        this._service.load().subscribe(res => {
+            this.metadata = res.metadata;
+        });
+    }
+
+    itemTapped($event) {
+        this._nav.push(PlacesListPage);
     }
 }
 

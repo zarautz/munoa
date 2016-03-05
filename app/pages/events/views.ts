@@ -9,7 +9,7 @@ import {PlacesDetailPage} from '../places/views';
 export class EventsListPage {
     items: Array<{ title: string, note: string }>;
 
-    constructor(private nav: NavController) {
+    constructor(private _nav: NavController) {
         this.items = [];
         for (let i = 1; i < 11; i++) {
             this.items.push({
@@ -20,14 +20,14 @@ export class EventsListPage {
     }
 
     itemTapped($event, item) {
-        this.nav.push(EventsDetailPage, {
+        this._nav.push(EventsDetailPage, {
             item: item
         });
     }
 
     presentInfoModal() {
         let modal = Modal.create(KulturklikInfoModal);
-        this.nav.present(modal)
+        this._nav.present(modal)
     }
 }
 
@@ -38,12 +38,12 @@ export class EventsListPage {
 export class EventsDetailPage {
     item: any;
 
-    constructor(private nav: NavController, private navParams: NavParams) {
-        this.item = navParams.get('item');
+    constructor(private _nav: NavController, private _navParams: NavParams) {
+        this.item = this._navParams.get('item');
     }
 
     itemTapped($event, item) {
-        this.nav.push(PlacesDetailPage, {
+        this._nav.push(PlacesDetailPage, {
             item: {
                 title: 'Place for event',
                 note: 'This is a place for an event'
@@ -57,10 +57,10 @@ export class EventsDetailPage {
     templateUrl: 'build/pages/events/templates/kulturklik-info-modal.html'
 })
 class KulturklikInfoModal {
-    constructor(private view: ViewController) {
+    constructor(private _view: ViewController) {
     }
 
     dismiss() {
-        this.view.dismiss({});
+        this._view.dismiss({});
     }
 }

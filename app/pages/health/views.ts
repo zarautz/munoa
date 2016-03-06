@@ -12,9 +12,10 @@ export class HealthCareGridPage {
     metadata: any;
 
     constructor(private _nav: NavController, private _service: PharmaciesService) {
-        this._service.load().subscribe(res => {
-            this.metadata = res.metadata;
+        this._service.data$.subscribe(data => {
+            this.metadata = data.metadata;
         });
+        this._service.load();
     }
 
     itemTapped($event) {

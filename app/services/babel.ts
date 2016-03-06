@@ -1,10 +1,9 @@
 export class BabelService {
-    language: string;
-    messages: any = {};
+    private _language: string = 'eu';
+    private _messages: any = {};
 
     constructor() {
-        this.language = 'eu';
-        this.messages = {
+        this._messages = {
             'app': {
                 'eu': 'Zarautz App',
                 'es': 'Zarautz App',
@@ -542,13 +541,17 @@ export class BabelService {
         };
     }
 
+    getLanguage() {
+        return this._language;
+    }
+
     setLanguage(language: string) {
-        this.language = language;
+        this._language = language;
     }
 
     translate(messageKey: string) {
-        if (messageKey in this.messages) {
-            return this.messages[messageKey][this.language];
+        if (messageKey in this._messages) {
+            return this._messages[messageKey][this._language];
         } else {
             return messageKey;
         }

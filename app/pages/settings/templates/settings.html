@@ -8,10 +8,11 @@
         <ion-list-header>{{ 'settings__general' | babel }}</ion-list-header>
         <ion-item>
             <ion-label>{{ 'settings__language' | babel }}</ion-label>
-            <ion-select [(ngModel)]="babel.language" cancelText="Nah" okText="Okay!">
+            <ion-select [(ngModel)]="language" (ngModelChange)="changeLanguage()"
+                cancelText="Nah" okText="Okay!">
+                <ion-option value="eu">Euskara</ion-option>
                 <ion-option value="es">Castellano</ion-option>
                 <ion-option value="en">English</ion-option>
-                <ion-option value="eu">Euskara</ion-option>
                 <ion-option value="fr">Français</ion-option>
             </ion-select>
         </ion-item>

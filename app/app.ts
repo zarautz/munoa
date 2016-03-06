@@ -40,7 +40,7 @@ class MyApp {
     settingsPage: {component: Type};
     pages: Array<{title: string, icon: string, component: Type}>
 
-    constructor(private _app: IonicApp, private _platform: Platform, private _babel: BabelService) {
+    constructor(private _app: IonicApp, private _platform: Platform) {
         this.initializeApp();
         this.storage = new Storage(SqlStorage);
         this.pages = [
@@ -79,9 +79,5 @@ class MyApp {
         // we wouldn't want the back button to show in this scenario
         let nav = this._app.getComponent('nav');
         nav.setRoot(page.component);
-    }
-
-    setLanguage(language) {
-        this._babel.setLanguage(language);
     }
 }

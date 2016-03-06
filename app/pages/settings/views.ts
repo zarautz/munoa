@@ -7,6 +7,13 @@ import {BabelService} from '../../services/babel';
     templateUrl: 'build/pages/settings/templates/settings.html'
 })
 export class SettingsPage {
-    constructor(private babel: BabelService) {
+    language: string;
+
+    constructor(private _babel: BabelService) {
+        this.language = 'eu';
+    }
+
+    changeLanguage() {
+        this._babel.setLanguage(this.language);
     }
 }

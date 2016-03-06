@@ -8,7 +8,6 @@ import {ForecastService, Forecast} from '../../services/api/forecast';
     templateUrl: 'build/pages/forecast/templates/forecast-tabs.html'
 })
 export class ForecastTabs {
-    forecast: any;
     kosta: Type = KostaPage;
     sea: Type = SeaPage;
     weather: Type = WeatherPage;
@@ -25,14 +24,14 @@ export class ForecastTabs {
     templateUrl: 'build/pages/forecast/templates/kosta.html'
 })
 export class KostaPage {
-    snapshots: Array<any>;
-    timexImages: Array<any>;
+    images: {
+        snapshots: Array<any>,
+        timex: Array<any>
+    }
 
     constructor(private _service: ForecastService) {
-        this._service.load().subscribe(res => {
-            this.snapshots = res.images.snapshots;
-            this.timexImages = res.images.timex;
-        });
+        this._service.data$.subscribe(data => this.images = data.images);
+        this._service.load();
     }
 }
 
@@ -44,7 +43,8 @@ export class SeaPage {
     forecast: Array<Forecast>;
 
     constructor(private _service: ForecastService) {
-        this._service.load().subscribe(res => this.forecast = res.forecast);
+        this._service.data$.subscribe(data => this.forecast = data.forecast);
+        this._service.load();
     }
 }
 
@@ -56,6 +56,7 @@ export class WeatherPage {
     forecast: Array<Forecast>;
 
     constructor(private _service: ForecastService) {
-        this._service.load().subscribe(res => this.forecast = res.forecast);
+        this._service.data$.subscribe(data => this.forecast = data.forecast);
+        this._service.load();
     }
 }

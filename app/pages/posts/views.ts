@@ -14,10 +14,11 @@ export class PostsListPage {
     items: Array<Post>;
 
     constructor(private _nav: NavController, private _service: PostsService) {
-        this._service.load().subscribe(res => {
-            this.metadata = res.metadata;
-            this.items = res.posts;
+        this._service.data$.subscribe(data => {
+            this.metadata = data.metadata;
+            this.items = data.posts;
         });
+        this._service.load();
     }
 
     itemTapped($event, item) {

@@ -22,13 +22,10 @@ export class PharmaciesService {
     }
 
     load() {
-        // TODO: add a storage engine here, and check that we don´t call the API every time load() is called
         this._api.getPharmaciesDuty().subscribe(res => {
             this._dataStore = {
                 metadata: res['meta']
             }
-
-            // TODO: update storage engine
 
             this._observer.next(this._dataStore);
         });

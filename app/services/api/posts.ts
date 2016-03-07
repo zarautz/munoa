@@ -15,7 +15,7 @@ export class Post {
     }
 
     getThumbnailImage() {
-        var keys = Object.keys(this._data.contentImages);
+        let keys = Object.keys(this._data.contentImages);
 
         if (keys.length > 0) {
             return this._data.contentImages[keys[0]].source.square;
@@ -41,18 +41,14 @@ export class PostsService {
     }
 
     load() {
-        // TODO: add a storage engine here, and check that we don´t call the API every time load() is called
         this._api.getPosts(this._source).subscribe(res => {
             this._dataStore = {
                 metadata: res['meta'],
                 posts: []
             }
-
             res['data'].forEach((p) => {
                 this._dataStore.posts.push(new Post(p));
             });
-            
-            // TODO: update storage engine
 
             this._observer.next(this._dataStore);
         });

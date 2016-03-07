@@ -6,7 +6,7 @@
 </ion-navbar>
 
 <ion-content>
-    <ion-list>
+    <ion-list *ngIf="items">
         <ion-item *ngFor="#item of items" (click)="itemTapped($event, item)">
             <ion-thumbnail item-left>
                 <img src="{{ item.getThumbnailImage() }}">
@@ -15,5 +15,5 @@
             <p>{{ item.publishedAt }}</p>
         </ion-item>
     </ion-list>
-    {{ metadata }}
+    <div *ngIf="metadata">{{ metadata.lastUpdated }}</div>
 </ion-content>

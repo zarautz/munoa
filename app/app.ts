@@ -1,9 +1,9 @@
 /// <reference path="../typings/main.d.ts" />
 /// <reference path="../node_modules/angular2/typings/browser.d.ts"/>
 
-import {App, IonicApp, Platform, Storage, SqlStorage} from 'ionic-angular';
 import {Type, provide, PLATFORM_PIPES} from 'angular2/core';
 import {HTTP_PROVIDERS} from 'angular2/http';
+import {App, IonicApp, Platform} from 'ionic-angular';
 
 import {EventsListPage} from './pages/events/views';
 import {ForecastTabs} from './pages/forecast/views';
@@ -17,6 +17,7 @@ import {BabelPipe} from './pipes/babel';
 
 import {ApiService} from './services/api';
 import {BabelService} from './services/babel';
+import {CacheService} from './services/cache';
 import {ConfigService} from './services/config';
 
 import {ForecastService} from './services/api/forecast';
@@ -29,7 +30,7 @@ import {PostsService} from './services/api/posts';
     config: {},
     providers: [
         HTTP_PROVIDERS,
-        ApiService, BabelService, ConfigService,
+        ApiService, BabelService, CacheService, ConfigService,
         ForecastService, PharmaciesService, PostsService,
         provide(PLATFORM_PIPES, {useValue: [BabelPipe], multi: true})
     ]
@@ -40,9 +41,8 @@ class MyApp {
     settingsPage: {component: Type};
     pages: Array<{title: string, icon: string, component: Type}>
 
-    constructor(private _app: IonicApp, private _platform: Platform) {
+    constructor(private _app: IonicApp, private _platform: Platform, private _cache: CacheService) {
         this.initializeApp();
-        this.storage = new Storage(SqlStorage);
         this.pages = [
             {title: 'news', icon: 'paper', component: PostsListPage},
             {title: 'events', icon: 'calendar', component: EventsListPage},
@@ -72,6 +72,8 @@ class MyApp {
             // good for dark backgrounds and light text:
             // StatusBar.setStyle(StatusBar.LIGHT_CONTENT)
         });
+
+        this._cache.initialize();
     }
 
     openPage(page) {

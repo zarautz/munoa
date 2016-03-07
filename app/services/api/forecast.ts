@@ -42,7 +42,6 @@ export class ForecastService {
     }
 
     load() {
-        // TODO: add a storage engine here, and check that we don´t call the API every time load() is called
         Observable.forkJoin(
             this._api.getForecast(),
             this._api.getForecastWeatherCodes()
@@ -55,8 +54,6 @@ export class ForecastService {
             res[0]['data'].forEach((f) => {
                 this._dataStore.forecast.push(new Forecast(f, res[1]['data']));
             });
-
-            // TODO: update storage engine
 
             this._observer.next(this._dataStore);
         });

@@ -29,6 +29,6 @@
         <ion-item>{{ 'settings__about' | babel }}</ion-item>
         <ion-item>{{ 'settings__about__version' | babel }}</ion-item>
         <ion-item>{{ 'settings__about__privacy' | babel }}</ion-item>
-        <ion-item>{{ 'settings__data__cache' | babel }}</ion-item>
+        <ion-item (click)="clearCache()">{{ 'settings__data__cache' | babel }}</ion-item>
     </ion-list>
 </ion-content>

@@ -31,8 +31,9 @@ export class ApiService {
             this._cache.set(endpoint, res.text());
             return res.json();
         });
+        let expiredCacheSource = Observable.fromPromise(this._cache.get(endpoint, false)).map(res => JSON.parse(res));
 
-        return cacheSource.catch(err => apiSource);
+        return cacheSource.catch(err => apiSource.catch(err => expiredCacheSource));
     }
 
     getForecast(): Observable<any> {

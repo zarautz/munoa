@@ -3,7 +3,8 @@ Munoa
 
 [![license-badge]](LICENSE.md)
 
-`Munoa` is the code name for "Zarautz App", the mobile application of the city of [Zarautz](http://www.zarautz.org/).
+`Munoa` is the code name for the Open app "Zarautz", a mobile application for the city of
+[Zarautz](http://www.zarautz.org/).
 
 For developers
 ==============
@@ -20,7 +21,7 @@ While in development, you can install the necessary packages using the `npm` com
 
 Running the server
 ------------------
-The Ionic CLI is required to work with the application locally. You can install Ionic CLI
+The Ionic CLI is required to work with the application locally. You can find instructions on how to install Ionic CLI
 [here](http://ionicframework.com/docs/v2/cli/). Once installed, the application can be viewed using the
 following command:
 
@@ -29,7 +30,7 @@ following command:
 Style guide
 -----------
 Unless otherwise specified, follow the
-[TypeScript Coding Guidelines](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines).
+[Angular Style Guide](https://angular.io/docs/ts/latest/guide/style-guide.html).
 Tab size is **4 spaces**. Maximum line length is 119.
 
 

@@ -1,0 +1,12 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+        <ion-title>{{'forecast' | babel}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-tabs>
+    <ion-tab [root]="weather" tabIcon="sunny"></ion-tab>
+    <ion-tab [root]="sea" tabIcon="water"></ion-tab>
+    <ion-tab [root]="live" tabIcon="videocam"></ion-tab>
+</ion-tabs>

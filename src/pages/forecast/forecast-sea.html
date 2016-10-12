@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Sea</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div *ngIf="forecast">
+        <ion-card *ngFor="let day of forecast">
+            <ion-card-content >
+                {{ day.getDate() }}
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

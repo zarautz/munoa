@@ -1,5 +1,0 @@
-{
-    "app_id": "app_id",
-    "api_key": "api_key",
-    "dev_push": true
-}

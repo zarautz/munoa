@@ -1,0 +1,14 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Incidents</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher refreshingIcon="refresh"
+        (starting)="log('starting')"
+        (refresh)="log('refresh')"
+        (pulling)="log('pulling')">
+    </ion-refresher>
+    Incidents
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+        <ion-title>Settings</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-list-header>{{'settings__general' | babel}}</ion-list-header>
+        <ion-item>
+            <ion-label>{{'settings__language' | babel}}</ion-label>
+            <ion-select [(ngModel)]="language" (ngModelChange)="changeLanguage()"
+                cancelText="Nah" okText="Okay!">
+                <ion-option *ngFor="let lang of languages" value="{{lang.key}}">{{lang.value}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>{{'settings__profile' | babel}}</ion-label>
+            <ion-select cancelText="Nah" okText="Okay!">
+                <ion-option value="zarautz">{{'settings__profile__zarautz' | babel}}</ion-option>
+                <ion-option value="tourist">{{'settings__profile__tourist' | babel}}</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header>{{'app' | babel}}</ion-list-header>
+        <ion-item>{{'settings__about' | babel}}</ion-item>
+        <ion-item>{{'settings__about__version' | babel}}</ion-item>
+        <ion-item>{{'settings__about__privacy' | babel}}</ion-item>
+        <ion-item (click)="clearCache()">{{'settings__data__cache' | babel}}</ion-item>
+    </ion-list>
+</ion-content>

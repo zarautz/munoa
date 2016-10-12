@@ -1,32 +1,35 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.illarra.zarautz.munoa" version="1.0.0" xmlns="http://www.w3.org/ns/widgets"
     xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Zarautz</name>
-    <description>Official application of the City of Zarautz. A must-have to know what's going on in our town and
+    <description>Open application for the City of Zarautz. A must-have to know what's going on in our town and
         discover its charms. News, events calendar, weather and waves forecats and a complete catalog of all the places
         you can find in Zarautz when you come to visit us.</description>
-    <author email="team@illarra.com" href="http://www.illarra.com/">illarra App Artisans</author>
-    <content src="index.html" />
-    <access origin="*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
+    <content src="index.html"/>
+    <access origin="*"/>
+    <allow-intent href="http://*/*"/>
+    <allow-intent href="https://*/*"/>
+    <allow-intent href="tel:*"/>
+    <allow-intent href="sms:*"/>
+    <allow-intent href="mailto:*"/>
+    <allow-intent href="geo:*"/>
     <platform name="android">
-        <allow-intent href="market:*" />
+        <allow-intent href="market:*"/>
     </platform>
     <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
+        <allow-intent href="itms:*"/>
+        <allow-intent href="itms-apps:*"/>
     </platform>
-    <preference name="webviewbounce" value="false" />
-    <preference name="UIWebViewBounce" value="false" />
-    <preference name="DisallowOverscroll" value="true" />
-    <preference name="android-minSdkVersion" value="16" />
-    <preference name="BackupWebStorage" value="none" />
+    <preference name="webviewbounce" value="false"/>
+    <preference name="UIWebViewBounce" value="false"/>
+    <preference name="DisallowOverscroll" value="true"/>
+    <preference name="android-minSdkVersion" value="16"/>
+    <preference name="BackupWebStorage" value="none"/>
+    <preference name="SplashScreenDelay" value="0"/>
+    <preference name="FadeSplashScreen" value="false"/>
+    <preference name="FadeSplashScreenDuration" value="0"/>
+    <preference name="SplashScreenBackgroundColor" value="0xFFFFFFFF"/>
     <feature name="StatusBar">
-        <param name="ios-package" onload="true" value="CDVStatusBar" />
+        <param name="ios-package" onload="true" value="CDVStatusBar"/>
     </feature>
 </widget>

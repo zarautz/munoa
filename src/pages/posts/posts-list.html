@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+        <ion-title>Posts</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list *ngIf="items">
+        <ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+            <ion-thumbnail item-left>
+                <img src="{{ item.getThumbnailImage() }}">
+            </ion-thumbnail>
+            <h2>{{item.title}}</h2>
+            <p>{{item.publishedAt}}</p>
+        </ion-item>
+    </ion-list>
+    <div *ngIf="metadata">{{metadata.lastUpdated}}</div>
+</ion-content>

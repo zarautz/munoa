@@ -19,9 +19,9 @@ export class ConfigService {
     }
 
     get(configKey: string): any {
-        if (this.config && configKey in this.config) {
+        try {
             return this.config[configKey];
-        } else {
+        } catch (err) {
             return configKey;
         }
     }

@@ -8,9 +8,9 @@ export class BabelService {
     constructor() {}
 
     translate(messageKey: string) {
-        if (this.messages && messageKey in this.messages) {
+        try {
             return this.messages[messageKey][this.language];
-        } else {
+        } catch (err) {
             return messageKey + ':' + this.language;
         }
     }

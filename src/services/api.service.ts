@@ -27,11 +27,11 @@ export class ApiService {
         // 1. Try the cache
         // 2. If no key is found, or key has expired, connect with the OpenZarautz API
         // 3. Use an expired cache as fallback when no connection is possible
-        return Observable.fromPromise(this.cache.get(cacheKey)).map(res => res).catch(caught => {
+        return Observable.fromPromise(this.cache.get(cacheKey)).catch(caught => {
             return this.http.get(API_HOST + endpoint, {search: searchParams}).map(res => {
                 this.cache.set(cacheKey, res.json(), ttl);
                 return res.json();
-            }).catch(caught => Observable.fromPromise(this.cache.get(cacheKey, false)).map(res => res));
+            }).catch(caught => Observable.fromPromise(this.cache.get(cacheKey, false)));
         });
     }
 }

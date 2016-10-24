@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+        <ion-title>Place types</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <button ion-item (click)="itemTapped($event, 'amenity:pharmacy')">
+            amenity:pharmacy
+        </button>
+        <button ion-item (click)="itemTapped($event, 'amenity:pub')">
+            amenity:pub
+        </button>
+        <button ion-item (click)="itemTapped($event, 'shop:books')">
+            shop:books
+        </button>
+    </ion-list>
+</ion-content>

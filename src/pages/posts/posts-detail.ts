@@ -9,9 +9,9 @@ import { Post } from '../../services/api';
     templateUrl: 'posts-detail.html'
 })
 export class PostsDetailPage {
-    item: Post;
+    post: Post;
 
     constructor(private navParams: NavParams) {
-        this.item = this.navParams.get('item');
+        this.post = this.navParams.get('post');
     }
 }

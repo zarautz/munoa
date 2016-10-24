@@ -5,7 +5,8 @@ import { StatusBar } from 'ionic-native';
 import { FirebaseService } from '../services'
 
 import { ForecastTabs } from '../pages/forecast';
-import { PlacesListPage } from '../pages/places';
+import { PharmaciesPage } from '../pages/health';
+import { PlacesGridPage } from '../pages/places';
 import { PostsListPage } from '../pages/posts';
 import { SettingsPage } from '../pages/settings';
 import { TrafficTabs } from '../pages/traffic';
@@ -17,7 +18,7 @@ import { TrafficTabs } from '../pages/traffic';
 export class MunoaApp {
     @ViewChild(Nav) nav: Nav;
 
-    rootPage: any = PlacesListPage;
+    rootPage: any = PlacesGridPage;
     pages: Array<{title: string, component: any}>;
     settingsPage: any;
 
@@ -26,9 +27,10 @@ export class MunoaApp {
 
         this.pages = [
             { title: 'Forecast', component: ForecastTabs },
-            { title: 'Places', component: PlacesListPage },
             { title: 'Posts', component: PostsListPage },
-            { title: 'Traffic', component: TrafficTabs }
+            { title: 'Traffic', component: TrafficTabs },
+            { title: 'Places', component: PlacesGridPage },
+            { title: 'Pharmacies', component: PharmaciesPage }
         ];
 
         this.settingsPage = {component: SettingsPage}

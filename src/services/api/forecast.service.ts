@@ -15,26 +15,29 @@ export class ForecastService {
     private observer: any;
     private dataStore: {
         metadata: any,
-        forecast: Array<Forecast>,
-        images: any
+        images: any,
+        forecast: Array<Forecast>
     }
 
     constructor(private api: ApiService, private babel: BabelService) {
         this.data$ = new Observable(observer => this.observer = observer).share();
     }
 
-    load() {
+    load(): void {
         Observable.forkJoin(
             this.api.get('/v2/forecast/', 3600),
-            this.api.get('/v2/forecast/weather/codes/', 3600 * 24 * 7, {'language': this.babel.language})
+            this.api.get('/v2/forecast/weather/codes/', 3600 * 24 * 7, {language: this.babel.language})
         ).subscribe(res => {
             this.dataStore = {
-                metadata: res[0]['meta'],
-                forecast: [],
-                images: res[0]['live']
+                metadata: res[0].meta,
+                images: res[0].live,
+                forecast: []
             }
-            res[0]['data'].forEach((f) => {
-                this.dataStore.forecast.push(new Forecast(f, res[1]['data']));
+
+            res[0].data.forEach((obj) => {
+                let forecast = new Forecast();
+                forecast.assign(obj, res[1]['data']);
+                this.dataStore.forecast.push(forecast);
             });
 
             this.observer.next(this.dataStore);

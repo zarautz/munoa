@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Places</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div *ngIf="data">
+        <ion-list>
+            <button ion-item *ngFor="let place of data.places" (click)="placeTapped($event, place)">
+                <ion-icon [name]="place.icon" item-left></ion-icon>
+                {{place.tags.name}}
+            </button>
+        </ion-list>
+    </div>
+</ion-content>

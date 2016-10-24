@@ -1,25 +1,17 @@
 <ion-header>
     <ion-navbar color="primary">
-        <ion-title>{{item.title}}</ion-title>
+        <ion-title>{{post.title}}</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content>
     <ion-card>
-        <ion-card-header>{{item.title}}</ion-card-header>
+        <ion-card-header>
+            <small>{{post.publishedAt | date}}</small>
+        </ion-card-header>
         <ion-card-content>
-            <div [innerHTML]="item.content"></div>
+            <h1>{{post.title}}</h1>
+            <div [innerHTML]="post.content"></div>
         </ion-card-content>
-        <ion-list>
-            <button ion-item>
-              <ion-icon name="cart" item-left></ion-icon>
-              Shopping
-            </button>
-
-            <button ion-item>
-              <ion-icon name="medical" item-left></ion-icon>
-              Hospital
-            </button>
-        </ion-list>
     </ion-card>
 </ion-content>

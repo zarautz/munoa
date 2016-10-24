@@ -7,20 +7,22 @@ import { FIREBASE_CONFIG } from '../../config/firebase'
 
 import { MunoaApp } from './app.component';
 import { ForecastTabs, ForecastLivePage, ForecastSeaPage, ForecastWeatherPage } from '../pages/forecast';
-import { PlacesListPage } from '../pages/places';
+import { PharmaciesPage } from '../pages/health';
+import { PlacesGridPage, PlacesListPage, PlacesDetailPage } from '../pages/places';
 import { PostsListPage, PostsDetailPage } from '../pages/posts';
 import { SettingsPage } from '../pages/settings';
 import { TrafficTabs, TrafficIncidentsPage, TrafficMountainPassesPage, TrafficIncidentsMap } from '../pages/traffic';
 import { BabelPipe } from '../pipes';
 import { ApiService, BabelService, CacheService, ConfigService, FirebaseService } from '../services';
-import { ForecastService, PostsService } from '../services/api';
+import { ForecastService, PharmaciesService, PlacesService, PostsService } from '../services/api';
 
 
 @NgModule({
     declarations: [
         MunoaApp,
         ForecastTabs, ForecastLivePage, ForecastSeaPage, ForecastWeatherPage,
-        PlacesListPage,
+        PharmaciesPage,
+        PlacesGridPage, PlacesListPage, PlacesDetailPage,
         PostsListPage, PostsDetailPage,
         SettingsPage,
         TrafficTabs, TrafficIncidentsPage, TrafficMountainPassesPage, TrafficIncidentsMap,
@@ -34,15 +36,16 @@ import { ForecastService, PostsService } from '../services/api';
     entryComponents: [
         MunoaApp,
         ForecastTabs, ForecastLivePage, ForecastSeaPage, ForecastWeatherPage,
-        PlacesListPage,
+        PharmaciesPage,
+        PlacesGridPage, PlacesListPage, PlacesDetailPage,
         PostsListPage, PostsDetailPage,
         SettingsPage,
-        TrafficTabs, TrafficIncidentsPage, TrafficMountainPassesPage, TrafficIncidentsMap,
+        TrafficTabs, TrafficIncidentsPage, TrafficMountainPassesPage, TrafficIncidentsMap
     ],
     providers: [
         Storage,
         ApiService, BabelService, CacheService, ConfigService, FirebaseService,
-        ForecastService, PostsService
+        ForecastService, PharmaciesService, PlacesService, PostsService
     ]
 })
 export class AppModule {}

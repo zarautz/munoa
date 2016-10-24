@@ -4,19 +4,11 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content>
-    <div *ngIf="images">
-        <ion-card *ngFor="let image of images.timex; let i = index">
-            <img [src]="image.medium">
-            <ion-card-content>
-                <h2>Timex {{ i }}</h2>
-            </ion-card-content>
-        </ion-card>
-        <ion-card *ngFor="let image of images.snapshots; let i = index">
-            <img [src]="image.medium">
-            <ion-card-content>
-                <h2>Snapshot {{ i }}</h2>
-            </ion-card-content>
-        </ion-card>
+<ion-content padding>
+    <div *ngIf="data">
+        <strong>Images</strong>
+        {{data.images | json}}<br>
+        <strong>Meta</strong>
+        {{data.metadata | json}}
     </div>
 </ion-content>

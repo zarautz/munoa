@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
-import { PostsService, Post } from '../../services/api';
+import { PostsService } from '../../services/api';
 import { PostsDetailPage } from './posts-detail';
 
 
@@ -10,24 +10,17 @@ import { PostsDetailPage } from './posts-detail';
     templateUrl: 'posts-list.html'
 })
 export class PostsListPage {
-    selectedItem: any;
-    metadata: any;
-    items: Array<Post>;
+    selectedPost: any;
+    data: any;
 
-    constructor(private service: PostsService, public navCtrl: NavController, public navParams: NavParams) {
-        // If we navigated to this page, we will have an item available as a nav param
-        this.selectedItem = navParams.get('item');
-
-        this.service.data$.subscribe(data => {
-            this.metadata = data.metadata;
-            this.items = data.posts;
-        });
+    constructor(private service: PostsService, public navCtrl: NavController) {
+        this.service.data$.subscribe(data => this.data = data);
         this.service.load();
     }
 
-    itemTapped(event, item) {
+    itemTapped(event, post) {
         this.navCtrl.push(PostsDetailPage, {
-            item: item
+            post: post
         });
     }
 }

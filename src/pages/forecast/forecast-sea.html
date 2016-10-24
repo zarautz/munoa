@@ -5,11 +5,13 @@
 </ion-header>
 
 <ion-content>
-    <div *ngIf="forecast">
-        <ion-card *ngFor="let day of forecast">
-            <ion-card-content >
-                {{ day.getDate() }}
-            </ion-card-content>
+    <div *ngIf="data">
+        <ion-card *ngFor="let f of data.forecast">
+            <ion-item>{{f.date}}</ion-item>
+            <ion-card-content>{{f.tide | json}} {{f.wave | json}}</ion-card-content>
         </ion-card>
+        <footer padding>
+            <small>{{data.metadata | json}}</small>
+        </footer>
     </div>
 </ion-content>

@@ -4,6 +4,14 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    {{forecast | json}}
+<ion-content>
+    <div *ngIf="data">
+        <ion-card *ngFor="let f of data.forecast">
+            <ion-item>{{f.date}}</ion-item>
+            <ion-card-content>{{f.weather | json}}</ion-card-content>
+        </ion-card>
+        <footer padding>
+            <small>{{data.metadata | json}}</small>
+        </footer>
+    </div>
 </ion-content>

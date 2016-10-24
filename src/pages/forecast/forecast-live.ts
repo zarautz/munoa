@@ -8,13 +8,10 @@ import { ForecastService } from '../../services/api';
     templateUrl: 'forecast-live.html'
 })
 export class ForecastLivePage {
-    images: {
-        snapshots: Array<any>,
-        timex: Array<any>
-    }
+    data: any
 
     constructor(private service: ForecastService) {
-        this.service.data$.subscribe(data => this.images = data.images);
+        this.service.data$.subscribe(data => this.data = data);
         this.service.load();
     }
 }

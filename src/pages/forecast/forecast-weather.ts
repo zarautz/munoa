@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ForecastService, Forecast } from '../../services/api';
+import { ForecastService } from '../../services/api';
 
 
 @Component({
@@ -8,10 +8,10 @@ import { ForecastService, Forecast } from '../../services/api';
     templateUrl: 'forecast-weather.html'
 })
 export class ForecastWeatherPage {
-    forecast: Array<Forecast>;
+    data: any;
 
     constructor(private service: ForecastService) {
-        this.service.data$.subscribe(data => this.forecast = data.forecast);
+        this.service.data$.subscribe(data => this.data = data);
         this.service.load();
     }
 }

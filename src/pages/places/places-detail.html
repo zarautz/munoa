@@ -1,0 +1,13 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>{{place.tags.name}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            {{place | json}}
+        </ion-card-content>
+    </ion-card>
+</ion-content>

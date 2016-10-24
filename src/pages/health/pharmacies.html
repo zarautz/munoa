@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+        <ion-title>Pharmacies</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div *ngIf="data">
+        <ion-card>
+            <ion-list>
+                <button ion-item *ngFor="let place of data.places" (click)="placeTapped($event, place)">
+                    <ion-icon name="medical" item-left></ion-icon>
+                    {{place.tags.name}}
+                </button>
+            </ion-list>
+        </ion-card>
+        <ion-card>
+            <ion-card-content>{{data.data.hours | json}}</ion-card-content>
+        </ion-card>
+        <footer padding>
+            <small>{{data.metadata | json}}</small>
+        </footer>
+    </div>
+</ion-content>

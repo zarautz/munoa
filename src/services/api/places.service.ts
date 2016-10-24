@@ -4,34 +4,42 @@ import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core';
 
 import { ApiService } from '../api.service';
-import { Post } from './post.model';
+import { Place } from './place.model';
 
 
 @Injectable()
-export class PostsService {
+export class PlacesService {
     data$: Observable<any>;
     private observer: any;
-    private source: string = 'hitza';
+    private typesFilter: {} = {};
     private dataStore: {
         metadata: any,
-        posts: Array<Post>
+        places: Array<Place>
     }
 
     constructor(private api: ApiService) {
         this.data$ = new Observable(observer => this.observer = observer).share();
     }
 
+    filter(typesString: string): PlacesService {
+        this.typesFilter = {
+            types: typesString
+        }
+
+        return this;
+    }
+
     load(): void {
-        this.api.get('/v2/posts/' + this.source + '/', 3600).subscribe(res => {
+        this.api.get('/v2/places/', 3600, this.typesFilter).subscribe(res => {
             this.dataStore = {
                 metadata: res.meta,
-                posts: []
+                places: []
             }
 
             res.data.forEach((obj) => {
-                let post = new Post();
-                post.assign(obj);
-                this.dataStore.posts.push(post);
+                let place = new Place();
+                place.assign(obj);
+                this.dataStore.places.push(place);
             });
 
             this.observer.next(this.dataStore);

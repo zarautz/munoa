@@ -6,14 +6,17 @@
 </ion-header>
 
 <ion-content>
-    <ion-list *ngIf="items">
-        <ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-            <ion-thumbnail item-left>
-                <img src="{{ item.getThumbnailImage() }}">
-            </ion-thumbnail>
-            <h2>{{item.title}}</h2>
-            <p>{{item.publishedAt}}</p>
-        </ion-item>
-    </ion-list>
-    <div *ngIf="metadata">{{metadata.lastUpdated}}</div>
+    <div *ngIf="data">
+        <ion-card *ngFor="let post of data.posts" (click)="itemTapped($event, post)">
+            <ion-card-content>
+                <h2>{{post.author}}</h2>
+                <p>{{post.publishedAt | date:'short'}}</p>
+                <h1>{{post.title}}</h1>
+                <small>{{post.tags | json}}</small>
+            </ion-card-content>
+        </ion-card>
+        <footer padding>
+            <small>{{data.metadata | json}}</small>
+        </footer>
+    </div>
 </ion-content>

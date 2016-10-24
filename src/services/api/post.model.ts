@@ -1,17 +1,14 @@
 export class Post {
-    constructor(private data: any) {
-        for (var property in this.data) {
-            this[property] = this.data[property];
+    constructor() {}
+
+    assign(obj: any, imageSize: string = 'medium'): void {
+        // Replace content images with the preferred size
+        for (let path in obj.contentImages) {
+            obj.content = obj.content.replace(path, obj.contentImages[path].source[imageSize]);
         }
+
+        delete obj.contentImages;
+
+        Object.assign(this, obj);
     }
-
-    getThumbnailImage() {
-        let keys = Object.keys(this.data.contentImages);
-
-        if (keys.length > 0) {
-            return this.data.contentImages[keys[0]].source.square;
-        } else {
-            return '';
-        }
-    };
 }
